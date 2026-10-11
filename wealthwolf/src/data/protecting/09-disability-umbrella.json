@@ -6,6 +6,11 @@
   "description": "The paycheck if you cannot work, and extra liability if a lawsuit runs past the limit.",
   "wolfLine": "Insure the income. Then look at what a lawsuit could reach.",
   "terms": {
+    "waiting-period": {
+      "term": "Waiting period",
+      "definition": "The time between becoming disabled and the day a disability policy starts paying. Also called the elimination period.",
+      "example": "A 90-day waiting period means about three months with no benefit, so savings or sick pay have to cover it."
+    },
     "disability-insurance": {
       "term": "Disability insurance",
       "definition": "Insurance that replaces part of your income if an illness or injury keeps you from working.",
@@ -32,7 +37,7 @@
           "prompt": "What does disability insurance replace?",
           "choices": [
             "Part of your income if you cannot work",
-            "The market value of your car",
+            "Your medical bills",
             "A life insurance death benefit"
           ],
           "answer": 0,
@@ -51,8 +56,8 @@
           "prompt": "Why do people skip this and then regret it?",
           "choices": [
             "A long illness is more common than they think, and the paycheck stops anyway",
-            "The policy pays their rent in cash even when they are healthy",
-            "It is illegal to buy"
+            "The premium is higher than the benefit",
+            "Most policies stop paying after a week"
           ],
           "answer": 0,
           "explain": "The premium looks optional until the paychecks stop."
@@ -71,8 +76,8 @@
           "prompt": "Disability insurance protects your ___.",
           "choices": [
             "income",
-            "luggage",
-            "credit score"
+            "medical bills",
+            "savings"
           ],
           "answer": 0,
           "explain": "The bills stay. The paycheck is what this policy stands in for."
@@ -93,8 +98,8 @@
           "prompt": "Short-term disability is built for:",
           "choices": [
             "A few weeks or months away from work",
-            "The rest of your life only",
-            "A cracked phone screen"
+            "Several years of illness",
+            "Only injuries at work"
           ],
           "answer": 0,
           "explain": "It is the bridge. It is not the whole road."
@@ -105,8 +110,8 @@
           "prompt": "Long-term disability is built for:",
           "choices": [
             "An illness or injury that keeps you out for a long stretch",
-            "A three-day cold",
-            "A parking ticket"
+            "A few days off with the flu",
+            "A one-week recovery from minor surgery"
           ],
           "answer": 0,
           "explain": "That is the policy that matters if you cannot return this year."
@@ -124,8 +129,8 @@
           "prompt": "Your job offers short-term disability at 60% of pay for 12 weeks, and nothing after. What is the hole?",
           "choices": [
             "Any illness that lasts longer than those 12 weeks",
-            "The first day of a cold",
-            "Your life insurance beneficiary"
+            "Any illness that starts on a weekend",
+            "Doctor visits during those 12 weeks"
           ],
           "answer": 0,
           "explain": "Week 13 is the hole."
@@ -185,8 +190,8 @@
           "prompt": "Why might a policy that covers “your own job” pay when a stricter one would not?",
           "choices": [
             "You cannot do your work, even if you could do some other work",
-            "It ignores injuries",
-            "It pays only after you retire"
+            "It pays a higher percent of your salary",
+            "It has no waiting period"
           ],
           "answer": 0,
           "explain": "The definition of disability is the gate. Read it."
@@ -204,7 +209,7 @@
         {
           "id": "du-page-q1",
           "type": "number",
-          "context": "The waiting period is 90 days. The policy pays nothing during the wait.",
+          "context": "The [[waiting period]] is 90 days. The policy pays nothing during the wait.",
           "doc": {
             "kind": "statement",
             "title": "Disability policy summary",
@@ -286,8 +291,8 @@
           "prompt": "You are hurt on day 1. When does this summary say benefits can start?",
           "choices": [
             "After the 90-day waiting period",
-            "The same afternoon",
-            "After 90 years"
+            "The same week",
+            "When your sick days run out, whatever the policy says"
           ],
           "answer": 0,
           "explain": "The wait is part of the price. Savings have to cover it."
@@ -323,8 +328,8 @@
           "prompt": "What is an umbrella policy?",
           "choices": [
             "Extra liability coverage above your auto or home limits",
-            "A policy that replaces health insurance",
-            "A warranty for umbrellas"
+            "A policy that replaces your auto and home liability",
+            "Coverage for damage to your own car and home"
           ],
           "answer": 0,
           "explain": "It starts where the other liability limit stops."
@@ -343,7 +348,7 @@
           "prompt": "Who looks at an umbrella?",
           "choices": [
             "Someone whose savings or home could be reached by a large lawsuit",
-            "Someone who wants a cheaper oil change",
+            "Someone whose car already has high collision coverage",
             "Someone with no car, no home, and no savings"
           ],
           "answer": 0,
@@ -413,7 +418,7 @@
           "choices": [
             "The legal floor is often too small for a serious injury",
             "State minimums are the maximum the law allows",
-            "Minimum policies include umbrella coverage free"
+            "Minimum policies have higher deductibles"
           ],
           "answer": 0,
           "explain": "Legal and enough are still different words."
@@ -432,7 +437,7 @@
           "choices": [
             "Worth a look. The landlord’s policy is not yours",
             "Solid. Renters are covered by the building",
-            "Solid, if you own a car"
+            "Solid, if the landlord has good insurance"
           ],
           "answer": 0,
           "explain": "Your belongings and your liability are uninsured until you buy the policy."
@@ -443,8 +448,8 @@
           "prompt": "The point of the list is to find the ___ before a loss does.",
           "choices": [
             "hole",
-            "logo",
-            "slogan"
+            "cheapest premium",
+            "biggest policy"
           ],
           "answer": 0,
           "explain": "A named hole can be priced. A surprise cannot."
@@ -508,7 +513,7 @@
           "choices": [
             "A higher auto liability limit and a disability benefit",
             "A cheaper health premium",
-            "A life insurance slogan"
+            "A lower deductible"
           ],
           "answer": 0,
           "explain": "The health line matches. The protection does not."

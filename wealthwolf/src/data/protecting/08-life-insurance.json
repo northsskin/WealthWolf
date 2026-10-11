@@ -6,6 +6,11 @@
   "description": "Term, whole life, and the years of income a household would lose.",
   "wolfLine": "Insure the paycheck. Do not insure a slogan.",
   "terms": {
+    "death-benefit": {
+      "term": "Death benefit",
+      "definition": "The money a life insurance policy pays your beneficiaries if you die while it is in force.",
+      "example": "A $500,000 term policy pays a $500,000 death benefit if you die during the term."
+    },
     "term-life": {
       "term": "Term life insurance",
       "definition": "Life insurance that pays if you die during a set period, such as 20 years. It is insurance, not an investment account.",
@@ -33,12 +38,12 @@
         {
           "id": "li-who-q1",
           "type": "multiple_choice",
-          "context": "Life insurance pays a death benefit to the people who lose your income. [[Term life insurance|term-life]] is the usual way to buy a large benefit for a set number of years.",
+          "context": "Life insurance pays a [[death benefit]] to the people who lose your income. [[Term life insurance|term-life]] is the usual way to buy a large benefit for a set number of years.",
           "prompt": "Who has the clearest reason to buy life insurance?",
           "choices": [
             "A parent whose income pays the rent",
             "A single adult no one relies on for money",
-            "A person who wants a fancy savings slogan"
+            "A retiree whose savings already cover their partner"
           ],
           "answer": 0,
           "explain": "The question is who would be short of money if you died."
@@ -57,7 +62,7 @@
           "choices": [
             "Yes. Replacing that care costs real money",
             "No. Only paychecks count",
-            "No. Children cannot be beneficiaries"
+            "No. Their partner’s work policy covers them"
           ],
           "answer": 0,
           "explain": "The loss is the cost of replacing the care, not only a W-2."
@@ -69,7 +74,7 @@
           "choices": [
             "The amount paid if you die while the policy is in force",
             "The monthly premium",
-            "A bonus for staying healthy"
+            "The cash you get back if you cancel"
           ],
           "answer": 0,
           "explain": "That check is the point of the policy."
@@ -80,8 +85,8 @@
           "prompt": "Buy life insurance to protect people who ___ your income or your care.",
           "choices": [
             "depend on",
-            "compete with",
-            "insure"
+            "earn more than",
+            "share"
           ],
           "answer": 0,
           "explain": "No dependent, no job for this policy."
@@ -295,7 +300,7 @@
         {
           "id": "li-much-q5",
           "type": "true_false",
-          "prompt": "The ten-year sketch is a personal order you must follow.",
+          "prompt": "The ten-year sketch is the exact amount every family needs.",
           "answer": false,
           "explain": "It is a starting sketch. A partner’s paycheck or a paid-off home can shrink it."
         }
@@ -386,8 +391,8 @@
           "prompt": "Who receives the money if you die while this policy is in force?",
           "choices": [
             "The beneficiary named on the policy",
-            "Whoever finds the paper",
-            "The insurer’s shareholders"
+            "Your closest relative, whatever the form says",
+            "Whoever is named in your will"
           ],
           "answer": 0,
           "explain": "The name on the policy is the instruction."
@@ -405,7 +410,7 @@
           "prompt": "Why write the beneficiary down instead of assuming the family will sort it out?",
           "choices": [
             "The policy pays the name it has, not the argument that follows",
-            "Insurers ignore the form",
+            "The insurer picks the fairest person",
             "A will always overrides every beneficiary"
           ],
           "answer": 0,
@@ -427,8 +432,8 @@
           "prompt": "What is a beneficiary?",
           "choices": [
             "The person you name to receive the death benefit",
-            "The agent who sold the policy",
-            "The hospital"
+            "The person whose life is insured",
+            "The person who pays the premium"
           ],
           "answer": 0,
           "explain": "No name, and the money waits on a process your family did not need."
@@ -458,8 +463,8 @@
           "prompt": "You want your partner and your sibling to split the benefit. What does the form need?",
           "choices": [
             "Both names, and the share each one gets",
-            "Only a nickname",
-            "The word family"
+            "Only the two names",
+            "Their names and phone numbers"
           ],
           "answer": 0,
           "explain": "Shares should add to the whole. Write the percents."
@@ -484,7 +489,7 @@
         {
           "id": "li-work-q1",
           "type": "multiple_choice",
-          "context": "Work coverage is often one or two times your salary. [[COBRA|cobra]] is about health insurance after a job ends, not a promise that the life policy stays.",
+          "context": "Work coverage is often one or two times your salary, and it usually ends when the job does.",
           "prompt": "What is the usual limit of life insurance you get at work?",
           "choices": [
             "It often ends when the job ends, and the benefit can be small",
@@ -523,8 +528,8 @@
           "prompt": "Why not rely on the work policy alone while you have young kids?",
           "choices": [
             "The benefit is often only a year or two of pay, and it can end with the job",
-            "Work policies are illegal",
-            "Kids cannot be protected by any policy"
+            "Work policies don’t pay out for parents",
+            "Work policies only pay if you die at work"
           ],
           "answer": 0,
           "explain": "One year of pay is a thin bridge."
@@ -545,7 +550,7 @@
           "choices": [
             "Term buys a large benefit for a small premium during the years people depend on you",
             "Term pays a larger death benefit for the same premium in the quotes we used",
-            "Whole life is illegal"
+            "Term builds more savings than whole life"
           ],
           "answer": 0,
           "explain": "The expensive years are the years with kids or a big debt. Term covers those years."
@@ -571,8 +576,8 @@
           "prompt": "You have no dependents and no co-signed debt. What is a reasonable conclusion?",
           "choices": [
             "You may not need life insurance right now",
-            "You must buy whole life",
-            "You must buy the largest term sold"
+            "You should lock in whole life while you are young",
+            "You need a policy worth ten years of pay"
           ],
           "answer": 0,
           "explain": "The product protects a person. No person, no purchase required."
@@ -583,8 +588,8 @@
           "prompt": "Term covers a ___ of years, not your whole life by default.",
           "choices": [
             "set number",
-            "random",
-            "secret"
+            "lifetime",
+            "minimum"
           ],
           "answer": 0,
           "explain": "When the term ends, so does the coverage."
@@ -673,7 +678,7 @@
           "prompt": "Life insurance is most useful when:",
           "choices": [
             "Someone depends on your income",
-            "You want a logo on a folder",
+            "You want a safe place to save",
             "You have no dependents and no shared debts"
           ],
           "answer": 0,
@@ -700,7 +705,7 @@
           "prompt": "Who should you name on the policy?",
           "choices": [
             "The beneficiary who should receive the money",
-            "Whoever sold it",
+            "Your employer",
             "No one. The form is optional"
           ],
           "answer": 0,

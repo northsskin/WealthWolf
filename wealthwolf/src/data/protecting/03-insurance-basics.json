@@ -42,8 +42,8 @@
           "prompt": "What is insurance, in plain terms?",
           "choices": [
             "A pool that pays big losses in exchange for a smaller regular payment",
-            "A savings account that never goes down",
-            "A fine you pay after an accident"
+            "A savings account that pays you back if you never claim",
+            "A loan you repay after a loss"
           ],
           "answer": 0,
           "explain": "The premium is the share. The pool is there for the loss you could not cover alone."
@@ -69,8 +69,8 @@
           "prompt": "Who is the premium for?",
           "choices": [
             "The pool, so covered losses can be paid",
-            "A savings jar with your name on it",
-            "A tax on safe drivers only"
+            "Your own account, returned if you never claim",
+            "The state, as a tax on owning things"
           ],
           "answer": 0,
           "explain": "You may not claim this year. Someone in the pool will."
@@ -128,10 +128,10 @@
         {
           "id": "ib-parts-q4",
           "type": "number",
-          "prompt": "The coverage limit is $300,000. A covered loss is $20,000, after a $1,000 deductible. Does the limit block the payment? How much of the $20,000 is above $300,000?",
-          "answer": 0,
+          "prompt": "A fire causes $350,000 of covered damage. The coverage limit is $300,000. What is the most the policy pays?",
+          "answer": 300000,
           "unit": "$",
-          "explain": "$20,000 is under $300,000, so none of it is past the limit."
+          "explain": "The limit is the ceiling. The other $50,000, including your deductible, is yours to cover."
         },
         {
           "id": "ib-parts-q5",
@@ -157,7 +157,7 @@
           "doc": {
             "kind": "statement",
             "title": "Policy summary",
-            "subtitle": "Sample renters policy",
+            "subtitle": "Renters policy",
             "meta": [
               [
                 "Policy number",
@@ -172,25 +172,25 @@
               {
                 "id": "prem",
                 "label": "Premium for the year",
-                "amount": 1200.0
+                "amount": 180.0
               },
               {
                 "id": "ded",
                 "label": "Deductible",
-                "amount": 1000.0
+                "amount": 500.0
               },
               {
-                "id": "limit",
-                "label": "Coverage limit",
-                "amount": 300000.0
+                "id": "stuff",
+                "label": "Belongings limit",
+                "amount": 25000.0
               }
             ],
             "note": "This is a summary, not the whole contract."
           },
           "prompt": "What is the yearly premium on this summary?",
-          "answer": 1200,
+          "answer": 180,
           "unit": "$",
-          "explain": "The premium line is $1,200."
+          "explain": "The premium line is $180, or $15 a month."
         },
         {
           "id": "ib-summary-q2",
@@ -198,7 +198,7 @@
           "doc": {
             "kind": "statement",
             "title": "Policy summary",
-            "subtitle": "Sample renters policy",
+            "subtitle": "Renters policy",
             "meta": [
               [
                 "Policy number",
@@ -213,25 +213,25 @@
               {
                 "id": "prem",
                 "label": "Premium for the year",
-                "amount": 1200.0
+                "amount": 180.0
               },
               {
                 "id": "ded",
                 "label": "Deductible",
-                "amount": 1000.0
+                "amount": 500.0
               },
               {
-                "id": "limit",
-                "label": "Coverage limit",
-                "amount": 300000.0
+                "id": "stuff",
+                "label": "Belongings limit",
+                "amount": 25000.0
               }
             ],
             "note": "This is a summary, not the whole contract."
           },
           "prompt": "What is the deductible?",
-          "answer": 1000,
+          "answer": 500,
           "unit": "$",
-          "explain": "The deductible line is $1,000."
+          "explain": "The deductible line is $500."
         },
         {
           "id": "ib-summary-q3",
@@ -239,7 +239,7 @@
           "doc": {
             "kind": "statement",
             "title": "Policy summary",
-            "subtitle": "Sample renters policy",
+            "subtitle": "Renters policy",
             "meta": [
               [
                 "Policy number",
@@ -254,32 +254,32 @@
               {
                 "id": "prem",
                 "label": "Premium for the year",
-                "amount": 1200.0
+                "amount": 180.0
               },
               {
                 "id": "ded",
                 "label": "Deductible",
-                "amount": 1000.0
+                "amount": 500.0
               },
               {
-                "id": "limit",
-                "label": "Coverage limit",
-                "amount": 300000.0
+                "id": "stuff",
+                "label": "Belongings limit",
+                "amount": 25000.0
               }
             ],
             "note": "This is a summary, not the whole contract."
           },
-          "prompt": "A covered loss is $4,000. Using this deductible, how much does the insurer pay?",
-          "answer": 3000,
+          "prompt": "A break-in costs $4,000 of covered belongings. Using this deductible, how much does the insurer pay?",
+          "answer": 3500,
           "unit": "$",
-          "explain": "$4,000 − $1,000 = $3,000. The limit is $300,000, so it does not cut this claim."
+          "explain": "$4,000 − $500 = $3,500. The $25,000 limit does not cut this claim."
         },
         {
           "id": "ib-summary-q4",
           "type": "multiple_choice",
           "prompt": "Which line is the most the policy will pay?",
           "choices": [
-            "The coverage limit",
+            "The belongings limit",
             "The premium",
             "The deductible"
           ],
@@ -476,8 +476,8 @@
           "prompt": "Why skip insurance on a loss you could pay from savings?",
           "choices": [
             "The premium can cost more than the risk is worth to you",
-            "Small losses are illegal to pay yourself",
-            "Insurers refuse any policy under $1,000"
+            "Small claims are never covered by any policy",
+            "Paying small losses yourself raises your deductible"
           ],
           "answer": 0,
           "explain": "Insurance is for the hit you cannot absorb."
@@ -495,8 +495,8 @@
           "prompt": "Which loss is the clearest case for insurance?",
           "choices": [
             "A hospital bill big enough to wipe out your savings",
-            "A $15 charging cable",
-            "A snack you did not like"
+            "A cracked $200 phone screen",
+            "A $60 pair of headphones"
           ],
           "answer": 0,
           "explain": "Size is the test. Could you write the check?"
@@ -507,8 +507,8 @@
           "prompt": "Insure the loss you could not ___ from savings.",
           "choices": [
             "cover",
-            "enjoy",
-            "advertise"
+            "claim",
+            "deduct"
           ],
           "answer": 0,
           "explain": "That is the job of the pool."
@@ -549,7 +549,7 @@
           "choices": [
             "The exclusions, not only the friendly summary",
             "The advertisement",
-            "The font on the logo"
+            "The premium on the first page"
           ],
           "answer": 0,
           "explain": "The summary sells. The exclusions decide."
@@ -561,7 +561,7 @@
           "choices": [
             "The earthquake exclusion can block the claim",
             "Theft coverage pays, because glass is missing",
-            "Every broken window is theft"
+            "The insurer splits the cost with you"
           ],
           "answer": 0,
           "explain": "The cause is the earthquake. That cause is excluded."
@@ -572,8 +572,8 @@
           "prompt": "An exclusion is a loss the policy will not ___.",
           "choices": [
             "pay",
-            "mention",
-            "count"
+            "list",
+            "investigate"
           ],
           "answer": 0,
           "explain": "Read it before you need it."
@@ -612,8 +612,8 @@
           "prompt": "Why take photos?",
           "choices": [
             "They show the damage as it was",
-            "They raise the deductible",
-            "They replace the policy"
+            "They lower the deductible on this claim",
+            "They let you skip telling the insurer"
           ],
           "answer": 0,
           "explain": "Memory fades. The photo does not."
@@ -624,8 +624,8 @@
           "prompt": "Someone is hurt. What comes before the paperwork?",
           "choices": [
             "Getting them help",
-            "Comparing premiums",
-            "Posting about it"
+            "Calling the insurer",
+            "Taking photos for the claim"
           ],
           "answer": 0,
           "explain": "The claim can wait a few minutes. An injury cannot."
@@ -636,8 +636,8 @@
           "prompt": "Keep the ___ for costs you paid out of pocket.",
           "choices": [
             "receipts",
-            "excuses",
-            "ads"
+            "premiums",
+            "deductibles"
           ],
           "answer": 0,
           "explain": "A receipt is the proof."
@@ -652,15 +652,15 @@
       "summary": "A claim can cost more than the check.",
       "xp": 10,
       "story": {
-        "title": "The window under the deductible",
+        "title": "The garage door under the deductible",
         "character": "Sam, 41, line cook",
-        "body": "A storm breaks Sam’s apartment window. The glass shop wants **$900**. His policy’s deductible is **$1,000**, and the yearly premium is **$240**. He files anyway, because he wants to know.\n\nThe insurer agrees the break is covered. The payout is still **$0**, because $900 never clears a $1,000 deductible. A second storm later puts a **$2,400** hole in the same kind of glass."
+        "body": "A storm drops a branch on Sam’s garage door. The repair quote is **$900**. His home policy’s deductible is **$1,000**, and he pays a **$1,500** premium each year.\n\nHe calls to file a claim anyway. The damage is covered, but the payout is **$0**, because $900 never clears a $1,000 deductible. The call still goes on his claims record.\n\nThe next spring, hail damages his roof. That repair is **$6,400**."
       },
       "steps": [
         {
           "id": "ib-rates-q1",
           "type": "number",
-          "prompt": "How much does insurance pay on the $900 window?",
+          "prompt": "How much does insurance pay on the $900 garage door?",
           "answer": 0,
           "unit": "$",
           "explain": "$900 is under the $1,000 deductible, so the payout is $0."
@@ -668,22 +668,27 @@
         {
           "id": "ib-rates-q2",
           "type": "number",
-          "prompt": "How much would insurance pay on the later $2,400 break, same deductible?",
-          "answer": 1400,
+          "prompt": "How much does insurance pay on the $6,400 roof, same deductible?",
+          "answer": 5400,
           "unit": "$",
-          "explain": "$2,400 − $1,000 = $1,400."
+          "explain": "$6,400 − $1,000 = $5,400."
         },
         {
           "id": "ib-rates-q3",
           "type": "multiple_choice",
-          "prompt": "Why might Sam still think twice before filing a small claim?",
+          "prompt": "Why might Sam think twice before filing a small claim next time?",
           "choices": [
-            "A claim can raise what he pays later, even when the payout is tiny",
-            "Filing is illegal under $1,000",
-            "The premium disappears if he never files"
+            "A claim can raise his premium later, even when the payout is $0",
+            "Insurers cancel any policy after one claim",
+            "He would lose the deductible he already paid"
           ],
           "answer": 0,
-          "explain": "The check is not the only cost. The next premium can move."
+          "why": [
+            "",
+            "Cancelling over one claim is rare. A higher price is the usual cost.",
+            "He never paid a deductible. The repair was below it."
+          ],
+          "explain": "The check is not the only cost. A claims history can push the next premium up."
         },
         {
           "id": "ib-rates-q4",
@@ -695,14 +700,14 @@
         {
           "id": "ib-rates-q5",
           "type": "multiple_choice",
-          "prompt": "He pays the $240 premium and gets $0 for the $900 window. What did the premium buy that year?",
+          "prompt": "Sam paid $1,500 and got $0 for the door. What did the premium buy that year?",
           "choices": [
-            "Coverage for a bigger loss, not a refund of the premium",
-            "A promise the window would not break",
-            "The $900, paid in secret"
+            "Protection from a big loss, like the $6,400 roof",
+            "Nothing, since he got no check",
+            "A refund if the year stays quiet"
           ],
           "answer": 0,
-          "explain": "The pool was there. This particular loss never reached it."
+          "explain": "Insurance is for the hit you can’t absorb. The door was one he could."
         }
       ]
     },

@@ -6,6 +6,21 @@
   "description": "Premium, deductible, copay, coinsurance, and the network that changes the bill.",
   "wolfLine": "The monthly price is not the bill. Read both.",
   "terms": {
+    "in-network": {
+      "term": "In network",
+      "definition": "A doctor, hospital, or pharmacy that has a price deal with your health plan. Care there costs you less.",
+      "example": "An in-network MRI is priced at $600 for your plan. The same scan out of network is billed at $1,900."
+    },
+    "hmo": {
+      "term": "HMO",
+      "definition": "A health plan that asks you to use its network and pick a primary doctor, who refers you to specialists. Premiums are often lower.",
+      "example": "Your HMO covers the dermatologist after your primary doctor sends a referral."
+    },
+    "ppo": {
+      "term": "PPO",
+      "definition": "A health plan with a larger network that lets you see specialists without a referral, and pays some out-of-network care. Premiums are often higher.",
+      "example": "With a PPO you book the dermatologist yourself, no referral needed."
+    },
     "copay": {
       "term": "Copay",
       "definition": "A fixed amount you pay for a visit or a prescription. The plan pays the rest of its allowed price.",
@@ -77,8 +92,8 @@
           "prompt": "The deductible is the part of a covered bill you pay ___.",
           "choices": [
             "first",
-            "never",
-            "to a stranger"
+            "last",
+            "every month"
           ],
           "answer": 0,
           "explain": "Then coinsurance or a copay can take a turn."
@@ -340,7 +355,7 @@
         {
           "id": "hl-summary-q4",
           "type": "multiple_choice",
-          "prompt": "Which number is the monthly-style price of keeping the plan, shown here for the year?",
+          "prompt": "Which number do you pay even if you never see a doctor?",
           "choices": [
             "The $2,400 premium",
             "The $40 copay",
@@ -368,7 +383,7 @@
         {
           "id": "hl-network-q1",
           "type": "multiple_choice",
-          "context": "In-network care uses the plan’s prices. Out-of-network care often costs you more, and it may not count toward the [[out-of-pocket maximum]].",
+          "context": "[[In-network|in-network]] care uses the plan’s prices. Out-of-network care often costs you more, and it may not count toward the [[out-of-pocket maximum]].",
           "prompt": "What does in-network mean?",
           "choices": [
             "The doctor or hospital has a deal with your plan",
@@ -391,8 +406,8 @@
           "prompt": "You need a specialist. What do you check before the visit?",
           "choices": [
             "That they are in network for this plan",
-            "Only that they have a diploma on the wall",
-            "That their office is painted blue"
+            "That they have good online reviews",
+            "That their office is close to home"
           ],
           "answer": 0,
           "explain": "A great doctor can still be an out-of-network bill."
@@ -400,14 +415,19 @@
         {
           "id": "hl-network-q4",
           "type": "multiple_choice",
-          "prompt": "An in-network hospital uses an out-of-network surgeon. What is the risk?",
+          "prompt": "Before a planned surgery at an in-network hospital, you are handed a form agreeing to pay out-of-network prices for one doctor. What does signing it do?",
           "choices": [
-            "Part of the bill may be priced as out of network",
-            "The whole bill is free",
-            "Your premium is refunded"
+            "It can give up your protection from a surprise out-of-network bill",
+            "Nothing. In-network hospitals can never bill out-of-network prices",
+            "It lowers your deductible for the surgery"
           ],
           "answer": 0,
-          "explain": "The building and the doctor can be on different lists. Ask."
+          "why": [
+            "",
+            "They can, if you agree in writing. That is what the form is for.",
+            "The form is about price, not your deductible."
+          ],
+          "explain": "Since 2022, the No Surprises Act protects you from most surprise out-of-network bills at in-network hospitals, and in emergencies. Signing that form can waive it."
         },
         {
           "id": "hl-network-q5",
@@ -434,7 +454,7 @@
         {
           "id": "hl-sort-q1",
           "type": "sort",
-          "context": "These are two common shapes. An emergency is treated differently from a planned visit.",
+          "context": "An [[HMO]] wants a home doctor and a tighter network. A [[PPO]] costs more and lets you roam. Emergencies are covered either way.",
           "prompt": "Which setup is this?",
           "buckets": [
             "HMO",
@@ -471,7 +491,7 @@
           "choices": [
             "PPO",
             "HMO",
-            "Neither. Referrals are illegal"
+            "Either. Both need a referral"
           ],
           "answer": 0,
           "explain": "The PPO is the one that skips the referral."
@@ -501,7 +521,7 @@
           "prompt": "An HMO usually asks you to start with a ___ doctor.",
           "choices": [
             "primary",
-            "retired",
+            "specialist",
             "out-of-network"
           ],
           "answer": 0,
@@ -732,11 +752,11 @@
           "prompt": "Luis loses no job coverage, does not move, and does not have a baby. He simply waited. What is true?",
           "choices": [
             "He uses the yearly window posted on HealthCare.gov, not a special enrollment period",
-            "He can enroll any Tuesday",
-            "A text message can sell him a legal exception"
+            "He can enroll any day, since he has no coverage",
+            "Turning 26 last year still counts as a qualifying event"
           ],
           "answer": 0,
-          "explain": "Special enrollment needs a qualifying event. The yearly window is the ordinary door."
+          "explain": "Special enrollment needs a recent qualifying event, generally within 60 days. The yearly window is the ordinary door."
         },
         {
           "id": "hl-luis-q5",
@@ -779,7 +799,7 @@
           "choices": [
             "Coinsurance",
             "The premium",
-            "A state minimum"
+            "A copay"
           ],
           "answer": 0,
           "explain": "A percent after the deductible is coinsurance."

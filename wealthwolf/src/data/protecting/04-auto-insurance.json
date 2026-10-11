@@ -6,6 +6,11 @@
   "description": "Liability, collision, comprehensive, and the quote behind the monthly price.",
   "wolfLine": "The legal minimum is a floor. Injury does not care.",
   "terms": {
+    "declarations-page": {
+      "term": "Declarations page",
+      "definition": "The summary page of an insurance policy. It lists who and what is covered, the limits, the deductibles, and the premium.",
+      "example": "Your auto declarations page shows $100,000 liability per person and a $500 collision deductible."
+    },
     "liability-coverage": {
       "term": "Liability coverage",
       "definition": "Auto insurance that pays others when you cause their injuries or damage. It does not fix your own car.",
@@ -76,8 +81,8 @@
           "prompt": "Collision coverage pays to fix whose car after you hit a pole?",
           "choices": [
             "Yours, after the deductible",
-            "The pole’s owner only",
-            "Nobody. Poles are excluded from every policy"
+            "The pole’s owner, through your liability coverage",
+            "Nobody, because no other car was involved"
           ],
           "answer": 0,
           "explain": "The pole is an object. Collision is the crash coverage for your car."
@@ -134,8 +139,8 @@
           "prompt": "What is a state minimum?",
           "choices": [
             "The least liability the law lets you drive with",
-            "The most any crash can cost",
-            "The price of collision coverage"
+            "The amount most drivers need for a serious crash",
+            "The cheapest price an insurer can charge"
           ],
           "answer": 0,
           "explain": "It is a legal floor, not a guess at a real injury."
@@ -154,7 +159,7 @@
           "choices": [
             "You are",
             "The state, automatically",
-            "No one. Bills stop at the minimum"
+            "Your insurer, whatever the limit"
           ],
           "answer": 0,
           "explain": "The limit is a ceiling on the insurer, not on the injury."
@@ -165,8 +170,8 @@
           "prompt": "Why do people buy more than the minimum?",
           "choices": [
             "A serious injury costs more than the legal floor",
-            "The state pays you a bonus for it",
-            "Collision is illegal at the minimum"
+            "Most states require double the minimum",
+            "Higher limits lower the premium"
           ],
           "answer": 0,
           "explain": "The extra limit is there for the bill the floor cannot hold."
@@ -187,8 +192,8 @@
           "prompt": "What is uninsured motorist coverage for?",
           "choices": [
             "When another driver has little or no insurance and hurts you",
-            "When you want a cheaper premium",
-            "When your own car needs an oil change"
+            "When you hurt a driver who has no insurance",
+            "When your car is stolen"
           ],
           "answer": 0,
           "explain": "It fills the hole their missing policy left."
@@ -206,8 +211,8 @@
           "prompt": "You are hurt. The other driver is uninsured. Which coverage do you look at on your own policy?",
           "choices": [
             "Uninsured motorist",
-            "Only your collision deductible",
-            "A life insurance beneficiary form"
+            "Your liability coverage",
+            "Your comprehensive coverage"
           ],
           "answer": 0,
           "explain": "This is the coverage built for their empty policy."
@@ -218,8 +223,8 @@
           "prompt": "Why does this coverage exist?",
           "choices": [
             "Plenty of drivers are on the road with little or no insurance",
-            "It replaces state inspection",
-            "It pays your parking tickets"
+            "Every state requires it",
+            "It replaces collision coverage"
           ],
           "answer": 0,
           "explain": "You cannot control what they bought. You can buy a backstop."
@@ -251,8 +256,8 @@
           "prompt": "Which change often raises an auto premium?",
           "choices": [
             "A recent at-fault crash",
-            "Parking in a legal spot",
-            "Reading the policy"
+            "Taking a defensive driving course",
+            "Raising your deductible"
           ],
           "answer": 0,
           "explain": "The insurer prices the risk it thinks you bring."
@@ -282,8 +287,8 @@
           "prompt": "Why might a sports car cost more to insure than a used sedan?",
           "choices": [
             "It costs more to repair and may be stolen more often",
-            "Sedans are illegal to insure",
-            "Sports cars are exempt from liability"
+            "Sports cars need a higher state minimum",
+            "Insurers price only by top speed"
           ],
           "answer": 0,
           "explain": "Price follows the size of the possible claim."
@@ -542,7 +547,7 @@
           "choices": [
             "The pictures show the damage before it is repaired or forgotten",
             "Photos lower your deductible",
-            "The police require a filter"
+            "Photos let you skip the police report"
           ],
           "answer": 0,
           "explain": "The estimate comes later. The photo is from the day."
@@ -553,8 +558,8 @@
           "prompt": "The other driver asks you to skip insurance and pay them cash tonight. What is the careful move?",
           "choices": [
             "Go through the insurers. A cash deal in the moment is how details disappear",
-            "Empty your wallet so they will not call",
-            "Post their license plate and go"
+            "Take the cash. It keeps your premium down",
+            "Agree, and shake on it so it is binding"
           ],
           "answer": 0,
           "explain": "A calm claim beats a roadside bargain."
@@ -584,7 +589,7 @@
         {
           "id": "ai-declarations-q1",
           "type": "number",
-          "context": "The declarations page lists the limits and deductibles you actually bought.",
+          "context": "The [[declarations page]] lists the limits and deductibles you actually bought.",
           "doc": {
             "kind": "statement",
             "title": "Declarations page",
@@ -887,8 +892,8 @@
           "prompt": "After a crash, what comes before arguing about fault?",
           "choices": [
             "Checking for injuries and getting help",
-            "Posting a video",
-            "Shopping for a new deductible"
+            "Deciding who will pay",
+            "Calling your insurer"
           ],
           "answer": 0,
           "explain": "People first."

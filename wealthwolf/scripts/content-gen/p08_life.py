@@ -2,6 +2,9 @@ from lib import *
 
 S = 'protecting'
 terms = {
+    'death-benefit': term('Death benefit',
+                          'The money a life insurance policy pays your beneficiaries if you die while it is in force.',
+                          'A $500,000 term policy pays a $500,000 death benefit if you die during the term.'),
     'term-life': term('Term life insurance',
                       'Life insurance that pays if you die during a set period, such as 20 years. It is insurance, not an investment account.',
                       'A 20-year term policy for $500,000 might cost $25 a month. If you outlive the term, it does not pay.'),
@@ -15,19 +18,19 @@ terms = {
 
 who = lesson('li-who', 'Who Needs Life Insurance', 'Insure the paycheck someone else depends on.', [
     mc('Who has the clearest reason to buy life insurance?',
-       ['A parent whose income pays the rent', 'A single adult no one relies on for money', 'A person who wants a fancy savings slogan'], 0,
+       ['A parent whose income pays the rent', 'A single adult no one relies on for money', 'A retiree whose savings already cover their partner'], 0,
        'The question is who would be short of money if you died.',
-       context='Life insurance pays a death benefit to the people who lose your income. [[Term life insurance|term-life]] is the usual way to buy a large benefit for a set number of years.'),
+       context='Life insurance pays a [[death benefit]] to the people who lose your income. [[Term life insurance|term-life]] is the usual way to buy a large benefit for a set number of years.'),
     tf('Life insurance is a good fit when no person and no debt depends on your income.', False,
        'If nobody is harmed financially by your death, the premium has little to protect.'),
     mc('A stay-at-home parent provides childcare that would cost money to replace. Do they have a reason to be insured?',
-       ['Yes. Replacing that care costs real money', 'No. Only paychecks count', 'No. Children cannot be beneficiaries'], 0,
+       ['Yes. Replacing that care costs real money', 'No. Only paychecks count', 'No. Their partner’s work policy covers them'], 0,
        'The loss is the cost of replacing the care, not only a W-2.'),
     mc('What is the death benefit?',
-       ['The amount paid if you die while the policy is in force', 'The monthly premium', 'A bonus for staying healthy'], 0,
+       ['The amount paid if you die while the policy is in force', 'The monthly premium', 'The cash you get back if you cancel'], 0,
        'That check is the point of the policy.'),
     fill('Buy life insurance to protect people who ___ your income or your care.',
-         ['depend on', 'compete with', 'insure'], 0,
+         ['depend on', 'earn more than', 'share'], 0,
          'No dependent, no job for this policy.'),
 ])
 
@@ -64,7 +67,7 @@ much = lesson('li-much', 'How Much', 'A plain estimate: years of income the hous
     num('You earn $40,000. Ten years. What is the sketch?', 400000, '$40,000 × 10 = $400,000.'),
     num('The sketch is $400,000 and you already have $50,000 in life insurance through work. How much is the gap?', 350000,
         '$400,000 − $50,000 = $350,000.'),
-    tf('The ten-year sketch is a personal order you must follow.', False,
+    tf('The ten-year sketch is the exact amount every family needs.', False,
        'It is a starting sketch. A partner’s paycheck or a paid-off home can shrink it.'),
 ])
 
@@ -85,18 +88,18 @@ page = lesson('li-page', 'The Policy Page', 'Benefit, price, term, and the name 
         context='The page should name the [[beneficiary]]: the person who receives the money.', doc=PAGE),
     num('What yearly premium does this policy page list?', 300, 'That line is $300.', doc=PAGE),
     mc('Who receives the money if you die while this policy is in force?',
-       ['The beneficiary named on the policy', 'Whoever finds the paper', 'The insurer’s shareholders'], 0,
+       ['The beneficiary named on the policy', 'Your closest relative, whatever the form says', 'Whoever is named in your will'], 0,
        'The name on the policy is the instruction.'),
     tf('A 20-year term pays the death benefit if you die in year 25.', False,
        'The term ended. Outliving it means no payout, which is what you hope for.'),
     mc('Why write the beneficiary down instead of assuming the family will sort it out?',
-       ['The policy pays the name it has, not the argument that follows', 'Insurers ignore the form', 'A will always overrides every beneficiary'], 0,
+       ['The policy pays the name it has, not the argument that follows', 'The insurer picks the fairest person', 'A will always overrides every beneficiary'], 0,
        'The form is the instruction the insurer follows.'),
 ], fmt='document')
 
 ben = lesson('li-beneficiary', 'Beneficiaries', 'The form is the will for this one check.', [
     mc('What is a beneficiary?',
-       ['The person you name to receive the death benefit', 'The agent who sold the policy', 'The hospital'], 0,
+       ['The person you name to receive the death benefit', 'The person whose life is insured', 'The person who pays the premium'], 0,
        'No name, and the money waits on a process your family did not need.',
        context='Keep the [[beneficiary]] current. A divorce, a baby, or a death can make the old name wrong.'),
     tf('Naming your beneficiary once, at age 22, is enough for life.', False,
@@ -105,7 +108,7 @@ ben = lesson('li-beneficiary', 'Beneficiaries', 'The form is the will for this o
        ['Update the form', 'Wait for the insurer to notice', 'Cancel the policy'], 0,
        'A dead beneficiary sends the money into a slower process.'),
     mc('You want your partner and your sibling to split the benefit. What does the form need?',
-       ['Both names, and the share each one gets', 'Only a nickname', 'The word family'], 0,
+       ['Both names, and the share each one gets', 'Only the two names', 'Their names and phone numbers'], 0,
        'Shares should add to the whole. Write the percents.'),
     num('You leave 60% to your partner and 40% to your sibling. What do the shares add up to?', 100,
         '60% + 40% = 100%.', unit='%'),
@@ -115,7 +118,7 @@ work = lesson('li-work', 'Coverage Through Work', 'It is a start. It leaves when
     mc('What is the usual limit of life insurance you get at work?',
        ['It often ends when the job ends, and the benefit can be small', 'It follows you for life at the same price', 'It replaces a term policy dollar for dollar, always'], 0,
        'A job change can take the coverage with it.',
-       context='Work coverage is often one or two times your salary. [[COBRA|cobra]] is about health insurance after a job ends, not a promise that the life policy stays.'),
+       context='Work coverage is often one or two times your salary, and it usually ends when the job does.'),
     num('Your salary is $50,000. Work life insurance is one times salary. What is the benefit?', 50000,
         '$50,000 × 1 = $50,000.'),
     num('Your ten-year sketch is $500,000. How much of that sketch is missing?', 450000,
@@ -123,23 +126,23 @@ work = lesson('li-work', 'Coverage Through Work', 'It is a start. It leaves when
     tf('Quitting the job keeps that work policy in force at no cost.', False,
        'The policy belonged to the job. Ask what, if anything, you can take with you, and at what price.'),
     mc('Why not rely on the work policy alone while you have young kids?',
-       ['The benefit is often only a year or two of pay, and it can end with the job', 'Work policies are illegal', 'Kids cannot be protected by any policy'], 0,
+       ['The benefit is often only a year or two of pay, and it can end with the job', 'Work policies don’t pay out for parents', 'Work policies only pay if you die at work'], 0,
        'One year of pay is a thin bridge.'),
 ])
 
 whyterm = lesson('li-why-term', 'Why Most People Choose Term', 'Buy the protection. Invest the difference on purpose.', [
     mc('Why do many people choose term instead of whole life?',
-       ['Term buys a large benefit for a small premium during the years people depend on you', 'Term pays a larger death benefit for the same premium in the quotes we used', 'Whole life is illegal'], 0,
+       ['Term buys a large benefit for a small premium during the years people depend on you', 'Term pays a larger death benefit for the same premium in the quotes we used', 'Term builds more savings than whole life'], 0,
        'The expensive years are the years with kids or a big debt. Term covers those years.'),
     num('Term is $300 a year. Whole life is $2,640. How much is left each year if you buy term instead?', 2340,
         '$2,640 − $300 = $2,340.'),
     tf('That $2,340 is automatically a better investment if you spend it.', False,
        'The difference only helps if you actually save or invest it. Spending it buys neither insurance nor savings.'),
     mc('You have no dependents and no co-signed debt. What is a reasonable conclusion?',
-       ['You may not need life insurance right now', 'You must buy whole life', 'You must buy the largest term sold'], 0,
+       ['You may not need life insurance right now', 'You should lock in whole life while you are young', 'You need a policy worth ten years of pay'], 0,
        'The product protects a person. No person, no purchase required.'),
     fill('Term covers a ___ of years, not your whole life by default.',
-         ['set number', 'random', 'secret'], 0,
+         ['set number', 'lifetime', 'minimum'], 0,
          'When the term ends, so does the coverage.'),
 ])
 
@@ -161,13 +164,13 @@ aisha = lesson('li-aisha', 'Aisha and Her New Baby', 'One year of pay is not ten
 
 trial_steps = [
     mc('Life insurance is most useful when:',
-       ['Someone depends on your income', 'You want a logo on a folder', 'You have no dependents and no shared debts'], 0,
+       ['Someone depends on your income', 'You want a safe place to save', 'You have no dependents and no shared debts'], 0,
        'The benefit replaces what those people would lose.'),
     num('Term premium $40 a month. What is the yearly premium?', 480, '$40 × 12 = $480.'),
     tf('A work life policy of one times salary usually equals a ten-year income sketch.', False,
        'One times salary is one year, not ten.'),
     mc('Who should you name on the policy?',
-       ['The beneficiary who should receive the money', 'Whoever sold it', 'No one. The form is optional'], 0,
+       ['The beneficiary who should receive the money', 'Your employer', 'No one. The form is optional'], 0,
        'The name is the instruction.'),
 ]
 

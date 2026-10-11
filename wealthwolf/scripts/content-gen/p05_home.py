@@ -2,6 +2,9 @@ from lib import *
 
 S = 'protecting'
 terms = {
+    'loss-of-use': term('Loss of use',
+                        'The part of a renters or home policy that pays extra living costs, like a hotel, while your home can’t be lived in after a covered loss.',
+                        'A fire closes your apartment for a week. Loss of use pays $150 a night for the hotel, up to its limit.'),
     'renters-insurance': term('Renters insurance',
                               'A policy for a renter’s belongings, their liability, and sometimes a hotel if the place cannot be lived in. The landlord’s policy does not cover the renter’s stuff.',
                               'A $192 policy. A fire takes $6,000 of furniture the landlord’s insurance will not replace.'),
@@ -15,7 +18,7 @@ terms = {
 
 why = lesson('hi-why', 'Why Renters Need It', 'The landlord’s policy covers the building. It does not cover your couch.', [
     mc('Whose policy covers a renter’s furniture after a fire?',
-       ['The renter’s own policy, if they have one', 'The landlord’s policy, automatically', 'The city’s policy'], 0,
+       ['The renter’s own policy, if they have one', 'The landlord’s policy, automatically', 'The landlord’s policy, if the renter asks in writing'], 0,
        'The landlord insured the building. The couch was yours.',
        context='[[Renters insurance]] covers your belongings and, typically, your [[liability coverage|liability-coverage]]. The landlord’s policy does not.'),
     tf('If you rent, the landlord’s insurance replaces your clothes after a fire.', False,
@@ -25,21 +28,21 @@ why = lesson('hi-why', 'Why Renters Need It', 'The landlord’s policy covers th
        'Liability coverage on a renters policy faces that lawsuit.'),
     num('A renters policy costs $16 a month. What is that per year?', 192, '$16 × 12 = $192.'),
     mc('You own almost nothing expensive. Is that a full reason to skip renters insurance?',
-       ['No. Liability and a hotel stay can dwarf the value of the couch', 'Yes. Renters policies only cover jewelry', 'Yes, because landlords must cover guests'], 0,
+       ['No. Liability and a hotel stay can dwarf the value of the couch', 'Yes. Renters insurance only covers expensive things', 'Yes, because landlords must cover guests'], 0,
        'The belongings are only one part. The lawsuit is the other.'),
 ])
 
 covers = lesson('hi-covers', 'What It Covers', 'Your things, a lawsuit, and a place to sleep.', [
     mc('Which is a usual piece of renters coverage?',
        ['A hotel if the apartment cannot be lived in', 'Flood water from the river', 'The landlord’s roof'], 0,
-       'That hotel piece is often called loss of use. Flood is a different policy.',
-       context='A typical [[renters insurance]] policy has three jobs: belongings, liability, and extra living costs.'),
+       'That’s loss of use. Flood is a different policy.',
+       context='A typical [[renters insurance]] policy has three jobs: belongings, liability, and extra living costs. That last one is called [[loss of use]].'),
     num('The hotel limit is $3,000. Four nights at $150 would be how much?', 600, '$150 × 4 = $600.'),
     num('How much of that $3,000 hotel limit is left after $600?', 2400, '$3,000 − $600 = $2,400.'),
     tf('Renters insurance rebuilds the apartment building.', False,
        'The building is the landlord’s. Your policy is for you.'),
     fill('Loss of use helps pay for a ___ if you cannot stay home.',
-         ['hotel', 'new car', 'stock trade'], 0,
+         ['hotel', 'new apartment deposit', 'new couch'], 0,
          'It is shelter, not a shopping spree.'),
 ])
 
@@ -48,7 +51,7 @@ value = lesson('hi-value', 'Replacement Cost or Cash Value', 'New price, or used
        ['What a similar new item costs now', 'What a used item would sell for', 'The deductible'], 0,
        'New for old, minus the deductible.',
        context='[[Replacement cost]] buys a similar new item. [[Actual cash value]] pays the used price.'),
-    num('A laptop costs $1,200 to replace and is worth $400 used. How much more does replacement cost start from?', 800,
+    num('A laptop costs $1,200 to replace and is worth $400 used. How much bigger is the replacement-cost starting point?', 800,
         '$1,200 − $400 = $800.'),
     num('Replacement cost, $250 deductible. How much do you receive for that laptop?', 950,
         '$1,200 − $250 = $950.'),
@@ -106,20 +109,20 @@ inventory = lesson('hi-inventory', 'A Home Inventory', 'After a fire you will no
     info('Write it down before you need it',
          'A home inventory is a list of what you own, with photos and roughly what it cost.\n\nKeep a copy outside the apartment. A list that burns with the couch cannot replace the couch.'),
     mc('Why make the list before a loss?',
-       ['After a fire you will not remember every item or its price', 'The insurer writes the list for you', 'Lists lower the deductible to zero'], 0,
+       ['After a fire you will not remember every item or its price', 'The insurer writes the list for you', 'Insurers only pay for items listed in advance'], 0,
        'Memory is a bad filing cabinet.'),
     num('You list a bike at $450, a laptop at $1,200, and a bed at $800. What is the total?', 2450,
         '$450 + $1,200 + $800 = $2,450.'),
     tf('The only copy of the inventory should live in the apartment it describes.', False,
        'Store a copy somewhere the fire cannot reach.'),
     mc('What belongs on the list besides the name of the item?',
-       ['A photo and about what it cost', 'Your Social Security number', 'Your bank password'], 0,
-       'The photo and the price help the claim. The password helps a thief.'),
+       ['A photo and about what it cost', 'The store’s return policy', 'Who gave it to you'], 0,
+       'The photo and the price are what a claim asks for.'),
 ])
 
 home = lesson('hi-home', 'Home Insurance Basics', 'Owners insure the building and the things inside it.', [
     mc('How is a home policy different from a renters policy?',
-       ['It also helps rebuild the building you own', 'It only covers cars in the driveway', 'It replaces flood for free'], 0,
+       ['It also helps rebuild the building you own', 'It covers your car too', 'It includes flood because you own the land'], 0,
        'You own the walls, so the policy has to know about the walls.',
        context='Home insurance is the owner’s version: the building, the belongings, liability, and often extra living costs.'),
     tf('Owning a home means flood is included automatically.', False,
@@ -127,10 +130,10 @@ home = lesson('hi-home', 'Home Insurance Basics', 'Owners insure the building an
     num('A dwelling limit is $250,000. A rebuild estimate is $310,000. How much of the estimate is above the limit?', 60000,
         '$310,000 − $250,000 = $60,000.'),
     mc('Why compare the dwelling limit to a rebuild estimate?',
-       ['The limit, not the sale price, is what the insurer will pay toward rebuilding', 'The sale price is always the limit', 'A higher sale price lowers the premium to zero'], 0,
-       'You insure the cost to rebuild, not the price a buyer would pay for the land.'),
+       ['The limit, not the sale price, is what the insurer will pay toward rebuilding', 'The sale price is always the limit', 'The bank sets the limit at the loan amount'], 0,
+       'You insure the cost to rebuild. A sale price also includes the land, which does not burn.'),
     fill('The dwelling limit needs to cover the cost to ___, not only the price you paid.',
-         ['rebuild', 'decorate', 'advertise'], 0,
+         ['rebuild', 'sell', 'refinance'], 0,
          'Lumber and labor set that number.'),
 ])
 
@@ -146,7 +149,7 @@ priya = lesson('hi-priya', 'Priya’s Apartment Fire', 'The building was the lan
     num('After the $500 deductible, how much does the policy pay if both losses are covered?', 6100,
         '$6,600 − $500 = $6,100.'),
     mc('Why doesn’t the landlord’s policy write that check?',
-       ['It covers the building, not her belongings', 'Renters are banned from filing claims', 'Smoke is an exclusion on every policy'], 0,
+       ['It covers the building, not her belongings', 'Renters can only claim after the landlord does', 'Smoke is an exclusion on every policy'], 0,
        'Different owner, different policy.'),
     tf('She should keep the hotel receipts.', True,
        'Loss of use is paid from proof, not from memory.'),
@@ -154,7 +157,7 @@ priya = lesson('hi-priya', 'Priya’s Apartment Fire', 'The building was the lan
 
 trial_steps = [
     mc('A renter’s clothes burn. Whose policy is supposed to cover the clothes?',
-       ['The renter’s policy', 'The landlord’s building policy', 'The neighbor’s auto policy'], 0,
+       ['The renter’s policy', 'The landlord’s building policy', 'The policy of whoever’s unit the fire started in'], 0,
        'The clothes were not part of the building.'),
     num('Replacement cost $900. Actual cash value $300. How much bigger is replacement cost?', 600,
         '$900 − $300 = $600.'),

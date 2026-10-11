@@ -6,6 +6,11 @@
   "description": "Read the plan’s statement, then the bill, then the account that can pay it.",
   "wolfLine": "The biggest number on the letter is not always the one you owe.",
   "terms": {
+    "itemized-bill": {
+      "term": "Itemized bill",
+      "definition": "A bill that lists every service, test, and supply with its own price, instead of one total.",
+      "example": "The summary said $1,240. The itemized bill showed an x-ray charged twice."
+    },
     "explanation-of-benefits": {
       "term": "Explanation of benefits",
       "definition": "A statement from the health plan, not a bill. It shows what was charged, what the plan allowed, what it paid, and what you may owe.",
@@ -57,8 +62,12 @@
                 "City Clinic"
               ],
               [
-                "Date",
+                "Date of service",
                 "April 2"
+              ],
+              [
+                "Amount allowed",
+                "$400.00"
               ]
             ],
             "lines": [
@@ -73,19 +82,16 @@
                 "amount": -240.0
               },
               {
-                "id": "allowed",
-                "label": "Amount allowed",
-                "amount": 400.0
-              },
-              {
                 "id": "paid",
                 "label": "Plan paid",
                 "amount": -320.0
-              },
+              }
+            ],
+            "totals": [
               {
-                "id": "owe",
                 "label": "You may owe",
-                "amount": 80.0
+                "amount": 80.0,
+                "strong": true
               }
             ],
             "note": "Wait for this before you pay a big hospital balance."
@@ -108,8 +114,12 @@
                 "City Clinic"
               ],
               [
-                "Date",
+                "Date of service",
                 "April 2"
+              ],
+              [
+                "Amount allowed",
+                "$400.00"
               ]
             ],
             "lines": [
@@ -124,19 +134,16 @@
                 "amount": -240.0
               },
               {
-                "id": "allowed",
-                "label": "Amount allowed",
-                "amount": 400.0
-              },
-              {
                 "id": "paid",
                 "label": "Plan paid",
                 "amount": -320.0
-              },
+              }
+            ],
+            "totals": [
               {
-                "id": "owe",
                 "label": "You may owe",
-                "amount": 80.0
+                "amount": 80.0,
+                "strong": true
               }
             ],
             "note": "Wait for this before you pay a big hospital balance."
@@ -159,8 +166,12 @@
                 "City Clinic"
               ],
               [
-                "Date",
+                "Date of service",
                 "April 2"
+              ],
+              [
+                "Amount allowed",
+                "$400.00"
               ]
             ],
             "lines": [
@@ -175,19 +186,16 @@
                 "amount": -240.0
               },
               {
-                "id": "allowed",
-                "label": "Amount allowed",
-                "amount": 400.0
-              },
-              {
                 "id": "paid",
                 "label": "Plan paid",
                 "amount": -320.0
-              },
+              }
+            ],
+            "totals": [
               {
-                "id": "owe",
                 "label": "You may owe",
-                "amount": 80.0
+                "amount": 80.0,
+                "strong": true
               }
             ],
             "note": "Wait for this before you pay a big hospital balance."
@@ -314,8 +322,8 @@
           "prompt": "What do you ask the hospital for when the bill is a lump sum?",
           "choices": [
             "An itemized bill that lists each service",
-            "A higher total",
-            "A gift card"
+            "A new copy of the same total",
+            "Your full medical records"
           ],
           "answer": 0,
           "explain": "You cannot spot a double charge on a single number."
@@ -339,11 +347,12 @@
         {
           "id": "mb-itemized-q1",
           "type": "multiple_choice",
+          "context": "An [[itemized bill]] lists every service with its own price. A summary bill shows one total.",
           "prompt": "An itemized bill shows:",
           "choices": [
             "Each service and its price",
-            "Only the hospital’s logo",
-            "Your credit score"
+            "Only the total and the due date",
+            "What your plan paid, and nothing else"
           ],
           "answer": 0,
           "explain": "The lines are how you find the mistake."
@@ -369,8 +378,8 @@
           "prompt": "A line says “misc.” and costs $600. What do you do?",
           "choices": [
             "Ask what the service was",
-            "Pay it because misc. sounds official",
-            "Ignore every other line"
+            "Pay it. Misc. lines are standard",
+            "Dispute the whole bill"
           ],
           "answer": 0,
           "explain": "A vague line is a question, not a verdict."
@@ -381,8 +390,8 @@
           "prompt": "Compare each line to the ___.",
           "choices": [
             "explanation of benefits",
-            "weather report",
-            "car title"
+            "premium",
+            "deductible"
           ],
           "answer": 0,
           "explain": "The plan already said what it allowed."
@@ -461,8 +470,8 @@
           "prompt": "What is hospital financial assistance?",
           "choices": [
             "A program that can lower a bill based on your income",
-            "A loan from the parking garage",
-            "A higher deductible"
+            "A hospital loan at a lower rate",
+            "A discount only for people with no insurance"
           ],
           "answer": 0,
           "explain": "It is aid, not a new debt."
@@ -480,8 +489,8 @@
           "prompt": "What do you ask the billing office?",
           "choices": [
             "For the financial assistance application and the income rules",
-            "For a gift card",
-            "For them to skip the itemized bill"
+            "For a lower interest rate on the bill",
+            "For a new copy of the bill"
           ],
           "answer": 0,
           "explain": "The rules are written. Get the form."
@@ -492,8 +501,8 @@
           "prompt": "Financial assistance is based on whether your ___ qualifies.",
           "choices": [
             "income",
-            "shoe size",
-            "area code"
+            "credit score",
+            "insurance plan"
           ],
           "answer": 0,
           "explain": "Bring the proof they ask for."
@@ -588,8 +597,8 @@
           "prompt": "A qualified medical expense paid from an HSA is:",
           "choices": [
             "Generally free of income tax",
-            "Taxed twice",
-            "Illegal"
+            "Taxed as income, like a paycheck",
+            "Tax-free only if you are over 65"
           ],
           "answer": 0,
           "explain": "That is the favor. Sunglasses you do not need are not a qualified expense."
@@ -615,8 +624,8 @@
           "prompt": "Why keep receipts?",
           "choices": [
             "They show the withdrawal was for a qualified medical cost",
-            "The IRS does not allow receipts",
-            "Receipts raise the contribution limit"
+            "The account won’t pay without one at the register",
+            "You must mail every receipt to the IRS each year"
           ],
           "answer": 0,
           "explain": "The favor depends on the expense being qualified."
@@ -665,12 +674,12 @@
           "type": "multiple_choice",
           "prompt": "What should he do before paying the $3,200?",
           "choices": [
-            "Pay the $640 the EOB supports, and dispute the rest",
+            "Call billing, ask for an itemized bill, and check it against the EOB",
             "Put $3,200 on a credit card tonight",
-            "Throw away the EOB"
+            "Pay the $3,200 now and ask for a refund later"
           ],
           "answer": 0,
-          "explain": "The EOB is the plan’s accounting. The letter has not caught up."
+          "explain": "The letter may have gone out before the plan paid. Match it to the EOB first."
         },
         {
           "id": "mb-jordan-q4",
@@ -683,9 +692,9 @@
         {
           "id": "mb-jordan-q5",
           "type": "true_false",
-          "prompt": "The HSA payment makes the extra $2,560 his responsibility.",
-          "answer": false,
-          "explain": "He owes what the EOB says he owes, not the loudest number on the letter."
+          "prompt": "Once the bill matches the EOB, Jordan can pay the $640 from his HSA.",
+          "answer": true,
+          "explain": "An ER visit is a qualified medical cost."
         }
       ]
     },
@@ -721,7 +730,7 @@
           "choices": [
             "A double charge to dispute",
             "Proof you had it twice",
-            "The out-of-pocket maximum"
+            "A normal follow-up fee"
           ],
           "answer": 0,
           "explain": "One test, one line."

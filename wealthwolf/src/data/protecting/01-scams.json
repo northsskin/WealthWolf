@@ -6,6 +6,11 @@
   "description": "Urgency, fake authority, and payments you cannot undo.",
   "wolfLine": "The costume changes. The hurry does not.",
   "terms": {
+    "impostor-scam": {
+      "term": "Impostor scam",
+      "definition": "A scam where someone pretends to be a person or office you trust, such as your bank, the IRS, or a grandchild, to get money or information.",
+      "example": "A caller says he is from your bank’s fraud desk and asks you to move $3,000 to a “safe account.”"
+    },
     "phishing": {
       "term": "Phishing",
       "definition": "A fake email, text, or call that pretends to be someone you trust, so you will give up a password, a code, or money.",
@@ -32,8 +37,8 @@
           "prompt": "A text says your account closes in 15 minutes unless you tap now. Which lever is that?",
           "choices": [
             "Urgency",
-            "A paper receipt",
-            "A paycheck"
+            "Authority",
+            "Secrecy"
           ],
           "answer": 0,
           "explain": "The clock is the pressure. Real problems still let you hang up and check."
@@ -44,8 +49,8 @@
           "prompt": "The caller says, “I am from your bank. Do not tell your family.” Which lever is the second sentence?",
           "choices": [
             "Secrecy",
-            "A sale",
-            "A budget"
+            "Urgency",
+            "Authority"
           ],
           "answer": 0,
           "explain": "Secrecy keeps you from the person who would spot the trick."
@@ -63,8 +68,8 @@
           "prompt": "A message that rushes you to act before you can think is using ___.",
           "choices": [
             "urgency",
-            "a deductible",
-            "a paycheck"
+            "authority",
+            "secrecy"
           ],
           "answer": 0,
           "explain": "Slow down. The rush is the product."
@@ -85,8 +90,8 @@
           "prompt": "What is phishing?",
           "choices": [
             "A fake message that wants a password, a code, or money",
-            "A fee your bank prints on a statement",
-            "A type of savings account"
+            "Any email from a company you have never heard of",
+            "A real alert that asks you to open your bank’s app"
           ],
           "answer": 0,
           "explain": "The disguise is the trusted name. The goal is something only you should have."
@@ -116,8 +121,8 @@
           "prompt": "A link’s real job in a phishing text is to:",
           "choices": [
             "Take you to a fake page that collects your login",
-            "Print a receipt",
-            "Raise your credit score"
+            "Confirm your identity so the bank can protect you",
+            "Unsubscribe you from the messages"
           ],
           "answer": 0,
           "explain": "The page can look perfect and still belong to someone else."
@@ -144,71 +149,71 @@
           "type": "spot",
           "context": "Read the whole message. The honest lines make the bad line look normal.",
           "doc": {
-            "kind": "receipt",
-            "title": "Delivery alert",
-            "subtitle": "From a number you do not know",
+            "kind": "bill",
+            "title": "Delivery notice",
+            "subtitle": "Text from (202) 555-0148",
             "lines": [
               {
-                "id": "pkg",
-                "label": "Package you ordered last week",
+                "id": "order",
+                "label": "Order #4471, paid at checkout",
                 "amount": 48.0
               },
               {
-                "id": "fee",
-                "label": "Redelivery fee, pay by gift card",
-                "amount": 12.0
+                "id": "ship",
+                "label": "Shipping, paid at checkout",
+                "amount": 5.99
               },
               {
-                "id": "tax",
-                "label": "Sales tax on the original order",
-                "amount": 3.0
+                "id": "fee",
+                "label": "Redelivery fee, pay with a gift card",
+                "amount": 12.0
               }
             ],
             "totals": [
               {
-                "label": "They want you to pay",
+                "label": "Due now to release your package",
                 "amount": 12.0,
                 "strong": true
               }
             ],
-            "note": "The store’s real app shows the package is already on the truck."
+            "note": "Pay within 2 hours or your package returns to sender."
           },
           "prompt": "Which line is the trap?",
           "answer": "fee",
-          "explain": "A surprise fee that must be paid by gift card is the hook. The package line is bait."
+          "explain": "A surprise fee that must be paid by gift card is the hook. The real order details are the bait."
         },
         {
           "id": "sc-spot-q2",
           "type": "number",
           "doc": {
-            "kind": "receipt",
-            "title": "Delivery alert",
-            "subtitle": "From a number you do not know",
+            "kind": "bill",
+            "title": "Delivery notice",
+            "subtitle": "Text from (202) 555-0148",
             "lines": [
               {
-                "id": "pkg",
-                "label": "Package you ordered last week",
+                "id": "order",
+                "label": "Order #4471, paid at checkout",
                 "amount": 48.0
               },
               {
-                "id": "fee",
-                "label": "Redelivery fee, pay by gift card",
-                "amount": 12.0
+                "id": "ship",
+                "label": "Shipping, paid at checkout",
+                "amount": 5.99
               },
               {
-                "id": "tax",
-                "label": "Sales tax on the original order",
-                "amount": 3.0
+                "id": "fee",
+                "label": "Redelivery fee, pay with a gift card",
+                "amount": 12.0
               }
             ],
             "totals": [
               {
-                "label": "They want you to pay",
+                "label": "Due now to release your package",
                 "amount": 12.0,
                 "strong": true
               }
             ],
-            "note": "The store’s real app shows the package is already on the truck."
+            "note": "Pay within 2 hours or your package returns to sender."
           },
           "prompt": "How much is the gift-card fee they invented?",
           "answer": 12,
@@ -221,8 +226,8 @@
           "prompt": "Why is a gift card a warning?",
           "choices": [
             "Gift cards are like cash, and you cannot get them back",
-            "Gift cards earn interest",
-            "Stores only take gift cards for taxes"
+            "Gift cards take a week to clear",
+            "Carriers only take gift cards for small fees"
           ],
           "answer": 0,
           "explain": "Once the code is read, the money is gone."
@@ -258,11 +263,12 @@
         {
           "id": "sc-calls-q1",
           "type": "multiple_choice",
+          "context": "An [[impostor scam|impostor-scam]] is someone pretending to be a person or office you trust: your bank, the IRS, the police, or a relative.",
           "prompt": "A caller says they are the IRS and you must pay today with gift cards. What is true?",
           "choices": [
             "The IRS does not demand gift cards over the phone",
-            "Gift cards are the official way to pay taxes",
-            "You should stay on the line so they do not fine you"
+            "The IRS takes gift cards only for overdue bills",
+            "Paying today avoids an arrest, so it can be worth it"
           ],
           "answer": 0,
           "explain": "Taxes are not collected by a stranger who needs a gift card."
@@ -293,7 +299,7 @@
           "choices": [
             "No. Those digits leak, and scammers buy them",
             "Yes. Only your bank can know that",
-            "Yes, if they sound polite"
+            "Yes, if they also know your address"
           ],
           "answer": 0,
           "explain": "A few digits are not a secret handshake."
@@ -320,8 +326,8 @@
           "prompt": "You have never met them, and they ask you to send money for a plane ticket. What is the careful read?",
           "choices": [
             "This is a common romance scam",
-            "Plane tickets are always a gift",
-            "Meeting online makes the request safer"
+            "A normal step once you have talked for months",
+            "Fine, as long as they promise to pay it back"
           ],
           "answer": 0,
           "explain": "The relationship is the setup. The ticket is the withdrawal."
@@ -347,7 +353,7 @@
           "prompt": "They say you must pay a “tax” before you can withdraw your profits. What is that?",
           "choices": [
             "Another payment in the same scam",
-            "A normal IRS form",
+            "A normal fee on investment withdrawals",
             "Proof the profits are real"
           ],
           "answer": 0,
@@ -421,8 +427,8 @@
           "prompt": "Why do scammers love gift cards?",
           "choices": [
             "The code spends like cash, and the store cannot pull it back",
-            "Gift cards build your credit score",
-            "The IRS prefers them"
+            "Gift cards have the same fraud protection as a credit card",
+            "They are easy to trace back to the buyer"
           ],
           "answer": 0,
           "explain": "There is no refund button after the code is read."
@@ -505,8 +511,8 @@
           "prompt": "Look up the company’s number yourself. Do not use the number in the ___.",
           "choices": [
             "message",
-            "paycheck",
-            "glossary"
+            "company’s own app",
+            "back of your card"
           ],
           "answer": 0,
           "explain": "The message is the trap. The number you find is the exit."
@@ -518,60 +524,75 @@
       "type": "lesson",
       "format": "story",
       "title": "Rosa’s Fake Delivery",
-      "summary": "The logo was real. The fee was not.",
+      "summary": "The fee is tiny. The card number is the prize.",
       "xp": 10,
       "story": {
-        "title": "The package that was never stuck",
-        "character": "Rosa, 34, delivery dispatcher",
-        "body": "Rosa is on her break when a text arrives. It uses a shipping logo and says her **$48** package is held. Pay a **$12** “redelivery fee” with a **$100** gift card, or the box goes back.\n\nShe sells nothing online and she did order a **$48** item last week. The logo looks right. The ask does not. Her store’s app, which she opens herself, says the box is on the truck."
+        "title": "The $1.99 that wasn’t",
+        "character": "Rosa, 34, dental assistant",
+        "body": "Rosa is on her lunch break when a text arrives: her package is held for an incomplete address. To release it, tap the link and pay a **$1.99** redelivery fee within **2** hours. She did order a **$48** lamp last week.\n\nThe link opens a page with a real shipping logo and a box for her card number. Rosa closes it and opens the store’s app herself. The lamp is already on the truck.\n\nHer coworker Jen paid the same fee last month. Two days later her card showed **$612.40** of charges she never made."
       },
       "steps": [
         {
           "id": "sc-rosa-q1",
-          "type": "number",
-          "prompt": "How much would the gift card have cost Rosa?",
-          "answer": 100,
-          "unit": "$",
-          "explain": "The text asks for a $100 gift card."
+          "type": "multiple_choice",
+          "prompt": "What does the scammer really want from that page?",
+          "choices": [
+            "Rosa’s card number",
+            "The $1.99 fee",
+            "Her home address, to deliver the lamp"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "That’s the bait. Nobody runs a scam for $1.99.",
+            "They already pretended to have that. They want something that spends."
+          ],
+          "explain": "The fee is small so you won’t think twice. The card number is worth far more."
         },
         {
           "id": "sc-rosa-q2",
           "type": "number",
-          "prompt": "The package itself was $48. How much bigger is the gift card than the fake fee?",
-          "answer": 88,
+          "prompt": "Jen paid $1.99 and then saw $612.40 of charges she didn’t make. How much did the text cost her in all?",
+          "answer": 614.39,
           "unit": "$",
-          "explain": "$100 − $12 = $88. The fee was the excuse. The card was the theft."
+          "tolerance": 0.005,
+          "explain": "$1.99 + $612.40 = $614.39."
         },
         {
           "id": "sc-rosa-q3",
           "type": "multiple_choice",
-          "prompt": "What should Rosa do with the link?",
+          "prompt": "Which lever is the two-hour deadline?",
           "choices": [
-            "Ignore it and trust the app she opened herself",
-            "Pay the $12 so the package moves",
-            "Send the gift-card code and ask for a receipt"
+            "Urgency",
+            "Authority",
+            "Secrecy"
           ],
           "answer": 0,
-          "explain": "The app she opened is the real status. The text is the pitch."
+          "explain": "A clock stops you from checking."
         },
         {
           "id": "sc-rosa-q4",
-          "type": "true_false",
-          "prompt": "A real carrier asks you to pay a redelivery fee with a gift card.",
-          "answer": false,
-          "explain": "Gift cards are a scammer’s payment rail."
+          "type": "multiple_choice",
+          "prompt": "What was Rosa’s best move?",
+          "choices": [
+            "Close the page and check the order in the store’s app",
+            "Pay the $1.99, since it’s too small to matter",
+            "Reply STOP to the text"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "That’s how Jen lost $612.40.",
+            "Replying tells them the number is live. Just delete it."
+          ],
+          "explain": "She checked through a door she chose. The text never got a thing."
         },
         {
           "id": "sc-rosa-q5",
-          "type": "multiple_choice",
-          "prompt": "Which lever did the text use hardest?",
-          "choices": [
-            "Urgency: pay now or lose the box",
-            "A paper statement",
-            "A lower deductible"
-          ],
-          "answer": 0,
-          "explain": "The deadline is fake. The package was already coming."
+          "type": "true_false",
+          "prompt": "Jen should call the number on the back of her card and report the charges.",
+          "answer": true,
+          "explain": "The bank can cancel the card and dispute the charges. Card fraud is usually refunded."
         }
       ]
     },

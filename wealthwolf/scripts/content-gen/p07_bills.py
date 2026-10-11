@@ -2,6 +2,9 @@ from lib import *
 
 S = 'protecting'
 terms = {
+    'itemized-bill': term('Itemized bill',
+                          'A bill that lists every service, test, and supply with its own price, instead of one total.',
+                          'The summary said $1,240. The itemized bill showed an x-ray charged twice.'),
     'explanation-of-benefits': term('Explanation of benefits',
                                     'A statement from the health plan, not a bill. It shows what was charged, what the plan allowed, what it paid, and what you may owe.',
                                     'Charged $640. Allowed $400. Plan paid $320. You may owe $80.'),
@@ -14,15 +17,14 @@ terms = {
 }
 
 eob_lines = [
-    ('charged', 'Amount charged', 640),
-    ('discount', 'Plan discount', -240),
-    ('allowed', 'Amount allowed', 400),
-    ('paid', 'Plan paid', -320),
-    ('owe', 'You may owe', 80),
+    ('charged', 'Amount charged', 640.00),
+    ('discount', 'Plan discount', -240.00),
+    ('paid', 'Plan paid', -320.00),
 ]
-assert 640 - 240 == 400 and 400 - 320 == 80
+assert 640 - 240 - 320 == 80 and 640 - 240 == 400
 EOB = doc('statement', 'Explanation of benefits', eob_lines, subtitle='Not a bill',
-          meta=[('Provider', 'City Clinic'), ('Date', 'April 2')],
+          meta=[['Provider', 'City Clinic'], ['Date of service', 'April 2'], ['Amount allowed', '$400.00']],
+          totals=[('You may owe', 80.00, True)],
           note='Wait for this before you pay a big hospital balance.')
 eob = lesson('mb-eob', 'The Explanation of Benefits', 'This page is the plan talking. It is not the bill.', [
     mc('What is an explanation of benefits?',
@@ -54,7 +56,7 @@ spot = lesson('mb-spot', 'Check the Bill', 'Two x-rays were not what happened.',
     num('What should the bill add up to without that duplicate?', 380,
         '$140 + $180 + $60 = $380.'),
     mc('What do you ask the hospital for when the bill is a lump sum?',
-       ['An itemized bill that lists each service', 'A higher total', 'A gift card'], 0,
+       ['An itemized bill that lists each service', 'A new copy of the same total', 'Your full medical records'], 0,
        'You cannot spot a double charge on a single number.'),
     tf('Paying a bill you have not compared to the EOB is the careful path.', False,
        'Compare first. Then pay what you actually owe.'),
@@ -62,17 +64,18 @@ spot = lesson('mb-spot', 'Check the Bill', 'Two x-rays were not what happened.',
 
 item = lesson('mb-itemized', 'Ask for the Itemized Bill', 'A single total hides the duplicate.', [
     mc('An itemized bill shows:',
-       ['Each service and its price', 'Only the hospital’s logo', 'Your credit score'], 0,
-       'The lines are how you find the mistake.'),
+       ['Each service and its price', 'Only the total and the due date', 'What your plan paid, and nothing else'], 0,
+       'The lines are how you find the mistake.',
+       context='An [[itemized bill]] lists every service with its own price. A summary bill shows one total.'),
     tf('A one-line total is enough to check for a double charge.', False,
        'The double hides inside the total.'),
     num('The itemized lines are $220, $80, and $140. What is the total?', 440,
         '$220 + $80 + $140 = $440.'),
     mc('A line says “misc.” and costs $600. What do you do?',
-       ['Ask what the service was', 'Pay it because misc. sounds official', 'Ignore every other line'], 0,
+       ['Ask what the service was', 'Pay it. Misc. lines are standard', 'Dispute the whole bill'], 0,
        'A vague line is a question, not a verdict.'),
     fill('Compare each line to the ___.',
-         ['explanation of benefits', 'weather report', 'car title'], 0,
+         ['explanation of benefits', 'premium', 'deductible'], 0,
          'The plan already said what it allowed.'),
 ])
 
@@ -94,15 +97,15 @@ help_ = lesson('mb-help', 'Hospital Financial Assistance', 'Nonprofit hospitals 
     info('Aid is a form, not a secret',
          'Many hospitals, especially nonprofit ones, have financial assistance, sometimes called charity care. It can reduce or erase a bill if your income qualifies.\n\nThe form is the door. The program does not knock.'),
     mc('What is hospital financial assistance?',
-       ['A program that can lower a bill based on your income', 'A loan from the parking garage', 'A higher deductible'], 0,
+       ['A program that can lower a bill based on your income', 'A hospital loan at a lower rate', 'A discount only for people with no insurance'], 0,
        'It is aid, not a new debt.'),
     tf('You should wait until the bill is in collections before you ask about assistance.', False,
        'Ask while the bill is still at the hospital. Collections is a harder room.'),
     mc('What do you ask the billing office?',
-       ['For the financial assistance application and the income rules', 'For a gift card', 'For them to skip the itemized bill'], 0,
+       ['For the financial assistance application and the income rules', 'For a lower interest rate on the bill', 'For a new copy of the bill'], 0,
        'The rules are written. Get the form.'),
     fill('Financial assistance is based on whether your ___ qualifies.',
-         ['income', 'shoe size', 'area code'], 0,
+         ['income', 'credit score', 'insurance plan'], 0,
          'Bring the proof they ask for.'),
 ])
 
@@ -127,7 +130,7 @@ accounts = lesson('mb-hsa-fsa', 'HSA or FSA', 'One can travel with you. The othe
 
 taxadv = lesson('mb-hsa-tax', 'Why an HSA Is Favored', 'The tax break is the point. The receipt is the proof.', [
     mc('A qualified medical expense paid from an HSA is:',
-       ['Generally free of income tax', 'Taxed twice', 'Illegal'], 0,
+       ['Generally free of income tax', 'Taxed as income, like a paycheck', 'Tax-free only if you are over 65'], 0,
        'That is the favor. Sunglasses you do not need are not a qualified expense.',
        context='Money in an [[HSA|health-savings-account]] can go in tax-favored, and qualified medical withdrawals come out tax-free. Keep the receipts.'),
     num('You contribute $2,400. In a simple example your income-tax rate is 20%. How much income tax do you not pay on that contribution this year?', 480,
@@ -135,7 +138,7 @@ taxadv = lesson('mb-hsa-tax', 'Why an HSA Is Favored', 'The tax break is the poi
     tf('You can spend HSA money on anything, tax-free, the week you deposit it.', False,
        'A non-medical withdrawal can be taxed, and it can be penalized if you are under 65.'),
     mc('Why keep receipts?',
-       ['They show the withdrawal was for a qualified medical cost', 'The IRS does not allow receipts', 'Receipts raise the contribution limit'], 0,
+       ['They show the withdrawal was for a qualified medical cost', 'The account won’t pay without one at the register', 'You must mail every receipt to the IRS each year'], 0,
        'The favor depends on the expense being qualified.'),
     num('The 2026 family HSA limit is $8,750. The self-only limit is $4,400. How much higher is the family limit?', 4350,
         '$8,750 − $4,400 = $4,350.'),
@@ -151,18 +154,18 @@ jordan = lesson('mb-jordan', 'Jordan’s Surprise Bill', 'The letter shouted. Th
     num('How much of the $3,200 letter is not his, according to that EOB?', 2560,
         '$3,200 − $640 = $2,560.'),
     mc('What should he do before paying the $3,200?',
-       ['Pay the $640 the EOB supports, and dispute the rest', 'Put $3,200 on a credit card tonight', 'Throw away the EOB'], 0,
-       'The EOB is the plan’s accounting. The letter has not caught up.'),
+       ['Call billing, ask for an itemized bill, and check it against the EOB', 'Put $3,200 on a credit card tonight', 'Pay the $3,200 now and ask for a refund later'], 0,
+       'The letter may have gone out before the plan paid. Match it to the EOB first.'),
     num('His HSA has $700. After a qualified $640 payment, how much is left in the account?', 60,
         '$700 − $640 = $60.'),
-    tf('The HSA payment makes the extra $2,560 his responsibility.', False,
-       'He owes what the EOB says he owes, not the loudest number on the letter.'),
+    tf('Once the bill matches the EOB, Jordan can pay the $640 from his HSA.', True,
+       'An ER visit is a qualified medical cost.'),
 ], fmt='story', story=jordan_story)
 
 trial_steps = [
     num('Charged $500. Plan discount $150. What is allowed?', 350, '$500 − $150 = $350.'),
     mc('A second charge for a test you had once is:',
-       ['A double charge to dispute', 'Proof you had it twice', 'The out-of-pocket maximum'], 0,
+       ['A double charge to dispute', 'Proof you had it twice', 'A normal follow-up fee'], 0,
        'One test, one line.'),
     tf('An FSA balance always rolls over in full, like an HSA.', False,
        'FSA money is usually lost. A 2026 carryover, if allowed, stops at $680.'),

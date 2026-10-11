@@ -6,6 +6,11 @@
   "description": "Your belongings, the building if you own it, and the disasters a standard policy skips.",
   "wolfLine": "The landlord insured the walls. You insure what is inside them.",
   "terms": {
+    "loss-of-use": {
+      "term": "Loss of use",
+      "definition": "The part of a renters or home policy that pays extra living costs, like a hotel, while your home can’t be lived in after a covered loss.",
+      "example": "A fire closes your apartment for a week. Loss of use pays $150 a night for the hotel, up to its limit."
+    },
     "renters-insurance": {
       "term": "Renters insurance",
       "definition": "A policy for a renter’s belongings, their liability, and sometimes a hotel if the place cannot be lived in. The landlord’s policy does not cover the renter’s stuff.",
@@ -38,7 +43,7 @@
           "choices": [
             "The renter’s own policy, if they have one",
             "The landlord’s policy, automatically",
-            "The city’s policy"
+            "The landlord’s policy, if the renter asks in writing"
           ],
           "answer": 0,
           "explain": "The landlord insured the building. The couch was yours."
@@ -76,7 +81,7 @@
           "prompt": "You own almost nothing expensive. Is that a full reason to skip renters insurance?",
           "choices": [
             "No. Liability and a hotel stay can dwarf the value of the couch",
-            "Yes. Renters policies only cover jewelry",
+            "Yes. Renters insurance only covers expensive things",
             "Yes, because landlords must cover guests"
           ],
           "answer": 0,
@@ -94,7 +99,7 @@
         {
           "id": "hi-covers-q1",
           "type": "multiple_choice",
-          "context": "A typical [[renters insurance]] policy has three jobs: belongings, liability, and extra living costs.",
+          "context": "A typical [[renters insurance]] policy has three jobs: belongings, liability, and extra living costs. That last one is called [[loss of use]].",
           "prompt": "Which is a usual piece of renters coverage?",
           "choices": [
             "A hotel if the apartment cannot be lived in",
@@ -102,7 +107,7 @@
             "The landlord’s roof"
           ],
           "answer": 0,
-          "explain": "That hotel piece is often called loss of use. Flood is a different policy."
+          "explain": "That’s loss of use. Flood is a different policy."
         },
         {
           "id": "hi-covers-q2",
@@ -133,8 +138,8 @@
           "prompt": "Loss of use helps pay for a ___ if you cannot stay home.",
           "choices": [
             "hotel",
-            "new car",
-            "stock trade"
+            "new apartment deposit",
+            "new couch"
           ],
           "answer": 0,
           "explain": "It is shelter, not a shopping spree."
@@ -164,7 +169,7 @@
         {
           "id": "hi-value-q2",
           "type": "number",
-          "prompt": "A laptop costs $1,200 to replace and is worth $400 used. How much more does replacement cost start from?",
+          "prompt": "A laptop costs $1,200 to replace and is worth $400 used. How much bigger is the replacement-cost starting point?",
           "answer": 800,
           "unit": "$",
           "explain": "$1,200 − $400 = $800."
@@ -468,7 +473,7 @@
           "choices": [
             "After a fire you will not remember every item or its price",
             "The insurer writes the list for you",
-            "Lists lower the deductible to zero"
+            "Insurers only pay for items listed in advance"
           ],
           "answer": 0,
           "explain": "Memory is a bad filing cabinet."
@@ -494,11 +499,11 @@
           "prompt": "What belongs on the list besides the name of the item?",
           "choices": [
             "A photo and about what it cost",
-            "Your Social Security number",
-            "Your bank password"
+            "The store’s return policy",
+            "Who gave it to you"
           ],
           "answer": 0,
-          "explain": "The photo and the price help the claim. The password helps a thief."
+          "explain": "The photo and the price are what a claim asks for."
         }
       ]
     },
@@ -516,8 +521,8 @@
           "prompt": "How is a home policy different from a renters policy?",
           "choices": [
             "It also helps rebuild the building you own",
-            "It only covers cars in the driveway",
-            "It replaces flood for free"
+            "It covers your car too",
+            "It includes flood because you own the land"
           ],
           "answer": 0,
           "explain": "You own the walls, so the policy has to know about the walls."
@@ -544,10 +549,10 @@
           "choices": [
             "The limit, not the sale price, is what the insurer will pay toward rebuilding",
             "The sale price is always the limit",
-            "A higher sale price lowers the premium to zero"
+            "The bank sets the limit at the loan amount"
           ],
           "answer": 0,
-          "explain": "You insure the cost to rebuild, not the price a buyer would pay for the land."
+          "explain": "You insure the cost to rebuild. A sale price also includes the land, which does not burn."
         },
         {
           "id": "hi-home-q5",
@@ -555,8 +560,8 @@
           "prompt": "The dwelling limit needs to cover the cost to ___, not only the price you paid.",
           "choices": [
             "rebuild",
-            "decorate",
-            "advertise"
+            "sell",
+            "refinance"
           ],
           "answer": 0,
           "explain": "Lumber and labor set that number."
@@ -606,7 +611,7 @@
           "prompt": "Why doesn’t the landlord’s policy write that check?",
           "choices": [
             "It covers the building, not her belongings",
-            "Renters are banned from filing claims",
+            "Renters can only claim after the landlord does",
             "Smoke is an exclusion on every policy"
           ],
           "answer": 0,
@@ -645,7 +650,7 @@
           "choices": [
             "The renter’s policy",
             "The landlord’s building policy",
-            "The neighbor’s auto policy"
+            "The policy of whoever’s unit the fire started in"
           ],
           "answer": 0,
           "explain": "The clothes were not part of the building."
