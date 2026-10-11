@@ -1,0 +1,808 @@
+{
+  "id": "interest-apr",
+  "section": "credit-debt",
+  "order": 2,
+  "title": "Interest & APR",
+  "description": "How interest builds, how APR differs from APY, and where fees hide.",
+  "wolfLine": "The rate is the bite. The fee is the second bite.",
+  "terms": {
+    "apr": {
+      "term": "APR",
+      "definition": "Annual Percentage Rate: the yearly cost of borrowing, shown as a percentage. Higher means more expensive.",
+      "example": "Borrow $1,000 at 10% APR for a year and it costs you about $100."
+    },
+    "balance": {
+      "term": "Balance",
+      "definition": "How much you still owe on a card or loan right now.",
+      "example": "Spend $700 on a card, pay back $200, and your balance is $500."
+    },
+    "minimum-payment": {
+      "term": "Minimum payment",
+      "definition": "The smallest amount a lender lets you pay each month. Pay only this and your debt shrinks very slowly.",
+      "example": "You owe $2,000, but the card only asks for $40 this month."
+    },
+    "simple-interest": {
+      "term": "Simple interest",
+      "definition": "Interest worked out only on the principal: principal × rate × time.",
+      "example": "$1,000 at 8% for one year is $1,000 × 0.08 × 1 = $80."
+    },
+    "origination-fee": {
+      "term": "Origination fee",
+      "definition": "A fee some lenders charge for setting up a loan. It is part of the cost, on top of interest.",
+      "example": "A $100 origination fee on a $2,000 loan adds $100 to what the loan costs you."
+    }
+  },
+  "lessons": [
+    {
+      "id": "dc-apr",
+      "type": "lesson",
+      "title": "APR, Decoded",
+      "summary": "What borrowing really costs you each year.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dc-apr-q1",
+          "type": "multiple_choice",
+          "context": "Lenders show the yearly cost of borrowing as a percentage called the [[APR]]. A higher APR means more expensive debt.",
+          "prompt": "One card has a 12% APR. Another has 24%. Which is cheaper to borrow on?",
+          "choices": [
+            "24% APR",
+            "12% APR",
+            "They cost the same"
+          ],
+          "answer": 1,
+          "explain": "Lower APR, lower cost."
+        },
+        {
+          "id": "dc-apr-q2",
+          "type": "number",
+          "context": "Rough yearly cost = amount you owe ├ù APR. Owe $1,000 at 10% APR for a year and it costs about $1,000 ├ù 0.10 = $100.",
+          "prompt": "You owe $2,000 on a card at 20% APR for a whole year. Roughly how much interest is that?",
+          "answer": 400,
+          "explain": "$2,000 ├ù 0.20 = $400. Cards add interest monthly, so the real number is a bit higher.",
+          "unit": "$"
+        },
+        {
+          "id": "dc-apr-q3",
+          "type": "number",
+          "context": "The amount you still owe on a card or loan is your [[balance]].",
+          "prompt": "You spent $700 on your card and paid back $200. What’s your balance?",
+          "answer": 500,
+          "explain": "$700 ΓêÆ $200 = $500 still owed.",
+          "unit": "$"
+        },
+        {
+          "id": "dc-apr-q4",
+          "type": "multiple_choice",
+          "context": "Every month, a card asks for at least a small [[minimum payment]]. Pay only that, and interest keeps the balance alive for a very long time.",
+          "prompt": "What happens if you only ever pay the minimum?",
+          "choices": [
+            "The debt is gone in a month",
+            "The card company forgives the rest",
+            "The debt drags on for years because of interest"
+          ],
+          "answer": 2,
+          "explain": "Minimums are designed to keep you paying. Pay more whenever you can."
+        },
+        {
+          "id": "dc-apr-q5",
+          "type": "true_false",
+          "context": "Stretching a loan over more years makes each monthly payment smaller, but you pay interest for longer.",
+          "prompt": "A smaller monthly payment always means a cheaper loan.",
+          "answer": false,
+          "explain": "Smaller payments over more years can cost more in total."
+        },
+        {
+          "id": "dc-apr-q6",
+          "type": "fill_blank",
+          "prompt": "APR stands for Annual Percentage ___.",
+          "choices": [
+            "Return",
+            "Rate",
+            "Ratio"
+          ],
+          "answer": 1,
+          "explain": "Annual Percentage Rate."
+        }
+      ]
+    },
+    {
+      "id": "ia-simple",
+      "type": "lesson",
+      "title": "Simple Interest",
+      "summary": "Principal times rate times time. One clean formula.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ia-simple-q1",
+          "type": "multiple_choice",
+          "context": "[[Simple interest]] is principal × rate × time. $1,000 at 8% for one year is $1,000 × 0.08 × 1 = $80. It does not add interest on the interest.",
+          "prompt": "What does simple interest get multiplied by?",
+          "choices": [
+            "The principal, the rate, and the time",
+            "Only the monthly payment",
+            "Your credit score"
+          ],
+          "answer": 0,
+          "explain": "Principal × rate × time."
+        },
+        {
+          "id": "ia-simple-q2",
+          "type": "number",
+          "prompt": "$1,200 at 9% simple interest for 1 year. How much interest?",
+          "answer": 108,
+          "unit": "$",
+          "explain": "$1,200 × 0.09 × 1 = $108."
+        },
+        {
+          "id": "ia-simple-q3",
+          "type": "number",
+          "prompt": "The same $1,200 at 9% for 3 years, simple interest. How much interest?",
+          "answer": 324,
+          "unit": "$",
+          "explain": "$1,200 × 0.09 × 3 = $324."
+        },
+        {
+          "id": "ia-simple-q4",
+          "type": "number",
+          "prompt": "You borrow $800 at 5% simple interest for 2 years. How much do you pay back in total?",
+          "answer": 880,
+          "unit": "$",
+          "explain": "Interest is $800 × 0.05 × 2 = $80. Total is $800 + $80 = $880."
+        },
+        {
+          "id": "ia-simple-q5",
+          "type": "true_false",
+          "prompt": "Simple interest charges interest on the interest from last year.",
+          "answer": false,
+          "explain": "That would be compounding. Simple interest stays on the original principal."
+        },
+        {
+          "id": "ia-simple-q6",
+          "type": "fill_blank",
+          "prompt": "Simple interest equals principal × rate × ___.",
+          "choices": [
+            "time",
+            "credit score",
+            "minimum payment"
+          ],
+          "answer": 0,
+          "explain": "How long you borrow is the third number."
+        }
+      ]
+    },
+    {
+      "id": "ia-monthly",
+      "type": "lesson",
+      "title": "Interest, Month by Month",
+      "summary": "Cards usually charge interest every month, not once a year.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ia-monthly-q1",
+          "type": "multiple_choice",
+          "context": "A card’s [[APR]] is a yearly rate. Divide by 12 for a rough monthly rate. On a [[balance]] of $1,000 at 24% APR, one month of interest is about $1,000 × 0.02 = $20.",
+          "prompt": "A card lists 24% APR. About what monthly rate is that?",
+          "choices": [
+            "2%",
+            "24%",
+            "0.24%"
+          ],
+          "answer": 0,
+          "explain": "24% ÷ 12 months = 2% a month."
+        },
+        {
+          "id": "ia-monthly-q2",
+          "type": "number",
+          "prompt": "$1,000 balance, 24% APR. About how much interest in the first month?",
+          "answer": 20,
+          "unit": "$",
+          "explain": "$1,000 × 0.02 = $20."
+        },
+        {
+          "id": "ia-monthly-q3",
+          "type": "number",
+          "prompt": "You pay nothing. The balance becomes $1,020. About how much interest in the second month?",
+          "answer": 20.4,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$1,020 × 0.02 = $20.40. The interest itself starts getting interest."
+        },
+        {
+          "id": "ia-monthly-q4",
+          "type": "number",
+          "prompt": "$2,000 balance at 18% APR. Monthly rate is 1.5%. How much interest this month?",
+          "answer": 30,
+          "unit": "$",
+          "explain": "$2,000 × 0.015 = $30."
+        },
+        {
+          "id": "ia-monthly-q5",
+          "type": "true_false",
+          "prompt": "Paying the balance in full stops this month’s interest from piling onto next month.",
+          "answer": true,
+          "explain": "Nothing left to charge. The [[minimum payment]] alone usually does not do that."
+        },
+        {
+          "id": "ia-monthly-q6",
+          "type": "multiple_choice",
+          "prompt": "Why is the second month’s interest higher if you pay nothing?",
+          "choices": [
+            "The balance grew, so the rate hits a bigger number",
+            "The APR went up by itself",
+            "Months get longer"
+          ],
+          "answer": 0,
+          "explain": "$20 of interest became part of the balance."
+        }
+      ]
+    },
+    {
+      "id": "ia-apr-apy",
+      "type": "lesson",
+      "title": "APR and APY",
+      "summary": "One is the price of borrowing. The other is what savings earn.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ia-apr-apy-q1",
+          "type": "multiple_choice",
+          "context": "[[APR]] is the yearly cost of borrowing. [[APY]] is what savings earn in a year, counting interest on the interest. A 5% APR loan and a 5% APY savings account are not the same kind of deal.",
+          "prompt": "Which number is the yearly cost of borrowing?",
+          "choices": [
+            "APR",
+            "APY",
+            "Your paycheck"
+          ],
+          "answer": 0,
+          "explain": "APR is what a loan or card costs you."
+        },
+        {
+          "id": "ia-apr-apy-q2",
+          "type": "number",
+          "context": "APY already includes compounding, so a one-year estimate is balance × APY.",
+          "prompt": "A savings account holds $2,000 at 4% APY for a year. About how much does it earn?",
+          "answer": 80,
+          "unit": "$",
+          "explain": "$2,000 × 0.04 = $80."
+        },
+        {
+          "id": "ia-apr-apy-q3",
+          "type": "number",
+          "prompt": "You owe $2,000 on a card at 20% APR for a year, and you pay nothing. Roughly how much interest?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$2,000 × 0.20 = $400. Monthly compounding makes the real bill a bit higher."
+        },
+        {
+          "id": "ia-apr-apy-q4",
+          "type": "multiple_choice",
+          "prompt": "You want a savings account to grow. Which number do you compare?",
+          "choices": [
+            "APY",
+            "The APR on someone else’s car loan",
+            "The due date"
+          ],
+          "answer": 0,
+          "explain": "APY is the earnings number."
+        },
+        {
+          "id": "ia-apr-apy-q5",
+          "type": "true_false",
+          "prompt": "A lower APR on a loan means cheaper borrowing.",
+          "answer": true,
+          "explain": "Lower price to borrow."
+        },
+        {
+          "id": "ia-apr-apy-q6",
+          "type": "multiple_choice",
+          "prompt": "Why can a 20% APR card cost a bit more than balance × 0.20?",
+          "choices": [
+            "Interest is added month by month, and then interest hits that too",
+            "APR ignores the balance",
+            "Banks round every charge up to $100"
+          ],
+          "answer": 0,
+          "explain": "The rough yearly figure is a floor, not the whole story."
+        }
+      ]
+    },
+    {
+      "id": "ia-two-offers",
+      "type": "lesson",
+      "format": "call",
+      "title": "Two Loan Offers",
+      "summary": "The lower rate can still lose if a fee is riding along.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ia-two-offers-q1",
+          "type": "number",
+          "context": "Compare the total you pay back, not the rate alone.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Loan A",
+              "subtitle": "One-year loan",
+              "lines": [
+                {
+                  "id": "amt",
+                  "label": "Amount borrowed",
+                  "amount": 4000.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Upfront fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "int",
+                  "label": "Interest for the year",
+                  "amount": 320.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay back",
+                  "amount": 4320.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Loan B",
+              "subtitle": "One-year loan",
+              "lines": [
+                {
+                  "id": "amt",
+                  "label": "Amount borrowed",
+                  "amount": 4000.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Upfront fee",
+                  "amount": 200.0
+                },
+                {
+                  "id": "int",
+                  "label": "Interest for the year",
+                  "amount": 240.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay back",
+                  "amount": 4440.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "What is the interest on Loan A?",
+          "answer": 320,
+          "unit": "$",
+          "explain": "$4,000 × 0.08 = $320."
+        },
+        {
+          "id": "ia-two-offers-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Loan A",
+              "subtitle": "One-year loan",
+              "lines": [
+                {
+                  "id": "amt",
+                  "label": "Amount borrowed",
+                  "amount": 4000.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Upfront fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "int",
+                  "label": "Interest for the year",
+                  "amount": 320.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay back",
+                  "amount": 4320.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Loan B",
+              "subtitle": "One-year loan",
+              "lines": [
+                {
+                  "id": "amt",
+                  "label": "Amount borrowed",
+                  "amount": 4000.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Upfront fee",
+                  "amount": 200.0
+                },
+                {
+                  "id": "int",
+                  "label": "Interest for the year",
+                  "amount": 240.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay back",
+                  "amount": 4440.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "What do you pay back on Loan A, fee included?",
+          "answer": 4320,
+          "unit": "$",
+          "explain": "$4,000 + $320 = $4,320."
+        },
+        {
+          "id": "ia-two-offers-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Loan A",
+              "subtitle": "One-year loan",
+              "lines": [
+                {
+                  "id": "amt",
+                  "label": "Amount borrowed",
+                  "amount": 4000.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Upfront fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "int",
+                  "label": "Interest for the year",
+                  "amount": 320.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay back",
+                  "amount": 4320.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Loan B",
+              "subtitle": "One-year loan",
+              "lines": [
+                {
+                  "id": "amt",
+                  "label": "Amount borrowed",
+                  "amount": 4000.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Upfront fee",
+                  "amount": 200.0
+                },
+                {
+                  "id": "int",
+                  "label": "Interest for the year",
+                  "amount": 240.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay back",
+                  "amount": 4440.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "What do you pay back on Loan B?",
+          "answer": 4440,
+          "unit": "$",
+          "explain": "$4,000 + $200 + $240 = $4,440."
+        },
+        {
+          "id": "ia-two-offers-q4",
+          "type": "number",
+          "prompt": "How much more does Loan B cost than Loan A?",
+          "answer": 120,
+          "unit": "$",
+          "explain": "$4,440 − $4,320 = $120."
+        },
+        {
+          "id": "ia-two-offers-q5",
+          "type": "multiple_choice",
+          "prompt": "Loan B’s interest rate is lower. Why does it still cost more?",
+          "choices": [
+            "The $200 fee outweighs the cheaper interest",
+            "Loan A is a scam",
+            "The totals are the same"
+          ],
+          "answer": 0,
+          "why": [
+            "$440 of cost against $320.",
+            "Both are real offers. One is just pricier.",
+            "The sheets differ by $120."
+          ],
+          "explain": "$240 of interest plus a $200 fee is $440. Loan A’s interest is $320."
+        },
+        {
+          "id": "ia-two-offers-q6",
+          "type": "true_false",
+          "prompt": "The offer with the smaller interest line is always the cheaper loan.",
+          "answer": false,
+          "explain": "Add the fee before you decide."
+        }
+      ]
+    },
+    {
+      "id": "ia-total-cost",
+      "type": "lesson",
+      "title": "The Total Cost",
+      "summary": "Monthly payments hide the real price. Multiply them.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ia-total-cost-q1",
+          "type": "number",
+          "context": "The total cost is every payment added up. Interest is that total minus the [[principal]].",
+          "prompt": "A $9,000 loan asks for $250 a month for 48 months. How much do you pay in total?",
+          "answer": 12000,
+          "unit": "$",
+          "explain": "$250 × 48 = $12,000."
+        },
+        {
+          "id": "ia-total-cost-q2",
+          "type": "number",
+          "prompt": "How much of that $12,000 is interest?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$12,000 − $9,000 = $3,000."
+        },
+        {
+          "id": "ia-total-cost-q3",
+          "type": "number",
+          "prompt": "$150 a month for 36 months. What is the total?",
+          "answer": 5400,
+          "unit": "$",
+          "explain": "$150 × 36 = $5,400."
+        },
+        {
+          "id": "ia-total-cost-q4",
+          "type": "number",
+          "prompt": "That loan’s principal was $4,500. How much interest?",
+          "answer": 900,
+          "unit": "$",
+          "explain": "$5,400 − $4,500 = $900."
+        },
+        {
+          "id": "ia-total-cost-q5",
+          "type": "multiple_choice",
+          "prompt": "Two loans offer the same monthly payment. One lasts 3 years, one lasts 5. Which costs more in total?",
+          "choices": [
+            "The 5-year loan",
+            "The 3-year loan",
+            "They cost the same"
+          ],
+          "answer": 0,
+          "explain": "Same payment, more months, more money."
+        },
+        {
+          "id": "ia-total-cost-q6",
+          "type": "true_false",
+          "prompt": "A smaller monthly payment can mean a higher total cost.",
+          "answer": true,
+          "explain": "You are paying interest for longer."
+        }
+      ]
+    },
+    {
+      "id": "ia-fees-in-apr",
+      "type": "lesson",
+      "title": "Fees Inside the APR",
+      "summary": "A fee is part of the price, even when the rate looks low.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ia-fees-in-apr-q1",
+          "type": "multiple_choice",
+          "context": "An [[origination fee]] is money the lender takes for setting up the loan. [[APR]] is meant to include fees like this, so you can compare offers. The interest rate alone can look cheaper than the loan really is.",
+          "prompt": "What is an origination fee?",
+          "choices": [
+            "A charge for setting up the loan",
+            "Interest from last year",
+            "A reward for paying early"
+          ],
+          "answer": 0,
+          "explain": "It is part of the cost of borrowing."
+        },
+        {
+          "id": "ia-fees-in-apr-q2",
+          "type": "number",
+          "prompt": "You borrow $2,000 for one year at 10% interest, plus a $100 origination fee. How much is the interest?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$2,000 × 0.10 = $200."
+        },
+        {
+          "id": "ia-fees-in-apr-q3",
+          "type": "number",
+          "prompt": "Add the fee. What did this loan cost you in the first year?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$200 + $100 = $300."
+        },
+        {
+          "id": "ia-fees-in-apr-q4",
+          "type": "number",
+          "prompt": "That $300 is what percent of the $2,000 you borrowed?",
+          "answer": 15,
+          "unit": "%",
+          "explain": "$300 ÷ $2,000 = 0.15, which is 15%."
+        },
+        {
+          "id": "ia-fees-in-apr-q5",
+          "type": "true_false",
+          "prompt": "The interest rate and the APR can be different numbers when a loan has fees.",
+          "answer": true,
+          "explain": "The APR rolls the fee into the yearly cost."
+        },
+        {
+          "id": "ia-fees-in-apr-q6",
+          "type": "multiple_choice",
+          "prompt": "Two loans both say 10% interest. One has a $100 fee and one has no fee. Which comparison do you trust?",
+          "choices": [
+            "The APR, or the total dollars you pay",
+            "The interest rate alone",
+            "Whichever advertisement is bigger"
+          ],
+          "answer": 0,
+          "explain": "Dollars out the door beat a single percentage."
+        }
+      ]
+    },
+    {
+      "id": "ia-maya",
+      "type": "lesson",
+      "format": "story",
+      "title": "Maya’s Phone",
+      "summary": "A small monthly number can double the price of a phone.",
+      "xp": 10,
+      "story": {
+        "title": "The phone plan",
+        "character": "Maya, 26, barista",
+        "body": "Maya’s phone died. The shop will finance a **$840** phone: **$35** a month for **36** months. No money down.\n\nShe can also buy a refurbished phone for **$220** in cash. She has **$300** in savings and did not want to touch it."
+      },
+      "steps": [
+        {
+          "id": "ia-maya-q1",
+          "type": "number",
+          "prompt": "How much does Maya pay in total on the 36-month plan?",
+          "answer": 1260,
+          "unit": "$",
+          "explain": "$35 × 36 = $1,260."
+        },
+        {
+          "id": "ia-maya-q2",
+          "type": "number",
+          "prompt": "How much extra is that, above the $840 price?",
+          "answer": 420,
+          "unit": "$",
+          "explain": "$1,260 − $840 = $420."
+        },
+        {
+          "id": "ia-maya-q3",
+          "type": "number",
+          "prompt": "How much does she save by paying $220 cash instead of the plan’s $1,260?",
+          "answer": 1040,
+          "unit": "$",
+          "explain": "$1,260 − $220 = $1,040."
+        },
+        {
+          "id": "ia-maya-q4",
+          "type": "multiple_choice",
+          "prompt": "The $35 payment fits her month easily. What is still true?",
+          "choices": [
+            "The plan costs $420 more than the phone’s price",
+            "The plan is free",
+            "Cash always costs more"
+          ],
+          "answer": 0,
+          "explain": "A payment that fits can still be a bad price."
+        },
+        {
+          "id": "ia-maya-q5",
+          "type": "true_false",
+          "prompt": "Using $220 of her $300 savings leaves her with some cash still set aside.",
+          "answer": true,
+          "explain": "$300 − $220 = $80 left."
+        },
+        {
+          "id": "ia-maya-q6",
+          "type": "multiple_choice",
+          "prompt": "What is the careful comparison?",
+          "choices": [
+            "Total dollars, not the size of the monthly payment",
+            "Whichever sign is brighter",
+            "The number of months alone"
+          ],
+          "answer": 0,
+          "explain": "36 small payments hid a $420 charge."
+        }
+      ]
+    },
+    {
+      "id": "ia-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "ia-trial",
+      "type": "boss",
+      "title": "Den Trial: Interest & APR",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "ia-trial-q1",
+          "type": "number",
+          "prompt": "$2,500 at 8% simple interest for 2 years. How much interest?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$2,500 × 0.08 × 2 = $400."
+        },
+        {
+          "id": "ia-trial-q2",
+          "type": "number",
+          "prompt": "$500 balance at 24% APR. About how much interest in one month? Use a 2% monthly rate.",
+          "answer": 10,
+          "unit": "$",
+          "explain": "$500 × 0.02 = $10."
+        },
+        {
+          "id": "ia-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "A one-year loan charges $160 of interest and a $40 fee on $2,000 borrowed. What did the year cost?",
+          "choices": [
+            "$200",
+            "$160",
+            "$40"
+          ],
+          "answer": 0,
+          "explain": "$160 + $40 = $200."
+        },
+        {
+          "id": "ia-trial-q4",
+          "type": "true_false",
+          "prompt": "APY is the yearly cost of a credit card.",
+          "answer": false,
+          "explain": "APY is what savings earn. APR is the borrowing cost."
+        }
+      ]
+    }
+  ]
+}

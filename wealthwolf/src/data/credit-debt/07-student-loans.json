@@ -1,0 +1,826 @@
+{
+  "id": "student-loans",
+  "section": "credit-debt",
+  "order": 7,
+  "title": "Student Loans",
+  "description": "Federal and private, subsidized and not, and what the payment becomes.",
+  "wolfLine": "The school ends. The loan does not. Know which kind you signed.",
+  "terms": {
+    "subsidized-loan": {
+      "term": "Subsidized loan",
+      "definition": "A federal student loan where the government pays the interest while you are in school at least half time, and during the grace period.",
+      "example": "A $3,500 subsidized loan sits through four years of school and adds $0 of interest while you are enrolled."
+    },
+    "unsubsidized-loan": {
+      "term": "Unsubsidized loan",
+      "definition": "A federal student loan where interest starts while you are still in school. You can pay it as you go, or let it be added to the balance.",
+      "example": "$3,500 unsubsidized at 6% adds about $210 of interest in one year of school."
+    },
+    "income-driven-repayment": {
+      "term": "Income-driven repayment",
+      "definition": "A federal plan that sets the monthly payment from your income and family size, instead of a fixed amount that clears the loan in 10 years.",
+      "example": "A standard plan might ask $180. An income-driven plan might ask $70 while your pay is low. The names and rules depend on when the loan was made."
+    }
+  },
+  "lessons": [
+    {
+      "id": "sl-federal-private",
+      "type": "lesson",
+      "title": "Federal or Private",
+      "summary": "Federal loans come with rules a bank loan does not have to offer.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sl-federal-private-q1",
+          "type": "multiple_choice",
+          "context": "A federal student loan comes through the U.S. student-aid program. A private student loan comes from a bank or other lender. Federal loans can offer income-based payments and other protections. Private loans often start charging interest immediately and set their own rules.",
+          "prompt": "Which loan is made through the federal student-aid program?",
+          "choices": [
+            "A federal student loan",
+            "A private loan from a bank",
+            "A credit card"
+          ],
+          "answer": 0,
+          "explain": "Federal loans are the ones with the government rulebook."
+        },
+        {
+          "id": "sl-federal-private-q2",
+          "type": "true_false",
+          "prompt": "A private student loan has to offer the same repayment plans as a federal loan.",
+          "answer": false,
+          "explain": "Private lenders set their own terms. Read them."
+        },
+        {
+          "id": "sl-federal-private-q3",
+          "type": "multiple_choice",
+          "prompt": "You are offered both. Which one do people usually use first?",
+          "choices": [
+            "The federal loan, and only then consider private",
+            "The private loan, because the ads are bigger",
+            "A credit card for tuition"
+          ],
+          "answer": 0,
+          "explain": "Federal loans first. Private loans fill a gap, they do not replace the safer option."
+        },
+        {
+          "id": "sl-federal-private-q4",
+          "type": "multiple_choice",
+          "prompt": "Where do you check which federal plans your loan can use?",
+          "choices": [
+            "studentaid.gov",
+            "A store card’s app",
+            "The school’s bookstore"
+          ],
+          "answer": 0,
+          "explain": "The official site. Plan names change, and 2026 is not 2019."
+        },
+        {
+          "id": "sl-federal-private-q5",
+          "type": "match",
+          "prompt": "Match the lender to the loan.",
+          "pairs": [
+            [
+              "U.S. student-aid program",
+              "Federal student loan"
+            ],
+            [
+              "A bank",
+              "Private student loan"
+            ],
+            [
+              "A card issuer",
+              "Not a student loan at all"
+            ]
+          ]
+        },
+        {
+          "id": "sl-federal-private-q6",
+          "type": "true_false",
+          "prompt": "Putting tuition on a credit card is the same as a federal student loan.",
+          "answer": false,
+          "explain": "A card has none of the federal protections, and a much higher rate."
+        }
+      ]
+    },
+    {
+      "id": "sl-subsidized",
+      "type": "lesson",
+      "title": "Subsidized or Not",
+      "summary": "One loan waits. The other starts the meter in the classroom.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sl-subsidized-q1",
+          "type": "multiple_choice",
+          "context": "On a [[subsidized loan]], the government pays the interest while you are in school at least half time. On an [[unsubsidized loan]], interest starts right away. You can pay that interest while you study, or let it join the balance later.",
+          "prompt": "Who pays the interest on a subsidized loan while you are in school at least half time?",
+          "choices": [
+            "The government",
+            "You, every month",
+            "Your employer"
+          ],
+          "answer": 0,
+          "explain": "That is the subsidy."
+        },
+        {
+          "id": "sl-subsidized-q2",
+          "type": "true_false",
+          "prompt": "An unsubsidized loan charges no interest until you graduate.",
+          "answer": false,
+          "explain": "The interest starts in school."
+        },
+        {
+          "id": "sl-subsidized-q3",
+          "type": "multiple_choice",
+          "prompt": "Both loans are $3,500. Which one can grow while you are still in class?",
+          "choices": [
+            "The unsubsidized loan",
+            "The subsidized loan",
+            "Neither"
+          ],
+          "answer": 0,
+          "explain": "Unsubsidized interest does not wait for graduation."
+        },
+        {
+          "id": "sl-subsidized-q4",
+          "type": "multiple_choice",
+          "prompt": "You can pay the unsubsidized interest while you are in school. Why bother?",
+          "choices": [
+            "So it is not added to the balance you repay later",
+            "Because the school requires it",
+            "It raises the subsidized rate"
+          ],
+          "answer": 0,
+          "explain": "Interest you let pile up becomes principal."
+        },
+        {
+          "id": "sl-subsidized-q5",
+          "type": "fill_blank",
+          "prompt": "The government covers in-school interest on a ___ loan.",
+          "choices": [
+            "subsidized",
+            "unsubsidized",
+            "private"
+          ],
+          "answer": 0,
+          "explain": "Subsidized."
+        },
+        {
+          "id": "sl-subsidized-q6",
+          "type": "true_false",
+          "prompt": "Subsidized loans are limited. Not every student, and not every dollar, qualifies.",
+          "answer": true,
+          "explain": "There are caps. Anything above them is often unsubsidized."
+        }
+      ]
+    },
+    {
+      "id": "sl-amina",
+      "type": "lesson",
+      "format": "story",
+      "title": "Amina’s Year in School",
+      "summary": "Same dollar amount. Only one of the loans grows.",
+      "xp": 10,
+      "story": {
+        "title": "Two loans, one year",
+        "character": "Amina, 20, community-college student",
+        "body": "Amina takes **$3,500** in a subsidized loan and **$3,500** in an unsubsidized loan for the year. The unsubsidized rate is **6%**.\n\nShe works part time and can spare **$20** a month. She wants to know what the unsubsidized loan costs if she lets the interest sit for this one year of school."
+      },
+      "steps": [
+        {
+          "id": "sl-amina-q1",
+          "type": "number",
+          "prompt": "Using simple interest, how much interest does the unsubsidized $3,500 add in one year at 6%?",
+          "answer": 210,
+          "unit": "$",
+          "explain": "$3,500 × 0.06 × 1 = $210. Real loans compound, so treat this as the clean estimate."
+        },
+        {
+          "id": "sl-amina-q2",
+          "type": "number",
+          "prompt": "How much interest does the subsidized $3,500 add during that same year in school?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "$0. The government covers it while she is enrolled at least half time."
+        },
+        {
+          "id": "sl-amina-q3",
+          "type": "number",
+          "prompt": "If she pays $20 a month toward the unsubsidized interest, how much does she pay in a year?",
+          "answer": 240,
+          "unit": "$",
+          "explain": "$20 × 12 = $240."
+        },
+        {
+          "id": "sl-amina-q4",
+          "type": "multiple_choice",
+          "prompt": "Her $240 of payments against $210 of simple interest. What is true?",
+          "choices": [
+            "She covered that year’s interest and a little more",
+            "She still owes all $210 on top",
+            "The subsidized loan also grew by $210"
+          ],
+          "answer": 0,
+          "explain": "$240 − $210 = $30 to the good, on this simple estimate."
+        },
+        {
+          "id": "sl-amina-q5",
+          "type": "true_false",
+          "prompt": "Letting the $210 sit means she repays it later, with interest on a bigger balance.",
+          "answer": true,
+          "explain": "Unpaid interest can be added to the principal."
+        },
+        {
+          "id": "sl-amina-q6",
+          "type": "multiple_choice",
+          "prompt": "What is the careful habit for the unsubsidized loan?",
+          "choices": [
+            "Pay the interest while she is in school, if the $20 fits",
+            "Ignore it until the bill is huge",
+            "Move it onto a credit card"
+          ],
+          "answer": 0,
+          "explain": "Small payments now beat a larger balance later."
+        }
+      ]
+    },
+    {
+      "id": "sl-after-school",
+      "type": "lesson",
+      "title": "Before the First Bill",
+      "summary": "Federal loans usually give you months after school, not a bill on graduation day.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sl-after-school-q1",
+          "type": "multiple_choice",
+          "context": "After you leave school, most federal loans wait about six months before the first bill. Interest on an unsubsidized loan still exists. A subsidized loan’s interest break usually covers this wait too. Confirm the date on studentaid.gov so it does not surprise you.",
+          "prompt": "Most federal student loans give you about how long after leaving school before payments start?",
+          "choices": [
+            "6 months",
+            "6 weeks",
+            "6 days"
+          ],
+          "answer": 0,
+          "explain": "About six months. Use them. Do not spend them by accident."
+        },
+        {
+          "id": "sl-after-school-q2",
+          "type": "true_false",
+          "prompt": "An unsubsidized loan stops charging interest during those six months.",
+          "answer": false,
+          "explain": "The payment waits. The interest on an unsubsidized loan does not."
+        },
+        {
+          "id": "sl-after-school-q3",
+          "type": "number",
+          "prompt": "Using half a year of 6% on the original $3,500, about how much interest builds in those 6 months?",
+          "answer": 105,
+          "unit": "$",
+          "explain": "Half of 6% is 3%. $3,500 × 0.03 = $105."
+        },
+        {
+          "id": "sl-after-school-q4",
+          "type": "multiple_choice",
+          "prompt": "What should you do during the six months?",
+          "choices": [
+            "Find the servicer, set a payment method, and pick a plan before the first due date",
+            "Throw the mail away",
+            "Assume the loan ended with the classes"
+          ],
+          "answer": 0,
+          "explain": "The pause is for getting ready, not for forgetting."
+        },
+        {
+          "id": "sl-after-school-q5",
+          "type": "true_false",
+          "prompt": "You can apply for an income-driven plan before the first payment is due.",
+          "answer": true,
+          "explain": "Doing it early means the first bill is the one you actually chose."
+        },
+        {
+          "id": "sl-after-school-q6",
+          "type": "multiple_choice",
+          "prompt": "Who tells you the real due date?",
+          "choices": [
+            "Your loan servicer, and studentaid.gov",
+            "A classmate",
+            "The campus cafe"
+          ],
+          "answer": 0,
+          "explain": "The servicer is the company that collects the payments."
+        }
+      ]
+    },
+    {
+      "id": "sl-plans",
+      "type": "lesson",
+      "title": "Repayment Plans",
+      "summary": "One plan is a fixed payoff. Another follows your paycheck. SAVE is not on the menu.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sl-plans-q1",
+          "type": "info",
+          "title": "What was true in 2026",
+          "body": "A standard plan uses a fixed payment meant to clear the loan in about 10 years. An [[income-driven repayment]] plan sets the payment from your income instead.\n\nThe Saving on a Valuable Education (SAVE) plan ended in 2026 after a court order. Do not sign up for it. Which other plans you can use depends on when your loan was made. Check studentaid.gov before you pick."
+        },
+        {
+          "id": "sl-plans-q2",
+          "type": "multiple_choice",
+          "prompt": "What does a standard plan try to do?",
+          "choices": [
+            "Pay the loan off on a fixed schedule, often about 10 years",
+            "Set the payment from your income",
+            "Erase the loan at graduation"
+          ],
+          "answer": 0,
+          "explain": "Fixed payment, fixed clock."
+        },
+        {
+          "id": "sl-plans-q3",
+          "type": "multiple_choice",
+          "prompt": "What does an income-driven plan look at?",
+          "choices": [
+            "Your income and family size",
+            "Only the school’s ranking",
+            "Your credit-card rewards"
+          ],
+          "answer": 0,
+          "explain": "The payment follows the paycheck. A lower payment can mean more interest over time."
+        },
+        {
+          "id": "sl-plans-q4",
+          "type": "true_false",
+          "prompt": "In 2026, new borrowers should enroll in the SAVE plan.",
+          "answer": false,
+          "explain": "SAVE ended in 2026. Use the plans studentaid.gov still lists for your loan."
+        },
+        {
+          "id": "sl-plans-q5",
+          "type": "multiple_choice",
+          "prompt": "A lower monthly payment under an income-driven plan can mean…",
+          "choices": [
+            "You pay for longer, and you may pay more interest",
+            "The loan is free",
+            "The principal vanishes"
+          ],
+          "answer": 0,
+          "explain": "Smaller is not the same as cheaper."
+        },
+        {
+          "id": "sl-plans-q6",
+          "type": "multiple_choice",
+          "prompt": "Some balances can be forgiven after many years of qualifying payments. What is the careful take?",
+          "choices": [
+            "Treat it as possible, and confirm the current rules on studentaid.gov before you count on a dollar",
+            "It is guaranteed for every loan",
+            "Forgiveness happens automatically after 12 months"
+          ],
+          "answer": 0,
+          "explain": "Programs exist. The details move. Education, not a promise."
+        }
+      ]
+    },
+    {
+      "id": "sl-summary",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Loan Summary",
+      "summary": "Principal, interest already added, and the payment they are asking.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sl-summary-q1",
+          "type": "number",
+          "context": "A loan summary shows what you borrowed, interest already added, and the payment of the plan you are on.",
+          "doc": {
+            "kind": "statement",
+            "title": "Federal loan summary",
+            "subtitle": "Servicer: example · 2026",
+            "meta": [
+              [
+                "Repayment term on the standard plan",
+                "10 years"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prin",
+                "label": "Principal",
+                "amount": 15000.0
+              },
+              {
+                "id": "accr",
+                "label": "Interest already accrued",
+                "amount": 800.0
+              },
+              {
+                "id": "pay",
+                "label": "Standard-plan payment",
+                "amount": 180.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Balance to repay before future interest",
+                "amount": 15800.0,
+                "strong": true
+              }
+            ],
+            "note": "The $180 payment is the standard plan. 120 payments of $180 include future interest."
+          },
+          "prompt": "What is the principal?",
+          "answer": 15000,
+          "unit": "$",
+          "explain": "The amount borrowed: $15,000."
+        },
+        {
+          "id": "sl-summary-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Federal loan summary",
+            "subtitle": "Servicer: example · 2026",
+            "meta": [
+              [
+                "Repayment term on the standard plan",
+                "10 years"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prin",
+                "label": "Principal",
+                "amount": 15000.0
+              },
+              {
+                "id": "accr",
+                "label": "Interest already accrued",
+                "amount": 800.0
+              },
+              {
+                "id": "pay",
+                "label": "Standard-plan payment",
+                "amount": 180.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Balance to repay before future interest",
+                "amount": 15800.0,
+                "strong": true
+              }
+            ],
+            "note": "The $180 payment is the standard plan. 120 payments of $180 include future interest."
+          },
+          "prompt": "How much interest has already been added?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "The accrued line: $800."
+        },
+        {
+          "id": "sl-summary-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Federal loan summary",
+            "subtitle": "Servicer: example · 2026",
+            "meta": [
+              [
+                "Repayment term on the standard plan",
+                "10 years"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prin",
+                "label": "Principal",
+                "amount": 15000.0
+              },
+              {
+                "id": "accr",
+                "label": "Interest already accrued",
+                "amount": 800.0
+              },
+              {
+                "id": "pay",
+                "label": "Standard-plan payment",
+                "amount": 180.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Balance to repay before future interest",
+                "amount": 15800.0,
+                "strong": true
+              }
+            ],
+            "note": "The $180 payment is the standard plan. 120 payments of $180 include future interest."
+          },
+          "prompt": "What is the balance before any future interest?",
+          "answer": 15800,
+          "unit": "$",
+          "explain": "$15,000 + $800 = $15,800."
+        },
+        {
+          "id": "sl-summary-q4",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Federal loan summary",
+            "subtitle": "Servicer: example · 2026",
+            "meta": [
+              [
+                "Repayment term on the standard plan",
+                "10 years"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prin",
+                "label": "Principal",
+                "amount": 15000.0
+              },
+              {
+                "id": "accr",
+                "label": "Interest already accrued",
+                "amount": 800.0
+              },
+              {
+                "id": "pay",
+                "label": "Standard-plan payment",
+                "amount": 180.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Balance to repay before future interest",
+                "amount": 15800.0,
+                "strong": true
+              }
+            ],
+            "note": "The $180 payment is the standard plan. 120 payments of $180 include future interest."
+          },
+          "prompt": "The standard payment is $180 for 10 years (120 months). How much do you pay in total on that plan?",
+          "answer": 21600,
+          "unit": "$",
+          "explain": "$180 × 120 = $21,600."
+        },
+        {
+          "id": "sl-summary-q5",
+          "type": "number",
+          "prompt": "How much of that $21,600 is interest, above the $15,800 you owe today?",
+          "answer": 5800,
+          "unit": "$",
+          "explain": "$21,600 − $15,800 = $5,800."
+        },
+        {
+          "id": "sl-summary-q6",
+          "type": "true_false",
+          "prompt": "The $180 payment includes only the $15,800. Future interest is extra on top of the $21,600.",
+          "answer": false,
+          "explain": "The $21,600 already includes the interest inside those 120 payments."
+        }
+      ]
+    },
+    {
+      "id": "sl-school-cost",
+      "type": "lesson",
+      "format": "call",
+      "title": "Choose the School with the Cost",
+      "summary": "The job can be the same. The debt will not be.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sl-school-cost-q1",
+          "type": "number",
+          "context": "If two schools lead to the same work, the cheaper debt is the stronger start. Run the loans, not the brochure.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "School A",
+              "subtitle": "Same career goal",
+              "lines": [
+                {
+                  "id": "loan",
+                  "label": "Loans at graduation",
+                  "amount": 18000.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Debt at graduation",
+                  "amount": 18000.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "School B",
+              "subtitle": "Same career goal",
+              "lines": [
+                {
+                  "id": "loan",
+                  "label": "Loans at graduation",
+                  "amount": 40000.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Debt at graduation",
+                  "amount": 40000.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "How much more does School B cost in loans than School A?",
+          "answer": 22000,
+          "unit": "$",
+          "explain": "$40,000 − $18,000 = $22,000."
+        },
+        {
+          "id": "sl-school-cost-q2",
+          "type": "multiple_choice",
+          "prompt": "The likely job is the same. Which leaving debt is easier to live with?",
+          "choices": [
+            "$18,000",
+            "$40,000",
+            "They are equal because the job title matches"
+          ],
+          "answer": 0,
+          "why": [
+            "Less principal, less interest.",
+            "More than double the debt.",
+            "The title matches. The bill does not."
+          ],
+          "explain": "$22,000 less to repay."
+        },
+        {
+          "id": "sl-school-cost-q3",
+          "type": "number",
+          "prompt": "School A at a rough $200 a month would take how many months to pay $18,000, ignoring interest?",
+          "answer": 90,
+          "unit": "months",
+          "explain": "$18,000 ÷ $200 = 90 months, which is 7 years and 6 months. Interest makes it longer."
+        },
+        {
+          "id": "sl-school-cost-q4",
+          "type": "true_false",
+          "prompt": "A more expensive school is worth it whenever the campus is nicer.",
+          "answer": false,
+          "explain": "Worth it depends on the pay you can earn and the debt you can carry."
+        },
+        {
+          "id": "sl-school-cost-q5",
+          "type": "multiple_choice",
+          "prompt": "What belongs in the comparison?",
+          "choices": [
+            "Loans at graduation, not just this year’s tuition sticker",
+            "The dining hall",
+            "The school’s social account"
+          ],
+          "answer": 0,
+          "explain": "The number you repay is the one that matters."
+        },
+        {
+          "id": "sl-school-cost-q6",
+          "type": "multiple_choice",
+          "prompt": "You can work a year and cut School B’s loans by $8,000. What is the new gap versus School A’s $18,000?",
+          "choices": [
+            "$14,000 more than School A",
+            "$8,000 more",
+            "School B becomes cheaper"
+          ],
+          "answer": 0,
+          "explain": "$40,000 − $8,000 = $32,000. $32,000 − $18,000 = $14,000 still more."
+        }
+      ]
+    },
+    {
+      "id": "sl-cap",
+      "type": "lesson",
+      "title": "Borrow Less Than They Offer",
+      "summary": "The school can offer more than the degree is worth to you.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sl-cap-q1",
+          "type": "multiple_choice",
+          "context": "An aid offer is a maximum, not a target. Every extra dollar is [[principal]] you repay with [[interest]].",
+          "prompt": "The aid letter offers $12,000. Your budget says you need $9,000. What can you do?",
+          "choices": [
+            "Borrow the $9,000",
+            "You must take the full $12,000",
+            "Borrow $20,000 to be safe"
+          ],
+          "answer": 0,
+          "explain": "You can take less than the offer."
+        },
+        {
+          "id": "sl-cap-q2",
+          "type": "number",
+          "prompt": "You decline $3,000 of the offer. At 5% simple interest for 4 years in school, about how much unsubsidized interest do you avoid?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$3,000 × 0.05 × 4 = $600, before any interest after graduation."
+        },
+        {
+          "id": "sl-cap-q3",
+          "type": "true_false",
+          "prompt": "Taking the maximum loan is required if you want the classes.",
+          "answer": false,
+          "explain": "Borrow what you need. Leave the rest."
+        },
+        {
+          "id": "sl-cap-q4",
+          "type": "number",
+          "prompt": "Those $3,000, repaid later as $75 a month, take how many months if you ignore interest?",
+          "answer": 40,
+          "unit": "months",
+          "explain": "$3,000 ÷ $75 = 40 months."
+        },
+        {
+          "id": "sl-cap-q5",
+          "type": "multiple_choice",
+          "prompt": "What is a practical way to need less?",
+          "choices": [
+            "A cheaper term, a scholarship, or working a few shifts",
+            "A second private loan",
+            "Skipping the bill"
+          ],
+          "answer": 0,
+          "explain": "Fewer dollars borrowed is the only guaranteed forgiveness."
+        },
+        {
+          "id": "sl-cap-q6",
+          "type": "fill_blank",
+          "prompt": "An aid offer is a ___, not a bill you must borrow in full.",
+          "choices": [
+            "maximum",
+            "minimum",
+            "fine"
+          ],
+          "answer": 0,
+          "explain": "You can borrow less."
+        }
+      ]
+    },
+    {
+      "id": "sl-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "sl-trial",
+      "type": "boss",
+      "title": "Den Trial: Student Loans",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "sl-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "Interest on which federal loan starts while you are still in school?",
+          "choices": [
+            "Unsubsidized",
+            "Subsidized",
+            "Neither"
+          ],
+          "answer": 0,
+          "explain": "Unsubsidized interest does not wait."
+        },
+        {
+          "id": "sl-trial-q2",
+          "type": "number",
+          "prompt": "$4,000 unsubsidized at 5% simple interest for 2 years in school. How much interest?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$4,000 × 0.05 × 2 = $400."
+        },
+        {
+          "id": "sl-trial-q3",
+          "type": "true_false",
+          "prompt": "The SAVE repayment plan was still open to new borrowers in late 2026.",
+          "answer": false,
+          "explain": "A court order ended SAVE in 2026."
+        },
+        {
+          "id": "sl-trial-q4",
+          "type": "number",
+          "prompt": "A summary shows $200 a month for 10 years. What do those payments add up to?",
+          "answer": 24000,
+          "unit": "$",
+          "explain": "$200 × 120 = $24,000."
+        }
+      ]
+    }
+  ]
+}

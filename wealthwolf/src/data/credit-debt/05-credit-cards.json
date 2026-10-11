@@ -1,0 +1,864 @@
+{
+  "id": "credit-cards",
+  "section": "credit-debt",
+  "order": 5,
+  "title": "Credit Cards",
+  "description": "Read the statement, keep the grace period, and treat the minimum as a warning.",
+  "wolfLine": "The minimum is a trap with a due date.",
+  "terms": {
+    "statement-balance": {
+      "term": "Statement balance",
+      "definition": "The total you owed on a card at the end of the billing period. Pay this by the due date and you usually avoid interest.",
+      "example": "A statement balance of $480, paid in full by the due date, means $0 interest on those purchases."
+    },
+    "grace-period": {
+      "term": "Grace period",
+      "definition": "The time between the statement date and the due date. Pay the statement balance in full by the due date and new purchases from that period are not charged interest.",
+      "example": "Statement balance $480, due on the 21st. Pay $480 by the 21st and the grace period holds."
+    },
+    "cash-advance": {
+      "term": "Cash advance",
+      "definition": "Cash you take from a credit card. A fee applies, interest usually starts the same day, and there is no grace period.",
+      "example": "Take $200 cash. A 5% fee adds $10, so you owe $210 before a single day’s interest."
+    }
+  },
+  "lessons": [
+    {
+      "id": "cc-statement",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Card Statement",
+      "summary": "Three numbers matter: the statement balance, the minimum, and the due date.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cc-statement-q1",
+          "type": "number",
+          "context": "The [[statement balance]] is what you owed when the bill was cut. The [[minimum payment]] is the smallest amount that keeps the account in good standing. The [[due date]] is the last day to pay on time.",
+          "doc": {
+            "kind": "bill",
+            "title": "Harbor Card",
+            "subtitle": "October statement",
+            "meta": [
+              [
+                "Statement balance",
+                "$480.00"
+              ],
+              [
+                "Minimum payment",
+                "$25.00"
+              ],
+              [
+                "Due date",
+                "Oct 21"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "purch",
+                "label": "Purchases this period",
+                "amount": 480.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Statement balance",
+                "amount": 480.0,
+                "strong": true
+              }
+            ],
+            "note": "Interest rate 24% APR. Pay the statement balance by Oct 21 to avoid interest."
+          },
+          "prompt": "What is the statement balance?",
+          "answer": 480,
+          "unit": "$",
+          "explain": "The total for this period: $480."
+        },
+        {
+          "id": "cc-statement-q2",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Harbor Card",
+            "subtitle": "October statement",
+            "meta": [
+              [
+                "Statement balance",
+                "$480.00"
+              ],
+              [
+                "Minimum payment",
+                "$25.00"
+              ],
+              [
+                "Due date",
+                "Oct 21"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "purch",
+                "label": "Purchases this period",
+                "amount": 480.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Statement balance",
+                "amount": 480.0,
+                "strong": true
+              }
+            ],
+            "note": "Interest rate 24% APR. Pay the statement balance by Oct 21 to avoid interest."
+          },
+          "prompt": "What is the minimum payment on this bill?",
+          "answer": 25,
+          "unit": "$",
+          "explain": "The bill asks for at least $25."
+        },
+        {
+          "id": "cc-statement-q3",
+          "type": "multiple_choice",
+          "doc": {
+            "kind": "bill",
+            "title": "Harbor Card",
+            "subtitle": "October statement",
+            "meta": [
+              [
+                "Statement balance",
+                "$480.00"
+              ],
+              [
+                "Minimum payment",
+                "$25.00"
+              ],
+              [
+                "Due date",
+                "Oct 21"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "purch",
+                "label": "Purchases this period",
+                "amount": 480.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Statement balance",
+                "amount": 480.0,
+                "strong": true
+              }
+            ],
+            "note": "Interest rate 24% APR. Pay the statement balance by Oct 21 to avoid interest."
+          },
+          "prompt": "When is this bill due?",
+          "choices": [
+            "Oct 21",
+            "Whenever you feel like it",
+            "The day you opened the card"
+          ],
+          "answer": 0,
+          "explain": "Oct 21 is printed on the statement."
+        },
+        {
+          "id": "cc-statement-q4",
+          "type": "number",
+          "prompt": "You pay the $480 statement balance. How much of this period’s purchases is left unpaid?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "$480 − $480 = $0."
+        },
+        {
+          "id": "cc-statement-q5",
+          "type": "true_false",
+          "prompt": "Paying the minimum keeps you from being late. It does not pay off the balance.",
+          "answer": true,
+          "explain": "On time and paid off are two different jobs."
+        },
+        {
+          "id": "cc-statement-q6",
+          "type": "multiple_choice",
+          "prompt": "Which number, paid by the due date, usually avoids interest on these purchases?",
+          "choices": [
+            "The statement balance",
+            "The minimum payment",
+            "Half the minimum"
+          ],
+          "answer": 0,
+          "explain": "The full statement balance. The minimum leaves the rest to grow."
+        }
+      ]
+    },
+    {
+      "id": "cc-grace",
+      "type": "lesson",
+      "title": "The Grace Period",
+      "summary": "Pay the statement in full and the interest waits. Carry a balance and it does not.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cc-grace-q1",
+          "type": "multiple_choice",
+          "context": "A [[grace period]] is the time between the statement and the [[due date]]. Pay the [[statement balance]] in full by that date and those purchases are not charged interest. Carry a balance, and the grace period usually disappears until you catch up.",
+          "prompt": "What is a grace period on a credit card?",
+          "choices": [
+            "The stretch after the statement when you can pay in full and skip interest",
+            "An extra year to pay",
+            "A fee for paying early"
+          ],
+          "answer": 0,
+          "explain": "It is time, not a discount on the price."
+        },
+        {
+          "id": "cc-grace-q2",
+          "type": "true_false",
+          "prompt": "Pay the statement balance by the due date and those purchases usually cost no interest.",
+          "answer": true,
+          "explain": "That is the grace period doing its job."
+        },
+        {
+          "id": "cc-grace-q3",
+          "type": "multiple_choice",
+          "prompt": "You pay $25 of a $480 statement and leave $455. What happens to the grace period?",
+          "choices": [
+            "It is gone until you pay in full again",
+            "It stays, because you paid something",
+            "It doubles"
+          ],
+          "answer": 0,
+          "explain": "A partial payment is not “in full.”"
+        },
+        {
+          "id": "cc-grace-q4",
+          "type": "number",
+          "prompt": "Statement balance $640. You pay $640 on the due date. How much interest do you owe on that statement?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "Paid in full, on time: $0."
+        },
+        {
+          "id": "cc-grace-q5",
+          "type": "multiple_choice",
+          "prompt": "You lost the grace period last month. A new $50 purchase today is charged interest…",
+          "choices": [
+            "Starting right away, not after a fresh grace period",
+            "Never",
+            "Only if the purchase is over $500"
+          ],
+          "answer": 0,
+          "explain": "Until you pay the statement in full, new charges often start accruing immediately."
+        },
+        {
+          "id": "cc-grace-q6",
+          "type": "fill_blank",
+          "prompt": "Pay the statement balance by the due date and you keep the ___ period.",
+          "choices": [
+            "grace",
+            "intro",
+            "tax"
+          ],
+          "answer": 0,
+          "explain": "Grace period."
+        }
+      ]
+    },
+    {
+      "id": "cc-full-vs-min",
+      "type": "lesson",
+      "title": "In Full or the Minimum",
+      "summary": "The minimum keeps the account current. The rest keeps costing you.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cc-full-vs-min-q1",
+          "type": "number",
+          "context": "At 24% [[APR]], a rough monthly rate is 2%. Interest lands on what you did not pay.",
+          "prompt": "Statement balance $625. Minimum $25. You pay the minimum. How much is still unpaid?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$625 − $25 = $600."
+        },
+        {
+          "id": "cc-full-vs-min-q2",
+          "type": "number",
+          "prompt": "About how much interest hits that $600 in the next month?",
+          "answer": 12,
+          "unit": "$",
+          "explain": "$600 × 0.02 = $12."
+        },
+        {
+          "id": "cc-full-vs-min-q3",
+          "type": "number",
+          "prompt": "Of the $25 minimum, if $12 was interest, how much actually cut the balance?",
+          "answer": 13,
+          "unit": "$",
+          "explain": "$25 − $12 = $13. Just under half the payment was interest."
+        },
+        {
+          "id": "cc-full-vs-min-q4",
+          "type": "number",
+          "prompt": "You pay the $625 in full instead. How much interest do you owe on it?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "Paid in full: $0, against about $12 if you had paid only the minimum."
+        },
+        {
+          "id": "cc-full-vs-min-q5",
+          "type": "multiple_choice",
+          "prompt": "Which payment costs less interest?",
+          "choices": [
+            "$625, the statement balance",
+            "$25, the minimum",
+            "They cost the same"
+          ],
+          "answer": 0,
+          "explain": "Zero interest beats $12, and the $12 repeats."
+        },
+        {
+          "id": "cc-full-vs-min-q6",
+          "type": "true_false",
+          "prompt": "The minimum payment is designed to clear a typical card balance in one month.",
+          "answer": false,
+          "explain": "It is the smallest on-time payment, not a payoff plan."
+        }
+      ]
+    },
+    {
+      "id": "cc-min-trap",
+      "type": "lesson",
+      "title": "The Minimum Trap",
+      "summary": "Small payments stretch a balance for years.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cc-min-trap-q1",
+          "type": "number",
+          "context": "If the [[minimum payment]] is $50 and interest is $36, only $14 of your payment touches the [[balance]].",
+          "prompt": "You owe $2,400 at 18% APR. The monthly rate is 1.5%. How much interest this month?",
+          "answer": 36,
+          "unit": "$",
+          "explain": "$2,400 × 0.015 = $36."
+        },
+        {
+          "id": "cc-min-trap-q2",
+          "type": "number",
+          "prompt": "You pay that $50 minimum. How much of it cuts the principal?",
+          "answer": 14,
+          "unit": "$",
+          "explain": "$50 − $36 = $14."
+        },
+        {
+          "id": "cc-min-trap-q3",
+          "type": "number",
+          "prompt": "What is the balance after that one payment?",
+          "answer": 2386,
+          "unit": "$",
+          "explain": "$2,400 − $14 = $2,386. Next month’s interest is worked out on almost the same debt."
+        },
+        {
+          "id": "cc-min-trap-q4",
+          "type": "multiple_choice",
+          "prompt": "What is the trap?",
+          "choices": [
+            "You pay every month and the balance barely moves",
+            "The balance vanishes after one minimum",
+            "The bank forgives the rest at month 12"
+          ],
+          "answer": 0,
+          "explain": "Most of the payment is interest."
+        },
+        {
+          "id": "cc-min-trap-q5",
+          "type": "true_false",
+          "prompt": "Paying more than the minimum, and aiming it at this card, shortens the trap.",
+          "answer": true,
+          "explain": "Extra dollars go to principal, which cuts next month’s interest."
+        },
+        {
+          "id": "cc-min-trap-q6",
+          "type": "multiple_choice",
+          "prompt": "You can afford $150 this month, not just $50. Where should the extra $100 go?",
+          "choices": [
+            "Onto this balance",
+            "Into a second purchase on the same card",
+            "Nowhere. The minimum is the goal"
+          ],
+          "answer": 0,
+          "explain": "The extra $100 cuts principal. A new purchase digs the hole again."
+        }
+      ]
+    },
+    {
+      "id": "cc-limit-use",
+      "type": "lesson",
+      "title": "Limit and Utilization",
+      "summary": "The limit is a ceiling. Using all of it is not the goal.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cc-limit-use-q1",
+          "type": "number",
+          "context": "Your [[credit limit]] is the most you can owe on the card. [[Credit utilization]] is the balance divided by that limit. Lower is easier on a [[credit score]].",
+          "prompt": "Limit $2,000. Balance $500. What is your utilization?",
+          "answer": 25,
+          "unit": "%",
+          "explain": "$500 ÷ $2,000 = 25%."
+        },
+        {
+          "id": "cc-limit-use-q2",
+          "type": "number",
+          "prompt": "You spend another $700. What is the new balance?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$500 + $700 = $1,200."
+        },
+        {
+          "id": "cc-limit-use-q3",
+          "type": "number",
+          "prompt": "What is utilization on the $2,000 limit now?",
+          "answer": 60,
+          "unit": "%",
+          "explain": "$1,200 ÷ $2,000 = 60%."
+        },
+        {
+          "id": "cc-limit-use-q4",
+          "type": "multiple_choice",
+          "prompt": "The card company raises your limit from $2,000 to $4,000 and you still owe $1,200. What happens to utilization?",
+          "choices": [
+            "It falls from 60% to 30%",
+            "It doubles",
+            "It stays 60%"
+          ],
+          "answer": 0,
+          "explain": "$1,200 ÷ $4,000 = 30%. A higher limit helps only if you do not spend it."
+        },
+        {
+          "id": "cc-limit-use-q5",
+          "type": "true_false",
+          "prompt": "A higher limit is a reason to spend more.",
+          "answer": false,
+          "explain": "It is room, not a target."
+        },
+        {
+          "id": "cc-limit-use-q6",
+          "type": "multiple_choice",
+          "prompt": "Which habit keeps utilization in better shape?",
+          "choices": [
+            "Pay the balance down before the statement is cut, when you can",
+            "Wait until the card is maxed",
+            "Skip the bill"
+          ],
+          "answer": 0,
+          "explain": "The balance that gets reported is the one the score sees."
+        }
+      ]
+    },
+    {
+      "id": "cc-cash-advance",
+      "type": "lesson",
+      "title": "Cash Advances",
+      "summary": "The ATM on your card is the expensive door.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cc-cash-advance-q1",
+          "type": "multiple_choice",
+          "context": "A [[cash advance]] is cash you take on a credit card. Expect a fee, often about 5%, and interest that starts immediately. There is no [[grace period]].",
+          "prompt": "What is a cash advance?",
+          "choices": [
+            "Cash borrowed from the card, usually with a fee and interest from day one",
+            "A refund from a store",
+            "Free money from the bank"
+          ],
+          "answer": 0,
+          "explain": "It is a loan inside the card, on worse terms."
+        },
+        {
+          "id": "cc-cash-advance-q2",
+          "type": "number",
+          "prompt": "You take a $200 cash advance with a 5% fee. How much is the fee?",
+          "answer": 10,
+          "unit": "$",
+          "explain": "$200 × 0.05 = $10."
+        },
+        {
+          "id": "cc-cash-advance-q3",
+          "type": "number",
+          "prompt": "What do you owe before any interest?",
+          "answer": 210,
+          "unit": "$",
+          "explain": "$200 + $10 = $210."
+        },
+        {
+          "id": "cc-cash-advance-q4",
+          "type": "number",
+          "prompt": "The cash-advance APR is 30%, about 2.5% a month. Rough interest on $210 for one month?",
+          "answer": 5.25,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$210 × 0.025 = $5.25. And it started the day you took the cash."
+        },
+        {
+          "id": "cc-cash-advance-q5",
+          "type": "true_false",
+          "prompt": "A cash advance gets the same grace period as a normal purchase.",
+          "answer": false,
+          "explain": "Interest starts right away."
+        },
+        {
+          "id": "cc-cash-advance-q6",
+          "type": "multiple_choice",
+          "prompt": "You need $200 before payday. Which is usually cheaper?",
+          "choices": [
+            "Wait, cut a cost, or ask the biller for a few extra days",
+            "A credit-card cash advance",
+            "A second cash advance to pay the fee on the first"
+          ],
+          "answer": 0,
+          "explain": "The fee plus immediate interest is a steep price for two weeks of cash."
+        }
+      ]
+    },
+    {
+      "id": "cc-first-card",
+      "type": "lesson",
+      "format": "call",
+      "title": "Picking a First Card",
+      "summary": "If you pay in full, the fee matters more than the rate.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cc-first-card-q1",
+          "type": "multiple_choice",
+          "context": "A first card should be one you can pay in full. Compare the annual fee and the [[APR]], and ignore rewards until those two are boring and cheap.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Card A",
+              "subtitle": "No annual fee · 22% APR",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "apr",
+                  "label": "APR, as a yearly interest estimate on $1,000 carried",
+                  "amount": 220.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Rough yearly cost if you carry $1,000",
+                  "amount": 220.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Card B",
+              "subtitle": "$95 annual fee · 18% APR",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 95.0
+                },
+                {
+                  "id": "apr",
+                  "label": "APR, as a yearly interest estimate on $1,000 carried",
+                  "amount": 180.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Rough yearly cost if you carry $1,000",
+                  "amount": 275.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "You plan to pay the statement in full every month. Which card is the cheaper tool?",
+          "choices": [
+            "Card A, with no annual fee",
+            "Card B, because 18% is lower than 22%",
+            "Whichever has the higher limit"
+          ],
+          "answer": 0,
+          "explain": "Paid in full, the APR rarely touches you. A $95 fee still does."
+        },
+        {
+          "id": "cc-first-card-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Card A",
+              "subtitle": "No annual fee · 22% APR",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "apr",
+                  "label": "APR, as a yearly interest estimate on $1,000 carried",
+                  "amount": 220.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Rough yearly cost if you carry $1,000",
+                  "amount": 220.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Card B",
+              "subtitle": "$95 annual fee · 18% APR",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 95.0
+                },
+                {
+                  "id": "apr",
+                  "label": "APR, as a yearly interest estimate on $1,000 carried",
+                  "amount": 180.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Rough yearly cost if you carry $1,000",
+                  "amount": 275.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "If you do carry $1,000 for a year, what is Card A’s rough interest?",
+          "answer": 220,
+          "unit": "$",
+          "explain": "$1,000 × 0.22 = $220."
+        },
+        {
+          "id": "cc-first-card-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Card A",
+              "subtitle": "No annual fee · 22% APR",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "apr",
+                  "label": "APR, as a yearly interest estimate on $1,000 carried",
+                  "amount": 220.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Rough yearly cost if you carry $1,000",
+                  "amount": 220.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Card B",
+              "subtitle": "$95 annual fee · 18% APR",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 95.0
+                },
+                {
+                  "id": "apr",
+                  "label": "APR, as a yearly interest estimate on $1,000 carried",
+                  "amount": 180.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Rough yearly cost if you carry $1,000",
+                  "amount": 275.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "Card B’s rough interest on that $1,000, plus its fee. What is the total?",
+          "answer": 275,
+          "unit": "$",
+          "explain": "$180 + $95 = $275."
+        },
+        {
+          "id": "cc-first-card-q4",
+          "type": "number",
+          "prompt": "How much more is Card B in that “carry $1,000” case?",
+          "answer": 55,
+          "unit": "$",
+          "explain": "$275 − $220 = $55."
+        },
+        {
+          "id": "cc-first-card-q5",
+          "type": "true_false",
+          "prompt": "A lower APR always makes a card cheaper, even when you never carry a balance.",
+          "answer": false,
+          "explain": "If you pay in full, a $0 fee beats a $95 fee."
+        },
+        {
+          "id": "cc-first-card-q6",
+          "type": "multiple_choice",
+          "prompt": "What is a solid rule for a first card?",
+          "choices": [
+            "No annual fee, and pay the statement in full",
+            "The highest limit you can get, spent at once",
+            "A store card at 30% because of today’s discount"
+          ],
+          "answer": 0,
+          "explain": "Boring and paid off builds the record. The fancy card can wait."
+        }
+      ]
+    },
+    {
+      "id": "cc-pay-on-time",
+      "type": "lesson",
+      "title": "Paying Late",
+      "summary": "A late card bill costs a fee, interest, and a mark.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cc-pay-on-time-q1",
+          "type": "multiple_choice",
+          "context": "Miss a card’s [[due date]] and you can owe a [[late fee]], lose the [[grace period]], and, if it goes 30 days past due, pick up a mark on your [[credit report]].",
+          "prompt": "You miss the due date. What can the issuer add?",
+          "choices": [
+            "A late fee",
+            "A reward bonus",
+            "A higher savings rate"
+          ],
+          "answer": 0,
+          "explain": "A [[late fee]] is the first hit."
+        },
+        {
+          "id": "cc-pay-on-time-q2",
+          "type": "number",
+          "prompt": "The bill is $84 and the late fee is $25. What do you owe before any extra interest?",
+          "answer": 109,
+          "unit": "$",
+          "explain": "$84 + $25 = $109."
+        },
+        {
+          "id": "cc-pay-on-time-q3",
+          "type": "true_false",
+          "prompt": "A payment one day late can cost a late fee even if you pay the rest in full.",
+          "answer": true,
+          "explain": "The due date is a cliff, not a suggestion."
+        },
+        {
+          "id": "cc-pay-on-time-q4",
+          "type": "multiple_choice",
+          "prompt": "When does a late card payment become a long-lived credit-report mark?",
+          "choices": [
+            "Once it is about 30 days past due",
+            "One hour past the due date",
+            "Never, if you pay the late fee"
+          ],
+          "answer": 0,
+          "explain": "The fee can hit immediately. The seven-year mark is the 30-day version."
+        },
+        {
+          "id": "cc-pay-on-time-q5",
+          "type": "number",
+          "prompt": "You pay the $84 two days late and the fee is $25. How much extra did being late cost, before interest?",
+          "answer": 25,
+          "unit": "$",
+          "explain": "The fee is $25. The $84 was already yours to pay."
+        },
+        {
+          "id": "cc-pay-on-time-q6",
+          "type": "multiple_choice",
+          "prompt": "What prevents the fee?",
+          "choices": [
+            "Pay at least the minimum by the due date",
+            "Pay sometime this season",
+            "Call after the fee posts and hope"
+          ],
+          "answer": 0,
+          "explain": "On time beats an apology. Autopay the minimum, then pay the rest."
+        }
+      ]
+    },
+    {
+      "id": "cc-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "cc-trial",
+      "type": "boss",
+      "title": "Den Trial: Credit Cards",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "cc-trial-q1",
+          "type": "number",
+          "prompt": "Statement balance $360. You pay $40. How much is still unpaid?",
+          "answer": 320,
+          "unit": "$",
+          "explain": "$360 − $40 = $320."
+        },
+        {
+          "id": "cc-trial-q2",
+          "type": "true_false",
+          "prompt": "A cash advance usually has a grace period.",
+          "answer": false,
+          "explain": "Interest starts the day you take the cash."
+        },
+        {
+          "id": "cc-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "Which payment usually avoids interest on a card statement?",
+          "choices": [
+            "The statement balance, by the due date",
+            "The minimum payment",
+            "One dollar"
+          ],
+          "answer": 0,
+          "explain": "In full, on time, keeps the grace period."
+        },
+        {
+          "id": "cc-trial-q4",
+          "type": "number",
+          "prompt": "$800 unpaid at a 2% monthly rate. About how much interest next month?",
+          "answer": 16,
+          "unit": "$",
+          "explain": "$800 × 0.02 = $16."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,826 @@
+{
+  "id": "credit-reports",
+  "section": "credit-debt",
+  "order": 4,
+  "title": "Credit Reports",
+  "description": "Read the file behind the score, fix what is wrong, and lock what you can.",
+  "wolfLine": "The report is the story. Read it before someone else does.",
+  "terms": {
+    "credit-report": {
+      "term": "Credit report",
+      "definition": "The file of your credit accounts: what you owe, whether you paid on time, and who has looked. The score is a number built from this file.",
+      "example": "A report lists a $420 card balance and a car loan. It does not, by itself, show the score."
+    },
+    "credit-bureau": {
+      "term": "Credit bureau",
+      "definition": "A company that collects credit information and sells reports. The three big ones are Equifax, Experian, and TransUnion.",
+      "example": "A loan might show on Experian and not yet on Equifax."
+    },
+    "credit-freeze": {
+      "term": "Credit freeze",
+      "definition": "A lock you place at each bureau so new lenders cannot pull your report. You lift it when you want to apply.",
+      "example": "Freeze all three, then thaw one the week you shop for a car loan."
+    }
+  },
+  "lessons": [
+    {
+      "id": "cr-vs-score",
+      "type": "lesson",
+      "title": "Report and Score",
+      "summary": "The report is the story. The score is one number squeezed out of it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cr-vs-score-q1",
+          "type": "multiple_choice",
+          "context": "A [[credit report]] lists your accounts and whether you paid. A [[credit score]] is a number built from that file. The free reports at AnnualCreditReport.com do not include the score.",
+          "prompt": "What is a credit report?",
+          "choices": [
+            "The file of your accounts, payments, and inquiries",
+            "A single number from 300 to 850",
+            "Your tax return"
+          ],
+          "answer": 0,
+          "explain": "The file comes first. The score is calculated from it."
+        },
+        {
+          "id": "cr-vs-score-q2",
+          "type": "true_false",
+          "prompt": "Your credit report and your credit score are the same thing.",
+          "answer": false,
+          "explain": "One is the file. The other is a number made from the file."
+        },
+        {
+          "id": "cr-vs-score-q3",
+          "type": "multiple_choice",
+          "prompt": "Where do the free weekly reports come from, with no score attached?",
+          "choices": [
+            "AnnualCreditReport.com",
+            "A random “free score” ad",
+            "Your employer’s payroll site"
+          ],
+          "answer": 0,
+          "explain": "That is the official site. As of 2026 the three bureaus still offer those reports weekly."
+        },
+        {
+          "id": "cr-vs-score-q4",
+          "type": "multiple_choice",
+          "prompt": "Why read the report if you already know the score?",
+          "choices": [
+            "The report shows the accounts and errors behind the number",
+            "The score already lists every account",
+            "Reports are only for lenders"
+          ],
+          "answer": 0,
+          "explain": "You cannot fix a wrong account from a number alone."
+        },
+        {
+          "id": "cr-vs-score-q5",
+          "type": "match",
+          "prompt": "Match each word to what it is.",
+          "pairs": [
+            [
+              "Credit report",
+              "The file of accounts and payments"
+            ],
+            [
+              "Credit score",
+              "A number built from that file"
+            ],
+            [
+              "Hard inquiry",
+              "A lender’s check when you apply"
+            ]
+          ]
+        },
+        {
+          "id": "cr-vs-score-q6",
+          "type": "true_false",
+          "prompt": "A free credit report from AnnualCreditReport.com includes your FICO score.",
+          "answer": false,
+          "explain": "The report is free. The score is a separate product."
+        }
+      ]
+    },
+    {
+      "id": "cr-bureaus",
+      "type": "lesson",
+      "title": "Three Bureaus",
+      "summary": "Equifax, Experian, TransUnion. None of them has to match the others.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cr-bureaus-q1",
+          "type": "multiple_choice",
+          "context": "A [[credit bureau]] collects your credit data and sells reports. The three nationwide ones are Equifax, Experian, and TransUnion. A lender might report to one and not the others, so the files can differ.",
+          "prompt": "How many big nationwide credit bureaus are there?",
+          "choices": [
+            "Three",
+            "One",
+            "Twelve"
+          ],
+          "answer": 0,
+          "explain": "Equifax, Experian, and TransUnion."
+        },
+        {
+          "id": "cr-bureaus-q2",
+          "type": "match",
+          "prompt": "Match each bureau to the file it keeps.",
+          "pairs": [
+            [
+              "Equifax",
+              "Its own copy of your report"
+            ],
+            [
+              "Experian",
+              "A second, separate report"
+            ],
+            [
+              "TransUnion",
+              "A third report that can differ"
+            ]
+          ]
+        },
+        {
+          "id": "cr-bureaus-q3",
+          "type": "true_false",
+          "prompt": "If one bureau’s report is clean, the other two must be clean too.",
+          "answer": false,
+          "explain": "Each file is its own. Check all three."
+        },
+        {
+          "id": "cr-bureaus-q4",
+          "type": "multiple_choice",
+          "prompt": "Why check all three reports?",
+          "choices": [
+            "An error or a fraud account may sit on only one of them",
+            "The law says you pick a favorite",
+            "They always show the same score"
+          ],
+          "answer": 0,
+          "explain": "One clean file does not clear the other two."
+        },
+        {
+          "id": "cr-bureaus-q5",
+          "type": "multiple_choice",
+          "prompt": "Who do you freeze if you want new lenders blocked?",
+          "choices": [
+            "Each bureau, because a freeze at one does not cover the others",
+            "Only Equifax",
+            "Your bank’s app"
+          ],
+          "answer": 0,
+          "explain": "Three files, three locks."
+        },
+        {
+          "id": "cr-bureaus-q6",
+          "type": "fill_blank",
+          "prompt": "Experian, Equifax, and TransUnion are credit ___.",
+          "choices": [
+            "bureaus",
+            "scores",
+            "unions"
+          ],
+          "answer": 0,
+          "explain": "They keep the reports."
+        }
+      ]
+    },
+    {
+      "id": "cr-free-reports",
+      "type": "lesson",
+      "title": "Free Reports",
+      "summary": "Once a week, from the official site. Still true in 2026.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cr-free-reports-q1",
+          "type": "info",
+          "title": "Where the free ones live",
+          "body": "AnnualCreditReport.com is the official site for the free reports required by federal law. Equifax, Experian, and TransUnion made weekly free reports permanent in 2023, and that was still the offer in 2026.\n\nOther sites may sell you a score, a subscription, or nothing. The weekly reports do not include your credit score."
+        },
+        {
+          "id": "cr-free-reports-q2",
+          "type": "multiple_choice",
+          "prompt": "How often could you get a free report from each big bureau in 2026?",
+          "choices": [
+            "Every week",
+            "Once in your life",
+            "Only in December"
+          ],
+          "answer": 0,
+          "explain": "Weekly, at the official site."
+        },
+        {
+          "id": "cr-free-reports-q3",
+          "type": "multiple_choice",
+          "prompt": "Which site is the official one?",
+          "choices": [
+            "AnnualCreditReport.com",
+            "Any site that says “free score” in an ad",
+            "A link in a random text"
+          ],
+          "answer": 0,
+          "explain": "Type it yourself. Do not trust a look-alike."
+        },
+        {
+          "id": "cr-free-reports-q4",
+          "type": "true_false",
+          "prompt": "The free weekly report includes your credit score.",
+          "answer": false,
+          "explain": "It is the report, not the score."
+        },
+        {
+          "id": "cr-free-reports-q5",
+          "type": "multiple_choice",
+          "prompt": "A site asks for a credit card “to verify you” before showing a free report. What do you do?",
+          "choices": [
+            "Leave. The official weekly reports do not require a card",
+            "Enter the card",
+            "Send a photo of your license in a text"
+          ],
+          "answer": 0,
+          "explain": "Paying is the clue that it is not the official free report."
+        },
+        {
+          "id": "cr-free-reports-q6",
+          "type": "multiple_choice",
+          "prompt": "You want all three files. What do you request?",
+          "choices": [
+            "A report from Equifax, Experian, and TransUnion",
+            "Only the bureau you like",
+            "Your old tax return"
+          ],
+          "answer": 0,
+          "explain": "Three files. One sitting can still hide a problem."
+        }
+      ]
+    },
+    {
+      "id": "cr-reading",
+      "type": "lesson",
+      "format": "document",
+      "title": "Reading a Report",
+      "summary": "Names, balances, and a line that should not be there.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cr-reading-q1",
+          "type": "number",
+          "context": "Read a report line by line: who you owe, how much, and whether a late payment is listed.",
+          "doc": {
+            "kind": "statement",
+            "title": "Sample credit report",
+            "subtitle": "One bureau · you, age 29",
+            "meta": [
+              [
+                "Report date",
+                "Oct 2026"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "card",
+                "label": "City Bank card · balance",
+                "amount": 420.0
+              },
+              {
+                "id": "auto",
+                "label": "MileAuto loan · balance",
+                "amount": 6400.0
+              },
+              {
+                "id": "coll",
+                "label": "QuickCash Collections · balance",
+                "amount": 340.0
+              }
+            ],
+            "note": "QuickCash Collections is an account you have never opened."
+          },
+          "prompt": "What is the City Bank card balance on this report?",
+          "answer": 420,
+          "unit": "$",
+          "explain": "The card line: $420."
+        },
+        {
+          "id": "cr-reading-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Sample credit report",
+            "subtitle": "One bureau · you, age 29",
+            "meta": [
+              [
+                "Report date",
+                "Oct 2026"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "card",
+                "label": "City Bank card · balance",
+                "amount": 420.0
+              },
+              {
+                "id": "auto",
+                "label": "MileAuto loan · balance",
+                "amount": 6400.0
+              },
+              {
+                "id": "coll",
+                "label": "QuickCash Collections · balance",
+                "amount": 340.0
+              }
+            ],
+            "note": "QuickCash Collections is an account you have never opened."
+          },
+          "prompt": "What is the car loan balance?",
+          "answer": 6400,
+          "unit": "$",
+          "explain": "MileAuto: $6,400."
+        },
+        {
+          "id": "cr-reading-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Sample credit report",
+            "subtitle": "One bureau · you, age 29",
+            "meta": [
+              [
+                "Report date",
+                "Oct 2026"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "card",
+                "label": "City Bank card · balance",
+                "amount": 420.0
+              },
+              {
+                "id": "auto",
+                "label": "MileAuto loan · balance",
+                "amount": 6400.0
+              },
+              {
+                "id": "coll",
+                "label": "QuickCash Collections · balance",
+                "amount": 340.0
+              }
+            ],
+            "note": "QuickCash Collections is an account you have never opened."
+          },
+          "prompt": "Add the card and the car loan. What do those two balances total?",
+          "answer": 6820,
+          "unit": "$",
+          "explain": "$420 + $6,400 = $6,820."
+        },
+        {
+          "id": "cr-reading-q4",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Sample credit report",
+            "subtitle": "One bureau · you, age 29",
+            "meta": [
+              [
+                "Report date",
+                "Oct 2026"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "card",
+                "label": "City Bank card · balance",
+                "amount": 420.0
+              },
+              {
+                "id": "auto",
+                "label": "MileAuto loan · balance",
+                "amount": 6400.0
+              },
+              {
+                "id": "coll",
+                "label": "QuickCash Collections · balance",
+                "amount": 340.0
+              }
+            ],
+            "note": "QuickCash Collections is an account you have never opened."
+          },
+          "prompt": "What is the QuickCash Collections balance?",
+          "answer": 340,
+          "unit": "$",
+          "explain": "The collections line: $340."
+        },
+        {
+          "id": "cr-reading-q5",
+          "type": "multiple_choice",
+          "doc": {
+            "kind": "statement",
+            "title": "Sample credit report",
+            "subtitle": "One bureau · you, age 29",
+            "meta": [
+              [
+                "Report date",
+                "Oct 2026"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "card",
+                "label": "City Bank card · balance",
+                "amount": 420.0
+              },
+              {
+                "id": "auto",
+                "label": "MileAuto loan · balance",
+                "amount": 6400.0
+              },
+              {
+                "id": "coll",
+                "label": "QuickCash Collections · balance",
+                "amount": 340.0
+              }
+            ],
+            "note": "QuickCash Collections is an account you have never opened."
+          },
+          "prompt": "Which line needs a harder look?",
+          "choices": [
+            "QuickCash Collections, an account you never opened",
+            "The car loan you know about",
+            "A zero late-payment count"
+          ],
+          "answer": 0,
+          "explain": "Unknown accounts are how fraud hides."
+        },
+        {
+          "id": "cr-reading-q6",
+          "type": "true_false",
+          "prompt": "A balance on the report means you should pay it today, even if you do not recognize the account.",
+          "answer": false,
+          "explain": "Recognize it first. An account that is not yours gets disputed, not paid on a hunch."
+        }
+      ]
+    },
+    {
+      "id": "cr-not-yours",
+      "type": "lesson",
+      "format": "spot",
+      "title": "An Account That Is Not Yours",
+      "summary": "Tap the line that does not belong.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cr-not-yours-q1",
+          "type": "spot",
+          "context": "Fraud often shows up as a new account you do not remember. That is the line to dispute.",
+          "doc": {
+            "kind": "statement",
+            "title": "Your report · one bureau",
+            "subtitle": "You have never shopped at Luma",
+            "lines": [
+              {
+                "id": "card",
+                "label": "Harbor Card · opened 2021 · balance",
+                "amount": 180.0
+              },
+              {
+                "id": "loan",
+                "label": "Campus credit union loan · balance",
+                "amount": 2100.0
+              },
+              {
+                "id": "fake",
+                "label": "Luma Store card · opened last month · balance",
+                "amount": 890.0
+              }
+            ],
+            "note": "The Luma card was opened last month. You did not apply."
+          },
+          "prompt": "Which line is the account you never opened?",
+          "answer": "fake",
+          "explain": "Luma Store card, opened last month, is not yours. The others match accounts you know."
+        },
+        {
+          "id": "cr-not-yours-q2",
+          "type": "multiple_choice",
+          "prompt": "What do you do about the Luma card?",
+          "choices": [
+            "Dispute it with the bureau, and tell the lender it is fraud",
+            "Pay the $890 so it goes away",
+            "Ignore it. Strange accounts fall off in a week"
+          ],
+          "answer": 0,
+          "explain": "Paying a fraud account can look like you accept it."
+        },
+        {
+          "id": "cr-not-yours-q3",
+          "type": "number",
+          "prompt": "If the fake $890 were counted, how much would it add to the $180 and $2,100 you really owe?",
+          "answer": 890,
+          "unit": "$",
+          "explain": "It adds its own $890. $180 + $2,100 + $890 = $3,170, but $890 of that is not yours."
+        },
+        {
+          "id": "cr-not-yours-q4",
+          "type": "true_false",
+          "prompt": "An account you never opened can still hurt your score while it sits on the report.",
+          "answer": true,
+          "explain": "The score reads the file, including the bad lines."
+        },
+        {
+          "id": "cr-not-yours-q5",
+          "type": "multiple_choice",
+          "prompt": "You see the same fake account on only one bureau. Do you still act?",
+          "choices": [
+            "Yes. Fix the file that has it, and check the other two",
+            "No. One out of three is fine",
+            "Only if the balance is over $10,000"
+          ],
+          "answer": 0,
+          "explain": "Lenders read the file they happen to pull."
+        },
+        {
+          "id": "cr-not-yours-q6",
+          "type": "order",
+          "prompt": "Put a fraud response in order.",
+          "items": [
+            "Confirm the account is not yours",
+            "Dispute it with the bureau and the lender",
+            "Place a credit freeze",
+            "Check all three reports again"
+          ],
+          "explain": "Name it, challenge it, lock new applications, then look again."
+        }
+      ]
+    },
+    {
+      "id": "cr-dispute",
+      "type": "lesson",
+      "title": "Disputing an Error",
+      "summary": "Tell the bureau what is wrong, in writing, and keep a copy.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cr-dispute-q1",
+          "type": "multiple_choice",
+          "context": "If a report is wrong, you dispute it: you tell the [[credit bureau]] what is incorrect and ask for a fix. Do it with each bureau that shows the error. Send copies of proof, and keep your own copy. This is not the same as asking your bank to reverse a charge.",
+          "prompt": "An old address and a paid-off loan still show as open. What is that?",
+          "choices": [
+            "Errors you can dispute",
+            "Facts you are not allowed to question",
+            "A hard inquiry"
+          ],
+          "answer": 0,
+          "explain": "Wrong facts get challenged."
+        },
+        {
+          "id": "cr-dispute-q2",
+          "type": "order",
+          "prompt": "Put a dispute in order.",
+          "items": [
+            "Find the wrong line on the report",
+            "Write what is wrong and include proof",
+            "Send it to the bureau that shows it",
+            "Read the result and check the report again"
+          ],
+          "explain": "Find it, explain it, send it, confirm the fix."
+        },
+        {
+          "id": "cr-dispute-q3",
+          "type": "true_false",
+          "prompt": "You should dispute a wrong account with every bureau that lists it.",
+          "answer": true,
+          "explain": "A fix at one bureau does not rewrite the others."
+        },
+        {
+          "id": "cr-dispute-q4",
+          "type": "multiple_choice",
+          "prompt": "What belongs in the dispute?",
+          "choices": [
+            "What is wrong, and a copy of anything that proves it",
+            "Only your opinion, with no details",
+            "Your card number in a text to a stranger"
+          ],
+          "answer": 0,
+          "explain": "Specific and documented."
+        },
+        {
+          "id": "cr-dispute-q5",
+          "type": "multiple_choice",
+          "prompt": "The bureau corrects the fake account. What do you do next?",
+          "choices": [
+            "Check that the line is actually gone, on a fresh report",
+            "Assume it is fixed forever",
+            "Close every real account too"
+          ],
+          "answer": 0,
+          "explain": "Trust the new report, not the promise."
+        },
+        {
+          "id": "cr-dispute-q6",
+          "type": "true_false",
+          "prompt": "Paying a collection you do not owe is the fastest way to clean a report.",
+          "answer": false,
+          "explain": "Pay what you owe. Dispute what you do not."
+        }
+      ]
+    },
+    {
+      "id": "cr-freeze",
+      "type": "lesson",
+      "title": "Freezing Your Credit",
+      "summary": "A lock on new loans. You still use the cards you already have.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cr-freeze-q1",
+          "type": "multiple_choice",
+          "context": "A [[credit freeze]] (also called a security freeze) stops new lenders from seeing your report. You place one at each [[credit bureau]], for free, and lift it when you want to apply. Cards you already have keep working.",
+          "prompt": "What does a credit freeze do?",
+          "choices": [
+            "Stops new lenders from pulling your report until you lift it",
+            "Erases your old late payments",
+            "Closes your cards"
+          ],
+          "answer": 0,
+          "explain": "It blocks new credit. It does not wipe history."
+        },
+        {
+          "id": "cr-freeze-q2",
+          "type": "true_false",
+          "prompt": "A freeze at Experian also freezes Equifax and TransUnion.",
+          "answer": false,
+          "explain": "Each bureau needs its own freeze."
+        },
+        {
+          "id": "cr-freeze-q3",
+          "type": "multiple_choice",
+          "prompt": "You want to apply for a car loan next week. What do you do with the freeze?",
+          "choices": [
+            "Lift it, apply, then freeze again",
+            "Leave it and hope the dealer guesses",
+            "Close the loan you already have"
+          ],
+          "answer": 0,
+          "explain": "Thaw, shop, lock."
+        },
+        {
+          "id": "cr-freeze-q4",
+          "type": "multiple_choice",
+          "prompt": "Does a freeze stop you from using a card you already have?",
+          "choices": [
+            "No. Existing accounts still work",
+            "Yes. Every card is frozen shut",
+            "Only on weekends"
+          ],
+          "answer": 0,
+          "explain": "The lock is on new applications."
+        },
+        {
+          "id": "cr-freeze-q5",
+          "type": "true_false",
+          "prompt": "Placing a credit freeze is free by law.",
+          "answer": true,
+          "explain": "You do not pay the bureau to freeze or to lift a freeze."
+        },
+        {
+          "id": "cr-freeze-q6",
+          "type": "multiple_choice",
+          "prompt": "When is a freeze especially worth it?",
+          "choices": [
+            "After a data leak, or if a fake account just showed up",
+            "Only after you retire",
+            "When you want a higher score this week"
+          ],
+          "answer": 0,
+          "explain": "It does not raise the score. It makes the next fake account harder."
+        }
+      ]
+    },
+    {
+      "id": "cr-how-long",
+      "type": "lesson",
+      "title": "How Long Marks Stay",
+      "summary": "Most bad news lasts years. The clock is federal, not a rumor.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cr-how-long-q1",
+          "type": "info",
+          "title": "The usual clocks",
+          "body": "Under the Fair Credit Reporting Act, most negative marks stay about seven years. A late payment is in that group. A Chapter 7 bankruptcy can stay up to 10 years. A hard inquiry stays about two years.\n\nThese are the federal limits. Paying a collection does not rewind the clock to zero, and a credit freeze does not delete old marks."
+        },
+        {
+          "id": "cr-how-long-q2",
+          "type": "multiple_choice",
+          "prompt": "About how long can a late payment stay on a report?",
+          "choices": [
+            "About 7 years",
+            "About 7 weeks",
+            "Forever"
+          ],
+          "answer": 0,
+          "explain": "Seven years is the usual federal limit for late payments."
+        },
+        {
+          "id": "cr-how-long-q3",
+          "type": "multiple_choice",
+          "prompt": "About how long can a Chapter 7 bankruptcy stay?",
+          "choices": [
+            "Up to 10 years",
+            "1 year",
+            "Until you ask"
+          ],
+          "answer": 0,
+          "explain": "Chapter 7 is the long one: up to 10 years."
+        },
+        {
+          "id": "cr-how-long-q4",
+          "type": "multiple_choice",
+          "prompt": "About how long does a hard inquiry stay?",
+          "choices": [
+            "About 2 years",
+            "About 10 years",
+            "Until the loan is paid"
+          ],
+          "answer": 0,
+          "explain": "Two years, and the score often cares less after the first year."
+        },
+        {
+          "id": "cr-how-long-q5",
+          "type": "true_false",
+          "prompt": "A credit freeze deletes late payments.",
+          "answer": false,
+          "explain": "A freeze blocks new pulls. It does not erase history."
+        },
+        {
+          "id": "cr-how-long-q6",
+          "type": "number",
+          "prompt": "A late payment is reported in 2026. About what year does that seven-year clock run out?",
+          "answer": 2033,
+          "explain": "2026 + 7 = 2033."
+        }
+      ]
+    },
+    {
+      "id": "cr-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "cr-trial",
+      "type": "boss",
+      "title": "Den Trial: Credit Reports",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "cr-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "Which site is the official source for a free credit report?",
+          "choices": [
+            "AnnualCreditReport.com",
+            "Whatever the newest ad says",
+            "Your streaming app"
+          ],
+          "answer": 0,
+          "explain": "Type the official address yourself."
+        },
+        {
+          "id": "cr-trial-q2",
+          "type": "true_false",
+          "prompt": "A credit freeze at one bureau covers all three.",
+          "answer": false,
+          "explain": "Freeze each bureau on its own."
+        },
+        {
+          "id": "cr-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "A Chapter 7 bankruptcy can stay on a report for up to how long?",
+          "choices": [
+            "10 years",
+            "10 weeks",
+            "10 days"
+          ],
+          "answer": 0,
+          "explain": "Up to 10 years under federal rules."
+        },
+        {
+          "id": "cr-trial-q4",
+          "type": "number",
+          "prompt": "A report shows a $250 card and a $1,750 loan, both yours. What do those balances add up to?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$250 + $1,750 = $2,000."
+        }
+      ]
+    }
+  ]
+}

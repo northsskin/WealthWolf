@@ -2,13 +2,13 @@
   "id": "debt-credit",
   "section": "credit-debt",
   "order": 1,
-  "title": "Debt & Credit",
-  "description": "Use debt as a tool, not a leash.",
-  "wolfLine": "Interest works against you too. Fight back.",
+  "title": "Borrowing Basics",
+  "description": "What borrowing costs, what secures a loan, and whether the payment fits.",
+  "wolfLine": "Borrow the money. Read the leash before you sign.",
   "terms": {
     "debt": {
       "term": "Debt",
-      "definition": "Money you've borrowed and still have to pay back.",
+      "definition": "Money you’ve borrowed and still have to pay back.",
       "example": "You borrow $1,000 from a bank. You now have $1,000 of debt."
     },
     "loan": {
@@ -18,8 +18,8 @@
     },
     "credit-card": {
       "term": "Credit card",
-      "definition": "A card that lets you buy now and pay later. Whatever you don't pay off each month gets charged interest.",
-      "example": "Buy a $500 TV on the card, pay $100 this month, and you're charged interest on the other $400."
+      "definition": "A card that lets you buy now and pay later. Whatever you don’t pay off each month gets charged interest.",
+      "example": "Buy a $500 TV on the card, pay $100 this month, and you’re charged interest on the other $400."
     },
     "good-debt": {
       "term": "Good debt",
@@ -29,52 +29,32 @@
     "bad-debt": {
       "term": "Bad debt",
       "definition": "Expensive borrowing for things that quickly lose their value.",
-      "example": "A holiday paid for on a credit card you can't pay off."
+      "example": "A holiday paid for on a credit card you can’t pay off."
     },
     "mortgage": {
       "term": "Mortgage",
       "definition": "A big loan used to buy a home, usually paid back over 15 to 30 years.",
       "example": "The bank lends you most of the price of a flat, and you repay it monthly."
     },
-    "apr": {
-      "term": "APR",
-      "definition": "Annual Percentage Rate: the yearly cost of borrowing, shown as a percentage. Higher means more expensive.",
-      "example": "Borrow $1,000 at 10% APR for a year and it costs you about $100."
+    "principal": {
+      "term": "Principal",
+      "definition": "The amount you borrowed, not counting interest.",
+      "example": "Borrow $2,400 for a laptop. The principal is $2,400."
     },
-    "balance": {
-      "term": "Balance",
-      "definition": "How much you still owe on a card or loan right now.",
-      "example": "Spend $700 on a card, pay back $200, and your balance is $500."
+    "secured-loan": {
+      "term": "Secured loan",
+      "definition": "A loan backed by something the lender can take if you stop paying, such as a car.",
+      "example": "A car loan: miss enough payments and the lender can take the car."
     },
-    "minimum-payment": {
-      "term": "Minimum payment",
-      "definition": "The smallest amount a lender lets you pay each month. Pay only this and your debt shrinks very slowly.",
-      "example": "You owe $2,000, but the card only asks for $40 this month."
+    "unsecured-loan": {
+      "term": "Unsecured loan",
+      "definition": "A loan with no property behind it. The lender trusts you to pay, and charges more when that trust is thin.",
+      "example": "Most credit cards and many personal loans are unsecured."
     },
-    "avalanche-method": {
-      "term": "Avalanche method",
-      "definition": "A way to pay off debts: pay the minimum on all of them, then put every spare bit of money toward the one with the highest APR.",
-      "example": "Clear the 29% store card before the 7% car loan."
-    },
-    "snowball-method": {
-      "term": "Snowball method",
-      "definition": "A way to pay off debts: pay the minimum on all of them, then attack the smallest balance first for quick wins.",
-      "example": "Clear the $400 phone plan before the $7,500 car loan."
-    },
-    "credit-score": {
-      "term": "Credit score",
-      "definition": "A number that tells lenders how reliable you are at paying back money. Higher is better.",
-      "example": "A good score can get you a loan with a lower APR."
-    },
-    "credit-limit": {
-      "term": "Credit limit",
-      "definition": "The most you're allowed to borrow on a credit card.",
-      "example": "A card with a $2,000 limit lets you owe up to $2,000 on it."
-    },
-    "credit-utilization": {
-      "term": "Credit utilization",
-      "definition": "How much of your credit limit you're using, as a percentage: balance ÷ limit. Lower is better for your credit score.",
-      "example": "Owe $500 on a $1,000 limit and your utilization is 50%."
+    "cosigner": {
+      "term": "Co-signer",
+      "definition": "Someone who signs a loan with you and has to pay it if you do not.",
+      "example": "A parent co-signs a $4,000 loan. If you miss payments, the lender can collect from your parent."
     }
   },
   "lessons": [
@@ -88,7 +68,7 @@
         {
           "id": "dc-good-bad-debt-q1",
           "type": "multiple_choice",
-          "context": "[[Debt]] is money you've borrowed and still have to pay back.",
+          "context": "[[Debt]] is money you’ve borrowed and still have to pay back.",
           "prompt": "You borrow $1,000 from a bank to buy a laptop. What do you now have?",
           "choices": [
             "Income",
@@ -96,33 +76,33 @@
             "An emergency fund"
           ],
           "answer": 1,
-          "explain": "Borrowed money isn't yours to keep. It's debt until you pay it back."
+          "explain": "Borrowed money isn’t yours to keep. It’s debt until you pay it back."
         },
         {
           "id": "dc-good-bad-debt-q2",
           "type": "multiple_choice",
-          "context": "A [[loan]] is one common way to borrow: a lender gives you money now, and you pay it back over time. You usually pay back **more** than you borrowed. The extra is [[interest]], and this time you're the one paying it.",
-          "prompt": "You borrow $1,000 and pay back $1,100 in total. What's the extra $100?",
+          "context": "A [[loan]] is one common way to borrow: a lender gives you money now, and you pay it back over time. You usually pay back **more** than you borrowed. The extra is [[interest]], and this time you’re the one paying it.",
+          "prompt": "You borrow $1,000 and pay back $1,100 in total. What’s the extra $100?",
           "choices": [
             "Interest",
             "Income",
             "Savings"
           ],
           "answer": 0,
-          "explain": "The price of using someone else's money."
+          "explain": "The price of using someone else’s money."
         },
         {
           "id": "dc-good-bad-debt-q3",
           "type": "multiple_choice",
-          "context": "A [[credit card]] lets you buy now and pay later. If you don't pay the full bill each month, you're charged interest on what's left, and it's usually a lot.",
+          "context": "A [[credit card]] lets you buy now and pay later. If you don’t pay the full bill each month, you’re charged interest on what’s left, and it’s usually a lot.",
           "prompt": "You buy a $500 TV on a credit card and pay back $100 this month. What happens to the other $400?",
           "choices": [
             "The store pays it",
             "It disappears",
-            "You're charged interest on it"
+            "You’re charged interest on it"
           ],
           "answer": 2,
-          "explain": "Whatever you don't pay off keeps costing you."
+          "explain": "Whatever you don’t pay off keeps costing you."
         },
         {
           "id": "dc-good-bad-debt-q4",
@@ -131,7 +111,7 @@
           "prompt": "Which of these is closest to bad debt?",
           "choices": [
             "A low-cost loan for training that raises your pay",
-            "A holiday on a credit card you can't pay off",
+            "A holiday on a credit card you can’t pay off",
             "An affordable loan to buy a home"
           ],
           "answer": 1,
@@ -183,223 +163,750 @@
       ]
     },
     {
-      "id": "dc-apr",
+      "id": "dc-what-it-costs",
       "type": "lesson",
-      "title": "APR, Decoded",
-      "summary": "What borrowing really costs you each year.",
+      "title": "What Borrowing Costs",
+      "summary": "You pay back more than you borrowed. That gap is the price.",
       "xp": 10,
       "steps": [
         {
-          "id": "dc-apr-q1",
+          "id": "dc-what-it-costs-q1",
           "type": "multiple_choice",
-          "context": "Lenders show the yearly cost of borrowing as a percentage called the [[APR]]. A higher APR means more expensive debt.",
-          "prompt": "One card has a 12% APR. Another has 24%. Which is cheaper to borrow on?",
+          "context": "[[Debt]] means you pay the money back. The extra on top is [[interest]], and this time you are the one paying it.",
+          "prompt": "You borrow $800 and pay back $920. What is the extra $120?",
           "choices": [
-            "24% APR",
-            "12% APR",
+            "Interest",
+            "Principal",
+            "A fee the store keeps"
+          ],
+          "answer": 0,
+          "explain": "The extra is the price of the loan."
+        },
+        {
+          "id": "dc-what-it-costs-q2",
+          "type": "number",
+          "prompt": "You borrow $3,000 and pay back $3,450. How much interest did you pay?",
+          "answer": 450,
+          "unit": "$",
+          "explain": "$3,450 − $3,000 = $450."
+        },
+        {
+          "id": "dc-what-it-costs-q3",
+          "type": "true_false",
+          "prompt": "If a friend lends you $200 and you pay back exactly $200, you paid no interest.",
+          "answer": true,
+          "explain": "No extra money changed hands. You still owed the $200 until you paid it."
+        },
+        {
+          "id": "dc-what-it-costs-q4",
+          "type": "multiple_choice",
+          "prompt": "Which borrowing is closest to good debt?",
+          "choices": [
+            "A low-rate loan for training that raises your pay",
+            "A vacation on a card you cannot pay off",
+            "New shoes you do not need, financed for a year"
+          ],
+          "answer": 0,
+          "why": [
+            "A skill that raises your pay can outlast the loan.",
+            "High interest, and the trip is over.",
+            "The shoes wear out. The payments do not."
+          ],
+          "explain": "Cheap borrowing that builds your future can be worth it. The other two are expensive and gone fast."
+        },
+        {
+          "id": "dc-what-it-costs-q5",
+          "type": "multiple_choice",
+          "prompt": "Why do lenders charge interest?",
+          "choices": [
+            "They are paid for letting you use their money",
+            "The law says every loan costs 10%",
+            "Interest is a tax"
+          ],
+          "answer": 0,
+          "explain": "Their money is busy working for you, so they charge rent on it."
+        },
+        {
+          "id": "dc-what-it-costs-q6",
+          "type": "number",
+          "prompt": "A $1,500 loan costs $180 in interest. How much do you pay back in total?",
+          "answer": 1680,
+          "unit": "$",
+          "explain": "$1,500 + $180 = $1,680."
+        }
+      ]
+    },
+    {
+      "id": "dc-principal",
+      "type": "lesson",
+      "title": "Principal and Interest",
+      "summary": "One part is what you borrowed. The other part is the price.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dc-principal-q1",
+          "type": "multiple_choice",
+          "context": "The [[principal]] is the amount you borrowed, not counting interest. Pay $2,200 back on a $2,000 loan and $200 of it is interest.",
+          "prompt": "You borrow $2,000. In loan words, what is that $2,000 called?",
+          "choices": [
+            "Principal",
+            "Interest",
+            "A credit limit"
+          ],
+          "answer": 0,
+          "explain": "Principal is the amount you borrowed."
+        },
+        {
+          "id": "dc-principal-q2",
+          "type": "number",
+          "prompt": "Principal $4,000. You pay back $4,640. How much is interest?",
+          "answer": 640,
+          "unit": "$",
+          "explain": "$4,640 − $4,000 = $640."
+        },
+        {
+          "id": "dc-principal-q3",
+          "type": "number",
+          "prompt": "Each month you pay $150. $110 of it cuts the principal. How much of the payment is interest?",
+          "answer": 40,
+          "unit": "$",
+          "explain": "$150 − $110 = $40."
+        },
+        {
+          "id": "dc-principal-q4",
+          "type": "true_false",
+          "prompt": "Paying extra, above the required payment, usually cuts the principal faster.",
+          "answer": true,
+          "explain": "Less principal left means less interest next time."
+        },
+        {
+          "id": "dc-principal-q5",
+          "type": "multiple_choice",
+          "prompt": "Two loans, same principal. One charges more interest. Which costs more in total?",
+          "choices": [
+            "The one with more interest",
+            "They cost the same",
+            "The one you pay first"
+          ],
+          "answer": 0,
+          "explain": "Same amount borrowed, higher price."
+        },
+        {
+          "id": "dc-principal-q6",
+          "type": "fill_blank",
+          "prompt": "The amount you borrowed, before interest, is the ___.",
+          "choices": [
+            "principal",
+            "interest",
+            "due date"
+          ],
+          "answer": 0,
+          "explain": "Principal first. Interest is the extra."
+        }
+      ]
+    },
+    {
+      "id": "dc-secured",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Secured or Unsecured",
+      "summary": "Some loans have something to take. Some only have your promise.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dc-secured-q1",
+          "type": "multiple_choice",
+          "context": "A [[secured loan]] is backed by something the lender can take, like the car. An [[unsecured loan]] has no property behind it. A typical [[credit card]] is unsecured, which is one reason its interest is often high.",
+          "prompt": "A car loan lets the lender take the car if you stop paying. What kind of loan is that?",
+          "choices": [
+            "Secured",
+            "Unsecured",
+            "A gift"
+          ],
+          "answer": 0,
+          "explain": "The car is the backup."
+        },
+        {
+          "id": "dc-secured-q2",
+          "type": "sort",
+          "prompt": "Secured or unsecured?",
+          "buckets": [
+            "Secured",
+            "Unsecured"
+          ],
+          "items": [
+            [
+              "Car loan, and the lender can take the car",
+              0
+            ],
+            [
+              "Loan for a boat, and the lender can take the boat",
+              0
+            ],
+            [
+              "Ordinary credit card",
+              1
+            ],
+            [
+              "Personal loan with no property behind it",
+              1
+            ],
+            [
+              "Store card",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "dc-secured-q3",
+          "type": "true_false",
+          "prompt": "An unsecured loan is always cheaper than a secured one.",
+          "answer": false,
+          "explain": "No collateral usually means a higher rate, not a lower one."
+        },
+        {
+          "id": "dc-secured-q4",
+          "type": "multiple_choice",
+          "prompt": "You stop paying a secured car loan. What can the lender do?",
+          "choices": [
+            "Take the car and sell it",
+            "Nothing, the car is yours",
+            "Erase the loan"
+          ],
+          "answer": 0,
+          "explain": "That is the deal you signed."
+        },
+        {
+          "id": "dc-secured-q5",
+          "type": "multiple_choice",
+          "prompt": "Why might a lender offer a lower rate on a secured loan?",
+          "choices": [
+            "They can take the property if you do not pay",
+            "Secured loans are illegal to price high",
+            "The rate is set by your birthday"
+          ],
+          "answer": 0,
+          "explain": "Less risk for them, so they can charge less."
+        },
+        {
+          "id": "dc-secured-q6",
+          "type": "match",
+          "prompt": "Match each loan to what sits behind it.",
+          "pairs": [
+            [
+              "Car loan",
+              "The car"
+            ],
+            [
+              "Typical credit card",
+              "Only your promise to pay"
+            ],
+            [
+              "Boat loan",
+              "The boat"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dc-agreement",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Loan Agreement",
+      "summary": "The page you sign is the whole deal. Read it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dc-agreement-q1",
+          "type": "number",
+          "context": "A loan agreement is the written deal: how much you borrow, what you pay, and how long it lasts.",
+          "doc": {
+            "kind": "statement",
+            "title": "Northline Credit Union",
+            "subtitle": "Personal loan agreement",
+            "meta": [
+              [
+                "Term",
+                "24 months"
+              ],
+              [
+                "Amount you receive",
+                "$2,400"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prin",
+                "label": "Amount borrowed (principal)",
+                "amount": 2400.0
+              },
+              {
+                "id": "int",
+                "label": "Interest over the full loan",
+                "amount": 360.0
+              },
+              {
+                "id": "mon",
+                "label": "Monthly payment",
+                "amount": 115.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total you pay back",
+                "amount": 2760.0,
+                "strong": true
+              }
+            ],
+            "note": "24 payments of $115. Miss a payment and a late fee can be added."
+          },
+          "prompt": "What is the principal on this agreement?",
+          "answer": 2400,
+          "unit": "$",
+          "explain": "The amount borrowed: $2,400."
+        },
+        {
+          "id": "dc-agreement-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Northline Credit Union",
+            "subtitle": "Personal loan agreement",
+            "meta": [
+              [
+                "Term",
+                "24 months"
+              ],
+              [
+                "Amount you receive",
+                "$2,400"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prin",
+                "label": "Amount borrowed (principal)",
+                "amount": 2400.0
+              },
+              {
+                "id": "int",
+                "label": "Interest over the full loan",
+                "amount": 360.0
+              },
+              {
+                "id": "mon",
+                "label": "Monthly payment",
+                "amount": 115.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total you pay back",
+                "amount": 2760.0,
+                "strong": true
+              }
+            ],
+            "note": "24 payments of $115. Miss a payment and a late fee can be added."
+          },
+          "prompt": "How much interest do you pay over the full 24 months?",
+          "answer": 360,
+          "unit": "$",
+          "explain": "The interest line: $360."
+        },
+        {
+          "id": "dc-agreement-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Northline Credit Union",
+            "subtitle": "Personal loan agreement",
+            "meta": [
+              [
+                "Term",
+                "24 months"
+              ],
+              [
+                "Amount you receive",
+                "$2,400"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prin",
+                "label": "Amount borrowed (principal)",
+                "amount": 2400.0
+              },
+              {
+                "id": "int",
+                "label": "Interest over the full loan",
+                "amount": 360.0
+              },
+              {
+                "id": "mon",
+                "label": "Monthly payment",
+                "amount": 115.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total you pay back",
+                "amount": 2760.0,
+                "strong": true
+              }
+            ],
+            "note": "24 payments of $115. Miss a payment and a late fee can be added."
+          },
+          "prompt": "What do you pay back in total?",
+          "answer": 2760,
+          "unit": "$",
+          "explain": "$2,400 + $360 = $2,760. That matches 24 × $115."
+        },
+        {
+          "id": "dc-agreement-q4",
+          "type": "number",
+          "prompt": "Check the monthly payment against the total. $2,760 ÷ 24 months equals?",
+          "answer": 115,
+          "unit": "$",
+          "explain": "$2,760 ÷ 24 = $115."
+        },
+        {
+          "id": "dc-agreement-q5",
+          "type": "true_false",
+          "prompt": "Once you sign, a late payment can cost an extra fee on top of the payment.",
+          "answer": true,
+          "explain": "The note says so. The payment is not the only number that matters."
+        },
+        {
+          "id": "dc-agreement-q6",
+          "type": "multiple_choice",
+          "prompt": "What should you know before you sign?",
+          "choices": [
+            "The total you will pay, not just the monthly payment",
+            "Only the monthly payment",
+            "Only the lender’s logo"
+          ],
+          "answer": 0,
+          "explain": "The monthly number hides the $360."
+        }
+      ]
+    },
+    {
+      "id": "dc-afford",
+      "type": "lesson",
+      "format": "call",
+      "title": "Can You Afford the Payment?",
+      "summary": "A payment that fits this month can still cost more overall.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dc-afford-q1",
+          "type": "number",
+          "context": "A payment you cannot cover after needs is a payment you cannot afford. Run the numbers before you sign.",
+          "prompt": "You bring home $2,800. Needs take $2,200. How much is left?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$2,800 − $2,200 = $600."
+        },
+        {
+          "id": "dc-afford-q2",
+          "type": "multiple_choice",
+          "prompt": "A loan wants $700 a month and you have $600 left after needs. What do you do?",
+          "choices": [
+            "Do not take it. The payment does not fit",
+            "Take it and skip groceries",
+            "Take it. The lender would not offer it otherwise"
+          ],
+          "answer": 0,
+          "explain": "If it does not fit, it is not affordable."
+        },
+        {
+          "id": "dc-afford-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Offer A · shorter loan",
+              "subtitle": "Borrow $6,000",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Monthly payment",
+                  "amount": 200.0
+                },
+                {
+                  "id": "mos",
+                  "label": "Number of payments",
+                  "amount": 36.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay",
+                  "amount": 7200.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Offer B · longer loan",
+              "subtitle": "Borrow $6,000",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Monthly payment",
+                  "amount": 140.0
+                },
+                {
+                  "id": "mos",
+                  "label": "Number of payments",
+                  "amount": 60.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay",
+                  "amount": 8400.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "Offer A: $200 × 36 payments. What do you pay in total?",
+          "answer": 7200,
+          "unit": "$",
+          "explain": "$200 × 36 = $7,200."
+        },
+        {
+          "id": "dc-afford-q4",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Offer A · shorter loan",
+              "subtitle": "Borrow $6,000",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Monthly payment",
+                  "amount": 200.0
+                },
+                {
+                  "id": "mos",
+                  "label": "Number of payments",
+                  "amount": 36.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay",
+                  "amount": 7200.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Offer B · longer loan",
+              "subtitle": "Borrow $6,000",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Monthly payment",
+                  "amount": 140.0
+                },
+                {
+                  "id": "mos",
+                  "label": "Number of payments",
+                  "amount": 60.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay",
+                  "amount": 8400.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "Offer B: $140 × 60 payments. What do you pay in total?",
+          "answer": 8400,
+          "unit": "$",
+          "explain": "$140 × 60 = $8,400."
+        },
+        {
+          "id": "dc-afford-q5",
+          "type": "number",
+          "prompt": "How much more does Offer B cost than Offer A?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$8,400 − $7,200 = $1,200."
+        },
+        {
+          "id": "dc-afford-q6",
+          "type": "multiple_choice",
+          "prompt": "Both loans hand you $6,000. Which one costs less overall?",
+          "choices": [
+            "Offer A, the shorter loan",
+            "Offer B, because the payment is smaller",
             "They cost the same"
           ],
-          "answer": 1,
-          "explain": "Lower APR, lower cost."
-        },
-        {
-          "id": "dc-apr-q2",
-          "type": "number",
-          "context": "Rough yearly cost = amount you owe × APR. Owe $1,000 at 10% APR for a year and it costs about $1,000 × 0.10 = $100.",
-          "prompt": "You owe $2,000 on a card at 20% APR for a whole year. Roughly how much interest is that?",
-          "answer": 400,
-          "explain": "$2,000 × 0.20 = $400. Cards add interest monthly, so the real number is a bit higher.",
-          "unit": "$"
-        },
-        {
-          "id": "dc-apr-q3",
-          "type": "number",
-          "context": "The amount you still owe on a card or loan is your [[balance]].",
-          "prompt": "You spent $700 on your card and paid back $200. What's your balance?",
-          "answer": 500,
-          "explain": "$700 − $200 = $500 still owed.",
-          "unit": "$"
-        },
-        {
-          "id": "dc-apr-q4",
-          "type": "multiple_choice",
-          "context": "Every month, a card asks for at least a small [[minimum payment]]. Pay only that, and interest keeps the balance alive for a very long time.",
-          "prompt": "What happens if you only ever pay the minimum?",
-          "choices": [
-            "The debt is gone in a month",
-            "The card company forgives the rest",
-            "The debt drags on for years because of interest"
+          "answer": 0,
+          "why": [
+            "$7,200 back, against $8,400.",
+            "Smaller each month, more in the end.",
+            "The totals on the two sheets do not match."
           ],
-          "answer": 2,
-          "explain": "Minimums are designed to keep you paying. Pay more whenever you can."
-        },
-        {
-          "id": "dc-apr-q5",
-          "type": "true_false",
-          "context": "Stretching a loan over more years makes each monthly payment smaller, but you pay interest for longer.",
-          "prompt": "A smaller monthly payment always means a cheaper loan.",
-          "answer": false,
-          "explain": "Smaller payments over more years can cost more in total."
-        },
-        {
-          "id": "dc-apr-q6",
-          "type": "fill_blank",
-          "prompt": "APR stands for Annual Percentage ___.",
-          "choices": [
-            "Return",
-            "Rate",
-            "Ratio"
-          ],
-          "answer": 1,
-          "explain": "Annual Percentage Rate."
+          "explain": "The smaller payment lasts longer and costs $1,200 more."
         }
       ]
     },
     {
-      "id": "dc-avalanche-snowball",
+      "id": "dc-cosign",
       "type": "lesson",
-      "title": "Avalanche vs. Snowball",
-      "summary": "Two ways to kill debt. Pick your weapon.",
+      "title": "Co-signing",
+      "summary": "Your name on someone else’s loan is your loan too.",
       "xp": 10,
       "steps": [
         {
-          "id": "dc-avalanche-snowball-q1",
+          "id": "dc-cosign-q1",
           "type": "multiple_choice",
-          "context": "The [[avalanche method]]: pay the minimum on every debt, then put every spare bit of money toward the one with the **highest APR**.",
-          "prompt": "Using the avalanche method, which debt do you attack first?",
+          "context": "A [[co-signer|cosigner]] signs with the borrower and has to pay if the borrower does not. The loan can show on both credit records.",
+          "prompt": "You co-sign a friend’s $4,000 loan. They stop paying. What can the lender do?",
           "choices": [
-            "Car loan · 7% APR",
-            "Store card · 29% APR",
-            "Student loan · 4% APR"
-          ],
-          "answer": 1,
-          "explain": "Highest APR first. It's costing you the most."
-        },
-        {
-          "id": "dc-avalanche-snowball-q2",
-          "type": "order",
-          "prompt": "Avalanche method: order these debts from first to last to pay off.",
-          "items": [
-            "Store card · 29% APR",
-            "Credit card · 22% APR",
-            "Car loan · 7% APR",
-            "Student loan · 4% APR"
-          ],
-          "explain": "Highest APR to lowest."
-        },
-        {
-          "id": "dc-avalanche-snowball-q3",
-          "type": "multiple_choice",
-          "context": "The [[snowball method]]: pay the minimum on everything, then attack the **smallest balance** first. Every debt you clear feels like a win.",
-          "prompt": "Using the snowball method, which debt goes first?",
-          "choices": [
-            "Phone plan · $400 left",
-            "Car loan · $7,500 left",
-            "Student loan · $15,000 left"
+            "Collect the payments from you",
+            "Nothing. You only wrote a reference",
+            "Take the debt off both of you"
           ],
           "answer": 0,
-          "explain": "Smallest balance first. Quick win, then roll that money into the next one."
+          "explain": "A co-signer agrees to pay."
         },
         {
-          "id": "dc-avalanche-snowball-q4",
-          "type": "order",
-          "prompt": "Snowball method: order these debts from first to last to pay off.",
-          "items": [
-            "Phone plan · $400 left",
-            "Credit card · $1,800 left",
-            "Car loan · $7,500 left",
-            "Student loan · $15,000 left"
-          ],
-          "explain": "Smallest balance to biggest."
-        },
-        {
-          "id": "dc-avalanche-snowball-q5",
-          "type": "multiple_choice",
-          "prompt": "Which method usually saves the most money overall?",
-          "choices": [
-            "Avalanche",
-            "Snowball",
-            "They always save the same"
-          ],
-          "answer": 0,
-          "explain": "Clearing the highest APR first means less interest. Snowball wins on motivation."
-        },
-        {
-          "id": "dc-avalanche-snowball-q6",
+          "id": "dc-cosign-q2",
           "type": "true_false",
-          "prompt": "With either method, you keep paying the minimum on every debt.",
-          "answer": true,
-          "explain": "Missed minimums mean fees and damage. Extra money goes to one target."
+          "prompt": "Co-signing is just a character reference. You cannot be made to pay.",
+          "answer": false,
+          "explain": "It is a legal promise to pay the debt."
+        },
+        {
+          "id": "dc-cosign-q3",
+          "type": "number",
+          "prompt": "The friend misses payments and $1,600 is still owed. You are the co-signer. How much can the lender ask you for?",
+          "answer": 1600,
+          "unit": "$",
+          "explain": "The remaining $1,600. Co-signing means you owe it too."
+        },
+        {
+          "id": "dc-cosign-q4",
+          "type": "multiple_choice",
+          "prompt": "Your own loan application asks about debts. Does the co-signed loan count?",
+          "choices": [
+            "Yes. Lenders treat it as your debt too",
+            "No. It is only the friend’s",
+            "Only if you live together"
+          ],
+          "answer": 0,
+          "explain": "It can use up room you needed for your own loan."
+        },
+        {
+          "id": "dc-cosign-q5",
+          "type": "multiple_choice",
+          "prompt": "When is co-signing least risky?",
+          "choices": [
+            "When you can afford the full payment yourself, and you trust them to pay",
+            "When you cannot afford it",
+            "When you have not read the agreement"
+          ],
+          "answer": 0,
+          "explain": "Assume you might be the one paying."
+        },
+        {
+          "id": "dc-cosign-q6",
+          "type": "multiple_choice",
+          "prompt": "The friend pays the loan off on time. What was the cost to you?",
+          "choices": [
+            "Maybe nothing in money, but your name was on the debt the whole time",
+            "A required $500 fee",
+            "You still owe half"
+          ],
+          "answer": 0,
+          "explain": "The risk was real even though the bill never landed on you."
         }
       ]
     },
     {
-      "id": "dc-credit-score",
+      "id": "dc-leo",
       "type": "lesson",
-      "title": "Credit Scores",
-      "summary": "The reputation lenders check before they say yes.",
+      "format": "story",
+      "title": "Leo’s First Loan",
+      "summary": "A course that raises pay can still be a bad loan.",
       "xp": 10,
+      "story": {
+        "title": "The first loan",
+        "character": "Leo, 22, warehouse associate",
+        "body": "Leo wants a $2,000 certificate course that could raise his pay. The school offers a loan: **$2,000** now, then **24** payments of **$105**.\n\nLeo brings home **$2,600** a month. Rent and other needs take **$2,150**. He has been late on a phone bill before, and his cousin offered to co-sign."
+      },
       "steps": [
         {
-          "id": "dc-credit-score-q1",
-          "type": "multiple_choice",
-          "context": "Your [[credit score]] is a number that tells lenders how reliable you are at paying back money. Higher is better.",
-          "prompt": "What does a high credit score usually get you?",
-          "choices": [
-            "A higher salary",
-            "Easier approval and a lower APR",
-            "Free money from the bank"
-          ],
-          "answer": 1,
-          "explain": "Lenders charge less to people they trust."
+          "id": "dc-leo-q1",
+          "type": "number",
+          "prompt": "How much interest does Leo pay over the full loan?",
+          "answer": 520,
+          "unit": "$",
+          "explain": "24 × $105 = $2,520. $2,520 − $2,000 = $520."
         },
         {
-          "id": "dc-credit-score-q2",
+          "id": "dc-leo-q2",
+          "type": "number",
+          "prompt": "After needs, how much of Leo’s paycheck is left each month?",
+          "answer": 450,
+          "unit": "$",
+          "explain": "$2,600 − $2,150 = $450."
+        },
+        {
+          "id": "dc-leo-q3",
           "type": "multiple_choice",
-          "prompt": "Which habit helps your credit score most?",
+          "prompt": "The payment is $105 and Leo has $450 left. Does the payment fit?",
           "choices": [
-            "Paying every bill on time",
-            "Opening lots of cards at once",
-            "Missing a payment now and then"
+            "Yes. $105 is well under $450",
+            "No. $105 is more than he brings home",
+            "Only if his cousin co-signs"
           ],
           "answer": 0,
-          "explain": "On-time payments are the biggest single factor. Never miss."
+          "explain": "The payment fits. Fitting is not the same as being worth it."
         },
         {
-          "id": "dc-credit-score-q3",
+          "id": "dc-leo-q4",
           "type": "multiple_choice",
-          "context": "Your [[credit limit]] is the most you're allowed to borrow on a card.",
-          "prompt": "Your card has a $5,000 credit limit. What does that mean?",
+          "prompt": "Leo has been late on bills. What is the risk if his cousin co-signs?",
           "choices": [
-            "You must spend $5,000",
-            "You have $5,000 in savings",
-            "You can owe up to $5,000 on it"
+            "His cousin has to pay if Leo falls behind",
+            "The cousin’s name is only a reference",
+            "The loan becomes interest-free"
           ],
-          "answer": 2,
-          "explain": "It's a ceiling, not a target."
+          "answer": 0,
+          "explain": "Co-signing puts the cousin on the hook."
         },
         {
-          "id": "dc-credit-score-q4",
-          "type": "number",
-          "context": "[[Credit utilization]] is how much of your limit you're using: balance ÷ limit, as a percentage. Owe $500 on a $1,000 limit and you're at 50%.",
-          "prompt": "Your limit is $5,000 and your balance is $1,500. What's your utilization?",
-          "answer": 30,
-          "unit": "%",
-          "explain": "$1,500 ÷ $5,000 = 0.30, which is 30%."
-        },
-        {
-          "id": "dc-credit-score-q5",
+          "id": "dc-leo-q5",
           "type": "true_false",
-          "prompt": "Lower credit utilization is generally better for your credit score.",
-          "answer": true,
-          "explain": "Using a small slice of your limit shows you're not stretched."
-        },
-        {
-          "id": "dc-credit-score-q6",
-          "type": "true_false",
-          "prompt": "Checking your own credit score lowers it.",
+          "prompt": "Because the course might raise Leo’s pay, the loan is automatically good debt.",
           "answer": false,
-          "explain": "Looking at your own score is free and harmless."
+          "explain": "Good debt is cheap borrowing that builds your future. $520 of interest on $2,000, plus a shaky payment history, is worth a hard look."
+        },
+        {
+          "id": "dc-leo-q6",
+          "type": "multiple_choice",
+          "prompt": "What is the careful move before Leo signs?",
+          "choices": [
+            "Compare the total cost, and ask if a cheaper way to pay for the course exists",
+            "Sign today so the seat does not vanish",
+            "Let his cousin sign without reading"
+          ],
+          "answer": 0,
+          "explain": "The monthly $105 is the easy number. The $2,520 is the real one."
         }
       ]
     },
@@ -407,7 +914,7 @@
       "id": "dc-review",
       "type": "review",
       "title": "Sharpen Up",
-      "summary": "Smart repetition on what you're closest to forgetting.",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
       "xp": 10,
       "draw": 8,
       "steps": []
@@ -415,61 +922,49 @@
     {
       "id": "dc-trial",
       "type": "boss",
-      "title": "Den Trial: Debt",
-      "summary": "Eight questions. Three strikes and you're out.",
+      "title": "Den Trial: Borrowing Basics",
+      "summary": "8 questions. Three strikes and you’re out.",
       "xp": 25,
-      "draw": 3,
+      "draw": 4,
       "steps": [
         {
           "id": "dc-trial-q1",
-          "type": "multiple_choice",
-          "prompt": "You only ever pay the minimum on a credit card. What happens?",
-          "choices": [
-            "The balance clears within a year",
-            "Interest keeps the debt alive for years",
-            "Your credit limit drops to zero"
-          ],
-          "answer": 1,
-          "explain": "Pay above the [[minimum payment]] whenever you can."
+          "type": "number",
+          "prompt": "You borrow $5,000 and pay back $5,800. How much is interest?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "$5,800 − $5,000 = $800."
         },
         {
           "id": "dc-trial-q2",
-          "type": "order",
-          "prompt": "Avalanche method: order from first to last to pay off.",
-          "items": [
-            "Store card · 32% APR",
-            "Credit card · 24% APR",
-            "Personal loan · 11% APR",
-            "Mortgage · 5% APR"
+          "type": "multiple_choice",
+          "prompt": "Which one lets the lender take the car if the payments stop?",
+          "choices": [
+            "A car loan",
+            "A typical credit card",
+            "Money a friend gave you as a gift"
           ],
-          "explain": "Highest APR first."
+          "answer": 0,
+          "explain": "The car backs the loan. A typical card has no property behind it."
         },
         {
           "id": "dc-trial-q3",
-          "type": "number",
-          "prompt": "A $3,000 balance sits at 18% APR for a year. Roughly how much interest is that?",
-          "answer": 540,
-          "explain": "$3,000 × 0.18 = $540.",
-          "unit": "$"
+          "type": "true_false",
+          "prompt": "A co-signer can be forced to pay the full remaining debt.",
+          "answer": true,
+          "explain": "That is what the signature means."
         },
         {
           "id": "dc-trial-q4",
-          "type": "true_false",
-          "prompt": "The snowball method pays off the highest APR first.",
-          "answer": false,
-          "explain": "That's the avalanche. Snowball goes smallest balance first."
-        },
-        {
-          "id": "dc-trial-q5",
-          "type": "fill_blank",
-          "prompt": "The yearly cost of borrowing, shown as a percentage, is the ___.",
+          "type": "multiple_choice",
+          "prompt": "You have $300 left after needs. The payment would be $450. What is true?",
           "choices": [
-            "balance",
-            "APR",
-            "limit"
+            "The payment does not fit",
+            "The payment fits easily",
+            "Lenders only offer payments you can afford"
           ],
-          "answer": 1,
-          "explain": "Annual Percentage Rate."
+          "answer": 0,
+          "explain": "$450 is more than $300."
         }
       ]
     }

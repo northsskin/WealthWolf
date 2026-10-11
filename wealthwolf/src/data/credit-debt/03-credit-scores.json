@@ -1,0 +1,694 @@
+{
+  "id": "credit-scores",
+  "section": "credit-debt",
+  "order": 3,
+  "title": "Credit Scores",
+  "description": "What a score weighs, and how to start one from nothing.",
+  "wolfLine": "Your score is a rumor lenders believe. Pay on time and it stays kind.",
+  "terms": {
+    "credit-score": {
+      "term": "Credit score",
+      "definition": "A number that tells lenders how reliable you are at paying back money. Higher is better.",
+      "example": "A good score can get you a loan with a lower APR."
+    },
+    "credit-limit": {
+      "term": "Credit limit",
+      "definition": "The most you’re allowed to borrow on a credit card.",
+      "example": "A card with a $2,000 limit lets you owe up to $2,000 on it."
+    },
+    "credit-utilization": {
+      "term": "Credit utilization",
+      "definition": "How much of your credit limit you’re using, as a percentage: balance ├╖ limit. Lower is better for your credit score.",
+      "example": "Owe $500 on a $1,000 limit and your utilization is 50%."
+    },
+    "hard-inquiry": {
+      "term": "Hard inquiry",
+      "definition": "A credit check a lender makes when you apply to borrow. It can nudge your score down a little and stays on your report for about two years.",
+      "example": "Applying for a car loan puts a hard inquiry on your report."
+    },
+    "secured-card": {
+      "term": "Secured card",
+      "definition": "A credit card you qualify for by putting down a deposit, often equal to the limit. The deposit is the lender’s backup while you build a payment record.",
+      "example": "Put down $200, get a $200 limit, and use the card like any other."
+    },
+    "credit-mix": {
+      "term": "Credit mix",
+      "definition": "The variety of credit you have, such as a card and a loan. On a FICO score it is a small slice, about 10%.",
+      "example": "One card and one car loan is a mix. Ten new cards is not the goal."
+    }
+  },
+  "lessons": [
+    {
+      "id": "dc-credit-score",
+      "type": "lesson",
+      "title": "Credit Scores",
+      "summary": "The reputation lenders check before they say yes.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dc-credit-score-q1",
+          "type": "multiple_choice",
+          "context": "Your [[credit score]] is a number that tells lenders how reliable you are at paying back money. Higher is better.",
+          "prompt": "What does a high credit score usually get you?",
+          "choices": [
+            "A higher salary",
+            "Easier approval and a lower APR",
+            "Free money from the bank"
+          ],
+          "answer": 1,
+          "explain": "Lenders charge less to people they trust."
+        },
+        {
+          "id": "dc-credit-score-q2",
+          "type": "multiple_choice",
+          "prompt": "Which habit helps your credit score most?",
+          "choices": [
+            "Paying every bill on time",
+            "Opening lots of cards at once",
+            "Missing a payment now and then"
+          ],
+          "answer": 0,
+          "explain": "On-time payments are the biggest single factor. Never miss."
+        },
+        {
+          "id": "dc-credit-score-q3",
+          "type": "multiple_choice",
+          "context": "Your [[credit limit]] is the most you’re allowed to borrow on a card.",
+          "prompt": "Your card has a $5,000 credit limit. What does that mean?",
+          "choices": [
+            "You must spend $5,000",
+            "You have $5,000 in savings",
+            "You can owe up to $5,000 on it"
+          ],
+          "answer": 2,
+          "explain": "It’s a ceiling, not a target."
+        },
+        {
+          "id": "dc-credit-score-q4",
+          "type": "number",
+          "context": "[[Credit utilization]] is how much of your limit you’re using: balance ├╖ limit, as a percentage. Owe $500 on a $1,000 limit and you’re at 50%.",
+          "prompt": "Your limit is $5,000 and your balance is $1,500. What’s your utilization?",
+          "answer": 30,
+          "unit": "%",
+          "explain": "$1,500 ├╖ $5,000 = 0.30, which is 30%."
+        },
+        {
+          "id": "dc-credit-score-q5",
+          "type": "true_false",
+          "prompt": "Lower credit utilization is generally better for your credit score.",
+          "answer": true,
+          "explain": "Using a small slice of your limit shows you’re not stretched."
+        },
+        {
+          "id": "dc-credit-score-q6",
+          "type": "true_false",
+          "prompt": "Checking your own credit score lowers it.",
+          "answer": false,
+          "explain": "Looking at your own score is free and harmless."
+        }
+      ]
+    },
+    {
+      "id": "cs-factors",
+      "type": "lesson",
+      "title": "What the Score Weighs",
+      "summary": "Five ingredients. Two of them do most of the work.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cs-factors-q1",
+          "type": "info",
+          "title": "FICO’s five factors",
+          "body": "The FICO score, the one most lenders still use, weighs five things:\n\nPayment history, about 35%. Amounts owed, about 30%. Length of history, about 15%. New credit, about 10%. [[Credit mix]], about 10%.\n\nOther scores use their own recipes. These weights are FICO’s, and they are the ones to remember."
+        },
+        {
+          "id": "cs-factors-q2",
+          "type": "multiple_choice",
+          "prompt": "On a FICO score, which factor weighs the most?",
+          "choices": [
+            "Payment history, about 35%",
+            "Credit mix, about 10%",
+            "New credit, about 10%"
+          ],
+          "answer": 0,
+          "explain": "On-time payments are the biggest slice."
+        },
+        {
+          "id": "cs-factors-q3",
+          "type": "multiple_choice",
+          "prompt": "Which factor is about 30%?",
+          "choices": [
+            "Amounts owed",
+            "Length of history",
+            "Credit mix"
+          ],
+          "answer": 0,
+          "explain": "How much of your limits you are using lives here."
+        },
+        {
+          "id": "cs-factors-q4",
+          "type": "match",
+          "prompt": "Match the FICO factor to its weight.",
+          "pairs": [
+            [
+              "Payment history",
+              "About 35%"
+            ],
+            [
+              "Amounts owed",
+              "About 30%"
+            ],
+            [
+              "Length of history",
+              "About 15%"
+            ],
+            [
+              "Credit mix",
+              "About 10%"
+            ]
+          ]
+        },
+        {
+          "id": "cs-factors-q5",
+          "type": "true_false",
+          "prompt": "Every credit score in the country uses these exact five weights.",
+          "answer": false,
+          "explain": "FICO does. Other scores have their own formulas."
+        },
+        {
+          "id": "cs-factors-q6",
+          "type": "multiple_choice",
+          "prompt": "You can control which two factors fastest?",
+          "choices": [
+            "Paying on time, and keeping balances low",
+            "The year you opened your first card",
+            "Your parents’ old loans"
+          ],
+          "answer": 0,
+          "explain": "History length takes years. Payments and balances move now."
+        }
+      ]
+    },
+    {
+      "id": "cs-history",
+      "type": "lesson",
+      "title": "Payment History",
+      "summary": "One late payment echoes. A long streak of on-time ones helps.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cs-history-q1",
+          "type": "multiple_choice",
+          "context": "Your [[credit score]] cares most about whether you pay on time. A paid-off bill and a [[minimum payment]] made by the [[due date]] both count as on time. Late is late.",
+          "prompt": "What helps a credit score the most, month after month?",
+          "choices": [
+            "Paying every bill on time",
+            "Carrying a balance so the card “sees activity”",
+            "Opening a new card each month"
+          ],
+          "answer": 0,
+          "explain": "Payment history is the heaviest factor."
+        },
+        {
+          "id": "cs-history-q2",
+          "type": "true_false",
+          "prompt": "Paying only the minimum, but paying it by the due date, still counts as on time.",
+          "answer": true,
+          "explain": "On time and “paid in full” are different jobs. The score is watching the due date."
+        },
+        {
+          "id": "cs-history-q3",
+          "type": "multiple_choice",
+          "prompt": "A payment is 30 days late. What is the likely effect?",
+          "choices": [
+            "It can hurt the score and stay on the report for years",
+            "Nothing, if you pay the next day",
+            "The score goes up, because you used the card"
+          ],
+          "answer": 0,
+          "explain": "Thirty days late is a negative mark. Under federal rules it can stay about seven years."
+        },
+        {
+          "id": "cs-history-q4",
+          "type": "number",
+          "prompt": "You have 24 months of payments and 1 of them was late. How many were on time?",
+          "answer": 23,
+          "explain": "24 − 1 = 23. One miss still stings."
+        },
+        {
+          "id": "cs-history-q5",
+          "type": "multiple_choice",
+          "prompt": "Which is the safer habit?",
+          "choices": [
+            "Autopay at least the minimum, then pay extra when you can",
+            "Waiting until you feel like paying",
+            "Paying a day after the due date to earn interest"
+          ],
+          "answer": 0,
+          "explain": "Autopay covers the “on time” job. Extra payments do the “get out of debt” job."
+        },
+        {
+          "id": "cs-history-q6",
+          "type": "true_false",
+          "prompt": "A single late payment is a secret. Lenders never see it.",
+          "answer": false,
+          "explain": "It can land on your credit report."
+        }
+      ]
+    },
+    {
+      "id": "cs-utilization",
+      "type": "lesson",
+      "title": "Utilization Math",
+      "summary": "Balance divided by limit. Lower is kinder to the score.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cs-utilization-q1",
+          "type": "number",
+          "context": "[[Credit utilization]] is balance ÷ [[credit limit]]. A common rule of thumb is to stay under 30%, and lower is better. It is a habit, not a law.",
+          "prompt": "Limit $1,500. Balance $450. What is your utilization?",
+          "answer": 30,
+          "unit": "%",
+          "explain": "$450 ÷ $1,500 = 0.30, which is 30%."
+        },
+        {
+          "id": "cs-utilization-q2",
+          "type": "number",
+          "prompt": "Limit $2,500. Balance $250. What is your utilization?",
+          "answer": 10,
+          "unit": "%",
+          "explain": "$250 ÷ $2,500 = 0.10, which is 10%."
+        },
+        {
+          "id": "cs-utilization-q3",
+          "type": "number",
+          "prompt": "You owe $800 on a $1,000 limit. How much must you pay so the balance is $300?",
+          "answer": 500,
+          "unit": "$",
+          "explain": "$800 − $300 = $500."
+        },
+        {
+          "id": "cs-utilization-q4",
+          "type": "number",
+          "prompt": "After that payment, what is utilization on the $1,000 limit?",
+          "answer": 30,
+          "unit": "%",
+          "explain": "$300 ÷ $1,000 = 30%."
+        },
+        {
+          "id": "cs-utilization-q5",
+          "type": "multiple_choice",
+          "prompt": "Which balance looks better on a $4,000 limit?",
+          "choices": [
+            "$400",
+            "$3,200",
+            "$3,900"
+          ],
+          "answer": 0,
+          "why": [
+            "10% used.",
+            "80% used.",
+            "97.5% used."
+          ],
+          "explain": "$400 is 10%. $3,200 is 80%. $3,900 is almost the whole limit."
+        },
+        {
+          "id": "cs-utilization-q6",
+          "type": "true_false",
+          "prompt": "Maxing out a card, even if you pay on time, can still hurt the score.",
+          "answer": true,
+          "explain": "On-time payments and high utilization are different factors."
+        }
+      ]
+    },
+    {
+      "id": "cs-length",
+      "type": "lesson",
+      "title": "Length of History",
+      "summary": "Old accounts are a track record. Closing them can shrink it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cs-length-q1",
+          "type": "multiple_choice",
+          "context": "Length of history is about 15% of a FICO score. An old card you keep open and pay can help. Closing your oldest card can shorten the story lenders see.",
+          "prompt": "What does “length of credit history” look at?",
+          "choices": [
+            "How long your accounts have been open, and how long since you used them",
+            "How long your shift at work is",
+            "How many years until a loan is illegal"
+          ],
+          "answer": 0,
+          "explain": "Older, well-kept accounts help."
+        },
+        {
+          "id": "cs-length-q2",
+          "type": "true_false",
+          "prompt": "Closing your oldest credit card can shorten your credit history.",
+          "answer": true,
+          "explain": "That account’s age may stop counting the way it did."
+        },
+        {
+          "id": "cs-length-q3",
+          "type": "multiple_choice",
+          "prompt": "You opened your first card 8 years ago and a second card last month. Which one is the long history?",
+          "choices": [
+            "The 8-year-old card",
+            "The new card",
+            "Whichever has the higher balance"
+          ],
+          "answer": 0,
+          "explain": "Age is the point of this factor."
+        },
+        {
+          "id": "cs-length-q4",
+          "type": "number",
+          "prompt": "Your oldest account was opened in 2018. It is now 2026. How many years has it been open?",
+          "answer": 8,
+          "unit": "years",
+          "explain": "2026 − 2018 = 8 years."
+        },
+        {
+          "id": "cs-length-q5",
+          "type": "multiple_choice",
+          "prompt": "A new borrower has a thin file. What does that mean?",
+          "choices": [
+            "There is not much history for a lender to read",
+            "Their score is automatically 850",
+            "They cannot be charged interest"
+          ],
+          "answer": 0,
+          "explain": "Thin is not the same as bad. It means “we hardly know you.”"
+        },
+        {
+          "id": "cs-length-q6",
+          "type": "true_false",
+          "prompt": "Keeping an old card open, with a zero or small balance, can help the length factor.",
+          "answer": true,
+          "explain": "The account keeps aging. You do not have to carry debt for that."
+        }
+      ]
+    },
+    {
+      "id": "cs-inquiries",
+      "type": "lesson",
+      "title": "New Credit and Hard Inquiries",
+      "summary": "Shopping for a loan leaves footprints. Checking yourself does not.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cs-inquiries-q1",
+          "type": "multiple_choice",
+          "context": "A [[hard inquiry]] happens when you apply for credit. It can dip a score a little and stays on the report for about two years. You checking your own score is not a hard inquiry.",
+          "prompt": "What is a hard inquiry?",
+          "choices": [
+            "A lender checking your credit because you applied to borrow",
+            "You looking at your own score",
+            "A store mailing you an ad"
+          ],
+          "answer": 0,
+          "explain": "You asked to borrow, so they looked."
+        },
+        {
+          "id": "cs-inquiries-q2",
+          "type": "true_false",
+          "prompt": "Looking up your own credit score lowers it.",
+          "answer": false,
+          "explain": "That check is yours. It does not count as a hard inquiry."
+        },
+        {
+          "id": "cs-inquiries-q3",
+          "type": "multiple_choice",
+          "prompt": "You apply for four cards in one week. What is the likely result?",
+          "choices": [
+            "Several hard inquiries, and maybe a lower score",
+            "A higher score, because you look popular",
+            "The old inquiries get deleted"
+          ],
+          "answer": 0,
+          "explain": "A burst of new applications looks risky."
+        },
+        {
+          "id": "cs-inquiries-q4",
+          "type": "multiple_choice",
+          "prompt": "Rate-shopping one car loan at three lenders in a short window is often treated more kindly than four random cards. Why?",
+          "choices": [
+            "Scoring models often group loan shopping into one search",
+            "Car loans are invisible",
+            "Inquiries only count in December"
+          ],
+          "answer": 0,
+          "explain": "One car, one search. Do not stretch it across months."
+        },
+        {
+          "id": "cs-inquiries-q5",
+          "type": "number",
+          "prompt": "A hard inquiry stays about two years. You applied in 2026. About what year does it drop off?",
+          "answer": 2028,
+          "explain": "2026 + 2 = 2028."
+        },
+        {
+          "id": "cs-inquiries-q6",
+          "type": "fill_blank",
+          "prompt": "A lender’s credit check when you apply is a ___ inquiry.",
+          "choices": [
+            "hard",
+            "soft",
+            "secret"
+          ],
+          "answer": 0,
+          "explain": "Hard inquiry. Your own check is the harmless kind."
+        }
+      ]
+    },
+    {
+      "id": "cs-from-zero",
+      "type": "lesson",
+      "title": "Building Credit from Zero",
+      "summary": "No history yet. A small, boring account starts one.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cs-from-zero-q1",
+          "type": "multiple_choice",
+          "context": "A [[secured card]] asks for a deposit, often the same size as the [[credit limit]]. Use a little, pay the statement in full, and on-time payments start a history. A credit-builder loan is the other common door: you pay into a small loan, and those payments get reported.",
+          "prompt": "What is a secured card?",
+          "choices": [
+            "A card you open by putting down a deposit, often equal to the limit",
+            "A card that spends your savings with no bill",
+            "A debit card"
+          ],
+          "answer": 0,
+          "explain": "The deposit backs the limit while you build a record."
+        },
+        {
+          "id": "cs-from-zero-q2",
+          "type": "number",
+          "prompt": "You put down $300 and the secured card’s limit is $300. You spend $30. What is your utilization?",
+          "answer": 10,
+          "unit": "%",
+          "explain": "$30 ÷ $300 = 10%."
+        },
+        {
+          "id": "cs-from-zero-q3",
+          "type": "multiple_choice",
+          "prompt": "What should you do with that $30 charge?",
+          "choices": [
+            "Pay it in full, on time",
+            "Pay nothing so the deposit covers it",
+            "Spend the other $270 too"
+          ],
+          "answer": 0,
+          "explain": "The deposit is not a free pass. The bill is still yours."
+        },
+        {
+          "id": "cs-from-zero-q4",
+          "type": "true_false",
+          "prompt": "A debit card builds a credit score the same way a credit card does.",
+          "answer": false,
+          "explain": "Debit spends your own money. It usually is not a credit account."
+        },
+        {
+          "id": "cs-from-zero-q5",
+          "type": "multiple_choice",
+          "prompt": "A credit-builder loan is useful because…",
+          "choices": [
+            "The payments can be reported, and you end up with the money you paid in",
+            "It erases old late payments",
+            "It raises your salary"
+          ],
+          "answer": 0,
+          "explain": "You are practicing paying, and the record shows it."
+        },
+        {
+          "id": "cs-from-zero-q6",
+          "type": "multiple_choice",
+          "prompt": "Which habit builds the file without digging a hole?",
+          "choices": [
+            "Small balance, paid in full, every month",
+            "Max the card and pay the minimum",
+            "Apply for five cards this week"
+          ],
+          "answer": 0,
+          "explain": "Boring and on time wins."
+        }
+      ]
+    },
+    {
+      "id": "cs-myths",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Score Myths",
+      "summary": "Sort the rumor from the rule.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cs-myths-q1",
+          "type": "sort",
+          "context": "The score measures how you handle borrowed money, not how big your paycheck is.",
+          "prompt": "Myth or fact?",
+          "buckets": [
+            "Myth",
+            "Fact"
+          ],
+          "items": [
+            [
+              "Carrying a balance on purpose raises your score",
+              0
+            ],
+            [
+              "Checking your own score lowers it",
+              0
+            ],
+            [
+              "You must earn a high income to have a high score",
+              0
+            ],
+            [
+              "Paying on time is the heaviest FICO factor",
+              1
+            ],
+            [
+              "High utilization can hurt even when you pay on time",
+              1
+            ],
+            [
+              "A hard inquiry can nudge a score down",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "cs-myths-q2",
+          "type": "multiple_choice",
+          "prompt": "You pay the statement in full every month. Are you “failing” to build credit?",
+          "choices": [
+            "No. On-time, paid-in-full use is a strong record",
+            "Yes. You must leave a balance",
+            "Yes. Interest is what builds the score"
+          ],
+          "answer": 0,
+          "explain": "Interest is a cost, not a strategy."
+        },
+        {
+          "id": "cs-myths-q3",
+          "type": "true_false",
+          "prompt": "A higher income automatically means a higher credit score.",
+          "answer": false,
+          "explain": "Income is not a FICO factor."
+        },
+        {
+          "id": "cs-myths-q4",
+          "type": "multiple_choice",
+          "prompt": "Someone says “close all your cards so you have zero debt and a perfect score.” What is wrong?",
+          "choices": [
+            "Closing cards can shorten history and raise utilization on what remains",
+            "Nothing. Zero cards is the top score",
+            "Cards cannot be closed"
+          ],
+          "answer": 0,
+          "explain": "Zero debt is good. Zero history is a blank page."
+        },
+        {
+          "id": "cs-myths-q5",
+          "type": "number",
+          "prompt": "Two cards, $1,000 limit each. You close one. You still owe $400. What is utilization now?",
+          "answer": 40,
+          "unit": "%",
+          "explain": "The open limit is $1,000. $400 ÷ $1,000 = 40%. Before, it was $400 ÷ $2,000 = 20%."
+        },
+        {
+          "id": "cs-myths-q6",
+          "type": "multiple_choice",
+          "prompt": "Which statement is a fact?",
+          "choices": [
+            "Lower utilization is generally better",
+            "Maxing out a card helps the mix factor",
+            "Late payments vanish after one month"
+          ],
+          "answer": 0,
+          "explain": "Keep the slice you use small."
+        }
+      ]
+    },
+    {
+      "id": "cs-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "cs-trial",
+      "type": "boss",
+      "title": "Den Trial: Credit Scores",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "cs-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "On a FICO score, payment history is about what share?",
+          "choices": [
+            "35%",
+            "10%",
+            "5%"
+          ],
+          "answer": 0,
+          "explain": "It is the largest factor."
+        },
+        {
+          "id": "cs-trial-q2",
+          "type": "number",
+          "prompt": "Balance $600, limit $2,000. What is the utilization?",
+          "answer": 30,
+          "unit": "%",
+          "explain": "$600 ÷ $2,000 = 30%."
+        },
+        {
+          "id": "cs-trial-q3",
+          "type": "true_false",
+          "prompt": "A secured card requires a deposit and can be a first credit account.",
+          "answer": true,
+          "explain": "The deposit backs a small limit."
+        },
+        {
+          "id": "cs-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "Which check is a hard inquiry?",
+          "choices": [
+            "Applying for a new card",
+            "Looking at your own score",
+            "Reading a lesson about credit"
+          ],
+          "answer": 0,
+          "explain": "You applied to borrow. That is the hard kind."
+        }
+      ]
+    }
+  ]
+}
