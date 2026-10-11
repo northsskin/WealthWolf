@@ -1,0 +1,639 @@
+{
+  "id": "helping-family",
+  "section": "home-life",
+  "order": 10,
+  "title": "Helping Family",
+  "description": "A cap you can keep, the difference between a gift and a loan, and the cost of sending money.",
+  "wolfLine": "Help from what remains. The rent is not a gift you can give.",
+  "terms": {},
+  "lessons": [
+    {
+      "id": "hf-sink",
+      "type": "lesson",
+      "title": "Help Without Sinking",
+      "summary": "A gift that spends the rent creates a second emergency.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hf-sink-q1",
+          "type": "info",
+          "title": "Your bills stay funded",
+          "body": "Help is what you can give after rent and the [[emergency fund]] are covered.\n\nRent is **$1,400**. Other bills are **$1,100**. Income is **$3,000**. That leaves **$500** before any gift. A **$700** gift does not fit."
+        },
+        {
+          "id": "hf-sink-q2",
+          "type": "number",
+          "prompt": "Income is $3,000. Rent is $1,400 and other bills are $1,100. What is left before a gift?",
+          "answer": 500,
+          "unit": "$",
+          "explain": "$3,000 − $1,400 − $1,100 = $500."
+        },
+        {
+          "id": "hf-sink-q3",
+          "type": "number",
+          "prompt": "A relative asks for $700. How far past that $500 is the ask?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$700 − $500 = $200."
+        },
+        {
+          "id": "hf-sink-q4",
+          "type": "multiple_choice",
+          "prompt": "Which gift fits this month?",
+          "choices": [
+            "Up to $500, and only if the emergency fund is already intact",
+            "The $700, paid by skipping rent",
+            "The $700, on a new credit card"
+          ],
+          "answer": 0,
+          "explain": "The $500 is the room. Skipping rent or borrowing to donate creates the next crisis."
+        },
+        {
+          "id": "hf-sink-q5",
+          "type": "true_false",
+          "prompt": "If the need is family, the rent can wait.",
+          "answer": false,
+          "explain": "Unpaid rent becomes your emergency. You cannot help for long from a place you are about to lose."
+        }
+      ]
+    },
+    {
+      "id": "hf-kind",
+      "type": "lesson",
+      "format": "call",
+      "title": "Gift or Loan",
+      "summary": "Say which one it is before the money moves.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hf-kind-q1",
+          "type": "number",
+          "context": "A gift is gone on purpose. A loan has an amount and a date, in writing.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "A gift",
+              "subtitle": "You do not expect it back",
+              "lines": [
+                {
+                  "id": "amt",
+                  "label": "You give",
+                  "amount": 2000.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "A written loan",
+              "subtitle": "Ten months",
+              "lines": [
+                {
+                  "id": "amt",
+                  "label": "They repay",
+                  "amount": 2000.0
+                },
+                {
+                  "id": "pay",
+                  "label": "Each month",
+                  "amount": 200.0
+                }
+              ]
+            }
+          ],
+          "prompt": "The loan is $200 a month until $2,000 is repaid. How many months is that?",
+          "answer": 10,
+          "unit": "months",
+          "explain": "$2,000 ÷ $200 = 10 months."
+        },
+        {
+          "id": "hf-kind-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "A gift",
+              "subtitle": "You do not expect it back",
+              "lines": [
+                {
+                  "id": "amt",
+                  "label": "You give",
+                  "amount": 2000.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "A written loan",
+              "subtitle": "Ten months",
+              "lines": [
+                {
+                  "id": "amt",
+                  "label": "They repay",
+                  "amount": 2000.0
+                },
+                {
+                  "id": "pay",
+                  "label": "Each month",
+                  "amount": 200.0
+                }
+              ]
+            }
+          ],
+          "prompt": "You will be hurt if you never see the $2,000 again. Which page matches that?",
+          "choices": [
+            "The written loan",
+            "The gift",
+            "Either. Family erases the difference"
+          ],
+          "answer": 0,
+          "why": [
+            "A loan is the one you expect back.",
+            "A gift is money you have decided to lose.",
+            "The difference is whether you need it back."
+          ],
+          "explain": "If you need it back, it is a loan, and it needs a written amount and a date."
+        },
+        {
+          "id": "hf-kind-q3",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "A gift",
+              "subtitle": "You do not expect it back",
+              "lines": [
+                {
+                  "id": "amt",
+                  "label": "You give",
+                  "amount": 2000.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "A written loan",
+              "subtitle": "Ten months",
+              "lines": [
+                {
+                  "id": "amt",
+                  "label": "They repay",
+                  "amount": 2000.0
+                },
+                {
+                  "id": "pay",
+                  "label": "Each month",
+                  "amount": 200.0
+                }
+              ]
+            }
+          ],
+          "prompt": "You can afford to lose $2,000, and you do not want to collect from your brother. Which page matches?",
+          "choices": [
+            "The gift",
+            "The written loan",
+            "A cosigned bank loan"
+          ],
+          "answer": 0,
+          "explain": "Call it a gift up front. A surprise loan is how holidays get ruined."
+        },
+        {
+          "id": "hf-kind-q4",
+          "type": "true_false",
+          "prompt": "Calling it a gift later, after they miss payments, is the same as agreeing up front.",
+          "answer": false,
+          "explain": "The agreement has to exist when the money moves. A rewrite during a fight is not a plan."
+        },
+        {
+          "id": "hf-kind-q5",
+          "type": "fill_blank",
+          "prompt": "If you need the money back, write down the amount and the ___.",
+          "choices": [
+            "date",
+            "excuse",
+            "party"
+          ],
+          "answer": 0,
+          "explain": "The date is what “back” means."
+        }
+      ]
+    },
+    {
+      "id": "hf-cosign",
+      "type": "lesson",
+      "title": "Co-signing",
+      "summary": "Their loan becomes a loan you can be made to pay.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hf-cosign-q1",
+          "type": "info",
+          "title": "You are not a reference",
+          "body": "A [[co-signer|cosigner]] has to pay if the borrower does not. On this **$12,000** family loan, the payment is **$250** a month.\n\nThree missed payments are **$750** already late. The other **$11,250** can still become yours too. “I only vouched” is not how the note reads."
+        },
+        {
+          "id": "hf-cosign-q2",
+          "type": "number",
+          "prompt": "Three missed payments of $250. How much is already late?",
+          "answer": 750,
+          "unit": "$",
+          "explain": "$250 × 3 = $750."
+        },
+        {
+          "id": "hf-cosign-q3",
+          "type": "number",
+          "prompt": "The loan is $12,000 and $750 is late. How much of the original loan is not in those three payments?",
+          "answer": 11250,
+          "unit": "$",
+          "explain": "$12,000 − $750 = $11,250. You can still be asked for that too."
+        },
+        {
+          "id": "hf-cosign-q4",
+          "type": "multiple_choice",
+          "prompt": "Who can the lender require to pay?",
+          "choices": [
+            "You, the co-signer, for the whole loan if they do not pay",
+            "Only the relative who drives the car",
+            "Nobody, because it was a favor"
+          ],
+          "answer": 0,
+          "explain": "The signature is the promise. A favor does not shrink it."
+        },
+        {
+          "id": "hf-cosign-q5",
+          "type": "true_false",
+          "prompt": "Co-signing is safe if your credit score is higher than theirs.",
+          "answer": false,
+          "explain": "Your good credit is why they asked. It is also what the missed payments can damage."
+        }
+      ]
+    },
+    {
+      "id": "hf-bound",
+      "type": "lesson",
+      "title": "A Boundary",
+      "summary": "Pick the number before the ask, not during it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hf-bound-q1",
+          "type": "info",
+          "title": "A cap you chose on a calm day",
+          "body": "Your cap is **$200** a month. An ask for **$500** is **$300** past it.\n\nThe boundary is the number you can say out loud. It is not a measure of how much you love someone."
+        },
+        {
+          "id": "hf-bound-q2",
+          "type": "number",
+          "prompt": "The ask is $500 and your cap is $200. How far over the cap is the ask?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$500 − $200 = $300."
+        },
+        {
+          "id": "hf-bound-q3",
+          "type": "number",
+          "prompt": "You hold the cap for 6 months. How much have you given?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$200 × 6 = $1,200."
+        },
+        {
+          "id": "hf-bound-q4",
+          "type": "multiple_choice",
+          "prompt": "They ask again for $500, and the reason is urgent. What does a real boundary do?",
+          "choices": [
+            "Stay at $200, and help in non-money ways past that",
+            "Become $500, because urgency deletes a cap",
+            "Become $0, to prove a point"
+          ],
+          "answer": 0,
+          "explain": "Urgency is when a pre-committed number earns its keep."
+        },
+        {
+          "id": "hf-bound-q5",
+          "type": "true_false",
+          "prompt": "A boundary means you never help.",
+          "answer": false,
+          "explain": "It means the help has a size. $200 is still help."
+        }
+      ]
+    },
+    {
+      "id": "hf-aging",
+      "type": "lesson",
+      "title": "Aging Parents",
+      "summary": "Daily help is a wage, and Medicare is not the wallet for it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hf-aging-q1",
+          "type": "info",
+          "title": "Price the hours",
+          "body": "An aide at **$25** an hour, **8** hours a week, is **$200** a week. Across **4** weeks that is **$800** a month.\n\nMedicare generally does not pay for long-term daily help at home. [[Medicaid]] may, if your parent qualifies. Rules differ by state. This is not a benefits decision. It is the price of the hours."
+        },
+        {
+          "id": "hf-aging-q2",
+          "type": "number",
+          "prompt": "What does $25 an hour for 8 hours cost?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$25 × 8 = $200."
+        },
+        {
+          "id": "hf-aging-q3",
+          "type": "number",
+          "prompt": "What is that $200 week across 4 weeks?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "$200 × 4 = $800."
+        },
+        {
+          "id": "hf-aging-q4",
+          "type": "number",
+          "prompt": "What is that help for a year, at $800 a month?",
+          "answer": 9600,
+          "unit": "$",
+          "explain": "$800 × 12 = $9,600."
+        },
+        {
+          "id": "hf-aging-q5",
+          "type": "true_false",
+          "prompt": "Medicare generally pays for long-term daily help at home.",
+          "answer": false,
+          "explain": "It generally does not. Medicaid may, if the person qualifies. Check the state program rather than assuming the hospital coverage continues at home."
+        }
+      ]
+    },
+    {
+      "id": "hf-abroad",
+      "type": "lesson",
+      "format": "document",
+      "title": "Sending Money Abroad",
+      "summary": "The fee is the line you see. The rate is the line people skip.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hf-abroad-q1",
+          "type": "info",
+          "title": "Two costs",
+          "body": "You want **$500** of value to arrive. This service adds a **$15** fee and an exchange rate that costs about **$20** more than a mid-market rate.\n\nYou pay **$535**. The cost of the service is **$35**, not $15."
+        },
+        {
+          "id": "hf-abroad-q2",
+          "type": "number",
+          "doc": {
+            "kind": "receipt",
+            "title": "Money abroad",
+            "lines": [
+              {
+                "id": "xfer",
+                "label": "Value you want them to receive",
+                "amount": 500.0
+              },
+              {
+                "id": "fee",
+                "label": "Company fee",
+                "amount": 15.0
+              },
+              {
+                "id": "fx",
+                "label": "Exchange-rate cost",
+                "amount": 20.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "You pay",
+                "amount": 535.0,
+                "strong": true
+              }
+            ],
+            "note": "The rate cost is how much less a mid-market rate would have taken."
+          },
+          "prompt": "What do you pay on this receipt?",
+          "answer": 535,
+          "unit": "$",
+          "explain": "$500 + $15 + $20 = $535."
+        },
+        {
+          "id": "hf-abroad-q3",
+          "type": "number",
+          "doc": {
+            "kind": "receipt",
+            "title": "Money abroad",
+            "lines": [
+              {
+                "id": "xfer",
+                "label": "Value you want them to receive",
+                "amount": 500.0
+              },
+              {
+                "id": "fee",
+                "label": "Company fee",
+                "amount": 15.0
+              },
+              {
+                "id": "fx",
+                "label": "Exchange-rate cost",
+                "amount": 20.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "You pay",
+                "amount": 535.0,
+                "strong": true
+              }
+            ],
+            "note": "The rate cost is how much less a mid-market rate would have taken."
+          },
+          "prompt": "What is the cost of the service, fee plus the rate?",
+          "answer": 35,
+          "unit": "$",
+          "explain": "$15 + $20 = $35."
+        },
+        {
+          "id": "hf-abroad-q4",
+          "type": "number",
+          "prompt": "You send this same transfer twice. What do the two fees and two rate costs add up to?",
+          "answer": 70,
+          "unit": "$",
+          "explain": "$35 × 2 = $70."
+        },
+        {
+          "id": "hf-abroad-q5",
+          "type": "multiple_choice",
+          "prompt": "A service advertises “$0 fee” and a worse exchange rate. What do you compare?",
+          "choices": [
+            "The amount they receive against what you paid",
+            "The fee line alone",
+            "The logo"
+          ],
+          "answer": 0,
+          "explain": "A $0 fee can hide a $20 rate. The test is what arrives, and what you paid to make it arrive."
+        }
+      ]
+    },
+    {
+      "id": "hf-mask",
+      "type": "lesson",
+      "title": "Your Oxygen Mask",
+      "summary": "You cannot send help from an account that cannot cover you.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hf-mask-q1",
+          "type": "info",
+          "title": "The order",
+          "body": "Rent, food, and a small [[emergency fund]] come before a transfer to family.\n\nThis month those three need **$2,200**. Take-home pay is **$2,600**. The room for help is **$400**. Sending **$600** puts you **$200** underwater."
+        },
+        {
+          "id": "hf-mask-q2",
+          "type": "number",
+          "prompt": "Pay is $2,600 and your own floor is $2,200. How much room is there for help?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$2,600 − $2,200 = $400."
+        },
+        {
+          "id": "hf-mask-q3",
+          "type": "number",
+          "prompt": "You send $600 anyway. How much short of your own floor are you?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$600 − $400 = $200."
+        },
+        {
+          "id": "hf-mask-q4",
+          "type": "multiple_choice",
+          "prompt": "Which order matches the oxygen mask?",
+          "choices": [
+            "Your floor first, then help from what remains",
+            "Help first, then hope the rent can wait",
+            "Split the shortfall across two credit cards"
+          ],
+          "answer": 0,
+          "explain": "The mask line is practical. A person who misses rent becomes the next person who needs help."
+        },
+        {
+          "id": "hf-mask-q5",
+          "type": "true_false",
+          "prompt": "Sending the $600 is fine if you plan to catch up next month.",
+          "answer": false,
+          "explain": "Next month has its own floor. Starting it $200 behind is how the gap compounds."
+        }
+      ]
+    },
+    {
+      "id": "hf-lina",
+      "type": "lesson",
+      "format": "story",
+      "title": "Lina and Her Mom",
+      "summary": "The number she can give is $200. Love does not add the other $100.",
+      "xp": 10,
+      "story": {
+        "title": "Lina and her mom",
+        "character": "Lina, 29",
+        "body": "Lina is 29. Take-home pay is **$3,200**. Rent is **$1,400**. Her other bills are **$1,600**. That is **$3,000** before she helps anyone, so **$200** is what the month has left.\n\nHer mom needs **$300**. Sending it would leave Lina **$100** short of her own bills.\n\nShe tells her mom the truth: she can do **$200**, which is the whole remainder, or less if she wants any cushion. She does not put the last **$100** on a card."
+      },
+      "steps": [
+        {
+          "id": "hf-lina-q1",
+          "type": "number",
+          "prompt": "What do Lina’s rent and other bills add up to?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$1,400 + $1,600 = $3,000."
+        },
+        {
+          "id": "hf-lina-q2",
+          "type": "number",
+          "prompt": "Take-home pay is $3,200. How much is left before any help?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$3,200 − $3,000 = $200."
+        },
+        {
+          "id": "hf-lina-q3",
+          "type": "number",
+          "prompt": "If she sends $300, how short of her own bills is she?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$300 − $200 = $100."
+        },
+        {
+          "id": "hf-lina-q4",
+          "type": "multiple_choice",
+          "prompt": "Which amount keeps her bills paid?",
+          "choices": [
+            "$200 or less",
+            "$300",
+            "$300, plus a $100 card charge she will “figure out”"
+          ],
+          "answer": 0,
+          "explain": "The month has $200 left. $300 spends bills she has already counted."
+        },
+        {
+          "id": "hf-lina-q5",
+          "type": "true_false",
+          "prompt": "Because the gap is only $100, the card is a harmless bridge.",
+          "answer": false,
+          "explain": "The $100 is a debt, and next month’s $200 of room has to cover it before she can help again."
+        }
+      ]
+    },
+    {
+      "id": "hf-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "hf-trial",
+      "type": "boss",
+      "title": "Den Trial: Helping Family",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "hf-trial-q1",
+          "type": "number",
+          "prompt": "Pay is $2,800. Your floor is $2,400. How much can you give without cutting the floor?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$2,800 − $2,400 = $400."
+        },
+        {
+          "id": "hf-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "You co-sign a $9,000 loan. They stop paying. Who can be collected from?",
+          "choices": [
+            "You",
+            "Only the person who spent the money",
+            "The bank’s customer service line, and nobody else"
+          ],
+          "answer": 0,
+          "explain": "A co-signer is responsible for the loan."
+        },
+        {
+          "id": "hf-trial-q3",
+          "type": "number",
+          "prompt": "An aide is $20 an hour for 10 hours. What is the week?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$20 × 10 = $200."
+        },
+        {
+          "id": "hf-trial-q4",
+          "type": "true_false",
+          "prompt": "A “$0 fee” transfer cannot cost you anything.",
+          "answer": false,
+          "explain": "The exchange rate can still take a cut. Compare what arrives with what you paid."
+        }
+      ]
+    }
+  ]
+}

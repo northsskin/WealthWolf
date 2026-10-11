@@ -1,0 +1,800 @@
+{
+  "id": "moving-roommates",
+  "section": "home-life",
+  "order": 2,
+  "title": "Moving & Roommates",
+  "description": "The real cost of a move, a fair split, and a plan for the day someone leaves.",
+  "wolfLine": "Write the split down before you share a fridge.",
+  "terms": {
+    "roommate-agreement": {
+      "term": "Roommate agreement",
+      "definition": "A written note of who pays what, who gets which room, and what happens if someone leaves. It sits next to the lease. It does not replace it.",
+      "example": "Rent is $1,800. The larger room pays $1,200. The smaller room pays $600. Electric and internet are split in half."
+    }
+  },
+  "lessons": [
+    {
+      "id": "mv-costs",
+      "type": "lesson",
+      "format": "document",
+      "title": "What Moving Costs",
+      "summary": "The truck is the small line.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mv-costs-q1",
+          "type": "info",
+          "title": "Add the lines",
+          "body": "People remember the truck and forget the deposit. On this move the truck is **$180**. The first month and the [[security deposit]] are **$1,600** each."
+        },
+        {
+          "id": "mv-costs-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Moving costs",
+            "lines": [
+              {
+                "id": "truck",
+                "label": "Truck rental",
+                "amount": 180.0
+              },
+              {
+                "id": "boxes",
+                "label": "Boxes and supplies",
+                "amount": 70.0
+              },
+              {
+                "id": "rent",
+                "label": "First month’s rent",
+                "amount": 1600.0
+              },
+              {
+                "id": "dep",
+                "label": "Security deposit",
+                "amount": 1600.0
+              },
+              {
+                "id": "util",
+                "label": "Utility start-up",
+                "amount": 60.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Cash to move",
+                "amount": 3510.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "What is the cash to move on this page?",
+          "answer": 3510,
+          "unit": "$",
+          "explain": "$180 + $70 + $1,600 + $1,600 + $60 = $3,510."
+        },
+        {
+          "id": "mv-costs-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Moving costs",
+            "lines": [
+              {
+                "id": "truck",
+                "label": "Truck rental",
+                "amount": 180.0
+              },
+              {
+                "id": "boxes",
+                "label": "Boxes and supplies",
+                "amount": 70.0
+              },
+              {
+                "id": "rent",
+                "label": "First month’s rent",
+                "amount": 1600.0
+              },
+              {
+                "id": "dep",
+                "label": "Security deposit",
+                "amount": 1600.0
+              },
+              {
+                "id": "util",
+                "label": "Utility start-up",
+                "amount": 60.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Cash to move",
+                "amount": 3510.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "How much of that $3,510 is the first month plus the deposit?",
+          "answer": 3200,
+          "unit": "$",
+          "explain": "$1,600 + $1,600 = $3,200."
+        },
+        {
+          "id": "mv-costs-q4",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Moving costs",
+            "lines": [
+              {
+                "id": "truck",
+                "label": "Truck rental",
+                "amount": 180.0
+              },
+              {
+                "id": "boxes",
+                "label": "Boxes and supplies",
+                "amount": 70.0
+              },
+              {
+                "id": "rent",
+                "label": "First month’s rent",
+                "amount": 1600.0
+              },
+              {
+                "id": "dep",
+                "label": "Security deposit",
+                "amount": 1600.0
+              },
+              {
+                "id": "util",
+                "label": "Utility start-up",
+                "amount": 60.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Cash to move",
+                "amount": 3510.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "How much is the truck, the boxes, and the utility start, added together?",
+          "answer": 310,
+          "unit": "$",
+          "explain": "$180 + $70 + $60 = $310."
+        },
+        {
+          "id": "mv-costs-q5",
+          "type": "true_false",
+          "prompt": "The security deposit on this page is a cost you have spent forever.",
+          "answer": false,
+          "explain": "It is held. If you leave the place undamaged and paid up, it should come back."
+        }
+      ]
+    },
+    {
+      "id": "mv-rooms",
+      "type": "lesson",
+      "title": "Split by Room Size",
+      "summary": "The bigger room pays the bigger share.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mv-rooms-q1",
+          "type": "info",
+          "title": "Use the square feet",
+          "body": "The rent is **$1,800**. One room is **400** square feet. The other is **200**. Together that is **600**.\n\nThe larger room is 400 ÷ 600 of the rent. The smaller is 200 ÷ 600."
+        },
+        {
+          "id": "mv-rooms-q2",
+          "type": "number",
+          "prompt": "What does the 400-square-foot room pay out of $1,800?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "400 ÷ 600 = 2/3. $1,800 × 2/3 = $1,200."
+        },
+        {
+          "id": "mv-rooms-q3",
+          "type": "number",
+          "prompt": "What does the 200-square-foot room pay out of $1,800?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "200 ÷ 600 = 1/3. $1,800 × 1/3 = $600."
+        },
+        {
+          "id": "mv-rooms-q4",
+          "type": "number",
+          "prompt": "Do those two shares add back to the full rent?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$1,200 + $600 = $1,800."
+        },
+        {
+          "id": "mv-rooms-q5",
+          "type": "true_false",
+          "prompt": "Splitting every rent bill in half is fair when one room is twice the other.",
+          "answer": false,
+          "explain": "Half and half ignores the size. Here the fair split is $1,200 and $600."
+        }
+      ]
+    },
+    {
+      "id": "mv-bills",
+      "type": "lesson",
+      "title": "Shared Bills",
+      "summary": "Write the split down while you still like each other.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mv-bills-q1",
+          "type": "info",
+          "title": "Rent is not the only bill",
+          "body": "Electric is **$90**. Internet is **$60**. Together that is **$150**.\n\nA [[roommate agreement]] says who pays which share, and when. The [[lease]] still makes each signer responsible to the landlord."
+        },
+        {
+          "id": "mv-bills-q2",
+          "type": "number",
+          "prompt": "Electric is $90 and internet is $60. What is the shared-bill total?",
+          "answer": 150,
+          "unit": "$",
+          "explain": "$90 + $60 = $150."
+        },
+        {
+          "id": "mv-bills-q3",
+          "type": "number",
+          "prompt": "Two roommates split that $150 in half. What does each pay?",
+          "answer": 75,
+          "unit": "$",
+          "explain": "$150 ÷ 2 = $75."
+        },
+        {
+          "id": "mv-bills-q4",
+          "type": "number",
+          "prompt": "If they split the $150 the way they split the rooms, 2/3 and 1/3, what does the larger room pay?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$150 × 2/3 = $100."
+        },
+        {
+          "id": "mv-bills-q5",
+          "type": "multiple_choice",
+          "prompt": "The landlord was not in the room when you agreed. Who can the landlord still ask for the full rent?",
+          "choices": [
+            "Anyone who signed the lease",
+            "Only the roommate who took the bigger room",
+            "Nobody, once you have a roommate agreement"
+          ],
+          "answer": 0,
+          "explain": "The agreement splits the bill between you. The lease is what the landlord enforces."
+        }
+      ]
+    },
+    {
+      "id": "mv-leaves",
+      "type": "lesson",
+      "title": "If Someone Leaves",
+      "summary": "The landlord does not take a smaller check.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mv-leaves-q1",
+          "type": "info",
+          "title": "The empty room is still on the lease",
+          "body": "Rent is **$1,800**, split **$900** and **$900**. One roommate moves out. The lease still says **$1,800** until a new roommate is approved and added.\n\nYou can chase your former roommate for their share. The landlord can chase you for the whole rent."
+        },
+        {
+          "id": "mv-leaves-q2",
+          "type": "number",
+          "prompt": "You were paying $900 of an $1,800 rent. Your roommate leaves. What does the landlord still expect this month?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "The lease amount does not shrink. It is still $1,800."
+        },
+        {
+          "id": "mv-leaves-q3",
+          "type": "number",
+          "prompt": "How much more is that than the $900 you had been paying?",
+          "answer": 900,
+          "unit": "$",
+          "explain": "$1,800 − $900 = $900."
+        },
+        {
+          "id": "mv-leaves-q4",
+          "type": "multiple_choice",
+          "prompt": "What belongs in the roommate agreement for this moment?",
+          "choices": [
+            "Who pays until a new roommate is approved, and how you find one",
+            "A note that the landlord will cut the rent in half",
+            "Nothing. A handshake is enough"
+          ],
+          "answer": 0,
+          "explain": "Write the plan before anyone is angry."
+        },
+        {
+          "id": "mv-leaves-q5",
+          "type": "true_false",
+          "prompt": "A roommate agreement lets you pay only your old share after the other person moves out.",
+          "answer": false,
+          "explain": "It can say your roommate still owes you. It cannot force the landlord to accept half the rent."
+        }
+      ]
+    },
+    {
+      "id": "mv-utils",
+      "type": "lesson",
+      "title": "Utilities",
+      "summary": "Start the new ones before you end the old ones.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mv-utils-q1",
+          "type": "info",
+          "title": "A week in the dark is expensive",
+          "body": "The start-up charge on this account is **$60**. A typical electric bill after that is **$90**.\n\nTurn the new place on before move-in day. Turn the old place off the day you return the keys, not a month later."
+        },
+        {
+          "id": "mv-utils-q2",
+          "type": "number",
+          "prompt": "The first month is the $60 start-up plus a $90 electric bill. What is that first utility month?",
+          "answer": 150,
+          "unit": "$",
+          "explain": "$60 + $90 = $150."
+        },
+        {
+          "id": "mv-utils-q3",
+          "type": "number",
+          "prompt": "After the start-up, you budget $90 a month. What is electric for a 12-month lease, counting the start-up once?",
+          "answer": 1140,
+          "unit": "$",
+          "explain": "$90 × 12 + $60 = $1,080 + $60 = $1,140."
+        },
+        {
+          "id": "mv-utils-q4",
+          "type": "multiple_choice",
+          "prompt": "You leave the old electric on for an extra month at $90. What did that month buy?",
+          "choices": [
+            "Power for an apartment you no longer use",
+            "A discount at the new place",
+            "A required deposit refund"
+          ],
+          "answer": 0,
+          "explain": "Schedule the stop date. An empty apartment still bills you."
+        },
+        {
+          "id": "mv-utils-q5",
+          "type": "true_false",
+          "prompt": "The internet account can stay in a roommate’s name after they move out, with no risk to them.",
+          "answer": false,
+          "explain": "The name on the account is the person the company will bill. Put the account with someone who still lives there."
+        }
+      ]
+    },
+    {
+      "id": "mv-compare",
+      "type": "lesson",
+      "format": "call",
+      "title": "Two Apartments",
+      "summary": "Compare the month, not the rent line.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mv-compare-q1",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Apartment A",
+              "subtitle": "Nothing included",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Rent",
+                  "amount": 1500.0
+                },
+                {
+                  "id": "util",
+                  "label": "Utilities, your estimate",
+                  "amount": 180.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 1680.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Apartment B",
+              "subtitle": "Heat and water included",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Rent",
+                  "amount": 1750.0
+                },
+                {
+                  "id": "net",
+                  "label": "Internet, the rest is included",
+                  "amount": 60.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 1810.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "What is Apartment A per month, rent plus utilities?",
+          "answer": 1680,
+          "unit": "$",
+          "explain": "$1,500 + $180 = $1,680."
+        },
+        {
+          "id": "mv-compare-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Apartment A",
+              "subtitle": "Nothing included",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Rent",
+                  "amount": 1500.0
+                },
+                {
+                  "id": "util",
+                  "label": "Utilities, your estimate",
+                  "amount": 180.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 1680.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Apartment B",
+              "subtitle": "Heat and water included",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Rent",
+                  "amount": 1750.0
+                },
+                {
+                  "id": "net",
+                  "label": "Internet, the rest is included",
+                  "amount": 60.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 1810.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "What is Apartment B per month, rent plus the internet you still pay?",
+          "answer": 1810,
+          "unit": "$",
+          "explain": "$1,750 + $60 = $1,810."
+        },
+        {
+          "id": "mv-compare-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Apartment A",
+              "subtitle": "Nothing included",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Rent",
+                  "amount": 1500.0
+                },
+                {
+                  "id": "util",
+                  "label": "Utilities, your estimate",
+                  "amount": 180.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 1680.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Apartment B",
+              "subtitle": "Heat and water included",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Rent",
+                  "amount": 1750.0
+                },
+                {
+                  "id": "net",
+                  "label": "Internet, the rest is included",
+                  "amount": 60.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 1810.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "How much less is A than B, once both pages are included?",
+          "answer": 130,
+          "unit": "$",
+          "explain": "$1,810 − $1,680 = $130."
+        },
+        {
+          "id": "mv-compare-q4",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Apartment A",
+              "subtitle": "Nothing included",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Rent",
+                  "amount": 1500.0
+                },
+                {
+                  "id": "util",
+                  "label": "Utilities, your estimate",
+                  "amount": 180.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 1680.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Apartment B",
+              "subtitle": "Heat and water included",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Rent",
+                  "amount": 1750.0
+                },
+                {
+                  "id": "net",
+                  "label": "Internet, the rest is included",
+                  "amount": 60.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 1810.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "You care only about the monthly cash. Which page wins?",
+          "choices": [
+            "Apartment A",
+            "Apartment B",
+            "They cost the same"
+          ],
+          "answer": 0,
+          "why": [
+            "$1,680 is the lower full month.",
+            "B’s rent looks higher because heat and water are inside it, and the total is still higher.",
+            "The totals differ by $130."
+          ],
+          "explain": "A is $1,680. B is $1,810. A is $130 less."
+        },
+        {
+          "id": "mv-compare-q5",
+          "type": "true_false",
+          "prompt": "The lower rent line is always the cheaper apartment.",
+          "answer": false,
+          "explain": "B’s rent is higher and its full month is higher here. On another pair, a higher rent can still be cheaper once utilities are added."
+        }
+      ]
+    },
+    {
+      "id": "mv-ben",
+      "type": "lesson",
+      "format": "story",
+      "title": "Ben and Ola",
+      "summary": "The rooms are not equal, so the rent is not either.",
+      "xp": 10,
+      "story": {
+        "title": "Ben and Ola",
+        "character": "Ben, 23",
+        "body": "Ben is 23 and works in a warehouse. Ola is 24 and teaches. Their rent is **$1,800**. Ben’s room is **200** square feet. Ola’s is **400**.\n\nThey split the rent by size: **$600** for Ben and **$1,200** for Ola. Electric is **$90** and internet is **$60**, and those they split in half.\n\nThey write a [[roommate agreement]] the same week they sign the [[lease]]."
+      },
+      "steps": [
+        {
+          "id": "mv-ben-q1",
+          "type": "number",
+          "prompt": "What is Ben’s rent share on the 200-square-foot room?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "200 ÷ 600 = 1/3. $1,800 × 1/3 = $600."
+        },
+        {
+          "id": "mv-ben-q2",
+          "type": "number",
+          "prompt": "What is Ola’s rent share on the 400-square-foot room?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "400 ÷ 600 = 2/3. $1,800 × 2/3 = $1,200."
+        },
+        {
+          "id": "mv-ben-q3",
+          "type": "number",
+          "prompt": "Electric and internet are $150. Split in half, what does Ben add?",
+          "answer": 75,
+          "unit": "$",
+          "explain": "$90 + $60 = $150. $150 ÷ 2 = $75."
+        },
+        {
+          "id": "mv-ben-q4",
+          "type": "number",
+          "prompt": "What does Ben pay in a normal month, rent share plus his half of the bills?",
+          "answer": 675,
+          "unit": "$",
+          "explain": "$600 + $75 = $675."
+        },
+        {
+          "id": "mv-ben-q5",
+          "type": "number",
+          "prompt": "What does Ola pay in that same month?",
+          "answer": 1275,
+          "unit": "$",
+          "explain": "$1,200 + $75 = $1,275. Together: $675 + $1,275 = $1,950, which is the $1,800 rent plus the $150 bills."
+        }
+      ]
+    },
+    {
+      "id": "mv-checklist",
+      "type": "lesson",
+      "title": "Moving Checklist",
+      "summary": "Do them in an order that does not leave you paying two rents.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mv-checklist-q1",
+          "type": "info",
+          "title": "Four beats",
+          "body": "Notice, then the truck, then the utilities, then the photos and the keys.\n\nSkipping the notice can cost a fee. Skipping the photos can cost the [[security deposit]]."
+        },
+        {
+          "id": "mv-checklist-q2",
+          "type": "order",
+          "prompt": "Put the move in order.",
+          "items": [
+            "Give written notice on time",
+            "Book the truck and the helpers",
+            "Start the new utilities and stop the old ones",
+            "Photograph every room and return the keys"
+          ],
+          "explain": "Notice protects you from a penalty. The truck and the power make the day work. The photos are the last word on the deposit."
+        },
+        {
+          "id": "mv-checklist-q3",
+          "type": "multiple_choice",
+          "prompt": "Why do the photos come after the place is empty?",
+          "choices": [
+            "They show the condition you actually left",
+            "The landlord prefers a furnished photo",
+            "Photos replace the written notice"
+          ],
+          "answer": 0,
+          "explain": "The deposit argument is about the day you hand over the keys."
+        },
+        {
+          "id": "mv-checklist-q4",
+          "type": "true_false",
+          "prompt": "You should stop the old electric a month before you move out, to save money.",
+          "answer": false,
+          "explain": "You still live there. Stop it the day you return the keys."
+        },
+        {
+          "id": "mv-checklist-q5",
+          "type": "fill_blank",
+          "prompt": "The paper that tells the landlord you are leaving is written ___.",
+          "choices": [
+            "notice",
+            "a new lease",
+            "a gift"
+          ],
+          "answer": 0,
+          "explain": "Notice, on time, in writing."
+        }
+      ]
+    },
+    {
+      "id": "mv-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "mv-trial",
+      "type": "boss",
+      "title": "Den Trial: Moving & Roommates",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "mv-trial-q1",
+          "type": "number",
+          "prompt": "A move has a $200 truck, a $1,500 deposit, and $1,500 of first month’s rent. What is that trio?",
+          "answer": 3200,
+          "unit": "$",
+          "explain": "$200 + $1,500 + $1,500 = $3,200."
+        },
+        {
+          "id": "mv-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "One roommate moves out. The lease rent is $2,000. What can the landlord still require?",
+          "choices": [
+            "The full $2,000",
+            "Only the remaining roommate’s old half",
+            "Nothing until a new roommate signs"
+          ],
+          "answer": 0,
+          "explain": "The lease amount stays until the lease changes."
+        },
+        {
+          "id": "mv-trial-q3",
+          "type": "number",
+          "prompt": "Rooms are 300 and 100 square feet. Rent is $2,000. What does the 300-square-foot room pay?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "300 ÷ 400 = 3/4. $2,000 × 3/4 = $1,500."
+        },
+        {
+          "id": "mv-trial-q4",
+          "type": "true_false",
+          "prompt": "A roommate agreement replaces the lease.",
+          "answer": false,
+          "explain": "It splits duties between roommates. The landlord still uses the lease."
+        }
+      ]
+    }
+  ]
+}

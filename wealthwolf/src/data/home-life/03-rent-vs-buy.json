@@ -1,0 +1,747 @@
+{
+  "id": "rent-vs-buy",
+  "section": "home-life",
+  "order": 3,
+  "title": "Rent vs. Buy",
+  "description": "The full cost of owning, the 5-year sketch, and the proverb that only counts rent.",
+  "wolfLine": "Rent buys the month. Owning buys a stake, and a list of bills.",
+  "terms": {},
+  "lessons": [
+    {
+      "id": "rb-beyond",
+      "type": "lesson",
+      "title": "More Than the Mortgage",
+      "summary": "The loan payment is one line of owning.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rb-beyond-q1",
+          "type": "info",
+          "title": "Four monthly lines",
+          "body": "On this house the [[mortgage]] payment is **$1,400**. Property tax is **$3,000** a year, which is **$250** a month. Insurance is **$1,200** a year, which is **$100** a month. A 1% repair sketch on a **$300,000** home is **$3,000** a year, or **$250** a month."
+        },
+        {
+          "id": "rb-beyond-q2",
+          "type": "number",
+          "prompt": "What is the tax bill per month if the year is $3,000?",
+          "answer": 250,
+          "unit": "$",
+          "explain": "$3,000 ÷ 12 = $250."
+        },
+        {
+          "id": "rb-beyond-q3",
+          "type": "number",
+          "prompt": "What is the insurance per month if the year is $1,200?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$1,200 ÷ 12 = $100."
+        },
+        {
+          "id": "rb-beyond-q4",
+          "type": "number",
+          "prompt": "What is 1% of a $300,000 home, per year, as a repair sketch?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$300,000 × 0.01 = $3,000."
+        },
+        {
+          "id": "rb-beyond-q5",
+          "type": "number",
+          "prompt": "Add the mortgage, the monthly tax, the monthly insurance, and a $250 repair set-aside. What is the month?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$1,400 + $250 + $100 + $250 = $2,000."
+        }
+      ]
+    },
+    {
+      "id": "rb-five",
+      "type": "lesson",
+      "title": "The 5-Year Sketch",
+      "summary": "Buying has a cover charge. A short stay may not earn it back.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rb-five-q1",
+          "type": "info",
+          "title": "A rule of thumb",
+          "body": "People often say: if you will move within about five years, renting can win, because buying and selling cost real money up front.\n\nIt is a sketch. A hot market or a cheap rental can flip it. On this purchase, closing costs are **$9,000**."
+        },
+        {
+          "id": "rb-five-q2",
+          "type": "number",
+          "prompt": "You will stay 3 years. Closing costs are $9,000. How much is that per year of the stay?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$9,000 ÷ 3 = $3,000 a year."
+        },
+        {
+          "id": "rb-five-q3",
+          "type": "number",
+          "prompt": "How much is that $9,000 per month over those 36 months?",
+          "answer": 250,
+          "unit": "$",
+          "explain": "$9,000 ÷ 36 = $250 a month."
+        },
+        {
+          "id": "rb-five-q4",
+          "type": "multiple_choice",
+          "prompt": "You know the job moves you in two years. What does the 5-year sketch suggest?",
+          "choices": [
+            "Lean toward renting, and run the closing costs before you buy",
+            "Buy, because a mortgage is always cheaper than rent",
+            "Ignore closing costs, since you get them back at the sale"
+          ],
+          "answer": 0,
+          "explain": "Two years is inside the window where the cover charge is hard to earn back."
+        },
+        {
+          "id": "rb-five-q5",
+          "type": "true_false",
+          "prompt": "The 5-year sketch is a law that forbids buying if you might move.",
+          "answer": false,
+          "explain": "It is a rule of thumb. The costs, not the slogan, decide it."
+        }
+      ]
+    },
+    {
+      "id": "rb-opp",
+      "type": "lesson",
+      "title": "The Down Payment’s Other Job",
+      "summary": "Cash in the house cannot also be your cushion.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rb-opp-q1",
+          "type": "info",
+          "title": "A dollar has one seat",
+          "body": "A [[down payment]] of **$40,000** is no longer an emergency fund, and it is no longer earning interest in savings.\n\nAt an example rate of **4%** a year, that cash would earn **$1,600**. The 4% is an example, not a promise. The [[opportunity cost]] is what you give up by using the money here."
+        },
+        {
+          "id": "rb-opp-q2",
+          "type": "number",
+          "prompt": "What is 4% of a $40,000 down payment for one year, at that example rate?",
+          "answer": 1600,
+          "unit": "$",
+          "explain": "$40,000 × 0.04 = $1,600."
+        },
+        {
+          "id": "rb-opp-q3",
+          "type": "number",
+          "prompt": "What is 20% down on a $200,000 home?",
+          "answer": 40000,
+          "unit": "$",
+          "explain": "$200,000 × 0.20 = $40,000."
+        },
+        {
+          "id": "rb-opp-q4",
+          "type": "multiple_choice",
+          "prompt": "You have $40,000 and no other savings. You put all of it down. What did you give up?",
+          "choices": [
+            "A cash cushion for a job loss or a repair",
+            "The right to live in the house",
+            "The mortgage payment"
+          ],
+          "answer": 0,
+          "explain": "The house got the only cash you had. A broken furnace or a lost job now has nothing to draw on."
+        },
+        {
+          "id": "rb-opp-q5",
+          "type": "true_false",
+          "prompt": "A down payment is free money because it lowers the loan.",
+          "answer": false,
+          "explain": "It lowers the loan. It is still your cash, and it cannot do a second job at the same time."
+        }
+      ]
+    },
+    {
+      "id": "rb-flex",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Flexibility or Equity",
+      "summary": "Renting buys an exit. Buying buys a stake.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rb-flex-q1",
+          "type": "info",
+          "title": "Two different products",
+          "body": "Rent is a service with an end date. A home you own is an asset you must also maintain.\n\nNeither one is morally better. They fit different years of a life."
+        },
+        {
+          "id": "rb-flex-q2",
+          "type": "sort",
+          "prompt": "Sort each fact.",
+          "buckets": [
+            "Renting",
+            "Buying"
+          ],
+          "items": [
+            [
+              "You can leave when the lease ends",
+              0
+            ],
+            [
+              "You are building a stake in the home",
+              1
+            ],
+            [
+              "A job in another city is easier to take",
+              0
+            ],
+            [
+              "You pay when the roof fails",
+              1
+            ]
+          ],
+          "explain": "Renting keeps the exit open. Buying builds a stake and hands you the repairs."
+        },
+        {
+          "id": "rb-flex-q3",
+          "type": "multiple_choice",
+          "prompt": "You want the freedom to move for work next year. Which fact matters most?",
+          "choices": [
+            "You can leave when the lease ends",
+            "You are building a stake in the home",
+            "You pay when the roof fails"
+          ],
+          "answer": 0,
+          "explain": "A one-year plan fits an exit more than a stake."
+        },
+        {
+          "id": "rb-flex-q4",
+          "type": "true_false",
+          "prompt": "Buying means you can move next month with no extra cost.",
+          "answer": false,
+          "explain": "Selling or renting the place out takes time and money. The lease is the easier exit."
+        },
+        {
+          "id": "rb-flex-q5",
+          "type": "fill_blank",
+          "prompt": "The stake you build by paying down a home is often called ___.",
+          "choices": [
+            "equity",
+            "a fee",
+            "a premium"
+          ],
+          "answer": 0,
+          "explain": "Equity is what you own: the value minus what you still owe."
+        }
+      ]
+    },
+    {
+      "id": "rb-call",
+      "type": "lesson",
+      "format": "call",
+      "title": "Two Pages, One Month",
+      "summary": "Put the rent next to the full cost of owning.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rb-call-q1",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Keep renting",
+              "subtitle": "One line",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Monthly rent",
+                  "amount": 1800.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Buy this house",
+              "subtitle": "Four lines",
+              "lines": [
+                {
+                  "id": "mort",
+                  "label": "Mortgage payment",
+                  "amount": 1400.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Property tax",
+                  "amount": 250.0
+                },
+                {
+                  "id": "ins",
+                  "label": "Home insurance",
+                  "amount": 100.0
+                },
+                {
+                  "id": "fix",
+                  "label": "Repair set-aside",
+                  "amount": 250.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 2000.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "What is a year of the $1,800 rent?",
+          "answer": 21600,
+          "unit": "$",
+          "explain": "$1,800 × 12 = $21,600."
+        },
+        {
+          "id": "rb-call-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Keep renting",
+              "subtitle": "One line",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Monthly rent",
+                  "amount": 1800.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Buy this house",
+              "subtitle": "Four lines",
+              "lines": [
+                {
+                  "id": "mort",
+                  "label": "Mortgage payment",
+                  "amount": 1400.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Property tax",
+                  "amount": 250.0
+                },
+                {
+                  "id": "ins",
+                  "label": "Home insurance",
+                  "amount": 100.0
+                },
+                {
+                  "id": "fix",
+                  "label": "Repair set-aside",
+                  "amount": 250.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 2000.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "What is the buy page per month?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$1,400 + $250 + $100 + $250 = $2,000."
+        },
+        {
+          "id": "rb-call-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Keep renting",
+              "subtitle": "One line",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Monthly rent",
+                  "amount": 1800.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Buy this house",
+              "subtitle": "Four lines",
+              "lines": [
+                {
+                  "id": "mort",
+                  "label": "Mortgage payment",
+                  "amount": 1400.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Property tax",
+                  "amount": 250.0
+                },
+                {
+                  "id": "ins",
+                  "label": "Home insurance",
+                  "amount": 100.0
+                },
+                {
+                  "id": "fix",
+                  "label": "Repair set-aside",
+                  "amount": 250.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 2000.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "What is a year of that $2,000 owning cost?",
+          "answer": 24000,
+          "unit": "$",
+          "explain": "$2,000 × 12 = $24,000."
+        },
+        {
+          "id": "rb-call-q4",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Keep renting",
+              "subtitle": "One line",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Monthly rent",
+                  "amount": 1800.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Buy this house",
+              "subtitle": "Four lines",
+              "lines": [
+                {
+                  "id": "mort",
+                  "label": "Mortgage payment",
+                  "amount": 1400.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Property tax",
+                  "amount": 250.0
+                },
+                {
+                  "id": "ins",
+                  "label": "Home insurance",
+                  "amount": 100.0
+                },
+                {
+                  "id": "fix",
+                  "label": "Repair set-aside",
+                  "amount": 250.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 2000.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "How much more is owning than renting, per month, on these two pages?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$2,000 − $1,800 = $200."
+        },
+        {
+          "id": "rb-call-q5",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Keep renting",
+              "subtitle": "One line",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Monthly rent",
+                  "amount": 1800.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Buy this house",
+              "subtitle": "Four lines",
+              "lines": [
+                {
+                  "id": "mort",
+                  "label": "Mortgage payment",
+                  "amount": 1400.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Property tax",
+                  "amount": 250.0
+                },
+                {
+                  "id": "ins",
+                  "label": "Home insurance",
+                  "amount": 100.0
+                },
+                {
+                  "id": "fix",
+                  "label": "Repair set-aside",
+                  "amount": 250.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Monthly",
+                  "amount": 2000.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "These two pages, and only these two pages. Which costs less each month?",
+          "choices": [
+            "Renting, at $1,800",
+            "Owning, at $2,000",
+            "They match"
+          ],
+          "answer": 0,
+          "explain": "Rent is $200 less on this pair. Owning may still win over a long stay because some of the mortgage builds equity. This month’s cash does not show that."
+        }
+      ]
+    },
+    {
+      "id": "rb-wins",
+      "type": "lesson",
+      "title": "When Renting Wins",
+      "summary": "A short stay, a thin cushion, or a job that moves.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rb-wins-q1",
+          "type": "info",
+          "title": "Three good reasons",
+          "body": "Renting fits when you will not stay long, when the down payment would empty your savings, or when the job can send you to another city.\n\nOn the pair you just saw, rent is **$1,800** and the full owning cost is **$2,000**."
+        },
+        {
+          "id": "rb-wins-q2",
+          "type": "multiple_choice",
+          "prompt": "Your emergency fund would have to become the down payment. What is the careful read?",
+          "choices": [
+            "Rent until the down payment is extra money, not your only money",
+            "Buy, and hope nothing breaks",
+            "Borrow the emergency fund from a credit card"
+          ],
+          "answer": 0,
+          "explain": "A house with no cash behind it is a fragile win."
+        },
+        {
+          "id": "rb-wins-q3",
+          "type": "number",
+          "prompt": "Owning is $200 more per month than renting. Over 12 months, how much more cash is that?",
+          "answer": 2400,
+          "unit": "$",
+          "explain": "$200 × 12 = $2,400."
+        },
+        {
+          "id": "rb-wins-q4",
+          "type": "true_false",
+          "prompt": "Renting is the better cash-flow choice on these pages for a one-year stay.",
+          "answer": true,
+          "explain": "You pay $1,800 instead of $2,000, and you do not pay closing costs for a year you will not keep."
+        },
+        {
+          "id": "rb-wins-q5",
+          "type": "fill_blank",
+          "prompt": "If the down payment is your only savings, buying spends your ___.",
+          "choices": [
+            "cushion",
+            "rent",
+            "credit score"
+          ],
+          "answer": 0,
+          "explain": "The cushion is what a job loss or a repair draws on. Do not spend the last of it to get the keys."
+        }
+      ]
+    },
+    {
+      "id": "rb-myth",
+      "type": "lesson",
+      "title": "“Throwing Money Away”",
+      "summary": "Rent buys a home for the month. Owning wastes money too.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rb-myth-q1",
+          "type": "info",
+          "title": "Count the money that does not build a stake",
+          "body": "Rent of **$1,800** buys the month. It does not build equity. That part of the proverb is true.\n\nIt skips the owner’s leaks. In this sketch the **$1,400** mortgage sends **$1,000** to [[interest]] and **$400** to [[principal]]. Tax **$250**, insurance **$100**, and repairs **$250** build no equity either."
+        },
+        {
+          "id": "rb-myth-q2",
+          "type": "number",
+          "prompt": "In this sketch, how much of the owner’s month does not build equity?",
+          "answer": 1600,
+          "unit": "$",
+          "explain": "$1,000 interest + $250 tax + $100 insurance + $250 repairs = $1,600."
+        },
+        {
+          "id": "rb-myth-q3",
+          "type": "number",
+          "prompt": "Rent is $1,800. The owner’s non-equity costs are $1,600. How much more is the rent than those costs?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$1,800 − $1,600 = $200. Close, not “all rent is wasted.”"
+        },
+        {
+          "id": "rb-myth-q4",
+          "type": "multiple_choice",
+          "prompt": "What is wrong with “rent is throwing money away”?",
+          "choices": [
+            "It ignores interest, tax, insurance, and repairs",
+            "Rent does not buy you a place to live",
+            "Owners never pay interest"
+          ],
+          "answer": 0,
+          "explain": "Both paths spend money that builds nothing. The proverb only counts one of them."
+        },
+        {
+          "id": "rb-myth-q5",
+          "type": "true_false",
+          "prompt": "In this sketch, every dollar of the $1,400 mortgage builds equity.",
+          "answer": false,
+          "explain": "Only the $400 of principal does. The $1,000 of interest is the cost of borrowing."
+        }
+      ]
+    },
+    {
+      "id": "rb-sam",
+      "type": "lesson",
+      "format": "story",
+      "title": "Sam’s Decision",
+      "summary": "A two-year contract is a renter’s calendar.",
+      "xp": 10,
+      "story": {
+        "title": "Sam’s two-year contract",
+        "character": "Sam, 29",
+        "body": "Sam is 29 and a nurse. The contract that brought him here ends in **two years**. Closing costs on the house he likes are **$8,400**.\n\nRent nearby is **$1,800** a month. The down payment would be **$40,000**, and that is most of what he has saved.\n\nHe runs the cover charge across the stay he actually has, not across a stay he hopes for."
+      },
+      "steps": [
+        {
+          "id": "rb-sam-q1",
+          "type": "number",
+          "prompt": "Sam’s closing costs are $8,400 over 24 months. How much is that per month?",
+          "answer": 350,
+          "unit": "$",
+          "explain": "$8,400 ÷ 24 = $350."
+        },
+        {
+          "id": "rb-sam-q2",
+          "type": "number",
+          "prompt": "What is two years of his $1,800 rent?",
+          "answer": 43200,
+          "unit": "$",
+          "explain": "$1,800 × 24 = $43,200."
+        },
+        {
+          "id": "rb-sam-q3",
+          "type": "multiple_choice",
+          "prompt": "He will leave in two years, and the $40,000 is most of his savings. What fits the story?",
+          "choices": [
+            "Rent, and keep the $40,000 as savings",
+            "Buy, because rent is throwing money away",
+            "Empty the savings so the mortgage is smaller"
+          ],
+          "answer": 0,
+          "explain": "The stay is short, and the down payment is his cushion. The 5-year sketch points at renting."
+        },
+        {
+          "id": "rb-sam-q4",
+          "type": "true_false",
+          "prompt": "Sam gets the $8,400 of closing costs back automatically when he sells in two years.",
+          "answer": false,
+          "explain": "Closing costs are spent. A sale has its own costs on top."
+        },
+        {
+          "id": "rb-sam-q5",
+          "type": "fill_blank",
+          "prompt": "Sam should judge the house against a stay of ___, the length he actually has.",
+          "choices": [
+            "two years",
+            "thirty years",
+            "one month"
+          ],
+          "answer": 0,
+          "explain": "A 30-year loan does not mean he will stay 30 years."
+        }
+      ]
+    },
+    {
+      "id": "rb-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "rb-trial",
+      "type": "boss",
+      "title": "Den Trial: Rent vs. Buy",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "rb-trial-q1",
+          "type": "number",
+          "prompt": "Tax is $2,400 a year. What is that per month?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$2,400 ÷ 12 = $200."
+        },
+        {
+          "id": "rb-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "You will move in 18 months and closing costs are several thousand dollars. What does the 5-year sketch lean toward?",
+          "choices": [
+            "Renting",
+            "Buying and selling again next spring",
+            "Ignoring the closing costs"
+          ],
+          "answer": 0,
+          "explain": "A short stay rarely earns back the cover charge."
+        },
+        {
+          "id": "rb-trial-q3",
+          "type": "number",
+          "prompt": "A $20,000 down payment at an example 4% would earn how much in a year?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "$20,000 × 0.04 = $800. The rate is an example."
+        },
+        {
+          "id": "rb-trial-q4",
+          "type": "true_false",
+          "prompt": "On a fair comparison, you line the rent up against the mortgage payment alone.",
+          "answer": false,
+          "explain": "Owning also has tax, insurance, and repairs."
+        }
+      ]
+    }
+  ]
+}

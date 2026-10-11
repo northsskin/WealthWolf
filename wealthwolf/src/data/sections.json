@@ -52,6 +52,19 @@
     }
   },
   {
+    "id": "home-life",
+    "order": 5,
+    "title": "Home & Life",
+    "description": "Renting, buying, sharing money and the big moments that cost the most.",
+    "trial": {
+      "id": "home-section-trial",
+      "title": "Section Trial: Home & Life",
+      "summary": "Twelve questions from the whole section. Three strikes and you’re out.",
+      "xp": 50,
+      "draw": 12
+    }
+  },
+  {
     "id": "investing",
     "order": 7,
     "title": "Investing",
