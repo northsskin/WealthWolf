@@ -1,0 +1,597 @@
+{
+  "id": "buying-a-home",
+  "section": "home-life",
+  "order": 4,
+  "title": "Buying a Home",
+  "description": "A housing cap, PMI, closing costs, and the path from offer to keys.",
+  "wolfLine": "The letter says what a lender might do. Your budget says what you will do.",
+  "terms": {
+    "pmi": {
+      "term": "PMI",
+      "definition": "Private mortgage insurance. On a conventional loan, lenders generally require it when the down payment is under 20%. It protects the lender, not you.",
+      "example": "10% down on a $240,000 home. PMI on this estimate is $110 a month until you can cancel it."
+    },
+    "closing-costs": {
+      "term": "Closing costs",
+      "definition": "The fees due when the sale is finished: lender charges, title, and taxes and insurance prepaid into escrow. A common sketch is about 2% to 5% of the price.",
+      "example": "3% of a $240,000 purchase is $7,200, on top of the down payment."
+    },
+    "pre-approval": {
+      "term": "Pre-approval",
+      "definition": "A lender’s look at your income, debts, and credit, and a letter that says how much they might lend. It is not the final loan, and it is not the seller’s promise.",
+      "example": "A letter for up to $220,000. The real loan still waits on the appraisal and the final papers."
+    }
+  },
+  "lessons": [
+    {
+      "id": "bh-house",
+      "type": "lesson",
+      "title": "How Much House",
+      "summary": "The cap is the whole housing payment, not the loan alone.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bh-house-q1",
+          "type": "info",
+          "title": "Start from the month",
+          "body": "Gross pay is **$6,000**. The 30% sketch is **$1,800** for housing.\n\nOn this house, tax and insurance are **$400** a month. That leaves **$1,400** for the [[mortgage]] itself. A bigger loan that blows past $1,800 is the house you cannot afford."
+        },
+        {
+          "id": "bh-house-q2",
+          "type": "number",
+          "prompt": "What is 30% of $6,000?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$6,000 × 0.30 = $1,800."
+        },
+        {
+          "id": "bh-house-q3",
+          "type": "number",
+          "prompt": "The housing cap is $1,800 and tax plus insurance is $400. How much is left for the mortgage payment?",
+          "answer": 1400,
+          "unit": "$",
+          "explain": "$1,800 − $400 = $1,400."
+        },
+        {
+          "id": "bh-house-q4",
+          "type": "number",
+          "prompt": "A loan payment of $1,600 plus $400 of tax and insurance is how much over the $1,800 cap?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$1,600 + $400 = $2,000. $2,000 − $1,800 = $200."
+        },
+        {
+          "id": "bh-house-q5",
+          "type": "true_false",
+          "prompt": "If you can afford the mortgage payment, you can ignore tax and insurance.",
+          "answer": false,
+          "explain": "Those bills arrive whether the lender printed them or not. The cap is the whole month."
+        }
+      ]
+    },
+    {
+      "id": "bh-pmi",
+      "type": "lesson",
+      "title": "Down Payment and PMI",
+      "summary": "Under 20% down, a conventional loan usually adds PMI.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bh-pmi-q1",
+          "type": "info",
+          "title": "Two down payments",
+          "body": "The price is **$240,000**. **20%** down is **$48,000**, and a conventional loan generally skips [[PMI|pmi]]. **10%** down is **$24,000**, and PMI on this estimate is **$110** a month.\n\nPMI protects the lender. Under the Homeowners Protection Act you can ask to cancel it around **80%** of the home’s original value, and it must end automatically around **78%** if you are current. FHA mortgage insurance follows different rules.",
+          "callout": "The 80% request can use the original value. The automatic stop follows the schedule, and only if you are current."
+        },
+        {
+          "id": "bh-pmi-q2",
+          "type": "number",
+          "prompt": "What is 20% of this $240,000 price?",
+          "answer": 48000,
+          "unit": "$",
+          "explain": "$240,000 × 0.20 = $48,000."
+        },
+        {
+          "id": "bh-pmi-q3",
+          "type": "number",
+          "prompt": "What is 10% of this $240,000 price?",
+          "answer": 24000,
+          "unit": "$",
+          "explain": "$240,000 × 0.10 = $24,000."
+        },
+        {
+          "id": "bh-pmi-q4",
+          "type": "number",
+          "prompt": "At about 80% of the original $240,000 value, what loan balance lets you ask to cancel PMI?",
+          "answer": 192000,
+          "unit": "$",
+          "explain": "$240,000 × 0.80 = $192,000."
+        },
+        {
+          "id": "bh-pmi-q5",
+          "type": "number",
+          "prompt": "PMI on the 10% loan is $110 a month. What is that per year?",
+          "answer": 1320,
+          "unit": "$",
+          "explain": "$110 × 12 = $1,320."
+        },
+        {
+          "id": "bh-pmi-q6",
+          "type": "true_false",
+          "prompt": "FHA mortgage insurance cancels on the same schedule as conventional PMI.",
+          "answer": false,
+          "explain": "FHA insurance follows its own rules, and it often lasts longer. Do not assume the 80% and 78% stops apply."
+        }
+      ]
+    },
+    {
+      "id": "bh-closing",
+      "type": "lesson",
+      "title": "Closing Costs",
+      "summary": "The down payment is not the only check you bring.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bh-closing-q1",
+          "type": "info",
+          "title": "A 3% sketch on this purchase",
+          "body": "[[Closing costs]] vary. On this **$240,000** purchase the estimate uses **3%**, which is **$7,200**.\n\nThat sits on top of a **$24,000** down payment. Cash to close in this sketch is **$31,200**. The 3% is an example for this sale, not a national fee."
+        },
+        {
+          "id": "bh-closing-q2",
+          "type": "number",
+          "prompt": "What is 3% of $240,000?",
+          "answer": 7200,
+          "unit": "$",
+          "explain": "$240,000 × 0.03 = $7,200."
+        },
+        {
+          "id": "bh-closing-q3",
+          "type": "number",
+          "prompt": "Down payment $24,000 plus closing costs $7,200. What is cash to close?",
+          "answer": 31200,
+          "unit": "$",
+          "explain": "$24,000 + $7,200 = $31,200."
+        },
+        {
+          "id": "bh-closing-q4",
+          "type": "multiple_choice",
+          "prompt": "You saved the down payment and nothing else. What is missing?",
+          "choices": [
+            "The closing costs",
+            "The right to a lower price",
+            "PMI, which the seller pays"
+          ],
+          "answer": 0,
+          "explain": "The keys need both checks. Closing costs are yours unless the contract says someone else pays them."
+        },
+        {
+          "id": "bh-closing-q5",
+          "type": "true_false",
+          "prompt": "Closing costs are a deposit you get back after the first year.",
+          "answer": false,
+          "explain": "They pay the people who close the sale. They are spent."
+        }
+      ]
+    },
+    {
+      "id": "bh-pre",
+      "type": "lesson",
+      "title": "Pre-Approval",
+      "summary": "A letter about you, not a promise about the house.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bh-pre-q1",
+          "type": "multiple_choice",
+          "context": "[[Pre-approval]] happens before you make an offer, so you know the size of the loan a lender will consider.",
+          "prompt": "What is a pre-approval?",
+          "choices": [
+            "A lender’s estimate of what they might lend you",
+            "The seller’s agreement to your price",
+            "The final loan, already funded"
+          ],
+          "answer": 0,
+          "explain": "It looks at your income, your debts, and your [[credit score]]. The house still has to pass inspection and appraisal."
+        },
+        {
+          "id": "bh-pre-q2",
+          "type": "multiple_choice",
+          "prompt": "A letter says “up to $220,000.” Your full housing cap only supports a smaller payment. What do you shop with?",
+          "choices": [
+            "The payment you can actually afford",
+            "The top of the letter",
+            "Whatever the seller asks"
+          ],
+          "answer": 0,
+          "explain": "The letter is a ceiling. Your budget can be lower."
+        },
+        {
+          "id": "bh-pre-q3",
+          "type": "true_false",
+          "prompt": "A pre-approval means the seller has accepted your offer.",
+          "answer": false,
+          "explain": "You do not have an offer yet. You have a lender’s early yes."
+        },
+        {
+          "id": "bh-pre-q4",
+          "type": "true_false",
+          "prompt": "The lender can still say no later if the appraisal or your job changes.",
+          "answer": true,
+          "explain": "Pre-approval is an early look. The final loan waits on the house and on you staying qualified."
+        },
+        {
+          "id": "bh-pre-q5",
+          "type": "fill_blank",
+          "prompt": "Get a pre-approval before you ___, so you are not guessing at the loan.",
+          "choices": [
+            "make an offer",
+            "skip the inspection",
+            "pay the seller in cash"
+          ],
+          "answer": 0,
+          "explain": "The letter tells you the range. The offer comes after."
+        }
+      ]
+    },
+    {
+      "id": "bh-steps",
+      "type": "lesson",
+      "title": "Offer to Keys",
+      "summary": "The house is not yours at the handshake.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bh-steps-q1",
+          "type": "info",
+          "title": "One path",
+          "body": "Budget, then a [[pre-approval]], then an offer, then an inspection and the Closing Disclosure, then the keys.\n\nSkipping the inspection to “win” the house is how you buy someone else’s leak."
+        },
+        {
+          "id": "bh-steps-q2",
+          "type": "order",
+          "prompt": "Put the purchase in order.",
+          "items": [
+            "Set a housing budget",
+            "Get pre-approved",
+            "Make an offer",
+            "Inspect the home and read the Closing Disclosure",
+            "Sign and get the keys"
+          ],
+          "explain": "The budget and the letter come before the offer. The inspection and the disclosure come before you sign."
+        },
+        {
+          "id": "bh-steps-q3",
+          "type": "multiple_choice",
+          "prompt": "Why is the inspection before the keys?",
+          "choices": [
+            "So you can still walk away or renegotiate if the house has a serious flaw",
+            "Because the seller wants you to meet the neighbors",
+            "So PMI can start earlier"
+          ],
+          "answer": 0,
+          "explain": "Once you sign and fund, the flaw is yours."
+        },
+        {
+          "id": "bh-steps-q4",
+          "type": "true_false",
+          "prompt": "A verbal “we have a deal” is the moment you own the house.",
+          "answer": false,
+          "explain": "You own it at closing, when the papers are signed and the money moves."
+        },
+        {
+          "id": "bh-steps-q5",
+          "type": "fill_blank",
+          "prompt": "The last step on this list is to sign and get the ___.",
+          "choices": [
+            "keys",
+            "pre-approval",
+            "application fee"
+          ],
+          "answer": 0,
+          "explain": "The keys come after the disclosure, not before."
+        }
+      ]
+    },
+    {
+      "id": "bh-inspect",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Inspection and Appraisal",
+      "summary": "One looks at the roof. One looks at the price.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bh-inspect-q1",
+          "type": "info",
+          "title": "Two different visits",
+          "body": "An inspection is for you. It looks for leaks, a failing furnace, and other condition problems.\n\nAn appraisal is for the lender. It says what the home is worth. If it comes in low, the lender may not lend the full price."
+        },
+        {
+          "id": "bh-inspect-q2",
+          "type": "sort",
+          "prompt": "Sort the inspection and the appraisal.",
+          "buckets": [
+            "Inspection",
+            "Appraisal"
+          ],
+          "items": [
+            [
+              "Looks for a leaking roof",
+              0
+            ],
+            [
+              "Tells the lender what the home is worth",
+              1
+            ],
+            [
+              "You hire it to learn the condition",
+              0
+            ],
+            [
+              "A low result can shrink the loan",
+              1
+            ]
+          ],
+          "explain": "Condition is the inspection. Value, for the lender, is the appraisal."
+        },
+        {
+          "id": "bh-inspect-q3",
+          "type": "multiple_choice",
+          "prompt": "The inspection finds a furnace that needs a $6,000 replacement. What can you still do, if the contract allows?",
+          "choices": [
+            "Ask for a repair, a price cut, or walk away",
+            "Nothing. You already own it",
+            "Send the bill to the lender as PMI"
+          ],
+          "answer": 0,
+          "explain": "That is why the inspection happens before closing."
+        },
+        {
+          "id": "bh-inspect-q4",
+          "type": "number",
+          "prompt": "The furnace repair is $6,000 and you split it evenly with the seller. What is your half?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$6,000 ÷ 2 = $3,000."
+        },
+        {
+          "id": "bh-inspect-q5",
+          "type": "true_false",
+          "prompt": "A clean appraisal means the roof does not leak.",
+          "answer": false,
+          "explain": "The appraisal is a value. The inspection is the condition. You want both."
+        }
+      ]
+    },
+    {
+      "id": "bh-disclose",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Closing Disclosure",
+      "summary": "This is the page that should match the money you bring.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bh-disclose-q1",
+          "type": "info",
+          "title": "Read it with time to spare",
+          "body": "The Closing Disclosure is the lender’s final accounting of the loan, the [[down payment]], and the [[closing costs]].\n\nOn this one the price is **$240,000**, the loan is **$216,000**, and the cash you bring is **$31,200**."
+        },
+        {
+          "id": "bh-disclose-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Closing Disclosure",
+            "subtitle": "Cash you bring",
+            "meta": [
+              "Price $240,000",
+              "Conventional loan"
+            ],
+            "lines": [
+              {
+                "id": "loan",
+                "label": "Loan amount",
+                "amount": 216000.0
+              },
+              {
+                "id": "down",
+                "label": "Down payment",
+                "amount": 24000.0
+              },
+              {
+                "id": "close",
+                "label": "Closing costs",
+                "amount": 7200.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Cash to close",
+                "amount": 31200.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "What is cash to close on this disclosure?",
+          "answer": 31200,
+          "unit": "$",
+          "explain": "$24,000 + $7,200 = $31,200."
+        },
+        {
+          "id": "bh-disclose-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Closing Disclosure",
+            "subtitle": "Cash you bring",
+            "meta": [
+              "Price $240,000",
+              "Conventional loan"
+            ],
+            "lines": [
+              {
+                "id": "loan",
+                "label": "Loan amount",
+                "amount": 216000.0
+              },
+              {
+                "id": "down",
+                "label": "Down payment",
+                "amount": 24000.0
+              },
+              {
+                "id": "close",
+                "label": "Closing costs",
+                "amount": 7200.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Cash to close",
+                "amount": 31200.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "Price $240,000 minus the $216,000 loan. What is the down payment?",
+          "answer": 24000,
+          "unit": "$",
+          "explain": "$240,000 − $216,000 = $24,000."
+        },
+        {
+          "id": "bh-disclose-q4",
+          "type": "multiple_choice",
+          "prompt": "The disclosure shows $2,000 more in closing costs than your last estimate. What do you do before you sign?",
+          "choices": [
+            "Ask the lender to explain the new line",
+            "Sign anyway so the rate does not vanish",
+            "Pay it in cash without reading it"
+          ],
+          "answer": 0,
+          "explain": "A new number needs a name. You still have time to ask."
+        },
+        {
+          "id": "bh-disclose-q5",
+          "type": "true_false",
+          "prompt": "The loan amount on this page is the same as the cash you bring to closing.",
+          "answer": false,
+          "explain": "The loan is $216,000. The cash you bring is the $31,200 of down payment and closing costs."
+        }
+      ]
+    },
+    {
+      "id": "bh-devon",
+      "type": "lesson",
+      "format": "story",
+      "title": "Devon’s First Home",
+      "summary": "No grant number until a real program says so.",
+      "xp": 10,
+      "story": {
+        "title": "Devon checks the programs",
+        "character": "Devon, 31",
+        "body": "Devon is 31 and a warehouse supervisor. He has **$30,000** saved. The home he wants is **$200,000**.\n\n**20%** down would be **$40,000**. He is **$10,000** short of that, so a conventional loan would generally add [[PMI|pmi]]. **10%** down is **$20,000**, which would leave him **$10,000**.\n\nHe does not count on a grant he saw in an ad. He checks HUD and his state housing agency for programs that are real this year, and he does not spend the last of the $30,000 to get there."
+      },
+      "steps": [
+        {
+          "id": "bh-devon-q1",
+          "type": "number",
+          "prompt": "What is 20% of Devon’s $200,000 home?",
+          "answer": 40000,
+          "unit": "$",
+          "explain": "$200,000 × 0.20 = $40,000."
+        },
+        {
+          "id": "bh-devon-q2",
+          "type": "number",
+          "prompt": "He has $30,000. How short of that 20% is he?",
+          "answer": 10000,
+          "unit": "$",
+          "explain": "$40,000 − $30,000 = $10,000."
+        },
+        {
+          "id": "bh-devon-q3",
+          "type": "number",
+          "prompt": "What is 10% of the $200,000 price?",
+          "answer": 20000,
+          "unit": "$",
+          "explain": "$200,000 × 0.10 = $20,000."
+        },
+        {
+          "id": "bh-devon-q4",
+          "type": "multiple_choice",
+          "prompt": "A website promises a $15,000 first-time grant with no official page behind it. What should Devon do?",
+          "choices": [
+            "Check HUD and his state housing agency, and ignore the ad until then",
+            "Pay the site a fee to “unlock” the grant",
+            "Subtract $15,000 from the price in his offer"
+          ],
+          "answer": 0,
+          "explain": "A grant you cannot confirm is not part of the budget. Programs change, and the state agency is the source."
+        },
+        {
+          "id": "bh-devon-q5",
+          "type": "true_false",
+          "prompt": "Because Devon is buying his first home, conventional PMI is automatically waived.",
+          "answer": false,
+          "explain": "First-time status is not a waiver. Under 20% down, PMI is still the usual conventional rule. A real program would say so in writing."
+        }
+      ]
+    },
+    {
+      "id": "bh-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "bh-trial",
+      "type": "boss",
+      "title": "Den Trial: Buying a Home",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "bh-trial-q1",
+          "type": "number",
+          "prompt": "A $180,000 home. What is 20% down?",
+          "answer": 36000,
+          "unit": "$",
+          "explain": "$180,000 × 0.20 = $36,000."
+        },
+        {
+          "id": "bh-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "Which visit tells the lender the home’s value?",
+          "choices": [
+            "The appraisal",
+            "The inspection",
+            "The roommate agreement"
+          ],
+          "answer": 0,
+          "explain": "The appraisal is the value. The inspection is the condition."
+        },
+        {
+          "id": "bh-trial-q3",
+          "type": "true_false",
+          "prompt": "On a conventional loan, PMI is generally required when the down payment is under 20%.",
+          "answer": true,
+          "explain": "That is the usual rule. FHA insurance is a different product."
+        },
+        {
+          "id": "bh-trial-q4",
+          "type": "number",
+          "prompt": "Closing costs of $6,000 plus a $20,000 down payment. What is cash to close?",
+          "answer": 26000,
+          "unit": "$",
+          "explain": "$6,000 + $20,000 = $26,000."
+        }
+      ]
+    }
+  ]
+}

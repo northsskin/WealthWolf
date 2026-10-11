@@ -1,0 +1,562 @@
+{
+  "id": "relationships",
+  "section": "home-life",
+  "order": 7,
+  "title": "Money & Relationships",
+  "description": "The talk, the accounts, a fair split, and the secrets that break a budget.",
+  "wolfLine": "Agree on the split before you agree on the couch.",
+  "terms": {
+    "financial-infidelity": {
+      "term": "Financial infidelity",
+      "definition": "Hiding money, debt, or spending from the person you share finances with.",
+      "example": "A $650 transfer the other person did not know about, on an account you both use."
+    },
+    "prenuptial-agreement": {
+      "term": "Prenup",
+      "definition": "An agreement before marriage about what stays separate, such as a house or a business one person already owns. It is a legal document. This lesson is not legal advice.",
+      "example": "One person owns a house before the wedding. A prenup can say that house stays theirs."
+    }
+  },
+  "lessons": [
+    {
+      "id": "rl-early",
+      "type": "lesson",
+      "title": "Talk Early",
+      "summary": "The lease is a bad moment to meet each other’s debts.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rl-early-q1",
+          "type": "info",
+          "title": "Before the shared signature",
+          "body": "Talk about pay, debts, and savings before you sign a [[lease]] together, and before you mix accounts.\n\nThe talk is a budget, not a confession booth. Each person names what they earn, what they owe, and what they will not risk."
+        },
+        {
+          "id": "rl-early-q2",
+          "type": "multiple_choice",
+          "prompt": "When is the useful time for the money talk?",
+          "choices": [
+            "Before you sign a lease or mix accounts",
+            "The week after a missed rent payment",
+            "Only if a wedding is already booked"
+          ],
+          "answer": 0,
+          "explain": "A shared signature is harder to undo than a conversation."
+        },
+        {
+          "id": "rl-early-q3",
+          "type": "multiple_choice",
+          "prompt": "What belongs in that talk?",
+          "choices": [
+            "Income, debts, and what each of you will not risk",
+            "Only the rent, so the rest stays private forever",
+            "A promise that love makes a budget unnecessary"
+          ],
+          "answer": 0,
+          "explain": "The rent is one line. The debts and the cushion decide whether the rent is safe."
+        },
+        {
+          "id": "rl-early-q4",
+          "type": "true_false",
+          "prompt": "If you are not married, you do not need to talk about money before sharing a lease.",
+          "answer": false,
+          "explain": "The landlord can ask either signer for the full rent. Marriage is not what creates that risk."
+        },
+        {
+          "id": "rl-early-q5",
+          "type": "fill_blank",
+          "prompt": "Have the money talk before you ___ a lease together.",
+          "choices": [
+            "sign",
+            "celebrate",
+            "ignore"
+          ],
+          "answer": 0,
+          "explain": "The signature is the point of no easy return."
+        }
+      ]
+    },
+    {
+      "id": "rl-accounts",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Joint, Separate, or Both",
+      "summary": "There is a third design: shared bills, private spending.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rl-accounts-q1",
+          "type": "info",
+          "title": "Three ways to hold it",
+          "body": "Joint: one account for the money you both earn. Separate: each person keeps their own, and you split the bills. Both: a shared account for the bills, plus an account that is only yours.\n\nNone of these is the moral choice. The worst one is the one you never agreed on."
+        },
+        {
+          "id": "rl-accounts-q2",
+          "type": "sort",
+          "prompt": "Sort each setup.",
+          "buckets": [
+            "Joint",
+            "Separate",
+            "Both"
+          ],
+          "items": [
+            [
+              "Every paycheck lands in one shared account",
+              0
+            ],
+            [
+              "Each person keeps their own account and you split the bills",
+              1
+            ],
+            [
+              "A shared bills account, plus an account that is only yours",
+              2
+            ]
+          ],
+          "explain": "Joint is one pot. Separate is two pots. Both is a pot for the bills and a pot of your own."
+        },
+        {
+          "id": "rl-accounts-q3",
+          "type": "multiple_choice",
+          "prompt": "You want shared bills without asking permission for a haircut. Which setup is built for that?",
+          "choices": [
+            "Both: a bills account and a personal account",
+            "Joint only",
+            "Separate, with no plan for the rent"
+          ],
+          "answer": 0,
+          "explain": "The bills are shared. The haircut is not a committee decision."
+        },
+        {
+          "id": "rl-accounts-q4",
+          "type": "true_false",
+          "prompt": "A joint account means each person can only see their own half.",
+          "answer": false,
+          "explain": "A joint account is visible to both people, and either person can usually spend from it."
+        },
+        {
+          "id": "rl-accounts-q5",
+          "type": "fill_blank",
+          "prompt": "A shared bills account plus a personal account is the ___ setup.",
+          "choices": [
+            "both",
+            "joint",
+            "separate"
+          ],
+          "answer": 0,
+          "explain": "Both means you did not have to pick only one."
+        }
+      ]
+    },
+    {
+      "id": "rl-split",
+      "type": "lesson",
+      "title": "Split by Income",
+      "summary": "Equal shares are fair when the pay is equal.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rl-split-q1",
+          "type": "info",
+          "title": "Use the incomes",
+          "body": "Alex earns **$4,000**. Jordan earns **$2,000**. Together that is **$6,000**.\n\nRent is **$1,800**. Alex’s share is 4,000 ÷ 6,000, or **$1,200**. Jordan’s is **$600**. A **$300** grocery run follows the same split: **$200** and **$100**."
+        },
+        {
+          "id": "rl-split-q2",
+          "type": "number",
+          "prompt": "Alex earns $4,000 and Jordan earns $2,000. What is their combined income?",
+          "answer": 6000,
+          "unit": "$",
+          "explain": "$4,000 + $2,000 = $6,000."
+        },
+        {
+          "id": "rl-split-q3",
+          "type": "number",
+          "prompt": "Rent is $1,800. What is Alex’s share at $4,000 of the $6,000?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$4,000 ÷ $6,000 = 2/3. $1,800 × 2/3 = $1,200."
+        },
+        {
+          "id": "rl-split-q4",
+          "type": "number",
+          "prompt": "What is Jordan’s share of that $1,800 rent?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$1,800 − $1,200 = $600. That is 1/3."
+        },
+        {
+          "id": "rl-split-q5",
+          "type": "number",
+          "prompt": "Groceries are $300. What is Alex’s 2/3 share?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$300 × 2/3 = $200."
+        }
+      ]
+    },
+    {
+      "id": "rl-goals",
+      "type": "lesson",
+      "title": "A Shared Goal",
+      "summary": "Name it, date it, and give it a monthly number.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rl-goals-q1",
+          "type": "info",
+          "title": "One trip, one number",
+          "body": "A shared goal needs a name and a date. This trip costs **$3,000** and they have **10** months.\n\nThat is **$300** a month. On their income split, Alex puts in **$200** and Jordan puts in **$100**."
+        },
+        {
+          "id": "rl-goals-q2",
+          "type": "number",
+          "prompt": "The trip is $3,000 and they have 10 months. What do they save per month?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$3,000 ÷ 10 = $300."
+        },
+        {
+          "id": "rl-goals-q3",
+          "type": "number",
+          "prompt": "Alex pays 2/3 of that $300. How much does Alex put in?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$300 × 2/3 = $200."
+        },
+        {
+          "id": "rl-goals-q4",
+          "type": "number",
+          "prompt": "How much does Jordan put in?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$300 − $200 = $100."
+        },
+        {
+          "id": "rl-goals-q5",
+          "type": "true_false",
+          "prompt": "A shared goal can live only in someone’s head, as long as both people want it.",
+          "answer": false,
+          "explain": "A date and a monthly number are what make it a plan. Wanting it is the start."
+        }
+      ]
+    },
+    {
+      "id": "rl-flags",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Money You Hide",
+      "summary": "A shared account with a secret is the red flag.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rl-flags-q1",
+          "type": "info",
+          "title": "The secret is the problem",
+          "body": "[[Financial infidelity]] is hiding spending, debt, or an account from the person who shares the money.\n\nThe rent and the groceries on this page were agreed. The **$650** transfer was not."
+        },
+        {
+          "id": "rl-flags-q2",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "Joint account, March",
+            "lines": [
+              {
+                "id": "rent",
+                "label": "Rent, you both agreed",
+                "amount": 1800.0
+              },
+              {
+                "id": "food",
+                "label": "Groceries",
+                "amount": 420.0
+              },
+              {
+                "id": "hide",
+                "label": "Transfer the other person did not know about",
+                "amount": 650.0
+              }
+            ]
+          },
+          "prompt": "Which line is the red flag?",
+          "answer": "hide",
+          "explain": "The $650 transfer was hidden. The rent and the groceries were not."
+        },
+        {
+          "id": "rl-flags-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Joint account, March",
+            "lines": [
+              {
+                "id": "rent",
+                "label": "Rent, you both agreed",
+                "amount": 1800.0
+              },
+              {
+                "id": "food",
+                "label": "Groceries",
+                "amount": 420.0
+              },
+              {
+                "id": "hide",
+                "label": "Transfer the other person did not know about",
+                "amount": 650.0
+              }
+            ]
+          },
+          "prompt": "How much left the account in the transfer nobody agreed to?",
+          "answer": 650,
+          "unit": "$",
+          "explain": "The line is $650."
+        },
+        {
+          "id": "rl-flags-q4",
+          "type": "multiple_choice",
+          "prompt": "What is the repair for a hidden transfer?",
+          "choices": [
+            "Tell the truth and agree on a rule for the account",
+            "Hide the next one better",
+            "Close the talk and keep the password"
+          ],
+          "answer": 0,
+          "explain": "The account only works if both people can see it."
+        },
+        {
+          "id": "rl-flags-q5",
+          "type": "true_false",
+          "prompt": "A surprise gift on a personal account is the same thing as a hidden debt on a joint one.",
+          "answer": false,
+          "explain": "A gift from your own account is not a secret debt. Hiding a $650 transfer on the shared account is."
+        }
+      ]
+    },
+    {
+      "id": "rl-lend",
+      "type": "lesson",
+      "title": "Lending to Friends",
+      "summary": "If you need it back, write it down. If you cannot lose it, do not lend it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rl-lend-q1",
+          "type": "info",
+          "title": "Two tests",
+          "body": "A loan to a friend has two tests. Do you need the money back? Then write the amount and the date. Can you afford to lose it? If the answer is no, it is not a loan you can make.\n\n**$500** taken from an [[emergency fund]] fails the second test. That cash has a job already."
+        },
+        {
+          "id": "rl-lend-q2",
+          "type": "multiple_choice",
+          "prompt": "You would be in trouble if the friend never paid. What should you do?",
+          "choices": [
+            "Do not lend it",
+            "Lend it and hope",
+            "Lend it from the rent money"
+          ],
+          "answer": 0,
+          "explain": "A loan you cannot afford to lose is a gift you cannot afford."
+        },
+        {
+          "id": "rl-lend-q3",
+          "type": "number",
+          "prompt": "You lend $200 a month for 3 months from money you can lose. How much have you lent?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$200 × 3 = $600."
+        },
+        {
+          "id": "rl-lend-q4",
+          "type": "multiple_choice",
+          "prompt": "What makes a loan different from a gift, on paper?",
+          "choices": [
+            "A written amount and a date you expect it back",
+            "A handshake and a good feeling",
+            "Posting about it"
+          ],
+          "answer": 0,
+          "explain": "The writing is what you can point to later. It does not guarantee you are paid."
+        },
+        {
+          "id": "rl-lend-q5",
+          "type": "true_false",
+          "prompt": "The emergency fund is a good source for a friend’s loan.",
+          "answer": false,
+          "explain": "That fund is for your job loss and your urgent repair. Lending it spends the cushion."
+        }
+      ]
+    },
+    {
+      "id": "rl-prenup",
+      "type": "lesson",
+      "title": "A Prenup, at a High Level",
+      "summary": "A legal paper about what stays separate. Not advice for your wedding.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rl-prenup-q1",
+          "type": "info",
+          "title": "What it is, and what this is not",
+          "body": "A [[prenup|prenuptial-agreement]] is an agreement before marriage about what stays separate. A house or a business one person already owns is a common reason.\n\nIt is a legal document. This lesson is not legal advice. A lawyer in your state is."
+        },
+        {
+          "id": "rl-prenup-q2",
+          "type": "multiple_choice",
+          "prompt": "Which situation is a common reason people look at a prenup?",
+          "choices": [
+            "One person already owns a house or a business",
+            "They want the caterer to cost less",
+            "They have no assets and no debts"
+          ],
+          "answer": 0,
+          "explain": "The paper is about property that already exists, or debts one person does not want to share."
+        },
+        {
+          "id": "rl-prenup-q3",
+          "type": "true_false",
+          "prompt": "This course can tell you whether you should sign a prenup.",
+          "answer": false,
+          "explain": "That is legal advice, and it depends on your state and your facts. A lawyer can. A lesson cannot."
+        },
+        {
+          "id": "rl-prenup-q4",
+          "type": "multiple_choice",
+          "prompt": "What is a prenup, in one line?",
+          "choices": [
+            "An agreement before marriage about what stays separate",
+            "A joint checking account",
+            "A replacement for a marriage license"
+          ],
+          "answer": 0,
+          "explain": "It sorts property. It is not the wedding and it is not a budget."
+        },
+        {
+          "id": "rl-prenup-q5",
+          "type": "fill_blank",
+          "prompt": "A prenup is signed ___ the marriage.",
+          "choices": [
+            "before",
+            "after",
+            "instead of"
+          ],
+          "answer": 0,
+          "explain": "The “pre” is the point. After the wedding, a different paper does that job."
+        }
+      ]
+    },
+    {
+      "id": "rl-pair",
+      "type": "lesson",
+      "format": "story",
+      "title": "Alex and Jordan",
+      "summary": "The split follows the pay, and it is written down.",
+      "xp": 10,
+      "story": {
+        "title": "Alex and Jordan",
+        "character": "Alex, 28",
+        "body": "Alex is 28 and earns **$4,000**. Jordan is 27 and earns **$2,000**. The rent is **$1,800**, so they split it **$1,200** and **$600**.\n\nThey also want a **$3,000** trip in **10** months. That is **$300** a month, split **$200** and **$100**.\n\nAlex’s month for those two things is **$1,400**. Jordan’s is **$700**. They wrote both numbers down before they signed the [[lease]]."
+      },
+      "steps": [
+        {
+          "id": "rl-pair-q1",
+          "type": "number",
+          "prompt": "What is Alex’s rent share?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$1,800 × 2/3 = $1,200."
+        },
+        {
+          "id": "rl-pair-q2",
+          "type": "number",
+          "prompt": "What is Jordan’s rent share?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$1,800 × 1/3 = $600."
+        },
+        {
+          "id": "rl-pair-q3",
+          "type": "number",
+          "prompt": "Alex also puts $200 toward the trip. What is Alex’s total for rent plus the trip?",
+          "answer": 1400,
+          "unit": "$",
+          "explain": "$1,200 + $200 = $1,400."
+        },
+        {
+          "id": "rl-pair-q4",
+          "type": "number",
+          "prompt": "Jordan’s rent share plus $100 for the trip is how much?",
+          "answer": 700,
+          "unit": "$",
+          "explain": "$600 + $100 = $700."
+        },
+        {
+          "id": "rl-pair-q5",
+          "type": "number",
+          "prompt": "Do the two totals cover the $1,800 rent and the $300 trip?",
+          "answer": 2100,
+          "unit": "$",
+          "explain": "$1,400 + $700 = $2,100, and $1,800 + $300 = $2,100."
+        }
+      ]
+    },
+    {
+      "id": "rl-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "rl-trial",
+      "type": "boss",
+      "title": "Den Trial: Money & Relationships",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "rl-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "Pay is $3,000 and $1,000. Rent is $1,600. What is the fairer first step?",
+          "choices": [
+            "Split the rent by income, not automatically in half",
+            "The higher earner pays nothing, because they worked for it",
+            "Hide the incomes and split the rent evenly"
+          ],
+          "answer": 0,
+          "explain": "Half of $1,600 is $800, which is most of the $1,000 paycheck. Income is the fairer base."
+        },
+        {
+          "id": "rl-trial-q2",
+          "type": "true_false",
+          "prompt": "A hidden debt on a shared account is a small thing if the rent was still paid.",
+          "answer": false,
+          "explain": "The secret is the breach. The other person cannot plan around a debt they cannot see."
+        },
+        {
+          "id": "rl-trial-q3",
+          "type": "number",
+          "prompt": "A $2,400 goal in 8 months. What is the monthly save?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$2,400 ÷ 8 = $300."
+        },
+        {
+          "id": "rl-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "Which setup gives you a shared bills account and a private one?",
+          "choices": [
+            "Both",
+            "Joint only",
+            "No accounts at all"
+          ],
+          "answer": 0,
+          "explain": "Both is the mix. Joint is one pot. Separate is two, with no shared pot."
+        }
+      ]
+    }
+  ]
+}

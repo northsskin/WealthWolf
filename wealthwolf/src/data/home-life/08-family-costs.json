@@ -1,0 +1,731 @@
+{
+  "id": "family-costs",
+  "section": "home-life",
+  "order": 8,
+  "title": "Kids & Family Costs",
+  "description": "The first year, childcare, two 2026 tax benefits, and a policy once someone depends on you.",
+  "wolfLine": "The credit is not the childcare bill. Count them apart.",
+  "terms": {
+    "dependent-care-fsa": {
+      "term": "Dependent Care FSA",
+      "definition": "A work account for childcare or care of a qualifying dependent. In 2026 the federal exclusion is up to $7,500 per household, or $3,750 if you are married filing separately, and only if your plan offers that limit.",
+      "example": "Childcare of $9,600. A plan that offers the full 2026 limit can cover $7,500 of it."
+    },
+    "child-tax-credit": {
+      "term": "Child tax credit",
+      "definition": "A federal credit of up to $2,200 per qualifying child for 2026. It starts to shrink above $200,000 of income, or $400,000 if you are married filing jointly.",
+      "example": "Two qualifying children, and income under the 2026 line: up to $2,200 × 2 = $4,400."
+    },
+    "529-plan": {
+      "term": "529 plan",
+      "definition": "A savings plan for education. Qualified withdrawals are tax-free at the federal level. The balance can go down, and this course does not promise a return.",
+      "example": "You put in $100 a month. What it is worth later depends on the investments, not on a guaranteed rate."
+    }
+  },
+  "lessons": [
+    {
+      "id": "fc-baby",
+      "type": "lesson",
+      "format": "document",
+      "title": "The First Year",
+      "summary": "This page stops before childcare. That bill is its own lesson.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fc-baby-q1",
+          "type": "info",
+          "title": "Four lines, not the whole story",
+          "body": "Gear **$600**. Diapers and wipes **$80** a month, which is **$960**. Formula **$100** a month, which is **$1,200**. Checkup copays **$240**.\n\nThe total is **$3,000**, and childcare is not in it."
+        },
+        {
+          "id": "fc-baby-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A baby’s first year, before childcare",
+            "lines": [
+              {
+                "id": "gear",
+                "label": "Crib and gear",
+                "amount": 600.0
+              },
+              {
+                "id": "diapers",
+                "label": "Diapers and wipes",
+                "amount": 960.0
+              },
+              {
+                "id": "formula",
+                "label": "Formula",
+                "amount": 1200.0
+              },
+              {
+                "id": "copay",
+                "label": "Checkup copays",
+                "amount": 240.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Before childcare",
+                "amount": 3000.0,
+                "strong": true
+              }
+            ],
+            "note": "Childcare is not on this page."
+          },
+          "prompt": "What is this first-year page, before childcare?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$600 + $960 + $1,200 + $240 = $3,000."
+        },
+        {
+          "id": "fc-baby-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A baby’s first year, before childcare",
+            "lines": [
+              {
+                "id": "gear",
+                "label": "Crib and gear",
+                "amount": 600.0
+              },
+              {
+                "id": "diapers",
+                "label": "Diapers and wipes",
+                "amount": 960.0
+              },
+              {
+                "id": "formula",
+                "label": "Formula",
+                "amount": 1200.0
+              },
+              {
+                "id": "copay",
+                "label": "Checkup copays",
+                "amount": 240.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Before childcare",
+                "amount": 3000.0,
+                "strong": true
+              }
+            ],
+            "note": "Childcare is not on this page."
+          },
+          "prompt": "Diapers are $80 a month. What is that for 12 months?",
+          "answer": 960,
+          "unit": "$",
+          "explain": "$80 × 12 = $960."
+        },
+        {
+          "id": "fc-baby-q4",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A baby’s first year, before childcare",
+            "lines": [
+              {
+                "id": "gear",
+                "label": "Crib and gear",
+                "amount": 600.0
+              },
+              {
+                "id": "diapers",
+                "label": "Diapers and wipes",
+                "amount": 960.0
+              },
+              {
+                "id": "formula",
+                "label": "Formula",
+                "amount": 1200.0
+              },
+              {
+                "id": "copay",
+                "label": "Checkup copays",
+                "amount": 240.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Before childcare",
+                "amount": 3000.0,
+                "strong": true
+              }
+            ],
+            "note": "Childcare is not on this page."
+          },
+          "prompt": "Formula is $100 a month. What is the year?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$100 × 12 = $1,200."
+        },
+        {
+          "id": "fc-baby-q5",
+          "type": "true_false",
+          "prompt": "This $3,000 page is the full cost of a baby’s first year.",
+          "answer": false,
+          "explain": "It leaves out childcare, which can be larger than all four lines combined."
+        }
+      ]
+    },
+    {
+      "id": "fc-care",
+      "type": "lesson",
+      "format": "call",
+      "title": "Childcare",
+      "summary": "The monthly tuition is the number that moves the budget.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fc-care-q1",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Childcare center",
+              "subtitle": "One child",
+              "lines": [
+                {
+                  "id": "month",
+                  "label": "Monthly tuition",
+                  "amount": 1200.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Home day care",
+              "subtitle": "One child",
+              "lines": [
+                {
+                  "id": "month",
+                  "label": "Monthly tuition",
+                  "amount": 800.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What does the center cost in a year?",
+          "answer": 14400,
+          "unit": "$",
+          "explain": "$1,200 × 12 = $14,400."
+        },
+        {
+          "id": "fc-care-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Childcare center",
+              "subtitle": "One child",
+              "lines": [
+                {
+                  "id": "month",
+                  "label": "Monthly tuition",
+                  "amount": 1200.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Home day care",
+              "subtitle": "One child",
+              "lines": [
+                {
+                  "id": "month",
+                  "label": "Monthly tuition",
+                  "amount": 800.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What does the home day care cost in a year?",
+          "answer": 9600,
+          "unit": "$",
+          "explain": "$800 × 12 = $9,600."
+        },
+        {
+          "id": "fc-care-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Childcare center",
+              "subtitle": "One child",
+              "lines": [
+                {
+                  "id": "month",
+                  "label": "Monthly tuition",
+                  "amount": 1200.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Home day care",
+              "subtitle": "One child",
+              "lines": [
+                {
+                  "id": "month",
+                  "label": "Monthly tuition",
+                  "amount": 800.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much more is the center per year?",
+          "answer": 4800,
+          "unit": "$",
+          "explain": "$14,400 − $9,600 = $4,800."
+        },
+        {
+          "id": "fc-care-q4",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Childcare center",
+              "subtitle": "One child",
+              "lines": [
+                {
+                  "id": "month",
+                  "label": "Monthly tuition",
+                  "amount": 1200.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Home day care",
+              "subtitle": "One child",
+              "lines": [
+                {
+                  "id": "month",
+                  "label": "Monthly tuition",
+                  "amount": 800.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much more is the center per month?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$1,200 − $800 = $400."
+        },
+        {
+          "id": "fc-care-q5",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Childcare center",
+              "subtitle": "One child",
+              "lines": [
+                {
+                  "id": "month",
+                  "label": "Monthly tuition",
+                  "amount": 1200.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Home day care",
+              "subtitle": "One child",
+              "lines": [
+                {
+                  "id": "month",
+                  "label": "Monthly tuition",
+                  "amount": 800.0
+                }
+              ]
+            }
+          ],
+          "prompt": "You need care five days a week and the $400 gap is the whole difference you care about. Which page costs less?",
+          "choices": [
+            "Home day care",
+            "The center",
+            "They cost the same per year"
+          ],
+          "answer": 0,
+          "explain": "Home day care is $9,600. The center is $14,400. Price is not the only reason to choose, but it is the gap on these pages."
+        }
+      ]
+    },
+    {
+      "id": "fc-fsa",
+      "type": "lesson",
+      "title": "The Care Account and the Credit",
+      "summary": "Two different 2026 benefits. Do not add them into one bucket.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fc-fsa-q1",
+          "type": "info",
+          "title": "2026, from the IRS",
+          "body": "A [[Dependent Care FSA|dependent-care-fsa]] is a work account. For 2026 the federal exclusion is up to **$7,500** per household, or **$3,750** if you are married filing separately. Your employer has to offer that limit. Many plans used to stop at $5,000.\n\nThe [[child tax credit]] is separate. For 2026 it is up to **$2,200** per qualifying child, and it starts to shrink above **$200,000** of income, or **$400,000** if you are married filing jointly. This lesson does not cover the Child and Dependent Care Credit. That is a third thing."
+        },
+        {
+          "id": "fc-fsa-q2",
+          "type": "number",
+          "prompt": "Childcare is $9,600 and your plan offers the full $7,500. How much childcare is left outside the FSA?",
+          "answer": 2100,
+          "unit": "$",
+          "explain": "$9,600 − $7,500 = $2,100."
+        },
+        {
+          "id": "fc-fsa-q3",
+          "type": "number",
+          "prompt": "You are married filing separately, so the 2026 FSA limit is $3,750. Childcare is $9,600. How much is outside the FSA?",
+          "answer": 5850,
+          "unit": "$",
+          "explain": "$9,600 − $3,750 = $5,850."
+        },
+        {
+          "id": "fc-fsa-q4",
+          "type": "number",
+          "prompt": "One qualifying child, and your income is under the 2026 phaseout. What is the child tax credit, at the full amount?",
+          "answer": 2200,
+          "unit": "$",
+          "explain": "Up to $2,200 for that child. Income under $200,000, or under $400,000 if married filing jointly, is what keeps the full amount in play."
+        },
+        {
+          "id": "fc-fsa-q5",
+          "type": "true_false",
+          "prompt": "The $7,500 dependent-care limit and the $2,200 child tax credit are the same benefit counted twice.",
+          "answer": false,
+          "explain": "One is a work account for care expenses. The other is a tax credit per qualifying child. They are different, and a third credit exists that this lesson does not teach."
+        }
+      ]
+    },
+    {
+      "id": "fc-529",
+      "type": "lesson",
+      "title": "A 529 Plan",
+      "summary": "Money for school. Not a promised return.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fc-529-q1",
+          "type": "info",
+          "title": "Tax-free if you use it for school",
+          "body": "A [[529 plan]] is for education. Qualified withdrawals are tax-free at the federal level. The investments inside can fall.\n\n**$100** a month is **$1,200** a year of contributions. That is the part you control. The balance later is not a rate this course will invent."
+        },
+        {
+          "id": "fc-529-q2",
+          "type": "number",
+          "prompt": "You contribute $100 a month. How much is that in a year?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$100 × 12 = $1,200."
+        },
+        {
+          "id": "fc-529-q3",
+          "type": "number",
+          "prompt": "You contribute $100 a month for 5 years. How much have you put in, before any investment change?",
+          "answer": 6000,
+          "unit": "$",
+          "explain": "$1,200 × 5 = $6,000."
+        },
+        {
+          "id": "fc-529-q4",
+          "type": "multiple_choice",
+          "prompt": "What can you say for sure about a 529?",
+          "choices": [
+            "Qualified education withdrawals are tax-free at the federal level",
+            "The balance will rise by a set percent every year",
+            "The state must match what you put in"
+          ],
+          "answer": 0,
+          "explain": "The tax treatment of qualified withdrawals is the rule. The return is not."
+        },
+        {
+          "id": "fc-529-q5",
+          "type": "true_false",
+          "prompt": "A 529 is the same account as a dependent care FSA.",
+          "answer": false,
+          "explain": "The FSA pays this year’s care, up to the plan limit. A 529 is savings for education later."
+        }
+      ]
+    },
+    {
+      "id": "fc-kids",
+      "type": "lesson",
+      "title": "Teaching Kids",
+      "summary": "Three jars: spend, save, give.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fc-kids-q1",
+          "type": "info",
+          "title": "A small paycheck they can see",
+          "body": "A simple sketch is three jars. Spend, save, give.\n\nA **$10** gift becomes **$5** to spend, **$3** to save, and **$2** to give. The amounts matter less than the habit of splitting the money on purpose."
+        },
+        {
+          "id": "fc-kids-q2",
+          "type": "number",
+          "prompt": "The gift is $10. Spend $5, save $3, give $2. Do the three jars use the whole gift?",
+          "answer": 10,
+          "unit": "$",
+          "explain": "$5 + $3 + $2 = $10."
+        },
+        {
+          "id": "fc-kids-q3",
+          "type": "number",
+          "prompt": "She gets $10 a week and saves $3 each time. How much is in the save jar after 8 weeks?",
+          "answer": 24,
+          "unit": "$",
+          "explain": "$3 × 8 = $24."
+        },
+        {
+          "id": "fc-kids-q4",
+          "type": "multiple_choice",
+          "prompt": "What is the point of the three jars?",
+          "choices": [
+            "To practice choosing, before the amounts are large",
+            "To hide money from the household budget",
+            "To replace a college plan"
+          ],
+          "answer": 0,
+          "explain": "The habit is the lesson. A 529 can still exist beside it."
+        },
+        {
+          "id": "fc-kids-q5",
+          "type": "true_false",
+          "prompt": "Kids should only see the spend jar, so saving stays an adult topic.",
+          "answer": false,
+          "explain": "The save jar is how saving becomes visible."
+        }
+      ]
+    },
+    {
+      "id": "fc-life",
+      "type": "lesson",
+      "title": "Once Someone Depends on You",
+      "summary": "The policy from the protecting section now has a reason.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fc-life-q1",
+          "type": "info",
+          "title": "A dependent changes the question",
+          "body": "[[Term life insurance|term-life]] pays if you die during the term. The [[beneficiary]] is who receives it.\n\nBefore anyone depended on your income, the policy had no job. A child who needs your paycheck is the job. Name the beneficiary on purpose, and check it when the family changes."
+        },
+        {
+          "id": "fc-life-q2",
+          "type": "multiple_choice",
+          "prompt": "Who is the beneficiary?",
+          "choices": [
+            "The person you name to receive the money if you die",
+            "The insurance company",
+            "The child-care center"
+          ],
+          "answer": 0,
+          "explain": "You choose them. If you do not, the policy’s default may not be who you think."
+        },
+        {
+          "id": "fc-life-q3",
+          "type": "multiple_choice",
+          "prompt": "Why does a new child change the life-insurance question?",
+          "choices": [
+            "Someone now depends on your income",
+            "Term life becomes a savings account",
+            "The premium is no longer owed"
+          ],
+          "answer": 0,
+          "explain": "The need is the dependent. The product is still term life, not a new kind of account."
+        },
+        {
+          "id": "fc-life-q4",
+          "type": "true_false",
+          "prompt": "A term policy pays the beneficiary every year, like a paycheck, while you are alive.",
+          "answer": false,
+          "explain": "It pays if you die during the term. It is not income while you are living."
+        },
+        {
+          "id": "fc-life-q5",
+          "type": "fill_blank",
+          "prompt": "The person who receives the life insurance is the ___.",
+          "choices": [
+            "beneficiary",
+            "landlord",
+            "lender"
+          ],
+          "answer": 0,
+          "explain": "Name them, and update the name when life changes."
+        }
+      ]
+    },
+    {
+      "id": "fc-budget",
+      "type": "lesson",
+      "title": "A Family Month",
+      "summary": "Childcare gets the first claim. Then the rest of the $2,000.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fc-budget-q1",
+          "type": "info",
+          "title": "Two thousand dollars",
+          "body": "This month has **$2,000** for the new family costs. Childcare needs at least **$1,200**. Diapers and food need at least **$200**.\n\nWhat remains can go to a college jar. Assign every dollar."
+        },
+        {
+          "id": "fc-budget-q2",
+          "type": "allocate",
+          "prompt": "Assign $2,000. Childcare needs at least $1,200, and diapers and food need at least $200.",
+          "total": 2000,
+          "step": 50,
+          "categories": [
+            {
+              "label": "Childcare",
+              "min": 1200
+            },
+            {
+              "label": "Diapers and food",
+              "min": 200
+            },
+            {
+              "label": "College jar"
+            }
+          ],
+          "explain": "Childcare is at least $1,200, diapers and food at least $200, and all $2,000 is assigned."
+        },
+        {
+          "id": "fc-budget-q3",
+          "type": "number",
+          "prompt": "Childcare takes $1,200 and diapers take $200. How much is left of the $2,000?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$2,000 − $1,200 − $200 = $600."
+        },
+        {
+          "id": "fc-budget-q4",
+          "type": "number",
+          "prompt": "That leftover $600 goes to the college jar every month. How much is that in a year?",
+          "answer": 7200,
+          "unit": "$",
+          "explain": "$600 × 12 = $7,200."
+        },
+        {
+          "id": "fc-budget-q5",
+          "type": "true_false",
+          "prompt": "The college jar should be filled before the childcare bill.",
+          "answer": false,
+          "explain": "Care is due this month. The college jar is what is left after the bills that cannot wait."
+        }
+      ]
+    },
+    {
+      "id": "fc-maria",
+      "type": "lesson",
+      "format": "story",
+      "title": "Maria’s Twins",
+      "summary": "Two credits are not two childcare bills paid.",
+      "xp": 10,
+      "story": {
+        "title": "Maria’s twins",
+        "character": "Maria, 34",
+        "body": "Maria is 34. She is having twins, and her income is **$85,000**, under the 2026 line where the [[child tax credit]] starts to shrink.\n\nAt the full amount, two qualifying children are **$2,200** × 2, which is **$4,400**. Childcare is **$1,000** a child each month, so **$2,000** a month, or **$24,000** a year.\n\nHer plan offers the 2026 [[Dependent Care FSA|dependent-care-fsa]] limit of **$7,500**. That covers part of the childcare. It does not cover the year."
+      },
+      "steps": [
+        {
+          "id": "fc-maria-q1",
+          "type": "number",
+          "prompt": "At the full 2026 amount, what is the child tax credit for Maria’s two children?",
+          "answer": 4400,
+          "unit": "$",
+          "explain": "$2,200 × 2 = $4,400. Her $85,000 income is under the $200,000 phaseout."
+        },
+        {
+          "id": "fc-maria-q2",
+          "type": "number",
+          "prompt": "Childcare is $1,000 per child per month. What is a month for both?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$1,000 × 2 = $2,000."
+        },
+        {
+          "id": "fc-maria-q3",
+          "type": "number",
+          "prompt": "What is that childcare for a year?",
+          "answer": 24000,
+          "unit": "$",
+          "explain": "$2,000 × 12 = $24,000."
+        },
+        {
+          "id": "fc-maria-q4",
+          "type": "number",
+          "prompt": "The FSA covers $7,500. How much of the $24,000 is still outside it?",
+          "answer": 16500,
+          "unit": "$",
+          "explain": "$24,000 − $7,500 = $16,500."
+        },
+        {
+          "id": "fc-maria-q5",
+          "type": "true_false",
+          "prompt": "The $4,400 child tax credit pays the $24,000 childcare bill.",
+          "answer": false,
+          "explain": "The credit is $4,400 at the full amount. Childcare is $24,000. They are not the same pile of money."
+        }
+      ]
+    },
+    {
+      "id": "fc-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "fc-trial",
+      "type": "boss",
+      "title": "Den Trial: Kids & Family Costs",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "fc-trial-q1",
+          "type": "number",
+          "prompt": "Formula is $90 a month. What is the year?",
+          "answer": 1080,
+          "unit": "$",
+          "explain": "$90 × 12 = $1,080."
+        },
+        {
+          "id": "fc-trial-q2",
+          "type": "number",
+          "prompt": "A 2026 child tax credit at the full amount, for one qualifying child, is how much?",
+          "answer": 2200,
+          "unit": "$",
+          "explain": "Up to $2,200, if income is under the phaseout."
+        },
+        {
+          "id": "fc-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "Which account is the 2026 work benefit for childcare, up to $7,500 if the plan offers it?",
+          "choices": [
+            "A dependent care FSA",
+            "A 529 plan",
+            "A mortgage escrow"
+          ],
+          "answer": 0,
+          "explain": "The FSA is for this year’s care. A 529 is for education later. Escrow pays tax and insurance."
+        },
+        {
+          "id": "fc-trial-q4",
+          "type": "true_false",
+          "prompt": "Once you have a child, term life insurance is a savings plan you can spend.",
+          "answer": false,
+          "explain": "It pays a beneficiary if you die during the term."
+        }
+      ]
+    }
+  ]
+}

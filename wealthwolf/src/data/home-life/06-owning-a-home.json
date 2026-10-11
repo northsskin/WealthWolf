@@ -1,0 +1,583 @@
+{
+  "id": "owning-a-home",
+  "section": "home-life",
+  "order": 6,
+  "title": "Owning a Home",
+  "description": "Tax, insurance, repairs, the HOA, and the risk in borrowing your equity.",
+  "wolfLine": "The mortgage is the payment you expected. The rest is the year you live.",
+  "terms": {
+    "property-tax": {
+      "term": "Property tax",
+      "definition": "A tax from your local government based on what your home is worth. Owners pay it. Renters pay it only inside the rent.",
+      "example": "A $3,600 yearly bill is $300 a month."
+    },
+    "escrow": {
+      "term": "Escrow",
+      "definition": "An account the lender uses to collect property tax and homeowners insurance along with the mortgage, then pay those bills for you.",
+      "example": "A $1,400 mortgage plus $300 of tax and $100 of insurance is an $1,800 payment into the loan and the escrow."
+    },
+    "homeowners-association": {
+      "term": "HOA",
+      "definition": "A homeowners association. It charges a fee and sets rules for the neighborhood or the building. The fee is on top of the mortgage.",
+      "example": "An HOA fee of $250 a month is $3,000 a year."
+    },
+    "home-equity": {
+      "term": "Home equity",
+      "definition": "What you own in the house: its value minus the loans against it.",
+      "example": "A home worth $320,000 with a $240,000 loan has $80,000 of equity."
+    },
+    "heloc": {
+      "term": "HELOC",
+      "definition": "A home equity line of credit. You borrow against the equity, and the house is the collateral. If you cannot pay, you can lose the house.",
+      "example": "Borrowing $20,000 of an $80,000 equity stake leaves $60,000 if the value stays put."
+    }
+  },
+  "lessons": [
+    {
+      "id": "oh-tax",
+      "type": "lesson",
+      "title": "Property Tax",
+      "summary": "The bill comes from the town, not the bank.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "oh-tax-q1",
+          "type": "info",
+          "title": "A local bill",
+          "body": "[[Property tax]] is based on the home’s value. This home’s bill is **$3,600** a year. That is **$300** a month.\n\nThere is no single national rate. Use the bill, not a rumor about “what tax usually is.”"
+        },
+        {
+          "id": "oh-tax-q2",
+          "type": "number",
+          "prompt": "The yearly property tax is $3,600. What is that per month?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$3,600 ÷ 12 = $300."
+        },
+        {
+          "id": "oh-tax-q3",
+          "type": "number",
+          "prompt": "You set aside $300 a month. After 12 months, how much have you set aside?",
+          "answer": 3600,
+          "unit": "$",
+          "explain": "$300 × 12 = $3,600, which matches the bill."
+        },
+        {
+          "id": "oh-tax-q4",
+          "type": "multiple_choice",
+          "prompt": "Who sends the property tax bill?",
+          "choices": [
+            "Your local government",
+            "The inspector",
+            "The previous owner, forever"
+          ],
+          "answer": 0,
+          "explain": "The town or county assesses it. The lender may collect it, but the tax is not the lender’s fee."
+        },
+        {
+          "id": "oh-tax-q5",
+          "type": "true_false",
+          "prompt": "Renters never feel property tax, because only owners are billed.",
+          "answer": false,
+          "explain": "Owners are billed. Landlords fold the tax into the rent."
+        }
+      ]
+    },
+    {
+      "id": "oh-escrow",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Insurance and Escrow",
+      "summary": "The lender often collects the tax and the premium for you.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "oh-escrow-q1",
+          "type": "info",
+          "title": "One payment, three jobs",
+          "body": "Homeowners insurance here costs **$1,200** a year, so **$100** a month. The [[deductible]] is **$1,000**. The [[premium]] is the yearly price.\n\n[[Escrow]] adds that **$100** and **$300** of tax to a **$1,400** [[mortgage]] payment. You pay **$1,800**, and the lender pays the tax and the insurance when they come due."
+        },
+        {
+          "id": "oh-escrow-q2",
+          "type": "number",
+          "prompt": "A $1,200 yearly premium is how much per month?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$1,200 ÷ 12 = $100."
+        },
+        {
+          "id": "oh-escrow-q3",
+          "type": "number",
+          "prompt": "Mortgage $1,400, tax $300, insurance $100. What is the full monthly payment?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$1,400 + $300 + $100 = $1,800."
+        },
+        {
+          "id": "oh-escrow-q4",
+          "type": "sort",
+          "prompt": "On this loan, where does each bill get paid from?",
+          "buckets": [
+            "In the escrow payment",
+            "Outside escrow"
+          ],
+          "items": [
+            [
+              "This loan’s property tax",
+              0
+            ],
+            [
+              "This loan’s homeowners insurance",
+              0
+            ],
+            [
+              "The HOA fee",
+              1
+            ],
+            [
+              "A broken water heater",
+              1
+            ]
+          ],
+          "explain": "Tax and insurance ride in the payment. The HOA and the repairs do not."
+        },
+        {
+          "id": "oh-escrow-q5",
+          "type": "true_false",
+          "prompt": "Escrow means the tax and the insurance are free.",
+          "answer": false,
+          "explain": "You pay them every month inside the $1,800. Escrow only changes who holds the money until the bill is due."
+        }
+      ]
+    },
+    {
+      "id": "oh-maintain",
+      "type": "lesson",
+      "title": "The 1% Sketch",
+      "summary": "A rough jar for the things that break.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "oh-maintain-q1",
+          "type": "info",
+          "title": "One percent, as a sketch",
+          "body": "A common sketch is to set aside about **1%** of the home’s value each year for maintenance. On a **$300,000** home, that is **$3,000** a year, or **$250** a month.\n\nA new roof can cost more than a year of that jar. The 1% is a starting point, not a quote."
+        },
+        {
+          "id": "oh-maintain-q2",
+          "type": "number",
+          "prompt": "What is 1% of a $300,000 home?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$300,000 × 0.01 = $3,000 a year."
+        },
+        {
+          "id": "oh-maintain-q3",
+          "type": "number",
+          "prompt": "What is that $3,000 per month?",
+          "answer": 250,
+          "unit": "$",
+          "explain": "$3,000 ÷ 12 = $250."
+        },
+        {
+          "id": "oh-maintain-q4",
+          "type": "number",
+          "prompt": "The water heater costs $900. How much of a $3,000 jar is left?",
+          "answer": 2100,
+          "unit": "$",
+          "explain": "$3,000 − $900 = $2,100."
+        },
+        {
+          "id": "oh-maintain-q5",
+          "type": "true_false",
+          "prompt": "The 1% sketch is the most a repair is allowed to cost.",
+          "answer": false,
+          "explain": "It is a savings target. A repair can cost more, which is why the jar exists before the break."
+        }
+      ]
+    },
+    {
+      "id": "oh-hoa",
+      "type": "lesson",
+      "format": "spot",
+      "title": "The HOA Line",
+      "summary": "It is easy to budget the mortgage and miss the fee.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "oh-hoa-q1",
+          "type": "info",
+          "title": "A third bill",
+          "body": "An [[HOA|homeowners-association]] fee is not part of the mortgage and not part of escrow. On this statement it is **$250**.\n\n**$250** a month is **$3,000** a year, on top of the **$1,800** you already counted for the loan, the tax, and the insurance."
+        },
+        {
+          "id": "oh-hoa-q2",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "October housing",
+            "lines": [
+              {
+                "id": "mort",
+                "label": "Mortgage payment",
+                "amount": 1400.0
+              },
+              {
+                "id": "tax",
+                "label": "Property tax, escrow",
+                "amount": 300.0
+              },
+              {
+                "id": "ins",
+                "label": "Home insurance, escrow",
+                "amount": 100.0
+              },
+              {
+                "id": "hoa",
+                "label": "HOA fee",
+                "amount": 250.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "This month",
+                "amount": 2050.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "Which line is the HOA fee?",
+          "answer": "hoa",
+          "explain": "It is the $250 line. Escrow did not include it."
+        },
+        {
+          "id": "oh-hoa-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "October housing",
+            "lines": [
+              {
+                "id": "mort",
+                "label": "Mortgage payment",
+                "amount": 1400.0
+              },
+              {
+                "id": "tax",
+                "label": "Property tax, escrow",
+                "amount": 300.0
+              },
+              {
+                "id": "ins",
+                "label": "Home insurance, escrow",
+                "amount": 100.0
+              },
+              {
+                "id": "hoa",
+                "label": "HOA fee",
+                "amount": 250.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "This month",
+                "amount": 2050.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "What is this whole October statement?",
+          "answer": 2050,
+          "unit": "$",
+          "explain": "$1,400 + $300 + $100 + $250 = $2,050."
+        },
+        {
+          "id": "oh-hoa-q4",
+          "type": "number",
+          "prompt": "What is the HOA fee for a year at $250 a month?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$250 × 12 = $3,000."
+        },
+        {
+          "id": "oh-hoa-q5",
+          "type": "true_false",
+          "prompt": "An HOA fee is optional once you have already closed.",
+          "answer": false,
+          "explain": "If the home is in the association, the fee is part of owning it. Read it before you offer."
+        }
+      ]
+    },
+    {
+      "id": "oh-equity",
+      "type": "lesson",
+      "title": "Home Equity",
+      "summary": "Value minus what you owe.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "oh-equity-q1",
+          "type": "info",
+          "title": "The stake",
+          "body": "[[Home equity]] is the home’s value minus the loans against it.\n\nWorth **$320,000**. Loan **$240,000**. Equity **$80,000**. If the value falls and the loan does not, the equity shrinks."
+        },
+        {
+          "id": "oh-equity-q2",
+          "type": "number",
+          "prompt": "The home is worth $320,000 and the loan is $240,000. How much equity is that?",
+          "answer": 80000,
+          "unit": "$",
+          "explain": "$320,000 − $240,000 = $80,000."
+        },
+        {
+          "id": "oh-equity-q3",
+          "type": "number",
+          "prompt": "The value falls to $300,000 and the loan is still $240,000. How much equity is left?",
+          "answer": 60000,
+          "unit": "$",
+          "explain": "$300,000 − $240,000 = $60,000."
+        },
+        {
+          "id": "oh-equity-q4",
+          "type": "multiple_choice",
+          "prompt": "Which event raises your equity if the value stays the same?",
+          "choices": [
+            "Paying principal down",
+            "Paying interest",
+            "Paying the insurance deductible"
+          ],
+          "answer": 0,
+          "explain": "Principal reduces the loan. Interest and the deductible do not."
+        },
+        {
+          "id": "oh-equity-q5",
+          "type": "true_false",
+          "prompt": "Equity is cash in your checking account.",
+          "answer": false,
+          "explain": "It is a stake in the house. Turning it into cash means selling, or borrowing against it."
+        }
+      ]
+    },
+    {
+      "id": "oh-heloc",
+      "type": "lesson",
+      "title": "A HELOC",
+      "summary": "Borrowing the equity puts the house on the line.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "oh-heloc-q1",
+          "type": "info",
+          "title": "The house is the collateral",
+          "body": "A [[HELOC]] lets you borrow against [[home equity]]. This example borrows **$20,000** of an **$80,000** stake.\n\nThe old mortgage is **$240,000**. After the draw, you owe **$260,000**. If the value stays **$320,000**, equity left is **$60,000**. Miss the payments and you can lose the house."
+        },
+        {
+          "id": "oh-heloc-q2",
+          "type": "number",
+          "prompt": "The mortgage is $240,000 and you draw $20,000. How much do you owe in total?",
+          "answer": 260000,
+          "unit": "$",
+          "explain": "$240,000 + $20,000 = $260,000."
+        },
+        {
+          "id": "oh-heloc-q3",
+          "type": "number",
+          "prompt": "The home is still worth $320,000. How much equity is left after that draw?",
+          "answer": 60000,
+          "unit": "$",
+          "explain": "$320,000 − $260,000 = $60,000."
+        },
+        {
+          "id": "oh-heloc-q4",
+          "type": "multiple_choice",
+          "prompt": "What is the risk that a credit card does not have?",
+          "choices": [
+            "The lender can take the house",
+            "The interest is always zero",
+            "You must sell the house to open the line"
+          ],
+          "answer": 0,
+          "explain": "The house is the collateral. That is the difference."
+        },
+        {
+          "id": "oh-heloc-q5",
+          "type": "true_false",
+          "prompt": "A HELOC is a gift of your equity, so there is nothing to pay back.",
+          "answer": false,
+          "explain": "It is a loan. The equity is the collateral, not a present."
+        }
+      ]
+    },
+    {
+      "id": "oh-budget",
+      "type": "lesson",
+      "title": "A Housing Jar",
+      "summary": "Give the repair jar a number before the year spends it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "oh-budget-q1",
+          "type": "info",
+          "title": "Five hundred dollars",
+          "body": "You set aside **$500** a month for the house beyond the mortgage payment. The 1% sketch says maintenance wants at least **$250** of that.\n\nThe rest can go to a project or a roof jar. Every dollar gets a job."
+        },
+        {
+          "id": "oh-budget-q2",
+          "type": "allocate",
+          "prompt": "Set aside $500. Maintenance needs at least $250. Assign every dollar.",
+          "total": 500,
+          "step": 10,
+          "categories": [
+            {
+              "label": "Maintenance",
+              "min": 250
+            },
+            {
+              "label": "A project"
+            },
+            {
+              "label": "Roof jar"
+            }
+          ],
+          "explain": "Maintenance gets at least $250. All $500 is assigned."
+        },
+        {
+          "id": "oh-budget-q3",
+          "type": "number",
+          "prompt": "Maintenance takes $250 of the $500. How much is left for the project and the roof jar together?",
+          "answer": 250,
+          "unit": "$",
+          "explain": "$500 − $250 = $250."
+        },
+        {
+          "id": "oh-budget-q4",
+          "type": "number",
+          "prompt": "The roof jar gets $100 a month. How much is that in a year?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$100 × 12 = $1,200."
+        },
+        {
+          "id": "oh-budget-q5",
+          "type": "true_false",
+          "prompt": "Once the mortgage is paid this month, the housing budget is finished.",
+          "answer": false,
+          "explain": "The mortgage does not include the HOA, the repairs, or the roof jar."
+        }
+      ]
+    },
+    {
+      "id": "oh-nia",
+      "type": "lesson",
+      "format": "story",
+      "title": "Nia’s First Year",
+      "summary": "The surprise was a bill she could have read at closing.",
+      "xp": 10,
+      "story": {
+        "title": "Nia’s first year",
+        "character": "Nia, 33",
+        "body": "Nia is 33 and a graphic designer. Her home is worth **$250,000**. She saved the 1% sketch, **$2,500**, and felt ready.\n\nThe water heater died in March and cost **$900**. That fit in the jar. The [[HOA|homeowners-association]] fee did not. It is **$200** a month, **$2,400** a year, and she had budgeted **$0**.\n\nThe repair jar was never going to pay the association. She adds the fee to the monthly housing number before she calls the year a success."
+      },
+      "steps": [
+        {
+          "id": "oh-nia-q1",
+          "type": "number",
+          "prompt": "What is 1% of Nia’s $250,000 home?",
+          "answer": 2500,
+          "unit": "$",
+          "explain": "$250,000 × 0.01 = $2,500."
+        },
+        {
+          "id": "oh-nia-q2",
+          "type": "number",
+          "prompt": "The water heater is $900. How much of the $2,500 jar is left?",
+          "answer": 1600,
+          "unit": "$",
+          "explain": "$2,500 − $900 = $1,600."
+        },
+        {
+          "id": "oh-nia-q3",
+          "type": "number",
+          "prompt": "The HOA fee is $200 a month. What is that for the year?",
+          "answer": 2400,
+          "unit": "$",
+          "explain": "$200 × 12 = $2,400."
+        },
+        {
+          "id": "oh-nia-q4",
+          "type": "number",
+          "prompt": "She tries to pay the $2,400 HOA from the $1,600 left in the repair jar. How short is she?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "$2,400 − $1,600 = $800. The fee needed its own line."
+        },
+        {
+          "id": "oh-nia-q5",
+          "type": "multiple_choice",
+          "prompt": "What should next year’s budget do with the HOA?",
+          "choices": [
+            "Give it a monthly line of its own",
+            "Hope the repair jar covers it",
+            "Treat it as optional"
+          ],
+          "answer": 0,
+          "explain": "A fee you can see at closing is not a surprise. It is a bill."
+        }
+      ]
+    },
+    {
+      "id": "oh-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "oh-trial",
+      "type": "boss",
+      "title": "Den Trial: Owning a Home",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "oh-trial-q1",
+          "type": "number",
+          "prompt": "Property tax is $4,800 a year. What is the monthly set-aside?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$4,800 ÷ 12 = $400."
+        },
+        {
+          "id": "oh-trial-q2",
+          "type": "number",
+          "prompt": "A home is worth $280,000 and the loan is $200,000. How much equity is that?",
+          "answer": 80000,
+          "unit": "$",
+          "explain": "$280,000 − $200,000 = $80,000."
+        },
+        {
+          "id": "oh-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "Which bill is the house itself on the line for?",
+          "choices": [
+            "A HELOC",
+            "A streaming subscription",
+            "An application fee"
+          ],
+          "answer": 0,
+          "explain": "The HELOC uses the house as collateral."
+        },
+        {
+          "id": "oh-trial-q4",
+          "type": "true_false",
+          "prompt": "An HOA fee is included in a typical mortgage payment.",
+          "answer": false,
+          "explain": "It is a separate bill. Read it before you buy."
+        }
+      ]
+    }
+  ]
+}
