@@ -1,0 +1,638 @@
+{
+  "id": "identity-theft",
+  "section": "protecting",
+  "order": 2,
+  "title": "Identity Theft",
+  "description": "What thieves steal, how you spot it, and how you lock the file.",
+  "wolfLine": "Your name is a key. Do not leave copies lying around.",
+  "terms": {
+    "identity-theft": {
+      "term": "Identity theft",
+      "definition": "Someone uses your name, Social Security number, or accounts to open credit, file taxes, or spend money as you.",
+      "example": "A card you never applied for shows up, and the bill is already $1,800."
+    }
+  },
+  "lessons": [
+    {
+      "id": "it-wants",
+      "type": "lesson",
+      "format": "sort",
+      "title": "What Thieves Want",
+      "summary": "The number they want most is the one that opens other accounts.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "it-wants-q1",
+          "type": "sort",
+          "context": "[[Identity theft]] means someone uses your name or numbers to borrow, spend, or file as you.",
+          "prompt": "Useful to a thief, or not the prize?",
+          "buckets": [
+            "Useful to a thief",
+            "Not the prize"
+          ],
+          "items": [
+            [
+              "Your Social Security number",
+              0
+            ],
+            [
+              "Your bank login and the text code",
+              0
+            ],
+            [
+              "Your favorite color",
+              1
+            ],
+            [
+              "A photo of your lunch",
+              1
+            ],
+            [
+              "A copy of your tax return",
+              0
+            ]
+          ],
+          "explain": "The prize is anything that opens money or credit in your name."
+        },
+        {
+          "id": "it-wants-q2",
+          "type": "multiple_choice",
+          "prompt": "Why is a Social Security number so useful to a thief?",
+          "choices": [
+            "It can help them open credit or file a tax return as you",
+            "It is only a store rewards number",
+            "Banks publish it on purpose"
+          ],
+          "answer": 0,
+          "explain": "That number follows you. A store login does not."
+        },
+        {
+          "id": "it-wants-q3",
+          "type": "true_false",
+          "prompt": "A one-time text code is safe to read aloud to a caller.",
+          "answer": false,
+          "explain": "The code is the second key. Say it and the account is theirs."
+        },
+        {
+          "id": "it-wants-q4",
+          "type": "multiple_choice",
+          "prompt": "Which is worth locking up, not posting?",
+          "choices": [
+            "A photo of your driver’s license",
+            "A picture of your dog",
+            "A book title"
+          ],
+          "answer": 0,
+          "explain": "The license has the numbers a form asks for."
+        },
+        {
+          "id": "it-wants-q5",
+          "type": "fill_blank",
+          "prompt": "Identity theft is someone acting as ___ with your information.",
+          "choices": [
+            "you",
+            "your bank",
+            "your employer"
+          ],
+          "answer": 0,
+          "explain": "The accounts and the bills land on you."
+        }
+      ]
+    },
+    {
+      "id": "it-how",
+      "type": "lesson",
+      "title": "How It Happens",
+      "summary": "A stolen password, a lost wallet, or a form left in the trash.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "it-how-q1",
+          "type": "multiple_choice",
+          "context": "You already use [[two-factor authentication|two-factor-authentication]] so a password alone is not enough.",
+          "prompt": "Which is a common way identity theft starts?",
+          "choices": [
+            "A stolen login, a lost wallet, or a data leak",
+            "Paying a bill you actually owe",
+            "Using two-factor authentication"
+          ],
+          "answer": 0,
+          "explain": "The thief needs a way in. A leak, a purse, or a reused password is enough."
+        },
+        {
+          "id": "it-how-q2",
+          "type": "true_false",
+          "prompt": "Using the same password on your email and your bank makes one leak enough.",
+          "answer": true,
+          "explain": "Email is the reset button for everything else."
+        },
+        {
+          "id": "it-how-q3",
+          "type": "multiple_choice",
+          "prompt": "A form in the mailbox with your Social Security number on it. What is the risk?",
+          "choices": [
+            "Anyone who takes the mail can use that number",
+            "Mail is always shredded by the carrier",
+            "The number expires at the curb"
+          ],
+          "answer": 0,
+          "explain": "Outgoing and incoming mail is a pile of keys."
+        },
+        {
+          "id": "it-how-q4",
+          "type": "multiple_choice",
+          "prompt": "What is a safer habit for old tax forms?",
+          "choices": [
+            "Shred them or lock them",
+            "Toss them in the recycling as they are",
+            "Leave them in the car"
+          ],
+          "answer": 0,
+          "explain": "Recycling does not hide a Social Security number."
+        },
+        {
+          "id": "it-how-q5",
+          "type": "true_false",
+          "prompt": "A company leak means the thief already has your house keys.",
+          "answer": false,
+          "explain": "A leak is a head start, not a finished theft. Freezing credit still blocks new loans."
+        }
+      ]
+    },
+    {
+      "id": "it-spot",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Warning Signs",
+      "summary": "The bill you do not recognize is the alarm.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "it-spot-q1",
+          "type": "spot",
+          "context": "A [[credit report]] can show the same surprise. This statement shows it first.",
+          "doc": {
+            "kind": "statement",
+            "title": "Card statement",
+            "subtitle": "March",
+            "lines": [
+              {
+                "id": "rent",
+                "label": "Rent",
+                "amount": 1200.0
+              },
+              {
+                "id": "groceries",
+                "label": "Grocery store",
+                "amount": 86.0
+              },
+              {
+                "id": "loan",
+                "label": "Online loan you never opened",
+                "amount": 2400.0
+              },
+              {
+                "id": "phone",
+                "label": "Phone bill",
+                "amount": 70.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "New charges",
+                "amount": 3756.0,
+                "strong": true
+              }
+            ],
+            "note": "You recognize the rent, the groceries, and the phone bill."
+          },
+          "prompt": "Which line is the warning?",
+          "answer": "loan",
+          "explain": "An online loan you never opened is someone borrowing in your name."
+        },
+        {
+          "id": "it-spot-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Card statement",
+            "subtitle": "March",
+            "lines": [
+              {
+                "id": "rent",
+                "label": "Rent",
+                "amount": 1200.0
+              },
+              {
+                "id": "groceries",
+                "label": "Grocery store",
+                "amount": 86.0
+              },
+              {
+                "id": "loan",
+                "label": "Online loan you never opened",
+                "amount": 2400.0
+              },
+              {
+                "id": "phone",
+                "label": "Phone bill",
+                "amount": 70.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "New charges",
+                "amount": 3756.0,
+                "strong": true
+              }
+            ],
+            "note": "You recognize the rent, the groceries, and the phone bill."
+          },
+          "prompt": "How much is the loan you never opened?",
+          "answer": 2400,
+          "unit": "$",
+          "explain": "That line is $2,400."
+        },
+        {
+          "id": "it-spot-q3",
+          "type": "number",
+          "prompt": "What do the three charges you do recognize add up to?",
+          "answer": 1356,
+          "unit": "$",
+          "explain": "$1,200 + $86 + $70 = $1,356."
+        },
+        {
+          "id": "it-spot-q4",
+          "type": "multiple_choice",
+          "prompt": "A new card arrives that you did not apply for. What is that?",
+          "choices": [
+            "A warning sign of identity theft",
+            "A gift from the post office",
+            "Proof your score went up"
+          ],
+          "answer": 0,
+          "explain": "You did not ask. Someone may have asked as you."
+        },
+        {
+          "id": "it-spot-q5",
+          "type": "true_false",
+          "prompt": "A bill you recognize, for an amount you expected, is the line to panic over.",
+          "answer": false,
+          "explain": "The surprise account is the signal. The rent is the rent."
+        }
+      ]
+    },
+    {
+      "id": "it-freeze",
+      "type": "lesson",
+      "title": "Freeze Your Credit",
+      "summary": "A freeze is free, and it is one lock per bureau.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "it-freeze-q1",
+          "type": "multiple_choice",
+          "context": "A [[credit freeze]] is a lock at each [[credit bureau]]. The three big ones are Equifax, Experian, and TransUnion.",
+          "prompt": "A credit freeze stops what?",
+          "choices": [
+            "New lenders from opening credit in your name",
+            "Your existing rent from being paid",
+            "Your paycheck"
+          ],
+          "answer": 0,
+          "explain": "Old accounts still work. New credit applications stall until you lift the freeze."
+        },
+        {
+          "id": "it-freeze-q2",
+          "type": "number",
+          "prompt": "How many bureaus do you freeze to cover the three big ones?",
+          "answer": 3,
+          "explain": "Equifax, Experian, and TransUnion. One freeze is not all three."
+        },
+        {
+          "id": "it-freeze-q3",
+          "type": "true_false",
+          "prompt": "A freeze at one bureau protects you at the other two.",
+          "answer": false,
+          "explain": "Each bureau has its own lock."
+        },
+        {
+          "id": "it-freeze-q4",
+          "type": "multiple_choice",
+          "prompt": "You want to apply for a car loan. What do you do with the freeze?",
+          "choices": [
+            "Lift it at the bureau the lender will check, then freeze again",
+            "Leave it and hope the lender skips the report",
+            "Pay the thief to lift it"
+          ],
+          "answer": 0,
+          "explain": "You hold the key. Lift it for the application, then lock it again."
+        },
+        {
+          "id": "it-freeze-q5",
+          "type": "true_false",
+          "prompt": "Placing a credit freeze costs a yearly fee at each bureau.",
+          "answer": false,
+          "explain": "A freeze is free. A company that charges you to “freeze” is selling something else."
+        }
+      ]
+    },
+    {
+      "id": "it-steps",
+      "type": "lesson",
+      "title": "The Recovery Steps",
+      "summary": "Start the official plan, then lock the doors.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "it-steps-q1",
+          "type": "order",
+          "context": "[[Identity theft]] recovery starts at IdentityTheft.gov. A [[credit freeze]] is part of that plan.",
+          "prompt": "Put the first recovery steps in order.",
+          "items": [
+            "Report it at IdentityTheft.gov",
+            "Freeze your credit at each bureau",
+            "Dispute the accounts that are not yours",
+            "Keep checking your reports after that"
+          ],
+          "explain": "IdentityTheft.gov builds the plan. The freeze stops the next account. The dispute challenges the one already there."
+        },
+        {
+          "id": "it-steps-q2",
+          "type": "multiple_choice",
+          "prompt": "What is IdentityTheft.gov for?",
+          "choices": [
+            "The federal place that walks you through a recovery plan",
+            "A site that sells you a new Social Security number",
+            "Your bank’s login page"
+          ],
+          "answer": 0,
+          "explain": "It is the Federal Trade Commission’s recovery site, not a shop."
+        },
+        {
+          "id": "it-steps-q3",
+          "type": "true_false",
+          "prompt": "You should pay a company that promises a new Social Security number.",
+          "answer": false,
+          "explain": "You almost never get a new number. Anyone selling one is a second scam."
+        },
+        {
+          "id": "it-steps-q4",
+          "type": "multiple_choice",
+          "prompt": "An account on your report is not yours. What do you do with it?",
+          "choices": [
+            "Dispute it and say it is the result of identity theft",
+            "Pay it so it will go away quietly",
+            "Ignore it for a year"
+          ],
+          "answer": 0,
+          "explain": "Paying a debt you do not owe can make it look like you agreed."
+        },
+        {
+          "id": "it-steps-q5",
+          "type": "fill_blank",
+          "prompt": "Freeze your credit at ___ of the three big bureaus.",
+          "choices": [
+            "each",
+            "one",
+            "none"
+          ],
+          "answer": 0,
+          "explain": "One lock leaves two doors open."
+        }
+      ]
+    },
+    {
+      "id": "it-mail",
+      "type": "lesson",
+      "title": "Mail and Documents",
+      "summary": "The trash can is a filing cabinet if you let it be.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "it-mail-q1",
+          "type": "multiple_choice",
+          "prompt": "Which paper is worth shredding?",
+          "choices": [
+            "A tax form with your Social Security number",
+            "A grocery flyer",
+            "A blank envelope"
+          ],
+          "answer": 0,
+          "explain": "The form has the number. The flyer does not."
+        },
+        {
+          "id": "it-mail-q2",
+          "type": "true_false",
+          "prompt": "A locked mailbox matters more than a clever password on one website.",
+          "answer": false,
+          "explain": "Both matter. The mailbox is just the one people forget."
+        },
+        {
+          "id": "it-mail-q3",
+          "type": "multiple_choice",
+          "prompt": "You are going on a trip. What do you do about the mail?",
+          "choices": [
+            "Have it held, or ask someone you trust to pick it up",
+            "Leave it in the box so the carrier knows you are away",
+            "Post the dates on social media"
+          ],
+          "answer": 0,
+          "explain": "A full box advertises an empty house and hands over your papers."
+        },
+        {
+          "id": "it-mail-q4",
+          "type": "multiple_choice",
+          "prompt": "A medical bill has your name, your address, and your account number. Where does it belong?",
+          "choices": [
+            "In a file you control, then shredded when you no longer need it",
+            "In the recycling tonight",
+            "On the front seat of the car"
+          ],
+          "answer": 0,
+          "explain": "Account numbers are keys. Treat the paper like one."
+        },
+        {
+          "id": "it-mail-q5",
+          "type": "true_false",
+          "prompt": "Posting a photo of your boarding pass is harmless.",
+          "answer": false,
+          "explain": "The barcode can hold a record locator. Crop it or skip the photo."
+        }
+      ]
+    },
+    {
+      "id": "it-tax",
+      "type": "lesson",
+      "title": "Tax Identity Theft",
+      "summary": "Someone files as you, and your refund becomes their payday.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "it-tax-q1",
+          "type": "info",
+          "title": "The refund you never asked for",
+          "body": "Tax identity theft is when someone files a return using your Social Security number, usually to steal the refund.\n\nYou find out when the IRS rejects your real return because one was already filed, or when a transcript shows wages from a job you never had."
+        },
+        {
+          "id": "it-tax-q2",
+          "type": "multiple_choice",
+          "prompt": "The IRS rejects your return because a return was already filed. What might that mean?",
+          "choices": [
+            "Someone may have filed using your Social Security number",
+            "You no longer owe any tax, ever",
+            "Your employer erased you"
+          ],
+          "answer": 0,
+          "explain": "A return you did not file is the warning."
+        },
+        {
+          "id": "it-tax-q3",
+          "type": "true_false",
+          "prompt": "The IRS first contact about a tax bill is a social-media message demanding gift cards.",
+          "answer": false,
+          "explain": "That is a scam wearing the IRS as a costume. Real IRS mail is mail."
+        },
+        {
+          "id": "it-tax-q4",
+          "type": "multiple_choice",
+          "prompt": "What is a careful response to a letter that really is from the IRS?",
+          "choices": [
+            "Read it and respond the way the letter says, or call the number on irs.gov",
+            "Wire the amount to the person who texted you about the letter",
+            "Ignore every IRS letter"
+          ],
+          "answer": 0,
+          "explain": "Use the letter and the official site, not a stranger who already knows you got mail."
+        },
+        {
+          "id": "it-tax-q5",
+          "type": "number",
+          "prompt": "A thief’s fake refund was $2,200. That money is not a bill you automatically owe. If a letter says you owe $400 of tax from a job you never worked, and you prove the job was not yours, the $400 is not your tax. How much of that $400 is yours?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "None of it. A job you never worked is not your income."
+        }
+      ]
+    },
+    {
+      "id": "it-marcus",
+      "type": "lesson",
+      "format": "story",
+      "title": "Marcus Finds an Account",
+      "summary": "The letter was the alarm. The freeze is the lock.",
+      "xp": 10,
+      "story": {
+        "title": "The card he never asked for",
+        "character": "Marcus, 41, school bus driver",
+        "body": "Marcus opens a letter from a store card he has never held. The balance is **$1,800**. He did not shop there. He pulls his [[credit report]] and finds the card, opened six weeks ago, plus an inquiry he does not remember.\n\nHe has not frozen his credit. The three bureaus are still taking new applications in his name."
+      },
+      "steps": [
+        {
+          "id": "it-marcus-q1",
+          "type": "number",
+          "prompt": "How much is the store card he never opened?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "The letter says $1,800."
+        },
+        {
+          "id": "it-marcus-q2",
+          "type": "multiple_choice",
+          "prompt": "What is the first official place to start a recovery plan?",
+          "choices": [
+            "IdentityTheft.gov",
+            "A text from someone offering to fix it for $300",
+            "A new Social Security number sold online"
+          ],
+          "answer": 0,
+          "explain": "Start with the Federal Trade Commission’s site, not a helper who found you."
+        },
+        {
+          "id": "it-marcus-q3",
+          "type": "number",
+          "prompt": "He freezes Equifax, Experian, and TransUnion. How many freezes is that?",
+          "answer": 3,
+          "explain": "Three bureaus, three freezes."
+        },
+        {
+          "id": "it-marcus-q4",
+          "type": "true_false",
+          "prompt": "Paying the $1,800 quickly is the best way to prove the card is not his.",
+          "answer": false,
+          "explain": "Paying can look like he accepts the debt. He disputes it."
+        },
+        {
+          "id": "it-marcus-q5",
+          "type": "multiple_choice",
+          "prompt": "After the freeze, a new lender wants to open credit in his name. What happens?",
+          "choices": [
+            "The lender cannot pull the report until Marcus lifts the freeze",
+            "The card opens anyway",
+            "The freeze expires at midnight"
+          ],
+          "answer": 0,
+          "explain": "That is what the lock is for."
+        }
+      ]
+    },
+    {
+      "id": "it-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "it-trial",
+      "type": "boss",
+      "title": "Den Trial: Identity Theft",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "it-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "Which of these belongs in the shredder?",
+          "choices": [
+            "Last year’s tax form",
+            "A takeout menu",
+            "A birthday card with no numbers on it"
+          ],
+          "answer": 0,
+          "explain": "The tax form carries the Social Security number."
+        },
+        {
+          "id": "it-trial-q2",
+          "type": "true_false",
+          "prompt": "A freeze at Experian also freezes Equifax and TransUnion.",
+          "answer": false,
+          "explain": "Each bureau keeps its own lock."
+        },
+        {
+          "id": "it-trial-q3",
+          "type": "number",
+          "prompt": "A card you never opened shows a $900 balance and a $300 fee. How much is on that account in total?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$900 + $300 = $1,200."
+        },
+        {
+          "id": "it-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "Where do you start the federal recovery plan?",
+          "choices": [
+            "IdentityTheft.gov",
+            "A gift-card payment to the caller",
+            "By ignoring the strange account"
+          ],
+          "answer": 0,
+          "explain": "That site is the front door. The freeze and the disputes follow."
+        }
+      ]
+    }
+  ]
+}

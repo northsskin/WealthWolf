@@ -1,0 +1,720 @@
+{
+  "id": "disability-umbrella",
+  "section": "protecting",
+  "order": 9,
+  "title": "Disability & Umbrella Coverage",
+  "description": "The paycheck if you cannot work, and extra liability if a lawsuit runs past the limit.",
+  "wolfLine": "Insure the income. Then look at what a lawsuit could reach.",
+  "terms": {
+    "disability-insurance": {
+      "term": "Disability insurance",
+      "definition": "Insurance that replaces part of your income if an illness or injury keeps you from working.",
+      "example": "You earn $5,000 a month. A policy that pays 60% would pay $3,000 a month while you qualify."
+    },
+    "umbrella-policy": {
+      "term": "Umbrella policy",
+      "definition": "Extra liability coverage that sits on top of your auto or home liability limits when a lawsuit blows past them.",
+      "example": "Auto liability stops at $250,000. A lawsuit is $900,000. An umbrella can cover the $650,000 gap, up to its own limit."
+    }
+  },
+  "lessons": [
+    {
+      "id": "du-what",
+      "type": "lesson",
+      "title": "Income Insurance",
+      "summary": "Your paycheck is the asset. This policy protects it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "du-what-q1",
+          "type": "multiple_choice",
+          "context": "[[Disability insurance]] is income insurance. Work sometimes offers a short version. It is not the same as life insurance, which pays after you die.",
+          "prompt": "What does disability insurance replace?",
+          "choices": [
+            "Part of your income if you cannot work",
+            "The market value of your car",
+            "A life insurance death benefit"
+          ],
+          "answer": 0,
+          "explain": "The loss is the paycheck that stops."
+        },
+        {
+          "id": "du-what-q2",
+          "type": "true_false",
+          "prompt": "If you do not work, disability insurance has a paycheck to replace.",
+          "answer": false,
+          "explain": "No earned income, nothing for this policy to replace."
+        },
+        {
+          "id": "du-what-q3",
+          "type": "multiple_choice",
+          "prompt": "Why do people skip this and then regret it?",
+          "choices": [
+            "A long illness is more common than they think, and the paycheck stops anyway",
+            "The policy pays their rent in cash even when they are healthy",
+            "It is illegal to buy"
+          ],
+          "answer": 0,
+          "explain": "The premium looks optional until the paychecks stop."
+        },
+        {
+          "id": "du-what-q4",
+          "type": "number",
+          "prompt": "You earn $4,000 a month. You miss three months of work with no disability coverage and no paid leave. How much pay is missing?",
+          "answer": 12000,
+          "unit": "$",
+          "explain": "$4,000 × 3 = $12,000."
+        },
+        {
+          "id": "du-what-q5",
+          "type": "fill_blank",
+          "prompt": "Disability insurance protects your ___.",
+          "choices": [
+            "income",
+            "luggage",
+            "credit score"
+          ],
+          "answer": 0,
+          "explain": "The bills stay. The paycheck is what this policy stands in for."
+        }
+      ]
+    },
+    {
+      "id": "du-length",
+      "type": "lesson",
+      "title": "Short Term and Long Term",
+      "summary": "One covers weeks. The other covers the year you did not plan.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "du-length-q1",
+          "type": "multiple_choice",
+          "context": "Short-term coverage often runs for a few months. Long-term coverage can run for years. A job’s plan may offer one, both, or neither.",
+          "prompt": "Short-term disability is built for:",
+          "choices": [
+            "A few weeks or months away from work",
+            "The rest of your life only",
+            "A cracked phone screen"
+          ],
+          "answer": 0,
+          "explain": "It is the bridge. It is not the whole road."
+        },
+        {
+          "id": "du-length-q2",
+          "type": "multiple_choice",
+          "prompt": "Long-term disability is built for:",
+          "choices": [
+            "An illness or injury that keeps you out for a long stretch",
+            "A three-day cold",
+            "A parking ticket"
+          ],
+          "answer": 0,
+          "explain": "That is the policy that matters if you cannot return this year."
+        },
+        {
+          "id": "du-length-q3",
+          "type": "true_false",
+          "prompt": "Short-term coverage makes long-term coverage unnecessary.",
+          "answer": false,
+          "explain": "The short policy ends. The long one is what is left."
+        },
+        {
+          "id": "du-length-q4",
+          "type": "multiple_choice",
+          "prompt": "Your job offers short-term disability at 60% of pay for 12 weeks, and nothing after. What is the hole?",
+          "choices": [
+            "Any illness that lasts longer than those 12 weeks",
+            "The first day of a cold",
+            "Your life insurance beneficiary"
+          ],
+          "answer": 0,
+          "explain": "Week 13 is the hole."
+        },
+        {
+          "id": "du-length-q5",
+          "type": "number",
+          "prompt": "Short-term pays $600 a week for 12 weeks. What is the most it will pay?",
+          "answer": 7200,
+          "unit": "$",
+          "explain": "$600 × 12 = $7,200."
+        }
+      ]
+    },
+    {
+      "id": "du-math",
+      "type": "lesson",
+      "title": "How Much It Pays",
+      "summary": "It replaces a percent, not the whole paycheck.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "du-math-q1",
+          "type": "number",
+          "context": "Read the percent and whose definition of disability the policy uses. Some pay only if you cannot do any job. Others pay if you cannot do your own.",
+          "prompt": "You earn $5,000 a month. The policy pays 60%. What is the monthly benefit?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$5,000 × 0.60 = $3,000."
+        },
+        {
+          "id": "du-math-q2",
+          "type": "number",
+          "prompt": "What is that benefit for a year?",
+          "answer": 36000,
+          "unit": "$",
+          "explain": "$3,000 × 12 = $36,000."
+        },
+        {
+          "id": "du-math-q3",
+          "type": "number",
+          "prompt": "Your old pay for a year was $60,000. How much pay is not replaced?",
+          "answer": 24000,
+          "unit": "$",
+          "explain": "$60,000 − $36,000 = $24,000."
+        },
+        {
+          "id": "du-math-q4",
+          "type": "true_false",
+          "prompt": "A 60% policy pays your full salary.",
+          "answer": false,
+          "explain": "Sixty percent is sixty percent. The other forty still has to come from somewhere."
+        },
+        {
+          "id": "du-math-q5",
+          "type": "multiple_choice",
+          "prompt": "Why might a policy that covers “your own job” pay when a stricter one would not?",
+          "choices": [
+            "You cannot do your work, even if you could do some other work",
+            "It ignores injuries",
+            "It pays only after you retire"
+          ],
+          "answer": 0,
+          "explain": "The definition of disability is the gate. Read it."
+        }
+      ]
+    },
+    {
+      "id": "du-page",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Benefit Summary",
+      "summary": "Percent, waiting period, and the job test.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "du-page-q1",
+          "type": "number",
+          "context": "The waiting period is 90 days. The policy pays nothing during the wait.",
+          "doc": {
+            "kind": "statement",
+            "title": "Disability policy summary",
+            "subtitle": "Long-term",
+            "meta": [
+              [
+                "Pays",
+                "60% of pay"
+              ],
+              [
+                "Waiting period",
+                "90 days"
+              ],
+              [
+                "Covers",
+                "Your own occupation"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "benefit",
+                "label": "Monthly benefit if you qualify",
+                "amount": 3000.0
+              },
+              {
+                "id": "prem",
+                "label": "Premium per month",
+                "amount": 45.0
+              }
+            ]
+          },
+          "prompt": "What is the monthly benefit on this page?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "That line says $3,000."
+        },
+        {
+          "id": "du-page-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Disability policy summary",
+            "subtitle": "Long-term",
+            "meta": [
+              [
+                "Pays",
+                "60% of pay"
+              ],
+              [
+                "Waiting period",
+                "90 days"
+              ],
+              [
+                "Covers",
+                "Your own occupation"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "benefit",
+                "label": "Monthly benefit if you qualify",
+                "amount": 3000.0
+              },
+              {
+                "id": "prem",
+                "label": "Premium per month",
+                "amount": 45.0
+              }
+            ]
+          },
+          "prompt": "The premium is $45 a month. What is that per year?",
+          "answer": 540,
+          "unit": "$",
+          "explain": "$45 × 12 = $540."
+        },
+        {
+          "id": "du-page-q3",
+          "type": "multiple_choice",
+          "prompt": "You are hurt on day 1. When does this summary say benefits can start?",
+          "choices": [
+            "After the 90-day waiting period",
+            "The same afternoon",
+            "After 90 years"
+          ],
+          "answer": 0,
+          "explain": "The wait is part of the price. Savings have to cover it."
+        },
+        {
+          "id": "du-page-q4",
+          "type": "true_false",
+          "prompt": "“Your own occupation” means the policy only pays if every job on earth is impossible.",
+          "answer": false,
+          "explain": "It means your own job. A stricter policy says any job."
+        },
+        {
+          "id": "du-page-q5",
+          "type": "number",
+          "prompt": "Three months of waiting, and your pay is $5,000 a month. How much pay is missing before benefits start, if you have no other leave?",
+          "answer": 15000,
+          "unit": "$",
+          "explain": "$5,000 × 3 = $15,000."
+        }
+      ]
+    },
+    {
+      "id": "du-umbrella",
+      "type": "lesson",
+      "title": "Umbrella Coverage",
+      "summary": "When a lawsuit is taller than the policy underneath.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "du-umbrella-q1",
+          "type": "multiple_choice",
+          "context": "An [[umbrella policy]] needs enough [[liability coverage|liability-coverage]] underneath it. Insurers usually require that floor.",
+          "prompt": "What is an umbrella policy?",
+          "choices": [
+            "Extra liability coverage above your auto or home limits",
+            "A policy that replaces health insurance",
+            "A warranty for umbrellas"
+          ],
+          "answer": 0,
+          "explain": "It starts where the other liability limit stops."
+        },
+        {
+          "id": "du-umbrella-q2",
+          "type": "number",
+          "prompt": "Auto liability stops at $250,000. The lawsuit is $900,000. How much is above the auto limit?",
+          "answer": 650000,
+          "unit": "$",
+          "explain": "$900,000 − $250,000 = $650,000."
+        },
+        {
+          "id": "du-umbrella-q3",
+          "type": "multiple_choice",
+          "prompt": "Who looks at an umbrella?",
+          "choices": [
+            "Someone whose savings or home could be reached by a large lawsuit",
+            "Someone who wants a cheaper oil change",
+            "Someone with no car, no home, and no savings"
+          ],
+          "answer": 0,
+          "explain": "The umbrella protects what a judgment could take."
+        },
+        {
+          "id": "du-umbrella-q4",
+          "type": "true_false",
+          "prompt": "An umbrella replaces the need for any auto liability coverage.",
+          "answer": false,
+          "explain": "It sits on top. The insurer will ask for a solid policy underneath."
+        },
+        {
+          "id": "du-umbrella-q5",
+          "type": "number",
+          "prompt": "In this example the umbrella premium is $300 a year. Over 10 years, what is that premium?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$300 × 10 = $3,000. A real quote can differ. The shape is a small premium under a large limit."
+        }
+      ]
+    },
+    {
+      "id": "du-checklist",
+      "type": "lesson",
+      "format": "sort",
+      "title": "An Insurance Checklist",
+      "summary": "Name the hole before the year names it for you.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "du-checklist-q1",
+          "type": "sort",
+          "prompt": "Solid enough for now, or worth a look?",
+          "buckets": [
+            "Solid enough for now",
+            "Worth a look"
+          ],
+          "items": [
+            [
+              "Health plan in force, and you know the deductible",
+              0
+            ],
+            [
+              "Renters or home policy, and you know if flood is excluded",
+              0
+            ],
+            [
+              "Auto liability at the state minimum only",
+              1
+            ],
+            [
+              "No disability coverage, and you live on your paycheck",
+              1
+            ],
+            [
+              "Life insurance through work equal to one year of pay, with a new baby at home",
+              1
+            ]
+          ],
+          "explain": "A minimum, a missing income policy, and a thin life benefit are the looks. A plan you understand can sit."
+        },
+        {
+          "id": "du-checklist-q2",
+          "type": "multiple_choice",
+          "prompt": "Why is “auto liability at the state minimum only” worth a look?",
+          "choices": [
+            "The legal floor is often too small for a serious injury",
+            "State minimums are the maximum the law allows",
+            "Minimum policies include umbrella coverage free"
+          ],
+          "answer": 0,
+          "explain": "Legal and enough are still different words."
+        },
+        {
+          "id": "du-checklist-q3",
+          "type": "true_false",
+          "prompt": "A checklist replaces reading the policy.",
+          "answer": false,
+          "explain": "The checklist tells you which policy to open."
+        },
+        {
+          "id": "du-checklist-q4",
+          "type": "multiple_choice",
+          "prompt": "You rent, and you have no renters policy. Where does that land?",
+          "choices": [
+            "Worth a look. The landlord’s policy is not yours",
+            "Solid. Renters are covered by the building",
+            "Solid, if you own a car"
+          ],
+          "answer": 0,
+          "explain": "Your belongings and your liability are uninsured until you buy the policy."
+        },
+        {
+          "id": "du-checklist-q5",
+          "type": "fill_blank",
+          "prompt": "The point of the list is to find the ___ before a loss does.",
+          "choices": [
+            "hole",
+            "logo",
+            "slogan"
+          ],
+          "answer": 0,
+          "explain": "A named hole can be priced. A surprise cannot."
+        }
+      ]
+    },
+    {
+      "id": "du-together",
+      "type": "lesson",
+      "format": "call",
+      "title": "Putting It Together",
+      "summary": "Look for the hole, not the matching premium.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "du-together-q1",
+          "type": "multiple_choice",
+          "context": "Same health premium. The rest of the sketch is the decision.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Sketch A",
+              "subtitle": "Health, and a thin auto limit",
+              "lines": [
+                {
+                  "id": "health",
+                  "label": "Health premium, per year",
+                  "amount": 1080.0
+                },
+                {
+                  "id": "auto",
+                  "label": "Auto liability",
+                  "amount": 25000.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Sketch B",
+              "subtitle": "Health, higher auto limit, disability",
+              "lines": [
+                {
+                  "id": "health",
+                  "label": "Health premium, per year",
+                  "amount": 1080.0
+                },
+                {
+                  "id": "auto",
+                  "label": "Auto liability limit",
+                  "amount": 250000.0
+                },
+                {
+                  "id": "dis",
+                  "label": "Disability benefit per month",
+                  "amount": 2400.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Both sketches pay $1,080 a year for health insurance. What is Sketch A missing that Sketch B has?",
+          "choices": [
+            "A higher auto liability limit and a disability benefit",
+            "A cheaper health premium",
+            "A life insurance slogan"
+          ],
+          "answer": 0,
+          "explain": "The health line matches. The protection does not."
+        },
+        {
+          "id": "du-together-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Sketch A",
+              "subtitle": "Health, and a thin auto limit",
+              "lines": [
+                {
+                  "id": "health",
+                  "label": "Health premium, per year",
+                  "amount": 1080.0
+                },
+                {
+                  "id": "auto",
+                  "label": "Auto liability",
+                  "amount": 25000.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Sketch B",
+              "subtitle": "Health, higher auto limit, disability",
+              "lines": [
+                {
+                  "id": "health",
+                  "label": "Health premium, per year",
+                  "amount": 1080.0
+                },
+                {
+                  "id": "auto",
+                  "label": "Auto liability limit",
+                  "amount": 250000.0
+                },
+                {
+                  "id": "dis",
+                  "label": "Disability benefit per month",
+                  "amount": 2400.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much higher is Sketch B’s auto liability limit than Sketch A’s $25,000?",
+          "answer": 225000,
+          "unit": "$",
+          "explain": "$250,000 − $25,000 = $225,000."
+        },
+        {
+          "id": "du-together-q3",
+          "type": "multiple_choice",
+          "prompt": "You live on your paycheck and Sketch A has no disability benefit. What is the exposed piece?",
+          "choices": [
+            "Your income if you cannot work",
+            "The health premium, which is unpaid",
+            "A death benefit"
+          ],
+          "answer": 0,
+          "explain": "The health plan pays doctors. It does not replace the paycheck."
+        },
+        {
+          "id": "du-together-q4",
+          "type": "true_false",
+          "prompt": "Matching health premiums means the two sketches protect you equally.",
+          "answer": false,
+          "explain": "The auto limit and the disability line are the difference."
+        },
+        {
+          "id": "du-together-q5",
+          "type": "multiple_choice",
+          "prompt": "Which sketch is the sturdier starting point?",
+          "choices": [
+            "Sketch B",
+            "Sketch A",
+            "They are the same stack"
+          ],
+          "answer": 0,
+          "why": [
+            "Higher liability, plus income coverage.",
+            "A’s $25,000 limit is the thin one.",
+            "The health premiums match. The rest does not."
+          ],
+          "explain": "B raised the liability ceiling and insured the paycheck."
+        }
+      ]
+    },
+    {
+      "id": "du-elena",
+      "type": "lesson",
+      "format": "story",
+      "title": "Elena’s Yearly Review",
+      "summary": "A raise is a reason to reread the stack.",
+      "xp": 10,
+      "story": {
+        "title": "The afternoon she reads the stack",
+        "character": "Elena, 38, high school counselor",
+        "body": "Once a year, after her raise, Elena reads the stack. She earns **$60,000**. Her long-term disability policy would pay **60%**, which is **$36,000** a year, or **$3,000** a month, after a **90**-day wait.\n\nHer auto liability limit is **$100,000**. She owns a small condo and has **$40,000** in savings. A serious crash could reach past that limit. She prices an umbrella and writes the date of this review on the folder."
+      },
+      "steps": [
+        {
+          "id": "du-elena-q1",
+          "type": "number",
+          "prompt": "What is 60% of Elena’s $60,000 salary?",
+          "answer": 36000,
+          "unit": "$",
+          "explain": "$60,000 × 0.60 = $36,000."
+        },
+        {
+          "id": "du-elena-q2",
+          "type": "number",
+          "prompt": "What is that benefit per month?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$36,000 ÷ 12 = $3,000."
+        },
+        {
+          "id": "du-elena-q3",
+          "type": "number",
+          "prompt": "The waiting period is 90 days. About how many months is that?",
+          "answer": 3,
+          "unit": "months",
+          "explain": "90 ÷ 30 = 3 months. She needs savings for the wait."
+        },
+        {
+          "id": "du-elena-q4",
+          "type": "multiple_choice",
+          "prompt": "Why is a $100,000 auto limit worth a look, given the condo and the savings?",
+          "choices": [
+            "A lawsuit could reach past $100,000 and into what she owns",
+            "Condo insurance cancels auto liability",
+            "Savings make liability unnecessary"
+          ],
+          "answer": 0,
+          "explain": "The limit is the ceiling on the insurer. Her condo sits above it."
+        },
+        {
+          "id": "du-elena-q5",
+          "type": "true_false",
+          "prompt": "She can skip the review next year because she did it once.",
+          "answer": false,
+          "explain": "A raise, a baby, a move, or a new car changes the stack."
+        }
+      ]
+    },
+    {
+      "id": "du-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "du-trial",
+      "type": "boss",
+      "title": "Den Trial: Disability & Umbrella",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "du-trial-q1",
+          "type": "number",
+          "prompt": "Pay is $3,000 a month. Disability pays 50%. What is the monthly benefit?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$3,000 × 0.50 = $1,500."
+        },
+        {
+          "id": "du-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "An umbrella policy sits where?",
+          "choices": [
+            "Above the liability limits you already have",
+            "Instead of health insurance",
+            "Inside a term life premium"
+          ],
+          "answer": 0,
+          "explain": "It is extra liability coverage, not a replacement for the policy under it."
+        },
+        {
+          "id": "du-trial-q3",
+          "type": "true_false",
+          "prompt": "Short-term disability that ends at 12 weeks covers a two-year illness.",
+          "answer": false,
+          "explain": "The short policy ends. The rest needs long-term coverage or savings."
+        },
+        {
+          "id": "du-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "Which gap deserves a look this year?",
+          "choices": [
+            "No income coverage, and your paycheck pays the rent",
+            "A health plan whose deductible you already know",
+            "A renters policy you reread in January"
+          ],
+          "answer": 0,
+          "explain": "The missing paycheck is the hole. A plan you understand is not."
+        }
+      ]
+    }
+  ]
+}

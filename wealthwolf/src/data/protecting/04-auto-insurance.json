@@ -1,0 +1,899 @@
+{
+  "id": "auto-insurance",
+  "section": "protecting",
+  "order": 4,
+  "title": "Auto Insurance",
+  "description": "Liability, collision, comprehensive, and the quote behind the monthly price.",
+  "wolfLine": "The legal minimum is a floor. Injury does not care.",
+  "terms": {
+    "liability-coverage": {
+      "term": "Liability coverage",
+      "definition": "Auto insurance that pays others when you cause their injuries or damage. It does not fix your own car.",
+      "example": "You cause a crash. Liability coverage helps pay the other driver’s medical bills, up to the limit."
+    },
+    "collision-coverage": {
+      "term": "Collision coverage",
+      "definition": "Pays to repair your car after a crash with another car or object, after your deductible.",
+      "example": "A $1,800 repair and a $500 collision deductible: you pay $500, collision pays $1,300."
+    },
+    "comprehensive-coverage": {
+      "term": "Comprehensive coverage",
+      "definition": "Pays for your car from something other than a crash, such as theft, hail, or a broken windshield, after the deductible.",
+      "example": "Hail dents the hood. Comprehensive is the coverage that fits, not collision."
+    },
+    "uninsured-motorist": {
+      "term": "Uninsured motorist coverage",
+      "definition": "Pays you when a driver who has little or no insurance hurts you or, on many policies, your car.",
+      "example": "The other driver has no insurance and a $9,000 hospital bill is yours. This coverage is built for that gap."
+    }
+  },
+  "lessons": [
+    {
+      "id": "ai-kinds",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Three Kinds of Coverage",
+      "summary": "One pays them. One fixes your crash. One covers the hail.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ai-kinds-q1",
+          "type": "sort",
+          "context": "[[Liability coverage|liability-coverage]] pays other people. [[Collision coverage]] fixes your car after a crash. [[Comprehensive coverage]] covers theft, hail, and a lot of non-crash damage.",
+          "prompt": "Which coverage fits?",
+          "buckets": [
+            "Liability coverage",
+            "Collision",
+            "Comprehensive"
+          ],
+          "items": [
+            [
+              "You injure another driver",
+              0
+            ],
+            [
+              "You hit a fence and dent your own car",
+              1
+            ],
+            [
+              "Someone steals your car",
+              2
+            ],
+            [
+              "Hail ruins the roof of your car",
+              2
+            ],
+            [
+              "You cause damage to another person’s car",
+              0
+            ]
+          ],
+          "explain": "Liability pays them. Collision fixes a crash. Comprehensive covers theft, hail, and similar losses."
+        },
+        {
+          "id": "ai-kinds-q2",
+          "type": "multiple_choice",
+          "prompt": "Collision coverage pays to fix whose car after you hit a pole?",
+          "choices": [
+            "Yours, after the deductible",
+            "The pole’s owner only",
+            "Nobody. Poles are excluded from every policy"
+          ],
+          "answer": 0,
+          "explain": "The pole is an object. Collision is the crash coverage for your car."
+        },
+        {
+          "id": "ai-kinds-q3",
+          "type": "true_false",
+          "prompt": "Liability coverage repairs your own bumper.",
+          "answer": false,
+          "explain": "Liability faces outward. Your bumper is collision, if you bought it."
+        },
+        {
+          "id": "ai-kinds-q4",
+          "type": "multiple_choice",
+          "prompt": "A tree branch smashes the windshield in a storm. Which coverage is the usual fit?",
+          "choices": [
+            "Comprehensive",
+            "Liability coverage",
+            "A renters policy"
+          ],
+          "answer": 0,
+          "explain": "It is not a crash with a vehicle. Comprehensive is the one to check."
+        },
+        {
+          "id": "ai-kinds-q5",
+          "type": "fill_blank",
+          "prompt": "Coverage that pays other people you hurt is ___ coverage.",
+          "choices": [
+            "liability",
+            "collision",
+            "comprehensive"
+          ],
+          "answer": 0,
+          "explain": "Their injuries and their car. Not your own paint."
+        }
+      ]
+    },
+    {
+      "id": "ai-minimums",
+      "type": "lesson",
+      "title": "State Minimums",
+      "summary": "Legal and enough are not the same word.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ai-minimums-q1",
+          "type": "info",
+          "title": "The floor is not the roof",
+          "body": "Every state sets a legal minimum for auto liability. Drive below it and you can be breaking the law.\n\nThat minimum is often far too small for a serious injury. A hospital bill can pass the legal floor in an afternoon. The rest can land on you."
+        },
+        {
+          "id": "ai-minimums-q2",
+          "type": "multiple_choice",
+          "prompt": "What is a state minimum?",
+          "choices": [
+            "The least liability the law lets you drive with",
+            "The most any crash can cost",
+            "The price of collision coverage"
+          ],
+          "answer": 0,
+          "explain": "It is a legal floor, not a guess at a real injury."
+        },
+        {
+          "id": "ai-minimums-q3",
+          "type": "true_false",
+          "prompt": "Meeting the legal minimum means a serious injury will always be fully covered.",
+          "answer": false,
+          "explain": "The law’s floor and a hospital’s bill are set by different people."
+        },
+        {
+          "id": "ai-minimums-q4",
+          "type": "multiple_choice",
+          "prompt": "You cause a crash. Medical bills for the other driver run past your liability limit. Who is exposed to the rest?",
+          "choices": [
+            "You are",
+            "The state, automatically",
+            "No one. Bills stop at the minimum"
+          ],
+          "answer": 0,
+          "explain": "The limit is a ceiling on the insurer, not on the injury."
+        },
+        {
+          "id": "ai-minimums-q5",
+          "type": "multiple_choice",
+          "prompt": "Why do people buy more than the minimum?",
+          "choices": [
+            "A serious injury costs more than the legal floor",
+            "The state pays you a bonus for it",
+            "Collision is illegal at the minimum"
+          ],
+          "answer": 0,
+          "explain": "The extra limit is there for the bill the floor cannot hold."
+        }
+      ]
+    },
+    {
+      "id": "ai-uninsured",
+      "type": "lesson",
+      "title": "Uninsured Drivers",
+      "summary": "Their missing policy can become your bill.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ai-uninsured-q1",
+          "type": "multiple_choice",
+          "context": "[[Uninsured motorist coverage|uninsured-motorist]] pays you when the other driver cannot.",
+          "prompt": "What is uninsured motorist coverage for?",
+          "choices": [
+            "When another driver has little or no insurance and hurts you",
+            "When you want a cheaper premium",
+            "When your own car needs an oil change"
+          ],
+          "answer": 0,
+          "explain": "It fills the hole their missing policy left."
+        },
+        {
+          "id": "ai-uninsured-q2",
+          "type": "true_false",
+          "prompt": "If the other driver has no insurance, your liability coverage pays your hospital bill.",
+          "answer": false,
+          "explain": "Liability pays people you hurt. It does not pay you."
+        },
+        {
+          "id": "ai-uninsured-q3",
+          "type": "multiple_choice",
+          "prompt": "You are hurt. The other driver is uninsured. Which coverage do you look at on your own policy?",
+          "choices": [
+            "Uninsured motorist",
+            "Only your collision deductible",
+            "A life insurance beneficiary form"
+          ],
+          "answer": 0,
+          "explain": "This is the coverage built for their empty policy."
+        },
+        {
+          "id": "ai-uninsured-q4",
+          "type": "multiple_choice",
+          "prompt": "Why does this coverage exist?",
+          "choices": [
+            "Plenty of drivers are on the road with little or no insurance",
+            "It replaces state inspection",
+            "It pays your parking tickets"
+          ],
+          "answer": 0,
+          "explain": "You cannot control what they bought. You can buy a backstop."
+        },
+        {
+          "id": "ai-uninsured-q5",
+          "type": "fill_blank",
+          "prompt": "Uninsured motorist coverage responds when the other driver has too ___ insurance.",
+          "choices": [
+            "little",
+            "much",
+            "new"
+          ],
+          "answer": 0,
+          "explain": "Their gap becomes your problem unless you covered it."
+        }
+      ]
+    },
+    {
+      "id": "ai-price",
+      "type": "lesson",
+      "title": "What Changes the Price",
+      "summary": "The car, the driver, the miles, and the deductible.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ai-price-q1",
+          "type": "multiple_choice",
+          "prompt": "Which change often raises an auto premium?",
+          "choices": [
+            "A recent at-fault crash",
+            "Parking in a legal spot",
+            "Reading the policy"
+          ],
+          "answer": 0,
+          "explain": "The insurer prices the risk it thinks you bring."
+        },
+        {
+          "id": "ai-price-q2",
+          "type": "true_false",
+          "prompt": "A higher deductible usually means a higher premium.",
+          "answer": false,
+          "explain": "You take more of the loss, so the premium often drops. You felt this trade on other policies."
+        },
+        {
+          "id": "ai-price-q3",
+          "type": "multiple_choice",
+          "prompt": "Which is a lever you can actually pull?",
+          "choices": [
+            "The deductible, the car you drive, and how much you drive",
+            "The weather in your state",
+            "Other people’s crashes"
+          ],
+          "answer": 0,
+          "explain": "You do not control the pool. You do control the car and the deductible."
+        },
+        {
+          "id": "ai-price-q4",
+          "type": "multiple_choice",
+          "prompt": "Why might a sports car cost more to insure than a used sedan?",
+          "choices": [
+            "It costs more to repair and may be stolen more often",
+            "Sedans are illegal to insure",
+            "Sports cars are exempt from liability"
+          ],
+          "answer": 0,
+          "explain": "Price follows the size of the possible claim."
+        },
+        {
+          "id": "ai-price-q5",
+          "type": "number",
+          "prompt": "Quote A is $140 a month. Quote B is $95. How much less is B per month?",
+          "answer": 45,
+          "unit": "$",
+          "explain": "$140 − $95 = $45."
+        }
+      ]
+    },
+    {
+      "id": "ai-quotes",
+      "type": "lesson",
+      "format": "call",
+      "title": "Two Quotes",
+      "summary": "The cheaper year can mean a bigger deductible.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ai-quotes-q1",
+          "type": "number",
+          "context": "Same liability limits. The premium and the collision deductible are what moved.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Quote A",
+              "subtitle": "Same liability limits",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium for the year",
+                  "amount": 1560.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Collision deductible",
+                  "amount": 500.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Quote B",
+              "subtitle": "Same liability limits",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium for the year",
+                  "amount": 1080.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Collision deductible",
+                  "amount": 1000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What is Quote A’s yearly premium?",
+          "answer": 1560,
+          "unit": "$",
+          "explain": "The premium line is $1,560."
+        },
+        {
+          "id": "ai-quotes-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Quote A",
+              "subtitle": "Same liability limits",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium for the year",
+                  "amount": 1560.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Collision deductible",
+                  "amount": 500.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Quote B",
+              "subtitle": "Same liability limits",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium for the year",
+                  "amount": 1080.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Collision deductible",
+                  "amount": 1000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much less is Quote B’s yearly premium?",
+          "answer": 480,
+          "unit": "$",
+          "explain": "$1,560 − $1,080 = $480."
+        },
+        {
+          "id": "ai-quotes-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Quote A",
+              "subtitle": "Same liability limits",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium for the year",
+                  "amount": 1560.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Collision deductible",
+                  "amount": 500.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Quote B",
+              "subtitle": "Same liability limits",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium for the year",
+                  "amount": 1080.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Collision deductible",
+                  "amount": 1000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "A $2,000 crash repair. Using Quote A, how much of the repair do you pay as the deductible?",
+          "answer": 500,
+          "unit": "$",
+          "explain": "Quote A’s collision deductible is $500."
+        },
+        {
+          "id": "ai-quotes-q4",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Quote A",
+              "subtitle": "Same liability limits",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium for the year",
+                  "amount": 1560.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Collision deductible",
+                  "amount": 500.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Quote B",
+              "subtitle": "Same liability limits",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium for the year",
+                  "amount": 1080.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Collision deductible",
+                  "amount": 1000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Using Quote B, how much of that same $2,000 repair do you pay?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "Quote B’s deductible is $1,000."
+        },
+        {
+          "id": "ai-quotes-q5",
+          "type": "multiple_choice",
+          "prompt": "You have a solid emergency fund and you want the lower yearly price. Which quote fits that preference?",
+          "choices": [
+            "Quote B",
+            "Quote A",
+            "Neither. The premiums match"
+          ],
+          "answer": 0,
+          "why": [
+            "$1,080 is the lower premium.",
+            "A is the lower deductible, not the lower premium.",
+            "They differ by $480."
+          ],
+          "explain": "B saves $480 a year and asks you to hold a $1,000 deductible."
+        },
+        {
+          "id": "ai-quotes-q6",
+          "type": "true_false",
+          "prompt": "The lower premium is the whole comparison.",
+          "answer": false,
+          "explain": "The deductible moved too. Read both lines."
+        }
+      ]
+    },
+    {
+      "id": "ai-after",
+      "type": "lesson",
+      "title": "After a Crash",
+      "summary": "Help first. Then the record. Then the insurers.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ai-after-q1",
+          "type": "order",
+          "prompt": "Put the aftermath in order.",
+          "items": [
+            "Check for injuries and call for help if someone is hurt",
+            "Move to safety if you can, and call the police when the law or the damage calls for it",
+            "Exchange names, insurance, and photos of the cars",
+            "Call your insurer and keep the repair estimates"
+          ],
+          "explain": "People first. The record next. Your insurer after you can tell them what happened."
+        },
+        {
+          "id": "ai-after-q2",
+          "type": "true_false",
+          "prompt": "You should leave the scene once you have said sorry, even if someone is hurt.",
+          "answer": false,
+          "explain": "Injuries and the law come before the drive home."
+        },
+        {
+          "id": "ai-after-q3",
+          "type": "multiple_choice",
+          "prompt": "Why photograph both cars?",
+          "choices": [
+            "The pictures show the damage before it is repaired or forgotten",
+            "Photos lower your deductible",
+            "The police require a filter"
+          ],
+          "answer": 0,
+          "explain": "The estimate comes later. The photo is from the day."
+        },
+        {
+          "id": "ai-after-q4",
+          "type": "multiple_choice",
+          "prompt": "The other driver asks you to skip insurance and pay them cash tonight. What is the careful move?",
+          "choices": [
+            "Go through the insurers. A cash deal in the moment is how details disappear",
+            "Empty your wallet so they will not call",
+            "Post their license plate and go"
+          ],
+          "answer": 0,
+          "explain": "A calm claim beats a roadside bargain."
+        },
+        {
+          "id": "ai-after-q5",
+          "type": "fill_blank",
+          "prompt": "Exchange insurance information. Do not only exchange ___.",
+          "choices": [
+            "first names",
+            "policies",
+            "photos"
+          ],
+          "answer": 0,
+          "explain": "A first name will not pay a repair."
+        }
+      ]
+    },
+    {
+      "id": "ai-declarations",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Declarations Page",
+      "summary": "This page is the policy in four lines.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ai-declarations-q1",
+          "type": "number",
+          "context": "The declarations page lists the limits and deductibles you actually bought.",
+          "doc": {
+            "kind": "statement",
+            "title": "Declarations page",
+            "subtitle": "Your auto policy",
+            "meta": [
+              [
+                "Car",
+                "2018 sedan"
+              ],
+              [
+                "Term",
+                "6 months"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "liab",
+                "label": "Liability coverage limit, per person",
+                "amount": 100000.0
+              },
+              {
+                "id": "coll",
+                "label": "Collision deductible",
+                "amount": 500.0
+              },
+              {
+                "id": "comp",
+                "label": "Comprehensive deductible",
+                "amount": 250.0
+              },
+              {
+                "id": "prem",
+                "label": "Premium for six months",
+                "amount": 780.0
+              }
+            ],
+            "note": "The declarations page is the cover sheet of what you bought."
+          },
+          "prompt": "What is the liability limit per person on this page?",
+          "answer": 100000,
+          "unit": "$",
+          "explain": "That line says $100,000."
+        },
+        {
+          "id": "ai-declarations-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Declarations page",
+            "subtitle": "Your auto policy",
+            "meta": [
+              [
+                "Car",
+                "2018 sedan"
+              ],
+              [
+                "Term",
+                "6 months"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "liab",
+                "label": "Liability coverage limit, per person",
+                "amount": 100000.0
+              },
+              {
+                "id": "coll",
+                "label": "Collision deductible",
+                "amount": 500.0
+              },
+              {
+                "id": "comp",
+                "label": "Comprehensive deductible",
+                "amount": 250.0
+              },
+              {
+                "id": "prem",
+                "label": "Premium for six months",
+                "amount": 780.0
+              }
+            ],
+            "note": "The declarations page is the cover sheet of what you bought."
+          },
+          "prompt": "What is the collision deductible?",
+          "answer": 500,
+          "unit": "$",
+          "explain": "The collision line says $500."
+        },
+        {
+          "id": "ai-declarations-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Declarations page",
+            "subtitle": "Your auto policy",
+            "meta": [
+              [
+                "Car",
+                "2018 sedan"
+              ],
+              [
+                "Term",
+                "6 months"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "liab",
+                "label": "Liability coverage limit, per person",
+                "amount": 100000.0
+              },
+              {
+                "id": "coll",
+                "label": "Collision deductible",
+                "amount": 500.0
+              },
+              {
+                "id": "comp",
+                "label": "Comprehensive deductible",
+                "amount": 250.0
+              },
+              {
+                "id": "prem",
+                "label": "Premium for six months",
+                "amount": 780.0
+              }
+            ],
+            "note": "The declarations page is the cover sheet of what you bought."
+          },
+          "prompt": "What is the comprehensive deductible?",
+          "answer": 250,
+          "unit": "$",
+          "explain": "That line says $250."
+        },
+        {
+          "id": "ai-declarations-q4",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Declarations page",
+            "subtitle": "Your auto policy",
+            "meta": [
+              [
+                "Car",
+                "2018 sedan"
+              ],
+              [
+                "Term",
+                "6 months"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "liab",
+                "label": "Liability coverage limit, per person",
+                "amount": 100000.0
+              },
+              {
+                "id": "coll",
+                "label": "Collision deductible",
+                "amount": 500.0
+              },
+              {
+                "id": "comp",
+                "label": "Comprehensive deductible",
+                "amount": 250.0
+              },
+              {
+                "id": "prem",
+                "label": "Premium for six months",
+                "amount": 780.0
+              }
+            ],
+            "note": "The declarations page is the cover sheet of what you bought."
+          },
+          "prompt": "The six-month premium is $780. What is that per month?",
+          "answer": 130,
+          "unit": "$",
+          "explain": "$780 ÷ 6 = $130."
+        },
+        {
+          "id": "ai-declarations-q5",
+          "type": "true_false",
+          "prompt": "The declarations page is a bill for a crash you already had.",
+          "answer": false,
+          "explain": "It is the summary of the coverage you bought, before a crash."
+        }
+      ]
+    },
+    {
+      "id": "ai-theo",
+      "type": "lesson",
+      "format": "story",
+      "title": "Theo’s Fender-Bender",
+      "summary": "The pole does not file a claim. His collision coverage does.",
+      "xp": 10,
+      "story": {
+        "title": "The parking-lot bumper",
+        "character": "Theo, 28, night-shift nurse",
+        "body": "Theo backs into a pole in the hospital garage. The bumper repair is **$1,800**. His collision deductible is **$500**. Nobody else is hurt, and no other car is involved.\n\nHis six-month premium was **$780**. He wants the car fixed before his next stretch of shifts."
+      },
+      "steps": [
+        {
+          "id": "ai-theo-q1",
+          "type": "number",
+          "prompt": "How much of the $1,800 repair does Theo pay as the deductible?",
+          "answer": 500,
+          "unit": "$",
+          "explain": "The collision deductible is $500."
+        },
+        {
+          "id": "ai-theo-q2",
+          "type": "number",
+          "prompt": "How much does collision coverage pay?",
+          "answer": 1300,
+          "unit": "$",
+          "explain": "$1,800 − $500 = $1,300."
+        },
+        {
+          "id": "ai-theo-q3",
+          "type": "multiple_choice",
+          "prompt": "Which coverage pays his bumper?",
+          "choices": [
+            "Collision",
+            "Liability coverage",
+            "Uninsured motorist"
+          ],
+          "answer": 0,
+          "explain": "He hit an object. That is collision, not a payment to another person."
+        },
+        {
+          "id": "ai-theo-q4",
+          "type": "true_false",
+          "prompt": "Liability coverage is what fixes Theo’s bumper.",
+          "answer": false,
+          "explain": "Liability would matter if he had hurt someone else."
+        },
+        {
+          "id": "ai-theo-q5",
+          "type": "multiple_choice",
+          "prompt": "He has the $500 in savings. What is the sensible use of it here?",
+          "choices": [
+            "Pay the deductible and let collision cover the other $1,300",
+            "Skip insurance and put the $1,800 on a credit card",
+            "Ask the pole’s owner to pay"
+          ],
+          "answer": 0,
+          "explain": "The deductible is the part he agreed to hold."
+        }
+      ]
+    },
+    {
+      "id": "ai-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "ai-trial",
+      "type": "boss",
+      "title": "Den Trial: Auto Insurance",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "ai-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "Hail destroys the hood. Which coverage do you look at?",
+          "choices": [
+            "Comprehensive",
+            "Liability coverage",
+            "The state minimum only"
+          ],
+          "answer": 0,
+          "explain": "Hail is not a crash and it is not a payment to another person."
+        },
+        {
+          "id": "ai-trial-q2",
+          "type": "number",
+          "prompt": "A repair is $2,400. The collision deductible is $400. How much does insurance pay?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$2,400 − $400 = $2,000."
+        },
+        {
+          "id": "ai-trial-q3",
+          "type": "true_false",
+          "prompt": "The legal minimum is always enough for a serious injury.",
+          "answer": false,
+          "explain": "It is a legal floor. Hospital bills do not stop there."
+        },
+        {
+          "id": "ai-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "After a crash, what comes before arguing about fault?",
+          "choices": [
+            "Checking for injuries and getting help",
+            "Posting a video",
+            "Shopping for a new deductible"
+          ],
+          "answer": 0,
+          "explain": "People first."
+        }
+      ]
+    }
+  ]
+}
