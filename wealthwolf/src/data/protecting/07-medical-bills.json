@@ -1,0 +1,747 @@
+{
+  "id": "medical-bills",
+  "section": "protecting",
+  "order": 7,
+  "title": "Medical Bills, HSAs & FSAs",
+  "description": "Read the plan’s statement, then the bill, then the account that can pay it.",
+  "wolfLine": "The biggest number on the letter is not always the one you owe.",
+  "terms": {
+    "explanation-of-benefits": {
+      "term": "Explanation of benefits",
+      "definition": "A statement from the health plan, not a bill. It shows what was charged, what the plan allowed, what it paid, and what you may owe.",
+      "example": "Charged $640. Allowed $400. Plan paid $320. You may owe $80."
+    },
+    "health-savings-account": {
+      "term": "Health savings account",
+      "definition": "A tax-favored account you can fund only with a high-deductible health plan. The money can carry over year to year and be used for qualified medical costs.",
+      "example": "The 2026 HSA limit is $4,400 for self-only coverage and $8,750 for family coverage, plus $1,000 if you are 55 or older."
+    },
+    "flexible-spending-account": {
+      "term": "Flexible spending account",
+      "definition": "A work account for medical costs. For 2026 the employee salary-reduction limit is $3,400. Unused money is usually lost, unless the plan allows a carryover of up to $680.",
+      "example": "You put in $3,400 for 2026 and spend $3,000. If the plan allows the maximum carryover, $400 can move forward, because $400 is under $680."
+    }
+  },
+  "lessons": [
+    {
+      "id": "mb-eob",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Explanation of Benefits",
+      "summary": "This page is the plan talking. It is not the bill.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mb-eob-q1",
+          "type": "multiple_choice",
+          "context": "An [[explanation of benefits]] comes from the plan. It is not itself a bill.",
+          "prompt": "What is an explanation of benefits?",
+          "choices": [
+            "The plan’s statement of what it allowed and what you may owe",
+            "The bill you must pay today",
+            "A receipt from the pharmacy"
+          ],
+          "answer": 0,
+          "explain": "Read it before you pay. The hospital’s first number is often not your number."
+        },
+        {
+          "id": "mb-eob-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Explanation of benefits",
+            "subtitle": "Not a bill",
+            "meta": [
+              [
+                "Provider",
+                "City Clinic"
+              ],
+              [
+                "Date",
+                "April 2"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "charged",
+                "label": "Amount charged",
+                "amount": 640.0
+              },
+              {
+                "id": "discount",
+                "label": "Plan discount",
+                "amount": -240.0
+              },
+              {
+                "id": "allowed",
+                "label": "Amount allowed",
+                "amount": 400.0
+              },
+              {
+                "id": "paid",
+                "label": "Plan paid",
+                "amount": -320.0
+              },
+              {
+                "id": "owe",
+                "label": "You may owe",
+                "amount": 80.0
+              }
+            ],
+            "note": "Wait for this before you pay a big hospital balance."
+          },
+          "prompt": "What was charged?",
+          "answer": 640,
+          "unit": "$",
+          "explain": "The charged line is $640."
+        },
+        {
+          "id": "mb-eob-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Explanation of benefits",
+            "subtitle": "Not a bill",
+            "meta": [
+              [
+                "Provider",
+                "City Clinic"
+              ],
+              [
+                "Date",
+                "April 2"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "charged",
+                "label": "Amount charged",
+                "amount": 640.0
+              },
+              {
+                "id": "discount",
+                "label": "Plan discount",
+                "amount": -240.0
+              },
+              {
+                "id": "allowed",
+                "label": "Amount allowed",
+                "amount": 400.0
+              },
+              {
+                "id": "paid",
+                "label": "Plan paid",
+                "amount": -320.0
+              },
+              {
+                "id": "owe",
+                "label": "You may owe",
+                "amount": 80.0
+              }
+            ],
+            "note": "Wait for this before you pay a big hospital balance."
+          },
+          "prompt": "What did the plan allow after its discount?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$640 − $240 = $400."
+        },
+        {
+          "id": "mb-eob-q4",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Explanation of benefits",
+            "subtitle": "Not a bill",
+            "meta": [
+              [
+                "Provider",
+                "City Clinic"
+              ],
+              [
+                "Date",
+                "April 2"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "charged",
+                "label": "Amount charged",
+                "amount": 640.0
+              },
+              {
+                "id": "discount",
+                "label": "Plan discount",
+                "amount": -240.0
+              },
+              {
+                "id": "allowed",
+                "label": "Amount allowed",
+                "amount": 400.0
+              },
+              {
+                "id": "paid",
+                "label": "Plan paid",
+                "amount": -320.0
+              },
+              {
+                "id": "owe",
+                "label": "You may owe",
+                "amount": 80.0
+              }
+            ],
+            "note": "Wait for this before you pay a big hospital balance."
+          },
+          "prompt": "How much may you owe?",
+          "answer": 80,
+          "unit": "$",
+          "explain": "$400 − $320 = $80."
+        },
+        {
+          "id": "mb-eob-q5",
+          "type": "true_false",
+          "prompt": "You should pay the $640 charged amount because it is the largest number.",
+          "answer": false,
+          "explain": "The amount you may owe is $80. The discount and the plan’s payment did the rest."
+        }
+      ]
+    },
+    {
+      "id": "mb-spot",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Check the Bill",
+      "summary": "Two x-rays were not what happened.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mb-spot-q1",
+          "type": "spot",
+          "context": "Match the bill to the [[explanation of benefits]]. One service, one line.",
+          "doc": {
+            "kind": "bill",
+            "title": "Hospital bill",
+            "subtitle": "Itemized",
+            "lines": [
+              {
+                "id": "visit",
+                "label": "Clinic visit",
+                "amount": 140.0
+              },
+              {
+                "id": "xray",
+                "label": "X-ray",
+                "amount": 180.0
+              },
+              {
+                "id": "again",
+                "label": "X-ray, billed again",
+                "amount": 180.0
+              },
+              {
+                "id": "labs",
+                "label": "Lab work",
+                "amount": 60.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Amount billed",
+                "amount": 560.0,
+                "strong": true
+              }
+            ],
+            "note": "The explanation of benefits lists one x-ray, not two."
+          },
+          "prompt": "Which line does not belong?",
+          "answer": "again",
+          "explain": "The second x-ray is a double charge. The EOB listed one."
+        },
+        {
+          "id": "mb-spot-q2",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Hospital bill",
+            "subtitle": "Itemized",
+            "lines": [
+              {
+                "id": "visit",
+                "label": "Clinic visit",
+                "amount": 140.0
+              },
+              {
+                "id": "xray",
+                "label": "X-ray",
+                "amount": 180.0
+              },
+              {
+                "id": "again",
+                "label": "X-ray, billed again",
+                "amount": 180.0
+              },
+              {
+                "id": "labs",
+                "label": "Lab work",
+                "amount": 60.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Amount billed",
+                "amount": 560.0,
+                "strong": true
+              }
+            ],
+            "note": "The explanation of benefits lists one x-ray, not two."
+          },
+          "prompt": "How much is the duplicate x-ray?",
+          "answer": 180,
+          "unit": "$",
+          "explain": "The repeated line is $180."
+        },
+        {
+          "id": "mb-spot-q3",
+          "type": "number",
+          "prompt": "What should the bill add up to without that duplicate?",
+          "answer": 380,
+          "unit": "$",
+          "explain": "$140 + $180 + $60 = $380."
+        },
+        {
+          "id": "mb-spot-q4",
+          "type": "multiple_choice",
+          "prompt": "What do you ask the hospital for when the bill is a lump sum?",
+          "choices": [
+            "An itemized bill that lists each service",
+            "A higher total",
+            "A gift card"
+          ],
+          "answer": 0,
+          "explain": "You cannot spot a double charge on a single number."
+        },
+        {
+          "id": "mb-spot-q5",
+          "type": "true_false",
+          "prompt": "Paying a bill you have not compared to the EOB is the careful path.",
+          "answer": false,
+          "explain": "Compare first. Then pay what you actually owe."
+        }
+      ]
+    },
+    {
+      "id": "mb-itemized",
+      "type": "lesson",
+      "title": "Ask for the Itemized Bill",
+      "summary": "A single total hides the duplicate.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mb-itemized-q1",
+          "type": "multiple_choice",
+          "prompt": "An itemized bill shows:",
+          "choices": [
+            "Each service and its price",
+            "Only the hospital’s logo",
+            "Your credit score"
+          ],
+          "answer": 0,
+          "explain": "The lines are how you find the mistake."
+        },
+        {
+          "id": "mb-itemized-q2",
+          "type": "true_false",
+          "prompt": "A one-line total is enough to check for a double charge.",
+          "answer": false,
+          "explain": "The double hides inside the total."
+        },
+        {
+          "id": "mb-itemized-q3",
+          "type": "number",
+          "prompt": "The itemized lines are $220, $80, and $140. What is the total?",
+          "answer": 440,
+          "unit": "$",
+          "explain": "$220 + $80 + $140 = $440."
+        },
+        {
+          "id": "mb-itemized-q4",
+          "type": "multiple_choice",
+          "prompt": "A line says “misc.” and costs $600. What do you do?",
+          "choices": [
+            "Ask what the service was",
+            "Pay it because misc. sounds official",
+            "Ignore every other line"
+          ],
+          "answer": 0,
+          "explain": "A vague line is a question, not a verdict."
+        },
+        {
+          "id": "mb-itemized-q5",
+          "type": "fill_blank",
+          "prompt": "Compare each line to the ___.",
+          "choices": [
+            "explanation of benefits",
+            "weather report",
+            "car title"
+          ],
+          "answer": 0,
+          "explain": "The plan already said what it allowed."
+        }
+      ]
+    },
+    {
+      "id": "mb-negotiate",
+      "type": "lesson",
+      "title": "Negotiating and Payment Plans",
+      "summary": "The first number is an offer, not always the end.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mb-negotiate-q1",
+          "type": "number",
+          "context": "Hospitals often have a prompt-pay discount or a monthly plan. Ask before you put it on a credit card.",
+          "prompt": "The bill is $3,200. The hospital offers 25% off if you pay within 30 days. How much is the discount?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "$3,200 × 0.25 = $800."
+        },
+        {
+          "id": "mb-negotiate-q2",
+          "type": "number",
+          "prompt": "How much do you pay if you take that 25% off?",
+          "answer": 2400,
+          "unit": "$",
+          "explain": "$3,200 − $800 = $2,400."
+        },
+        {
+          "id": "mb-negotiate-q3",
+          "type": "number",
+          "prompt": "A payment plan is $200 a month for 16 months. What is the total?",
+          "answer": 3200,
+          "unit": "$",
+          "explain": "$200 × 16 = $3,200."
+        },
+        {
+          "id": "mb-negotiate-q4",
+          "type": "multiple_choice",
+          "prompt": "Which is usually worse than a hospital payment plan?",
+          "choices": [
+            "A credit card at a high interest rate",
+            "Asking for an itemized bill",
+            "Reading the EOB"
+          ],
+          "answer": 0,
+          "explain": "The card keeps charging after the hospital would have stopped."
+        },
+        {
+          "id": "mb-negotiate-q5",
+          "type": "true_false",
+          "prompt": "You have to accept the first total on the letter.",
+          "answer": false,
+          "explain": "Ask. A discount or a plan is a normal conversation."
+        }
+      ]
+    },
+    {
+      "id": "mb-help",
+      "type": "lesson",
+      "title": "Hospital Financial Assistance",
+      "summary": "Nonprofit hospitals have a program. You have to ask.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mb-help-q1",
+          "type": "info",
+          "title": "Aid is a form, not a secret",
+          "body": "Many hospitals, especially nonprofit ones, have financial assistance, sometimes called charity care. It can reduce or erase a bill if your income qualifies.\n\nThe form is the door. The program does not knock."
+        },
+        {
+          "id": "mb-help-q2",
+          "type": "multiple_choice",
+          "prompt": "What is hospital financial assistance?",
+          "choices": [
+            "A program that can lower a bill based on your income",
+            "A loan from the parking garage",
+            "A higher deductible"
+          ],
+          "answer": 0,
+          "explain": "It is aid, not a new debt."
+        },
+        {
+          "id": "mb-help-q3",
+          "type": "true_false",
+          "prompt": "You should wait until the bill is in collections before you ask about assistance.",
+          "answer": false,
+          "explain": "Ask while the bill is still at the hospital. Collections is a harder room."
+        },
+        {
+          "id": "mb-help-q4",
+          "type": "multiple_choice",
+          "prompt": "What do you ask the billing office?",
+          "choices": [
+            "For the financial assistance application and the income rules",
+            "For a gift card",
+            "For them to skip the itemized bill"
+          ],
+          "answer": 0,
+          "explain": "The rules are written. Get the form."
+        },
+        {
+          "id": "mb-help-q5",
+          "type": "fill_blank",
+          "prompt": "Financial assistance is based on whether your ___ qualifies.",
+          "choices": [
+            "income",
+            "shoe size",
+            "area code"
+          ],
+          "answer": 0,
+          "explain": "Bring the proof they ask for."
+        }
+      ]
+    },
+    {
+      "id": "mb-hsa-fsa",
+      "type": "lesson",
+      "format": "sort",
+      "title": "HSA or FSA",
+      "summary": "One can travel with you. The other is use it, mostly, this year.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mb-hsa-fsa-q1",
+          "type": "sort",
+          "context": "An [[HSA|health-savings-account]] is paired with a high-deductible plan. For 2026 the limit is $4,400 self-only and $8,750 family, plus $1,000 at age 55 or older. An [[FSA|flexible-spending-account]] has a 2026 employee limit of $3,400. If the employer allows a carryover, the 2026 maximum is $680. Those figures are from the IRS for 2026.",
+          "prompt": "Which account is this?",
+          "buckets": [
+            "HSA",
+            "FSA"
+          ],
+          "items": [
+            [
+              "You need a high-deductible health plan to contribute",
+              0
+            ],
+            [
+              "The money can stay year after year",
+              0
+            ],
+            [
+              "It is offered through work and unused money is usually lost",
+              1
+            ],
+            [
+              "A 2026 carryover, if the plan allows one, is capped at $680",
+              1
+            ],
+            [
+              "The 2026 self-only contribution limit is $4,400",
+              0
+            ]
+          ],
+          "explain": "The HSA is the one that stays. The FSA is the work account with a clock."
+        },
+        {
+          "id": "mb-hsa-fsa-q2",
+          "type": "number",
+          "prompt": "The 2026 self-only HSA limit is $4,400. You contribute $200 a month. How much is that in a year?",
+          "answer": 2400,
+          "unit": "$",
+          "explain": "$200 × 12 = $2,400."
+        },
+        {
+          "id": "mb-hsa-fsa-q3",
+          "type": "number",
+          "prompt": "How much of the $4,400 limit is left?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$4,400 − $2,400 = $2,000."
+        },
+        {
+          "id": "mb-hsa-fsa-q4",
+          "type": "number",
+          "prompt": "You are 55. Add the $1,000 catch-up to the $4,400 self-only limit. What is the total you can put in for 2026?",
+          "answer": 5400,
+          "unit": "$",
+          "explain": "$4,400 + $1,000 = $5,400."
+        },
+        {
+          "id": "mb-hsa-fsa-q5",
+          "type": "true_false",
+          "prompt": "An FSA and an HSA have the same rule about leftover money.",
+          "answer": false,
+          "explain": "HSA money stays. FSA money is usually lost, except a carryover the plan chose to allow."
+        }
+      ]
+    },
+    {
+      "id": "mb-hsa-tax",
+      "type": "lesson",
+      "title": "Why an HSA Is Favored",
+      "summary": "The tax break is the point. The receipt is the proof.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mb-hsa-tax-q1",
+          "type": "multiple_choice",
+          "context": "Money in an [[HSA|health-savings-account]] can go in tax-favored, and qualified medical withdrawals come out tax-free. Keep the receipts.",
+          "prompt": "A qualified medical expense paid from an HSA is:",
+          "choices": [
+            "Generally free of income tax",
+            "Taxed twice",
+            "Illegal"
+          ],
+          "answer": 0,
+          "explain": "That is the favor. Sunglasses you do not need are not a qualified expense."
+        },
+        {
+          "id": "mb-hsa-tax-q2",
+          "type": "number",
+          "prompt": "You contribute $2,400. In a simple example your income-tax rate is 20%. How much income tax do you not pay on that contribution this year?",
+          "answer": 480,
+          "unit": "$",
+          "explain": "$2,400 × 0.20 = $480. Real taxes depend on your return. This is the shape of the break."
+        },
+        {
+          "id": "mb-hsa-tax-q3",
+          "type": "true_false",
+          "prompt": "You can spend HSA money on anything, tax-free, the week you deposit it.",
+          "answer": false,
+          "explain": "A non-medical withdrawal can be taxed, and it can be penalized if you are under 65."
+        },
+        {
+          "id": "mb-hsa-tax-q4",
+          "type": "multiple_choice",
+          "prompt": "Why keep receipts?",
+          "choices": [
+            "They show the withdrawal was for a qualified medical cost",
+            "The IRS does not allow receipts",
+            "Receipts raise the contribution limit"
+          ],
+          "answer": 0,
+          "explain": "The favor depends on the expense being qualified."
+        },
+        {
+          "id": "mb-hsa-tax-q5",
+          "type": "number",
+          "prompt": "The 2026 family HSA limit is $8,750. The self-only limit is $4,400. How much higher is the family limit?",
+          "answer": 4350,
+          "unit": "$",
+          "explain": "$8,750 − $4,400 = $4,350."
+        }
+      ]
+    },
+    {
+      "id": "mb-jordan",
+      "type": "lesson",
+      "format": "story",
+      "title": "Jordan’s Surprise Bill",
+      "summary": "The letter shouted. The EOB whispered the real number.",
+      "xp": 10,
+      "story": {
+        "title": "The bill that was not his",
+        "character": "Jordan, 33, bookstore manager",
+        "body": "Jordan leaves the ER with a sore ankle and, two weeks later, a letter asking for **$3,200**. The [[explanation of benefits]] arrives the next day. It says the plan allowed less, paid its share, and Jordan may owe **$640**.\n\nHe has an [[HSA|health-savings-account]] with **$700** in it. He has not asked the hospital for an itemized bill yet."
+      },
+      "steps": [
+        {
+          "id": "mb-jordan-q1",
+          "type": "number",
+          "prompt": "How much does the EOB say Jordan may owe?",
+          "answer": 640,
+          "unit": "$",
+          "explain": "The EOB says $640."
+        },
+        {
+          "id": "mb-jordan-q2",
+          "type": "number",
+          "prompt": "How much of the $3,200 letter is not his, according to that EOB?",
+          "answer": 2560,
+          "unit": "$",
+          "explain": "$3,200 − $640 = $2,560."
+        },
+        {
+          "id": "mb-jordan-q3",
+          "type": "multiple_choice",
+          "prompt": "What should he do before paying the $3,200?",
+          "choices": [
+            "Pay the $640 the EOB supports, and dispute the rest",
+            "Put $3,200 on a credit card tonight",
+            "Throw away the EOB"
+          ],
+          "answer": 0,
+          "explain": "The EOB is the plan’s accounting. The letter has not caught up."
+        },
+        {
+          "id": "mb-jordan-q4",
+          "type": "number",
+          "prompt": "His HSA has $700. After a qualified $640 payment, how much is left in the account?",
+          "answer": 60,
+          "unit": "$",
+          "explain": "$700 − $640 = $60."
+        },
+        {
+          "id": "mb-jordan-q5",
+          "type": "true_false",
+          "prompt": "The HSA payment makes the extra $2,560 his responsibility.",
+          "answer": false,
+          "explain": "He owes what the EOB says he owes, not the loudest number on the letter."
+        }
+      ]
+    },
+    {
+      "id": "mb-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "mb-trial",
+      "type": "boss",
+      "title": "Den Trial: Medical Bills",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "mb-trial-q1",
+          "type": "number",
+          "prompt": "Charged $500. Plan discount $150. What is allowed?",
+          "answer": 350,
+          "unit": "$",
+          "explain": "$500 − $150 = $350."
+        },
+        {
+          "id": "mb-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "A second charge for a test you had once is:",
+          "choices": [
+            "A double charge to dispute",
+            "Proof you had it twice",
+            "The out-of-pocket maximum"
+          ],
+          "answer": 0,
+          "explain": "One test, one line."
+        },
+        {
+          "id": "mb-trial-q3",
+          "type": "true_false",
+          "prompt": "An FSA balance always rolls over in full, like an HSA.",
+          "answer": false,
+          "explain": "FSA money is usually lost. A 2026 carryover, if allowed, stops at $680."
+        },
+        {
+          "id": "mb-trial-q4",
+          "type": "number",
+          "prompt": "A $2,000 bill is cut by 20% for prompt payment. How much do you pay?",
+          "answer": 1600,
+          "unit": "$",
+          "explain": "$2,000 × 0.20 = $400 off. $2,000 − $400 = $1,600."
+        }
+      ]
+    }
+  ]
+}
