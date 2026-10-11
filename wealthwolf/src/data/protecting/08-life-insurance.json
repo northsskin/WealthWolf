@@ -1,0 +1,712 @@
+{
+  "id": "life-insurance",
+  "section": "protecting",
+  "order": 8,
+  "title": "Life Insurance",
+  "description": "Term, whole life, and the years of income a household would lose.",
+  "wolfLine": "Insure the paycheck. Do not insure a slogan.",
+  "terms": {
+    "term-life": {
+      "term": "Term life insurance",
+      "definition": "Life insurance that pays if you die during a set period, such as 20 years. It is insurance, not an investment account.",
+      "example": "A 20-year term policy for $500,000 might cost $25 a month. If you outlive the term, it does not pay."
+    },
+    "whole-life": {
+      "term": "Whole life insurance",
+      "definition": "Life insurance meant to last your whole life, with a savings piece inside. The premium is much higher than term for the same death benefit.",
+      "example": "The same $500,000 might cost $220 a month as whole life. Most of the extra premium is the savings piece and the lifetime promise."
+    },
+    "beneficiary": {
+      "term": "Beneficiary",
+      "definition": "The person, or people, who receive the life insurance money if you die.",
+      "example": "You name your sister. If you die while the policy is in force, she receives the death benefit, not your email provider."
+    }
+  },
+  "lessons": [
+    {
+      "id": "li-who",
+      "type": "lesson",
+      "title": "Who Needs Life Insurance",
+      "summary": "Insure the paycheck someone else depends on.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "li-who-q1",
+          "type": "multiple_choice",
+          "context": "Life insurance pays a death benefit to the people who lose your income. [[Term life insurance|term-life]] is the usual way to buy a large benefit for a set number of years.",
+          "prompt": "Who has the clearest reason to buy life insurance?",
+          "choices": [
+            "A parent whose income pays the rent",
+            "A single adult no one relies on for money",
+            "A person who wants a fancy savings slogan"
+          ],
+          "answer": 0,
+          "explain": "The question is who would be short of money if you died."
+        },
+        {
+          "id": "li-who-q2",
+          "type": "true_false",
+          "prompt": "Life insurance is a good fit when no person and no debt depends on your income.",
+          "answer": false,
+          "explain": "If nobody is harmed financially by your death, the premium has little to protect."
+        },
+        {
+          "id": "li-who-q3",
+          "type": "multiple_choice",
+          "prompt": "A stay-at-home parent provides childcare that would cost money to replace. Do they have a reason to be insured?",
+          "choices": [
+            "Yes. Replacing that care costs real money",
+            "No. Only paychecks count",
+            "No. Children cannot be beneficiaries"
+          ],
+          "answer": 0,
+          "explain": "The loss is the cost of replacing the care, not only a W-2."
+        },
+        {
+          "id": "li-who-q4",
+          "type": "multiple_choice",
+          "prompt": "What is the death benefit?",
+          "choices": [
+            "The amount paid if you die while the policy is in force",
+            "The monthly premium",
+            "A bonus for staying healthy"
+          ],
+          "answer": 0,
+          "explain": "That check is the point of the policy."
+        },
+        {
+          "id": "li-who-q5",
+          "type": "fill_blank",
+          "prompt": "Buy life insurance to protect people who ___ your income or your care.",
+          "choices": [
+            "depend on",
+            "compete with",
+            "insure"
+          ],
+          "answer": 0,
+          "explain": "No dependent, no job for this policy."
+        }
+      ]
+    },
+    {
+      "id": "li-compare",
+      "type": "lesson",
+      "format": "call",
+      "title": "Term or Whole Life",
+      "summary": "Same death benefit. A very different price.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "li-compare-q1",
+          "type": "number",
+          "context": "[[Term life insurance|term-life]] covers a period. [[Whole life insurance|whole-life]] is priced to last, and to carry savings.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Term quote",
+              "subtitle": "20 years",
+              "lines": [
+                {
+                  "id": "ben",
+                  "label": "Death benefit",
+                  "amount": 500000.0
+                },
+                {
+                  "id": "prem",
+                  "label": "Premium per month",
+                  "amount": 25.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Whole life quote",
+              "subtitle": "Lifetime, with a savings piece",
+              "lines": [
+                {
+                  "id": "ben",
+                  "label": "Death benefit",
+                  "amount": 500000.0
+                },
+                {
+                  "id": "prem",
+                  "label": "Premium per month",
+                  "amount": 220.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What is the term quote per year?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$25 × 12 = $300."
+        },
+        {
+          "id": "li-compare-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Term quote",
+              "subtitle": "20 years",
+              "lines": [
+                {
+                  "id": "ben",
+                  "label": "Death benefit",
+                  "amount": 500000.0
+                },
+                {
+                  "id": "prem",
+                  "label": "Premium per month",
+                  "amount": 25.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Whole life quote",
+              "subtitle": "Lifetime, with a savings piece",
+              "lines": [
+                {
+                  "id": "ben",
+                  "label": "Death benefit",
+                  "amount": 500000.0
+                },
+                {
+                  "id": "prem",
+                  "label": "Premium per month",
+                  "amount": 220.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What is the whole life quote per year?",
+          "answer": 2640,
+          "unit": "$",
+          "explain": "$220 × 12 = $2,640."
+        },
+        {
+          "id": "li-compare-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Term quote",
+              "subtitle": "20 years",
+              "lines": [
+                {
+                  "id": "ben",
+                  "label": "Death benefit",
+                  "amount": 500000.0
+                },
+                {
+                  "id": "prem",
+                  "label": "Premium per month",
+                  "amount": 25.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Whole life quote",
+              "subtitle": "Lifetime, with a savings piece",
+              "lines": [
+                {
+                  "id": "ben",
+                  "label": "Death benefit",
+                  "amount": 500000.0
+                },
+                {
+                  "id": "prem",
+                  "label": "Premium per month",
+                  "amount": 220.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much more is whole life per year, for the same $500,000?",
+          "answer": 2340,
+          "unit": "$",
+          "explain": "$2,640 − $300 = $2,340."
+        },
+        {
+          "id": "li-compare-q4",
+          "type": "multiple_choice",
+          "prompt": "You want a large benefit while your kids are growing up, and you will invest the rest yourself. Which quote fits?",
+          "choices": [
+            "The term quote",
+            "The whole life quote",
+            "Neither. The benefits differ"
+          ],
+          "answer": 0,
+          "why": [
+            "Same $500,000, far less premium.",
+            "Whole life costs $2,340 more for the same benefit.",
+            "Both quotes say $500,000."
+          ],
+          "explain": "Term buys the $500,000 for $300 a year. The extra $2,340 is not more death benefit."
+        },
+        {
+          "id": "li-compare-q5",
+          "type": "true_false",
+          "prompt": "Whole life is more expensive because it pays a larger death benefit in this pair of quotes.",
+          "answer": false,
+          "explain": "Both say $500,000. The price difference is the lifetime design and the savings piece."
+        }
+      ]
+    },
+    {
+      "id": "li-much",
+      "type": "lesson",
+      "title": "How Much",
+      "summary": "A plain estimate: years of income the household would lose.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "li-much-q1",
+          "type": "info",
+          "title": "A rough replacement",
+          "body": "A common starting point is several years of the income your household would lose. Ten years is a simple sketch, not a personal plan.\n\nIf you earn **$50,000** a year, ten years is **$500,000**. Debts, a partner’s income, and savings move that number."
+        },
+        {
+          "id": "li-much-q2",
+          "type": "number",
+          "prompt": "Ten years of a $50,000 income. What is that sketch?",
+          "answer": 500000,
+          "unit": "$",
+          "explain": "$50,000 × 10 = $500,000."
+        },
+        {
+          "id": "li-much-q3",
+          "type": "number",
+          "prompt": "You earn $40,000. Ten years. What is the sketch?",
+          "answer": 400000,
+          "unit": "$",
+          "explain": "$40,000 × 10 = $400,000."
+        },
+        {
+          "id": "li-much-q4",
+          "type": "number",
+          "prompt": "The sketch is $400,000 and you already have $50,000 in life insurance through work. How much is the gap?",
+          "answer": 350000,
+          "unit": "$",
+          "explain": "$400,000 − $50,000 = $350,000."
+        },
+        {
+          "id": "li-much-q5",
+          "type": "true_false",
+          "prompt": "The ten-year sketch is a personal order you must follow.",
+          "answer": false,
+          "explain": "It is a starting sketch. A partner’s paycheck or a paid-off home can shrink it."
+        }
+      ]
+    },
+    {
+      "id": "li-page",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Policy Page",
+      "summary": "Benefit, price, term, and the name of the person who is paid.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "li-page-q1",
+          "type": "number",
+          "context": "The page should name the [[beneficiary]]: the person who receives the money.",
+          "doc": {
+            "kind": "statement",
+            "title": "Term policy",
+            "subtitle": "20-year term",
+            "meta": [
+              [
+                "Beneficiary",
+                "Your sister"
+              ],
+              [
+                "Term",
+                "20 years"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "ben",
+                "label": "Death benefit",
+                "amount": 500000.0
+              },
+              {
+                "id": "prem",
+                "label": "Premium for the year",
+                "amount": 300.0
+              }
+            ]
+          },
+          "prompt": "What death benefit does this policy page list?",
+          "answer": 500000,
+          "unit": "$",
+          "explain": "That line is $500,000."
+        },
+        {
+          "id": "li-page-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Term policy",
+            "subtitle": "20-year term",
+            "meta": [
+              [
+                "Beneficiary",
+                "Your sister"
+              ],
+              [
+                "Term",
+                "20 years"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "ben",
+                "label": "Death benefit",
+                "amount": 500000.0
+              },
+              {
+                "id": "prem",
+                "label": "Premium for the year",
+                "amount": 300.0
+              }
+            ]
+          },
+          "prompt": "What yearly premium does this policy page list?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "That line is $300."
+        },
+        {
+          "id": "li-page-q3",
+          "type": "multiple_choice",
+          "prompt": "Who receives the money if you die while this policy is in force?",
+          "choices": [
+            "The beneficiary named on the policy",
+            "Whoever finds the paper",
+            "The insurer’s shareholders"
+          ],
+          "answer": 0,
+          "explain": "The name on the policy is the instruction."
+        },
+        {
+          "id": "li-page-q4",
+          "type": "true_false",
+          "prompt": "A 20-year term pays the death benefit if you die in year 25.",
+          "answer": false,
+          "explain": "The term ended. Outliving it means no payout, which is what you hope for."
+        },
+        {
+          "id": "li-page-q5",
+          "type": "multiple_choice",
+          "prompt": "Why write the beneficiary down instead of assuming the family will sort it out?",
+          "choices": [
+            "The policy pays the name it has, not the argument that follows",
+            "Insurers ignore the form",
+            "A will always overrides every beneficiary"
+          ],
+          "answer": 0,
+          "explain": "The form is the instruction the insurer follows."
+        }
+      ]
+    },
+    {
+      "id": "li-beneficiary",
+      "type": "lesson",
+      "title": "Beneficiaries",
+      "summary": "The form is the will for this one check.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "li-beneficiary-q1",
+          "type": "multiple_choice",
+          "context": "Keep the [[beneficiary]] current. A divorce, a baby, or a death can make the old name wrong.",
+          "prompt": "What is a beneficiary?",
+          "choices": [
+            "The person you name to receive the death benefit",
+            "The agent who sold the policy",
+            "The hospital"
+          ],
+          "answer": 0,
+          "explain": "No name, and the money waits on a process your family did not need."
+        },
+        {
+          "id": "li-beneficiary-q2",
+          "type": "true_false",
+          "prompt": "Naming your beneficiary once, at age 22, is enough for life.",
+          "answer": false,
+          "explain": "Life changes. The form does not update itself."
+        },
+        {
+          "id": "li-beneficiary-q3",
+          "type": "multiple_choice",
+          "prompt": "You have a baby and the beneficiary is still a parent who has died. What do you do?",
+          "choices": [
+            "Update the form",
+            "Wait for the insurer to notice",
+            "Cancel the policy"
+          ],
+          "answer": 0,
+          "explain": "A dead beneficiary sends the money into a slower process."
+        },
+        {
+          "id": "li-beneficiary-q4",
+          "type": "multiple_choice",
+          "prompt": "You want your partner and your sibling to split the benefit. What does the form need?",
+          "choices": [
+            "Both names, and the share each one gets",
+            "Only a nickname",
+            "The word family"
+          ],
+          "answer": 0,
+          "explain": "Shares should add to the whole. Write the percents."
+        },
+        {
+          "id": "li-beneficiary-q5",
+          "type": "number",
+          "prompt": "You leave 60% to your partner and 40% to your sibling. What do the shares add up to?",
+          "answer": 100,
+          "unit": "%",
+          "explain": "60% + 40% = 100%."
+        }
+      ]
+    },
+    {
+      "id": "li-work",
+      "type": "lesson",
+      "title": "Coverage Through Work",
+      "summary": "It is a start. It leaves when the job does.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "li-work-q1",
+          "type": "multiple_choice",
+          "context": "Work coverage is often one or two times your salary. [[COBRA|cobra]] is about health insurance after a job ends, not a promise that the life policy stays.",
+          "prompt": "What is the usual limit of life insurance you get at work?",
+          "choices": [
+            "It often ends when the job ends, and the benefit can be small",
+            "It follows you for life at the same price",
+            "It replaces a term policy dollar for dollar, always"
+          ],
+          "answer": 0,
+          "explain": "A job change can take the coverage with it."
+        },
+        {
+          "id": "li-work-q2",
+          "type": "number",
+          "prompt": "Your salary is $50,000. Work life insurance is one times salary. What is the benefit?",
+          "answer": 50000,
+          "unit": "$",
+          "explain": "$50,000 × 1 = $50,000."
+        },
+        {
+          "id": "li-work-q3",
+          "type": "number",
+          "prompt": "Your ten-year sketch is $500,000. How much of that sketch is missing?",
+          "answer": 450000,
+          "unit": "$",
+          "explain": "$500,000 − $50,000 = $450,000."
+        },
+        {
+          "id": "li-work-q4",
+          "type": "true_false",
+          "prompt": "Quitting the job keeps that work policy in force at no cost.",
+          "answer": false,
+          "explain": "The policy belonged to the job. Ask what, if anything, you can take with you, and at what price."
+        },
+        {
+          "id": "li-work-q5",
+          "type": "multiple_choice",
+          "prompt": "Why not rely on the work policy alone while you have young kids?",
+          "choices": [
+            "The benefit is often only a year or two of pay, and it can end with the job",
+            "Work policies are illegal",
+            "Kids cannot be protected by any policy"
+          ],
+          "answer": 0,
+          "explain": "One year of pay is a thin bridge."
+        }
+      ]
+    },
+    {
+      "id": "li-why-term",
+      "type": "lesson",
+      "title": "Why Most People Choose Term",
+      "summary": "Buy the protection. Invest the difference on purpose.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "li-why-term-q1",
+          "type": "multiple_choice",
+          "prompt": "Why do many people choose term instead of whole life?",
+          "choices": [
+            "Term buys a large benefit for a small premium during the years people depend on you",
+            "Term pays a larger death benefit for the same premium in the quotes we used",
+            "Whole life is illegal"
+          ],
+          "answer": 0,
+          "explain": "The expensive years are the years with kids or a big debt. Term covers those years."
+        },
+        {
+          "id": "li-why-term-q2",
+          "type": "number",
+          "prompt": "Term is $300 a year. Whole life is $2,640. How much is left each year if you buy term instead?",
+          "answer": 2340,
+          "unit": "$",
+          "explain": "$2,640 − $300 = $2,340."
+        },
+        {
+          "id": "li-why-term-q3",
+          "type": "true_false",
+          "prompt": "That $2,340 is automatically a better investment if you spend it.",
+          "answer": false,
+          "explain": "The difference only helps if you actually save or invest it. Spending it buys neither insurance nor savings."
+        },
+        {
+          "id": "li-why-term-q4",
+          "type": "multiple_choice",
+          "prompt": "You have no dependents and no co-signed debt. What is a reasonable conclusion?",
+          "choices": [
+            "You may not need life insurance right now",
+            "You must buy whole life",
+            "You must buy the largest term sold"
+          ],
+          "answer": 0,
+          "explain": "The product protects a person. No person, no purchase required."
+        },
+        {
+          "id": "li-why-term-q5",
+          "type": "fill_blank",
+          "prompt": "Term covers a ___ of years, not your whole life by default.",
+          "choices": [
+            "set number",
+            "random",
+            "secret"
+          ],
+          "answer": 0,
+          "explain": "When the term ends, so does the coverage."
+        }
+      ]
+    },
+    {
+      "id": "li-aisha",
+      "type": "lesson",
+      "format": "story",
+      "title": "Aisha and Her New Baby",
+      "summary": "One year of pay is not ten.",
+      "xp": 10,
+      "story": {
+        "title": "A paycheck and a new baby",
+        "character": "Aisha, 31, clinic receptionist",
+        "body": "Aisha’s baby is three months old. She earns **$4,000** a month, **$48,000** a year. Her partner works too, but the rent still needs her paycheck. Work gives her life insurance equal to one year of pay, **$48,000**.\n\nA ten-year sketch of her income is **$480,000**. A 20-year term quote for that amount is **$28** a month."
+      },
+      "steps": [
+        {
+          "id": "li-aisha-q1",
+          "type": "number",
+          "prompt": "What is ten years of Aisha’s $48,000 income?",
+          "answer": 480000,
+          "unit": "$",
+          "explain": "$48,000 × 10 = $480,000."
+        },
+        {
+          "id": "li-aisha-q2",
+          "type": "number",
+          "prompt": "How much of that sketch does the work policy already cover?",
+          "answer": 48000,
+          "unit": "$",
+          "explain": "One year of pay is $48,000."
+        },
+        {
+          "id": "li-aisha-q3",
+          "type": "number",
+          "prompt": "How big is the gap?",
+          "answer": 432000,
+          "unit": "$",
+          "explain": "$480,000 − $48,000 = $432,000."
+        },
+        {
+          "id": "li-aisha-q4",
+          "type": "number",
+          "prompt": "The term quote is $28 a month. What is that per year?",
+          "answer": 336,
+          "unit": "$",
+          "explain": "$28 × 12 = $336."
+        },
+        {
+          "id": "li-aisha-q5",
+          "type": "multiple_choice",
+          "prompt": "What is the sensible shape of her next step?",
+          "choices": [
+            "Price a term policy for the gap, and name the baby’s other parent as beneficiary",
+            "Buy whole life because a baby means the expensive product",
+            "Drop the work policy and stay uninsured"
+          ],
+          "answer": 0,
+          "explain": "The gap is the uncovered years. Term is built for a gap with an end date."
+        }
+      ]
+    },
+    {
+      "id": "li-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "li-trial",
+      "type": "boss",
+      "title": "Den Trial: Life Insurance",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "li-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "Life insurance is most useful when:",
+          "choices": [
+            "Someone depends on your income",
+            "You want a logo on a folder",
+            "You have no dependents and no shared debts"
+          ],
+          "answer": 0,
+          "explain": "The benefit replaces what those people would lose."
+        },
+        {
+          "id": "li-trial-q2",
+          "type": "number",
+          "prompt": "Term premium $40 a month. What is the yearly premium?",
+          "answer": 480,
+          "unit": "$",
+          "explain": "$40 × 12 = $480."
+        },
+        {
+          "id": "li-trial-q3",
+          "type": "true_false",
+          "prompt": "A work life policy of one times salary usually equals a ten-year income sketch.",
+          "answer": false,
+          "explain": "One times salary is one year, not ten."
+        },
+        {
+          "id": "li-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "Who should you name on the policy?",
+          "choices": [
+            "The beneficiary who should receive the money",
+            "Whoever sold it",
+            "No one. The form is optional"
+          ],
+          "answer": 0,
+          "explain": "The name is the instruction."
+        }
+      ]
+    }
+  ]
+}

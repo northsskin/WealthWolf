@@ -1,0 +1,764 @@
+{
+  "id": "insurance-basics",
+  "section": "protecting",
+  "order": 3,
+  "title": "Insurance Basics",
+  "description": "The pool, the deductible, the limit, and the losses a policy will not touch.",
+  "wolfLine": "Read the no before you trust the yes.",
+  "terms": {
+    "insurance": {
+      "term": "Insurance",
+      "definition": "You pay a smaller, regular amount so a pool of people can cover a big loss you could not pay alone.",
+      "example": "A $100 monthly premium sits in the pool. A $20,000 surgery does not come only out of your pocket."
+    },
+    "deductible": {
+      "term": "Deductible",
+      "definition": "The amount you pay on a covered loss before insurance starts paying.",
+      "example": "A $1,000 deductible on a $4,000 claim means you pay $1,000 and the plan pays the rest, up to the limit."
+    },
+    "coverage-limit": {
+      "term": "Coverage limit",
+      "definition": "The most the policy will pay for a covered loss.",
+      "example": "A $300,000 limit does not pay the part of a loss above $300,000."
+    },
+    "exclusion": {
+      "term": "Exclusion",
+      "definition": "A loss the policy says it will not pay, even if everything else is in force.",
+      "example": "A standard home policy often excludes flood. The water can be real and still not covered."
+    }
+  },
+  "lessons": [
+    {
+      "id": "ib-pool",
+      "type": "lesson",
+      "title": "What Insurance Is",
+      "summary": "You buy a share of a pool, not a promise that nothing bad will happen.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ib-pool-q1",
+          "type": "multiple_choice",
+          "context": "[[Insurance]] is that pool. The [[premium]] is what you pay to keep the policy active, whether or not you use it.",
+          "prompt": "What is insurance, in plain terms?",
+          "choices": [
+            "A pool that pays big losses in exchange for a smaller regular payment",
+            "A savings account that never goes down",
+            "A fine you pay after an accident"
+          ],
+          "answer": 0,
+          "explain": "The premium is the share. The pool is there for the loss you could not cover alone."
+        },
+        {
+          "id": "ib-pool-q2",
+          "type": "number",
+          "prompt": "The premium is $80 a month. What is that for a year?",
+          "answer": 960,
+          "unit": "$",
+          "explain": "$80 × 12 = $960."
+        },
+        {
+          "id": "ib-pool-q3",
+          "type": "true_false",
+          "prompt": "Paying the premium means the insurer will cover every loss you ever have.",
+          "answer": false,
+          "explain": "The policy pays what it covers, up to the limit, after the deductible. Not every misfortune."
+        },
+        {
+          "id": "ib-pool-q4",
+          "type": "multiple_choice",
+          "prompt": "Who is the premium for?",
+          "choices": [
+            "The pool, so covered losses can be paid",
+            "A savings jar with your name on it",
+            "A tax on safe drivers only"
+          ],
+          "answer": 0,
+          "explain": "You may not claim this year. Someone in the pool will."
+        },
+        {
+          "id": "ib-pool-q5",
+          "type": "fill_blank",
+          "prompt": "The regular price of keeping insurance active is the ___.",
+          "choices": [
+            "premium",
+            "deductible",
+            "exclusion"
+          ],
+          "answer": 0,
+          "explain": "You pay it even in a quiet year."
+        }
+      ]
+    },
+    {
+      "id": "ib-parts",
+      "type": "lesson",
+      "title": "Premium, Deductible, Limit",
+      "summary": "Three numbers. They are not the same job.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ib-parts-q1",
+          "type": "multiple_choice",
+          "context": "A [[deductible]] comes off the loss. A [[coverage limit]] is the ceiling on what the policy pays.",
+          "prompt": "What is a deductible?",
+          "choices": [
+            "What you pay on a covered loss before the insurer pays",
+            "The most the policy will ever pay",
+            "The monthly price of the policy"
+          ],
+          "answer": 0,
+          "explain": "You cover the first part. Then the pool steps in."
+        },
+        {
+          "id": "ib-parts-q2",
+          "type": "number",
+          "prompt": "A covered claim is $4,000. The deductible is $1,000. How much do you pay toward that claim?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "The deductible is the first $1,000."
+        },
+        {
+          "id": "ib-parts-q3",
+          "type": "number",
+          "prompt": "How much of that $4,000 does insurance pay, if it is under the limit?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$4,000 − $1,000 = $3,000."
+        },
+        {
+          "id": "ib-parts-q4",
+          "type": "number",
+          "prompt": "The coverage limit is $300,000. A covered loss is $20,000, after a $1,000 deductible. Does the limit block the payment? How much of the $20,000 is above $300,000?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "$20,000 is under $300,000, so none of it is past the limit."
+        },
+        {
+          "id": "ib-parts-q5",
+          "type": "true_false",
+          "prompt": "A higher coverage limit means the insurer will pay past that limit.",
+          "answer": false,
+          "explain": "The limit is the ceiling."
+        }
+      ]
+    },
+    {
+      "id": "ib-summary",
+      "type": "lesson",
+      "format": "document",
+      "title": "A Policy Summary",
+      "summary": "Three lines tell you the price, the first dollars, and the ceiling.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ib-summary-q1",
+          "type": "number",
+          "context": "Read the summary before you read the ads.",
+          "doc": {
+            "kind": "statement",
+            "title": "Policy summary",
+            "subtitle": "Sample renters policy",
+            "meta": [
+              [
+                "Policy number",
+                "R-20418"
+              ],
+              [
+                "Term",
+                "12 months"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prem",
+                "label": "Premium for the year",
+                "amount": 1200.0
+              },
+              {
+                "id": "ded",
+                "label": "Deductible",
+                "amount": 1000.0
+              },
+              {
+                "id": "limit",
+                "label": "Coverage limit",
+                "amount": 300000.0
+              }
+            ],
+            "note": "This is a summary, not the whole contract."
+          },
+          "prompt": "What is the yearly premium on this summary?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "The premium line is $1,200."
+        },
+        {
+          "id": "ib-summary-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Policy summary",
+            "subtitle": "Sample renters policy",
+            "meta": [
+              [
+                "Policy number",
+                "R-20418"
+              ],
+              [
+                "Term",
+                "12 months"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prem",
+                "label": "Premium for the year",
+                "amount": 1200.0
+              },
+              {
+                "id": "ded",
+                "label": "Deductible",
+                "amount": 1000.0
+              },
+              {
+                "id": "limit",
+                "label": "Coverage limit",
+                "amount": 300000.0
+              }
+            ],
+            "note": "This is a summary, not the whole contract."
+          },
+          "prompt": "What is the deductible?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "The deductible line is $1,000."
+        },
+        {
+          "id": "ib-summary-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Policy summary",
+            "subtitle": "Sample renters policy",
+            "meta": [
+              [
+                "Policy number",
+                "R-20418"
+              ],
+              [
+                "Term",
+                "12 months"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prem",
+                "label": "Premium for the year",
+                "amount": 1200.0
+              },
+              {
+                "id": "ded",
+                "label": "Deductible",
+                "amount": 1000.0
+              },
+              {
+                "id": "limit",
+                "label": "Coverage limit",
+                "amount": 300000.0
+              }
+            ],
+            "note": "This is a summary, not the whole contract."
+          },
+          "prompt": "A covered loss is $4,000. Using this deductible, how much does the insurer pay?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$4,000 − $1,000 = $3,000. The limit is $300,000, so it does not cut this claim."
+        },
+        {
+          "id": "ib-summary-q4",
+          "type": "multiple_choice",
+          "prompt": "Which line is the most the policy will pay?",
+          "choices": [
+            "The coverage limit",
+            "The premium",
+            "The deductible"
+          ],
+          "answer": 0,
+          "explain": "The limit is the ceiling. The premium is the price. The deductible is your first part."
+        },
+        {
+          "id": "ib-summary-q5",
+          "type": "true_false",
+          "prompt": "The one-page summary is the entire legal contract.",
+          "answer": false,
+          "explain": "The summary is the map. The contract is longer, and the exclusions live there."
+        }
+      ]
+    },
+    {
+      "id": "ib-deductible-call",
+      "type": "lesson",
+      "format": "call",
+      "title": "Higher Deductible, Lower Premium",
+      "summary": "You trade a cheaper year for a bigger bill when something breaks.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ib-deductible-call-q1",
+          "type": "number",
+          "context": "Same kind of policy. The deductible and the premium moved in opposite directions.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Plan Low",
+              "subtitle": "Lower deductible",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Yearly premium",
+                  "amount": 1800.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Deductible",
+                  "amount": 500.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Plan High",
+              "subtitle": "Higher deductible",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Yearly premium",
+                  "amount": 1080.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Deductible",
+                  "amount": 2000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much less premium does Plan High charge per year?",
+          "answer": 720,
+          "unit": "$",
+          "explain": "$1,800 − $1,080 = $720."
+        },
+        {
+          "id": "ib-deductible-call-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Plan Low",
+              "subtitle": "Lower deductible",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Yearly premium",
+                  "amount": 1800.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Deductible",
+                  "amount": 500.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Plan High",
+              "subtitle": "Higher deductible",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Yearly premium",
+                  "amount": 1080.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Deductible",
+                  "amount": 2000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much higher is Plan High’s deductible?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$2,000 − $500 = $1,500."
+        },
+        {
+          "id": "ib-deductible-call-q3",
+          "type": "multiple_choice",
+          "prompt": "You expect no claim this year. Which plan costs less if that comes true?",
+          "choices": [
+            "Plan High",
+            "Plan Low",
+            "They cost the same"
+          ],
+          "answer": 0,
+          "explain": "With no claim you only pay the premium. $1,080 is less than $1,800."
+        },
+        {
+          "id": "ib-deductible-call-q4",
+          "type": "multiple_choice",
+          "prompt": "A covered loss is $2,000. You also pay the premium. Which plan has you pay less in total that year?",
+          "choices": [
+            "Plan Low",
+            "Plan High",
+            "They match to the dollar"
+          ],
+          "answer": 0,
+          "why": [
+            "$2,300 against $3,080.",
+            "The bigger deductible swallows the whole loss.",
+            "The totals are $780 apart."
+          ],
+          "explain": "Plan Low: $500 + $1,800 = $2,300. Plan High: $2,000 + $1,080 = $3,080."
+        },
+        {
+          "id": "ib-deductible-call-q5",
+          "type": "true_false",
+          "prompt": "The cheaper premium is always the better plan.",
+          "answer": false,
+          "explain": "It is better in a quiet year. A big claim can erase the savings."
+        }
+      ]
+    },
+    {
+      "id": "ib-insure-what",
+      "type": "lesson",
+      "format": "sort",
+      "title": "What to Insure",
+      "summary": "Insure the loss that would wreck you. Skip the one you can replace.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ib-insure-what-q1",
+          "type": "sort",
+          "prompt": "Insure it, or you could probably skip it?",
+          "buckets": [
+            "Insure it",
+            "You could skip it"
+          ],
+          "items": [
+            [
+              "A fire that destroys the place you live",
+              0
+            ],
+            [
+              "A lawsuit after someone is hurt",
+              0
+            ],
+            [
+              "A $40 toaster’s extended warranty",
+              1
+            ],
+            [
+              "A phone you could replace from savings",
+              1
+            ],
+            [
+              "A car crash that injures another person",
+              0
+            ]
+          ],
+          "explain": "Insure the big loss. The small stuff can come from cash you already have."
+        },
+        {
+          "id": "ib-insure-what-q2",
+          "type": "multiple_choice",
+          "prompt": "Why skip insurance on a loss you could pay from savings?",
+          "choices": [
+            "The premium can cost more than the risk is worth to you",
+            "Small losses are illegal to pay yourself",
+            "Insurers refuse any policy under $1,000"
+          ],
+          "answer": 0,
+          "explain": "Insurance is for the hit you cannot absorb."
+        },
+        {
+          "id": "ib-insure-what-q3",
+          "type": "true_false",
+          "prompt": "If you can replace it next paycheck, it is the first thing to insure.",
+          "answer": false,
+          "explain": "That is the loss you can skip. Insure the one you cannot."
+        },
+        {
+          "id": "ib-insure-what-q4",
+          "type": "multiple_choice",
+          "prompt": "Which loss is the clearest case for insurance?",
+          "choices": [
+            "A hospital bill big enough to wipe out your savings",
+            "A $15 charging cable",
+            "A snack you did not like"
+          ],
+          "answer": 0,
+          "explain": "Size is the test. Could you write the check?"
+        },
+        {
+          "id": "ib-insure-what-q5",
+          "type": "fill_blank",
+          "prompt": "Insure the loss you could not ___ from savings.",
+          "choices": [
+            "cover",
+            "enjoy",
+            "advertise"
+          ],
+          "answer": 0,
+          "explain": "That is the job of the pool."
+        }
+      ]
+    },
+    {
+      "id": "ib-exclusions",
+      "type": "lesson",
+      "title": "Exclusions",
+      "summary": "The loss can be real and still not covered.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ib-exclusions-q1",
+          "type": "multiple_choice",
+          "context": "An [[exclusion]] is a no, written in advance.",
+          "prompt": "What is an exclusion?",
+          "choices": [
+            "A loss the policy says it will not pay",
+            "The monthly premium",
+            "A bonus for filing no claims"
+          ],
+          "answer": 0,
+          "explain": "The damage can be obvious. The contract can still say no."
+        },
+        {
+          "id": "ib-exclusions-q2",
+          "type": "true_false",
+          "prompt": "If a policy excludes flood, a flood is still covered because water is an accident.",
+          "answer": false,
+          "explain": "An exclusion is the exception. The accident is not enough."
+        },
+        {
+          "id": "ib-exclusions-q3",
+          "type": "multiple_choice",
+          "prompt": "Where do you look before you count on a policy?",
+          "choices": [
+            "The exclusions, not only the friendly summary",
+            "The advertisement",
+            "The font on the logo"
+          ],
+          "answer": 0,
+          "explain": "The summary sells. The exclusions decide."
+        },
+        {
+          "id": "ib-exclusions-q4",
+          "type": "multiple_choice",
+          "prompt": "A policy covers theft and excludes earthquakes. An earthquake breaks the windows. What happens?",
+          "choices": [
+            "The earthquake exclusion can block the claim",
+            "Theft coverage pays, because glass is missing",
+            "Every broken window is theft"
+          ],
+          "answer": 0,
+          "explain": "The cause is the earthquake. That cause is excluded."
+        },
+        {
+          "id": "ib-exclusions-q5",
+          "type": "fill_blank",
+          "prompt": "An exclusion is a loss the policy will not ___.",
+          "choices": [
+            "pay",
+            "mention",
+            "count"
+          ],
+          "answer": 0,
+          "explain": "Read it before you need it."
+        }
+      ]
+    },
+    {
+      "id": "ib-claim",
+      "type": "lesson",
+      "title": "Filing a Claim",
+      "summary": "Safety first. Then the record. Then the company.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ib-claim-q1",
+          "type": "order",
+          "prompt": "Put a claim in order.",
+          "items": [
+            "Make sure people are safe and call for help if someone is hurt",
+            "Write down what happened and take photos",
+            "Tell your insurance company",
+            "Keep receipts for costs you had to pay"
+          ],
+          "explain": "People first. The record second. The company third. The receipts prove the extra costs."
+        },
+        {
+          "id": "ib-claim-q2",
+          "type": "true_false",
+          "prompt": "You should throw away receipts once you have told the insurer.",
+          "answer": false,
+          "explain": "Receipts are how you show what you spent."
+        },
+        {
+          "id": "ib-claim-q3",
+          "type": "multiple_choice",
+          "prompt": "Why take photos?",
+          "choices": [
+            "They show the damage as it was",
+            "They raise the deductible",
+            "They replace the policy"
+          ],
+          "answer": 0,
+          "explain": "Memory fades. The photo does not."
+        },
+        {
+          "id": "ib-claim-q4",
+          "type": "multiple_choice",
+          "prompt": "Someone is hurt. What comes before the paperwork?",
+          "choices": [
+            "Getting them help",
+            "Comparing premiums",
+            "Posting about it"
+          ],
+          "answer": 0,
+          "explain": "The claim can wait a few minutes. An injury cannot."
+        },
+        {
+          "id": "ib-claim-q5",
+          "type": "fill_blank",
+          "prompt": "Keep the ___ for costs you paid out of pocket.",
+          "choices": [
+            "receipts",
+            "excuses",
+            "ads"
+          ],
+          "answer": 0,
+          "explain": "A receipt is the proof."
+        }
+      ]
+    },
+    {
+      "id": "ib-rates",
+      "type": "lesson",
+      "format": "story",
+      "title": "Claims and Your Rates",
+      "summary": "A claim can cost more than the check.",
+      "xp": 10,
+      "story": {
+        "title": "The window under the deductible",
+        "character": "Sam, 41, line cook",
+        "body": "A storm breaks Sam’s apartment window. The glass shop wants **$900**. His policy’s deductible is **$1,000**, and the yearly premium is **$240**. He files anyway, because he wants to know.\n\nThe insurer agrees the break is covered. The payout is still **$0**, because $900 never clears a $1,000 deductible. A second storm later puts a **$2,400** hole in the same kind of glass."
+      },
+      "steps": [
+        {
+          "id": "ib-rates-q1",
+          "type": "number",
+          "prompt": "How much does insurance pay on the $900 window?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "$900 is under the $1,000 deductible, so the payout is $0."
+        },
+        {
+          "id": "ib-rates-q2",
+          "type": "number",
+          "prompt": "How much would insurance pay on the later $2,400 break, same deductible?",
+          "answer": 1400,
+          "unit": "$",
+          "explain": "$2,400 − $1,000 = $1,400."
+        },
+        {
+          "id": "ib-rates-q3",
+          "type": "multiple_choice",
+          "prompt": "Why might Sam still think twice before filing a small claim?",
+          "choices": [
+            "A claim can raise what he pays later, even when the payout is tiny",
+            "Filing is illegal under $1,000",
+            "The premium disappears if he never files"
+          ],
+          "answer": 0,
+          "explain": "The check is not the only cost. The next premium can move."
+        },
+        {
+          "id": "ib-rates-q4",
+          "type": "true_false",
+          "prompt": "A covered loss under the deductible still produces a payout.",
+          "answer": false,
+          "explain": "The deductible is the hurdle. Under it, the insurer pays nothing."
+        },
+        {
+          "id": "ib-rates-q5",
+          "type": "multiple_choice",
+          "prompt": "He pays the $240 premium and gets $0 for the $900 window. What did the premium buy that year?",
+          "choices": [
+            "Coverage for a bigger loss, not a refund of the premium",
+            "A promise the window would not break",
+            "The $900, paid in secret"
+          ],
+          "answer": 0,
+          "explain": "The pool was there. This particular loss never reached it."
+        }
+      ]
+    },
+    {
+      "id": "ib-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "ib-trial",
+      "type": "boss",
+      "title": "Den Trial: Insurance Basics",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "ib-trial-q1",
+          "type": "number",
+          "prompt": "Premium $60 a month. What is the yearly premium?",
+          "answer": 720,
+          "unit": "$",
+          "explain": "$60 × 12 = $720."
+        },
+        {
+          "id": "ib-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "A covered $6,000 loss has a $1,000 deductible and a huge limit. How much do you pay toward the loss?",
+          "choices": [
+            "$1,000",
+            "$6,000",
+            "$0"
+          ],
+          "answer": 0,
+          "explain": "The deductible is your first $1,000. The limit is not the issue."
+        },
+        {
+          "id": "ib-trial-q3",
+          "type": "true_false",
+          "prompt": "An exclusion is a loss the policy agrees to pay extra for.",
+          "answer": false,
+          "explain": "An exclusion is a loss the policy will not pay."
+        },
+        {
+          "id": "ib-trial-q4",
+          "type": "number",
+          "prompt": "Plan A’s premium is $2,000. Plan B’s is $1,250. How much less is B?",
+          "answer": 750,
+          "unit": "$",
+          "explain": "$2,000 − $1,250 = $750."
+        }
+      ]
+    }
+  ]
+}
