@@ -29,6 +29,7 @@ export default function App() {
       <Route path="/glossary/drill" element={<WordDrill />} />
       <Route path="/signup" element={<Account mode="signup" />} />
       <Route path="/signin" element={<Account mode="signin" />} />
+      <Route path="/reset-password" element={<Account mode="reset" />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )

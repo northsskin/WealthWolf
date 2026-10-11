@@ -1,0 +1,680 @@
+{
+  "id": "raises",
+  "section": "earning",
+  "order": 4,
+  "title": "Raises & Promotions",
+  "description": "Raise math, rising prices, and how to ask for more.",
+  "wolfLine": "Nobody hands the meat to the wolf who waits by the door.",
+  "terms": {
+    "inflation": {
+      "term": "Inflation",
+      "definition": "Prices rising over time, so the same money buys a little less each year.",
+      "example": "Groceries that cost $400 cost $420 after 5% inflation."
+    },
+    "cost-of-living-adjustment": {
+      "term": "Cost-of-living adjustment",
+      "definition": "A raise meant to keep up with rising prices, not to reward performance. Often called a COLA.",
+      "example": "Everyone gets 3% in January because prices rose 3%."
+    },
+    "merit-raise": {
+      "term": "Merit raise",
+      "definition": "A raise that rewards how well you did your job.",
+      "example": "A 5% raise for beating your targets, when the average was 3%."
+    },
+    "performance-review": {
+      "term": "Performance review",
+      "definition": "A regular meeting, often yearly, where your manager rates your work. Raises are often decided there.",
+      "example": "Your December review: “exceeds expectations,” plus a 5% raise."
+    }
+  },
+  "lessons": [
+    {
+      "id": "rp-math",
+      "type": "lesson",
+      "title": "Raise Math",
+      "summary": "Percent raises, in dollars.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rp-math-q1",
+          "type": "number",
+          "context": "Raises are usually a percent. To get the new pay, multiply by 1 plus the percent: a 4% raise is × 1.04.",
+          "prompt": "$50,000 with a 4% raise. What’s the new salary?",
+          "answer": 52000,
+          "unit": "$",
+          "explain": "$50,000 × 1.04 = $52,000."
+        },
+        {
+          "id": "rp-math-q2",
+          "type": "number",
+          "prompt": "$20 an hour with a 5% raise. What’s the new rate?",
+          "answer": 21,
+          "unit": "$",
+          "explain": "$20 × 1.05 = $21."
+        },
+        {
+          "id": "rp-math-q3",
+          "type": "number",
+          "prompt": "From $40,000 to $42,000. What percent raise is that?",
+          "answer": 5,
+          "unit": "%",
+          "explain": "$2,000 ÷ $40,000 = 0.05, which is 5%."
+        },
+        {
+          "id": "rp-math-q4",
+          "type": "number",
+          "prompt": "A 3% raise on $48,000 adds how much per year?",
+          "answer": 1440,
+          "unit": "$",
+          "explain": "$48,000 × 0.03 = $1,440."
+        },
+        {
+          "id": "rp-math-q5",
+          "type": "number",
+          "prompt": "Paid every two weeks, how much more is that per paycheck, before deductions?",
+          "answer": 55.38,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$1,440 ÷ 26 = $55.38."
+        },
+        {
+          "id": "rp-math-q6",
+          "type": "true_false",
+          "prompt": "A 3% raise on $60,000 is bigger in dollars than a 4% raise on $40,000.",
+          "answer": true,
+          "explain": "$1,800 vs. $1,600."
+        }
+      ]
+    },
+    {
+      "id": "rp-inflation",
+      "type": "lesson",
+      "title": "Raises vs. Rising Prices",
+      "summary": "A raise only counts if it beats rising prices.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rp-inflation-q1",
+          "type": "multiple_choice",
+          "context": "[[Inflation]] is prices rising over time. If prices rise 3% a year, the same groceries cost 3% more next year.",
+          "prompt": "Prices rose 3% this year. Your raise was 3%. Can you buy more than last year?",
+          "choices": [
+            "About the same",
+            "More",
+            "Less"
+          ],
+          "answer": 0,
+          "explain": "Your pay and your prices moved together."
+        },
+        {
+          "id": "rp-inflation-q2",
+          "type": "multiple_choice",
+          "prompt": "Your raise was 2% and prices rose 4%. What happened to your buying power?",
+          "choices": [
+            "It shrank",
+            "It grew",
+            "No change"
+          ],
+          "answer": 0,
+          "explain": "Your pay went up less than your costs."
+        },
+        {
+          "id": "rp-inflation-q3",
+          "type": "number",
+          "prompt": "A real raise is roughly your raise minus inflation. 5% raise, 3% inflation?",
+          "answer": 2,
+          "unit": "%",
+          "explain": "5% − 3% = about 2% more buying power."
+        },
+        {
+          "id": "rp-inflation-q4",
+          "type": "multiple_choice",
+          "context": "A [[cost-of-living adjustment]] (COLA) is a raise meant to keep up with rising prices, not to reward you.",
+          "prompt": "Your company gives everyone 3% to match rising prices. What is it?",
+          "choices": [
+            "A cost-of-living adjustment",
+            "A promotion",
+            "A bonus"
+          ],
+          "answer": 0,
+          "explain": "It keeps you level. It’s not a reward."
+        },
+        {
+          "id": "rp-inflation-q5",
+          "type": "true_false",
+          "prompt": "A raise that only matches inflation leaves you no richer.",
+          "answer": true,
+          "explain": "Same buying power as before."
+        },
+        {
+          "id": "rp-inflation-q6",
+          "type": "number",
+          "prompt": "Groceries cost $400 a month. Prices rise 5%. What’s the new monthly cost?",
+          "answer": 420,
+          "unit": "$",
+          "explain": "$400 × 1.05 = $420."
+        }
+      ]
+    },
+    {
+      "id": "rp-types",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Kinds of Raises",
+      "summary": "Merit, cost-of-living and promotion: what each one means.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rp-types-q1",
+          "type": "multiple_choice",
+          "context": "A [[merit raise]] rewards how well you did. It’s often decided at your [[performance review]], a regular meeting about your work.",
+          "prompt": "What decides a merit raise?",
+          "choices": [
+            "How well you did your job",
+            "Rising prices",
+            "Only the time of year"
+          ],
+          "answer": 0,
+          "explain": "Performance, not the calendar."
+        },
+        {
+          "id": "rp-types-q2",
+          "type": "sort",
+          "prompt": "What kind of raise is it?",
+          "buckets": [
+            "Merit raise",
+            "Cost-of-living",
+            "Promotion"
+          ],
+          "items": [
+            [
+              "3% for everyone because prices rose",
+              1
+            ],
+            [
+              "A bigger raise for top performers",
+              0
+            ],
+            [
+              "New title, new duties, new pay",
+              2
+            ],
+            [
+              "An inflation adjustment in January",
+              1
+            ],
+            [
+              "A reward for beating your sales goals",
+              0
+            ],
+            [
+              "Moving from cashier to shift lead",
+              2
+            ]
+          ]
+        },
+        {
+          "id": "rp-types-q3",
+          "type": "multiple_choice",
+          "prompt": "Which usually brings the biggest jump in pay?",
+          "choices": [
+            "A promotion",
+            "A cost-of-living adjustment",
+            "Neither"
+          ],
+          "answer": 0,
+          "explain": "New role, new pay band."
+        },
+        {
+          "id": "rp-types-q4",
+          "type": "true_false",
+          "prompt": "Switching jobs can bring a bigger raise than staying put.",
+          "answer": true,
+          "explain": "Job changers often get bigger jumps, though it’s never guaranteed."
+        },
+        {
+          "id": "rp-types-q5",
+          "type": "number",
+          "prompt": "Promoted from $46,000 to $53,000. What percent raise is that? Round to the nearest whole percent.",
+          "answer": 15,
+          "unit": "%",
+          "explain": "$7,000 ÷ $46,000 = 0.152, about 15%."
+        },
+        {
+          "id": "rp-types-q6",
+          "type": "multiple_choice",
+          "prompt": "Your review says “meets expectations” and you get 2%. Prices rose 3%. Best response?",
+          "choices": [
+            "Ask what it takes to earn more next time, and track it",
+            "Quit on the spot",
+            "Never mention it"
+          ],
+          "answer": 0,
+          "explain": "Turn a weak raise into a plan."
+        }
+      ]
+    },
+    {
+      "id": "rp-asking",
+      "type": "lesson",
+      "title": "Asking for a Raise",
+      "summary": "Raises go to people who ask, with proof.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rp-asking-q1",
+          "type": "info",
+          "title": "Build your case",
+          "body": "Raises usually go to people who ask, and back it up. Keep a running list of wins: problems solved, money saved, praise from customers. Then look up what your role pays elsewhere."
+        },
+        {
+          "id": "rp-asking-q2",
+          "type": "order",
+          "prompt": "Put asking for a raise in order.",
+          "items": [
+            "Collect your wins and pay research",
+            "Ask your manager for a meeting",
+            "Make your case with a specific number",
+            "Agree on next steps and a date"
+          ],
+          "explain": "Prepare, ask, propose, follow up."
+        },
+        {
+          "id": "rp-asking-q3",
+          "type": "multiple_choice",
+          "prompt": "When’s the best time to ask?",
+          "choices": [
+            "A few weeks before budgets or reviews are set",
+            "The day after a big mistake",
+            "During company layoffs"
+          ],
+          "answer": 0,
+          "explain": "Ask while the money is still being divided up."
+        },
+        {
+          "id": "rp-asking-q4",
+          "type": "multiple_choice",
+          "prompt": "What’s the strongest reason for a raise?",
+          "choices": [
+            "What you’ve achieved, and what the role pays elsewhere",
+            "Your rent went up",
+            "A coworker earns more"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "True, but it’s your problem, not their reason to pay more.",
+            "Risky, and it makes it about someone else."
+          ],
+          "explain": "Your value to them is the argument that works."
+        },
+        {
+          "id": "rp-asking-q5",
+          "type": "true_false",
+          "prompt": "If the answer is no, it’s fine to ask what would make it a yes later.",
+          "answer": true,
+          "explain": "Get the goals in writing."
+        },
+        {
+          "id": "rp-asking-q6",
+          "type": "number",
+          "prompt": "You ask for 8% on $45,000. What number do you say?",
+          "answer": 48600,
+          "unit": "$",
+          "explain": "$45,000 × 1.08 = $48,600."
+        }
+      ]
+    },
+    {
+      "id": "rp-review-day",
+      "type": "lesson",
+      "format": "call",
+      "title": "Review Day",
+      "summary": "Your manager offers a number. What do you say?",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rp-review-day-q1",
+          "type": "multiple_choice",
+          "prompt": "Your manager offers 3%. Your research says the role pays 10% more elsewhere. Best response?",
+          "choices": [
+            "Thank them, share your research, and ask if 6% is possible",
+            "Accept quietly",
+            "Threaten to quit"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "You leave money on the table without even asking.",
+            "Only threaten what you’re ready to do."
+          ],
+          "explain": "Calm, specific and backed by numbers."
+        },
+        {
+          "id": "rp-review-day-q2",
+          "type": "multiple_choice",
+          "prompt": "They say the budget is frozen until summer. Next move?",
+          "choices": [
+            "Ask to revisit it in summer, in writing",
+            "Give up for good",
+            "Complain to coworkers"
+          ],
+          "answer": 0,
+          "explain": "A date in writing is a promise you can come back to."
+        },
+        {
+          "id": "rp-review-day-q3",
+          "type": "multiple_choice",
+          "prompt": "They offer a better title but no raise. What do you ask?",
+          "choices": [
+            "When the pay for that title will follow",
+            "Nothing",
+            "For a new chair"
+          ],
+          "answer": 0,
+          "explain": "Titles are nice. Pay is nicer."
+        },
+        {
+          "id": "rp-review-day-q4",
+          "type": "true_false",
+          "prompt": "Getting your goals agreed in writing makes the next raise conversation easier.",
+          "answer": true,
+          "explain": "Hit the goals, point to the email."
+        },
+        {
+          "id": "rp-review-day-q5",
+          "type": "number",
+          "prompt": "You negotiate from 3% to 5% on $50,000. How much more per year is that?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "2% of $50,000 = $1,000."
+        },
+        {
+          "id": "rp-review-day-q6",
+          "type": "multiple_choice",
+          "prompt": "Your raise comes through. First thought?",
+          "choices": [
+            "Give the extra money a job before it disappears",
+            "Upgrade everything",
+            "Nothing"
+          ],
+          "answer": 0,
+          "explain": "That’s the last lesson in this unit."
+        }
+      ]
+    },
+    {
+      "id": "rp-stacking",
+      "type": "lesson",
+      "title": "Raises Stack Up",
+      "summary": "Every raise builds on the last one.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rp-stacking-q1",
+          "type": "number",
+          "context": "Raises build on each other: next year’s raise is a percent of this year’s bigger pay.",
+          "prompt": "$40,000 with a 5% raise this year and 5% again next year. What’s the pay after two years?",
+          "answer": 44100,
+          "unit": "$",
+          "explain": "$40,000 × 1.05 = $42,000. $42,000 × 1.05 = $44,100."
+        },
+        {
+          "id": "rp-stacking-q2",
+          "type": "number",
+          "prompt": "Compare: two raises of $2,000 each. Pay after two years?",
+          "answer": 44000,
+          "unit": "$",
+          "explain": "$40,000 + $2,000 + $2,000 = $44,000."
+        },
+        {
+          "id": "rp-stacking-q3",
+          "type": "multiple_choice",
+          "prompt": "Why is the percent version a bit higher?",
+          "choices": [
+            "The second raise is 5% of a bigger number",
+            "Luck",
+            "Taxes"
+          ],
+          "answer": 0,
+          "explain": "5% of $42,000 beats 5% of $40,000."
+        },
+        {
+          "id": "rp-stacking-q4",
+          "type": "number",
+          "prompt": "Starting at $48,000 vs. $45,000, both with a 3% raise. How far apart are they after one year?",
+          "answer": 3090,
+          "unit": "$",
+          "explain": "$49,440 − $46,350 = $3,090. The gap grows with every raise."
+        },
+        {
+          "id": "rp-stacking-q5",
+          "type": "true_false",
+          "prompt": "Your starting salary matters because every future raise builds on it.",
+          "answer": true,
+          "explain": "That’s why negotiating it is worth it."
+        },
+        {
+          "id": "rp-stacking-q6",
+          "type": "multiple_choice",
+          "prompt": "Which helps most over a career?",
+          "choices": [
+            "Higher starting pay plus regular raises",
+            "One big bonus",
+            "Never changing jobs"
+          ],
+          "answer": 0,
+          "explain": "Growth on top of a good base."
+        }
+      ]
+    },
+    {
+      "id": "rp-promotion",
+      "type": "lesson",
+      "format": "story",
+      "title": "Ty’s Promotion",
+      "summary": "A bigger number can hide a smaller hourly rate.",
+      "xp": 10,
+      "story": {
+        "title": "Promotion or pay cut?",
+        "character": "Ty, 29, cashier",
+        "body": "Ty earns **$17.50** an hour and works about **38** hours a week.\n\nThe store offers Ty a promotion to shift lead: a salary of **$41,000** a year. The catch: shift leads work about **45** hours a week, and as a salaried manager Ty wouldn’t get overtime."
+      },
+      "steps": [
+        {
+          "id": "rp-promotion-q1",
+          "type": "number",
+          "prompt": "What does Ty earn now in a year? $17.50 × 38 hours × 52 weeks.",
+          "answer": 34580,
+          "unit": "$",
+          "explain": "$17.50 × 38 × 52 = $34,580."
+        },
+        {
+          "id": "rp-promotion-q2",
+          "type": "number",
+          "prompt": "How much more a year is the salaried offer?",
+          "answer": 6420,
+          "unit": "$",
+          "explain": "$41,000 − $34,580 = $6,420."
+        },
+        {
+          "id": "rp-promotion-q3",
+          "type": "number",
+          "prompt": "At 45 hours a week, how many hours a year is the new job?",
+          "answer": 2340,
+          "unit": "hours",
+          "explain": "45 × 52 = 2,340 hours."
+        },
+        {
+          "id": "rp-promotion-q4",
+          "type": "number",
+          "prompt": "What does the new job pay per hour? $41,000 ÷ 2,340, rounded to the cent.",
+          "answer": 17.52,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$41,000 ÷ 2,340 = $17.52."
+        },
+        {
+          "id": "rp-promotion-q5",
+          "type": "multiple_choice",
+          "prompt": "So is it a raise per hour?",
+          "choices": [
+            "Barely: 2 cents more an hour, for 7 more hours a week",
+            "Yes, a big one",
+            "No, it’s a pay cut"
+          ],
+          "answer": 0,
+          "explain": "More money, but almost all of it is from working more."
+        },
+        {
+          "id": "rp-promotion-q6",
+          "type": "multiple_choice",
+          "prompt": "What could make the promotion worth it anyway?",
+          "choices": [
+            "The title and experience lead to bigger raises later",
+            "Nothing",
+            "The new uniform"
+          ],
+          "answer": 0,
+          "explain": "Sometimes the next step pays off at the step after."
+        }
+      ]
+    },
+    {
+      "id": "rp-give-raise-a-job",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Give Your Raise a Job",
+      "summary": "Catch the raise before lifestyle creep does.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rp-give-raise-a-job-q1",
+          "type": "multiple_choice",
+          "context": "When pay goes up, spending tends to drift up too. That’s [[lifestyle creep]], and it eats raises.",
+          "prompt": "Your take-home rose $200 a month. Six months later you have no more saved. What happened?",
+          "choices": [
+            "Lifestyle creep ate it",
+            "Taxes",
+            "Only inflation"
+          ],
+          "answer": 0,
+          "explain": "The extra money quietly turned into extra spending."
+        },
+        {
+          "id": "rp-give-raise-a-job-q2",
+          "type": "multiple_choice",
+          "prompt": "What’s a simple rule many people use for raises?",
+          "choices": [
+            "Save at least half of every raise",
+            "Spend all of it",
+            "Save none of it"
+          ],
+          "answer": 0,
+          "explain": "Half for future you, half to enjoy."
+        },
+        {
+          "id": "rp-give-raise-a-job-q3",
+          "type": "allocate",
+          "prompt": "Your take-home went up $300 a month. Plan it: at least half goes to savings and goals.",
+          "total": 300,
+          "step": 10,
+          "categories": [
+            {
+              "label": "Savings & goals",
+              "min": 150
+            },
+            {
+              "label": "Fun & treats"
+            },
+            {
+              "label": "Bills that went up"
+            }
+          ],
+          "explain": "Savings got at least $150 and every dollar has a job."
+        },
+        {
+          "id": "rp-give-raise-a-job-q4",
+          "type": "number",
+          "prompt": "Saving $150 a month from a raise for a year adds up to?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$150 × 12 = $1,800."
+        },
+        {
+          "id": "rp-give-raise-a-job-q5",
+          "type": "true_false",
+          "prompt": "Raising your 401(k) contribution by 1% with each raise is an easy habit.",
+          "answer": true,
+          "explain": "You never miss money you never got used to."
+        },
+        {
+          "id": "rp-give-raise-a-job-q6",
+          "type": "order",
+          "prompt": "Raise day: put it in order.",
+          "items": [
+            "Check your new take-home pay",
+            "Increase your savings first",
+            "Update your budget",
+            "Enjoy the rest guilt-free"
+          ],
+          "explain": "Know it, save it, plan it, enjoy it."
+        }
+      ]
+    },
+    {
+      "id": "rp-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "rp-trial",
+      "type": "boss",
+      "title": "Den Trial: Raises & Promotions",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "rp-trial-q1",
+          "type": "number",
+          "prompt": "$52,000 with a 3% raise. What’s the new salary?",
+          "answer": 53560,
+          "unit": "$",
+          "explain": "$52,000 × 1.03 = $53,560."
+        },
+        {
+          "id": "rp-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "Your raise was 3% and prices rose 4%. Your buying power…",
+          "choices": [
+            "shrank",
+            "grew",
+            "stayed exactly the same"
+          ],
+          "answer": 0,
+          "explain": "Prices beat your raise."
+        },
+        {
+          "id": "rp-trial-q3",
+          "type": "true_false",
+          "prompt": "A promotion usually brings a bigger jump than a cost-of-living adjustment.",
+          "answer": true,
+          "explain": "New role, new pay band."
+        },
+        {
+          "id": "rp-trial-q4",
+          "type": "number",
+          "prompt": "From $30.00 to $31.50 an hour. What percent raise is that?",
+          "answer": 5,
+          "unit": "%",
+          "explain": "$1.50 ÷ $30 = 0.05, which is 5%."
+        }
+      ]
+    }
+  ]
+}

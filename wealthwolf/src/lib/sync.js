@@ -1,11 +1,10 @@
 import { useSyncExternalStore } from 'react'
-import { doc, onSnapshot, serverTimestamp, setDoc } from 'firebase/firestore'
-import { db } from './firebase.js'
+import { supabase } from './supabase.js'
 import { getAuthState, signOut } from './auth.js'
 import { applyRemote, getOwner, onLocalChange, progressSnapshot, setOwner, signOutReset } from '../store/store.js'
 
-// Keeps a signed-in player's progress in their account (Firestore users/{uid}),
-// so it follows them to any device. The local store stays the thing the app
+// Keeps a signed-in player's progress in their account (Supabase table
+// public.progress, one row per player), so it follows them to any device. The local store stays the thing the app
 // reads; this module copies it up after changes and down when the account's
 // copy changes elsewhere.
 
@@ -52,49 +51,33 @@ function isUnsaved() {
 }
 
 // ---- Where the account's copy lives ---------------------------------------
-// Both remotes call onData(null) for an account with nothing saved yet.
+// `watch` reports the account's row (or null for a new account) when sync starts,
+// and again whenever the tab comes back into view, so changes made on another
+// device show up here. `save` writes the whole row.
 
-function firestoreRemote(uid) {
-  const ref = doc(db, 'users', uid)
+function accountRemote(uid) {
+  const table = () => supabase.from('progress')
   return {
     watch(onData, onError) {
-      return onSnapshot(
-        ref,
-        (snap) => {
-          if (snap.metadata.hasPendingWrites) return // our own write, echoed back
-          if (!snap.exists() && snap.metadata.fromCache) return // offline: "missing" isn't known yet
-          onData(snap.exists() ? snap.data() : null)
-        },
-        onError,
-      )
-    },
-    save: (data) => setDoc(ref, { ...data, updatedAt: serverTimestamp() }),
-  }
-}
-
-// Emulator mode has no Firestore (its emulator needs Java), so the account's
-// copy is kept in localStorage under its own key. Signing out wipes the
-// player's local progress but not this, so restoring on sign-in still works.
-function localRemote(uid) {
-  const key = `wealthwolf:remote:${uid}`
-  const read = () => {
-    try {
-      return JSON.parse(localStorage.getItem(key))
-    } catch {
-      return null
-    }
-  }
-  return {
-    watch(onData) {
-      const timer = setTimeout(() => onData(read()), 150) // a beat, like a network round trip
-      const onStorage = (event) => event.key === key && onData(read())
-      window.addEventListener('storage', onStorage)
+      let stopped = false
+      const load = async () => {
+        const { data, error } = await table().select('progress, rev').eq('user_id', uid).maybeSingle()
+        if (stopped) return
+        if (error) onError(error)
+        else onData(data)
+      }
+      load()
+      const onVisible = () => document.visibilityState === 'visible' && load()
+      document.addEventListener('visibilitychange', onVisible)
       return () => {
-        clearTimeout(timer)
-        window.removeEventListener('storage', onStorage)
+        stopped = true
+        document.removeEventListener('visibilitychange', onVisible)
       }
     },
-    save: async (data) => localStorage.setItem(key, JSON.stringify({ ...data, updatedAt: Date.now() })),
+    async save(data) {
+      const { error } = await table().upsert({ user_id: uid, ...data, updated_at: new Date().toISOString() })
+      if (error) throw error
+    },
   }
 }
 
@@ -103,10 +86,11 @@ function localRemote(uid) {
 let flushNow = null
 
 export function startSync(uid) {
-  const remote = db ? firestoreRemote(uid) : localRemote(uid)
+  const remote = accountRemote(uid)
   let ready = false
   let lastRev = null
   let timer = null
+  let saving = false
   setStatus('connecting')
 
   async function save() {
@@ -116,6 +100,7 @@ export function startSync(uid) {
     lastRev = rev
     setStatus(navigator.onLine === false ? 'offline' : 'saving')
     const { user } = getAuthState()
+    saving = true
     try {
       await remote.save({
         progress: progressSnapshot(),
@@ -128,6 +113,8 @@ export function startSync(uid) {
       }
     } catch {
       setStatus('error')
+    } finally {
+      saving = false
     }
   }
 
@@ -163,7 +150,8 @@ export function startSync(uid) {
   const stopWatch = remote.watch(
     (data) => {
       if (!ready) return first(data)
-      if (!data || data.rev === lastRev) return
+      // Never let a fetch overwrite changes from this device that are still on their way.
+      if (!data || data.rev === lastRev || timer || saving || isUnsaved()) return
       // Changed on another device: theirs is newer.
       lastRev = data.rev
       clearTimeout(timer)
@@ -172,7 +160,7 @@ export function startSync(uid) {
       markUnsaved(false)
       setStatus('saved')
     },
-    () => setStatus('error'),
+    () => setStatus(navigator.onLine === false ? 'offline' : 'error'),
   )
 
   const stopLocal = onLocalChange(schedule)

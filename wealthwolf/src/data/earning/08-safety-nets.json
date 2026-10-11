@@ -1,0 +1,699 @@
+{
+  "id": "safety-nets",
+  "section": "earning",
+  "order": 8,
+  "title": "Unemployment & Safety Nets",
+  "description": "The help that exists when income stops, and how to use it.",
+  "wolfLine": "Even the strongest wolf leans on the pack sometimes.",
+  "terms": {
+    "unemployment-insurance": {
+      "term": "Unemployment insurance",
+      "definition": "State-run payments that replace part of your wages for a while if you lose your job through no fault of your own.",
+      "example": "About half your old weekly pay, up to a state maximum, for up to 26 weeks in many states."
+    },
+    "snap": {
+      "term": "SNAP",
+      "definition": "A government program, often called food stamps, that gives people with low income monthly money for groceries on a card.",
+      "example": "$250 a month loaded onto a card for groceries."
+    },
+    "medicaid": {
+      "term": "Medicaid",
+      "definition": "Free or low-cost health coverage for people with low income. Rules differ by state.",
+      "example": "Coverage after a job loss drops your income."
+    },
+    "hardship-program": {
+      "term": "Hardship program",
+      "definition": "Lower or paused payments a company offers when you’ve lost income. You usually have to ask.",
+      "example": "Your phone company pausing half your bill for two months after a layoff."
+    }
+  },
+  "lessons": [
+    {
+      "id": "sn-ui",
+      "type": "lesson",
+      "title": "Unemployment Insurance",
+      "summary": "What it is, who gets it, and how long it lasts.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sn-ui-q1",
+          "type": "multiple_choice",
+          "context": "[[Unemployment insurance]] pays part of your old wages for a while if you lose your job through no fault of your own. Each state runs its own program.",
+          "prompt": "Who usually qualifies?",
+          "choices": [
+            "People laid off through no fault of their own",
+            "Anyone who quits for any reason",
+            "Only people over 65"
+          ],
+          "answer": 0,
+          "explain": "It’s for losing work you didn’t choose to lose."
+        },
+        {
+          "id": "sn-ui-q2",
+          "type": "true_false",
+          "prompt": "Unemployment is run by your state, so rules and amounts differ from state to state.",
+          "answer": true,
+          "explain": "Check your state’s labor department website."
+        },
+        {
+          "id": "sn-ui-q3",
+          "type": "multiple_choice",
+          "prompt": "In many states, benefits last up to about…",
+          "choices": [
+            "26 weeks",
+            "26 days",
+            "26 years"
+          ],
+          "answer": 0,
+          "explain": "About six months in many states. Some offer less."
+        },
+        {
+          "id": "sn-ui-q4",
+          "type": "true_false",
+          "prompt": "Unemployment benefits count as taxable income.",
+          "answer": true,
+          "explain": "You can ask to have tax withheld, so April isn’t a surprise."
+        },
+        {
+          "id": "sn-ui-q5",
+          "type": "multiple_choice",
+          "prompt": "To keep getting benefits, you usually must…",
+          "choices": [
+            "Certify every week or two and look for work",
+            "Do nothing",
+            "Move to another state"
+          ],
+          "answer": 0,
+          "explain": "Benefits come with a job search."
+        },
+        {
+          "id": "sn-ui-q6",
+          "type": "multiple_choice",
+          "prompt": "Fired for serious misconduct. Unemployment?",
+          "choices": [
+            "Often not eligible",
+            "Always eligible",
+            "Paid double"
+          ],
+          "answer": 0,
+          "explain": "It’s built for losing work through no fault of your own."
+        }
+      ]
+    },
+    {
+      "id": "sn-ui-math",
+      "type": "lesson",
+      "title": "How Much You’d Get",
+      "summary": "Usually helpful, rarely enough on its own.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sn-ui-math-q1",
+          "type": "number",
+          "context": "Many states pay roughly half your old weekly wage, up to a state maximum. These numbers are an example; check your own state.",
+          "prompt": "Your old pay was $900 a week. Half of that?",
+          "answer": 450,
+          "unit": "$",
+          "explain": "$900 ÷ 2 = $450."
+        },
+        {
+          "id": "sn-ui-math-q2",
+          "type": "number",
+          "prompt": "Your state’s maximum is $400 a week. What would you actually get?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "The cap wins: $400."
+        },
+        {
+          "id": "sn-ui-math-q3",
+          "type": "number",
+          "prompt": "Over 26 weeks at $400?",
+          "answer": 10400,
+          "unit": "$",
+          "explain": "$400 × 26 = $10,400."
+        },
+        {
+          "id": "sn-ui-math-q4",
+          "type": "number",
+          "prompt": "Your essentials cost about $510 a week. What’s the weekly shortfall at $400?",
+          "answer": 110,
+          "unit": "$",
+          "explain": "$510 − $400 = $110."
+        },
+        {
+          "id": "sn-ui-math-q5",
+          "type": "multiple_choice",
+          "prompt": "So unemployment alone…",
+          "choices": [
+            "helps, but usually isn’t enough by itself",
+            "replaces your full pay",
+            "covers everything with extra"
+          ],
+          "answer": 0,
+          "explain": "Plan to combine it with savings and cuts."
+        },
+        {
+          "id": "sn-ui-math-q6",
+          "type": "true_false",
+          "prompt": "An emergency fund plus unemployment carries you much further than either alone.",
+          "answer": true,
+          "explain": "Together they buy you months."
+        }
+      ]
+    },
+    {
+      "id": "sn-apply",
+      "type": "lesson",
+      "title": "Applying for Benefits",
+      "summary": "File early, report honestly, keep certifying.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sn-apply-q1",
+          "type": "order",
+          "prompt": "Put applying in order.",
+          "items": [
+            "Apply on your state’s unemployment website right after losing your job",
+            "Answer questions about why you left",
+            "Certify every week or two",
+            "Report any work or pay you get"
+          ],
+          "explain": "File, explain, certify, report."
+        },
+        {
+          "id": "sn-apply-q2",
+          "type": "multiple_choice",
+          "prompt": "What do you usually need to apply?",
+          "choices": [
+            "ID, Social Security number, and your recent employers and dates",
+            "A doctor’s note",
+            "Your credit score"
+          ],
+          "answer": 0,
+          "explain": "Gather it before you start."
+        },
+        {
+          "id": "sn-apply-q3",
+          "type": "true_false",
+          "prompt": "If your claim is denied, you can usually appeal.",
+          "answer": true,
+          "explain": "Read the letter for the deadline."
+        },
+        {
+          "id": "sn-apply-q4",
+          "type": "multiple_choice",
+          "prompt": "You pick up a one-day job while on unemployment. What do you do?",
+          "choices": [
+            "Report it when you certify",
+            "Hide it",
+            "Stop certifying"
+          ],
+          "answer": 0,
+          "explain": "Unreported pay can mean paying benefits back, plus penalties."
+        },
+        {
+          "id": "sn-apply-q5",
+          "type": "multiple_choice",
+          "prompt": "Many states have a “waiting week.” What does that mean?",
+          "choices": [
+            "The first week often isn’t paid",
+            "You wait a year",
+            "You’re paid twice"
+          ],
+          "answer": 0,
+          "explain": "Another reason to apply right away."
+        },
+        {
+          "id": "sn-apply-q6",
+          "type": "true_false",
+          "prompt": "Applying late can cost you weeks of benefits.",
+          "answer": true,
+          "explain": "Benefits usually start from when you apply, not when you lost the job."
+        }
+      ]
+    },
+    {
+      "id": "sn-food",
+      "type": "lesson",
+      "title": "Help With Food",
+      "summary": "SNAP, food banks, and the number 2-1-1.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sn-food-q1",
+          "type": "multiple_choice",
+          "context": "[[SNAP]], often called food stamps, gives people with low income monthly money for groceries on a card.",
+          "prompt": "What can SNAP pay for?",
+          "choices": [
+            "Groceries",
+            "Rent",
+            "Phone bills"
+          ],
+          "answer": 0,
+          "explain": "Food from grocery stores."
+        },
+        {
+          "id": "sn-food-q2",
+          "type": "true_false",
+          "prompt": "Losing your job can make you eligible for SNAP, even if you never were before.",
+          "answer": true,
+          "explain": "Eligibility is based on current income."
+        },
+        {
+          "id": "sn-food-q3",
+          "type": "multiple_choice",
+          "prompt": "Where else can you get food help fast?",
+          "choices": [
+            "Food banks and pantries",
+            "Payday loans",
+            "Nowhere"
+          ],
+          "answer": 0,
+          "explain": "Often same-day help."
+        },
+        {
+          "id": "sn-food-q4",
+          "type": "multiple_choice",
+          "prompt": "Dialing 2-1-1 in most of the US connects you to…",
+          "choices": [
+            "Local help with food, housing and bills",
+            "The police",
+            "Your bank"
+          ],
+          "answer": 0,
+          "explain": "A free line to local programs."
+        },
+        {
+          "id": "sn-food-q5",
+          "type": "true_false",
+          "prompt": "Using SNAP or a food bank during a hard stretch is exactly what they’re for.",
+          "answer": true,
+          "explain": "No shame in using a safety net."
+        },
+        {
+          "id": "sn-food-q6",
+          "type": "number",
+          "prompt": "SNAP covers $280 of your $400 grocery budget. How much does that free up for other bills?",
+          "answer": 280,
+          "unit": "$",
+          "explain": "The $280 you’d have spent on food can go elsewhere."
+        }
+      ]
+    },
+    {
+      "id": "sn-health",
+      "type": "lesson",
+      "title": "Health Coverage When Money Is Tight",
+      "summary": "Medicaid, CHIP and Marketplace discounts.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sn-health-q1",
+          "type": "multiple_choice",
+          "context": "[[Medicaid]] is free or low-cost health coverage for people with low income. Rules differ by state.",
+          "prompt": "When might you qualify for Medicaid?",
+          "choices": [
+            "When your income drops, like after a job loss",
+            "Only if you’re wealthy",
+            "Never"
+          ],
+          "answer": 0,
+          "explain": "It’s based on current income."
+        },
+        {
+          "id": "sn-health-q2",
+          "type": "true_false",
+          "prompt": "Kids may qualify for low-cost coverage through CHIP, even if their parents don’t.",
+          "answer": true,
+          "explain": "CHIP covers kids in families that earn too much for Medicaid."
+        },
+        {
+          "id": "sn-health-q3",
+          "type": "multiple_choice",
+          "prompt": "Where do you check Medicaid and Marketplace options?",
+          "choices": [
+            "HealthCare.gov or your state’s site",
+            "A random ad",
+            "Your gym"
+          ],
+          "answer": 0,
+          "explain": "Start at the official sites."
+        },
+        {
+          "id": "sn-health-q4",
+          "type": "true_false",
+          "prompt": "Marketplace plans can come with discounts based on your income.",
+          "answer": true,
+          "explain": "Lower income, bigger discount."
+        },
+        {
+          "id": "sn-health-q5",
+          "type": "multiple_choice",
+          "prompt": "Your income drops to zero mid-year. Smart move?",
+          "choices": [
+            "Check Medicaid and the Marketplace right away",
+            "Go without insurance",
+            "Wait a year"
+          ],
+          "answer": 0,
+          "explain": "Losing income can open the door."
+        },
+        {
+          "id": "sn-health-q6",
+          "type": "multiple_choice",
+          "prompt": "Which usually costs least for someone with very low income?",
+          "choices": [
+            "Medicaid",
+            "COBRA",
+            "Paying full price"
+          ],
+          "answer": 0,
+          "explain": "Often free."
+        }
+      ]
+    },
+    {
+      "id": "sn-lenders",
+      "type": "lesson",
+      "format": "call",
+      "title": "Talking to Landlords and Lenders",
+      "summary": "Call before you miss a payment, not after.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sn-lenders-q1",
+          "type": "multiple_choice",
+          "context": "Many companies have [[hardship programs|hardship-program]]: lower or paused payments when you’ve lost income. You usually have to ask.",
+          "prompt": "When should you call?",
+          "choices": [
+            "Before you miss a payment",
+            "After three missed payments",
+            "Never"
+          ],
+          "answer": 0,
+          "explain": "You have more options before you fall behind."
+        },
+        {
+          "id": "sn-lenders-q2",
+          "type": "multiple_choice",
+          "prompt": "Rent is due in 10 days and you were just laid off. Best move?",
+          "choices": [
+            "Talk to your landlord now and propose a payment plan in writing",
+            "Say nothing and hope",
+            "Move out tonight"
+          ],
+          "answer": 0,
+          "explain": "Landlords prefer a plan to a surprise."
+        },
+        {
+          "id": "sn-lenders-q3",
+          "type": "true_false",
+          "prompt": "Utility companies often have payment plans or assistance programs.",
+          "answer": true,
+          "explain": "Ask before the shut-off notice."
+        },
+        {
+          "id": "sn-lenders-q4",
+          "type": "multiple_choice",
+          "prompt": "When money is short, which bills come first?",
+          "choices": [
+            "Housing, utilities, food and getting to work",
+            "Streaming",
+            "Shopping"
+          ],
+          "answer": 0,
+          "explain": "Keep a roof, the lights and food."
+        },
+        {
+          "id": "sn-lenders-q5",
+          "type": "sort",
+          "prompt": "Pay first, or can it wait?",
+          "buckets": [
+            "Pay first",
+            "Can wait or pause"
+          ],
+          "items": [
+            [
+              "Rent",
+              0
+            ],
+            [
+              "Electricity",
+              0
+            ],
+            [
+              "Streaming subscription",
+              1
+            ],
+            [
+              "Groceries",
+              0
+            ],
+            [
+              "Gym membership",
+              1
+            ],
+            [
+              "Car insurance, if you need the car",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "sn-lenders-q6",
+          "type": "true_false",
+          "prompt": "A payment plan agreed in writing protects you better than a promise on the phone.",
+          "answer": true,
+          "explain": "Get it in an email at least."
+        }
+      ]
+    },
+    {
+      "id": "sn-bare-bones",
+      "type": "lesson",
+      "format": "sort",
+      "title": "The Bare-Bones Budget",
+      "summary": "Survival mode, on purpose.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sn-bare-bones-q1",
+          "type": "info",
+          "title": "Survival mode, on purpose",
+          "body": "A bare-bones budget covers only what keeps you housed, fed, healthy and able to find work. Everything else pauses until income is back."
+        },
+        {
+          "id": "sn-bare-bones-q2",
+          "type": "sort",
+          "prompt": "Keep or pause in a bare-bones month?",
+          "buckets": [
+            "Keep",
+            "Pause"
+          ],
+          "items": [
+            [
+              "Rent",
+              0
+            ],
+            [
+              "Groceries",
+              0
+            ],
+            [
+              "Phone, needed for job hunting",
+              0
+            ],
+            [
+              "Takeout",
+              1
+            ],
+            [
+              "New clothes",
+              1
+            ],
+            [
+              "Streaming services",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "sn-bare-bones-q3",
+          "type": "allocate",
+          "prompt": "Plan a bare-bones month on $2,000 from unemployment and savings. Rent is fixed at $1,100.",
+          "total": 2000,
+          "step": 50,
+          "categories": [
+            {
+              "label": "Rent",
+              "fixed": 1100
+            },
+            {
+              "label": "Groceries",
+              "min": 300
+            },
+            {
+              "label": "Utilities & phone",
+              "min": 150
+            },
+            {
+              "label": "Transport",
+              "min": 100
+            },
+            {
+              "label": "Job search & other"
+            }
+          ],
+          "explain": "Essentials first, and every dollar has a job."
+        },
+        {
+          "id": "sn-bare-bones-q4",
+          "type": "number",
+          "prompt": "Your normal month costs $3,100. Bare-bones costs $2,000. How much less is that?",
+          "answer": 1100,
+          "unit": "$",
+          "explain": "$3,100 − $2,000 = $1,100 a month."
+        },
+        {
+          "id": "sn-bare-bones-q5",
+          "type": "number",
+          "prompt": "With $8,800 of savings covering bare-bones spending, how many full months does it last?",
+          "answer": 4,
+          "unit": "months",
+          "explain": "$8,800 ÷ $2,000 = 4.4, so 4 full months."
+        },
+        {
+          "id": "sn-bare-bones-q6",
+          "type": "true_false",
+          "prompt": "Cutting to bare-bones early stretches savings the furthest.",
+          "answer": true,
+          "explain": "Every early dollar saved buys time later."
+        }
+      ]
+    },
+    {
+      "id": "sn-ana",
+      "type": "lesson",
+      "format": "story",
+      "title": "Ana’s Lean Months",
+      "summary": "Benefits plus savings plus a plan.",
+      "xp": 10,
+      "story": {
+        "title": "Three lean months",
+        "character": "Ana, 27, call center agent",
+        "body": "Ana’s call center closed in March. She applied for unemployment the same week and gets **$380** a week. She also qualified for **$250** a month in SNAP.\n\nHer bare-bones costs come to **$2,300** a month, and she has **$3,000** saved."
+      },
+      "steps": [
+        {
+          "id": "sn-ana-q1",
+          "type": "number",
+          "prompt": "Unemployment for 4 weeks?",
+          "answer": 1520,
+          "unit": "$",
+          "explain": "$380 × 4 = $1,520."
+        },
+        {
+          "id": "sn-ana-q2",
+          "type": "number",
+          "prompt": "Add SNAP. How much help comes in a month?",
+          "answer": 1770,
+          "unit": "$",
+          "explain": "$1,520 + $250 = $1,770."
+        },
+        {
+          "id": "sn-ana-q3",
+          "type": "number",
+          "prompt": "What’s the monthly shortfall against her $2,300 of costs?",
+          "answer": 530,
+          "unit": "$",
+          "explain": "$2,300 − $1,770 = $530."
+        },
+        {
+          "id": "sn-ana-q4",
+          "type": "number",
+          "prompt": "How many full months can her $3,000 cover that shortfall? Round down.",
+          "answer": 5,
+          "unit": "months",
+          "explain": "$3,000 ÷ $530 = 5.7, so 5 full months."
+        },
+        {
+          "id": "sn-ana-q5",
+          "type": "multiple_choice",
+          "prompt": "What else could stretch Ana’s money?",
+          "choices": [
+            "Asking her phone company and utilities about hardship programs",
+            "Signing up for new subscriptions",
+            "A payday loan"
+          ],
+          "answer": 0,
+          "explain": "Every bill lowered adds time."
+        },
+        {
+          "id": "sn-ana-q6",
+          "type": "true_false",
+          "prompt": "Ana’s plan works partly because she applied for help early.",
+          "answer": true,
+          "explain": "Applying the same week meant no lost weeks of benefits."
+        }
+      ]
+    },
+    {
+      "id": "sn-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "sn-trial",
+      "type": "boss",
+      "title": "Den Trial: Safety Nets",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "sn-trial-q1",
+          "type": "number",
+          "prompt": "Your old pay was $800 a week. Your state pays half, up to $375. What’s your weekly benefit?",
+          "answer": 375,
+          "unit": "$",
+          "explain": "Half would be $400, but the $375 cap wins."
+        },
+        {
+          "id": "sn-trial-q2",
+          "type": "true_false",
+          "prompt": "Unemployment benefits are taxable income.",
+          "answer": true,
+          "explain": "Have tax withheld, or set some aside."
+        },
+        {
+          "id": "sn-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "What does SNAP pay for?",
+          "choices": [
+            "Groceries",
+            "Rent",
+            "Car payments"
+          ],
+          "answer": 0,
+          "explain": "Food."
+        },
+        {
+          "id": "sn-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "When should you call a lender about a hardship program?",
+          "choices": [
+            "Before you miss a payment",
+            "After a few missed payments",
+            "Never"
+          ],
+          "answer": 0,
+          "explain": "Early calls open more doors."
+        }
+      ]
+    }
+  ]
+}

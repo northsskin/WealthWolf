@@ -1,0 +1,772 @@
+{
+  "id": "job-change",
+  "section": "earning",
+  "order": 7,
+  "title": "Changing Jobs & Job Loss",
+  "description": "Quitting well, getting laid off, and protecting your money in between.",
+  "wolfLine": "Every wolf changes territory. The smart ones carry food.",
+  "terms": {
+    "notice-period": {
+      "term": "Notice period",
+      "definition": "The time between telling your employer you’re leaving and your last day, usually two weeks in the US.",
+      "example": "Resigning on the 1st with your last day on the 15th."
+    },
+    "layoff": {
+      "term": "Layoff",
+      "definition": "Losing your job because the company is cutting jobs, not because of anything you did.",
+      "example": "A warehouse closes and 80 people are laid off."
+    },
+    "severance": {
+      "term": "Severance",
+      "definition": "Money some employers pay when they let you go, often a few weeks of pay per year worked, usually with an agreement to sign.",
+      "example": "Four weeks of pay in exchange for signing a release."
+    },
+    "cobra": {
+      "term": "COBRA",
+      "definition": "A law that lets you keep your work health plan after leaving, usually up to 18 months, but you pay the full premium yourself.",
+      "example": "Your $640 a month plan, now all paid by you."
+    },
+    "rollover": {
+      "term": "Rollover",
+      "definition": "Moving retirement money from one account to another, like an old 401(k) into an IRA, without cashing it out.",
+      "example": "Moving $8,000 from your old job’s 401(k) into your new job’s plan."
+    }
+  },
+  "lessons": [
+    {
+      "id": "jc-before-quit",
+      "type": "lesson",
+      "title": "Before You Quit",
+      "summary": "Line up the money before you hand in the letter.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jc-before-quit-q1",
+          "type": "multiple_choice",
+          "prompt": "What should you have before quitting?",
+          "choices": [
+            "A signed offer, or savings to cover the gap",
+            "Just a good feeling",
+            "A new phone"
+          ],
+          "answer": 0,
+          "explain": "Never leap without a net."
+        },
+        {
+          "id": "jc-before-quit-q2",
+          "type": "number",
+          "prompt": "Your essentials cost $2,200 a month and you expect 3 months between jobs. How much should you have saved?",
+          "answer": 6600,
+          "unit": "$",
+          "explain": "$2,200 × 3 = $6,600."
+        },
+        {
+          "id": "jc-before-quit-q3",
+          "type": "multiple_choice",
+          "prompt": "What else should you check before leaving?",
+          "choices": [
+            "When your health insurance ends and the new one starts",
+            "Nothing",
+            "The office plants"
+          ],
+          "answer": 0,
+          "explain": "Gaps in health coverage are expensive."
+        },
+        {
+          "id": "jc-before-quit-q4",
+          "type": "true_false",
+          "prompt": "Some benefits, like health insurance, can end on your last day or at the end of that month.",
+          "answer": true,
+          "explain": "Ask HR for the exact date."
+        },
+        {
+          "id": "jc-before-quit-q5",
+          "type": "multiple_choice",
+          "prompt": "Unused vacation days when you leave…",
+          "choices": [
+            "may be paid out, depending on your state and company",
+            "always vanish",
+            "always pay double"
+          ],
+          "answer": 0,
+          "explain": "Check your state’s rules and your company policy."
+        },
+        {
+          "id": "jc-before-quit-q6",
+          "type": "order",
+          "prompt": "Put a smart job switch in order.",
+          "items": [
+            "Get the new offer in writing",
+            "Check when benefits end and start",
+            "Give notice",
+            "Leave on good terms"
+          ],
+          "explain": "Secure it, check it, announce it, exit well."
+        }
+      ]
+    },
+    {
+      "id": "jc-notice",
+      "type": "lesson",
+      "title": "Leaving Well",
+      "summary": "Notice, final pay, and not burning bridges.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jc-notice-q1",
+          "type": "multiple_choice",
+          "context": "Your [[notice period]] is the time between telling your employer you’re leaving and your last day.",
+          "prompt": "What’s the usual notice period in the US?",
+          "choices": [
+            "Two weeks",
+            "Two days",
+            "Six months"
+          ],
+          "answer": 0,
+          "explain": "Two weeks is the norm."
+        },
+        {
+          "id": "jc-notice-q2",
+          "type": "true_false",
+          "prompt": "In most US states, you aren’t legally required to give notice.",
+          "answer": true,
+          "explain": "Most jobs are “at will.” Notice is about goodwill and references, unless your contract says otherwise."
+        },
+        {
+          "id": "jc-notice-q3",
+          "type": "multiple_choice",
+          "prompt": "What’s the best way to resign?",
+          "choices": [
+            "A short, polite letter with your last day",
+            "Just not showing up",
+            "An angry email to everyone"
+          ],
+          "answer": 0,
+          "explain": "Short and kind."
+        },
+        {
+          "id": "jc-notice-q4",
+          "type": "number",
+          "prompt": "Final paycheck: 6 days at $160 a day, plus 4 unused vacation days paid out at $160. Total before deductions?",
+          "answer": 1600,
+          "unit": "$",
+          "explain": "10 × $160 = $1,600."
+        },
+        {
+          "id": "jc-notice-q5",
+          "type": "multiple_choice",
+          "prompt": "Your boss offers more money to stay. What should you weigh?",
+          "choices": [
+            "Why you wanted to leave in the first place, not just the pay",
+            "Only the money",
+            "Nothing"
+          ],
+          "answer": 0,
+          "explain": "If money wasn’t the reason, more money won’t fix it."
+        },
+        {
+          "id": "jc-notice-q6",
+          "type": "true_false",
+          "prompt": "Leaving on good terms can matter for future references.",
+          "answer": true,
+          "explain": "Industries are smaller than they look."
+        }
+      ]
+    },
+    {
+      "id": "jc-gap",
+      "type": "lesson",
+      "title": "The Gap Between Jobs",
+      "summary": "The first new paycheck can be weeks away.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jc-gap-q1",
+          "type": "multiple_choice",
+          "prompt": "You start a new job on the 1st. When might your first paycheck arrive?",
+          "choices": [
+            "Two to four weeks later",
+            "On the 1st",
+            "After a year"
+          ],
+          "answer": 0,
+          "explain": "Payroll runs on its own schedule."
+        },
+        {
+          "id": "jc-gap-q2",
+          "type": "number",
+          "prompt": "Your last paycheck lands Mar 15. Your new job starts Apr 1 and first pays Apr 19. How many days with no income?",
+          "answer": 35,
+          "unit": "days",
+          "explain": "16 days left in March plus 19 days in April = 35 days."
+        },
+        {
+          "id": "jc-gap-q3",
+          "type": "number",
+          "prompt": "Your essentials cost about $70 a day. What does that gap cost?",
+          "answer": 2450,
+          "unit": "$",
+          "explain": "35 × $70 = $2,450."
+        },
+        {
+          "id": "jc-gap-q4",
+          "type": "multiple_choice",
+          "prompt": "What’s the best way to cover it?",
+          "choices": [
+            "Savings set aside before switching",
+            "A credit card at 24%",
+            "Hope"
+          ],
+          "answer": 0,
+          "explain": "Plan the gap before you jump."
+        },
+        {
+          "id": "jc-gap-q5",
+          "type": "true_false",
+          "prompt": "Your new job’s benefits may have a waiting period before they start.",
+          "answer": true,
+          "explain": "Some start on day one, some after 30 or 60 days."
+        },
+        {
+          "id": "jc-gap-q6",
+          "type": "multiple_choice",
+          "prompt": "During the gap, which costs do you cut first?",
+          "choices": [
+            "Wants",
+            "Rent",
+            "Food"
+          ],
+          "answer": 0,
+          "explain": "Wants pause. Needs don’t."
+        }
+      ]
+    },
+    {
+      "id": "jc-layoff",
+      "type": "lesson",
+      "title": "Laid Off: The First Week",
+      "summary": "What to do, in what order.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jc-layoff-q1",
+          "type": "multiple_choice",
+          "context": "A [[layoff]] means losing your job because the company is cutting jobs, not because of anything you did.",
+          "prompt": "Laid off vs. fired: what’s the difference?",
+          "choices": [
+            "A layoff is about the company. Firing is about your performance or conduct",
+            "No difference",
+            "Fired is better"
+          ],
+          "answer": 0,
+          "explain": "Being laid off says nothing bad about you."
+        },
+        {
+          "id": "jc-layoff-q2",
+          "type": "order",
+          "prompt": "Laid off. Put the first week in order.",
+          "items": [
+            "Get everything in writing: last day, final pay, severance, benefits",
+            "Apply for unemployment benefits",
+            "Cut your budget to essentials",
+            "Start the job search"
+          ],
+          "explain": "Facts, benefits, budget, search."
+        },
+        {
+          "id": "jc-layoff-q3",
+          "type": "true_false",
+          "prompt": "Apply for unemployment right away, not after your savings run out.",
+          "answer": true,
+          "explain": "Waiting can cost you weeks of benefits."
+        },
+        {
+          "id": "jc-layoff-q4",
+          "type": "number",
+          "prompt": "Your emergency fund is $6,000 and essentials cost $2,000 a month. How many months does it cover?",
+          "answer": 3,
+          "unit": "months",
+          "explain": "$6,000 ÷ $2,000 = 3 months."
+        },
+        {
+          "id": "jc-layoff-q5",
+          "type": "multiple_choice",
+          "prompt": "What should you not do in week one?",
+          "choices": [
+            "Cash out your 401(k)",
+            "Make a bare-bones budget",
+            "Update your résumé"
+          ],
+          "answer": 0,
+          "explain": "Cashing out costs taxes plus a penalty. More on that soon."
+        },
+        {
+          "id": "jc-layoff-q6",
+          "type": "true_false",
+          "prompt": "Being laid off says nothing bad about your skills.",
+          "answer": true,
+          "explain": "Companies cut jobs, not people’s worth."
+        }
+      ]
+    },
+    {
+      "id": "jc-severance",
+      "type": "lesson",
+      "format": "document",
+      "title": "Reading a Severance Offer",
+      "summary": "What you get, and what you give up by signing.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jc-severance-q1",
+          "type": "number",
+          "context": "[[Severance]] is money some employers pay when they let you go, often a few weeks of pay per year worked. It usually comes with an agreement to sign.",
+          "doc": {
+            "kind": "bill",
+            "title": "Northwind Logistics",
+            "subtitle": "Severance agreement",
+            "meta": [
+              [
+                "Last day",
+                "Apr 30"
+              ],
+              [
+                "Sign by",
+                "May 14"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "sev",
+                "label": "Severance pay, 4 weeks",
+                "amount": 4000.0
+              },
+              {
+                "id": "pto",
+                "label": "Unused PTO payout, 6 days",
+                "amount": 1200.0
+              },
+              {
+                "id": "health",
+                "label": "Health insurance continued through Jun 30",
+                "amount": 0.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total cash, before taxes",
+                "amount": 5200.0,
+                "strong": true
+              }
+            ],
+            "note": "By signing, you agree not to sue the company over your employment."
+          },
+          "prompt": "How much cash does this offer include, before taxes?",
+          "answer": 5200,
+          "unit": "$",
+          "explain": "$4,000 + $1,200 = $5,200."
+        },
+        {
+          "id": "jc-severance-q2",
+          "type": "multiple_choice",
+          "doc": {
+            "kind": "bill",
+            "title": "Northwind Logistics",
+            "subtitle": "Severance agreement",
+            "meta": [
+              [
+                "Last day",
+                "Apr 30"
+              ],
+              [
+                "Sign by",
+                "May 14"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "sev",
+                "label": "Severance pay, 4 weeks",
+                "amount": 4000.0
+              },
+              {
+                "id": "pto",
+                "label": "Unused PTO payout, 6 days",
+                "amount": 1200.0
+              },
+              {
+                "id": "health",
+                "label": "Health insurance continued through Jun 30",
+                "amount": 0.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total cash, before taxes",
+                "amount": 5200.0,
+                "strong": true
+              }
+            ],
+            "note": "By signing, you agree not to sue the company over your employment."
+          },
+          "prompt": "What do you give up by signing?",
+          "choices": [
+            "The right to sue the company over your job",
+            "Your unemployment benefits",
+            "Your next job"
+          ],
+          "answer": 0,
+          "explain": "Read the note at the bottom. That’s the trade."
+        },
+        {
+          "id": "jc-severance-q3",
+          "type": "true_false",
+          "prompt": "You can ask for more time to read a severance agreement, or have a lawyer look at it.",
+          "answer": true,
+          "explain": "Never sign something big on the spot."
+        },
+        {
+          "id": "jc-severance-q4",
+          "type": "multiple_choice",
+          "prompt": "Severance pay is…",
+          "choices": [
+            "taxed like regular pay",
+            "tax-free",
+            "a loan"
+          ],
+          "answer": 0,
+          "explain": "It shows up on your W-2."
+        },
+        {
+          "id": "jc-severance-q5",
+          "type": "number",
+          "prompt": "4 weeks of severance on a $52,000 salary. How much?",
+          "answer": 4000,
+          "unit": "$",
+          "explain": "$52,000 ÷ 52 = $1,000 a week. × 4 = $4,000."
+        },
+        {
+          "id": "jc-severance-q6",
+          "type": "multiple_choice",
+          "prompt": "What’s the best use of severance?",
+          "choices": [
+            "Covering essentials while you job hunt",
+            "A vacation",
+            "Spending it fast"
+          ],
+          "answer": 0,
+          "explain": "It’s a bridge, not a bonus."
+        }
+      ]
+    },
+    {
+      "id": "jc-cobra",
+      "type": "lesson",
+      "format": "call",
+      "title": "Keeping Health Insurance",
+      "summary": "Two ways to stay covered between jobs.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jc-cobra-q1",
+          "type": "multiple_choice",
+          "context": "[[COBRA]] lets you keep your work health plan after you leave, usually for up to 18 months, but you pay the whole premium yourself, plus a small fee.",
+          "prompt": "What’s the catch with COBRA?",
+          "choices": [
+            "You pay the full premium your employer used to share",
+            "It’s free",
+            "It lasts forever"
+          ],
+          "answer": 0,
+          "explain": "Same plan, much bigger bill."
+        },
+        {
+          "id": "jc-cobra-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "COBRA",
+              "subtitle": "Keep your old work plan",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Monthly premium, same plan as before",
+                  "amount": 640.0
+                }
+              ],
+              "note": "Same doctors. Up to 18 months."
+            },
+            {
+              "kind": "bill",
+              "title": "Marketplace plan",
+              "subtitle": "HealthCare.gov",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Monthly premium, after discount",
+                  "amount": 310.0
+                }
+              ],
+              "note": "New plan. Check your doctors are covered."
+            }
+          ],
+          "prompt": "Which costs less per month?",
+          "choices": [
+            "The Marketplace plan",
+            "COBRA"
+          ],
+          "answer": 0,
+          "explain": "$310 vs. $640."
+        },
+        {
+          "id": "jc-cobra-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "COBRA",
+              "subtitle": "Keep your old work plan",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Monthly premium, same plan as before",
+                  "amount": 640.0
+                }
+              ],
+              "note": "Same doctors. Up to 18 months."
+            },
+            {
+              "kind": "bill",
+              "title": "Marketplace plan",
+              "subtitle": "HealthCare.gov",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Monthly premium, after discount",
+                  "amount": 310.0
+                }
+              ],
+              "note": "New plan. Check your doctors are covered."
+            }
+          ],
+          "prompt": "Over 3 months, how much does the Marketplace plan save?",
+          "answer": 990,
+          "unit": "$",
+          "explain": "($640 − $310) × 3 = $990."
+        },
+        {
+          "id": "jc-cobra-q4",
+          "type": "true_false",
+          "prompt": "Losing job-based coverage lets you sign up on the Marketplace outside the usual enrollment window.",
+          "answer": true,
+          "explain": "You usually have 60 days to pick a plan."
+        },
+        {
+          "id": "jc-cobra-q5",
+          "type": "multiple_choice",
+          "prompt": "When might COBRA make sense anyway?",
+          "choices": [
+            "When you’re mid-treatment with doctors you need to keep",
+            "Never",
+            "Always"
+          ],
+          "answer": 0,
+          "explain": "Sometimes keeping your doctors is worth the price."
+        },
+        {
+          "id": "jc-cobra-q6",
+          "type": "true_false",
+          "prompt": "Going without health insurance between jobs is a smart way to save.",
+          "answer": false,
+          "explain": "One emergency can cost more than years of premiums."
+        }
+      ]
+    },
+    {
+      "id": "jc-401k",
+      "type": "lesson",
+      "title": "Your 401(k) When You Leave",
+      "summary": "Roll it, don’t cash it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jc-401k-q1",
+          "type": "multiple_choice",
+          "context": "When you leave a job, your 401(k) stays yours. You can usually leave it, move it to your new job’s plan, or do a [[rollover]] into an IRA, an account you open yourself.",
+          "prompt": "What’s a rollover?",
+          "choices": [
+            "Moving retirement money to another retirement account",
+            "Cashing it out",
+            "A gymnastics move"
+          ],
+          "answer": 0,
+          "explain": "The money stays invested and untaxed."
+        },
+        {
+          "id": "jc-401k-q2",
+          "type": "true_false",
+          "prompt": "Cashing out a 401(k) before age 59½ usually means income tax plus a 10% penalty.",
+          "answer": true,
+          "explain": "And the money stops growing."
+        },
+        {
+          "id": "jc-401k-q3",
+          "type": "number",
+          "prompt": "You cash out $10,000. What’s the 10% penalty?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "$10,000 × 0.10 = $1,000."
+        },
+        {
+          "id": "jc-401k-q4",
+          "type": "number",
+          "prompt": "Add about 22% income tax. What do the tax and penalty come to together?",
+          "answer": 3200,
+          "unit": "$",
+          "explain": "$1,000 + $2,200 = $3,200."
+        },
+        {
+          "id": "jc-401k-q5",
+          "type": "number",
+          "prompt": "What’s left of the $10,000?",
+          "answer": 6800,
+          "unit": "$",
+          "explain": "$10,000 − $3,200 = $6,800."
+        },
+        {
+          "id": "jc-401k-q6",
+          "type": "multiple_choice",
+          "prompt": "What’s usually the best move with an old 401(k)?",
+          "choices": [
+            "Roll it into your new plan or an IRA",
+            "Cash it out for a trip",
+            "Forget about it"
+          ],
+          "answer": 0,
+          "explain": "Keep it growing, tax-free, for future you."
+        }
+      ]
+    },
+    {
+      "id": "jc-theo",
+      "type": "lesson",
+      "format": "story",
+      "title": "Theo Gets Laid Off",
+      "summary": "Severance, savings and unemployment: how far do they stretch?",
+      "xp": 10,
+      "story": {
+        "title": "The warehouse closes",
+        "character": "Theo, 34, warehouse supervisor",
+        "body": "Theo was laid off on Friday when his warehouse closed. He got **$6,600** in severance after taxes and has **$5,400** in his emergency fund.\n\nHis bare-bones costs (rent, food, car, phone, utilities) are **$2,400** a month. He’s approved for unemployment of about **$1,800** a month, which in his state lasts up to **6** months."
+      },
+      "steps": [
+        {
+          "id": "jc-theo-q1",
+          "type": "number",
+          "prompt": "Severance plus emergency fund: how much does Theo have?",
+          "answer": 12000,
+          "unit": "$",
+          "explain": "$6,600 + $5,400 = $12,000."
+        },
+        {
+          "id": "jc-theo-q2",
+          "type": "number",
+          "prompt": "Unemployment covers $1,800 of his $2,400 a month. How much must come from savings each month?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$2,400 − $1,800 = $600."
+        },
+        {
+          "id": "jc-theo-q3",
+          "type": "number",
+          "prompt": "After 6 months of unemployment, how much savings is left?",
+          "answer": 8400,
+          "unit": "$",
+          "explain": "$12,000 − 6 × $600 = $8,400."
+        },
+        {
+          "id": "jc-theo-q4",
+          "type": "number",
+          "prompt": "After that, savings cover the full $2,400. How many more full months? Round down.",
+          "answer": 3,
+          "unit": "months",
+          "explain": "$8,400 ÷ $2,400 = 3.5, so 3 full months."
+        },
+        {
+          "id": "jc-theo-q5",
+          "type": "multiple_choice",
+          "prompt": "What’s Theo’s smartest move this week?",
+          "choices": [
+            "Apply for jobs and keep the budget bare-bones",
+            "Take a long vacation first",
+            "Cash out his 401(k)"
+          ],
+          "answer": 0,
+          "explain": "About 9 months of runway. Use it well."
+        },
+        {
+          "id": "jc-theo-q6",
+          "type": "true_false",
+          "prompt": "Theo’s emergency fund turned a crisis into a hard but manageable stretch.",
+          "answer": true,
+          "explain": "That’s exactly what it was for."
+        }
+      ]
+    },
+    {
+      "id": "jc-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "jc-trial",
+      "type": "boss",
+      "title": "Den Trial: Changing Jobs",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "jc-trial-q1",
+          "type": "number",
+          "prompt": "You cash out $5,000 from a 401(k) before age 59½. What’s the 10% penalty?",
+          "answer": 500,
+          "unit": "$",
+          "explain": "$5,000 × 0.10 = $500."
+        },
+        {
+          "id": "jc-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "Why does COBRA usually cost so much more than your old paycheck deduction?",
+          "choices": [
+            "Your employer no longer pays its share of the premium",
+            "It covers less",
+            "It has a sign-up fee"
+          ],
+          "answer": 0,
+          "explain": "Same plan, full price."
+        },
+        {
+          "id": "jc-trial-q3",
+          "type": "true_false",
+          "prompt": "In most states, the law requires you to give two weeks’ notice.",
+          "answer": false,
+          "explain": "It’s a custom, not a law, in most states."
+        },
+        {
+          "id": "jc-trial-q4",
+          "type": "number",
+          "prompt": "Essentials cost $1,800 a month. Savings needed for a 4-month gap?",
+          "answer": 7200,
+          "unit": "$",
+          "explain": "$1,800 × 4 = $7,200."
+        }
+      ]
+    }
+  ]
+}

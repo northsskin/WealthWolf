@@ -1,0 +1,831 @@
+{
+  "id": "freelancing",
+  "section": "earning",
+  "order": 6,
+  "title": "Freelancing Basics",
+  "description": "Rates, invoices, late payers and quarterly taxes.",
+  "wolfLine": "When you hunt alone, you carry your own kill. Price accordingly.",
+  "terms": {
+    "freelancer": {
+      "term": "Freelancer",
+      "definition": "Someone who sells their skills to clients, project by project, instead of working for one employer.",
+      "example": "A designer making logos for several small businesses."
+    },
+    "invoice": {
+      "term": "Invoice",
+      "definition": "The bill you send a client: what you did, what it costs, and when it’s due.",
+      "example": "Invoice #0042: $1,290, due Apr 2."
+    },
+    "payment-terms": {
+      "term": "Payment terms",
+      "definition": "The deadline for a client to pay you. “Net 30” means within 30 days of the invoice date.",
+      "example": "Invoiced Mar 3, net 30: due Apr 2."
+    },
+    "business-expense": {
+      "term": "Business expense",
+      "definition": "A cost of running your work, like software, equipment or a website. Many lower the profit you’re taxed on.",
+      "example": "A $55 monthly design software subscription."
+    },
+    "estimated-taxes": {
+      "term": "Estimated taxes",
+      "definition": "Tax payments self-employed people make four times a year, since nothing is taken out of their pay.",
+      "example": "Paying the IRS on April 15, June 15, September 15 and January 15."
+    }
+  },
+  "lessons": [
+    {
+      "id": "fl-what",
+      "type": "lesson",
+      "title": "Working for Yourself",
+      "summary": "Freedom, clients, and everything an employer used to handle.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fl-what-q1",
+          "type": "multiple_choice",
+          "context": "A [[freelancer]] sells their skills to clients, project by project, instead of working for one employer.",
+          "prompt": "Which is freelancing?",
+          "choices": [
+            "Designing logos for several small businesses",
+            "Working shifts at one store",
+            "Collecting unemployment"
+          ],
+          "answer": 0,
+          "explain": "Many clients, one project at a time."
+        },
+        {
+          "id": "fl-what-q2",
+          "type": "multiple_choice",
+          "prompt": "What does a freelancer handle that an employer usually would?",
+          "choices": [
+            "Finding clients, taxes, health insurance and retirement",
+            "Nothing",
+            "Only taxes"
+          ],
+          "answer": 0,
+          "explain": "You’re the boss, and also the payroll department."
+        },
+        {
+          "id": "fl-what-q3",
+          "type": "true_false",
+          "prompt": "Freelancers can choose which clients and projects to take.",
+          "answer": true,
+          "explain": "One of the best parts."
+        },
+        {
+          "id": "fl-what-q4",
+          "type": "multiple_choice",
+          "prompt": "What’s a smart way to start?",
+          "choices": [
+            "Alongside a job, with a few clients first",
+            "Quit with no clients and no savings",
+            "Work for free forever"
+          ],
+          "answer": 0,
+          "explain": "Prove it before you leap."
+        },
+        {
+          "id": "fl-what-q5",
+          "type": "number",
+          "prompt": "You need $3,000 a month to live and have $9,000 saved. How many months can savings carry you while you build clients?",
+          "answer": 3,
+          "unit": "months",
+          "explain": "$9,000 ÷ $3,000 = 3 months."
+        },
+        {
+          "id": "fl-what-q6",
+          "type": "fill_blank",
+          "prompt": "Freelancers are paid by ___, not by an employer’s payroll.",
+          "choices": [
+            "clients",
+            "the government",
+            "their bank"
+          ],
+          "answer": 0,
+          "explain": "Every client is a little paycheck."
+        }
+      ]
+    },
+    {
+      "id": "fl-rates",
+      "type": "lesson",
+      "title": "Setting Your Rate",
+      "summary": "Work backwards from what you need.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fl-rates-q1",
+          "type": "info",
+          "title": "Work backwards",
+          "body": "Start from what you want to earn in a year, add your business costs, then divide by the hours you can actually bill.\n\nNot every hour is billable. Finding clients, emails and admin are unpaid."
+        },
+        {
+          "id": "fl-rates-q2",
+          "type": "number",
+          "prompt": "You want $50,000 a year for yourself, plus $5,000 of business costs. How much must you bring in?",
+          "answer": 55000,
+          "unit": "$",
+          "explain": "$50,000 + $5,000 = $55,000."
+        },
+        {
+          "id": "fl-rates-q3",
+          "type": "number",
+          "prompt": "You can bill about 1,100 hours a year. What hourly rate do you need?",
+          "answer": 50,
+          "unit": "$",
+          "explain": "$55,000 ÷ 1,100 = $50 an hour."
+        },
+        {
+          "id": "fl-rates-q4",
+          "type": "multiple_choice",
+          "prompt": "Why only 1,100 billable hours, when a full-time year is about 2,080?",
+          "choices": [
+            "Much of your time goes to finding clients and admin",
+            "Freelancers are lazy",
+            "It’s the law"
+          ],
+          "answer": 0,
+          "explain": "Plan for roughly half your hours being unpaid."
+        },
+        {
+          "id": "fl-rates-q5",
+          "type": "number",
+          "prompt": "Raise your rate from $50 to $60 an hour. Over 1,100 hours, how much more do you earn?",
+          "answer": 11000,
+          "unit": "$",
+          "explain": "$10 × 1,100 = $11,000."
+        },
+        {
+          "id": "fl-rates-q6",
+          "type": "true_false",
+          "prompt": "Charging too little at the start makes it harder to raise prices later.",
+          "answer": true,
+          "explain": "Clients anchor on your first price."
+        }
+      ]
+    },
+    {
+      "id": "fl-hourly-project",
+      "type": "lesson",
+      "format": "call",
+      "title": "Hourly or Per Project?",
+      "summary": "Two ways to price the same job.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fl-hourly-project-q1",
+          "type": "number",
+          "context": "Hourly means you’re paid for time. Per project means one fixed price for the whole job.",
+          "prompt": "You quote $2,400 for a website project. It takes you 30 hours. What did you earn per hour?",
+          "answer": 80,
+          "unit": "$",
+          "explain": "$2,400 ÷ 30 = $80."
+        },
+        {
+          "id": "fl-hourly-project-q2",
+          "type": "number",
+          "prompt": "It takes 48 hours instead. Per hour now?",
+          "answer": 50,
+          "unit": "$",
+          "explain": "$2,400 ÷ 48 = $50."
+        },
+        {
+          "id": "fl-hourly-project-q3",
+          "type": "multiple_choice",
+          "prompt": "Which pricing rewards you for getting faster?",
+          "choices": [
+            "Per project",
+            "Hourly"
+          ],
+          "answer": 0,
+          "explain": "Finish sooner, earn more per hour."
+        },
+        {
+          "id": "fl-hourly-project-q4",
+          "type": "multiple_choice",
+          "prompt": "Which protects you when a client keeps adding changes?",
+          "choices": [
+            "Hourly, or a project price with a set number of revisions",
+            "A vague project price",
+            "Free work"
+          ],
+          "answer": 0,
+          "explain": "Define what’s included."
+        },
+        {
+          "id": "fl-hourly-project-q5",
+          "type": "true_false",
+          "prompt": "Writing down exactly what’s included protects both you and the client.",
+          "answer": true,
+          "explain": "No surprises on either side."
+        },
+        {
+          "id": "fl-hourly-project-q6",
+          "type": "multiple_choice",
+          "prompt": "The client asks for “just one more small thing” for the fifth time. Your move?",
+          "choices": [
+            "Point to the agreement and quote the extra work",
+            "Do it all free",
+            "Ignore their emails"
+          ],
+          "answer": 0,
+          "explain": "Friendly, firm, and in writing."
+        }
+      ]
+    },
+    {
+      "id": "fl-invoice",
+      "type": "lesson",
+      "format": "document",
+      "title": "Send an Invoice",
+      "summary": "The bill that gets you paid.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fl-invoice-q1",
+          "type": "multiple_choice",
+          "context": "An [[invoice]] is the bill you send a client: what you did, what it costs, and when it’s due.",
+          "doc": {
+            "kind": "bill",
+            "title": "Invoice #0042",
+            "subtitle": "From: Rosa Diaz Design · To: Sunny Side Bakery",
+            "meta": [
+              [
+                "Issued",
+                "Mar 3"
+              ],
+              [
+                "Due date",
+                "Apr 2"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "logo",
+                "label": "Logo design",
+                "amount": 600.0
+              },
+              {
+                "id": "menu",
+                "label": "Menu layout, 3 pages × $150",
+                "amount": 450.0
+              },
+              {
+                "id": "social",
+                "label": "Social media graphics, 6 × $40",
+                "amount": 240.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 1290.0,
+                "strong": true
+              }
+            ],
+            "note": "Payment terms: net 30. Late payments add 1.5% a month."
+          },
+          "prompt": "When is this invoice due?",
+          "choices": [
+            "Apr 2",
+            "Mar 3"
+          ],
+          "answer": 0,
+          "explain": "The due date, top right."
+        },
+        {
+          "id": "fl-invoice-q2",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Invoice #0042",
+            "subtitle": "From: Rosa Diaz Design · To: Sunny Side Bakery",
+            "meta": [
+              [
+                "Issued",
+                "Mar 3"
+              ],
+              [
+                "Due date",
+                "Apr 2"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "logo",
+                "label": "Logo design",
+                "amount": 600.0
+              },
+              {
+                "id": "menu",
+                "label": "Menu layout, 3 pages × $150",
+                "amount": 450.0
+              },
+              {
+                "id": "social",
+                "label": "Social media graphics, 6 × $40",
+                "amount": 240.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 1290.0,
+                "strong": true
+              }
+            ],
+            "note": "Payment terms: net 30. Late payments add 1.5% a month."
+          },
+          "prompt": "What’s the total due?",
+          "answer": 1290,
+          "unit": "$",
+          "explain": "$600 + $450 + $240 = $1,290."
+        },
+        {
+          "id": "fl-invoice-q3",
+          "type": "multiple_choice",
+          "context": "[[Payment terms]] say when you must be paid. “Net 30” means within 30 days of the invoice date.",
+          "doc": {
+            "kind": "bill",
+            "title": "Invoice #0042",
+            "subtitle": "From: Rosa Diaz Design · To: Sunny Side Bakery",
+            "meta": [
+              [
+                "Issued",
+                "Mar 3"
+              ],
+              [
+                "Due date",
+                "Apr 2"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "logo",
+                "label": "Logo design",
+                "amount": 600.0
+              },
+              {
+                "id": "menu",
+                "label": "Menu layout, 3 pages × $150",
+                "amount": 450.0
+              },
+              {
+                "id": "social",
+                "label": "Social media graphics, 6 × $40",
+                "amount": 240.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 1290.0,
+                "strong": true
+              }
+            ],
+            "note": "Payment terms: net 30. Late payments add 1.5% a month."
+          },
+          "prompt": "What does “net 30” mean here?",
+          "choices": [
+            "Pay within 30 days of Mar 3",
+            "30% off",
+            "Pay $30"
+          ],
+          "answer": 0,
+          "explain": "Mar 3 plus 30 days is Apr 2."
+        },
+        {
+          "id": "fl-invoice-q4",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Invoice #0042",
+            "subtitle": "From: Rosa Diaz Design · To: Sunny Side Bakery",
+            "meta": [
+              [
+                "Issued",
+                "Mar 3"
+              ],
+              [
+                "Due date",
+                "Apr 2"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "logo",
+                "label": "Logo design",
+                "amount": 600.0
+              },
+              {
+                "id": "menu",
+                "label": "Menu layout, 3 pages × $150",
+                "amount": 450.0
+              },
+              {
+                "id": "social",
+                "label": "Social media graphics, 6 × $40",
+                "amount": 240.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 1290.0,
+                "strong": true
+              }
+            ],
+            "note": "Payment terms: net 30. Late payments add 1.5% a month."
+          },
+          "prompt": "If it’s paid a month late, what’s the 1.5% late fee on $1,290?",
+          "answer": 19.35,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$1,290 × 0.015 = $19.35."
+        },
+        {
+          "id": "fl-invoice-q5",
+          "type": "true_false",
+          "prompt": "Number every invoice and keep a copy.",
+          "answer": true,
+          "explain": "You’ll need them for taxes and for chasing late payers."
+        },
+        {
+          "id": "fl-invoice-q6",
+          "type": "multiple_choice",
+          "prompt": "What gets an invoice paid faster?",
+          "choices": [
+            "A clear due date and easy ways to pay",
+            "No due date",
+            "Sending it months later"
+          ],
+          "answer": 0,
+          "explain": "Make paying you effortless."
+        }
+      ]
+    },
+    {
+      "id": "fl-late-payers",
+      "type": "lesson",
+      "title": "When Clients Pay Late",
+      "summary": "Deposits, reminders and a cushion.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fl-late-payers-q1",
+          "type": "multiple_choice",
+          "prompt": "What’s the best protection on a big project?",
+          "choices": [
+            "A deposit upfront, like 50%",
+            "Trust",
+            "Finishing everything first"
+          ],
+          "answer": 0,
+          "explain": "Half before you start, half when you finish."
+        },
+        {
+          "id": "fl-late-payers-q2",
+          "type": "number",
+          "prompt": "What’s a 50% deposit on a $2,400 project?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$2,400 × 0.50 = $1,200."
+        },
+        {
+          "id": "fl-late-payers-q3",
+          "type": "order",
+          "prompt": "A client is late. Put your steps in order.",
+          "items": [
+            "Send a friendly reminder",
+            "Follow up with the invoice and late fee",
+            "Call them",
+            "Pause new work until they pay"
+          ],
+          "explain": "Polite, then firmer, then stop working for free."
+        },
+        {
+          "id": "fl-late-payers-q4",
+          "type": "true_false",
+          "prompt": "Clients paying 30 to 60 days after the work means you need savings to cover the gap.",
+          "answer": true,
+          "explain": "Your rent doesn’t wait for net 30."
+        },
+        {
+          "id": "fl-late-payers-q5",
+          "type": "multiple_choice",
+          "prompt": "You invoice $4,000 on Mar 31, net 30. When should you expect the money?",
+          "choices": [
+            "Around Apr 30",
+            "Mar 31",
+            "Next year"
+          ],
+          "answer": 0,
+          "explain": "30 days after the invoice."
+        },
+        {
+          "id": "fl-late-payers-q6",
+          "type": "multiple_choice",
+          "prompt": "A client never pays $800, even after reminders. Last resort?",
+          "choices": [
+            "Small claims court, often without a lawyer",
+            "Post their address online",
+            "Forget it"
+          ],
+          "answer": 0,
+          "explain": "Small claims is built for exactly this."
+        }
+      ]
+    },
+    {
+      "id": "fl-expenses",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Business Expenses",
+      "summary": "What counts, and why receipts matter.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fl-expenses-q1",
+          "type": "multiple_choice",
+          "context": "A [[business expense]] is a cost of running your work: software, equipment, a website. Many of them lower the profit you’re taxed on.",
+          "prompt": "Which is a business expense for a freelance designer?",
+          "choices": [
+            "Design software",
+            "Netflix",
+            "Groceries"
+          ],
+          "answer": 0,
+          "explain": "Used for the work."
+        },
+        {
+          "id": "fl-expenses-q2",
+          "type": "sort",
+          "prompt": "Business or personal?",
+          "buckets": [
+            "Business",
+            "Personal"
+          ],
+          "items": [
+            [
+              "Laptop used for client work",
+              0
+            ],
+            [
+              "Design software",
+              0
+            ],
+            [
+              "Dinner with friends",
+              1
+            ],
+            [
+              "Website hosting for your portfolio",
+              0
+            ],
+            [
+              "Your gym membership",
+              1
+            ],
+            [
+              "Printer ink for client proofs",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "fl-expenses-q3",
+          "type": "number",
+          "prompt": "Income $40,000, business expenses $6,000. What’s the profit?",
+          "answer": 34000,
+          "unit": "$",
+          "explain": "$40,000 − $6,000 = $34,000."
+        },
+        {
+          "id": "fl-expenses-q4",
+          "type": "number",
+          "prompt": "Setting aside about 25% of profit for taxes, how much?",
+          "answer": 8500,
+          "unit": "$",
+          "explain": "$34,000 × 0.25 = $8,500."
+        },
+        {
+          "id": "fl-expenses-q5",
+          "type": "true_false",
+          "prompt": "Keeping receipts for business expenses matters at tax time.",
+          "answer": true,
+          "explain": "No receipt, no proof."
+        },
+        {
+          "id": "fl-expenses-q6",
+          "type": "multiple_choice",
+          "prompt": "What’s the easiest way to keep track?",
+          "choices": [
+            "A separate account and card just for business",
+            "Mixing everything together",
+            "Cash only"
+          ],
+          "answer": 0,
+          "explain": "One account, one clean record."
+        }
+      ]
+    },
+    {
+      "id": "fl-taxes",
+      "type": "lesson",
+      "title": "Quarterly Taxes",
+      "summary": "Four deadlines a year, and how to be ready.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fl-taxes-q1",
+          "type": "multiple_choice",
+          "context": "Self-employed people usually pay [[estimated taxes]] four times a year, since nothing is taken out of their pay.",
+          "prompt": "How often are estimated taxes usually paid?",
+          "choices": [
+            "Four times a year",
+            "Once a decade",
+            "Every day"
+          ],
+          "answer": 0,
+          "explain": "Quarterly."
+        },
+        {
+          "id": "fl-taxes-q2",
+          "type": "order",
+          "prompt": "Put the estimated tax due dates in order, starting in spring.",
+          "items": [
+            "April 15",
+            "June 15",
+            "September 15",
+            "January 15"
+          ],
+          "explain": "Not quite every three months, so put them in your calendar."
+        },
+        {
+          "id": "fl-taxes-q3",
+          "type": "number",
+          "prompt": "You set aside 25% of $2,800 profit each month. How much over a quarter (3 months)?",
+          "answer": 2100,
+          "unit": "$",
+          "explain": "$2,800 × 0.25 × 3 = $2,100."
+        },
+        {
+          "id": "fl-taxes-q4",
+          "type": "true_false",
+          "prompt": "Missing estimated tax payments can mean penalties.",
+          "answer": true,
+          "explain": "Late payments add interest and penalties."
+        },
+        {
+          "id": "fl-taxes-q5",
+          "type": "multiple_choice",
+          "prompt": "Where should tax money wait until it’s due?",
+          "choices": [
+            "In a separate savings account",
+            "In your spending account",
+            "In a shoebox"
+          ],
+          "answer": 0,
+          "explain": "Earning a little interest, out of reach."
+        },
+        {
+          "id": "fl-taxes-q6",
+          "type": "multiple_choice",
+          "prompt": "Not sure how much to pay?",
+          "choices": [
+            "Ask a tax pro or follow the IRS guide. It’s worth it the first year",
+            "Guess wildly",
+            "Pay nothing"
+          ],
+          "answer": 0,
+          "explain": "The Taxes section of this course goes deeper too."
+        }
+      ]
+    },
+    {
+      "id": "fl-rosa",
+      "type": "lesson",
+      "format": "story",
+      "title": "Rosa’s First Freelance Year",
+      "summary": "More money billed. Is it more money earned?",
+      "xp": 10,
+      "story": {
+        "title": "Year one on her own",
+        "character": "Rosa, 30, graphic designer",
+        "body": "Rosa left her job in January with **$12,000** saved. By December she had billed clients **$58,000**.\n\nBut one client, Bluefin, still owes her **$3,500**. Her business expenses (software, a new laptop, her website) came to **$7,000**. She set aside **25%** of her profit for taxes.\n\nHer old job paid **$45,000**, with health insurance and a 401(k) match."
+      },
+      "steps": [
+        {
+          "id": "fl-rosa-q1",
+          "type": "number",
+          "prompt": "What did Rosa actually collect this year?",
+          "answer": 54500,
+          "unit": "$",
+          "explain": "$58,000 − $3,500 = $54,500."
+        },
+        {
+          "id": "fl-rosa-q2",
+          "type": "number",
+          "prompt": "What’s her profit, using what she collected minus $7,000 of expenses?",
+          "answer": 47500,
+          "unit": "$",
+          "explain": "$54,500 − $7,000 = $47,500."
+        },
+        {
+          "id": "fl-rosa-q3",
+          "type": "number",
+          "prompt": "25% of profit for taxes?",
+          "answer": 11875,
+          "unit": "$",
+          "explain": "$47,500 × 0.25 = $11,875."
+        },
+        {
+          "id": "fl-rosa-q4",
+          "type": "number",
+          "prompt": "What’s left for Rosa to live on?",
+          "answer": 35625,
+          "unit": "$",
+          "explain": "$47,500 − $11,875 = $35,625."
+        },
+        {
+          "id": "fl-rosa-q5",
+          "type": "multiple_choice",
+          "prompt": "Her old job paid $45,000 with health insurance and a match. Is freelancing paying more yet?",
+          "choices": [
+            "Not yet: she now covers insurance and retirement herself",
+            "Yes, much more",
+            "She’s losing money"
+          ],
+          "answer": 0,
+          "explain": "Billing more isn’t the same as keeping more."
+        },
+        {
+          "id": "fl-rosa-q6",
+          "type": "multiple_choice",
+          "prompt": "What would help most next year?",
+          "choices": [
+            "Deposits upfront and a higher rate",
+            "More unpaid work",
+            "Spending her savings"
+          ],
+          "answer": 0,
+          "explain": "Get paid sooner, and get paid more."
+        }
+      ]
+    },
+    {
+      "id": "fl-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "fl-trial",
+      "type": "boss",
+      "title": "Den Trial: Freelancing",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "fl-trial-q1",
+          "type": "number",
+          "prompt": "3 hours at $75 an hour, plus $50 of stock images, on one invoice. Total?",
+          "answer": 275,
+          "unit": "$",
+          "explain": "3 × $75 + $50 = $275."
+        },
+        {
+          "id": "fl-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "What does “net 30” mean?",
+          "choices": [
+            "Pay within 30 days of the invoice date",
+            "30% off",
+            "Pay $30 a month"
+          ],
+          "answer": 0,
+          "explain": "30 days to pay."
+        },
+        {
+          "id": "fl-trial-q3",
+          "type": "true_false",
+          "prompt": "Freelancers have taxes taken out of their pay automatically.",
+          "answer": false,
+          "explain": "They pay estimated taxes themselves."
+        },
+        {
+          "id": "fl-trial-q4",
+          "type": "number",
+          "prompt": "$3,000 of profit this month. Set aside 25% for taxes. How much?",
+          "answer": 750,
+          "unit": "$",
+          "explain": "$3,000 × 0.25 = $750."
+        }
+      ]
+    }
+  ]
+}

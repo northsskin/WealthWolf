@@ -1,0 +1,1019 @@
+{
+  "id": "job-offers",
+  "section": "earning",
+  "order": 3,
+  "title": "Job Offers & Negotiating",
+  "description": "Read an offer, compare two, and ask for more without flinching.",
+  "wolfLine": "The first number is an opening, not a verdict.",
+  "terms": {
+    "offer-letter": {
+      "term": "Offer letter",
+      "definition": "The written job offer: title, pay, start date and benefits.",
+      "example": "Patient Coordinator, $54,000, start Jan 6."
+    },
+    "base-salary": {
+      "term": "Base salary",
+      "definition": "Your yearly pay before any bonuses or benefits.",
+      "example": "A $54,000 base salary plus a $2,000 signing bonus."
+    },
+    "total-compensation": {
+      "term": "Total compensation",
+      "definition": "Everything a job pays you in a year: base salary, bonuses and the value of benefits.",
+      "example": "$54,000 salary + $2,000 bonus + $7,620 of benefits = $63,620."
+    },
+    "salary-range": {
+      "term": "Salary range",
+      "definition": "The low-to-high pay a company expects to offer for a role.",
+      "example": "Posted range: $48,000–$58,000."
+    },
+    "counteroffer": {
+      "term": "Counteroffer",
+      "definition": "Your polite reply to a job offer asking for more: higher pay, a bonus or more time off.",
+      "example": "“I’m excited to join. Based on my research, could we do $56,000?”"
+    },
+    "signing-bonus": {
+      "term": "Signing bonus",
+      "definition": "A one-time payment for accepting a job offer, often with a payback rule if you leave early.",
+      "example": "$3,000 when you start, repaid if you leave within a year."
+    }
+  },
+  "lessons": [
+    {
+      "id": "jo-offer-letter",
+      "type": "lesson",
+      "format": "document",
+      "title": "Reading an Offer Letter",
+      "summary": "Before you say yes, read every line.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jo-offer-letter-q1",
+          "type": "multiple_choice",
+          "context": "An [[offer letter]] is the written job offer: title, pay, start date and benefits. Your [[base salary]] is the yearly pay before bonuses or benefits.",
+          "doc": {
+            "kind": "bill",
+            "title": "Harbor Health",
+            "subtitle": "Offer letter · Patient Coordinator",
+            "meta": [
+              [
+                "Start date",
+                "Jan 6"
+              ],
+              [
+                "Please reply by",
+                "Dec 15"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "base",
+                "label": "Base salary, yearly",
+                "amount": 54000.0
+              },
+              {
+                "id": "bonus",
+                "label": "Signing bonus, paid once",
+                "amount": 2000.0
+              },
+              {
+                "id": "match",
+                "label": "401(k) match: 100% of the first 3% you save",
+                "amount": 1620.0
+              },
+              {
+                "id": "health",
+                "label": "Health insurance, employer share",
+                "amount": 6000.0
+              }
+            ]
+          },
+          "prompt": "What’s the base salary in this offer?",
+          "choices": [
+            "$54,000",
+            "$56,000",
+            "$63,620"
+          ],
+          "answer": 0,
+          "explain": "The yearly pay, before the bonus and benefits."
+        },
+        {
+          "id": "jo-offer-letter-q2",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Harbor Health",
+            "subtitle": "Offer letter · Patient Coordinator",
+            "meta": [
+              [
+                "Start date",
+                "Jan 6"
+              ],
+              [
+                "Please reply by",
+                "Dec 15"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "base",
+                "label": "Base salary, yearly",
+                "amount": 54000.0
+              },
+              {
+                "id": "bonus",
+                "label": "Signing bonus, paid once",
+                "amount": 2000.0
+              },
+              {
+                "id": "match",
+                "label": "401(k) match: 100% of the first 3% you save",
+                "amount": 1620.0
+              },
+              {
+                "id": "health",
+                "label": "Health insurance, employer share",
+                "amount": 6000.0
+              }
+            ]
+          },
+          "prompt": "The signing bonus is paid once. Base salary plus signing bonus: how much cash in the first year?",
+          "answer": 56000,
+          "unit": "$",
+          "explain": "$54,000 + $2,000 = $56,000."
+        },
+        {
+          "id": "jo-offer-letter-q3",
+          "type": "multiple_choice",
+          "doc": {
+            "kind": "bill",
+            "title": "Harbor Health",
+            "subtitle": "Offer letter · Patient Coordinator",
+            "meta": [
+              [
+                "Start date",
+                "Jan 6"
+              ],
+              [
+                "Please reply by",
+                "Dec 15"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "base",
+                "label": "Base salary, yearly",
+                "amount": 54000.0
+              },
+              {
+                "id": "bonus",
+                "label": "Signing bonus, paid once",
+                "amount": 2000.0
+              },
+              {
+                "id": "match",
+                "label": "401(k) match: 100% of the first 3% you save",
+                "amount": 1620.0
+              },
+              {
+                "id": "health",
+                "label": "Health insurance, employer share",
+                "amount": 6000.0
+              }
+            ]
+          },
+          "prompt": "When do you need to reply?",
+          "choices": [
+            "By Dec 15",
+            "On your first day",
+            "Never, it’s automatic"
+          ],
+          "answer": 0,
+          "explain": "Offers often have a deadline. Ask for more time if you need it."
+        },
+        {
+          "id": "jo-offer-letter-q4",
+          "type": "true_false",
+          "prompt": "Get the offer in writing before you quit your current job.",
+          "answer": true,
+          "explain": "A phone promise isn’t an offer."
+        },
+        {
+          "id": "jo-offer-letter-q5",
+          "type": "multiple_choice",
+          "prompt": "Something in the letter differs from what they said on the phone. What do you do?",
+          "choices": [
+            "Ask them to fix it in writing before you sign",
+            "Sign now and sort it out later",
+            "Ignore it"
+          ],
+          "answer": 0,
+          "explain": "What’s written is what counts."
+        },
+        {
+          "id": "jo-offer-letter-q6",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Harbor Health",
+            "subtitle": "Offer letter · Patient Coordinator",
+            "meta": [
+              [
+                "Start date",
+                "Jan 6"
+              ],
+              [
+                "Please reply by",
+                "Dec 15"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "base",
+                "label": "Base salary, yearly",
+                "amount": 54000.0
+              },
+              {
+                "id": "bonus",
+                "label": "Signing bonus, paid once",
+                "amount": 2000.0
+              },
+              {
+                "id": "match",
+                "label": "401(k) match: 100% of the first 3% you save",
+                "amount": 1620.0
+              },
+              {
+                "id": "health",
+                "label": "Health insurance, employer share",
+                "amount": 6000.0
+              }
+            ]
+          },
+          "prompt": "They match 100% of the first 3% you save. If you only save 1% of $54,000, what’s the match?",
+          "answer": 540,
+          "unit": "$",
+          "explain": "$54,000 × 0.01 = $540."
+        }
+      ]
+    },
+    {
+      "id": "jo-total-comp",
+      "type": "lesson",
+      "title": "Total Compensation",
+      "summary": "The real size of an offer is more than the salary.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jo-total-comp-q1",
+          "type": "multiple_choice",
+          "context": "[[Total compensation]] is everything a job pays you in a year: base salary, bonuses, and the value of benefits.",
+          "prompt": "Which counts toward total compensation?",
+          "choices": [
+            "Salary, bonus and the employer’s share of benefits",
+            "Only salary",
+            "Only take-home pay"
+          ],
+          "answer": 0,
+          "explain": "Everything the job pays you, in cash or in benefits."
+        },
+        {
+          "id": "jo-total-comp-q2",
+          "type": "number",
+          "prompt": "Base $54,000, bonus $2,000, 401(k) match $1,620, health insurance employer share $6,000. What’s the total compensation?",
+          "answer": 63620,
+          "unit": "$",
+          "explain": "$54,000 + $2,000 + $1,620 + $6,000 = $63,620."
+        },
+        {
+          "id": "jo-total-comp-q3",
+          "type": "number",
+          "prompt": "Another job offers $58,000, no bonus, no match, and $3,000 toward health insurance. Total compensation?",
+          "answer": 61000,
+          "unit": "$",
+          "explain": "$58,000 + $3,000 = $61,000."
+        },
+        {
+          "id": "jo-total-comp-q4",
+          "type": "multiple_choice",
+          "prompt": "Which offer is worth more?",
+          "choices": [
+            "The $54,000 job, at $63,620",
+            "The $58,000 job, at $61,000"
+          ],
+          "answer": 0,
+          "explain": "The lower salary wins by $2,620."
+        },
+        {
+          "id": "jo-total-comp-q5",
+          "type": "true_false",
+          "prompt": "The job with the higher salary always pays more overall.",
+          "answer": false,
+          "explain": "Benefits can flip it."
+        },
+        {
+          "id": "jo-total-comp-q6",
+          "type": "multiple_choice",
+          "prompt": "What else matters besides total compensation?",
+          "choices": [
+            "Commute, schedule, growth and how you’ll be treated",
+            "Nothing",
+            "Only the logo"
+          ],
+          "answer": 0,
+          "explain": "Money first, but not money only."
+        }
+      ]
+    },
+    {
+      "id": "jo-research",
+      "type": "lesson",
+      "title": "Know Your Number",
+      "summary": "Research pay before anyone asks what you want.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jo-research-q1",
+          "type": "multiple_choice",
+          "context": "A [[salary range]] is the low-to-high pay a company expects for a role. A growing number of states require it in job postings.",
+          "prompt": "A posting says $48,000–$58,000. What does that tell you?",
+          "choices": [
+            "Where offers for this role will likely land",
+            "Exactly what you’ll get",
+            "Nothing"
+          ],
+          "answer": 0,
+          "explain": "It’s the company’s planned range."
+        },
+        {
+          "id": "jo-research-q2",
+          "type": "multiple_choice",
+          "prompt": "Where can you research pay for a role?",
+          "choices": [
+            "Postings with ranges, salary sites, and people in the field",
+            "Guessing",
+            "Your rent"
+          ],
+          "answer": 0,
+          "explain": "Three sources beat one."
+        },
+        {
+          "id": "jo-research-q3",
+          "type": "number",
+          "prompt": "Range $48,000–$58,000. What’s the middle?",
+          "answer": 53000,
+          "unit": "$",
+          "explain": "($48,000 + $58,000) ÷ 2 = $53,000."
+        },
+        {
+          "id": "jo-research-q4",
+          "type": "multiple_choice",
+          "prompt": "You have 3 years of experience and the role asks for 2. Where in the range should you aim?",
+          "choices": [
+            "The upper half",
+            "The bottom",
+            "Above the top"
+          ],
+          "answer": 0,
+          "explain": "You bring more than they asked for."
+        },
+        {
+          "id": "jo-research-q5",
+          "type": "true_false",
+          "prompt": "Asking “What’s the salary range?” early in the process is reasonable.",
+          "answer": true,
+          "explain": "It saves everyone time."
+        },
+        {
+          "id": "jo-research-q6",
+          "type": "multiple_choice",
+          "prompt": "They ask your current salary. What’s a safe answer?",
+          "choices": [
+            "Share the range you’re looking for instead",
+            "Make up a number",
+            "Refuse to talk"
+          ],
+          "answer": 0,
+          "explain": "Many states ban employers from asking about pay history. Either way, keep it about this job."
+        }
+      ]
+    },
+    {
+      "id": "jo-two-offers",
+      "type": "lesson",
+      "format": "call",
+      "title": "Two Offers",
+      "summary": "Line them up properly, then think about your time.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jo-two-offers-q1",
+          "type": "multiple_choice",
+          "context": "Compare offers on everything: pay, benefits, and what the job costs you.",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Cityline Bank",
+              "subtitle": "Offer A · 5 days in the office",
+              "lines": [
+                {
+                  "id": "base",
+                  "label": "Base salary",
+                  "amount": 56000.0
+                },
+                {
+                  "id": "health",
+                  "label": "Health insurance, employer share",
+                  "amount": 5500.0
+                },
+                {
+                  "id": "match",
+                  "label": "401(k) match",
+                  "amount": 2800.0
+                },
+                {
+                  "id": "commute",
+                  "label": "Commute, yearly cost to you",
+                  "amount": -1440.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Northgate Credit Union",
+              "subtitle": "Offer B · 2 days in the office",
+              "lines": [
+                {
+                  "id": "base",
+                  "label": "Base salary",
+                  "amount": 52000.0
+                },
+                {
+                  "id": "health",
+                  "label": "Health insurance, employer share",
+                  "amount": 7200.0
+                },
+                {
+                  "id": "match",
+                  "label": "401(k) match",
+                  "amount": 3120.0
+                },
+                {
+                  "id": "commute",
+                  "label": "Commute, yearly cost to you",
+                  "amount": -600.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Adding everything up and subtracting commute costs, which offer is worth more in money?",
+          "choices": [
+            "Cityline Bank",
+            "Northgate Credit Union"
+          ],
+          "answer": 0,
+          "explain": "Cityline: $62,860. Northgate: $61,720."
+        },
+        {
+          "id": "jo-two-offers-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Cityline Bank",
+              "subtitle": "Offer A · 5 days in the office",
+              "lines": [
+                {
+                  "id": "base",
+                  "label": "Base salary",
+                  "amount": 56000.0
+                },
+                {
+                  "id": "health",
+                  "label": "Health insurance, employer share",
+                  "amount": 5500.0
+                },
+                {
+                  "id": "match",
+                  "label": "401(k) match",
+                  "amount": 2800.0
+                },
+                {
+                  "id": "commute",
+                  "label": "Commute, yearly cost to you",
+                  "amount": -1440.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Northgate Credit Union",
+              "subtitle": "Offer B · 2 days in the office",
+              "lines": [
+                {
+                  "id": "base",
+                  "label": "Base salary",
+                  "amount": 52000.0
+                },
+                {
+                  "id": "health",
+                  "label": "Health insurance, employer share",
+                  "amount": 7200.0
+                },
+                {
+                  "id": "match",
+                  "label": "401(k) match",
+                  "amount": 3120.0
+                },
+                {
+                  "id": "commute",
+                  "label": "Commute, yearly cost to you",
+                  "amount": -600.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Cityline’s total, after commute costs?",
+          "answer": 62860,
+          "unit": "$",
+          "explain": "$56,000 + $5,500 + $2,800 − $1,440 = $62,860."
+        },
+        {
+          "id": "jo-two-offers-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Cityline Bank",
+              "subtitle": "Offer A · 5 days in the office",
+              "lines": [
+                {
+                  "id": "base",
+                  "label": "Base salary",
+                  "amount": 56000.0
+                },
+                {
+                  "id": "health",
+                  "label": "Health insurance, employer share",
+                  "amount": 5500.0
+                },
+                {
+                  "id": "match",
+                  "label": "401(k) match",
+                  "amount": 2800.0
+                },
+                {
+                  "id": "commute",
+                  "label": "Commute, yearly cost to you",
+                  "amount": -1440.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Northgate Credit Union",
+              "subtitle": "Offer B · 2 days in the office",
+              "lines": [
+                {
+                  "id": "base",
+                  "label": "Base salary",
+                  "amount": 52000.0
+                },
+                {
+                  "id": "health",
+                  "label": "Health insurance, employer share",
+                  "amount": 7200.0
+                },
+                {
+                  "id": "match",
+                  "label": "401(k) match",
+                  "amount": 3120.0
+                },
+                {
+                  "id": "commute",
+                  "label": "Commute, yearly cost to you",
+                  "amount": -600.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Northgate’s total?",
+          "answer": 61720,
+          "unit": "$",
+          "explain": "$52,000 + $7,200 + $3,120 − $600 = $61,720."
+        },
+        {
+          "id": "jo-two-offers-q4",
+          "type": "number",
+          "prompt": "How much more is Cityline worth per year?",
+          "answer": 1140,
+          "unit": "$",
+          "explain": "$62,860 − $61,720 = $1,140."
+        },
+        {
+          "id": "jo-two-offers-q5",
+          "type": "multiple_choice",
+          "prompt": "Cityline’s commute eats about 200 more hours a year. What does that tell you?",
+          "choices": [
+            "That time pays about $5.70 an hour, so Northgate may be the better deal",
+            "Commute time doesn’t matter",
+            "Cityline is clearly better"
+          ],
+          "answer": 0,
+          "explain": "$1,140 ÷ 200 hours = $5.70 an hour. Less than minimum wage for your time."
+        },
+        {
+          "id": "jo-two-offers-q6",
+          "type": "true_false",
+          "prompt": "The best offer isn’t always the one with the biggest number.",
+          "answer": true,
+          "explain": "Time, stress and growth count too."
+        }
+      ]
+    },
+    {
+      "id": "jo-negotiate",
+      "type": "lesson",
+      "title": "How to Ask for More",
+      "summary": "A polite, specific counteroffer usually helps and rarely hurts.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jo-negotiate-q1",
+          "type": "multiple_choice",
+          "context": "A [[counteroffer]] is your polite reply asking for more: a higher salary, a bonus, more time off.",
+          "prompt": "When do you make a counteroffer?",
+          "choices": [
+            "After you get the offer, before you accept",
+            "After your first year",
+            "In the first interview"
+          ],
+          "answer": 0,
+          "explain": "You have the most leverage between “here’s our offer” and “yes.”"
+        },
+        {
+          "id": "jo-negotiate-q2",
+          "type": "order",
+          "prompt": "Put a negotiation in order.",
+          "items": [
+            "Thank them and say you’re excited",
+            "Ask for a specific number, backed by research",
+            "Listen, and let them answer",
+            "Get the final offer in writing"
+          ],
+          "explain": "Warm, specific, patient, written."
+        },
+        {
+          "id": "jo-negotiate-q3",
+          "type": "number",
+          "prompt": "The offer is $52,000. You ask for 6% more. What number do you ask for?",
+          "answer": 55120,
+          "unit": "$",
+          "explain": "$52,000 × 1.06 = $55,120."
+        },
+        {
+          "id": "jo-negotiate-q4",
+          "type": "multiple_choice",
+          "prompt": "They say salary is fixed. What else can you ask about?",
+          "choices": [
+            "A signing bonus, more PTO or a later start date",
+            "Nothing",
+            "Their salary"
+          ],
+          "answer": 0,
+          "explain": "Lots of things bend when salary won’t."
+        },
+        {
+          "id": "jo-negotiate-q5",
+          "type": "true_false",
+          "prompt": "Politely negotiating often gets more, and rarely gets an offer taken back.",
+          "answer": true,
+          "explain": "Employers expect it."
+        },
+        {
+          "id": "jo-negotiate-q6",
+          "type": "number",
+          "prompt": "A starting salary $3,000 higher is worth how much over 5 years, even with no other changes?",
+          "answer": 15000,
+          "unit": "$",
+          "explain": "$3,000 × 5 = $15,000."
+        }
+      ]
+    },
+    {
+      "id": "jo-signing-bonus",
+      "type": "lesson",
+      "title": "Bonuses & Fine Print",
+      "summary": "Signing bonuses are nice. Read the strings attached.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jo-signing-bonus-q1",
+          "type": "multiple_choice",
+          "context": "A [[signing bonus]] is a one-time payment for accepting an offer. It often comes with a catch: leave too soon and you pay it back.",
+          "prompt": "What’s a signing bonus?",
+          "choices": [
+            "A one-time payment for saying yes",
+            "A raise every year",
+            "A tax refund"
+          ],
+          "answer": 0,
+          "explain": "Once, not every year."
+        },
+        {
+          "id": "jo-signing-bonus-q2",
+          "type": "number",
+          "prompt": "A $3,000 signing bonus is taxed at about 30% when it’s paid. What lands in your account?",
+          "answer": 2100,
+          "unit": "$",
+          "explain": "$3,000 × 0.70 = $2,100."
+        },
+        {
+          "id": "jo-signing-bonus-q3",
+          "type": "true_false",
+          "prompt": "A signing bonus is usually taxed like regular pay.",
+          "answer": true,
+          "explain": "It shows up on your W-2 with everything else."
+        },
+        {
+          "id": "jo-signing-bonus-q4",
+          "type": "multiple_choice",
+          "prompt": "The letter says you repay the bonus if you leave within 12 months. You might move in 8 months. What do you do?",
+          "choices": [
+            "Factor in that you might pay it back",
+            "Ignore the fine print",
+            "Spend it all on day one"
+          ],
+          "answer": 0,
+          "explain": "Treat it as a loan until month 12."
+        },
+        {
+          "id": "jo-signing-bonus-q5",
+          "type": "multiple_choice",
+          "prompt": "Bonus or higher salary: which helps more over time?",
+          "choices": [
+            "Higher salary: it repeats every year, and raises build on it",
+            "The bonus",
+            "Same"
+          ],
+          "answer": 0,
+          "explain": "A salary bump keeps paying."
+        },
+        {
+          "id": "jo-signing-bonus-q6",
+          "type": "number",
+          "prompt": "A $2,000 one-time bonus vs. a salary $2,000 higher, over 4 years. How much more does the salary bump pay?",
+          "answer": 6000,
+          "unit": "$",
+          "explain": "$8,000 − $2,000 = $6,000."
+        }
+      ]
+    },
+    {
+      "id": "jo-red-flags",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Job Scam Red Flags",
+      "summary": "Real jobs pay you. Fake ones make you pay.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jo-red-flags-q1",
+          "type": "spot",
+          "context": "Fake job offers are a common scam. Real employers don’t ask you to pay to start.",
+          "doc": {
+            "kind": "bill",
+            "title": "Remote Data Assistant",
+            "subtitle": "“Offer” sent by text message",
+            "lines": [
+              {
+                "id": "pay",
+                "label": "Hourly pay, data entry from home",
+                "amount": 32.0
+              },
+              {
+                "id": "training",
+                "label": "Paid training week",
+                "amount": 0.0
+              },
+              {
+                "id": "kit",
+                "label": "Starter equipment kit, pay by gift card",
+                "amount": -149.0
+              },
+              {
+                "id": "start",
+                "label": "Start: tomorrow, no interview needed",
+                "amount": 0.0
+              }
+            ]
+          },
+          "prompt": "Tap the biggest red flag.",
+          "answer": "kit",
+          "explain": "Real employers never make you buy equipment, least of all with gift cards."
+        },
+        {
+          "id": "jo-red-flags-q2",
+          "type": "multiple_choice",
+          "prompt": "They mail you a $2,400 check and ask you to deposit it and send back $1,900 for “equipment.” What happens next?",
+          "choices": [
+            "The check bounces days later, and your $1,900 is gone",
+            "You keep $500",
+            "Nothing"
+          ],
+          "answer": 0,
+          "explain": "Fake checks take days to bounce. Your transfer is instant."
+        },
+        {
+          "id": "jo-red-flags-q3",
+          "type": "sort",
+          "prompt": "Red flag or normal?",
+          "buckets": [
+            "Red flag",
+            "Normal"
+          ],
+          "items": [
+            [
+              "An offer with no interview at all",
+              0
+            ],
+            [
+              "Asked to pay for a kit with gift cards",
+              0
+            ],
+            [
+              "A background check before you start",
+              1
+            ],
+            [
+              "Asked for your bank login",
+              0
+            ],
+            [
+              "An offer letter with salary and start date",
+              1
+            ],
+            [
+              "A video interview with the team",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "jo-red-flags-q4",
+          "type": "true_false",
+          "prompt": "Giving your Social Security number on official new-hire paperwork is normal.",
+          "answer": true,
+          "explain": "After you’ve accepted a real job, tax and work forms need it. Before an interview? No."
+        },
+        {
+          "id": "jo-red-flags-q5",
+          "type": "multiple_choice",
+          "prompt": "How do you check a company is real?",
+          "choices": [
+            "Find its official website and phone number yourself",
+            "Call the number in the suspicious text",
+            "You can’t"
+          ],
+          "answer": 0,
+          "explain": "Never trust contact details from the message itself."
+        },
+        {
+          "id": "jo-red-flags-q6",
+          "type": "multiple_choice",
+          "prompt": "You think you’ve hit a job scam. Where do you report it?",
+          "choices": [
+            "The FTC, at ReportFraud.ftc.gov",
+            "Nowhere",
+            "Reply to the scammer"
+          ],
+          "answer": 0,
+          "explain": "Reports help warn others."
+        }
+      ]
+    },
+    {
+      "id": "jo-nadia",
+      "type": "lesson",
+      "format": "story",
+      "title": "Nadia’s Negotiation",
+      "summary": "Research, one polite email, and a better offer.",
+      "xp": 10,
+      "story": {
+        "title": "One email, $5,500",
+        "character": "Nadia, 25, medical billing specialist",
+        "body": "Nadia got an offer for **$50,000**. Before replying, she looked up similar jobs in her city: most paid **$52,000–$60,000**.\n\nShe thanked them, said she was excited, and asked for **$56,000**, pointing to her research and her two years of experience.\n\nThey came back with **$54,000** plus a **$1,500** signing bonus."
+      },
+      "steps": [
+        {
+          "id": "jo-nadia-q1",
+          "type": "number",
+          "prompt": "How much more base salary did Nadia get than the first offer?",
+          "answer": 4000,
+          "unit": "$",
+          "explain": "$54,000 − $50,000 = $4,000."
+        },
+        {
+          "id": "jo-nadia-q2",
+          "type": "number",
+          "prompt": "In her first year, counting the bonus, how much more did she get?",
+          "answer": 5500,
+          "unit": "$",
+          "explain": "$4,000 + $1,500 = $5,500."
+        },
+        {
+          "id": "jo-nadia-q3",
+          "type": "number",
+          "prompt": "Over 3 years, ignoring raises, how much more base salary is that?",
+          "answer": 12000,
+          "unit": "$",
+          "explain": "$4,000 × 3 = $12,000."
+        },
+        {
+          "id": "jo-nadia-q4",
+          "type": "multiple_choice",
+          "prompt": "Why did Nadia ask for $56,000 instead of $54,000?",
+          "choices": [
+            "Asking a bit higher leaves room to meet in the middle",
+            "To be rude",
+            "At random"
+          ],
+          "answer": 0,
+          "explain": "They met her in the middle, right where she hoped."
+        },
+        {
+          "id": "jo-nadia-q5",
+          "type": "true_false",
+          "prompt": "Nadia’s research made her ask easier to justify.",
+          "answer": true,
+          "explain": "Numbers beat feelings in a negotiation."
+        },
+        {
+          "id": "jo-nadia-q6",
+          "type": "multiple_choice",
+          "prompt": "What should Nadia do before accepting?",
+          "choices": [
+            "Get the new salary and bonus in writing",
+            "Just say yes on the phone",
+            "Ask for $70,000"
+          ],
+          "answer": 0,
+          "explain": "Written, then signed."
+        }
+      ]
+    },
+    {
+      "id": "jo-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "jo-trial",
+      "type": "boss",
+      "title": "Den Trial: Job Offers",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "jo-trial-q1",
+          "type": "number",
+          "prompt": "Base $45,000, bonus $1,000, 401(k) match $1,350, health insurance employer share $5,000. Total compensation?",
+          "answer": 52350,
+          "unit": "$",
+          "explain": "$45,000 + $1,000 + $1,350 + $5,000 = $52,350."
+        },
+        {
+          "id": "jo-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "You like an offer but want more money. When do you ask?",
+          "choices": [
+            "Now, before you accept",
+            "After a year on the job",
+            "Never"
+          ],
+          "answer": 0,
+          "explain": "Between the offer and your yes."
+        },
+        {
+          "id": "jo-trial-q3",
+          "type": "true_false",
+          "prompt": "Real employers may ask you to buy equipment with gift cards.",
+          "answer": false,
+          "explain": "That’s a scam, every time."
+        },
+        {
+          "id": "jo-trial-q4",
+          "type": "number",
+          "prompt": "The offer is $60,000 and you ask for 5% more. What number do you ask for?",
+          "answer": 63000,
+          "unit": "$",
+          "explain": "$60,000 × 1.05 = $63,000."
+        }
+      ]
+    }
+  ]
+}

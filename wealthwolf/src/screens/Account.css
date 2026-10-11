@@ -238,3 +238,11 @@
     padding-top: var(--space-8);
   }
 }
+
+.acct__google-off {
+  margin-top: var(--space-2);
+}
+
+.acct__form--spaced {
+  margin-top: var(--space-6);
+}

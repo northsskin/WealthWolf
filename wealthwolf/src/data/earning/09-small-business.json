@@ -1,0 +1,994 @@
+{
+  "id": "small-business",
+  "section": "earning",
+  "order": 9,
+  "title": "Starting a Small Business",
+  "description": "Test an idea, count the costs, and set the business up properly.",
+  "wolfLine": "Every pack started with one wolf and a good idea.",
+  "terms": {
+    "startup-costs": {
+      "term": "Startup costs",
+      "definition": "What you spend to get a business going, before your first sale.",
+      "example": "A $150 stall permit and a $220 canopy."
+    },
+    "revenue": {
+      "term": "Revenue",
+      "definition": "All the money customers pay you, before any costs come out.",
+      "example": "60 loaves at $8 = $480 of revenue."
+    },
+    "profit": {
+      "term": "Profit",
+      "definition": "What’s left of revenue after you pay your costs.",
+      "example": "$480 revenue − $220 costs = $260 profit."
+    },
+    "sole-proprietorship": {
+      "term": "Sole proprietorship",
+      "definition": "A business owned by one person with no legal separation from them. You’re one by default when you start selling on your own.",
+      "example": "Selling bread at a market under your own name."
+    },
+    "llc": {
+      "term": "LLC",
+      "definition": "A limited liability company: a business registered with your state that keeps business debts separate from your personal money.",
+      "example": "Imani’s Bakery LLC, so a business lawsuit can’t take her savings."
+    },
+    "ein": {
+      "term": "EIN",
+      "definition": "Employer Identification Number: a free business tax ID from the IRS, like a Social Security number for your business.",
+      "example": "Needed to open some business bank accounts or hire employees."
+    }
+  },
+  "lessons": [
+    {
+      "id": "bz-idea",
+      "type": "lesson",
+      "title": "From Idea to Business",
+      "summary": "A business solves a problem people will pay for.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bz-idea-q1",
+          "type": "info",
+          "title": "A problem people pay to solve",
+          "body": "Before spending a dollar, check three things: who has this problem, will they pay to fix it, and can you deliver it for less than they’ll pay?"
+        },
+        {
+          "id": "bz-idea-q2",
+          "type": "multiple_choice",
+          "prompt": "Which is the strongest business idea?",
+          "choices": [
+            "Something people already pay for, that you can do better or cheaper",
+            "Something only you would want",
+            "A cool name with no customers yet"
+          ],
+          "answer": 0,
+          "explain": "Proven demand beats a clever idea."
+        },
+        {
+          "id": "bz-idea-q3",
+          "type": "multiple_choice",
+          "prompt": "What’s the cheapest way to test an idea?",
+          "choices": [
+            "Sell a small batch to real customers",
+            "Rent a shop first",
+            "Print 5,000 business cards"
+          ],
+          "answer": 0,
+          "explain": "Real sales are the only real proof."
+        },
+        {
+          "id": "bz-idea-q4",
+          "type": "true_false",
+          "prompt": "Talking to potential customers before you build anything saves money.",
+          "answer": true,
+          "explain": "They’ll tell you what they’d actually buy."
+        },
+        {
+          "id": "bz-idea-q5",
+          "type": "order",
+          "prompt": "Put these in order.",
+          "items": [
+            "Spot a problem people pay to solve",
+            "Ask potential customers",
+            "Test with a small batch",
+            "Grow what works"
+          ],
+          "explain": "Problem, people, proof, growth."
+        },
+        {
+          "id": "bz-idea-q6",
+          "type": "multiple_choice",
+          "prompt": "Friends say they’d “totally buy it.” What’s better proof?",
+          "choices": [
+            "Someone actually paying",
+            "More compliments",
+            "Likes on a post"
+          ],
+          "answer": 0,
+          "explain": "Compliments are free. Money isn’t."
+        }
+      ]
+    },
+    {
+      "id": "bz-startup-costs",
+      "type": "lesson",
+      "format": "document",
+      "title": "Startup Costs",
+      "summary": "What it takes to make the first sale.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bz-startup-costs-q1",
+          "type": "multiple_choice",
+          "context": "[[Startup costs]] are what you spend to get a business going, before your first sale.",
+          "doc": {
+            "kind": "bill",
+            "title": "Imani’s bakery stall",
+            "subtitle": "Startup costs",
+            "lines": [
+              {
+                "id": "permit",
+                "label": "Market stall permit",
+                "amount": 150.0
+              },
+              {
+                "id": "canopy",
+                "label": "Folding table and canopy",
+                "amount": 220.0
+              },
+              {
+                "id": "supplies",
+                "label": "Baking supplies, first batch",
+                "amount": 180.0
+              },
+              {
+                "id": "pack",
+                "label": "Packaging and labels",
+                "amount": 95.0
+              },
+              {
+                "id": "reader",
+                "label": "Card reader",
+                "amount": 49.0
+              },
+              {
+                "id": "cert",
+                "label": "Food handler certificate",
+                "amount": 25.0
+              }
+            ]
+          },
+          "prompt": "Which of these is a startup cost?",
+          "choices": [
+            "The stall permit",
+            "A customer’s payment",
+            "Profit"
+          ],
+          "answer": 0,
+          "explain": "Spent before the first sale."
+        },
+        {
+          "id": "bz-startup-costs-q2",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Imani’s bakery stall",
+            "subtitle": "Startup costs",
+            "lines": [
+              {
+                "id": "permit",
+                "label": "Market stall permit",
+                "amount": 150.0
+              },
+              {
+                "id": "canopy",
+                "label": "Folding table and canopy",
+                "amount": 220.0
+              },
+              {
+                "id": "supplies",
+                "label": "Baking supplies, first batch",
+                "amount": 180.0
+              },
+              {
+                "id": "pack",
+                "label": "Packaging and labels",
+                "amount": 95.0
+              },
+              {
+                "id": "reader",
+                "label": "Card reader",
+                "amount": 49.0
+              },
+              {
+                "id": "cert",
+                "label": "Food handler certificate",
+                "amount": 25.0
+              }
+            ]
+          },
+          "prompt": "Add up the startup costs.",
+          "answer": 719,
+          "unit": "$",
+          "explain": "$150 + $220 + $180 + $95 + $49 + $25 = $719."
+        },
+        {
+          "id": "bz-startup-costs-q3",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Imani’s bakery stall",
+            "subtitle": "Startup costs",
+            "lines": [
+              {
+                "id": "permit",
+                "label": "Market stall permit",
+                "amount": 150.0
+              },
+              {
+                "id": "canopy",
+                "label": "Folding table and canopy",
+                "amount": 220.0
+              },
+              {
+                "id": "supplies",
+                "label": "Baking supplies, first batch",
+                "amount": 180.0
+              },
+              {
+                "id": "pack",
+                "label": "Packaging and labels",
+                "amount": 95.0
+              },
+              {
+                "id": "reader",
+                "label": "Card reader",
+                "amount": 49.0
+              },
+              {
+                "id": "cert",
+                "label": "Food handler certificate",
+                "amount": 25.0
+              }
+            ]
+          },
+          "prompt": "Imani set aside $1,000 for the business. How much is left as a cushion?",
+          "answer": 281,
+          "unit": "$",
+          "explain": "$1,000 − $719 = $281."
+        },
+        {
+          "id": "bz-startup-costs-q4",
+          "type": "multiple_choice",
+          "doc": {
+            "kind": "bill",
+            "title": "Imani’s bakery stall",
+            "subtitle": "Startup costs",
+            "lines": [
+              {
+                "id": "permit",
+                "label": "Market stall permit",
+                "amount": 150.0
+              },
+              {
+                "id": "canopy",
+                "label": "Folding table and canopy",
+                "amount": 220.0
+              },
+              {
+                "id": "supplies",
+                "label": "Baking supplies, first batch",
+                "amount": 180.0
+              },
+              {
+                "id": "pack",
+                "label": "Packaging and labels",
+                "amount": 95.0
+              },
+              {
+                "id": "reader",
+                "label": "Card reader",
+                "amount": 49.0
+              },
+              {
+                "id": "cert",
+                "label": "Food handler certificate",
+                "amount": 25.0
+              }
+            ]
+          },
+          "prompt": "Which cost will she pay again for every market?",
+          "choices": [
+            "Baking supplies",
+            "The canopy",
+            "The card reader"
+          ],
+          "answer": 0,
+          "explain": "The canopy and reader last. Flour doesn’t."
+        },
+        {
+          "id": "bz-startup-costs-q5",
+          "type": "true_false",
+          "prompt": "Buying used equipment can cut startup costs a lot.",
+          "answer": true,
+          "explain": "A secondhand canopy works the same."
+        },
+        {
+          "id": "bz-startup-costs-q6",
+          "type": "multiple_choice",
+          "prompt": "Should Imani use her emergency fund to start?",
+          "choices": [
+            "No: use money set aside for the business",
+            "Yes, all of it",
+            "Borrow at 30%"
+          ],
+          "answer": 0,
+          "explain": "The emergency fund is for emergencies. A business is a choice."
+        }
+      ]
+    },
+    {
+      "id": "bz-revenue-profit",
+      "type": "lesson",
+      "title": "Revenue vs. Profit",
+      "summary": "Sales feel great. Profit pays you.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bz-revenue-profit-q1",
+          "type": "multiple_choice",
+          "context": "[[Revenue]] is all the money customers pay you. [[Profit]] is what’s left after your costs.",
+          "prompt": "Which tells you whether the business is working?",
+          "choices": [
+            "Profit",
+            "Revenue"
+          ],
+          "answer": 0,
+          "explain": "Revenue is busy. Profit is working."
+        },
+        {
+          "id": "bz-revenue-profit-q2",
+          "type": "number",
+          "prompt": "You sell 60 loaves at $8 each. What’s the revenue?",
+          "answer": 480,
+          "unit": "$",
+          "explain": "60 × $8 = $480."
+        },
+        {
+          "id": "bz-revenue-profit-q3",
+          "type": "number",
+          "prompt": "Ingredients and packaging cost $3 a loaf, and the stall fee is $40. What are the total costs?",
+          "answer": 220,
+          "unit": "$",
+          "explain": "60 × $3 + $40 = $220."
+        },
+        {
+          "id": "bz-revenue-profit-q4",
+          "type": "number",
+          "prompt": "What’s the profit?",
+          "answer": 260,
+          "unit": "$",
+          "explain": "$480 − $220 = $260."
+        },
+        {
+          "id": "bz-revenue-profit-q5",
+          "type": "true_false",
+          "prompt": "A business can have big revenue and still lose money.",
+          "answer": true,
+          "explain": "If costs are bigger than revenue, more sales can mean bigger losses."
+        },
+        {
+          "id": "bz-revenue-profit-q6",
+          "type": "number",
+          "prompt": "That $260 of profit took 10 hours of baking and selling. What’s that per hour?",
+          "answer": 26,
+          "unit": "$",
+          "explain": "$260 ÷ 10 = $26."
+        }
+      ]
+    },
+    {
+      "id": "bz-structures",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Sole Proprietor or LLC?",
+      "summary": "How the law sees you and your business.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bz-structures-q1",
+          "type": "multiple_choice",
+          "context": "If you start selling on your own, you’re a [[sole proprietorship]] by default: legally, you and the business are the same.",
+          "prompt": "What’s the risk of being a sole proprietorship?",
+          "choices": [
+            "Business debts can come after your personal money",
+            "None",
+            "You can’t sell anything"
+          ],
+          "answer": 0,
+          "explain": "You and the business are the same in the eyes of the law."
+        },
+        {
+          "id": "bz-structures-q2",
+          "type": "multiple_choice",
+          "context": "An [[LLC]] (limited liability company) is a business you register with your state. It keeps business debts separate from your personal money, for a filing fee.",
+          "prompt": "What’s the main reason people form an LLC?",
+          "choices": [
+            "To protect personal money from business debts and lawsuits",
+            "To avoid all taxes",
+            "Because it’s free"
+          ],
+          "answer": 0,
+          "explain": "A wall between the business and your savings."
+        },
+        {
+          "id": "bz-structures-q3",
+          "type": "sort",
+          "prompt": "Sole proprietorship or LLC?",
+          "buckets": [
+            "Sole proprietorship",
+            "LLC"
+          ],
+          "items": [
+            [
+              "You’re one automatically when you start selling",
+              0
+            ],
+            [
+              "You file paperwork with your state",
+              1
+            ],
+            [
+              "No legal separation from your personal money",
+              0
+            ],
+            [
+              "Your personal savings are shielded from business debts",
+              1
+            ],
+            [
+              "Usually has a yearly state fee",
+              1
+            ],
+            [
+              "The simplest way to test a small idea",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "bz-structures-q4",
+          "type": "true_false",
+          "prompt": "Forming an LLC means you pay no taxes.",
+          "answer": false,
+          "explain": "An LLC changes your legal protection, not whether you pay tax."
+        },
+        {
+          "id": "bz-structures-q5",
+          "type": "multiple_choice",
+          "prompt": "Testing a $500 side business, most people start as…",
+          "choices": [
+            "a sole proprietor, then form an LLC as it grows",
+            "a big corporation",
+            "a nonprofit"
+          ],
+          "answer": 0,
+          "explain": "Start simple, protect as you grow."
+        },
+        {
+          "id": "bz-structures-q6",
+          "type": "multiple_choice",
+          "prompt": "Who should you ask about structure as you grow?",
+          "choices": [
+            "An accountant, or free advisors through the SBA and SCORE",
+            "A random forum",
+            "Nobody"
+          ],
+          "answer": 0,
+          "explain": "Free, expert help exists."
+        }
+      ]
+    },
+    {
+      "id": "bz-separate",
+      "type": "lesson",
+      "title": "Keep Business Money Separate",
+      "summary": "One account for the business, one for you.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bz-separate-q1",
+          "type": "multiple_choice",
+          "prompt": "Why open a separate business bank account?",
+          "choices": [
+            "Clean records, easier taxes and a clear view of profit",
+            "Banks require it for everyone",
+            "No real reason"
+          ],
+          "answer": 0,
+          "explain": "Mixed money hides whether you’re making any."
+        },
+        {
+          "id": "bz-separate-q2",
+          "type": "multiple_choice",
+          "context": "An [[EIN]] is a free business tax ID from the IRS, like a Social Security number for your business.",
+          "prompt": "What does an EIN cost from the IRS?",
+          "choices": [
+            "Nothing",
+            "$250",
+            "$1,000"
+          ],
+          "answer": 0,
+          "explain": "It’s free on IRS.gov. Sites that charge are middlemen."
+        },
+        {
+          "id": "bz-separate-q3",
+          "type": "true_false",
+          "prompt": "Mixing business and personal spending makes it hard to know if you’re profitable.",
+          "answer": true,
+          "explain": "You can’t measure what you can’t separate."
+        },
+        {
+          "id": "bz-separate-q4",
+          "type": "sort",
+          "prompt": "Business account or personal?",
+          "buckets": [
+            "Business",
+            "Personal"
+          ],
+          "items": [
+            [
+              "Flour for the bakery",
+              0
+            ],
+            [
+              "Your own groceries",
+              1
+            ],
+            [
+              "The stall permit",
+              0
+            ],
+            [
+              "Movie tickets",
+              1
+            ],
+            [
+              "Card reader fees",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "bz-separate-q5",
+          "type": "multiple_choice",
+          "prompt": "You need business money for yourself. What’s the proper way?",
+          "choices": [
+            "Transfer a set amount to your personal account and record it",
+            "Use the business card at dinner",
+            "Take cash from the till and not note it"
+          ],
+          "answer": 0,
+          "explain": "Clean, recorded, on purpose."
+        },
+        {
+          "id": "bz-separate-q6",
+          "type": "order",
+          "prompt": "Setting up business money. Put it in order.",
+          "items": [
+            "Get an EIN if you need one",
+            "Open a business account",
+            "Run all sales and costs through it",
+            "Pay yourself by transfer"
+          ],
+          "explain": "ID, account, discipline, paycheck."
+        }
+      ]
+    },
+    {
+      "id": "bz-test",
+      "type": "lesson",
+      "format": "call",
+      "title": "Test Before You Quit",
+      "summary": "Find out if people buy, as cheaply as possible.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bz-test-q1",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Plan A: open a shop",
+              "subtitle": "Quit and go all in",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Shop rent, per month",
+                  "amount": 1800.0
+                },
+                {
+                  "id": "build",
+                  "label": "Build-out and equipment, once",
+                  "amount": 15000.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Plan B: market stall",
+              "subtitle": "Keep your job, sell on Saturdays",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Stall fee, per market",
+                  "amount": 40.0
+                },
+                {
+                  "id": "setup",
+                  "label": "Setup costs, once",
+                  "amount": 719.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Which risks less money to learn whether people will buy?",
+          "choices": [
+            "Plan B: the market stall",
+            "Plan A: the shop"
+          ],
+          "answer": 0,
+          "explain": "A $719 experiment vs. a $36,600 one."
+        },
+        {
+          "id": "bz-test-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Plan A: open a shop",
+              "subtitle": "Quit and go all in",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Shop rent, per month",
+                  "amount": 1800.0
+                },
+                {
+                  "id": "build",
+                  "label": "Build-out and equipment, once",
+                  "amount": 15000.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Plan B: market stall",
+              "subtitle": "Keep your job, sell on Saturdays",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Stall fee, per market",
+                  "amount": 40.0
+                },
+                {
+                  "id": "setup",
+                  "label": "Setup costs, once",
+                  "amount": 719.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What’s Plan A’s rent for the first year?",
+          "answer": 21600,
+          "unit": "$",
+          "explain": "$1,800 × 12 = $21,600."
+        },
+        {
+          "id": "bz-test-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Plan A: open a shop",
+              "subtitle": "Quit and go all in",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Shop rent, per month",
+                  "amount": 1800.0
+                },
+                {
+                  "id": "build",
+                  "label": "Build-out and equipment, once",
+                  "amount": 15000.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Plan B: market stall",
+              "subtitle": "Keep your job, sell on Saturdays",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Stall fee, per market",
+                  "amount": 40.0
+                },
+                {
+                  "id": "setup",
+                  "label": "Setup costs, once",
+                  "amount": 719.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Plan A’s first-year cost, including the $15,000 build-out?",
+          "answer": 36600,
+          "unit": "$",
+          "explain": "$21,600 + $15,000 = $36,600."
+        },
+        {
+          "id": "bz-test-q4",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Plan A: open a shop",
+              "subtitle": "Quit and go all in",
+              "lines": [
+                {
+                  "id": "rent",
+                  "label": "Shop rent, per month",
+                  "amount": 1800.0
+                },
+                {
+                  "id": "build",
+                  "label": "Build-out and equipment, once",
+                  "amount": 15000.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Plan B: market stall",
+              "subtitle": "Keep your job, sell on Saturdays",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Stall fee, per market",
+                  "amount": 40.0
+                },
+                {
+                  "id": "setup",
+                  "label": "Setup costs, once",
+                  "amount": 719.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Plan B: 50 markets at $40, plus $719 of setup. Cost for the year?",
+          "answer": 2719,
+          "unit": "$",
+          "explain": "50 × $40 + $719 = $2,719."
+        },
+        {
+          "id": "bz-test-q5",
+          "type": "multiple_choice",
+          "prompt": "When does a shop start to make sense?",
+          "choices": [
+            "When the stall keeps selling out and you know your numbers",
+            "Day one",
+            "Never"
+          ],
+          "answer": 0,
+          "explain": "Let demand pull you into bigger costs."
+        },
+        {
+          "id": "bz-test-q6",
+          "type": "true_false",
+          "prompt": "Keeping your job while testing a business lowers the risk a lot.",
+          "answer": true,
+          "explain": "Your rent is covered while you learn."
+        }
+      ]
+    },
+    {
+      "id": "bz-funding",
+      "type": "lesson",
+      "title": "Paying to Get Started",
+      "summary": "Savings, partners, loans and grants.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bz-funding-q1",
+          "type": "multiple_choice",
+          "prompt": "What’s the safest way to fund a small start?",
+          "choices": [
+            "Savings set aside for the business",
+            "Your emergency fund",
+            "Credit cards at 25%"
+          ],
+          "answer": 0,
+          "explain": "Money you can afford to risk."
+        },
+        {
+          "id": "bz-funding-q2",
+          "type": "multiple_choice",
+          "prompt": "A friend offers $5,000 for “part of the business.” What do you need?",
+          "choices": [
+            "A written agreement on what they own and get back",
+            "A handshake",
+            "Nothing"
+          ],
+          "answer": 0,
+          "explain": "Friendships survive clear paperwork better than vague promises."
+        },
+        {
+          "id": "bz-funding-q3",
+          "type": "number",
+          "prompt": "A $10,000 loan at 12% a year. Interest in the first year if you don’t repay any of it?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$10,000 × 0.12 = $1,200."
+        },
+        {
+          "id": "bz-funding-q4",
+          "type": "true_false",
+          "prompt": "Many small businesses start with very little money and grow from their own profits.",
+          "answer": true,
+          "explain": "Slow and self-funded is a real path."
+        },
+        {
+          "id": "bz-funding-q5",
+          "type": "multiple_choice",
+          "prompt": "Business grants are…",
+          "choices": [
+            "money you don’t repay, but competitive and with rules",
+            "loans",
+            "taxes"
+          ],
+          "answer": 0,
+          "explain": "Worth applying for, not worth counting on."
+        },
+        {
+          "id": "bz-funding-q6",
+          "type": "multiple_choice",
+          "prompt": "Before borrowing for a business, you should know…",
+          "choices": [
+            "how the business will make the payments",
+            "the bank’s logo",
+            "nothing"
+          ],
+          "answer": 0,
+          "explain": "Debt needs a plan to pay it back."
+        }
+      ]
+    },
+    {
+      "id": "bz-imani",
+      "type": "lesson",
+      "format": "story",
+      "title": "Imani’s Bakery Stall",
+      "summary": "One month of a real small business, by the numbers.",
+      "xp": 10,
+      "story": {
+        "title": "Saturday bread",
+        "character": "Imani, 32, dental office manager",
+        "body": "Imani works weekdays at a dental office and sells bread at a Saturday market. In her first month she went to **4** markets.\n\nShe sold **210** loaves at **$8** each. Ingredients and packaging cost **$3** a loaf, and the stall costs **$40** per market. Baking and selling took her **36** hours."
+      },
+      "steps": [
+        {
+          "id": "bz-imani-q1",
+          "type": "number",
+          "prompt": "What was her revenue for the month?",
+          "answer": 1680,
+          "unit": "$",
+          "explain": "210 × $8 = $1,680."
+        },
+        {
+          "id": "bz-imani-q2",
+          "type": "number",
+          "prompt": "What did ingredients and packaging cost?",
+          "answer": 630,
+          "unit": "$",
+          "explain": "210 × $3 = $630."
+        },
+        {
+          "id": "bz-imani-q3",
+          "type": "number",
+          "prompt": "What did the stall fees cost?",
+          "answer": 160,
+          "unit": "$",
+          "explain": "4 × $40 = $160."
+        },
+        {
+          "id": "bz-imani-q4",
+          "type": "number",
+          "prompt": "What was her profit?",
+          "answer": 890,
+          "unit": "$",
+          "explain": "$1,680 − $630 − $160 = $890."
+        },
+        {
+          "id": "bz-imani-q5",
+          "type": "number",
+          "prompt": "What’s her profit per hour? Round to the cent.",
+          "answer": 24.72,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$890 ÷ 36 = $24.72."
+        },
+        {
+          "id": "bz-imani-q6",
+          "type": "multiple_choice",
+          "prompt": "What should Imani do with the profit first?",
+          "choices": [
+            "Set aside about 25% for taxes",
+            "Spend it all",
+            "Quit her job"
+          ],
+          "answer": 0,
+          "explain": "Business profit is taxable income."
+        }
+      ]
+    },
+    {
+      "id": "bz-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "bz-trial",
+      "type": "boss",
+      "title": "Den Trial: Starting a Business",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "bz-trial-q1",
+          "type": "number",
+          "prompt": "Revenue $900, costs $540. What’s the profit?",
+          "answer": 360,
+          "unit": "$",
+          "explain": "$900 − $540 = $360."
+        },
+        {
+          "id": "bz-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "What’s the main reason to form an LLC?",
+          "choices": [
+            "Protect personal money from business debts",
+            "Avoid all taxes",
+            "It’s required for every business"
+          ],
+          "answer": 0,
+          "explain": "Liability protection."
+        },
+        {
+          "id": "bz-trial-q3",
+          "type": "true_false",
+          "prompt": "An EIN from the IRS is free.",
+          "answer": true,
+          "explain": "Don’t pay a website for it."
+        },
+        {
+          "id": "bz-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "What’s the cheapest way to test a business idea?",
+          "choices": [
+            "Sell a small batch to real customers",
+            "Sign a shop lease",
+            "Hire staff first"
+          ],
+          "answer": 0,
+          "explain": "Proof before spending."
+        }
+      ]
+    }
+  ]
+}

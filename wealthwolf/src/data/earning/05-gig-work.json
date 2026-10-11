@@ -1,0 +1,1116 @@
+{
+  "id": "gig-work",
+  "section": "earning",
+  "order": 5,
+  "title": "Gig Work & Side Hustles",
+  "description": "App gigs and side hustles: what they really pay after costs and taxes.",
+  "wolfLine": "Count every hour, including the ones you spend waiting.",
+  "terms": {
+    "gig-work": {
+      "term": "Gig work",
+      "definition": "Short jobs, one at a time, often through an app: delivery, rideshare, task apps.",
+      "example": "Delivering food through an app on weekends."
+    },
+    "independent-contractor": {
+      "term": "Independent contractor",
+      "definition": "Someone paid for work as their own small business, not as an employee. No employer benefits, and no taxes taken out.",
+      "example": "A rideshare driver who sets their own hours and pays for their own gas."
+    },
+    "form-1099": {
+      "term": "Form 1099",
+      "definition": "A tax form showing what a business paid you as a contractor. Nothing was taken out for taxes.",
+      "example": "A delivery app sends you a 1099 showing $9,400 paid last year."
+    },
+    "side-hustle": {
+      "term": "Side hustle",
+      "definition": "Paid work you do alongside your main job.",
+      "example": "Tutoring math two evenings a week."
+    }
+  },
+  "lessons": [
+    {
+      "id": "gw-what",
+      "type": "lesson",
+      "format": "sort",
+      "title": "What Gig Work Is",
+      "summary": "Freedom to choose your hours, and everything that comes with it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gw-what-q1",
+          "type": "multiple_choice",
+          "context": "[[Gig work]] is short jobs, one at a time, often through an app: delivery, rideshare, task apps.",
+          "prompt": "Which is gig work?",
+          "choices": [
+            "Delivering food through an app",
+            "A salaried office job",
+            "A pension"
+          ],
+          "answer": 0,
+          "explain": "One short job at a time, through an app."
+        },
+        {
+          "id": "gw-what-q2",
+          "type": "multiple_choice",
+          "context": "Gig workers are usually [[independent contractors|independent-contractor]], not employees. Nobody sets your hours, but nobody gives you benefits either.",
+          "prompt": "As an independent contractor, who pays for your health insurance?",
+          "choices": [
+            "You do",
+            "The app",
+            "The government, always"
+          ],
+          "answer": 0,
+          "explain": "No employer means no employer benefits."
+        },
+        {
+          "id": "gw-what-q3",
+          "type": "sort",
+          "prompt": "Employee or independent contractor?",
+          "buckets": [
+            "Employee",
+            "Contractor"
+          ],
+          "items": [
+            [
+              "Gets a W-2 each January",
+              0
+            ],
+            [
+              "Sets their own hours on a delivery app",
+              1
+            ],
+            [
+              "Gets a 401(k) match",
+              0
+            ],
+            [
+              "Pays both halves of Social Security and Medicare",
+              1
+            ],
+            [
+              "Gets overtime past 40 hours",
+              0
+            ],
+            [
+              "Pays for their own gas",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "gw-what-q4",
+          "type": "true_false",
+          "prompt": "Gig apps usually take taxes out of your pay.",
+          "answer": false,
+          "explain": "Contractors get paid in full and owe the taxes themselves. More on that soon."
+        },
+        {
+          "id": "gw-what-q5",
+          "type": "multiple_choice",
+          "prompt": "What’s the biggest upside of gig work?",
+          "choices": [
+            "Flexibility: work when you want",
+            "Guaranteed income",
+            "Free health insurance"
+          ],
+          "answer": 0,
+          "explain": "You’re the boss of your schedule."
+        },
+        {
+          "id": "gw-what-q6",
+          "type": "multiple_choice",
+          "prompt": "What’s the biggest downside?",
+          "choices": [
+            "Income goes up and down, with no benefits",
+            "Too many benefits",
+            "Fixed hours"
+          ],
+          "answer": 0,
+          "explain": "Freedom comes with uncertainty."
+        }
+      ]
+    },
+    {
+      "id": "gw-real-pay",
+      "type": "lesson",
+      "title": "Your Real Hourly Pay",
+      "summary": "What the app shows isn’t what you earn.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gw-real-pay-q1",
+          "type": "number",
+          "context": "Apps show what you earned per job. Your real hourly pay is earnings minus costs, divided by every hour you were working, including waiting.",
+          "prompt": "You earned $160 in 8 hours of driving. What’s that per hour, before costs?",
+          "answer": 20,
+          "unit": "$",
+          "explain": "$160 ÷ 8 = $20."
+        },
+        {
+          "id": "gw-real-pay-q2",
+          "type": "number",
+          "prompt": "Gas and wear on your car cost $48. What’s left?",
+          "answer": 112,
+          "unit": "$",
+          "explain": "$160 − $48 = $112."
+        },
+        {
+          "id": "gw-real-pay-q3",
+          "type": "number",
+          "prompt": "So what’s your real pay per hour over those 8 hours?",
+          "answer": 14,
+          "unit": "$",
+          "explain": "$112 ÷ 8 = $14."
+        },
+        {
+          "id": "gw-real-pay-q4",
+          "type": "number",
+          "prompt": "You also spent 2 unpaid hours waiting for orders. What’s your real pay per hour over all 10 hours?",
+          "answer": 11.2,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$112 ÷ 10 = $11.20."
+        },
+        {
+          "id": "gw-real-pay-q5",
+          "type": "multiple_choice",
+          "prompt": "What matters most when choosing a gig?",
+          "choices": [
+            "Pay per hour after costs",
+            "Pay per order",
+            "How fun the app looks"
+          ],
+          "answer": 0,
+          "explain": "The number that pays your rent."
+        },
+        {
+          "id": "gw-real-pay-q6",
+          "type": "true_false",
+          "prompt": "Earning $25 per order always beats $18 an hour.",
+          "answer": false,
+          "explain": "Not if each order takes two hours of driving."
+        }
+      ]
+    },
+    {
+      "id": "gw-car-costs",
+      "type": "lesson",
+      "format": "document",
+      "title": "What Driving Really Costs",
+      "summary": "One week of a driver’s numbers, the honest way.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gw-car-costs-q1",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Your driving week",
+            "subtitle": "Self-made summary · Mon–Sun",
+            "meta": [
+              [
+                "Hours online",
+                "26"
+              ],
+              [
+                "Miles driven",
+                "310"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "earn",
+                "label": "Delivery earnings",
+                "amount": 412.0
+              },
+              {
+                "id": "tips",
+                "label": "Tips",
+                "amount": 96.5
+              },
+              {
+                "id": "gas",
+                "label": "Gas",
+                "amount": -71.2
+              },
+              {
+                "id": "wash",
+                "label": "Car wash",
+                "amount": -12.0
+              },
+              {
+                "id": "data",
+                "label": "Phone data, work share",
+                "amount": -10.0
+              }
+            ]
+          },
+          "prompt": "How much did you earn, counting tips?",
+          "answer": 508.5,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$412.00 + $96.50 = $508.50."
+        },
+        {
+          "id": "gw-car-costs-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Your driving week",
+            "subtitle": "Self-made summary · Mon–Sun",
+            "meta": [
+              [
+                "Hours online",
+                "26"
+              ],
+              [
+                "Miles driven",
+                "310"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "earn",
+                "label": "Delivery earnings",
+                "amount": 412.0
+              },
+              {
+                "id": "tips",
+                "label": "Tips",
+                "amount": 96.5
+              },
+              {
+                "id": "gas",
+                "label": "Gas",
+                "amount": -71.2
+              },
+              {
+                "id": "wash",
+                "label": "Car wash",
+                "amount": -12.0
+              },
+              {
+                "id": "data",
+                "label": "Phone data, work share",
+                "amount": -10.0
+              }
+            ]
+          },
+          "prompt": "What were the costs?",
+          "answer": 93.2,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$71.20 + $12.00 + $10.00 = $93.20."
+        },
+        {
+          "id": "gw-car-costs-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Your driving week",
+            "subtitle": "Self-made summary · Mon–Sun",
+            "meta": [
+              [
+                "Hours online",
+                "26"
+              ],
+              [
+                "Miles driven",
+                "310"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "earn",
+                "label": "Delivery earnings",
+                "amount": 412.0
+              },
+              {
+                "id": "tips",
+                "label": "Tips",
+                "amount": 96.5
+              },
+              {
+                "id": "gas",
+                "label": "Gas",
+                "amount": -71.2
+              },
+              {
+                "id": "wash",
+                "label": "Car wash",
+                "amount": -12.0
+              },
+              {
+                "id": "data",
+                "label": "Phone data, work share",
+                "amount": -10.0
+              }
+            ]
+          },
+          "prompt": "What’s left after costs?",
+          "answer": 415.3,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$508.50 − $93.20 = $415.30."
+        },
+        {
+          "id": "gw-car-costs-q4",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Your driving week",
+            "subtitle": "Self-made summary · Mon–Sun",
+            "meta": [
+              [
+                "Hours online",
+                "26"
+              ],
+              [
+                "Miles driven",
+                "310"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "earn",
+                "label": "Delivery earnings",
+                "amount": 412.0
+              },
+              {
+                "id": "tips",
+                "label": "Tips",
+                "amount": 96.5
+              },
+              {
+                "id": "gas",
+                "label": "Gas",
+                "amount": -71.2
+              },
+              {
+                "id": "wash",
+                "label": "Car wash",
+                "amount": -12.0
+              },
+              {
+                "id": "data",
+                "label": "Phone data, work share",
+                "amount": -10.0
+              }
+            ]
+          },
+          "prompt": "Per hour, over 26 hours online? Round to the cent.",
+          "answer": 15.97,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$415.30 ÷ 26 = $15.97."
+        },
+        {
+          "id": "gw-car-costs-q5",
+          "type": "multiple_choice",
+          "context": "Driving costs more than gas: tires, oil, repairs and the car losing value with every mile. The IRS lets drivers deduct a set amount per business mile because those costs are real.",
+          "doc": {
+            "kind": "statement",
+            "title": "Your driving week",
+            "subtitle": "Self-made summary · Mon–Sun",
+            "meta": [
+              [
+                "Hours online",
+                "26"
+              ],
+              [
+                "Miles driven",
+                "310"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "earn",
+                "label": "Delivery earnings",
+                "amount": 412.0
+              },
+              {
+                "id": "tips",
+                "label": "Tips",
+                "amount": 96.5
+              },
+              {
+                "id": "gas",
+                "label": "Gas",
+                "amount": -71.2
+              },
+              {
+                "id": "wash",
+                "label": "Car wash",
+                "amount": -12.0
+              },
+              {
+                "id": "data",
+                "label": "Phone data, work share",
+                "amount": -10.0
+              }
+            ]
+          },
+          "prompt": "Which hidden cost isn’t on this summary?",
+          "choices": [
+            "Wear and tear on the car",
+            "Gas",
+            "Tips"
+          ],
+          "answer": 0,
+          "explain": "Every mile costs tires, oil, repairs and value. It’s real money, just paid later."
+        },
+        {
+          "id": "gw-car-costs-q6",
+          "type": "true_false",
+          "prompt": "Keeping a mileage log can lower the taxes you owe on gig income.",
+          "answer": true,
+          "explain": "Business miles can be deducted. No log, no deduction."
+        }
+      ]
+    },
+    {
+      "id": "gw-taxes",
+      "type": "lesson",
+      "title": "Taxes Nobody Takes Out",
+      "summary": "Contractors get paid in full, then owe the tax themselves.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gw-taxes-q1",
+          "type": "multiple_choice",
+          "context": "Apps and clients send you a [[Form 1099]] showing what they paid you. Nothing was taken out for taxes, so you owe them yourself.",
+          "prompt": "What does a Form 1099 show?",
+          "choices": [
+            "What a business paid you as a contractor",
+            "Your bank balance",
+            "Your credit score"
+          ],
+          "answer": 0,
+          "explain": "Your contractor income, with nothing taken out."
+        },
+        {
+          "id": "gw-taxes-q2",
+          "type": "true_false",
+          "prompt": "If you don’t get a 1099, the income isn’t taxable.",
+          "answer": false,
+          "explain": "All income counts, form or no form."
+        },
+        {
+          "id": "gw-taxes-q3",
+          "type": "number",
+          "context": "A common rule of thumb: set aside 25–30% of gig profit for taxes.",
+          "prompt": "You make $1,200 of profit this month. Set aside 25% for taxes. How much?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$1,200 × 0.25 = $300."
+        },
+        {
+          "id": "gw-taxes-q4",
+          "type": "multiple_choice",
+          "prompt": "Where should tax money live?",
+          "choices": [
+            "A separate savings account you don’t touch",
+            "Your checking account with everything else",
+            "Spend it now, sort it out in April"
+          ],
+          "answer": 0,
+          "explain": "Out of sight, out of your budget."
+        },
+        {
+          "id": "gw-taxes-q5",
+          "type": "true_false",
+          "prompt": "Contractors pay both halves of Social Security and Medicare, about 15.3% in total.",
+          "answer": true,
+          "explain": "Employees pay 7.65% and their employer pays 7.65%. When you’re the business, you pay both."
+        },
+        {
+          "id": "gw-taxes-q6",
+          "type": "multiple_choice",
+          "prompt": "Contractors who owe enough usually pay their taxes…",
+          "choices": [
+            "four times a year, in quarterly payments",
+            "never",
+            "once every five years"
+          ],
+          "answer": 0,
+          "explain": "You’ll see exactly how in Freelancing."
+        }
+      ]
+    },
+    {
+      "id": "gw-side-hustle",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Picking a Side Hustle",
+      "summary": "Skills, time and real hourly pay.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gw-side-hustle-q1",
+          "type": "multiple_choice",
+          "context": "A [[side hustle]] is paid work you do alongside your main job: dog walking, tutoring, reselling, freelancing.",
+          "prompt": "Which is a side hustle?",
+          "choices": [
+            "Tutoring math two evenings a week",
+            "Your full-time job",
+            "Your savings account"
+          ],
+          "answer": 0,
+          "explain": "Paid work on the side."
+        },
+        {
+          "id": "gw-side-hustle-q2",
+          "type": "sort",
+          "prompt": "Low or high cost to start?",
+          "buckets": [
+            "Low cost to start",
+            "High cost to start"
+          ],
+          "items": [
+            [
+              "Dog walking",
+              0
+            ],
+            [
+              "Tutoring",
+              0
+            ],
+            [
+              "A food truck",
+              1
+            ],
+            [
+              "Babysitting",
+              0
+            ],
+            [
+              "Opening a café",
+              1
+            ],
+            [
+              "Reselling clothes you already own",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "gw-side-hustle-q3",
+          "type": "multiple_choice",
+          "prompt": "What matters most when picking one?",
+          "choices": [
+            "Your skills, your free time, and real pay per hour",
+            "What’s trending",
+            "What a friend does"
+          ],
+          "answer": 0,
+          "explain": "Fit beats hype."
+        },
+        {
+          "id": "gw-side-hustle-q4",
+          "type": "number",
+          "prompt": "Tutoring at $30 an hour, 4 hours a week, for 4 weeks. Monthly earnings?",
+          "answer": 480,
+          "unit": "$",
+          "explain": "$30 × 4 × 4 = $480."
+        },
+        {
+          "id": "gw-side-hustle-q5",
+          "type": "true_false",
+          "prompt": "A side hustle can burn you out if it eats all your free time.",
+          "answer": true,
+          "explain": "Rest is part of the plan."
+        },
+        {
+          "id": "gw-side-hustle-q6",
+          "type": "multiple_choice",
+          "prompt": "Your hustle earns $480 this month. What happens first?",
+          "choices": [
+            "Set aside taxes, then give the rest a job",
+            "Spend it",
+            "Quit your day job"
+          ],
+          "answer": 0,
+          "explain": "Taxes first, then the plan."
+        }
+      ]
+    },
+    {
+      "id": "gw-platform-fees",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Platform Fees",
+      "summary": "Read the payout, not just the sale price.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gw-platform-fees-q1",
+          "type": "spot",
+          "context": "Platforms take their cut in fees. Read the payout, not just the sale price.",
+          "doc": {
+            "kind": "statement",
+            "title": "ResellHub",
+            "subtitle": "Payout summary · March",
+            "lines": [
+              {
+                "id": "jacket",
+                "label": "Sale: denim jacket",
+                "amount": 45.0
+              },
+              {
+                "id": "sneakers",
+                "label": "Sale: sneakers",
+                "amount": 80.0
+              },
+              {
+                "id": "sell",
+                "label": "Selling fee, 10%",
+                "amount": -12.5
+              },
+              {
+                "id": "proc",
+                "label": "Payment processing, 3%",
+                "amount": -3.75
+              },
+              {
+                "id": "instant",
+                "label": "Instant payout fee",
+                "amount": -5.0
+              }
+            ]
+          },
+          "prompt": "Which fee could you have skipped by waiting a few days for your payout?",
+          "answer": "instant",
+          "explain": "Standard payouts are usually free. Instant costs extra."
+        },
+        {
+          "id": "gw-platform-fees-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "ResellHub",
+            "subtitle": "Payout summary · March",
+            "lines": [
+              {
+                "id": "jacket",
+                "label": "Sale: denim jacket",
+                "amount": 45.0
+              },
+              {
+                "id": "sneakers",
+                "label": "Sale: sneakers",
+                "amount": 80.0
+              },
+              {
+                "id": "sell",
+                "label": "Selling fee, 10%",
+                "amount": -12.5
+              },
+              {
+                "id": "proc",
+                "label": "Payment processing, 3%",
+                "amount": -3.75
+              },
+              {
+                "id": "instant",
+                "label": "Instant payout fee",
+                "amount": -5.0
+              }
+            ]
+          },
+          "prompt": "Add up the sales.",
+          "answer": 125,
+          "unit": "$",
+          "explain": "$45 + $80 = $125."
+        },
+        {
+          "id": "gw-platform-fees-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "ResellHub",
+            "subtitle": "Payout summary · March",
+            "lines": [
+              {
+                "id": "jacket",
+                "label": "Sale: denim jacket",
+                "amount": 45.0
+              },
+              {
+                "id": "sneakers",
+                "label": "Sale: sneakers",
+                "amount": 80.0
+              },
+              {
+                "id": "sell",
+                "label": "Selling fee, 10%",
+                "amount": -12.5
+              },
+              {
+                "id": "proc",
+                "label": "Payment processing, 3%",
+                "amount": -3.75
+              },
+              {
+                "id": "instant",
+                "label": "Instant payout fee",
+                "amount": -5.0
+              }
+            ]
+          },
+          "prompt": "What were the total fees?",
+          "answer": 21.25,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$12.50 + $3.75 + $5.00 = $21.25."
+        },
+        {
+          "id": "gw-platform-fees-q4",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "ResellHub",
+            "subtitle": "Payout summary · March",
+            "lines": [
+              {
+                "id": "jacket",
+                "label": "Sale: denim jacket",
+                "amount": 45.0
+              },
+              {
+                "id": "sneakers",
+                "label": "Sale: sneakers",
+                "amount": 80.0
+              },
+              {
+                "id": "sell",
+                "label": "Selling fee, 10%",
+                "amount": -12.5
+              },
+              {
+                "id": "proc",
+                "label": "Payment processing, 3%",
+                "amount": -3.75
+              },
+              {
+                "id": "instant",
+                "label": "Instant payout fee",
+                "amount": -5.0
+              }
+            ]
+          },
+          "prompt": "What did you actually get paid?",
+          "answer": 103.75,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$125.00 − $21.25 = $103.75."
+        },
+        {
+          "id": "gw-platform-fees-q5",
+          "type": "number",
+          "prompt": "What percent of your sales went to fees?",
+          "answer": 17,
+          "unit": "%",
+          "explain": "$21.25 ÷ $125 = 0.17, which is 17%."
+        },
+        {
+          "id": "gw-platform-fees-q6",
+          "type": "true_false",
+          "prompt": "Comparing platforms’ fees can make the same sale worth more.",
+          "answer": true,
+          "explain": "A 5% platform instead of 10% keeps $6.25 more here."
+        }
+      ]
+    },
+    {
+      "id": "gw-casey",
+      "type": "lesson",
+      "format": "story",
+      "title": "Casey’s Weekend Hustle",
+      "summary": "One weekend of deliveries, start to finish.",
+      "xp": 10,
+      "story": {
+        "title": "Weekend wheels",
+        "character": "Casey, 21, student",
+        "body": "Casey delivers food on weekends to save for a **$2,000** laptop.\n\nThis weekend: **6** hours on Saturday for **$118**, and **5** hours on Sunday for **$97**. Gas cost **$38**.\n\nCasey puts **25%** of every weekend’s profit aside for taxes."
+      },
+      "steps": [
+        {
+          "id": "gw-casey-q1",
+          "type": "number",
+          "prompt": "What did Casey earn this weekend?",
+          "answer": 215,
+          "unit": "$",
+          "explain": "$118 + $97 = $215."
+        },
+        {
+          "id": "gw-casey-q2",
+          "type": "number",
+          "prompt": "What’s left after gas?",
+          "answer": 177,
+          "unit": "$",
+          "explain": "$215 − $38 = $177."
+        },
+        {
+          "id": "gw-casey-q3",
+          "type": "number",
+          "prompt": "What’s Casey’s real pay per hour over 11 hours? Round to the cent.",
+          "answer": 16.09,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$177 ÷ 11 = $16.09."
+        },
+        {
+          "id": "gw-casey-q4",
+          "type": "number",
+          "prompt": "How much goes aside for taxes at 25%?",
+          "answer": 44.25,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$177 × 0.25 = $44.25."
+        },
+        {
+          "id": "gw-casey-q5",
+          "type": "number",
+          "prompt": "What can Casey actually put toward the laptop?",
+          "answer": 132.75,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$177.00 − $44.25 = $132.75."
+        },
+        {
+          "id": "gw-casey-q6",
+          "type": "multiple_choice",
+          "prompt": "At $132.75 a weekend, about how many weekends until the $2,000 laptop?",
+          "choices": [
+            "About 15",
+            "About 5",
+            "About 50"
+          ],
+          "answer": 0,
+          "explain": "$2,000 ÷ $132.75 = 15.1 weekends."
+        }
+      ]
+    },
+    {
+      "id": "gw-worth-it",
+      "type": "lesson",
+      "format": "call",
+      "title": "Is It Worth It?",
+      "summary": "Compare two hustles the way that counts.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gw-worth-it-q1",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Dog walking",
+              "subtitle": "Saturday morning, 3 hours",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "4 walks at $20",
+                  "amount": 80.0
+                },
+                {
+                  "id": "cost",
+                  "label": "Costs",
+                  "amount": 0.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Rideshare",
+              "subtitle": "Friday evening, 4 hours",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Fares and tips",
+                  "amount": 95.0
+                },
+                {
+                  "id": "gas",
+                  "label": "Gas",
+                  "amount": -22.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Which pays more per hour after costs?",
+          "choices": [
+            "Dog walking",
+            "Rideshare"
+          ],
+          "answer": 0,
+          "explain": "Dog walking: $26.67 an hour. Rideshare: $18.25."
+        },
+        {
+          "id": "gw-worth-it-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Dog walking",
+              "subtitle": "Saturday morning, 3 hours",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "4 walks at $20",
+                  "amount": 80.0
+                },
+                {
+                  "id": "cost",
+                  "label": "Costs",
+                  "amount": 0.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Rideshare",
+              "subtitle": "Friday evening, 4 hours",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Fares and tips",
+                  "amount": 95.0
+                },
+                {
+                  "id": "gas",
+                  "label": "Gas",
+                  "amount": -22.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Dog walking per hour? Round to the cent.",
+          "answer": 26.67,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$80 ÷ 3 = $26.67."
+        },
+        {
+          "id": "gw-worth-it-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Dog walking",
+              "subtitle": "Saturday morning, 3 hours",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "4 walks at $20",
+                  "amount": 80.0
+                },
+                {
+                  "id": "cost",
+                  "label": "Costs",
+                  "amount": 0.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Rideshare",
+              "subtitle": "Friday evening, 4 hours",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Fares and tips",
+                  "amount": 95.0
+                },
+                {
+                  "id": "gas",
+                  "label": "Gas",
+                  "amount": -22.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Rideshare per hour, after gas?",
+          "answer": 18.25,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "($95 − $22) ÷ 4 = $18.25."
+        },
+        {
+          "id": "gw-worth-it-q4",
+          "type": "multiple_choice",
+          "prompt": "What else should you weigh?",
+          "choices": [
+            "Wear on your car, safety, and whether you enjoy it",
+            "Nothing else",
+            "Only the app rating"
+          ],
+          "answer": 0,
+          "explain": "The hourly number is the start, not the end."
+        },
+        {
+          "id": "gw-worth-it-q5",
+          "type": "true_false",
+          "prompt": "The hustle with the bigger total isn’t always the better one.",
+          "answer": true,
+          "explain": "Rideshare made more in total, but less per hour."
+        }
+      ]
+    },
+    {
+      "id": "gw-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "gw-trial",
+      "type": "boss",
+      "title": "Den Trial: Gig Work",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "gw-trial-q1",
+          "type": "number",
+          "prompt": "$150 of gig profit. Set aside 25% for taxes. How much?",
+          "answer": 37.5,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$150 × 0.25 = $37.50."
+        },
+        {
+          "id": "gw-trial-q2",
+          "type": "true_false",
+          "prompt": "Independent contractors get overtime pay.",
+          "answer": false,
+          "explain": "Overtime rules cover employees, not contractors."
+        },
+        {
+          "id": "gw-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "What’s a Form 1099?",
+          "choices": [
+            "A record of what a business paid you as a contractor",
+            "A pay stub",
+            "A bank statement"
+          ],
+          "answer": 0,
+          "explain": "And nothing was taken out for taxes."
+        },
+        {
+          "id": "gw-trial-q4",
+          "type": "number",
+          "prompt": "You earned $90 in 5 hours and spent $15 on gas. What’s your real hourly pay?",
+          "answer": 15,
+          "unit": "$",
+          "explain": "($90 − $15) ÷ 5 = $15."
+        }
+      ]
+    }
+  ]
+}

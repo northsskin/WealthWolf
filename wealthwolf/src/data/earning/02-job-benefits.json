@@ -1,0 +1,838 @@
+{
+  "id": "job-benefits",
+  "section": "earning",
+  "order": 2,
+  "title": "Job Benefits",
+  "description": "Health insurance, the 401(k) match and paid time off: the pay you don’t see.",
+  "wolfLine": "Free money on the table is still on the table. Take it.",
+  "terms": {
+    "employee-benefits": {
+      "term": "Employee benefits",
+      "definition": "Everything a job gives you besides your paycheck: health insurance, retirement money, paid time off and more.",
+      "example": "An employer paying $500 a month toward your health insurance."
+    },
+    "premium": {
+      "term": "Premium",
+      "definition": "What you pay to keep insurance active, whether or not you use it.",
+      "example": "$65 a paycheck for your work health plan."
+    },
+    "401k": {
+      "term": "401(k)",
+      "definition": "A retirement account you get through work. Money goes in straight from your paycheck and is invested until you retire.",
+      "example": "Putting 5% of each paycheck into your company’s 401(k)."
+    },
+    "employer-match": {
+      "term": "Employer match",
+      "definition": "Money your employer adds to your 401(k) when you put money in yourself.",
+      "example": "50 cents for every dollar you save, up to 6% of your pay."
+    },
+    "vesting": {
+      "term": "Vesting",
+      "definition": "Earning full ownership of your employer’s match over time. Leave too early and you may lose part of it.",
+      "example": "25% of the match becomes yours for each full year you stay."
+    },
+    "paid-time-off": {
+      "term": "Paid time off",
+      "definition": "Days you’re paid for without working: vacation, sick days and holidays. Often shortened to PTO.",
+      "example": "15 PTO days a year at $200 a day is worth $3,000."
+    },
+    "open-enrollment": {
+      "term": "Open enrollment",
+      "definition": "The window each year, usually a few weeks, when you can choose or change your work benefits.",
+      "example": "Every November, pick next year’s health plan and 401(k) rate."
+    }
+  },
+  "lessons": [
+    {
+      "id": "jb-what",
+      "type": "lesson",
+      "title": "What Benefits Are Worth",
+      "summary": "Your pay is more than your paycheck.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jb-what-q1",
+          "type": "info",
+          "title": "Pay is more than the paycheck",
+          "body": "[[Employee benefits|employee-benefits]] are everything a job gives you besides your paycheck: health insurance, retirement money, paid time off and more.\n\nThey’re worth real money, often thousands of dollars a year. Two jobs with the same salary can be worlds apart."
+        },
+        {
+          "id": "jb-what-q2",
+          "type": "sort",
+          "prompt": "Benefit or not?",
+          "buckets": [
+            "Benefit",
+            "Not a benefit"
+          ],
+          "items": [
+            [
+              "Health insurance the company helps pay for",
+              0
+            ],
+            [
+              "Paid vacation days",
+              0
+            ],
+            [
+              "A 401(k) match",
+              0
+            ],
+            [
+              "Your regular paycheck",
+              1
+            ],
+            [
+              "Overtime pay",
+              1
+            ],
+            [
+              "A tip from a customer",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "jb-what-q3",
+          "type": "number",
+          "prompt": "Your employer pays $500 a month toward your health insurance. What’s that worth over a year?",
+          "answer": 6000,
+          "unit": "$",
+          "explain": "$500 × 12 = $6,000."
+        },
+        {
+          "id": "jb-what-q4",
+          "type": "multiple_choice",
+          "prompt": "Two jobs pay $50,000. One includes health insurance, the other doesn’t. Which really pays more?",
+          "choices": [
+            "The one with health insurance",
+            "They’re the same"
+          ],
+          "answer": 0,
+          "explain": "Thousands of dollars of coverage is real pay, just not in your bank account."
+        },
+        {
+          "id": "jb-what-q5",
+          "type": "true_false",
+          "prompt": "Benefits can be worth thousands of dollars a year.",
+          "answer": true,
+          "explain": "Health insurance alone often is."
+        },
+        {
+          "id": "jb-what-q6",
+          "type": "multiple_choice",
+          "prompt": "Where do you find a job’s benefits?",
+          "choices": [
+            "The offer letter and the benefits guide",
+            "Your bank statement",
+            "The company’s social media"
+          ],
+          "answer": 0,
+          "explain": "Ask for the benefits guide before you accept."
+        }
+      ]
+    },
+    {
+      "id": "jb-health",
+      "type": "lesson",
+      "title": "Health Insurance at Work",
+      "summary": "What it costs you, and what your employer chips in.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jb-health-q1",
+          "type": "multiple_choice",
+          "context": "A [[premium]] is what you pay to keep insurance active. At work it usually comes out of each paycheck, and your employer often pays a big share too.",
+          "prompt": "What’s a premium?",
+          "choices": [
+            "What you pay to keep insurance, used or not",
+            "A bonus",
+            "A doctor’s bill"
+          ],
+          "answer": 0,
+          "explain": "You pay it every month, whether or not you see a doctor."
+        },
+        {
+          "id": "jb-health-q2",
+          "type": "number",
+          "prompt": "Your health premium is $65 a paycheck, 26 paychecks a year. What’s the yearly cost to you?",
+          "answer": 1690,
+          "unit": "$",
+          "explain": "$65 × 26 = $1,690."
+        },
+        {
+          "id": "jb-health-q3",
+          "type": "number",
+          "prompt": "The full plan costs $7,800 a year and you pay $1,690. How much does your employer pay?",
+          "answer": 6110,
+          "unit": "$",
+          "explain": "$7,800 − $1,690 = $6,110."
+        },
+        {
+          "id": "jb-health-q4",
+          "type": "true_false",
+          "prompt": "Work health insurance premiums are usually taken out before tax.",
+          "answer": true,
+          "explain": "Another reason work coverage is a good deal."
+        },
+        {
+          "id": "jb-health-q5",
+          "type": "multiple_choice",
+          "prompt": "Adding a spouse or kids to your plan usually…",
+          "choices": [
+            "raises your premium",
+            "lowers it",
+            "doesn’t change it"
+          ],
+          "answer": 0,
+          "explain": "More people covered, higher premium."
+        },
+        {
+          "id": "jb-health-q6",
+          "type": "multiple_choice",
+          "prompt": "You’re young and healthy. Should you skip work health insurance to keep the $65?",
+          "choices": [
+            "No: one accident can cost far more than a year of premiums",
+            "Yes, always",
+            "Only in summer"
+          ],
+          "answer": 0,
+          "explain": "A broken leg can cost tens of thousands of dollars without insurance."
+        }
+      ]
+    },
+    {
+      "id": "jb-401k",
+      "type": "lesson",
+      "title": "The 401(k)",
+      "summary": "Retirement saving, straight from your paycheck.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jb-401k-q1",
+          "type": "multiple_choice",
+          "context": "A [[401(k)|401k]] is a retirement account you get through work. Money goes in straight from your paycheck, and it’s invested to grow until you retire.",
+          "prompt": "Where does 401(k) money come from?",
+          "choices": [
+            "Straight from your paycheck",
+            "Your savings account",
+            "The government"
+          ],
+          "answer": 0,
+          "explain": "It’s taken out before you ever see it."
+        },
+        {
+          "id": "jb-401k-q2",
+          "type": "true_false",
+          "prompt": "Money in a traditional 401(k) goes in before income tax.",
+          "answer": true,
+          "explain": "That lowers your tax bill today."
+        },
+        {
+          "id": "jb-401k-q3",
+          "type": "number",
+          "prompt": "You put in 5% of a $50,000 salary. How much is that a year?",
+          "answer": 2500,
+          "unit": "$",
+          "explain": "$50,000 × 0.05 = $2,500."
+        },
+        {
+          "id": "jb-401k-q4",
+          "type": "multiple_choice",
+          "prompt": "In 2026, what’s the most you can put into a 401(k) yourself (under age 50)?",
+          "choices": [
+            "$24,500",
+            "$2,450",
+            "$245,000"
+          ],
+          "answer": 0,
+          "explain": "The IRS sets the limit each year. For 2026 it’s $24,500."
+        },
+        {
+          "id": "jb-401k-q5",
+          "type": "multiple_choice",
+          "prompt": "Why start a 401(k) in your twenties instead of your forties?",
+          "choices": [
+            "Twenty extra years of growth",
+            "It’s required",
+            "Taxes are lower in your forties"
+          ],
+          "answer": 0,
+          "explain": "Time is the biggest ingredient in growth."
+        },
+        {
+          "id": "jb-401k-q6",
+          "type": "true_false",
+          "prompt": "Taking money out of a 401(k) before age 59½ usually means taxes plus a 10% penalty.",
+          "answer": true,
+          "explain": "It’s built for retirement, and the rules enforce it."
+        },
+        {
+          "id": "jb-401k-q7",
+          "type": "fill_blank",
+          "prompt": "A 401(k) is a ___ account you get through work.",
+          "choices": [
+            "retirement",
+            "checking",
+            "credit"
+          ],
+          "answer": 0,
+          "explain": "Retirement."
+        }
+      ]
+    },
+    {
+      "id": "jb-match",
+      "type": "lesson",
+      "title": "The Employer Match",
+      "summary": "Free money. Here’s how not to leave it on the table.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jb-match-q1",
+          "type": "multiple_choice",
+          "context": "Many employers add money to your 401(k) when you do. That’s an [[employer match]]. A common one: 50 cents for every dollar you put in, up to 6% of your pay.",
+          "prompt": "What’s an employer match?",
+          "choices": [
+            "Money your employer adds when you save",
+            "A team sport",
+            "A tax"
+          ],
+          "answer": 0,
+          "explain": "It’s extra pay, delivered to your retirement account."
+        },
+        {
+          "id": "jb-match-q2",
+          "type": "number",
+          "prompt": "Salary $50,000. You put in 6% ($3,000), and your employer matches 50% of that. How much do they add?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$3,000 × 0.50 = $1,500."
+        },
+        {
+          "id": "jb-match-q3",
+          "type": "number",
+          "prompt": "If you only put in 2% ($1,000), how much would they add?",
+          "answer": 500,
+          "unit": "$",
+          "explain": "$1,000 × 0.50 = $500."
+        },
+        {
+          "id": "jb-match-q4",
+          "type": "number",
+          "prompt": "How much free money do you leave on the table by putting in 2% instead of 6%?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "$1,500 − $500 = $1,000 a year."
+        },
+        {
+          "id": "jb-match-q5",
+          "type": "multiple_choice",
+          "prompt": "Best move when there’s a match?",
+          "choices": [
+            "Put in at least enough to get the full match",
+            "Skip it while you’re young",
+            "Put in 1%"
+          ],
+          "answer": 0,
+          "explain": "An instant return you can’t get anywhere else."
+        },
+        {
+          "id": "jb-match-q6",
+          "type": "true_false",
+          "prompt": "A 100% match on your first 4% doubles that money instantly.",
+          "answer": true,
+          "explain": "Put in $100, and $200 lands in the account."
+        }
+      ]
+    },
+    {
+      "id": "jb-vesting",
+      "type": "lesson",
+      "format": "story",
+      "title": "Lee Leaves Early",
+      "summary": "Your match might not be all yours yet. Do the math before you go.",
+      "xp": 10,
+      "story": {
+        "title": "Leaving money behind",
+        "character": "Lee, 27, logistics coordinator",
+        "body": "Lee put **$6,000** of pay into the company 401(k) over two years. The employer added **$3,000** in matching money.\n\nBut the match comes with [[vesting]]: Lee only fully owns it after a set time. This company vests **25%** of the match for every full year worked.\n\nLee has a new job offer paying **$2,000** a year more, and would leave after exactly **2** years."
+      },
+      "steps": [
+        {
+          "id": "jb-vesting-q1",
+          "type": "number",
+          "prompt": "How much of Lee’s own $6,000 can Lee keep?",
+          "answer": 6000,
+          "unit": "$",
+          "explain": "All of it. Your own contributions are always yours."
+        },
+        {
+          "id": "jb-vesting-q2",
+          "type": "number",
+          "prompt": "What percent of the match is vested after 2 full years?",
+          "answer": 50,
+          "unit": "%",
+          "explain": "25% × 2 years = 50%."
+        },
+        {
+          "id": "jb-vesting-q3",
+          "type": "number",
+          "prompt": "How much of the $3,000 match can Lee take?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "50% of $3,000 = $1,500."
+        },
+        {
+          "id": "jb-vesting-q4",
+          "type": "number",
+          "prompt": "What’s the total Lee leaves with?",
+          "answer": 7500,
+          "unit": "$",
+          "explain": "$6,000 + $1,500 = $7,500."
+        },
+        {
+          "id": "jb-vesting-q5",
+          "type": "multiple_choice",
+          "prompt": "Staying 2 more years would vest the other $1,500. Is leaving still worth it?",
+          "choices": [
+            "Probably: $2,000 more a year beats a one-time $1,500",
+            "Never leave before vesting",
+            "Only if the new job has no match"
+          ],
+          "answer": 0,
+          "explain": "$4,000 more pay over two years beats $1,500 of match. Just know the trade-off."
+        },
+        {
+          "id": "jb-vesting-q6",
+          "type": "true_false",
+          "prompt": "Your own 401(k) contributions are always 100% yours.",
+          "answer": true,
+          "explain": "Vesting only applies to the employer’s money."
+        }
+      ]
+    },
+    {
+      "id": "jb-pto",
+      "type": "lesson",
+      "title": "Paid Time Off",
+      "summary": "Days off you’re paid for are worth real money.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jb-pto-q1",
+          "type": "multiple_choice",
+          "context": "[[Paid time off|paid-time-off]] (PTO) is days you’re paid for without working: vacation, sick days and holidays.",
+          "prompt": "What does PTO mean?",
+          "choices": [
+            "Days you’re paid for without working",
+            "Unpaid leave",
+            "Overtime"
+          ],
+          "answer": 0,
+          "explain": "Vacation, sick days and holidays, paid."
+        },
+        {
+          "id": "jb-pto-q2",
+          "type": "number",
+          "prompt": "You earn $25 an hour. One PTO day is 8 hours. What’s it worth?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$25 × 8 = $200."
+        },
+        {
+          "id": "jb-pto-q3",
+          "type": "number",
+          "prompt": "15 PTO days a year at $200 each. What are they worth?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "15 × $200 = $3,000."
+        },
+        {
+          "id": "jb-pto-q4",
+          "type": "multiple_choice",
+          "context": "Some companies have “use it or lose it” rules: unused days vanish at the end of the year.",
+          "prompt": "Your company is use-it-or-lose-it, and you have 5 days left in December. Smart move?",
+          "choices": [
+            "Use them",
+            "Let them disappear",
+            "Ask to be paid less"
+          ],
+          "answer": 0,
+          "explain": "Unused days under that rule are just lost pay."
+        },
+        {
+          "id": "jb-pto-q5",
+          "type": "true_false",
+          "prompt": "Every US employer must give paid vacation.",
+          "answer": false,
+          "explain": "No federal law requires paid vacation. That’s why it’s worth comparing between offers."
+        },
+        {
+          "id": "jb-pto-q6",
+          "type": "multiple_choice",
+          "prompt": "Same pay. Job A gives 10 PTO days, Job B gives 20. Job B is worth roughly…",
+          "choices": [
+            "10 extra paid days off a year",
+            "Nothing extra",
+            "Less"
+          ],
+          "answer": 0,
+          "explain": "Two extra weeks off, paid."
+        }
+      ]
+    },
+    {
+      "id": "jb-menu",
+      "type": "lesson",
+      "format": "sort",
+      "title": "The Benefits Menu",
+      "summary": "What each benefit does for you, and what to grab first.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jb-menu-q1",
+          "type": "sort",
+          "prompt": "What does each benefit do for you?",
+          "buckets": [
+            "Saves money now",
+            "Builds future wealth",
+            "Protects you"
+          ],
+          "items": [
+            [
+              "Commuter pass paid before tax",
+              0
+            ],
+            [
+              "401(k) match",
+              1
+            ],
+            [
+              "Life insurance",
+              2
+            ],
+            [
+              "Gym discount",
+              0
+            ],
+            [
+              "Disability insurance",
+              2
+            ],
+            [
+              "Company stock purchase plan",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "jb-menu-q2",
+          "type": "multiple_choice",
+          "prompt": "Which benefit should almost everyone take first?",
+          "choices": [
+            "Enough 401(k) to get the full match",
+            "The gym discount",
+            "Pet insurance"
+          ],
+          "answer": 0,
+          "explain": "Free money comes first."
+        },
+        {
+          "id": "jb-menu-q3",
+          "type": "true_false",
+          "prompt": "Under 26, you can usually stay on a parent’s health plan instead of your job’s.",
+          "answer": true,
+          "explain": "Compare the costs. Either one can be cheaper."
+        },
+        {
+          "id": "jb-menu-q4",
+          "type": "number",
+          "prompt": "A commuter benefit lets you pay your $150 monthly transit pass before tax. At a 22% tax rate, how much does that save a month?",
+          "answer": 33,
+          "unit": "$",
+          "explain": "$150 × 0.22 = $33."
+        },
+        {
+          "id": "jb-menu-q5",
+          "type": "multiple_choice",
+          "prompt": "A benefit you’ll never use (pet insurance, and you have no pet) is worth…",
+          "choices": [
+            "Nothing to you, so skip it",
+            "Its full price",
+            "More than cash"
+          ],
+          "answer": 0,
+          "explain": "Only pick what you’ll use."
+        }
+      ]
+    },
+    {
+      "id": "jb-benefits-guide",
+      "type": "lesson",
+      "format": "document",
+      "title": "Read a Benefits Summary",
+      "summary": "Add up what an employer really pays you.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "jb-benefits-guide-q1",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Northwind Logistics",
+            "subtitle": "Benefits summary · What we pay each year",
+            "meta": [
+              [
+                "Salary",
+                "$48,000"
+              ],
+              [
+                "Paid time off",
+                "15 days"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "health",
+                "label": "Health insurance, employer share",
+                "amount": 6400.0
+              },
+              {
+                "id": "match",
+                "label": "401(k) match: 100% of the first 4% you save",
+                "amount": 1920.0
+              },
+              {
+                "id": "life",
+                "label": "Life insurance, 1× salary",
+                "amount": 180.0
+              },
+              {
+                "id": "commute",
+                "label": "Commuter pass",
+                "amount": 900.0
+              }
+            ]
+          },
+          "prompt": "Add up what the employer pays toward benefits each year.",
+          "answer": 9400,
+          "unit": "$",
+          "explain": "$6,400 + $1,920 + $180 + $900 = $9,400."
+        },
+        {
+          "id": "jb-benefits-guide-q2",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Northwind Logistics",
+            "subtitle": "Benefits summary · What we pay each year",
+            "meta": [
+              [
+                "Salary",
+                "$48,000"
+              ],
+              [
+                "Paid time off",
+                "15 days"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "health",
+                "label": "Health insurance, employer share",
+                "amount": 6400.0
+              },
+              {
+                "id": "match",
+                "label": "401(k) match: 100% of the first 4% you save",
+                "amount": 1920.0
+              },
+              {
+                "id": "life",
+                "label": "Life insurance, 1× salary",
+                "amount": 180.0
+              },
+              {
+                "id": "commute",
+                "label": "Commuter pass",
+                "amount": 900.0
+              }
+            ]
+          },
+          "prompt": "Salary plus benefits: what’s the total yearly value?",
+          "answer": 57400,
+          "unit": "$",
+          "explain": "$48,000 + $9,400 = $57,400."
+        },
+        {
+          "id": "jb-benefits-guide-q3",
+          "type": "multiple_choice",
+          "doc": {
+            "kind": "bill",
+            "title": "Northwind Logistics",
+            "subtitle": "Benefits summary · What we pay each year",
+            "meta": [
+              [
+                "Salary",
+                "$48,000"
+              ],
+              [
+                "Paid time off",
+                "15 days"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "health",
+                "label": "Health insurance, employer share",
+                "amount": 6400.0
+              },
+              {
+                "id": "match",
+                "label": "401(k) match: 100% of the first 4% you save",
+                "amount": 1920.0
+              },
+              {
+                "id": "life",
+                "label": "Life insurance, 1× salary",
+                "amount": 180.0
+              },
+              {
+                "id": "commute",
+                "label": "Commuter pass",
+                "amount": 900.0
+              }
+            ]
+          },
+          "prompt": "Which benefit do you only get if you put in money yourself?",
+          "choices": [
+            "The 401(k) match",
+            "The health insurance share",
+            "The life insurance"
+          ],
+          "answer": 0,
+          "explain": "No saving from you, no match."
+        },
+        {
+          "id": "jb-benefits-guide-q4",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Northwind Logistics",
+            "subtitle": "Benefits summary · What we pay each year",
+            "meta": [
+              [
+                "Salary",
+                "$48,000"
+              ],
+              [
+                "Paid time off",
+                "15 days"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "health",
+                "label": "Health insurance, employer share",
+                "amount": 6400.0
+              },
+              {
+                "id": "match",
+                "label": "401(k) match: 100% of the first 4% you save",
+                "amount": 1920.0
+              },
+              {
+                "id": "life",
+                "label": "Life insurance, 1× salary",
+                "amount": 180.0
+              },
+              {
+                "id": "commute",
+                "label": "Commuter pass",
+                "amount": 900.0
+              }
+            ]
+          },
+          "prompt": "If you only put in 2% of your $48,000, how much match would you get?",
+          "answer": 960,
+          "unit": "$",
+          "explain": "$48,000 × 0.02 = $960."
+        },
+        {
+          "id": "jb-benefits-guide-q5",
+          "type": "multiple_choice",
+          "context": "[[Open enrollment]] is the window each year, usually a few weeks, when you choose or change your benefits.",
+          "prompt": "You miss open enrollment. What usually happens?",
+          "choices": [
+            "You wait until next year, unless a big life event happens",
+            "You get every benefit automatically",
+            "You lose your job"
+          ],
+          "answer": 0,
+          "explain": "Marriage, a baby or losing other coverage can open a special window. Otherwise, mark the dates."
+        },
+        {
+          "id": "jb-benefits-guide-q6",
+          "type": "true_false",
+          "prompt": "Most of these benefits aren’t taxed as part of your pay.",
+          "answer": true,
+          "explain": "Which makes each dollar of benefits worth even more."
+        }
+      ]
+    },
+    {
+      "id": "jb-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "jb-trial",
+      "type": "boss",
+      "title": "Den Trial: Job Benefits",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "jb-trial-q1",
+          "type": "number",
+          "prompt": "Salary $60,000. Your employer matches 50% of what you put in, up to 6%. You put in 6%. What’s the match?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$3,600 × 0.50 = $1,800."
+        },
+        {
+          "id": "jb-trial-q2",
+          "type": "true_false",
+          "prompt": "Your own 401(k) money is always fully yours, even if you leave early.",
+          "answer": true,
+          "explain": "Vesting only applies to the employer’s share."
+        },
+        {
+          "id": "jb-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "What’s an insurance premium?",
+          "choices": [
+            "What you pay to keep the coverage",
+            "A bonus for being healthy",
+            "A doctor’s fee"
+          ],
+          "answer": 0,
+          "explain": "Paid whether or not you use it."
+        },
+        {
+          "id": "jb-trial-q4",
+          "type": "number",
+          "prompt": "12 PTO days at $160 a day. What are they worth?",
+          "answer": 1920,
+          "unit": "$",
+          "explain": "12 × $160 = $1,920."
+        }
+      ]
+    }
+  ]
+}

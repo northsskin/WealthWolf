@@ -1,0 +1,1186 @@
+{
+  "id": "paycheck",
+  "section": "earning",
+  "order": 1,
+  "title": "Your Paycheck",
+  "description": "Hourly, salary, overtime, and every line on your pay stub.",
+  "wolfLine": "Read the stub. Every line is either yours or someone’s excuse.",
+  "terms": {
+    "hourly-wage": {
+      "term": "Hourly wage",
+      "definition": "Pay for every hour you work. More hours, more pay.",
+      "example": "$18 an hour × 40 hours = $720 for the week."
+    },
+    "salary": {
+      "term": "Salary",
+      "definition": "A fixed yearly amount, split across your paychecks, no matter how many hours you work.",
+      "example": "$52,000 a year, paid as 26 paychecks of $2,000."
+    },
+    "minimum-wage": {
+      "term": "Minimum wage",
+      "definition": "The lowest hourly pay allowed by law. The federal minimum is $7.25, and many states and cities set a higher one.",
+      "example": "A state minimum of $15 an hour beats the federal $7.25."
+    },
+    "overtime": {
+      "term": "Overtime",
+      "definition": "Extra pay for hours past 40 in a workweek. Under federal law most hourly workers get 1.5 times their usual rate.",
+      "example": "At $20 an hour, overtime pays $30 an hour."
+    },
+    "fica": {
+      "term": "FICA",
+      "definition": "The two payroll taxes on every paycheck: Social Security (6.2%) and Medicare (1.45%).",
+      "example": "7.65% of $1,680 is $128.52 of FICA."
+    },
+    "pre-tax-deduction": {
+      "term": "Pre-tax deduction",
+      "definition": "Money taken from your pay before income tax is worked out, so you’re taxed on less.",
+      "example": "A traditional 401(k) contribution or a work health insurance premium."
+    },
+    "year-to-date": {
+      "term": "Year-to-date",
+      "definition": "Totals since January 1 of this year, often shown as YTD on a pay stub.",
+      "example": "YTD gross pay through June: $21,840."
+    },
+    "w-2": {
+      "term": "W-2",
+      "definition": "The yearly summary of your pay and the taxes taken out, sent by your employer each January, used to file your taxes.",
+      "example": "Your W-2 shows $43,680 of wages and the federal tax withheld from them."
+    }
+  },
+  "lessons": [
+    {
+      "id": "pc-hourly-salary",
+      "type": "lesson",
+      "title": "Hourly vs. Salary",
+      "summary": "Two ways to get paid, and how to compare them.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pc-hourly-salary-q1",
+          "type": "multiple_choice",
+          "context": "An [[hourly wage]] pays you for every hour you work. A [[salary]] is a fixed yearly amount, split across your paychecks, no matter how many hours you put in.",
+          "prompt": "Which kind of pay changes when you work more hours?",
+          "choices": [
+            "Hourly",
+            "Salary"
+          ],
+          "answer": 0,
+          "explain": "Hourly pay counts every hour. A salary stays the same."
+        },
+        {
+          "id": "pc-hourly-salary-q2",
+          "type": "number",
+          "prompt": "You earn $18 an hour and work 40 hours a week. What’s your weekly pay before deductions?",
+          "answer": 720,
+          "unit": "$",
+          "explain": "$18 × 40 = $720."
+        },
+        {
+          "id": "pc-hourly-salary-q3",
+          "type": "number",
+          "context": "To turn hourly pay into a yearly number, multiply by hours a week, then by 52 weeks.",
+          "prompt": "$18 an hour, 40 hours a week, 52 weeks. What’s that for a year?",
+          "answer": 37440,
+          "unit": "$",
+          "explain": "$18 × 40 × 52 = $37,440."
+        },
+        {
+          "id": "pc-hourly-salary-q4",
+          "type": "number",
+          "prompt": "A salary of $52,000. What’s that per hour at 40 hours a week? Divide by 2,080 hours.",
+          "answer": 25,
+          "unit": "$",
+          "explain": "$52,000 ÷ 2,080 = $25 an hour."
+        },
+        {
+          "id": "pc-hourly-salary-q5",
+          "type": "multiple_choice",
+          "prompt": "You’re salaried at $52,000 and work 50 hours one week. What usually happens to your pay?",
+          "choices": [
+            "Nothing: a salary stays the same",
+            "It goes up 25%",
+            "It goes down"
+          ],
+          "answer": 0,
+          "explain": "Many salaried jobs don’t pay for extra hours. The next lesson explains why."
+        },
+        {
+          "id": "pc-hourly-salary-q6",
+          "type": "true_false",
+          "context": "The federal [[minimum wage]] is $7.25 an hour, and many states and cities set a higher one.",
+          "prompt": "Your state can require a higher minimum wage than the federal $7.25.",
+          "answer": true,
+          "explain": "Many states and cities do. The higher one wins."
+        },
+        {
+          "id": "pc-hourly-salary-q7",
+          "type": "multiple_choice",
+          "prompt": "What’s a perk of hourly pay?",
+          "choices": [
+            "Every extra hour you work gets paid",
+            "Your pay never changes",
+            "No taxes"
+          ],
+          "answer": 0,
+          "explain": "Extra shifts mean extra money."
+        }
+      ]
+    },
+    {
+      "id": "pc-overtime",
+      "type": "lesson",
+      "title": "Overtime",
+      "summary": "Hours past 40 pay more. Here’s how much.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pc-overtime-q1",
+          "type": "multiple_choice",
+          "context": "[[Overtime]] is extra pay for hours past 40 in a workweek. Under federal law, most hourly workers get 1.5 times their usual rate for those hours.",
+          "prompt": "You earn $20 an hour. What’s your overtime rate?",
+          "choices": [
+            "$30 an hour",
+            "$20 an hour",
+            "$40 an hour"
+          ],
+          "answer": 0,
+          "explain": "$20 × 1.5 = $30."
+        },
+        {
+          "id": "pc-overtime-q2",
+          "type": "number",
+          "prompt": "At $20 an hour, you work 46 hours this week. How many overtime hours?",
+          "answer": 6,
+          "unit": "hours",
+          "explain": "46 − 40 = 6 hours."
+        },
+        {
+          "id": "pc-overtime-q3",
+          "type": "number",
+          "prompt": "What’s your pay for the week? 40 hours at $20, plus 6 hours at $30.",
+          "answer": 980,
+          "unit": "$",
+          "explain": "$800 + $180 = $980."
+        },
+        {
+          "id": "pc-overtime-q4",
+          "type": "true_false",
+          "prompt": "Overtime counts hours in a single workweek, not across two weeks.",
+          "answer": true,
+          "explain": "50 hours one week and 30 the next still means 10 overtime hours in the first week."
+        },
+        {
+          "id": "pc-overtime-q5",
+          "type": "multiple_choice",
+          "prompt": "Many salaried workers are “exempt.” What does that usually mean?",
+          "choices": [
+            "They aren’t paid extra for hours over 40",
+            "They pay no taxes",
+            "They can’t be fired"
+          ],
+          "answer": 0,
+          "explain": "Exempt from overtime rules. Some salaried workers do still get overtime, so check."
+        },
+        {
+          "id": "pc-overtime-q6",
+          "type": "number",
+          "prompt": "$16 an hour, 44 hours this week. What’s the weekly pay?",
+          "answer": 736,
+          "unit": "$",
+          "explain": "40 × $16 = $640, plus 4 × $24 = $96. $736."
+        },
+        {
+          "id": "pc-overtime-q7",
+          "type": "fill_blank",
+          "prompt": "Overtime under federal law pays ___ times your usual rate.",
+          "choices": [
+            "1.5",
+            "2",
+            "1.25"
+          ],
+          "answer": 0,
+          "explain": "Time and a half."
+        }
+      ]
+    },
+    {
+      "id": "pc-pay-frequency",
+      "type": "lesson",
+      "title": "How Often You’re Paid",
+      "summary": "Weekly, every two weeks, twice a month: same salary, different checks.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pc-pay-frequency-q1",
+          "type": "info",
+          "title": "Four common pay schedules",
+          "body": "Weekly means 52 paychecks a year. Every two weeks means 26. Twice a month (like the 15th and the last day) means 24. Monthly means 12.\n\nSame salary, different-sized checks. Your budget needs the per-paycheck number."
+        },
+        {
+          "id": "pc-pay-frequency-q2",
+          "type": "match",
+          "prompt": "Match each schedule to its paychecks a year.",
+          "pairs": [
+            [
+              "Weekly",
+              "52"
+            ],
+            [
+              "Every two weeks",
+              "26"
+            ],
+            [
+              "Twice a month",
+              "24"
+            ],
+            [
+              "Monthly",
+              "12"
+            ]
+          ]
+        },
+        {
+          "id": "pc-pay-frequency-q3",
+          "type": "number",
+          "prompt": "A $45,500 salary paid every two weeks. What’s each gross paycheck?",
+          "answer": 1750,
+          "unit": "$",
+          "explain": "$45,500 ÷ 26 = $1,750."
+        },
+        {
+          "id": "pc-pay-frequency-q4",
+          "type": "number",
+          "prompt": "The same salary paid twice a month (24 paychecks). What’s each gross paycheck?",
+          "answer": 1895.83,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$45,500 ÷ 24 = $1,895.83."
+        },
+        {
+          "id": "pc-pay-frequency-q5",
+          "type": "multiple_choice",
+          "prompt": "Why are every-two-weeks paychecks smaller than twice-a-month ones on the same salary?",
+          "choices": [
+            "The year is split into 26 checks instead of 24",
+            "Every-two-weeks pays less overall",
+            "More taxes"
+          ],
+          "answer": 0,
+          "explain": "Same yearly total, cut into more pieces."
+        },
+        {
+          "id": "pc-pay-frequency-q6",
+          "type": "true_false",
+          "prompt": "On the same salary, every-two-weeks and twice-a-month pay add up to the same yearly total.",
+          "answer": true,
+          "explain": "Only the slicing is different."
+        }
+      ]
+    },
+    {
+      "id": "pc-fica",
+      "type": "lesson",
+      "format": "document",
+      "title": "Social Security & Medicare",
+      "summary": "The 7.65% on every pay stub, and what it buys you.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pc-fica-q1",
+          "type": "multiple_choice",
+          "context": "[[FICA]] is the name for two taxes on your pay: Social Security (6.2%) and Medicare (1.45%). They fund retirement and health coverage for older Americans, and you’ll collect from them later yourself.",
+          "doc": {
+            "kind": "paystub",
+            "title": "Riverside Hardware",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Mar 1–14"
+              ],
+              [
+                "Pay date",
+                "Mar 20"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "gross",
+                "section": "Earnings",
+                "label": "Regular pay, 80 hrs × $21.00",
+                "amount": 1680.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -126.0
+              },
+              {
+                "id": "state",
+                "section": "Deductions",
+                "label": "State income tax",
+                "amount": -50.4
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -104.16
+              },
+              {
+                "id": "med",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -24.36
+              }
+            ],
+            "totals": [
+              {
+                "label": "Gross pay",
+                "amount": 1680.0
+              }
+            ]
+          },
+          "prompt": "Which two lines are FICA?",
+          "choices": [
+            "Social Security and Medicare",
+            "Federal and state income tax",
+            "Gross pay and net pay"
+          ],
+          "answer": 0,
+          "explain": "FICA is Social Security plus Medicare."
+        },
+        {
+          "id": "pc-fica-q2",
+          "type": "number",
+          "doc": {
+            "kind": "paystub",
+            "title": "Riverside Hardware",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Mar 1–14"
+              ],
+              [
+                "Pay date",
+                "Mar 20"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "gross",
+                "section": "Earnings",
+                "label": "Regular pay, 80 hrs × $21.00",
+                "amount": 1680.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -126.0
+              },
+              {
+                "id": "state",
+                "section": "Deductions",
+                "label": "State income tax",
+                "amount": -50.4
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -104.16
+              },
+              {
+                "id": "med",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -24.36
+              }
+            ],
+            "totals": [
+              {
+                "label": "Gross pay",
+                "amount": 1680.0
+              }
+            ]
+          },
+          "prompt": "Check the Social Security line: 6.2% of $1,680.",
+          "answer": 104.16,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$1,680 × 0.062 = $104.16."
+        },
+        {
+          "id": "pc-fica-q3",
+          "type": "number",
+          "doc": {
+            "kind": "paystub",
+            "title": "Riverside Hardware",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Mar 1–14"
+              ],
+              [
+                "Pay date",
+                "Mar 20"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "gross",
+                "section": "Earnings",
+                "label": "Regular pay, 80 hrs × $21.00",
+                "amount": 1680.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -126.0
+              },
+              {
+                "id": "state",
+                "section": "Deductions",
+                "label": "State income tax",
+                "amount": -50.4
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -104.16
+              },
+              {
+                "id": "med",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -24.36
+              }
+            ],
+            "totals": [
+              {
+                "label": "Gross pay",
+                "amount": 1680.0
+              }
+            ]
+          },
+          "prompt": "Check Medicare: 1.45% of $1,680.",
+          "answer": 24.36,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$1,680 × 0.0145 = $24.36."
+        },
+        {
+          "id": "pc-fica-q4",
+          "type": "number",
+          "doc": {
+            "kind": "paystub",
+            "title": "Riverside Hardware",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Mar 1–14"
+              ],
+              [
+                "Pay date",
+                "Mar 20"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "gross",
+                "section": "Earnings",
+                "label": "Regular pay, 80 hrs × $21.00",
+                "amount": 1680.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -126.0
+              },
+              {
+                "id": "state",
+                "section": "Deductions",
+                "label": "State income tax",
+                "amount": -50.4
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -104.16
+              },
+              {
+                "id": "med",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -24.36
+              }
+            ],
+            "totals": [
+              {
+                "label": "Gross pay",
+                "amount": 1680.0
+              }
+            ]
+          },
+          "prompt": "How much FICA in total on this paycheck?",
+          "answer": 128.52,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$104.16 + $24.36 = $128.52, which is 7.65% of $1,680."
+        },
+        {
+          "id": "pc-fica-q5",
+          "type": "number",
+          "doc": {
+            "kind": "paystub",
+            "title": "Riverside Hardware",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Mar 1–14"
+              ],
+              [
+                "Pay date",
+                "Mar 20"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "gross",
+                "section": "Earnings",
+                "label": "Regular pay, 80 hrs × $21.00",
+                "amount": 1680.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -126.0
+              },
+              {
+                "id": "state",
+                "section": "Deductions",
+                "label": "State income tax",
+                "amount": -50.4
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -104.16
+              },
+              {
+                "id": "med",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -24.36
+              }
+            ],
+            "totals": [
+              {
+                "label": "Gross pay",
+                "amount": 1680.0
+              }
+            ]
+          },
+          "prompt": "What’s the net pay?",
+          "answer": 1375.08,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$1,680.00 − $126.00 − $50.40 − $104.16 − $24.36 = $1,375.08."
+        },
+        {
+          "id": "pc-fica-q6",
+          "type": "true_false",
+          "prompt": "Your employer pays a matching 7.65% on top of your pay.",
+          "answer": true,
+          "explain": "Employers match your Social Security and Medicare. If you work for yourself, you pay both halves."
+        },
+        {
+          "id": "pc-fica-q7",
+          "type": "multiple_choice",
+          "prompt": "Who collects Social Security later?",
+          "choices": [
+            "You do, when you retire or if you become disabled",
+            "Only your employer",
+            "Nobody"
+          ],
+          "answer": 0,
+          "explain": "It’s insurance you pay into now and draw on later."
+        }
+      ]
+    },
+    {
+      "id": "pc-pretax",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Before Tax or After?",
+      "summary": "Some deductions shrink your tax bill. Here’s which.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pc-pretax-q1",
+          "type": "multiple_choice",
+          "context": "A [[pre-tax deduction]] comes out of your pay before income tax is worked out, so you’re taxed on less. A traditional 401(k) and most work health insurance are pre-tax.",
+          "prompt": "$100 goes into a pre-tax 401(k). What happens to the pay you’re taxed on?",
+          "choices": [
+            "It drops by $100",
+            "It stays the same",
+            "It rises by $100"
+          ],
+          "answer": 0,
+          "explain": "You’re taxed as if you earned $100 less."
+        },
+        {
+          "id": "pc-pretax-q2",
+          "type": "number",
+          "prompt": "Gross pay is $2,000. Pre-tax deductions: $120 to a 401(k) and $80 for health insurance. What pay is income tax worked out on?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$2,000 − $120 − $80 = $1,800."
+        },
+        {
+          "id": "pc-pretax-q3",
+          "type": "number",
+          "prompt": "At a 12% income tax rate, how much tax do those $200 of pre-tax deductions save each paycheck?",
+          "answer": 24,
+          "unit": "$",
+          "explain": "$200 × 0.12 = $24."
+        },
+        {
+          "id": "pc-pretax-q4",
+          "type": "sort",
+          "prompt": "Usually pre-tax or after-tax?",
+          "buckets": [
+            "Usually pre-tax",
+            "Usually after-tax"
+          ],
+          "items": [
+            [
+              "Traditional 401(k)",
+              0
+            ],
+            [
+              "Work health insurance premium",
+              0
+            ],
+            [
+              "Health savings account through work",
+              0
+            ],
+            [
+              "Roth 401(k)",
+              1
+            ],
+            [
+              "Paying back a loan from your 401(k)",
+              1
+            ],
+            [
+              "Charity gifts through payroll",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "pc-pretax-q5",
+          "type": "true_false",
+          "prompt": "A Roth 401(k) is taxed now, so the money comes out tax-free in retirement.",
+          "answer": true,
+          "explain": "Pay the tax today, skip it later."
+        },
+        {
+          "id": "pc-pretax-q6",
+          "type": "multiple_choice",
+          "prompt": "$100 of pre-tax deductions shrinks your take-home pay by…",
+          "choices": [
+            "Less than $100",
+            "Exactly $100",
+            "More than $100"
+          ],
+          "answer": 0,
+          "explain": "At 12% tax, $100 pre-tax only costs you $88 of take-home, because $12 of tax disappears too."
+        }
+      ]
+    },
+    {
+      "id": "pc-ytd",
+      "type": "lesson",
+      "format": "document",
+      "title": "Year-to-Date & Your W-2",
+      "summary": "The running totals on your stub, and the form they become.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pc-ytd-q1",
+          "type": "multiple_choice",
+          "context": "[[Year-to-date]] (YTD) totals add up everything since January 1. Most pay stubs show them next to the current paycheck.",
+          "doc": {
+            "kind": "paystub",
+            "title": "Riverside Hardware",
+            "subtitle": "Year-to-date totals · through Jun 30",
+            "lines": [
+              {
+                "id": "gross",
+                "label": "Gross pay, YTD",
+                "amount": 21840.0
+              },
+              {
+                "id": "fed",
+                "label": "Federal income tax, YTD",
+                "amount": -1638.0
+              },
+              {
+                "id": "state",
+                "label": "State income tax, YTD",
+                "amount": -655.2
+              },
+              {
+                "id": "ss",
+                "label": "Social Security, YTD",
+                "amount": -1354.08
+              },
+              {
+                "id": "med",
+                "label": "Medicare, YTD",
+                "amount": -316.68
+              }
+            ]
+          },
+          "prompt": "How much has this person earned before deductions so far this year?",
+          "choices": [
+            "$21,840.00",
+            "$17,876.04",
+            "$1,638.00"
+          ],
+          "answer": 0,
+          "explain": "The gross pay YTD line."
+        },
+        {
+          "id": "pc-ytd-q2",
+          "type": "number",
+          "doc": {
+            "kind": "paystub",
+            "title": "Riverside Hardware",
+            "subtitle": "Year-to-date totals · through Jun 30",
+            "lines": [
+              {
+                "id": "gross",
+                "label": "Gross pay, YTD",
+                "amount": 21840.0
+              },
+              {
+                "id": "fed",
+                "label": "Federal income tax, YTD",
+                "amount": -1638.0
+              },
+              {
+                "id": "state",
+                "label": "State income tax, YTD",
+                "amount": -655.2
+              },
+              {
+                "id": "ss",
+                "label": "Social Security, YTD",
+                "amount": -1354.08
+              },
+              {
+                "id": "med",
+                "label": "Medicare, YTD",
+                "amount": -316.68
+              }
+            ]
+          },
+          "prompt": "How much federal income tax have they paid so far this year?",
+          "answer": 1638,
+          "unit": "$",
+          "explain": "The federal line: $1,638.00."
+        },
+        {
+          "id": "pc-ytd-q3",
+          "type": "number",
+          "doc": {
+            "kind": "paystub",
+            "title": "Riverside Hardware",
+            "subtitle": "Year-to-date totals · through Jun 30",
+            "lines": [
+              {
+                "id": "gross",
+                "label": "Gross pay, YTD",
+                "amount": 21840.0
+              },
+              {
+                "id": "fed",
+                "label": "Federal income tax, YTD",
+                "amount": -1638.0
+              },
+              {
+                "id": "state",
+                "label": "State income tax, YTD",
+                "amount": -655.2
+              },
+              {
+                "id": "ss",
+                "label": "Social Security, YTD",
+                "amount": -1354.08
+              },
+              {
+                "id": "med",
+                "label": "Medicare, YTD",
+                "amount": -316.68
+              }
+            ]
+          },
+          "prompt": "Add up all the deductions so far this year.",
+          "answer": 3963.96,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$1,638.00 + $655.20 + $1,354.08 + $316.68 = $3,963.96."
+        },
+        {
+          "id": "pc-ytd-q4",
+          "type": "number",
+          "doc": {
+            "kind": "paystub",
+            "title": "Riverside Hardware",
+            "subtitle": "Year-to-date totals · through Jun 30",
+            "lines": [
+              {
+                "id": "gross",
+                "label": "Gross pay, YTD",
+                "amount": 21840.0
+              },
+              {
+                "id": "fed",
+                "label": "Federal income tax, YTD",
+                "amount": -1638.0
+              },
+              {
+                "id": "state",
+                "label": "State income tax, YTD",
+                "amount": -655.2
+              },
+              {
+                "id": "ss",
+                "label": "Social Security, YTD",
+                "amount": -1354.08
+              },
+              {
+                "id": "med",
+                "label": "Medicare, YTD",
+                "amount": -316.68
+              }
+            ]
+          },
+          "prompt": "If the second half of the year matches the first, about what will they earn before deductions for the full year?",
+          "answer": 43680,
+          "unit": "$",
+          "explain": "$21,840 × 2 = $43,680."
+        },
+        {
+          "id": "pc-ytd-q5",
+          "type": "multiple_choice",
+          "context": "Every January your employer sends a [[W-2]]: the yearly summary of your pay and the taxes taken out, used to file your tax return.",
+          "prompt": "What’s a W-2 for?",
+          "choices": [
+            "Filing your taxes",
+            "Applying for a job",
+            "Opening a bank account"
+          ],
+          "answer": 0,
+          "explain": "It’s the official record of your year’s pay and tax."
+        },
+        {
+          "id": "pc-ytd-q6",
+          "type": "true_false",
+          "prompt": "Your last pay stub of the year should roughly match your W-2.",
+          "answer": true,
+          "explain": "If they’re far apart, ask payroll why."
+        }
+      ]
+    },
+    {
+      "id": "pc-stub-errors",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Check Your Pay Stub",
+      "summary": "Payroll makes mistakes. Catch them.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pc-stub-errors-q1",
+          "type": "spot",
+          "context": "Payroll mistakes happen. Compare every stub with your own record of hours.",
+          "doc": {
+            "kind": "paystub",
+            "title": "Lakeview Grocery",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Apr 1–14"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "reg",
+                "section": "Earnings",
+                "label": "Regular pay, 72 hrs × $19.00",
+                "amount": 1368.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -102.6
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -84.82
+              },
+              {
+                "id": "med",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -19.84
+              }
+            ]
+          },
+          "prompt": "Your timesheet says you worked 80 hours this pay period. Tap the line that’s wrong.",
+          "answer": "reg",
+          "explain": "It only paid 72 hours. You’re owed 8 more."
+        },
+        {
+          "id": "pc-stub-errors-q2",
+          "type": "number",
+          "prompt": "How much pay is missing? 8 hours at $19.",
+          "answer": 152,
+          "unit": "$",
+          "explain": "8 × $19 = $152, before deductions."
+        },
+        {
+          "id": "pc-stub-errors-q3",
+          "type": "spot",
+          "doc": {
+            "kind": "paystub",
+            "title": "Lakeview Grocery",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Apr 15–28"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "reg",
+                "section": "Earnings",
+                "label": "Regular pay, 80 hrs × $19.00",
+                "amount": 1520.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -114.0
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -94.24
+              },
+              {
+                "id": "med",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -22.04
+              },
+              {
+                "id": "park",
+                "section": "Deductions",
+                "label": "Employee parking permit",
+                "amount": -25.0
+              }
+            ]
+          },
+          "prompt": "You take the bus and never park at work. Which deduction shouldn’t be there?",
+          "answer": "park",
+          "explain": "A $25 parking permit you never asked for."
+        },
+        {
+          "id": "pc-stub-errors-q4",
+          "type": "order",
+          "prompt": "You find a mistake on your stub. Put the fix in order.",
+          "items": [
+            "Compare the stub with your own hours",
+            "Tell your manager or payroll in writing",
+            "Keep copies of your timesheet and stub",
+            "Check the next stub to confirm the fix"
+          ],
+          "explain": "Check, report, document, confirm."
+        },
+        {
+          "id": "pc-stub-errors-q5",
+          "type": "true_false",
+          "prompt": "If payroll underpays you, it’s up to you to notice and speak up.",
+          "answer": true,
+          "explain": "Nobody watches your pay as closely as you do."
+        },
+        {
+          "id": "pc-stub-errors-q6",
+          "type": "multiple_choice",
+          "prompt": "What’s the best habit with pay stubs?",
+          "choices": [
+            "Check hours, rate and deductions every payday",
+            "Never read them",
+            "Only read the net pay"
+          ],
+          "answer": 0,
+          "explain": "Two minutes every payday."
+        }
+      ]
+    },
+    {
+      "id": "pc-jamie",
+      "type": "lesson",
+      "format": "story",
+      "title": "Jamie’s First Salary",
+      "summary": "From $52,000 a year to what actually lands every other Friday.",
+      "xp": 10,
+      "story": {
+        "title": "The first real paycheck",
+        "character": "Jamie, 23, first salaried job",
+        "body": "Jamie just started a first salaried job: **$52,000** a year, paid every two weeks (26 paychecks).\n\nJamie signed up for the 401(k) at **4%** of pay, and work health insurance costs **$60** a paycheck. Each paycheck also loses **$160** to federal income tax, **$60** to state income tax, and **7.65%** to Social Security and Medicare."
+      },
+      "steps": [
+        {
+          "id": "pc-jamie-q1",
+          "type": "number",
+          "prompt": "What’s Jamie’s gross pay per paycheck? ($52,000 ÷ 26)",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$52,000 ÷ 26 = $2,000."
+        },
+        {
+          "id": "pc-jamie-q2",
+          "type": "number",
+          "prompt": "Social Security and Medicare take 7.65% of gross. How much is that per paycheck?",
+          "answer": 153,
+          "unit": "$",
+          "explain": "$2,000 × 0.0765 = $153."
+        },
+        {
+          "id": "pc-jamie-q3",
+          "type": "number",
+          "prompt": "4% of gross goes to the 401(k). How much per paycheck?",
+          "answer": 80,
+          "unit": "$",
+          "explain": "$2,000 × 0.04 = $80."
+        },
+        {
+          "id": "pc-jamie-q4",
+          "type": "number",
+          "prompt": "Add up every deduction: 401(k), health insurance, Social Security and Medicare, federal tax and state tax.",
+          "answer": 513,
+          "unit": "$",
+          "explain": "$80 + $60 + $153 + $160 + $60 = $513."
+        },
+        {
+          "id": "pc-jamie-q5",
+          "type": "number",
+          "prompt": "What lands in Jamie’s account each paycheck?",
+          "answer": 1487,
+          "unit": "$",
+          "explain": "$2,000 − $513 = $1,487."
+        },
+        {
+          "id": "pc-jamie-q6",
+          "type": "multiple_choice",
+          "prompt": "Jamie budgets with $52,000 ÷ 12 = $4,333 a month. What’s wrong with that?",
+          "choices": [
+            "That’s before deductions. Budget take-home pay instead",
+            "Nothing",
+            "Jamie should divide by 52"
+          ],
+          "answer": 0,
+          "explain": "Budget the $1,487s, not the $52,000."
+        },
+        {
+          "id": "pc-jamie-q7",
+          "type": "number",
+          "prompt": "Planning on two paychecks a month, how much take-home does Jamie budget per month?",
+          "answer": 2974,
+          "unit": "$",
+          "explain": "$1,487 × 2 = $2,974."
+        }
+      ]
+    },
+    {
+      "id": "pc-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "pc-trial",
+      "type": "boss",
+      "title": "Den Trial: Your Paycheck",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "pc-trial-q1",
+          "type": "number",
+          "prompt": "$22 an hour, 45 hours this week. What’s the weekly pay?",
+          "answer": 1045,
+          "unit": "$",
+          "explain": "40 × $22 = $880, plus 5 × $33 = $165. $1,045."
+        },
+        {
+          "id": "pc-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "Which two taxes make up FICA?",
+          "choices": [
+            "Social Security and Medicare",
+            "Federal and state income tax",
+            "Sales tax and property tax"
+          ],
+          "answer": 0,
+          "explain": "6.2% plus 1.45%."
+        },
+        {
+          "id": "pc-trial-q3",
+          "type": "number",
+          "prompt": "A $39,000 salary paid every two weeks. What’s each gross paycheck?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$39,000 ÷ 26 = $1,500."
+        },
+        {
+          "id": "pc-trial-q4",
+          "type": "true_false",
+          "prompt": "Pre-tax deductions lower the pay that income tax is worked out on.",
+          "answer": true,
+          "explain": "That’s what pre-tax means."
+        }
+      ]
+    }
+  ]
+}

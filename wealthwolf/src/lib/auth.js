@@ -1,39 +1,31 @@
-import { useSyncExternalStore } from 'react'
-import {
-  GoogleAuthProvider,
-  createUserWithEmailAndPassword,
-  onAuthStateChanged,
-  sendPasswordResetEmail,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  signInWithRedirect,
-  signOut as firebaseSignOut,
-  updateProfile,
-} from 'firebase/auth'
-import { auth, configured } from './firebase.js'
+import { useEffect, useState, useSyncExternalStore } from 'react'
+import { configured, supabase, supabaseKey, supabaseUrl } from './supabase.js'
 
 // Who's signed in, as a small external store like the progress store:
-//   loading  Firebase is still restoring a saved session (don't redirect yet)
+//   loading  Supabase is still restoring a saved session, or finishing a
+//            Google sign-in from the URL (don't redirect yet)
 //   guest    nobody signed in
 //   user     signed in; `user` holds the profile
 let snapshot = { status: configured ? 'loading' : 'guest', user: null }
 const listeners = new Set()
 
 function profileOf(user) {
+  const meta = user.user_metadata ?? {}
   return {
-    uid: user.uid,
-    name: user.displayName || '',
+    uid: user.id,
+    name: meta.full_name || meta.name || '',
     email: user.email || '',
-    photoURL: user.photoURL || '',
+    photoURL: meta.avatar_url || meta.picture || '',
   }
 }
 
-function publish(user) {
-  snapshot = user ? { status: 'user', user: profileOf(user) } : { status: 'guest', user: null }
+function publish(session) {
+  snapshot = session?.user ? { status: 'user', user: profileOf(session.user) } : { status: 'guest', user: null }
   for (const listener of listeners) listener()
 }
 
-if (auth) onAuthStateChanged(auth, publish)
+// Fires once on load (INITIAL_SESSION), then on every sign-in, sign-out and refresh.
+if (supabase) supabase.auth.onAuthStateChange((_event, session) => publish(session))
 
 function subscribe(listener) {
   listeners.add(listener)
@@ -48,69 +40,118 @@ export function useAuth() {
   return useSyncExternalStore(subscribe, getAuthState)
 }
 
-function requireAuth() {
-  if (!auth) throw Object.assign(new Error('Firebase is not configured'), { code: 'app/not-configured' })
-  return auth
+// Which sign-in methods are switched on in the Supabase dashboard. Read from
+// the project's public settings, so the Google button never sends anyone to
+// an error page when Google isn't set up.
+let settingsRequest = null
+export function getAuthSettings() {
+  if (!configured) return Promise.resolve(null)
+  settingsRequest ??= fetch(`${supabaseUrl}/auth/v1/settings`, { headers: { apikey: supabaseKey } })
+    .then((response) => (response.ok ? response.json() : Promise.reject(response.status)))
+    .then((s) => ({ google: Boolean(s.external?.google), email: Boolean(s.external?.email), confirmEmail: !s.mailer_autoconfirm }))
+    .catch(() => {
+      settingsRequest = null
+      return null
+    })
+  return settingsRequest
 }
 
-export async function signInWithGoogle() {
-  const a = requireAuth()
-  const provider = new GoogleAuthProvider()
-  provider.setCustomParameters({ prompt: 'select_account' })
-  try {
-    await signInWithPopup(a, provider)
-  } catch (error) {
-    // Some browsers block the popup outright; a full-page redirect still works.
-    if (error.code === 'auth/popup-blocked') return signInWithRedirect(a, provider)
-    throw error
-  }
+export function useAuthSettings() {
+  const [settings, setSettings] = useState(null)
+  useEffect(() => {
+    let live = true
+    getAuthSettings().then((s) => live && setSettings(s))
+    return () => {
+      live = false
+    }
+  }, [])
+  return settings
 }
 
-export async function signUpWithEmail(name, email, password) {
-  const a = requireAuth()
-  const { user } = await createUserWithEmailAndPassword(a, email.trim(), password)
-  if (name.trim()) {
-    await updateProfile(user, { displayName: name.trim() })
-    publish(a.currentUser) // the first auth event fired before the name was set
-  }
+const fail = (code) => Object.assign(new Error(code), { code })
+
+function client() {
+  if (!supabase) throw fail('not_configured')
+  return supabase
 }
 
-export function signInWithEmail(email, password) {
-  return signInWithEmailAndPassword(requireAuth(), email.trim(), password)
+const absolute = (path) => new URL(path, window.location.origin).href
+
+// Leaves the page for Google, then comes back to `returnTo` signed in.
+export async function signInWithGoogle(returnTo) {
+  const { error } = await client().auth.signInWithOAuth({
+    provider: 'google',
+    options: { redirectTo: absolute(returnTo), queryParams: { prompt: 'select_account' } },
+  })
+  if (error) throw error
 }
 
-export function sendReset(email) {
-  return sendPasswordResetEmail(requireAuth(), email.trim())
+// Resolves { needsConfirmation } when the project makes new users confirm their email first.
+export async function signUpWithEmail(name, email, password, returnTo) {
+  const { data, error } = await client().auth.signUp({
+    email: email.trim(),
+    password,
+    options: { data: { full_name: name.trim() }, emailRedirectTo: absolute(returnTo) },
+  })
+  if (error) throw error
+  // An address that's already registered comes back as a user with no identities.
+  if (data.user && data.user.identities?.length === 0) throw fail('user_already_exists')
+  return { needsConfirmation: !data.session }
 }
 
-export function signOut() {
-  return firebaseSignOut(requireAuth())
+export async function signInWithEmail(email, password) {
+  const { error } = await client().auth.signInWithPassword({ email: email.trim(), password })
+  if (error) throw error
 }
 
-// Firebase error codes, in words a person can act on. null means say nothing
-// (they closed the Google window themselves).
+export async function sendReset(email) {
+  const { error } = await client().auth.resetPasswordForEmail(email.trim(), { redirectTo: absolute('/reset-password') })
+  if (error) throw error
+}
+
+export async function updatePassword(password) {
+  const { error } = await client().auth.updateUser({ password })
+  if (error) throw error
+}
+
+// Signs out this browser only; other devices stay signed in.
+export async function signOut() {
+  const { error } = await client().auth.signOut({ scope: 'local' })
+  if (error) throw error
+}
+
+// An error Supabase sent back in the URL after a Google sign-in, if any.
+export function redirectError() {
+  const params = new URLSearchParams(window.location.search)
+  const hash = new URLSearchParams(window.location.hash.slice(1))
+  const code = params.get('error_code') || hash.get('error_code') || params.get('error') || hash.get('error')
+  return code ? { code, message: params.get('error_description') || hash.get('error_description') } : null
+}
+
+// Supabase error codes, in words a person can act on. null means say nothing.
 const MESSAGES = {
-  'auth/email-already-in-use': 'There’s already an account with that email. Sign in instead.',
-  'auth/invalid-credential': 'That email and password don’t match.',
-  'auth/invalid-login-credentials': 'That email and password don’t match.',
-  'auth/wrong-password': 'That email and password don’t match.',
-  'auth/user-not-found': 'That email and password don’t match.',
-  'auth/invalid-email': 'That email address doesn’t look right.',
-  'auth/missing-email': 'Enter your email address.',
-  'auth/missing-password': 'Enter a password.',
-  'auth/weak-password': 'Use at least 6 characters for your password.',
-  'auth/account-exists-with-different-credential': 'That email already has an account. Sign in the way you signed up.',
-  'auth/network-request-failed': 'Can’t reach the sign-in service. Check your connection and try again.',
-  'auth/too-many-requests': 'Too many tries. Wait a minute, then try again.',
-  'auth/operation-not-allowed': 'That way of signing in isn’t switched on in Firebase yet.',
-  'auth/unauthorized-domain': 'This address isn’t on the Firebase project’s list of allowed domains.',
-  'auth/popup-closed-by-user': null,
-  'auth/cancelled-popup-request': null,
-  'auth/user-cancelled': null,
-  'app/not-configured': 'Sign-in isn’t set up yet.',
+  invalid_credentials: 'That email and password don’t match.',
+  user_already_exists: 'There’s already an account with that email. Sign in instead.',
+  email_exists: 'There’s already an account with that email. Sign in instead.',
+  weak_password: 'Use at least 6 characters for your password.',
+  email_not_confirmed: 'Confirm your email first. Check your inbox for the link we sent.',
+  email_address_invalid: 'That email address doesn’t look right.',
+  validation_failed: 'That email address doesn’t look right.',
+  missing_email: 'Enter your email address.',
+  missing_password: 'Enter a password.',
+  same_password: 'That’s your current password. Pick a new one.',
+  over_email_send_rate_limit: 'Too many emails sent. Wait a few minutes, then try again.',
+  over_request_rate_limit: 'Too many tries. Wait a minute, then try again.',
+  provider_disabled: 'Google sign-in isn’t switched on yet.',
+  access_denied: null, // they closed or cancelled the Google window
+  signup_disabled: 'New sign-ups are switched off right now.',
+  not_configured: 'Sign-in isn’t set up yet.',
 }
 
 export function friendlyError(error) {
+  if (error?.name === 'AuthRetryableFetchError' || error?.status === 0 || error instanceof TypeError) {
+    return 'Can’t reach the sign-in service. Check your connection and try again.'
+  }
   const code = error?.code
   return code in MESSAGES ? MESSAGES[code] : 'Something went wrong. Try again.'
 }

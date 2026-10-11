@@ -3,7 +3,7 @@
 import json, os
 from decimal import Decimal as D
 
-DATA = '/Users/jackdworkin/Claude Code Projects/wealthwolf/src/data'
+DATA = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'src', 'data'))
 SECTION = 'everyday-money'
 
 

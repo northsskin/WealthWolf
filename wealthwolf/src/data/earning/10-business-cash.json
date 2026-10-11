@@ -1,0 +1,885 @@
+{
+  "id": "business-cash",
+  "section": "earning",
+  "order": 10,
+  "title": "Business Cash Flow & Pricing",
+  "description": "Price for profit, read a P&L, and keep cash coming in.",
+  "wolfLine": "Profit is the kill. Cash is what you can eat today.",
+  "terms": {
+    "markup": {
+      "term": "Markup",
+      "definition": "Your profit on an item, as a percent of what it cost you.",
+      "example": "Cost $6, price $15: $9 profit is a 150% markup."
+    },
+    "profit-margin": {
+      "term": "Profit margin",
+      "definition": "Your profit on an item, as a percent of its price.",
+      "example": "Price $15, profit $9: a 60% margin."
+    },
+    "break-even-point": {
+      "term": "Break-even point",
+      "definition": "How many sales it takes to cover all your costs. Below it you lose money, above it you profit.",
+      "example": "Costs of $600 a month, $15 left per sale: break even at 40 sales."
+    },
+    "profit-and-loss": {
+      "term": "Profit and loss statement",
+      "definition": "A report of a period’s revenue, costs and profit. Often called a P&L.",
+      "example": "March: $3,750 revenue, $1,821.50 costs, $1,928.50 profit."
+    },
+    "owners-draw": {
+      "term": "Owner’s draw",
+      "definition": "Moving profit from your business account to your personal account to pay yourself.",
+      "example": "Transferring $1,200 to yourself on the 1st of each month."
+    }
+  },
+  "lessons": [
+    {
+      "id": "bc-pricing",
+      "type": "lesson",
+      "title": "Price to Cover Your Costs",
+      "summary": "Every price has to beat your costs and survive your customers.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bc-pricing-q1",
+          "type": "info",
+          "title": "Three numbers behind every price",
+          "body": "What each item costs you to make, what the business costs to run each month, and what customers will pay. Your price has to beat the first two, and survive the third."
+        },
+        {
+          "id": "bc-pricing-q2",
+          "type": "number",
+          "prompt": "A candle costs you $6 to make. You sell it for $15. How much is left per candle?",
+          "answer": 9,
+          "unit": "$",
+          "explain": "$15 − $6 = $9."
+        },
+        {
+          "id": "bc-pricing-q3",
+          "type": "number",
+          "prompt": "Your booth costs $120 a month. How many candles must you sell just to cover it? Round up to a whole candle.",
+          "answer": 14,
+          "unit": "candles",
+          "explain": "$120 ÷ $9 = 13.3, so 14 candles."
+        },
+        {
+          "id": "bc-pricing-q4",
+          "type": "multiple_choice",
+          "prompt": "A competitor sells similar candles for $12. What do you do?",
+          "choices": [
+            "Show why yours are worth $15, or find ways to cut costs",
+            "Sell at $5 to win",
+            "Ignore them"
+          ],
+          "answer": 0,
+          "explain": "Racing to the bottom rarely ends well."
+        },
+        {
+          "id": "bc-pricing-q5",
+          "type": "true_false",
+          "prompt": "Pricing too low can make a busy business lose money.",
+          "answer": true,
+          "explain": "More sales at a loss is more loss."
+        },
+        {
+          "id": "bc-pricing-q6",
+          "type": "multiple_choice",
+          "prompt": "Which costs belong in your price?",
+          "choices": [
+            "Materials, your time, fees and overhead",
+            "Only materials",
+            "None"
+          ],
+          "answer": 0,
+          "explain": "If it costs you, the price must cover it."
+        }
+      ]
+    },
+    {
+      "id": "bc-markup-margin",
+      "type": "lesson",
+      "title": "Markup and Margin",
+      "summary": "Two ways to measure the same profit.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bc-markup-margin-q1",
+          "type": "number",
+          "context": "[[Markup]] compares your profit to your cost. [[Profit margin]] compares your profit to the price.",
+          "prompt": "Cost $6, price $15, profit $9. What’s the markup?",
+          "answer": 150,
+          "unit": "%",
+          "explain": "$9 ÷ $6 = 1.5, which is 150%."
+        },
+        {
+          "id": "bc-markup-margin-q2",
+          "type": "number",
+          "prompt": "And the profit margin?",
+          "answer": 60,
+          "unit": "%",
+          "explain": "$9 ÷ $15 = 0.6, which is 60%."
+        },
+        {
+          "id": "bc-markup-margin-q3",
+          "type": "multiple_choice",
+          "prompt": "Which is always the smaller percent?",
+          "choices": [
+            "Margin",
+            "Markup"
+          ],
+          "answer": 0,
+          "explain": "Margin divides by the bigger number, the price."
+        },
+        {
+          "id": "bc-markup-margin-q4",
+          "type": "number",
+          "prompt": "You want a 50% margin on something that costs you $10. What price? (Price = cost ÷ 0.5)",
+          "answer": 20,
+          "unit": "$",
+          "explain": "$10 ÷ 0.5 = $20."
+        },
+        {
+          "id": "bc-markup-margin-q5",
+          "type": "true_false",
+          "prompt": "A 100% markup means you charge double your cost.",
+          "answer": true,
+          "explain": "Cost $10, profit $10, price $20."
+        },
+        {
+          "id": "bc-markup-margin-q6",
+          "type": "number",
+          "prompt": "Cost $8, price $10. What’s the profit margin?",
+          "answer": 20,
+          "unit": "%",
+          "explain": "$2 ÷ $10 = 0.2, which is 20%."
+        }
+      ]
+    },
+    {
+      "id": "bc-break-even",
+      "type": "lesson",
+      "title": "The Break-Even Point",
+      "summary": "How many sales before you make a dime.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bc-break-even-q1",
+          "type": "multiple_choice",
+          "context": "Your [[break-even point]] is how many sales it takes to cover all your costs. Below it you lose money, above it you profit.",
+          "prompt": "What happens at the break-even point?",
+          "choices": [
+            "Revenue equals costs: no profit, no loss",
+            "Profit is highest",
+            "You go broke"
+          ],
+          "answer": 0,
+          "explain": "Every sale after it is profit."
+        },
+        {
+          "id": "bc-break-even-q2",
+          "type": "number",
+          "prompt": "Monthly costs are $600. Each sale leaves $15 after its own costs. How many sales to break even?",
+          "answer": 40,
+          "unit": "sales",
+          "explain": "$600 ÷ $15 = 40."
+        },
+        {
+          "id": "bc-break-even-q3",
+          "type": "number",
+          "prompt": "You make 55 sales. What’s the profit?",
+          "answer": 225,
+          "unit": "$",
+          "explain": "15 sales past break-even × $15 = $225."
+        },
+        {
+          "id": "bc-break-even-q4",
+          "type": "number",
+          "prompt": "Raise the price so each sale leaves $20. What’s the new break-even?",
+          "answer": 30,
+          "unit": "sales",
+          "explain": "$600 ÷ $20 = 30."
+        },
+        {
+          "id": "bc-break-even-q5",
+          "type": "true_false",
+          "prompt": "Lowering your monthly costs lowers your break-even point.",
+          "answer": true,
+          "explain": "Less to cover, fewer sales needed."
+        },
+        {
+          "id": "bc-break-even-q6",
+          "type": "multiple_choice",
+          "prompt": "You sell 25 a month and break-even is 40. Your options?",
+          "choices": [
+            "Raise prices, cut costs, or sell more",
+            "Ignore it",
+            "Hire more people"
+          ],
+          "answer": 0,
+          "explain": "Three levers. Pull at least one."
+        }
+      ]
+    },
+    {
+      "id": "bc-cash-timing",
+      "type": "lesson",
+      "title": "Profit Isn’t Cash",
+      "summary": "Why profitable businesses still run out of money.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bc-cash-timing-q1",
+          "type": "info",
+          "title": "Profitable and broke",
+          "body": "A business can be profitable on paper and still run out of cash, because money goes out before it comes in. You pay for supplies today, and customers may pay you in 30 or 60 days."
+        },
+        {
+          "id": "bc-cash-timing-q2",
+          "type": "number",
+          "prompt": "You buy $2,000 of supplies on May 1. The client pays $3,500 on June 15. What’s the profit on the job?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$3,500 − $2,000 = $1,500."
+        },
+        {
+          "id": "bc-cash-timing-q3",
+          "type": "multiple_choice",
+          "prompt": "On May 31, how does your cash look?",
+          "choices": [
+            "Down $2,000, waiting on payment",
+            "Up $1,500",
+            "Even"
+          ],
+          "answer": 0,
+          "explain": "The profit exists, but not in your account yet."
+        },
+        {
+          "id": "bc-cash-timing-q4",
+          "type": "multiple_choice",
+          "prompt": "How can you close the gap?",
+          "choices": [
+            "Deposits upfront, faster invoicing, or a cash cushion",
+            "Ignore it",
+            "Pay suppliers late on purpose"
+          ],
+          "answer": 0,
+          "explain": "Get money in sooner, or keep more on hand."
+        },
+        {
+          "id": "bc-cash-timing-q5",
+          "type": "true_false",
+          "prompt": "Cash flow problems sink many profitable small businesses.",
+          "answer": true,
+          "explain": "Running out of cash ends a business faster than low profit."
+        },
+        {
+          "id": "bc-cash-timing-q6",
+          "type": "multiple_choice",
+          "prompt": "Which habit speeds up cash coming in?",
+          "choices": [
+            "Invoicing the day the work is done",
+            "Waiting a month to invoice",
+            "Offering 90-day terms"
+          ],
+          "answer": 0,
+          "explain": "The clock on net 30 only starts when you invoice."
+        }
+      ]
+    },
+    {
+      "id": "bc-pl",
+      "type": "lesson",
+      "format": "document",
+      "title": "Read a Profit & Loss",
+      "summary": "One page that tells you if the month worked.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bc-pl-q1",
+          "type": "number",
+          "context": "A [[profit and loss statement|profit-and-loss]] (P&L) lists a period’s revenue, then its costs, and ends with profit.",
+          "doc": {
+            "kind": "bill",
+            "title": "Wick & Co. Candles",
+            "subtitle": "Profit and loss · March",
+            "lines": [
+              {
+                "id": "candles",
+                "section": "Revenue",
+                "label": "Candle sales",
+                "amount": 3150.0
+              },
+              {
+                "id": "workshops",
+                "section": "Revenue",
+                "label": "Workshop tickets",
+                "amount": 600.0
+              },
+              {
+                "id": "materials",
+                "section": "Costs",
+                "label": "Wax, wicks and jars",
+                "amount": -1260.0
+              },
+              {
+                "id": "booth",
+                "section": "Costs",
+                "label": "Booth rent",
+                "amount": -240.0
+              },
+              {
+                "id": "cardfees",
+                "section": "Costs",
+                "label": "Card fees",
+                "amount": -112.5
+              },
+              {
+                "id": "pack",
+                "section": "Costs",
+                "label": "Packaging",
+                "amount": -180.0
+              },
+              {
+                "id": "web",
+                "section": "Costs",
+                "label": "Website",
+                "amount": -29.0
+              }
+            ]
+          },
+          "prompt": "What was total revenue in March?",
+          "answer": 3750,
+          "unit": "$",
+          "explain": "$3,150 + $600 = $3,750."
+        },
+        {
+          "id": "bc-pl-q2",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Wick & Co. Candles",
+            "subtitle": "Profit and loss · March",
+            "lines": [
+              {
+                "id": "candles",
+                "section": "Revenue",
+                "label": "Candle sales",
+                "amount": 3150.0
+              },
+              {
+                "id": "workshops",
+                "section": "Revenue",
+                "label": "Workshop tickets",
+                "amount": 600.0
+              },
+              {
+                "id": "materials",
+                "section": "Costs",
+                "label": "Wax, wicks and jars",
+                "amount": -1260.0
+              },
+              {
+                "id": "booth",
+                "section": "Costs",
+                "label": "Booth rent",
+                "amount": -240.0
+              },
+              {
+                "id": "cardfees",
+                "section": "Costs",
+                "label": "Card fees",
+                "amount": -112.5
+              },
+              {
+                "id": "pack",
+                "section": "Costs",
+                "label": "Packaging",
+                "amount": -180.0
+              },
+              {
+                "id": "web",
+                "section": "Costs",
+                "label": "Website",
+                "amount": -29.0
+              }
+            ]
+          },
+          "prompt": "Add up the costs.",
+          "answer": 1821.5,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$1,260.00 + $240.00 + $112.50 + $180.00 + $29.00 = $1,821.50."
+        },
+        {
+          "id": "bc-pl-q3",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Wick & Co. Candles",
+            "subtitle": "Profit and loss · March",
+            "lines": [
+              {
+                "id": "candles",
+                "section": "Revenue",
+                "label": "Candle sales",
+                "amount": 3150.0
+              },
+              {
+                "id": "workshops",
+                "section": "Revenue",
+                "label": "Workshop tickets",
+                "amount": 600.0
+              },
+              {
+                "id": "materials",
+                "section": "Costs",
+                "label": "Wax, wicks and jars",
+                "amount": -1260.0
+              },
+              {
+                "id": "booth",
+                "section": "Costs",
+                "label": "Booth rent",
+                "amount": -240.0
+              },
+              {
+                "id": "cardfees",
+                "section": "Costs",
+                "label": "Card fees",
+                "amount": -112.5
+              },
+              {
+                "id": "pack",
+                "section": "Costs",
+                "label": "Packaging",
+                "amount": -180.0
+              },
+              {
+                "id": "web",
+                "section": "Costs",
+                "label": "Website",
+                "amount": -29.0
+              }
+            ]
+          },
+          "prompt": "What was the profit?",
+          "answer": 1928.5,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$3,750.00 − $1,821.50 = $1,928.50."
+        },
+        {
+          "id": "bc-pl-q4",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Wick & Co. Candles",
+            "subtitle": "Profit and loss · March",
+            "lines": [
+              {
+                "id": "candles",
+                "section": "Revenue",
+                "label": "Candle sales",
+                "amount": 3150.0
+              },
+              {
+                "id": "workshops",
+                "section": "Revenue",
+                "label": "Workshop tickets",
+                "amount": 600.0
+              },
+              {
+                "id": "materials",
+                "section": "Costs",
+                "label": "Wax, wicks and jars",
+                "amount": -1260.0
+              },
+              {
+                "id": "booth",
+                "section": "Costs",
+                "label": "Booth rent",
+                "amount": -240.0
+              },
+              {
+                "id": "cardfees",
+                "section": "Costs",
+                "label": "Card fees",
+                "amount": -112.5
+              },
+              {
+                "id": "pack",
+                "section": "Costs",
+                "label": "Packaging",
+                "amount": -180.0
+              },
+              {
+                "id": "web",
+                "section": "Costs",
+                "label": "Website",
+                "amount": -29.0
+              }
+            ]
+          },
+          "prompt": "What’s the profit margin? Round to the nearest whole percent.",
+          "answer": 51,
+          "unit": "%",
+          "explain": "$1,928.50 ÷ $3,750 = 0.514, about 51%."
+        },
+        {
+          "id": "bc-pl-q5",
+          "type": "multiple_choice",
+          "doc": {
+            "kind": "bill",
+            "title": "Wick & Co. Candles",
+            "subtitle": "Profit and loss · March",
+            "lines": [
+              {
+                "id": "candles",
+                "section": "Revenue",
+                "label": "Candle sales",
+                "amount": 3150.0
+              },
+              {
+                "id": "workshops",
+                "section": "Revenue",
+                "label": "Workshop tickets",
+                "amount": 600.0
+              },
+              {
+                "id": "materials",
+                "section": "Costs",
+                "label": "Wax, wicks and jars",
+                "amount": -1260.0
+              },
+              {
+                "id": "booth",
+                "section": "Costs",
+                "label": "Booth rent",
+                "amount": -240.0
+              },
+              {
+                "id": "cardfees",
+                "section": "Costs",
+                "label": "Card fees",
+                "amount": -112.5
+              },
+              {
+                "id": "pack",
+                "section": "Costs",
+                "label": "Packaging",
+                "amount": -180.0
+              },
+              {
+                "id": "web",
+                "section": "Costs",
+                "label": "Website",
+                "amount": -29.0
+              }
+            ]
+          },
+          "prompt": "Which cost is the biggest?",
+          "choices": [
+            "Wax, wicks and jars",
+            "Booth rent",
+            "Website"
+          ],
+          "answer": 0,
+          "explain": "$1,260, about two thirds of all costs."
+        },
+        {
+          "id": "bc-pl-q6",
+          "type": "true_false",
+          "prompt": "Comparing this month’s P&L with last month’s shows whether you’re improving.",
+          "answer": true,
+          "explain": "One month is a photo. Several are a movie."
+        }
+      ]
+    },
+    {
+      "id": "bc-find-leak",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Find the Leak",
+      "summary": "Old subscriptions quietly eat small businesses too.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bc-find-leak-q1",
+          "type": "spot",
+          "context": "Business accounts leak like personal ones. Read the statement every month.",
+          "doc": {
+            "kind": "statement",
+            "title": "Wick & Co. business account",
+            "subtitle": "Checking · Apr 1–15",
+            "lines": [
+              {
+                "id": "etsy",
+                "date": "Apr 2",
+                "label": "Marketplace selling fees",
+                "amount": -96.4
+              },
+              {
+                "id": "labels",
+                "date": "Apr 5",
+                "label": "Shipping labels",
+                "amount": -61.25
+              },
+              {
+                "id": "design",
+                "date": "Apr 8",
+                "label": "DesignPro subscription",
+                "amount": -29.99
+              },
+              {
+                "id": "wax",
+                "date": "Apr 12",
+                "label": "Wax supplier",
+                "amount": -310.0
+              },
+              {
+                "id": "ads",
+                "date": "Apr 15",
+                "label": "Online ads, spring sale",
+                "amount": -50.0
+              }
+            ]
+          },
+          "prompt": "You switched to a free design app in January. Tap the charge that’s still running.",
+          "answer": "design",
+          "explain": "An old subscription you no longer use."
+        },
+        {
+          "id": "bc-find-leak-q2",
+          "type": "number",
+          "prompt": "What does that leak cost over a year?",
+          "answer": 359.88,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$29.99 × 12 = $359.88."
+        },
+        {
+          "id": "bc-find-leak-q3",
+          "type": "number",
+          "prompt": "Your profit margin is 50%. How much in extra sales would it take to earn that $359.88 back?",
+          "answer": 719.76,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "At 50%, $719.76 of sales leaves $359.88 of profit."
+        },
+        {
+          "id": "bc-find-leak-q4",
+          "type": "true_false",
+          "prompt": "Cutting a cost can be worth more than the same amount of new sales.",
+          "answer": true,
+          "explain": "A dollar saved is a whole dollar. A dollar of sales is only its margin."
+        },
+        {
+          "id": "bc-find-leak-q5",
+          "type": "multiple_choice",
+          "prompt": "What’s the habit that catches these?",
+          "choices": [
+            "A monthly review of every business charge",
+            "Checking once a year",
+            "Never"
+          ],
+          "answer": 0,
+          "explain": "The same check-in you do at home."
+        }
+      ]
+    },
+    {
+      "id": "bc-pay-yourself",
+      "type": "lesson",
+      "title": "Paying Yourself",
+      "summary": "Taxes first, cushion second, you third.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bc-pay-yourself-q1",
+          "type": "multiple_choice",
+          "context": "When you own the business, you pay yourself with an [[owner’s draw|owners-draw]]: moving profit from the business account to your personal one.",
+          "prompt": "What’s an owner’s draw?",
+          "choices": [
+            "Moving business profit to yourself",
+            "A drawing contest",
+            "A bank loan"
+          ],
+          "answer": 0,
+          "explain": "Your paycheck, when you’re the boss."
+        },
+        {
+          "id": "bc-pay-yourself-q2",
+          "type": "number",
+          "prompt": "Profit is $2,000 this month. Set aside 25% for taxes. How much is left?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$2,000 × 0.75 = $1,500."
+        },
+        {
+          "id": "bc-pay-yourself-q3",
+          "type": "number",
+          "prompt": "Keep 20% of that in the business as a cushion. What can you draw?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$1,500 × 0.80 = $1,200."
+        },
+        {
+          "id": "bc-pay-yourself-q4",
+          "type": "multiple_choice",
+          "prompt": "Why pay yourself a steady amount instead of everything in good months?",
+          "choices": [
+            "It smooths out the slow months",
+            "It’s the law",
+            "For taxes only"
+          ],
+          "answer": 0,
+          "explain": "The same idea as an income buffer."
+        },
+        {
+          "id": "bc-pay-yourself-q5",
+          "type": "true_false",
+          "prompt": "Taking every dollar out leaves nothing for slow months or growth.",
+          "answer": true,
+          "explain": "The business needs savings too."
+        },
+        {
+          "id": "bc-pay-yourself-q6",
+          "type": "multiple_choice",
+          "prompt": "The business has a great month. Best move?",
+          "choices": [
+            "Keep your usual draw and grow the cushion",
+            "Draw it all and spend it",
+            "Close the account"
+          ],
+          "answer": 0,
+          "explain": "Good months pay for bad ones."
+        }
+      ]
+    },
+    {
+      "id": "bc-imani-busy",
+      "type": "lesson",
+      "format": "story",
+      "title": "Imani’s Busy Season",
+      "summary": "A great order, and a cash crunch anyway.",
+      "xp": 10,
+      "story": {
+        "title": "The big order",
+        "character": "Imani, 32, now baking full time",
+        "body": "In December, a company orders **$4,200** of holiday bread, to be paid **30** days after delivery.\n\nOn Dec 1 Imani spends **$1,800** on ingredients. Her business account had **$2,500**. Her kitchen rent of **$400** is due Dec 15.\n\nOn Dec 20 her oven needs a **$500** repair. The client’s payment arrives Jan 5."
+      },
+      "steps": [
+        {
+          "id": "bc-imani-busy-q1",
+          "type": "number",
+          "prompt": "What’s the profit on the order, before kitchen rent?",
+          "answer": 2400,
+          "unit": "$",
+          "explain": "$4,200 − $1,800 = $2,400."
+        },
+        {
+          "id": "bc-imani-busy-q2",
+          "type": "number",
+          "prompt": "After buying ingredients on Dec 1, what’s left in her account?",
+          "answer": 700,
+          "unit": "$",
+          "explain": "$2,500 − $1,800 = $700."
+        },
+        {
+          "id": "bc-imani-busy-q3",
+          "type": "number",
+          "prompt": "After the $400 kitchen rent on Dec 15, what’s left?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$700 − $400 = $300."
+        },
+        {
+          "id": "bc-imani-busy-q4",
+          "type": "multiple_choice",
+          "prompt": "The $500 oven repair on Dec 20. What’s the problem?",
+          "choices": [
+            "She can’t cover it until the client pays",
+            "No problem",
+            "The profit covers it"
+          ],
+          "answer": 0,
+          "explain": "$2,400 of profit, $300 of cash. Profit isn’t cash."
+        },
+        {
+          "id": "bc-imani-busy-q5",
+          "type": "multiple_choice",
+          "prompt": "What would have prevented the crunch?",
+          "choices": [
+            "Asking for a 50% deposit on the order",
+            "Lower prices",
+            "Buying more ingredients"
+          ],
+          "answer": 0,
+          "explain": "Deposits fund the work."
+        },
+        {
+          "id": "bc-imani-busy-q6",
+          "type": "number",
+          "prompt": "A 50% deposit on $4,200 would have brought in how much on Dec 1?",
+          "answer": 2100,
+          "unit": "$",
+          "explain": "$4,200 × 0.50 = $2,100."
+        }
+      ]
+    },
+    {
+      "id": "bc-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "bc-trial",
+      "type": "boss",
+      "title": "Den Trial: Business Cash",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "bc-trial-q1",
+          "type": "number",
+          "prompt": "Monthly costs $900, and each sale leaves $30. How many sales to break even?",
+          "answer": 30,
+          "unit": "sales",
+          "explain": "$900 ÷ $30 = 30."
+        },
+        {
+          "id": "bc-trial-q2",
+          "type": "number",
+          "prompt": "Cost $12, price $20. What’s the profit margin?",
+          "answer": 40,
+          "unit": "%",
+          "explain": "$8 ÷ $20 = 0.4, which is 40%."
+        },
+        {
+          "id": "bc-trial-q3",
+          "type": "true_false",
+          "prompt": "A profitable business can still run out of cash.",
+          "answer": true,
+          "explain": "Timing matters as much as profit."
+        },
+        {
+          "id": "bc-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "Moving business profit into your personal account is called…",
+          "choices": [
+            "an owner’s draw",
+            "a business loan",
+            "a tax form"
+          ],
+          "answer": 0,
+          "explain": "Profit moving to you."
+        }
+      ]
+    }
+  ]
+}
