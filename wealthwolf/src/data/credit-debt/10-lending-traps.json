@@ -1,0 +1,708 @@
+{
+  "id": "lending-traps",
+  "section": "credit-debt",
+  "order": 10,
+  "title": "Payday Loans, BNPL & Other Traps",
+  "description": "Fast cash, weekly payments, and the price hidden in a small fee.",
+  "wolfLine": "Fast cash is the most expensive money in the woods.",
+  "terms": {
+    "payday-loan": {
+      "term": "Payday loan",
+      "definition": "A small, short loan due on your next payday. The fee looks tiny and the yearly cost is enormous.",
+      "example": "Borrow $100 for two weeks and pay a $15 fee. That is about a 390% APR."
+    },
+    "buy-now-pay-later": {
+      "term": "Buy now, pay later",
+      "definition": "A plan that splits a purchase into a few payments, often four. On time, interest is often $0. Miss one, and a fee can land. Several plans stack.",
+      "example": "Four payments of $50 cover a $200 purchase. Three plans at once can mean $150 leaving your account in one week."
+    },
+    "title-loan": {
+      "term": "Title loan",
+      "definition": "A short loan that uses your car title as collateral. Miss the payments and the lender can take the car.",
+      "example": "Borrow $1,000 against a car worth $8,000. The car is on the line for a $1,000 emergency."
+    }
+  },
+  "lessons": [
+    {
+      "id": "lt-payday",
+      "type": "lesson",
+      "title": "Payday Loan Math",
+      "summary": "Fifteen dollars on a hundred, for two weeks, is not a small price.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "lt-payday-q1",
+          "type": "multiple_choice",
+          "context": "A [[payday loan]] of $100 with a $15 fee, due in two weeks, does not look like much. There are 26 two-week periods in 52 weeks. 15% × 26 = 390% [[APR]].",
+          "prompt": "What is a payday loan?",
+          "choices": [
+            "A small loan due on your next payday, with a fee that hides a huge yearly cost",
+            "A cheaper form of a credit card",
+            "An advance from your employer’s paycheck with no lender"
+          ],
+          "answer": 0,
+          "explain": "The fee is the whole product."
+        },
+        {
+          "id": "lt-payday-q2",
+          "type": "number",
+          "prompt": "The fee is $15 on $100. What percent of the loan is the fee?",
+          "answer": 15,
+          "unit": "%",
+          "explain": "$15 ÷ $100 = 15%."
+        },
+        {
+          "id": "lt-payday-q3",
+          "type": "number",
+          "prompt": "How many two-week periods are in a 52-week year?",
+          "answer": 26,
+          "unit": "periods",
+          "explain": "52 ÷ 2 = 26."
+        },
+        {
+          "id": "lt-payday-q4",
+          "type": "number",
+          "prompt": "What APR does 15% every two weeks work out to?",
+          "answer": 390,
+          "unit": "%",
+          "explain": "15% × 26 = 390%."
+        },
+        {
+          "id": "lt-payday-q5",
+          "type": "number",
+          "prompt": "You roll the $100 loan four times, paying the $15 fee each time, and never cut the principal. How much have the fees cost?",
+          "answer": 60,
+          "unit": "$",
+          "explain": "$15 × 4 = $60, and you still owe the $100."
+        },
+        {
+          "id": "lt-payday-q6",
+          "type": "true_false",
+          "prompt": "A $15 fee on $100 is cheap because 15 is a small number.",
+          "answer": false,
+          "explain": "For two weeks, that fee is about a 390% APR."
+        }
+      ]
+    },
+    {
+      "id": "lt-rent-to-own",
+      "type": "lesson",
+      "title": "Rent to Own",
+      "summary": "The weekly payment is the advertisement. The year of weeks is the price.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "lt-rent-to-own-q1",
+          "type": "number",
+          "context": "Rent-to-own lets you take an item home for a weekly fee. You can pay several times the cash price before you own it.",
+          "prompt": "A laptop is $900 in cash, or $35 a week for 104 weeks. What do the weekly payments add up to?",
+          "answer": 3640,
+          "unit": "$",
+          "explain": "$35 × 104 = $3,640."
+        },
+        {
+          "id": "lt-rent-to-own-q2",
+          "type": "number",
+          "prompt": "How much more is that than the $900 cash price?",
+          "answer": 2740,
+          "unit": "$",
+          "explain": "$3,640 − $900 = $2,740."
+        },
+        {
+          "id": "lt-rent-to-own-q3",
+          "type": "multiple_choice",
+          "prompt": "What are you mostly paying for?",
+          "choices": [
+            "The right to spread a $900 item across two years, at a very high price",
+            "A cheaper laptop",
+            "A warranty that cuts the price"
+          ],
+          "answer": 0,
+          "explain": "Same laptop, $2,740 extra."
+        },
+        {
+          "id": "lt-rent-to-own-q4",
+          "type": "true_false",
+          "prompt": "Stopping the weekly payments usually means you own a share of the item.",
+          "answer": false,
+          "explain": "In a typical rent-to-own deal you return it, and the payments you made do not buy you equity."
+        },
+        {
+          "id": "lt-rent-to-own-q5",
+          "type": "number",
+          "prompt": "You can save $45 a week. How many weeks to reach the $900 cash price?",
+          "answer": 20,
+          "unit": "weeks",
+          "explain": "$900 ÷ $45 = 20 weeks. Then you own it, for $900."
+        },
+        {
+          "id": "lt-rent-to-own-q6",
+          "type": "multiple_choice",
+          "prompt": "Which is the careful path if the laptop can wait?",
+          "choices": [
+            "Save $45 a week and buy it for $900",
+            "Start the 104-week plan today",
+            "Put it on a payday loan"
+          ],
+          "answer": 0,
+          "explain": "Twenty-six weeks of saving beats two years of fees."
+        }
+      ]
+    },
+    {
+      "id": "lt-title",
+      "type": "lesson",
+      "title": "Title Loans",
+      "summary": "The loan is small. The collateral is your way to work.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "lt-title-q1",
+          "type": "multiple_choice",
+          "context": "A [[title loan]] is secured by your car. Borrow $1,000 and the lender holds the title. Miss the payments and they can take a car worth far more than $1,000.",
+          "prompt": "What does a title loan use as collateral?",
+          "choices": [
+            "Your car’s title",
+            "Your next birthday",
+            "A credit card you do not have"
+          ],
+          "answer": 0,
+          "explain": "The car is how they get paid if you do not."
+        },
+        {
+          "id": "lt-title-q2",
+          "type": "number",
+          "prompt": "The car is worth $8,000. The loan is $1,000. How much of the car’s value is at risk for that loan?",
+          "answer": 8000,
+          "unit": "$",
+          "explain": "The whole car. They do not repossess $1,000 worth of it."
+        },
+        {
+          "id": "lt-title-q3",
+          "type": "multiple_choice",
+          "prompt": "Why is that a bad trade for a $1,000 emergency?",
+          "choices": [
+            "You can lose an $8,000 car over a $1,000 debt",
+            "The car becomes more valuable",
+            "Title loans build a credit score for free"
+          ],
+          "answer": 0,
+          "explain": "The collateral is oversized on purpose."
+        },
+        {
+          "id": "lt-title-q4",
+          "type": "true_false",
+          "prompt": "Paying the title loan off on time means you get the title back.",
+          "answer": true,
+          "explain": "The danger is the miss, not the paperwork itself."
+        },
+        {
+          "id": "lt-title-q5",
+          "type": "multiple_choice",
+          "prompt": "The fee is $25 per $100 borrowed, per month. On $1,000, what is one month’s fee?",
+          "choices": [
+            "$250",
+            "$25",
+            "$2,500"
+          ],
+          "answer": 0,
+          "explain": "$25 × 10 = $250. That is 25% in a single month."
+        },
+        {
+          "id": "lt-title-q6",
+          "type": "multiple_choice",
+          "prompt": "What is the thing you are really risking?",
+          "choices": [
+            "The car you use to get to work",
+            "Only the $25",
+            "Nothing, if the ad says “easy”"
+          ],
+          "answer": 0,
+          "explain": "Easy to get is not easy to escape."
+        }
+      ]
+    },
+    {
+      "id": "lt-bnpl",
+      "type": "lesson",
+      "title": "Buy Now, Pay Later",
+      "summary": "Four small payments feel like zero. Three plans do not.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "lt-bnpl-q1",
+          "type": "number",
+          "context": "[[Buy now, pay later]] splits a purchase, often into four payments. Pay on time and interest is often $0. A late payment can cost a fee, and the plans stack if you open several.",
+          "prompt": "A $200 purchase is split into 4 payments. How much is each payment, with no fee?",
+          "answer": 50,
+          "unit": "$",
+          "explain": "$200 ÷ 4 = $50."
+        },
+        {
+          "id": "lt-bnpl-q2",
+          "type": "true_false",
+          "prompt": "On-time buy-now-pay-later payments are often interest-free.",
+          "answer": true,
+          "explain": "The trap is missing one, or opening too many."
+        },
+        {
+          "id": "lt-bnpl-q3",
+          "type": "number",
+          "prompt": "You miss a payment and the fee is $10. What did that “free” plan just cost, on top of the $50 you still owe?",
+          "answer": 10,
+          "unit": "$",
+          "explain": "The fee is $10. The $50 payment is still due too."
+        },
+        {
+          "id": "lt-bnpl-q4",
+          "type": "number",
+          "prompt": "Three plans want $45, $30, and $25 in the same week. How much leaves your account?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$45 + $30 + $25 = $100."
+        },
+        {
+          "id": "lt-bnpl-q5",
+          "type": "multiple_choice",
+          "prompt": "You have $80 that week. What is the problem?",
+          "choices": [
+            "The plans want $100. You are $20 short",
+            "Nothing. The apps wait forever",
+            "The $80 covers them"
+          ],
+          "answer": 0,
+          "explain": "$100 − $80 = $20 short. That is how a pile of small plans becomes a late fee."
+        },
+        {
+          "id": "lt-bnpl-q6",
+          "type": "multiple_choice",
+          "prompt": "When is buy now, pay later least dangerous?",
+          "choices": [
+            "One plan, for something you needed, that fits the weeks you will pay it",
+            "Five plans for things you wanted",
+            "A plan you already cannot see how to pay"
+          ],
+          "answer": 0,
+          "explain": "One at a time, and only if the payments are already in the budget."
+        }
+      ]
+    },
+    {
+      "id": "lt-no-check",
+      "type": "lesson",
+      "title": "“No Credit Check”",
+      "summary": "The ad is loud because the price is the part they hope you will not do.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "lt-no-check-q1",
+          "type": "multiple_choice",
+          "context": "“No credit check” means the lender is not using your [[credit score]] to price the loan. Payday loans, title loans, and some rent-to-own deals live here. The cost is in the fee.",
+          "prompt": "An offer says “no credit check.” What is that usually a sign of?",
+          "choices": [
+            "A high price, because the lender is not using your score to set a fair rate",
+            "A cheaper loan",
+            "A federal student loan"
+          ],
+          "answer": 0,
+          "explain": "They are not skipping the check to be kind."
+        },
+        {
+          "id": "lt-no-check-q2",
+          "type": "true_false",
+          "prompt": "No credit check means the loan cannot hurt you.",
+          "answer": false,
+          "explain": "It can still take a fee, a car, or a chunk of your next paycheck."
+        },
+        {
+          "id": "lt-no-check-q3",
+          "type": "multiple_choice",
+          "prompt": "Which question matters more than “Will they approve me?”",
+          "choices": [
+            "What do I pay back, in dollars, and what can they take?",
+            "How fast can I get the money",
+            "How big is the word “approved”"
+          ],
+          "answer": 0,
+          "explain": "Approval is easy when the price is ugly."
+        },
+        {
+          "id": "lt-no-check-q4",
+          "type": "number",
+          "prompt": "The ad: borrow $200, pay back $260 in two weeks. How much is the fee?",
+          "answer": 60,
+          "unit": "$",
+          "explain": "$260 − $200 = $60."
+        },
+        {
+          "id": "lt-no-check-q5",
+          "type": "number",
+          "prompt": "That $60 fee is what percent of the $200?",
+          "answer": 30,
+          "unit": "%",
+          "explain": "$60 ÷ $200 = 30%, for two weeks."
+        },
+        {
+          "id": "lt-no-check-q6",
+          "type": "multiple_choice",
+          "prompt": "What do you do with an offer that will not show the total you repay?",
+          "choices": [
+            "Walk away",
+            "Sign and read it later",
+            "Assume the total equals what you borrowed"
+          ],
+          "answer": 0,
+          "explain": "If the total is hidden, the total is the product."
+        }
+      ]
+    },
+    {
+      "id": "lt-spot-ad",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Spot the Trap",
+      "summary": "The friendly line is not the expensive one.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "lt-spot-ad-q1",
+          "type": "spot",
+          "context": "Read the ad as a receipt. What you receive and what you pay back are the only honest numbers.",
+          "doc": {
+            "kind": "receipt",
+            "title": "Payday ad",
+            "subtitle": "Due on your next payday",
+            "lines": [
+              {
+                "id": "now",
+                "label": "Cash you receive today",
+                "amount": 200.0
+              },
+              {
+                "id": "back",
+                "label": "Amount due in 14 days",
+                "amount": 260.0
+              },
+              {
+                "id": "fine",
+                "label": "“No credit check” processing charge, extra",
+                "amount": 25.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "You pay back",
+                "amount": 285.0,
+                "strong": true
+              }
+            ],
+            "note": "The $260 already includes a $60 fee. The $25 is on top."
+          },
+          "prompt": "Which line is an extra charge stacked on top of the $260 payoff?",
+          "answer": "fine",
+          "explain": "The $25 “processing charge” sits on top of a payoff that already includes a $60 fee."
+        },
+        {
+          "id": "lt-spot-ad-q2",
+          "type": "number",
+          "doc": {
+            "kind": "receipt",
+            "title": "Payday ad",
+            "subtitle": "Due on your next payday",
+            "lines": [
+              {
+                "id": "now",
+                "label": "Cash you receive today",
+                "amount": 200.0
+              },
+              {
+                "id": "back",
+                "label": "Amount due in 14 days",
+                "amount": 260.0
+              },
+              {
+                "id": "fine",
+                "label": "“No credit check” processing charge, extra",
+                "amount": 25.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "You pay back",
+                "amount": 285.0,
+                "strong": true
+              }
+            ],
+            "note": "The $260 already includes a $60 fee. The $25 is on top."
+          },
+          "prompt": "How much more than $200 do you pay if every line on this ad is real?",
+          "answer": 85,
+          "unit": "$",
+          "explain": "$260 − $200 = $60, plus $25 = $85."
+        },
+        {
+          "id": "lt-spot-ad-q3",
+          "type": "number",
+          "doc": {
+            "kind": "receipt",
+            "title": "Payday ad",
+            "subtitle": "Due on your next payday",
+            "lines": [
+              {
+                "id": "now",
+                "label": "Cash you receive today",
+                "amount": 200.0
+              },
+              {
+                "id": "back",
+                "label": "Amount due in 14 days",
+                "amount": 260.0
+              },
+              {
+                "id": "fine",
+                "label": "“No credit check” processing charge, extra",
+                "amount": 25.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "You pay back",
+                "amount": 285.0,
+                "strong": true
+              }
+            ],
+            "note": "The $260 already includes a $60 fee. The $25 is on top."
+          },
+          "prompt": "What do you hand over in 14 days?",
+          "answer": 285,
+          "unit": "$",
+          "explain": "$260 + $25 = $285."
+        },
+        {
+          "id": "lt-spot-ad-q4",
+          "type": "multiple_choice",
+          "prompt": "What did “no credit check” cost you here?",
+          "choices": [
+            "$85 for a two-week, $200 loan",
+            "Nothing",
+            "$25 only"
+          ],
+          "answer": 0,
+          "explain": "$85 ÷ $200 = 42.5% in two weeks."
+        },
+        {
+          "id": "lt-spot-ad-q5",
+          "type": "true_false",
+          "prompt": "A processing charge in the fine print is optional if you did not notice it.",
+          "answer": false,
+          "explain": "If it is on the paper you sign, it is in the deal."
+        },
+        {
+          "id": "lt-spot-ad-q6",
+          "type": "multiple_choice",
+          "prompt": "What would a fair ad lead with?",
+          "choices": [
+            "You receive $200 and pay back $285",
+            "“Approved”",
+            "A picture of a smile"
+          ],
+          "answer": 0,
+          "explain": "Dollars in, dollars out."
+        }
+      ]
+    },
+    {
+      "id": "lt-better",
+      "type": "lesson",
+      "title": "Better Options When You Are Short",
+      "summary": "Slow help is usually cheaper than fast cash.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "lt-better-q1",
+          "type": "multiple_choice",
+          "context": "When cash is short, the order is: billers and a payment plan, then anything you can sell or pause, then a credit union or a person who will not take your car. A payday loan is the last door, not the first.",
+          "prompt": "A $150 bill is due and you are short. What is worth trying before a payday loan?",
+          "choices": [
+            "Ask the biller for a payment date, and cut or pause something else",
+            "A title loan",
+            "A second payday loan to pay the first"
+          ],
+          "answer": 0,
+          "explain": "A biller would often rather get the money late than not at all."
+        },
+        {
+          "id": "lt-better-q2",
+          "type": "number",
+          "prompt": "You pause a $40 subscription and sell a $90 item you do not use. How much of a $150 gap does that close?",
+          "answer": 130,
+          "unit": "$",
+          "explain": "$40 + $90 = $130."
+        },
+        {
+          "id": "lt-better-q3",
+          "type": "number",
+          "prompt": "How much of the $150 is still short?",
+          "answer": 20,
+          "unit": "$",
+          "explain": "$150 − $130 = $20. A $20 gap is not a reason for a 390% loan."
+        },
+        {
+          "id": "lt-better-q4",
+          "type": "true_false",
+          "prompt": "A payment plan on a medical bill can cost less than a payday loan.",
+          "answer": true,
+          "explain": "Many billers will split a balance. Ask before you borrow."
+        },
+        {
+          "id": "lt-better-q5",
+          "type": "multiple_choice",
+          "prompt": "Which option puts the car at risk?",
+          "choices": [
+            "A title loan",
+            "A payment plan with the hospital",
+            "Selling an old phone"
+          ],
+          "answer": 0,
+          "explain": "The title is the car."
+        },
+        {
+          "id": "lt-better-q6",
+          "type": "order",
+          "prompt": "Put the short-on-cash options from first try to last resort.",
+          "items": [
+            "Call the biller and ask for a plan",
+            "Pause spending and sell something unused",
+            "A small credit-union loan if you can get one",
+            "A payday or title loan"
+          ],
+          "explain": "Ask, then cut, then a normal loan, then the expensive door."
+        }
+      ]
+    },
+    {
+      "id": "lt-dev",
+      "type": "lesson",
+      "format": "story",
+      "title": "Dev’s Pile-Up",
+      "summary": "The plans were small. The week they landed was not.",
+      "xp": 10,
+      "story": {
+        "title": "Four small plans",
+        "character": "Dev, 23, rideshare driver",
+        "body": "Dev used buy now, pay later four times in a month: **$20**, **$35**, **$15**, and **$40**. Each one looked fine alone. They all come out the same week.\n\nHe has **$80** in the account after gas. He also saw a payday ad: **$100** now, **$130** back in two weeks."
+      },
+      "steps": [
+        {
+          "id": "lt-dev-q1",
+          "type": "number",
+          "prompt": "How much do the four plans want in the same week?",
+          "answer": 110,
+          "unit": "$",
+          "explain": "$20 + $35 + $15 + $40 = $110."
+        },
+        {
+          "id": "lt-dev-q2",
+          "type": "number",
+          "prompt": "He has $80 after gas. How much is he short?",
+          "answer": 30,
+          "unit": "$",
+          "explain": "$110 − $80 = $30."
+        },
+        {
+          "id": "lt-dev-q3",
+          "type": "number",
+          "prompt": "The payday ad wants $130 back on $100. How much is that fee?",
+          "answer": 30,
+          "unit": "$",
+          "explain": "$130 − $100 = $30."
+        },
+        {
+          "id": "lt-dev-q4",
+          "type": "multiple_choice",
+          "prompt": "He takes the payday loan to cover the $30 gap. What is wrong with that fix?",
+          "choices": [
+            "He pays a $30 fee to cover a $30 gap, and he still owes the $100",
+            "It is free",
+            "It pays off all four plans forever"
+          ],
+          "answer": 0,
+          "explain": "A $30 fee to borrow the $30 he is short is a terrible trade. He would owe $130."
+        },
+        {
+          "id": "lt-dev-q5",
+          "type": "true_false",
+          "prompt": "One buy-now-pay-later plan is the same risk as four of them due the same week.",
+          "answer": false,
+          "explain": "The stack is the problem. $110 is not $20."
+        },
+        {
+          "id": "lt-dev-q6",
+          "type": "multiple_choice",
+          "prompt": "What is the better move this week?",
+          "choices": [
+            "Pay what he can, ask one plan or biller for a few days, and do not open the payday loan",
+            "Take the payday loan",
+            "Open a fifth plan"
+          ],
+          "answer": 0,
+          "explain": "A short delay beats a two-week fee the size of the gap."
+        }
+      ]
+    },
+    {
+      "id": "lt-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "lt-trial",
+      "type": "boss",
+      "title": "Den Trial: Payday, BNPL & Other Traps",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "lt-trial-q1",
+          "type": "number",
+          "prompt": "A $20 fee on a $100 loan, every two weeks, for a full year of 26 periods. What is the APR?",
+          "answer": 520,
+          "unit": "%",
+          "explain": "20% × 26 = 520%."
+        },
+        {
+          "id": "lt-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "A title loan puts which asset on the line?",
+          "choices": [
+            "Your car",
+            "Your grocery receipt",
+            "A streaming password"
+          ],
+          "answer": 0,
+          "explain": "The title is the collateral."
+        },
+        {
+          "id": "lt-trial-q3",
+          "type": "true_false",
+          "prompt": "Four buy-now-pay-later plans due the same week cost the same as one of them.",
+          "answer": false,
+          "explain": "Add the payments. They leave together."
+        },
+        {
+          "id": "lt-trial-q4",
+          "type": "number",
+          "prompt": "$45 a week for 80 weeks, versus a $500 cash price. How much more do the weekly payments cost?",
+          "answer": 3100,
+          "unit": "$",
+          "explain": "$45 × 80 = $3,600. $3,600 − $500 = $3,100."
+        }
+      ]
+    }
+  ]
+}

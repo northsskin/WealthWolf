@@ -1,0 +1,782 @@
+{
+  "id": "car-loans",
+  "section": "credit-debt",
+  "order": 8,
+  "title": "Car Loans & Leases",
+  "description": "The payment, the term, the add-ons, and whether you end up owning the car.",
+  "wolfLine": "The monthly payment is the bait. The total is the hook.",
+  "terms": {
+    "down-payment": {
+      "term": "Down payment",
+      "definition": "Cash you pay up front so you borrow less.",
+      "example": "A $16,000 car with $2,000 down means you borrow $14,000."
+    },
+    "car-lease": {
+      "term": "Lease",
+      "definition": "A deal where you pay to use a car for a set number of months, then give it back. You do not own it at the end.",
+      "example": "$250 a month for 36 months is $9,000 to drive the car, and then you hand the keys back."
+    },
+    "upside-down": {
+      "term": "Upside down",
+      "definition": "Owing more on a car than the car is worth.",
+      "example": "You owe $11,000. The car is worth $8,000. You are upside down by $3,000."
+    }
+  },
+  "lessons": [
+    {
+      "id": "cl-total",
+      "type": "lesson",
+      "title": "What the Car Really Costs",
+      "summary": "Price on the window, plus every payment after it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cl-total-q1",
+          "type": "number",
+          "prompt": "You borrow $16,000 and pay $380 a month for 48 months. What do the payments add up to?",
+          "answer": 18240,
+          "unit": "$",
+          "explain": "$380 × 48 = $18,240."
+        },
+        {
+          "id": "cl-total-q2",
+          "type": "number",
+          "prompt": "How much of that is interest?",
+          "answer": 2240,
+          "unit": "$",
+          "explain": "$18,240 − $16,000 = $2,240."
+        },
+        {
+          "id": "cl-total-q3",
+          "type": "number",
+          "prompt": "Add a $2,000 down payment you already paid. How much cash left you in total?",
+          "answer": 20240,
+          "unit": "$",
+          "explain": "$18,240 + $2,000 = $20,240."
+        },
+        {
+          "id": "cl-total-q4",
+          "type": "multiple_choice",
+          "prompt": "Which number is the real cost of the purchase?",
+          "choices": [
+            "Every payment, plus the down payment",
+            "The monthly payment alone",
+            "The price before tax"
+          ],
+          "answer": 0,
+          "explain": "The monthly number is the bait."
+        },
+        {
+          "id": "cl-total-q5",
+          "type": "true_false",
+          "prompt": "A car priced at $16,000 costs $16,000 if you finance it.",
+          "answer": false,
+          "explain": "Interest sits on top. This loan added $2,240."
+        },
+        {
+          "id": "cl-total-q6",
+          "type": "fill_blank",
+          "prompt": "Interest is the total of the payments minus the ___.",
+          "choices": [
+            "principal",
+            "down payment",
+            "tax"
+          ],
+          "answer": 0,
+          "explain": "You borrowed $16,000. That is the principal in this loan."
+        }
+      ]
+    },
+    {
+      "id": "cl-length",
+      "type": "lesson",
+      "format": "call",
+      "title": "Shorter Loan, Smaller Total",
+      "summary": "Stretch the loan and the payment shrinks. The interest does the opposite.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cl-length-q1",
+          "type": "number",
+          "context": "Same car, same amount borrowed. More months means more interest.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "4-year loan",
+              "subtitle": "Borrow $16,000",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Monthly payment",
+                  "amount": 380.0
+                },
+                {
+                  "id": "mos",
+                  "label": "Months",
+                  "amount": 48.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total of the payments",
+                  "amount": 18240.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "6-year loan",
+              "subtitle": "Borrow $16,000",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Monthly payment",
+                  "amount": 300.0
+                },
+                {
+                  "id": "mos",
+                  "label": "Months",
+                  "amount": 72.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total of the payments",
+                  "amount": 21600.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "The 4-year loan: how much interest on $16,000?",
+          "answer": 2240,
+          "unit": "$",
+          "explain": "$18,240 − $16,000 = $2,240."
+        },
+        {
+          "id": "cl-length-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "4-year loan",
+              "subtitle": "Borrow $16,000",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Monthly payment",
+                  "amount": 380.0
+                },
+                {
+                  "id": "mos",
+                  "label": "Months",
+                  "amount": 48.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total of the payments",
+                  "amount": 18240.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "6-year loan",
+              "subtitle": "Borrow $16,000",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Monthly payment",
+                  "amount": 300.0
+                },
+                {
+                  "id": "mos",
+                  "label": "Months",
+                  "amount": 72.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total of the payments",
+                  "amount": 21600.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "The 6-year loan: how much interest?",
+          "answer": 5600,
+          "unit": "$",
+          "explain": "$21,600 − $16,000 = $5,600."
+        },
+        {
+          "id": "cl-length-q3",
+          "type": "number",
+          "prompt": "How much extra interest does the longer loan cost?",
+          "answer": 3360,
+          "unit": "$",
+          "explain": "$5,600 − $2,240 = $3,360."
+        },
+        {
+          "id": "cl-length-q4",
+          "type": "multiple_choice",
+          "prompt": "The 6-year payment is $80 smaller. Why can it still be the worse deal?",
+          "choices": [
+            "You pay $3,360 more interest",
+            "Shorter loans are illegal",
+            "The car costs less on the long loan"
+          ],
+          "answer": 0,
+          "why": [
+            "$3,360 more interest.",
+            "Both loans are ordinary.",
+            "You borrowed $16,000 either way."
+          ],
+          "explain": "$300 looks easier. The total is $21,600 instead of $18,240."
+        },
+        {
+          "id": "cl-length-q5",
+          "type": "true_false",
+          "prompt": "Pick the longest loan whenever the monthly payment is the only number you can see.",
+          "answer": false,
+          "explain": "See the total before you pick the term."
+        },
+        {
+          "id": "cl-length-q6",
+          "type": "multiple_choice",
+          "prompt": "You can afford $380. What is the careful choice?",
+          "choices": [
+            "The shorter loan, if the $380 fits after needs",
+            "The longer loan, to keep cash “free” for more spending",
+            "Skip the total and sign"
+          ],
+          "answer": 0,
+          "explain": "If the higher payment fits, you buy the same car for less."
+        }
+      ]
+    },
+    {
+      "id": "cl-down",
+      "type": "lesson",
+      "title": "The Down Payment",
+      "summary": "Cash now, less borrowed, less interest later.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cl-down-q1",
+          "type": "multiple_choice",
+          "context": "A [[down payment]] is cash at the start. On a $16,000 car, $2,000 down means the [[principal]] is $14,000, not $16,000.",
+          "prompt": "What does a down payment do?",
+          "choices": [
+            "It cuts the amount you have to borrow",
+            "It raises the interest rate",
+            "It is a fee the dealer keeps on top of the price"
+          ],
+          "answer": 0,
+          "explain": "You pay cash so the loan is smaller."
+        },
+        {
+          "id": "cl-down-q2",
+          "type": "number",
+          "prompt": "Price $18,000. Down payment $3,000. How much do you borrow?",
+          "answer": 15000,
+          "unit": "$",
+          "explain": "$18,000 − $3,000 = $15,000."
+        },
+        {
+          "id": "cl-down-q3",
+          "type": "number",
+          "prompt": "You borrow that $15,000 at 6% simple interest for 1 year, as a rough look. How much interest?",
+          "answer": 900,
+          "unit": "$",
+          "explain": "$15,000 × 0.06 = $900."
+        },
+        {
+          "id": "cl-down-q4",
+          "type": "number",
+          "prompt": "Same rate and year with no down payment, borrowing the full $18,000. How much interest?",
+          "answer": 1080,
+          "unit": "$",
+          "explain": "$18,000 × 0.06 = $1,080."
+        },
+        {
+          "id": "cl-down-q5",
+          "type": "number",
+          "prompt": "How much interest does the $3,000 down payment save in that rough year?",
+          "answer": 180,
+          "unit": "$",
+          "explain": "$1,080 − $900 = $180."
+        },
+        {
+          "id": "cl-down-q6",
+          "type": "true_false",
+          "prompt": "A down payment is wasted money because you could have financed the whole price.",
+          "answer": false,
+          "explain": "It is money you were going to pay anyway, and it shrinks the interest."
+        }
+      ]
+    },
+    {
+      "id": "cl-lease",
+      "type": "lesson",
+      "title": "Buy or Lease",
+      "summary": "A lease rents the car. A loan is a path to owning it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cl-lease-q1",
+          "type": "multiple_choice",
+          "context": "A [[lease|car-lease]] (the car kind) is paying to drive a car for a set term, then returning it. Miles over the limit cost extra. A loan ends with a car you own, if you finish the payments.",
+          "prompt": "At the end of a lease, what do you usually have?",
+          "choices": [
+            "Nothing. You give the car back",
+            "The car, free and clear",
+            "A second car"
+          ],
+          "answer": 0,
+          "explain": "You paid for the use, not the title."
+        },
+        {
+          "id": "cl-lease-q2",
+          "type": "number",
+          "prompt": "A lease is $250 a month for 36 months. How much do you pay to use the car?",
+          "answer": 9000,
+          "unit": "$",
+          "explain": "$250 × 36 = $9,000."
+        },
+        {
+          "id": "cl-lease-q3",
+          "type": "number",
+          "prompt": "A loan is $320 a month for 48 months. How much do you pay?",
+          "answer": 15360,
+          "unit": "$",
+          "explain": "$320 × 48 = $15,360."
+        },
+        {
+          "id": "cl-lease-q4",
+          "type": "multiple_choice",
+          "prompt": "The lease costs less cash over its term. What do you not get?",
+          "choices": [
+            "Ownership. You hand the car back",
+            "The right to drive it during the lease",
+            "A monthly payment"
+          ],
+          "answer": 0,
+          "explain": "$9,000 of driving, then no car. The loan costs more and leaves you the car."
+        },
+        {
+          "id": "cl-lease-q5",
+          "type": "true_false",
+          "prompt": "Going over the mileage limit on a lease can cost an extra fee per mile.",
+          "answer": true,
+          "explain": "The cheap payment assumes you stay under the cap."
+        },
+        {
+          "id": "cl-lease-q6",
+          "type": "multiple_choice",
+          "prompt": "You drive 18,000 miles a year and the lease allows 10,000. What is the risk?",
+          "choices": [
+            "A big mileage bill when you return it",
+            "Nothing. Limits are suggestions",
+            "The loan gets cheaper"
+          ],
+          "answer": 0,
+          "explain": "Match the contract to how you actually drive."
+        }
+      ]
+    },
+    {
+      "id": "cl-addons",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Dealer Add-Ons",
+      "summary": "Tap the charge you never agreed to.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cl-addons-q1",
+          "type": "spot",
+          "context": "A buyer’s order should match the deal you discussed. Extra packages are easy to bury in the total.",
+          "doc": {
+            "kind": "receipt",
+            "title": "Buyer’s order",
+            "subtitle": "You did not ask for paint protection",
+            "lines": [
+              {
+                "id": "price",
+                "label": "Sale price",
+                "amount": 11000.0
+              },
+              {
+                "id": "tax",
+                "label": "Sales tax",
+                "amount": 770.0
+              },
+              {
+                "id": "doc",
+                "label": "Document fee",
+                "amount": 150.0
+              },
+              {
+                "id": "paint",
+                "label": "Paint protection package",
+                "amount": 799.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Amount due",
+                "amount": 12719.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "Which line is the add-on you did not ask for?",
+          "answer": "paint",
+          "explain": "Paint protection, $799, was not part of the car you agreed to buy."
+        },
+        {
+          "id": "cl-addons-q2",
+          "type": "number",
+          "doc": {
+            "kind": "receipt",
+            "title": "Buyer’s order",
+            "subtitle": "You did not ask for paint protection",
+            "lines": [
+              {
+                "id": "price",
+                "label": "Sale price",
+                "amount": 11000.0
+              },
+              {
+                "id": "tax",
+                "label": "Sales tax",
+                "amount": 770.0
+              },
+              {
+                "id": "doc",
+                "label": "Document fee",
+                "amount": 150.0
+              },
+              {
+                "id": "paint",
+                "label": "Paint protection package",
+                "amount": 799.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Amount due",
+                "amount": 12719.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "How much is the paint protection?",
+          "answer": 799,
+          "unit": "$",
+          "explain": "The line says $799."
+        },
+        {
+          "id": "cl-addons-q3",
+          "type": "number",
+          "prompt": "What would the total be without that $799?",
+          "answer": 11920,
+          "unit": "$",
+          "explain": "$12,719 − $799 = $11,920."
+        },
+        {
+          "id": "cl-addons-q4",
+          "type": "multiple_choice",
+          "prompt": "The dealer says the package is “already on the car.” What can you do?",
+          "choices": [
+            "Ask for it to be removed from the contract before you sign",
+            "You must pay it",
+            "Drive away and let them bill you later"
+          ],
+          "answer": 0,
+          "explain": "Before you sign, the line can come off. After you sign, it is yours."
+        },
+        {
+          "id": "cl-addons-q5",
+          "type": "true_false",
+          "prompt": "A document fee and an unwanted protection package are the same kind of charge.",
+          "answer": false,
+          "explain": "A filing fee can be ordinary. A $799 package you did not ask for is optional, and optional means you can say no."
+        },
+        {
+          "id": "cl-addons-q6",
+          "type": "multiple_choice",
+          "prompt": "Where do you catch this?",
+          "choices": [
+            "On the buyer’s order, before your signature",
+            "A month later, on a guess",
+            "Never. Add-ons are free"
+          ],
+          "answer": 0,
+          "explain": "Read every line. The total is not the only number."
+        }
+      ]
+    },
+    {
+      "id": "cl-upside",
+      "type": "lesson",
+      "title": "Upside Down",
+      "summary": "The loan can outlive the car’s value.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cl-upside-q1",
+          "type": "multiple_choice",
+          "context": "You are [[upside down]] when the balance is higher than the car’s value. Sell it and you still owe the gap. A long loan and a small down payment get you there faster.",
+          "prompt": "What does upside down mean on a car loan?",
+          "choices": [
+            "You owe more than the car is worth",
+            "The car is paid off",
+            "You have equity"
+          ],
+          "answer": 0,
+          "explain": "The loan is heavier than the car."
+        },
+        {
+          "id": "cl-upside-q2",
+          "type": "number",
+          "prompt": "You owe $11,000. The car is worth $8,000. How much is the gap?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$11,000 − $8,000 = $3,000."
+        },
+        {
+          "id": "cl-upside-q3",
+          "type": "true_false",
+          "prompt": "You owe $12,500 and the car is worth $13,000. You are upside down.",
+          "answer": false,
+          "explain": "The car is worth $500 more than the loan. Upside down means the loan is bigger."
+        },
+        {
+          "id": "cl-upside-q4",
+          "type": "multiple_choice",
+          "prompt": "You sell the car for $8,000 and still owe $11,000. What happens?",
+          "choices": [
+            "You still owe the $3,000 gap",
+            "The loan disappears with the car",
+            "The buyer pays the gap for you"
+          ],
+          "answer": 0,
+          "explain": "Selling the car does not sell the rest of the loan."
+        },
+        {
+          "id": "cl-upside-q5",
+          "type": "multiple_choice",
+          "prompt": "Which habit makes upside-down less likely?",
+          "choices": [
+            "A bigger down payment and a shorter loan",
+            "Zero down and a 7-year term",
+            "Rolling an old loan into the new one"
+          ],
+          "answer": 0,
+          "explain": "Borrow less, and pay it off before the car’s value falls past it."
+        },
+        {
+          "id": "cl-upside-q6",
+          "type": "number",
+          "prompt": "You are $3,000 upside down and the dealer offers to add that gap onto a new loan. How much extra principal are you dragging forward?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "The whole $3,000. The new car starts life already partly unpaid."
+        }
+      ]
+    },
+    {
+      "id": "cl-refi",
+      "type": "lesson",
+      "title": "Refinancing the Car",
+      "summary": "A lower rate helps. A longer term can give the savings back.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cl-refi-q1",
+          "type": "number",
+          "prompt": "Your payment is $320. A new loan would be $280. How much a month do you keep?",
+          "answer": 40,
+          "unit": "$",
+          "explain": "$320 − $280 = $40."
+        },
+        {
+          "id": "cl-refi-q2",
+          "type": "number",
+          "prompt": "How much is that over a year?",
+          "answer": 480,
+          "unit": "$",
+          "explain": "$40 × 12 = $480."
+        },
+        {
+          "id": "cl-refi-q3",
+          "type": "multiple_choice",
+          "prompt": "The new loan is cheaper each month because it lasts two extra years. What else must you check?",
+          "choices": [
+            "The total you will pay, not just the $40",
+            "Nothing. A smaller payment is always cheaper",
+            "The color of the car"
+          ],
+          "answer": 0,
+          "explain": "A longer loan can cost more interest even when the payment drops."
+        },
+        {
+          "id": "cl-refi-q4",
+          "type": "true_false",
+          "prompt": "Refinancing makes sense when the new loan’s total cost is lower, and the payment still fits.",
+          "answer": true,
+          "explain": "Rate, term, and fees. All three."
+        },
+        {
+          "id": "cl-refi-q5",
+          "type": "number",
+          "prompt": "The new lender charges a $200 fee. After a year of saving $480, how much are you ahead of that fee?",
+          "answer": 280,
+          "unit": "$",
+          "explain": "$480 − $200 = $280. Still ahead, if you keep the loan long enough to get there."
+        },
+        {
+          "id": "cl-refi-q6",
+          "type": "multiple_choice",
+          "prompt": "You are upside down and the new lender says no. What is a reasonable next step?",
+          "choices": [
+            "Keep the current loan and pay extra toward it",
+            "Skip payments until they say yes",
+            "Trade the car in and roll the gap again"
+          ],
+          "answer": 0,
+          "explain": "Extra principal is a refinance you give yourself."
+        }
+      ]
+    },
+    {
+      "id": "cl-sofia",
+      "type": "lesson",
+      "format": "story",
+      "title": "Sofia Buys Used",
+      "summary": "She can own the car. The package is optional.",
+      "xp": 10,
+      "story": {
+        "title": "The used car",
+        "character": "Sofia, 28, medical assistant",
+        "body": "Sofia finds a used car for **$12,000**. She has **$2,000** saved for a down payment, so she would borrow **$10,000**. The lender offers **48** payments of **$230**.\n\nA dealer also waves a **$699** protection package and a 72-month loan with a smaller payment. She wants the car for work, and she wants to own it."
+      },
+      "steps": [
+        {
+          "id": "cl-sofia-q1",
+          "type": "number",
+          "prompt": "How much interest is in the 48 payments of $230?",
+          "answer": 1040,
+          "unit": "$",
+          "explain": "48 × $230 = $11,040. $11,040 − $10,000 = $1,040."
+        },
+        {
+          "id": "cl-sofia-q2",
+          "type": "number",
+          "prompt": "Add the $2,000 down payment. How much does Sofia pay for the $12,000 car, before the package?",
+          "answer": 13040,
+          "unit": "$",
+          "explain": "$11,040 + $2,000 = $13,040."
+        },
+        {
+          "id": "cl-sofia-q3",
+          "type": "multiple_choice",
+          "prompt": "What does the $699 package do to the deal if she did not ask for it?",
+          "choices": [
+            "It adds $699 she can refuse before signing",
+            "It is required by law",
+            "It lowers the interest"
+          ],
+          "answer": 0,
+          "explain": "Optional means optional."
+        },
+        {
+          "id": "cl-sofia-q4",
+          "type": "true_false",
+          "prompt": "The 72-month offer is automatically cheaper because the payment is smaller.",
+          "answer": false,
+          "explain": "A longer term often adds interest. She should see the total."
+        },
+        {
+          "id": "cl-sofia-q5",
+          "type": "number",
+          "prompt": "She pays an extra $50 a month on the $230 loan. How much principal does that extra $50 cut in one month?",
+          "answer": 50,
+          "unit": "$",
+          "explain": "$50. Extra, on top of the payment, goes to principal."
+        },
+        {
+          "id": "cl-sofia-q6",
+          "type": "multiple_choice",
+          "prompt": "She needs the car for work and can afford $230. What fits the goal of owning it?",
+          "choices": [
+            "The 48-month loan, $2,000 down, no package she did not ask for",
+            "The longest loan and every package",
+            "A lease that ends with no car"
+          ],
+          "answer": 0,
+          "explain": "Shorter loan, real down payment, no extras."
+        }
+      ]
+    },
+    {
+      "id": "cl-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "cl-trial",
+      "type": "boss",
+      "title": "Den Trial: Car Loans & Leases",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "cl-trial-q1",
+          "type": "number",
+          "prompt": "Borrow $9,000. Pay $250 a month for 48 months. How much interest is that?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$250 × 48 = $12,000. $12,000 − $9,000 = $3,000."
+        },
+        {
+          "id": "cl-trial-q2",
+          "type": "number",
+          "prompt": "A $14,000 car with $4,000 down. How much do you borrow?",
+          "answer": 10000,
+          "unit": "$",
+          "explain": "$14,000 − $4,000 = $10,000."
+        },
+        {
+          "id": "cl-trial-q3",
+          "type": "true_false",
+          "prompt": "At the end of a car lease you usually own the car.",
+          "answer": false,
+          "explain": "You give it back, unless you pay extra to buy it."
+        },
+        {
+          "id": "cl-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "You owe $7,500 and the car is worth $6,000. What are you?",
+          "choices": [
+            "Upside down by $1,500",
+            "Ahead by $1,500",
+            "Paid off"
+          ],
+          "answer": 0,
+          "explain": "$7,500 − $6,000 = $1,500 still owed above the car’s value."
+        }
+      ]
+    }
+  ]
+}

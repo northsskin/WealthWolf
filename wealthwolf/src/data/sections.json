@@ -29,7 +29,14 @@
     "id": "credit-debt",
     "order": 3,
     "title": "Credit & Debt",
-    "description": "Borrowing without getting eaten alive. More units are being written."
+    "description": "Borrowing, credit scores and getting out of debt, without getting eaten alive.",
+    "trial": {
+      "id": "cd-section-trial",
+      "title": "Section Trial: Credit & Debt",
+      "summary": "Twelve questions from the whole section. Three strikes and you’re out.",
+      "xp": 50,
+      "draw": 12
+    }
   },
   {
     "id": "investing",

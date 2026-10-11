@@ -1,0 +1,695 @@
+{
+  "id": "card-traps",
+  "section": "credit-debt",
+  "order": 6,
+  "title": "Card Rewards & Traps",
+  "description": "Rewards, teaser rates, and the fees that eat them.",
+  "wolfLine": "A reward you pay interest to earn is not a reward.",
+  "terms": {
+    "cash-back": {
+      "term": "Cash back",
+      "definition": "A card reward that returns a percentage of what you spend, as money.",
+      "example": "2% cash back on $1,000 of spending is $20."
+    },
+    "intro-apr": {
+      "term": "Intro APR",
+      "definition": "A temporary low rate, often 0%, that lasts for a set number of months and then jumps to the regular APR.",
+      "example": "0% for 12 months, then 24%. The debt still left in month 13 is charged 24%."
+    },
+    "balance-transfer": {
+      "term": "Balance transfer",
+      "definition": "Moving debt from one card to another, usually to a lower rate. The new card often charges a fee of a few percent.",
+      "example": "Transfer $2,000 with a 3% fee and you owe $2,060 on the new card."
+    }
+  },
+  "lessons": [
+    {
+      "id": "ct-cashback",
+      "type": "lesson",
+      "title": "Cash-Back Math",
+      "summary": "A percent of what you spend. It never covers interest you did not have to pay.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ct-cashback-q1",
+          "type": "number",
+          "context": "[[Cash back]] returns a slice of your spending. 2% of $100 is $2. It is real money only if you were going to spend that $100 anyway.",
+          "prompt": "A card pays 2% cash back. You spend $2,500. How much do you get back?",
+          "answer": 50,
+          "unit": "$",
+          "explain": "$2,500 × 0.02 = $50."
+        },
+        {
+          "id": "ct-cashback-q2",
+          "type": "number",
+          "prompt": "You spend $800 at 1.5% cash back. How much is the reward?",
+          "answer": 12,
+          "unit": "$",
+          "explain": "$800 × 0.015 = $12."
+        },
+        {
+          "id": "ct-cashback-q3",
+          "type": "number",
+          "prompt": "The same month you pay $40 of interest. What is the reward minus the interest?",
+          "answer": -28,
+          "unit": "$",
+          "explain": "$12 − $40 = −$28. The “reward” month cost you $28."
+        },
+        {
+          "id": "ct-cashback-q4",
+          "type": "multiple_choice",
+          "prompt": "When is cash back actually a gain?",
+          "choices": [
+            "When you pay the statement in full, so you are not buying the reward with interest",
+            "When you carry a balance",
+            "When you spend more just to earn it"
+          ],
+          "answer": 0,
+          "explain": "Interest eats rewards fast."
+        },
+        {
+          "id": "ct-cashback-q5",
+          "type": "true_false",
+          "prompt": "Earning 2% back means the purchase was 2% cheaper, even if you pay interest on it.",
+          "answer": false,
+          "explain": "Interest can cost more than the reward."
+        },
+        {
+          "id": "ct-cashback-q6",
+          "type": "multiple_choice",
+          "prompt": "You do not need the item. It offers 5% back. What do you do?",
+          "choices": [
+            "Skip it. A reward on a wasted purchase is still wasted money",
+            "Buy it for the 5%",
+            "Buy two"
+          ],
+          "answer": 0,
+          "explain": "Five percent back on $100 you did not need is $5, and you are out $95."
+        }
+      ]
+    },
+    {
+      "id": "ct-points",
+      "type": "lesson",
+      "title": "Points or Cash",
+      "summary": "Turn the points into cents before you call them generous.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ct-points-q1",
+          "type": "multiple_choice",
+          "context": "Points are just cash back in costume. Divide the reward by the points to get a value in cents. If 100 points equal $1, each point is worth one cent, which is 1% back.",
+          "prompt": "A program says 1 point per dollar, and 100 points equal $1. What is a point worth?",
+          "choices": [
+            "1 cent",
+            "1 dollar",
+            "$100"
+          ],
+          "answer": 0,
+          "explain": "100 points = $1, so 1 point = 1 cent."
+        },
+        {
+          "id": "ct-points-q2",
+          "type": "number",
+          "prompt": "You earn 2,000 points at 1 cent each. What are they worth in dollars?",
+          "answer": 20,
+          "unit": "$",
+          "explain": "2,000 × $0.01 = $20."
+        },
+        {
+          "id": "ct-points-q3",
+          "type": "number",
+          "prompt": "A 2% cash-back card on the same $2,000 of spending pays how much?",
+          "answer": 40,
+          "unit": "$",
+          "explain": "$2,000 × 0.02 = $40."
+        },
+        {
+          "id": "ct-points-q4",
+          "type": "number",
+          "prompt": "How much more does the 2% card pay than those 2,000 points?",
+          "answer": 20,
+          "unit": "$",
+          "explain": "$40 − $20 = $20."
+        },
+        {
+          "id": "ct-points-q5",
+          "type": "multiple_choice",
+          "prompt": "A bonus category pays 3 points per dollar, still at 1 cent a point, at grocery stores. What is that in percent?",
+          "choices": [
+            "3%",
+            "30%",
+            "0.3%"
+          ],
+          "answer": 0,
+          "explain": "3 cents per dollar is 3%."
+        },
+        {
+          "id": "ct-points-q6",
+          "type": "true_false",
+          "prompt": "A point is always worth more than a cent of cash back.",
+          "answer": false,
+          "explain": "Check the redemption. Some points are worth less than a cent."
+        }
+      ]
+    },
+    {
+      "id": "ct-rewards-cost",
+      "type": "lesson",
+      "title": "Rewards That Cost More",
+      "summary": "If you spend extra to chase the bonus, you lost.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ct-rewards-cost-q1",
+          "type": "number",
+          "context": "A reward you would not have earned on a purchase you would not have made is not a discount. It is a reason someone hoped you would spend.",
+          "prompt": "A jacket is $100. You do not need it, but the card pays 5% back. How much is the reward?",
+          "answer": 5,
+          "unit": "$",
+          "explain": "$100 × 0.05 = $5."
+        },
+        {
+          "id": "ct-rewards-cost-q2",
+          "type": "number",
+          "prompt": "After the $5 reward, how much did the unneeded jacket really cost you?",
+          "answer": 95,
+          "unit": "$",
+          "explain": "$100 − $5 = $95."
+        },
+        {
+          "id": "ct-rewards-cost-q3",
+          "type": "multiple_choice",
+          "prompt": "You carry the $100 for a year at 24% APR. Rough interest?",
+          "choices": [
+            "$24",
+            "$5",
+            "$0"
+          ],
+          "answer": 0,
+          "explain": "$100 × 0.24 = $24, against a $5 reward."
+        },
+        {
+          "id": "ct-rewards-cost-q4",
+          "type": "number",
+          "prompt": "Interest $24, reward $5. How much are you behind?",
+          "answer": 19,
+          "unit": "$",
+          "explain": "$24 − $5 = $19 behind, plus you own a jacket you did not need."
+        },
+        {
+          "id": "ct-rewards-cost-q5",
+          "type": "true_false",
+          "prompt": "A sign that says “5% back” means you should buy something.",
+          "answer": false,
+          "explain": "It means the price is 5% less only if you were buying it anyway, and only if you pay in full."
+        },
+        {
+          "id": "ct-rewards-cost-q6",
+          "type": "multiple_choice",
+          "prompt": "Which spending earns a reward that is really yours?",
+          "choices": [
+            "The grocery run you were making anyway, paid in full",
+            "A gadget you bought for the points",
+            "A balance you are paying interest on"
+          ],
+          "answer": 0,
+          "explain": "Planned spending, no interest."
+        }
+      ]
+    },
+    {
+      "id": "ct-annual-fee",
+      "type": "lesson",
+      "format": "call",
+      "title": "Is the Annual Fee Worth It?",
+      "summary": "The extra percent has to earn the fee before you are ahead.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ct-annual-fee-q1",
+          "type": "number",
+          "context": "Subtract the annual fee from the rewards. If you will not spend enough for the extra percent to cover the fee, the free card wins.",
+          "prompt": "The bonus card pays 2 percentage points more (3% instead of 1%). The fee is $80. How much must you spend before that extra 2% covers the fee?",
+          "answer": 4000,
+          "unit": "$",
+          "explain": "$80 ÷ 0.02 = $4,000."
+        },
+        {
+          "id": "ct-annual-fee-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Simple Card",
+              "subtitle": "1% cash back · no fee",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "back",
+                  "label": "Cash back on $4,000 of spending at 1%",
+                  "amount": 40.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Reward after the fee",
+                  "amount": 40.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Bonus Card",
+              "subtitle": "3% cash back · $80 fee",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 80.0
+                },
+                {
+                  "id": "back",
+                  "label": "Cash back on $4,000 of spending at 3%",
+                  "amount": 120.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Reward after the fee",
+                  "amount": 40.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "On $4,000 of spending, what does the 1% card pay?",
+          "answer": 40,
+          "unit": "$",
+          "explain": "$4,000 × 0.01 = $40."
+        },
+        {
+          "id": "ct-annual-fee-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Simple Card",
+              "subtitle": "1% cash back · no fee",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "back",
+                  "label": "Cash back on $4,000 of spending at 1%",
+                  "amount": 40.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Reward after the fee",
+                  "amount": 40.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Bonus Card",
+              "subtitle": "3% cash back · $80 fee",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 80.0
+                },
+                {
+                  "id": "back",
+                  "label": "Cash back on $4,000 of spending at 3%",
+                  "amount": 120.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Reward after the fee",
+                  "amount": 40.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "On $4,000, what does the 3% card pay after its $80 fee?",
+          "answer": 40,
+          "unit": "$",
+          "explain": "$4,000 × 0.03 = $120. $120 − $80 = $40."
+        },
+        {
+          "id": "ct-annual-fee-q4",
+          "type": "number",
+          "prompt": "You only spend $2,000. The 3% card pays $60 before the fee. What is left after the $80 fee?",
+          "answer": -20,
+          "unit": "$",
+          "explain": "$60 − $80 = −$20. You paid for the privilege."
+        },
+        {
+          "id": "ct-annual-fee-q5",
+          "type": "multiple_choice",
+          "prompt": "You spend about $2,000 a year on the card and always pay in full. Which card?",
+          "choices": [
+            "The 1% card with no fee",
+            "The 3% card with the $80 fee",
+            "Whichever is metal"
+          ],
+          "answer": 0,
+          "explain": "At $2,000 the fee eats the bonus and more."
+        },
+        {
+          "id": "ct-annual-fee-q6",
+          "type": "true_false",
+          "prompt": "A higher cash-back rate is a better deal even when you barely use the card.",
+          "answer": false,
+          "explain": "The fee can be bigger than the rewards."
+        }
+      ]
+    },
+    {
+      "id": "ct-intro-apr",
+      "type": "lesson",
+      "title": "The 0% Intro Rate",
+      "summary": "Zero has an expiration date. The balance that remains does not.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ct-intro-apr-q1",
+          "type": "multiple_choice",
+          "context": "An [[intro APR]] is a teaser, often 0% for 12 or 15 months. When it ends, the regular [[APR]] applies to whatever [[balance]] is left. Miss a payment and some offers end early.",
+          "prompt": "What is an intro APR?",
+          "choices": [
+            "A temporary low rate that ends on a set date",
+            "A rate that stays 0% for as long as you own the card",
+            "A fee"
+          ],
+          "answer": 0,
+          "explain": "Read the number of months. That is the whole sale."
+        },
+        {
+          "id": "ct-intro-apr-q2",
+          "type": "number",
+          "prompt": "You move $1,800 onto a 0% intro rate for 15 months and pay $120 a month. How much have you paid after 15 months?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$120 × 15 = $1,800."
+        },
+        {
+          "id": "ct-intro-apr-q3",
+          "type": "number",
+          "prompt": "Is anything left to charge the regular rate on?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "$1,800 − $1,800 = $0. You finished inside the window."
+        },
+        {
+          "id": "ct-intro-apr-q4",
+          "type": "number",
+          "prompt": "Suppose you pay only $60 a month for those 15 months. How much is left when the 0% ends?",
+          "answer": 900,
+          "unit": "$",
+          "explain": "$60 × 15 = $900 paid. $1,800 − $900 = $900 still owed, now at the regular APR."
+        },
+        {
+          "id": "ct-intro-apr-q5",
+          "type": "true_false",
+          "prompt": "A 0% intro rate means the purchase is free.",
+          "answer": false,
+          "explain": "It means interest is postponed. The principal is still due."
+        },
+        {
+          "id": "ct-intro-apr-q6",
+          "type": "multiple_choice",
+          "prompt": "You cannot pay the balance off before the intro rate ends. What should you assume?",
+          "choices": [
+            "The leftover balance will cost the regular APR",
+            "The 0% will renew itself",
+            "The bank will forgive the rest"
+          ],
+          "answer": 0,
+          "explain": "Plan for the rate on the letter, not the rate in the ad."
+        }
+      ]
+    },
+    {
+      "id": "ct-transfer",
+      "type": "lesson",
+      "title": "Balance Transfers",
+      "summary": "A lower rate can be worth a fee. Only if the debt actually gets paid.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ct-transfer-q1",
+          "type": "number",
+          "context": "A [[balance transfer]] moves debt to a new card. The fee, often 3%, is added to what you owe. A 0% window only helps if you pay the debt down before it shuts.",
+          "prompt": "You transfer $4,000 with a 3% fee. How much is the fee?",
+          "answer": 120,
+          "unit": "$",
+          "explain": "$4,000 × 0.03 = $120."
+        },
+        {
+          "id": "ct-transfer-q2",
+          "type": "number",
+          "prompt": "What is the balance on the new card the day the transfer posts?",
+          "answer": 4120,
+          "unit": "$",
+          "explain": "$4,000 + $120 = $4,120."
+        },
+        {
+          "id": "ct-transfer-q3",
+          "type": "number",
+          "prompt": "The old card was 24% APR. A rough year of interest on $4,000 would have been?",
+          "answer": 960,
+          "unit": "$",
+          "explain": "$4,000 × 0.24 = $960."
+        },
+        {
+          "id": "ct-transfer-q4",
+          "type": "number",
+          "prompt": "If you pay the new card off during a 0% year, how much less is the $120 fee than that $960 of interest?",
+          "answer": 840,
+          "unit": "$",
+          "explain": "$960 − $120 = $840. That gap is the point of the move, and it vanishes if the balance is still there when the rate jumps."
+        },
+        {
+          "id": "ct-transfer-q5",
+          "type": "true_false",
+          "prompt": "After a transfer, you should keep spending on the old card.",
+          "answer": false,
+          "explain": "You moved the debt. Adding new debt puts you back where you started."
+        },
+        {
+          "id": "ct-transfer-q6",
+          "type": "multiple_choice",
+          "prompt": "The 0% period is 12 months and you can only pay $100 a month. $4,120 ÷ $100 is about 41 months. Is this transfer a good fit?",
+          "choices": [
+            "No. The debt outlasts the 0% window by years",
+            "Yes. Any transfer is a win",
+            "Yes, if the fee is under $500"
+          ],
+          "answer": 0,
+          "explain": "Do the months before you do the move."
+        }
+      ]
+    },
+    {
+      "id": "ct-store-card",
+      "type": "lesson",
+      "title": "Store Cards",
+      "summary": "Today’s discount can cost more than it saves.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ct-store-card-q1",
+          "type": "number",
+          "context": "Store cards often pair a same-day discount with a very high [[APR]]. The discount is yours only if you were buying the item, and only if you do not carry the balance.",
+          "prompt": "A $150 jacket is 20% off if you open the store card. How much is the discount?",
+          "answer": 30,
+          "unit": "$",
+          "explain": "$150 × 0.20 = $30."
+        },
+        {
+          "id": "ct-store-card-q2",
+          "type": "number",
+          "prompt": "What is the sale price?",
+          "answer": 120,
+          "unit": "$",
+          "explain": "$150 − $30 = $120."
+        },
+        {
+          "id": "ct-store-card-q3",
+          "type": "number",
+          "prompt": "You carry that $120 for a year at 30% APR. Roughly how much interest?",
+          "answer": 36,
+          "unit": "$",
+          "explain": "$120 × 0.30 = $36."
+        },
+        {
+          "id": "ct-store-card-q4",
+          "type": "number",
+          "prompt": "How much more is the interest than the discount you “saved”?",
+          "answer": 6,
+          "unit": "$",
+          "explain": "$36 − $30 = $6. You paid for the sale."
+        },
+        {
+          "id": "ct-store-card-q5",
+          "type": "multiple_choice",
+          "prompt": "You can pay the $120 today in cash. Should you open the store card for the discount?",
+          "choices": [
+            "No. Pay cash. The card’s rate is the trap, and you do not need it",
+            "Yes. Store cards always help a credit score",
+            "Yes, and leave the balance for a year"
+          ],
+          "answer": 0,
+          "explain": "A discount you can already afford in cash does not require a 30% card."
+        },
+        {
+          "id": "ct-store-card-q6",
+          "type": "true_false",
+          "prompt": "A store card at a high APR is a cheap way to build credit if you carry a balance.",
+          "answer": false,
+          "explain": "On-time and paid in full builds credit. Carrying a 30% balance just costs money."
+        }
+      ]
+    },
+    {
+      "id": "ct-jay",
+      "type": "lesson",
+      "format": "story",
+      "title": "Jay’s Rewards Chase",
+      "summary": "He earned $30 and spent $400 he did not need to spend.",
+      "xp": 10,
+      "story": {
+        "title": "The rewards chase",
+        "character": "Jay, 24, retail associate",
+        "body": "Jay’s card pays **5%** back at restaurants this quarter. He starts eating out so the category “pays him.” In three months he puts **$600** on the card. About **$200** of that was meals he would have bought anyway.\n\nHe pays the statement in full, which is the one part he gets right. The extra **$400** was spent to chase the bonus."
+      },
+      "steps": [
+        {
+          "id": "ct-jay-q1",
+          "type": "number",
+          "prompt": "How much cash back does Jay earn on the $600?",
+          "answer": 30,
+          "unit": "$",
+          "explain": "$600 × 0.05 = $30."
+        },
+        {
+          "id": "ct-jay-q2",
+          "type": "number",
+          "prompt": "How much of the $600 was extra spending he would not have done?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "The story: $600 − $200 of ordinary meals = $400."
+        },
+        {
+          "id": "ct-jay-q3",
+          "type": "number",
+          "prompt": "After the $30 reward, how much did that extra spending cost him?",
+          "answer": 370,
+          "unit": "$",
+          "explain": "$400 − $30 = $370."
+        },
+        {
+          "id": "ct-jay-q4",
+          "type": "multiple_choice",
+          "prompt": "What went well?",
+          "choices": [
+            "He paid the statement in full, so he did not add interest",
+            "The extra meals were free",
+            "5% back means he made money overall"
+          ],
+          "answer": 0,
+          "explain": "No interest. The waste was the extra $400."
+        },
+        {
+          "id": "ct-jay-q5",
+          "type": "true_false",
+          "prompt": "Spending more in a bonus category is a good idea whenever the percent is high.",
+          "answer": false,
+          "explain": "The percent applies to money leaving your account."
+        },
+        {
+          "id": "ct-jay-q6",
+          "type": "multiple_choice",
+          "prompt": "What should Jay do next quarter?",
+          "choices": [
+            "Use the 5% on meals he was buying anyway, and skip the rest",
+            "Double his restaurant budget",
+            "Open three more cards for the same chase"
+          ],
+          "answer": 0,
+          "explain": "Rewards ride along. They do not pick the purchase."
+        }
+      ]
+    },
+    {
+      "id": "ct-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "ct-trial",
+      "type": "boss",
+      "title": "Den Trial: Card Rewards & Traps",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "ct-trial-q1",
+          "type": "number",
+          "prompt": "3% cash back on $2,000. How much is the reward?",
+          "answer": 60,
+          "unit": "$",
+          "explain": "$2,000 × 0.03 = $60."
+        },
+        {
+          "id": "ct-trial-q2",
+          "type": "number",
+          "prompt": "A $90 annual fee needs to be covered by an extra 1.5% back. How much spending is that?",
+          "answer": 6000,
+          "unit": "$",
+          "explain": "$90 ÷ 0.015 = $6,000."
+        },
+        {
+          "id": "ct-trial-q3",
+          "type": "true_false",
+          "prompt": "A 0% intro APR lasts for the life of the card.",
+          "answer": false,
+          "explain": "It lasts for the months in the offer, then the regular APR starts."
+        },
+        {
+          "id": "ct-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "A balance transfer charges 3% on $1,000. What is the fee?",
+          "choices": [
+            "$30",
+            "$300",
+            "$3"
+          ],
+          "answer": 0,
+          "explain": "$1,000 × 0.03 = $30."
+        }
+      ]
+    }
+  ]
+}

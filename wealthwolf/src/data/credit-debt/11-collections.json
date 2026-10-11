@@ -1,0 +1,757 @@
+{
+  "id": "collections",
+  "section": "credit-debt",
+  "order": 11,
+  "title": "Collections & Bankruptcy",
+  "description": "Charge-offs, your rights, settlements, and what bankruptcy actually is.",
+  "wolfLine": "A letter is not a verdict. Make them prove the debt.",
+  "terms": {
+    "charge-off": {
+      "term": "Charge-off",
+      "definition": "When a lender gives up on collecting and writes the debt off, often after about 180 days late. You still owe it, and it can still go to a collector.",
+      "example": "A card charged off at $900 is not forgiven. The $900 can be sold to a collector."
+    },
+    "debt-validation": {
+      "term": "Debt validation",
+      "definition": "Your written request that a collector prove you owe the debt, and say who the original lender was, before you pay.",
+      "example": "You do not recognize a $740 letter. You write back and ask for validation. You do not send money first."
+    },
+    "bankruptcy": {
+      "term": "Bankruptcy",
+      "definition": "A court process for debts you cannot pay. Chapter 7 can wipe many unsecured debts and stays on a credit report for up to 10 years. Chapter 13 is a payment plan, often 3 to 5 years, and stays for about 7 years.",
+      "example": "Chapter 7 is not free, and most student loans usually are not wiped. It is a last resort, not a first call."
+    }
+  },
+  "lessons": [
+    {
+      "id": "cb-chargeoff",
+      "type": "lesson",
+      "title": "Charge-Offs",
+      "summary": "Written off is not the same as forgiven.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cb-chargeoff-q1",
+          "type": "multiple_choice",
+          "context": "A [[charge-off]] usually happens after many months late, often about 180 days. The lender may sell the debt. It can sit on your [[credit report]] for about seven years. Paying it later does not erase that clock.",
+          "prompt": "What is a charge-off?",
+          "choices": [
+            "The lender writes the debt off as a loss, often around 180 days late",
+            "The debt is forgiven",
+            "The balance becomes a reward"
+          ],
+          "answer": 0,
+          "explain": "They stopped hoping. You did not stop owing."
+        },
+        {
+          "id": "cb-chargeoff-q2",
+          "type": "true_false",
+          "prompt": "A charged-off debt is forgiven and you can ignore letters about it.",
+          "answer": false,
+          "explain": "You still owe it. A collector may own it now."
+        },
+        {
+          "id": "cb-chargeoff-q3",
+          "type": "number",
+          "prompt": "The card charged off at $900. A collector says you owe $900 plus $40 of fees they added. If the $40 is allowed, what is the ask?",
+          "answer": 940,
+          "unit": "$",
+          "explain": "$900 + $40 = $940. Ask them to prove both numbers before you pay."
+        },
+        {
+          "id": "cb-chargeoff-q4",
+          "type": "multiple_choice",
+          "prompt": "Does paying a charge-off delete it from the report the same week?",
+          "choices": [
+            "No. The mark can remain for about seven years, though the status can update to paid",
+            "Yes. Payment rewinds the clock to zero",
+            "Yes, if you pay in cash"
+          ],
+          "answer": 0,
+          "explain": "Paid is better than unpaid. It is not the same as gone."
+        },
+        {
+          "id": "cb-chargeoff-q5",
+          "type": "multiple_choice",
+          "prompt": "About how many days late is a common charge-off point?",
+          "choices": [
+            "About 180",
+            "About 3",
+            "About 3,000"
+          ],
+          "answer": 0,
+          "explain": "Around six months past due."
+        },
+        {
+          "id": "cb-chargeoff-q6",
+          "type": "fill_blank",
+          "prompt": "A charge-off means the lender wrote the debt off. You ___ still owe it.",
+          "choices": [
+            "do",
+            "do not",
+            "might never"
+          ],
+          "answer": 0,
+          "explain": "Wrote off is an accounting step. The debt remains."
+        }
+      ]
+    },
+    {
+      "id": "cb-rights",
+      "type": "lesson",
+      "format": "sort",
+      "title": "What Collectors Cannot Do",
+      "summary": "They can ask for the money. They cannot threaten jail over a credit card.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cb-rights-q1",
+          "type": "sort",
+          "context": "Under the Fair Debt Collection Practices Act, collectors cannot harass you, call before 8 a.m. or after 9 p.m., or threaten jail for an ordinary consumer debt. They can still contact you, and they can still sue.",
+          "prompt": "Allowed, or not allowed?",
+          "buckets": [
+            "Allowed",
+            "Not allowed"
+          ],
+          "items": [
+            [
+              "Send a letter about a debt you owe",
+              0
+            ],
+            [
+              "Call you at a reasonable hour",
+              0
+            ],
+            [
+              "Sue you, if the law and the facts allow it",
+              0
+            ],
+            [
+              "Threaten you with arrest over a credit-card bill",
+              1
+            ],
+            [
+              "Call you at 3 a.m.",
+              1
+            ],
+            [
+              "Lie about how much you owe",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "cb-rights-q2",
+          "type": "true_false",
+          "prompt": "A collector can have you arrested for an unpaid credit-card bill.",
+          "answer": false,
+          "explain": "Ordinary consumer debt is not a crime. A threat of arrest is a tactic."
+        },
+        {
+          "id": "cb-rights-q3",
+          "type": "multiple_choice",
+          "prompt": "What time of day is off limits for collector calls?",
+          "choices": [
+            "Before 8 a.m. and after 9 p.m.",
+            "Only Sundays",
+            "There is no limit"
+          ],
+          "answer": 0,
+          "explain": "Those are the federal edges."
+        },
+        {
+          "id": "cb-rights-q4",
+          "type": "multiple_choice",
+          "prompt": "They keep calling after you ask them, in writing, to stop calling. What can you do?",
+          "choices": [
+            "Tell them in writing to stop, and report the harassment",
+            "Pay so they will be nice",
+            "Ignore the law. They are allowed to harass"
+          ],
+          "answer": 0,
+          "explain": "A written request to stop calls is a real tool. It does not erase the debt."
+        },
+        {
+          "id": "cb-rights-q5",
+          "type": "true_false",
+          "prompt": "“We will sue” is always a lie.",
+          "answer": false,
+          "explain": "Sometimes they can sue. Sometimes it is a bluff. Validation and the dates tell you more than the tone."
+        },
+        {
+          "id": "cb-rights-q6",
+          "type": "multiple_choice",
+          "prompt": "Who enforces these rules?",
+          "choices": [
+            "The Consumer Financial Protection Bureau and the FTC, among others",
+            "The card’s rewards program",
+            "Nobody"
+          ],
+          "answer": 0,
+          "explain": "Report abuse. Do not debate it on the phone at 3 a.m."
+        }
+      ]
+    },
+    {
+      "id": "cb-validation",
+      "type": "lesson",
+      "format": "document",
+      "title": "Make Them Prove It",
+      "summary": "A letter is a claim. Proof is separate.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cb-validation-q1",
+          "type": "multiple_choice",
+          "context": "[[Debt validation]] means you write to the collector and ask them to prove the debt: the amount, and the original creditor. Do it in writing. Keep a copy. This is different from a [[dispute]] with your bank about a charge on your statement.",
+          "prompt": "What is debt validation?",
+          "choices": [
+            "A written demand that the collector prove you owe the debt",
+            "Paying the letter the day it arrives",
+            "A credit freeze"
+          ],
+          "answer": 0,
+          "explain": "Proof first. Money second."
+        },
+        {
+          "id": "cb-validation-q2",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Collection letter",
+            "subtitle": "You do not recognize this account",
+            "meta": [
+              [
+                "They say it is from",
+                "Harbor Card"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "bal",
+                "label": "Amount the letter says you owe",
+                "amount": 740.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "They want",
+                "amount": 740.0,
+                "strong": true
+              }
+            ],
+            "note": "Do not pay until they validate the debt in writing."
+          },
+          "prompt": "The letter asks for $740. You recognize $500 of an old card and not the other $240. How much is unexplained?",
+          "answer": 240,
+          "unit": "$",
+          "explain": "$740 − $500 = $240."
+        },
+        {
+          "id": "cb-validation-q3",
+          "type": "multiple_choice",
+          "prompt": "What do you send before any money?",
+          "choices": [
+            "A written validation request",
+            "The full $740 in cash",
+            "Your card number by text"
+          ],
+          "answer": 0,
+          "explain": "Pay what you owe after you know the number is real."
+        },
+        {
+          "id": "cb-validation-q4",
+          "type": "true_false",
+          "prompt": "You should give a collector your bank login so they can “look it up.”",
+          "answer": false,
+          "explain": "Never. They can send proof on paper."
+        },
+        {
+          "id": "cb-validation-q5",
+          "type": "order",
+          "prompt": "Put a strange collection letter in order.",
+          "items": [
+            "Read the amount and the original creditor",
+            "Check your own records",
+            "Write for validation if it is unclear",
+            "Pay only what the proof supports"
+          ],
+          "explain": "Read, check, ask, then pay what is real."
+        },
+        {
+          "id": "cb-validation-q6",
+          "type": "multiple_choice",
+          "prompt": "They never send proof. What do you not do?",
+          "choices": [
+            "Pay the full letter just to make it stop",
+            "Keep your copy of the request",
+            "Watch your credit reports"
+          ],
+          "answer": 0,
+          "explain": "An unproven demand is not a bill you have confirmed."
+        }
+      ]
+    },
+    {
+      "id": "cb-time-limit",
+      "type": "lesson",
+      "title": "Time Limits",
+      "summary": "The right to sue is not the same in every state. The report has its own clock.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cb-time-limit-q1",
+          "type": "info",
+          "title": "Two different clocks",
+          "body": "A statute of limitations is the time a collector has to sue you. It depends on your state and the kind of debt. Nobody on the phone gets to invent it.\n\nSeparately, most negative marks stay on a [[credit report]] for about seven years. A debt can be too old to sue over and still be on the report. Paying, or even promising to pay, can restart the lawsuit clock in some states. Get advice before you send money on a very old debt."
+        },
+        {
+          "id": "cb-time-limit-q2",
+          "type": "multiple_choice",
+          "prompt": "What does a statute of limitations limit?",
+          "choices": [
+            "How long they can sue you, under your state’s rules",
+            "How long the debt can appear on a credit report, nationwide, in every case",
+            "How long a charge-off takes to happen"
+          ],
+          "answer": 0,
+          "explain": "Lawsuit clock and report clock are different."
+        },
+        {
+          "id": "cb-time-limit-q3",
+          "type": "true_false",
+          "prompt": "After the lawsuit time limit passes, the debt always vanishes from your credit report the same day.",
+          "answer": false,
+          "explain": "The report can keep a negative mark for about seven years even when a lawsuit is no longer available."
+        },
+        {
+          "id": "cb-time-limit-q4",
+          "type": "multiple_choice",
+          "prompt": "A caller says “your state limit is 90 days, so pay today.” What is wrong with trusting that?",
+          "choices": [
+            "They are not your lawyer, and the limit depends on the state and the debt",
+            "Nothing. Callers know your statute",
+            "Time limits are the same everywhere: 90 days"
+          ],
+          "answer": 0,
+          "explain": "Look it up, or ask a legal-aid office. Do not take the collector’s word for the clock."
+        },
+        {
+          "id": "cb-time-limit-q5",
+          "type": "multiple_choice",
+          "prompt": "Why be careful about sending a small “good faith” payment on a very old debt?",
+          "choices": [
+            "In some states it can restart the time they have to sue",
+            "It deletes the report",
+            "It is required by federal law"
+          ],
+          "answer": 0,
+          "explain": "A friendly payment can have a legal side effect."
+        },
+        {
+          "id": "cb-time-limit-q6",
+          "type": "fill_blank",
+          "prompt": "The time they have to sue is set by your ___, not by the collector’s script.",
+          "choices": [
+            "state",
+            "mood",
+            "credit score"
+          ],
+          "answer": 0,
+          "explain": "State law. Confirm it."
+        }
+      ]
+    },
+    {
+      "id": "cb-settle",
+      "type": "lesson",
+      "format": "call",
+      "title": "Settling",
+      "summary": "Less than the full balance, in writing, with the tax question asked.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cb-settle-q1",
+          "type": "number",
+          "context": "Settling means the collector accepts less than the full [[balance]] and closes the account. Get the agreement in writing before you pay. The forgiven part can be taxable. Check irs.gov or a tax preparer for the year you settle.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Pay in full",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Pay in full",
+                  "amount": 1200.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "You pay",
+                  "amount": 1200.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Settlement offer",
+              "subtitle": "Get the deal in writing before you pay",
+              "lines": [
+                {
+                  "id": "pay",
+                  "label": "Settle for",
+                  "amount": 700.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "You pay",
+                  "amount": 700.0,
+                  "strong": true
+                }
+              ],
+              "note": "The unpaid $500 can count as taxable income. Ask a tax preparer or check irs.gov for the current year."
+            }
+          ],
+          "prompt": "They will take $700 on a $1,200 debt. How much less is that than paying in full?",
+          "answer": 500,
+          "unit": "$",
+          "explain": "$1,200 − $700 = $500."
+        },
+        {
+          "id": "cb-settle-q2",
+          "type": "multiple_choice",
+          "prompt": "What do you need before you send the $700?",
+          "choices": [
+            "A written agreement that $700 settles the debt",
+            "A verbal “sure” on the phone",
+            "A new loan to pay the settlement"
+          ],
+          "answer": 0,
+          "explain": "If it is not in writing, you may still owe the rest."
+        },
+        {
+          "id": "cb-settle-q3",
+          "type": "true_false",
+          "prompt": "The $500 they forgive can sometimes count as taxable income.",
+          "answer": true,
+          "explain": "Canceled debt often shows up at tax time. Confirm the current rule."
+        },
+        {
+          "id": "cb-settle-q4",
+          "type": "multiple_choice",
+          "prompt": "Settling versus paying $1,200 in full. What is the trade?",
+          "choices": [
+            "You save $500 and you may owe tax on the forgiven part, and the report may say “settled” rather than “paid in full”",
+            "Settling deletes the history",
+            "They are identical on your report"
+          ],
+          "answer": 0,
+          "explain": "Cheaper cash now, a different mark, and a possible tax form."
+        },
+        {
+          "id": "cb-settle-q5",
+          "type": "number",
+          "prompt": "If you settle five debts the same way, each $500 below the balance, how much was forgiven in total?",
+          "answer": 2500,
+          "unit": "$",
+          "explain": "$500 × 5 = $2,500. That is the figure to ask a tax preparer about."
+        },
+        {
+          "id": "cb-settle-q6",
+          "type": "multiple_choice",
+          "prompt": "You do not have the $700. What is a settlement not?",
+          "choices": [
+            "A reason to take a payday loan",
+            "Something you can postpone until you have the money",
+            "A deal that must be in writing"
+          ],
+          "answer": 0,
+          "explain": "Borrowing at 390% to settle a debt recreates the problem."
+        }
+      ]
+    },
+    {
+      "id": "cb-bankruptcy",
+      "type": "lesson",
+      "title": "Bankruptcy, at a High Level",
+      "summary": "A court, a cost, and a mark that lasts years. Not a coupon.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cb-bankruptcy-q1",
+          "type": "multiple_choice",
+          "context": "[[Bankruptcy]] is a court process. Chapter 7 can discharge many unsecured debts and can stay on a [[credit report]] for up to 10 years. Chapter 13 is a court payment plan, often 3 to 5 years, and the mark is about 7 years. Most student loans are usually not wiped. There are court costs and, often, a lawyer.",
+          "prompt": "What is Chapter 7, in plain terms?",
+          "choices": [
+            "A court process that can wipe many unsecured debts, and can stay on your report for up to 10 years",
+            "A payment plan of 3 to 5 years",
+            "A way to raise your credit score next month"
+          ],
+          "answer": 0,
+          "explain": "Wipe, with rules, and a long mark."
+        },
+        {
+          "id": "cb-bankruptcy-q2",
+          "type": "multiple_choice",
+          "prompt": "What is Chapter 13?",
+          "choices": [
+            "A court-supervised payment plan, often 3 to 5 years",
+            "A one-day erasure of every debt including student loans",
+            "The same thing as a credit freeze"
+          ],
+          "answer": 0,
+          "explain": "You pay into a plan. The mark is about 7 years."
+        },
+        {
+          "id": "cb-bankruptcy-q3",
+          "type": "true_false",
+          "prompt": "Bankruptcy is free and wipes student loans in a typical case.",
+          "answer": false,
+          "explain": "It costs money to file, and most student loans usually stay."
+        },
+        {
+          "id": "cb-bankruptcy-q4",
+          "type": "multiple_choice",
+          "prompt": "How long can a Chapter 7 bankruptcy stay on a credit report?",
+          "choices": [
+            "Up to 10 years",
+            "10 weeks",
+            "Until you ask nicely"
+          ],
+          "answer": 0,
+          "explain": "Up to 10 years."
+        },
+        {
+          "id": "cb-bankruptcy-q5",
+          "type": "multiple_choice",
+          "prompt": "How long is a Chapter 13 mark, in the usual case?",
+          "choices": [
+            "About 7 years",
+            "About 7 weeks",
+            "Forever"
+          ],
+          "answer": 0,
+          "explain": "About 7 years from filing."
+        },
+        {
+          "id": "cb-bankruptcy-q6",
+          "type": "multiple_choice",
+          "prompt": "When is it worth a serious look?",
+          "choices": [
+            "When you cannot pay, the calls and lawsuits are real, and a nonprofit credit counselor or legal aid has walked through the options with you",
+            "The first month you carry a card balance",
+            "To get a higher credit-card limit"
+          ],
+          "answer": 0,
+          "explain": "Last resort. Real advice, not a TikTok."
+        }
+      ]
+    },
+    {
+      "id": "cb-chris",
+      "type": "lesson",
+      "format": "story",
+      "title": "Chris Gets a Letter",
+      "summary": "Prove the strange part. Do not empty the savings on a two-day threat.",
+      "xp": 10,
+      "story": {
+        "title": "The letter",
+        "character": "Chris, 41, home health aide",
+        "body": "Chris gets a letter demanding **$860**. He recognizes an old medical bill of about **$640**. He does not recognize the other **$220**, and he does not remember a card called Northline.\n\nThe letter says he will be sued on Friday. It arrived on Wednesday. He has **$200** in savings."
+      },
+      "steps": [
+        {
+          "id": "cb-chris-q1",
+          "type": "number",
+          "prompt": "How much of the $860 does Chris not recognize?",
+          "answer": 220,
+          "unit": "$",
+          "explain": "$860 − $640 = $220."
+        },
+        {
+          "id": "cb-chris-q2",
+          "type": "multiple_choice",
+          "prompt": "What does he do before paying anything?",
+          "choices": [
+            "Write for validation of the whole $860, and check his records on the $640",
+            "Pay $860 from a payday loan",
+            "Ignore a real $640 he knows about forever"
+          ],
+          "answer": 0,
+          "explain": "The known bill and the mystery $220 are not the same decision."
+        },
+        {
+          "id": "cb-chris-q3",
+          "type": "true_false",
+          "prompt": "“We will sue on Friday” on a Wednesday letter is a reason to skip validation and pay in a panic.",
+          "answer": false,
+          "explain": "A two-day threat is pressure. Proof still comes first."
+        },
+        {
+          "id": "cb-chris-q4",
+          "type": "multiple_choice",
+          "prompt": "His $200 in savings is also his emergency buffer. What should it not become?",
+          "choices": [
+            "A payday-loan down payment",
+            "Money he keeps while he asks for proof",
+            "Untouched until he knows the debt"
+          ],
+          "answer": 0,
+          "explain": "Do not turn a letter into a worse debt."
+        },
+        {
+          "id": "cb-chris-q5",
+          "type": "number",
+          "prompt": "If validation shows he owes only the $640, how much was the letter overstating?",
+          "answer": 220,
+          "unit": "$",
+          "explain": "$860 − $640 = $220."
+        },
+        {
+          "id": "cb-chris-q6",
+          "type": "multiple_choice",
+          "prompt": "After the real amount is proven, what is a sane way to handle the $640?",
+          "choices": [
+            "A payment plan he can afford, in writing",
+            "A title loan",
+            "No response, ever, including to a lawsuit"
+          ],
+          "answer": 0,
+          "explain": "A real debt gets a real plan. A lawsuit, if one actually arrives, needs a response."
+        }
+      ]
+    },
+    {
+      "id": "cb-rebuild",
+      "type": "lesson",
+      "title": "Afterward",
+      "summary": "The mark ages. New on-time payments are the record you can still write.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cb-rebuild-q1",
+          "type": "multiple_choice",
+          "context": "Rebuilding is slow on purpose. Pay the bills you have, keep utilization low, and a [[secured card]] can start a fresh on-time record. The old mark falls off on its own clock. You do not pay a company that promises to delete accurate negative marks.",
+          "prompt": "A charge-off or a bankruptcy is on the report. What still helps?",
+          "choices": [
+            "On-time payments on the accounts you have now",
+            "Opening five cards this week",
+            "Never looking at the report again"
+          ],
+          "answer": 0,
+          "explain": "The old mark ages. The new history is what you add."
+        },
+        {
+          "id": "cb-rebuild-q2",
+          "type": "true_false",
+          "prompt": "A company that promises to erase accurate late payments from your report is offering a normal, legal service.",
+          "answer": false,
+          "explain": "Accurate marks come off when the clock runs out. Pay for a lie and you often pay twice."
+        },
+        {
+          "id": "cb-rebuild-q3",
+          "type": "multiple_choice",
+          "prompt": "Which new account fits a rebuild?",
+          "choices": [
+            "A secured card, used little and paid in full",
+            "A payday loan",
+            "Three store cards on the same day"
+          ],
+          "answer": 0,
+          "explain": "Small, secured, and boring."
+        },
+        {
+          "id": "cb-rebuild-q4",
+          "type": "number",
+          "prompt": "A Chapter 7 was filed in 2020. The 10-year mark runs to about what year?",
+          "answer": 2030,
+          "explain": "2020 + 10 = 2030."
+        },
+        {
+          "id": "cb-rebuild-q5",
+          "type": "multiple_choice",
+          "prompt": "While you wait, what do you check?",
+          "choices": [
+            "All three credit reports, for errors and for accounts that are not yours",
+            "Nothing",
+            "Only the ads"
+          ],
+          "answer": 0,
+          "explain": "The file can still be wrong. Wrong is worth a dispute."
+        },
+        {
+          "id": "cb-rebuild-q6",
+          "type": "fill_blank",
+          "prompt": "Accurate negative marks come off when the ___ runs out, not when a stranger promises.",
+          "choices": [
+            "clock",
+            "sale",
+            "reward"
+          ],
+          "answer": 0,
+          "explain": "Seven years for most marks. Up to ten for Chapter 7."
+        }
+      ]
+    },
+    {
+      "id": "cb-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "cb-trial",
+      "type": "boss",
+      "title": "Den Trial: Collections & Bankruptcy",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "cb-trial-q1",
+          "type": "true_false",
+          "prompt": "A charge-off means the debt is forgiven.",
+          "answer": false,
+          "explain": "It was written off. You can still owe it."
+        },
+        {
+          "id": "cb-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "A collector threatens jail over a credit-card bill. That threat is…",
+          "choices": [
+            "Not allowed",
+            "Required by law",
+            "A sign you should pay in cash tonight"
+          ],
+          "answer": 0,
+          "explain": "Ordinary consumer debt is not a reason to threaten arrest."
+        },
+        {
+          "id": "cb-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "Chapter 7 can stay on a credit report for up to how long?",
+          "choices": [
+            "10 years",
+            "10 days",
+            "One billing cycle"
+          ],
+          "answer": 0,
+          "explain": "Up to 10 years."
+        },
+        {
+          "id": "cb-trial-q4",
+          "type": "number",
+          "prompt": "A collector will settle $2,000 for $1,250. How much less is that than the full balance?",
+          "answer": 750,
+          "unit": "$",
+          "explain": "$2,000 − $1,250 = $750."
+        }
+      ]
+    }
+  ]
+}
