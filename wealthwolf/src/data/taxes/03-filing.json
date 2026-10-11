@@ -1,0 +1,664 @@
+{
+  "id": "filing",
+  "section": "taxes",
+  "order": 3,
+  "title": "Filing Your Return",
+  "description": "Who files, when the money is due, and how a mistake gets fixed.",
+  "wolfLine": "The extension moves the form. It does not move the payment.",
+  "terms": {
+    "filing-extension": {
+      "term": "Filing extension",
+      "definition": "Extra time to send the return, usually to October 15. It does not give extra time to pay the tax.",
+      "example": "An extension filed on April 15 still leaves an $800 tax due on April 15."
+    },
+    "amended-return": {
+      "term": "Amended return",
+      "definition": "A form, usually Form 1040-X, that fixes a return you already filed. You generally have about three years, and the exact deadline is on irs.gov for that year.",
+      "example": "A missed $200 credit is fixed on an amended return, not by filing the original form again and hoping."
+    }
+  },
+  "lessons": [
+    {
+      "id": "fi-who",
+      "type": "lesson",
+      "title": "Who Must File",
+      "summary": "The common cases, not every exception.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fi-who-q1",
+          "type": "info",
+          "title": "Usually, not always",
+          "body": "You usually must file if your income is above the filing threshold for your status, and if you had at least **$400** of net self-employment income. That $400 rule is the common case.\n\nYou may still want to file when you do not have to, so a refund or a refundable credit can reach you. This is the usual rule, not a ruling on your year."
+        },
+        {
+          "id": "fi-who-q2",
+          "type": "multiple_choice",
+          "prompt": "Who usually must file even with a small income?",
+          "choices": [
+            "Someone with $400 or more of net self-employment income",
+            "Someone with no income and no credits",
+            "Someone whose only mail was a grocery flyer"
+          ],
+          "answer": 0,
+          "explain": "Self-employment of $400 or more is a common filing trigger."
+        },
+        {
+          "id": "fi-who-q3",
+          "type": "true_false",
+          "prompt": "If a refund is waiting, filing can still be worth it when you are not required to file.",
+          "answer": true,
+          "explain": "The IRS does not mail the refund just because it would have been nice."
+        },
+        {
+          "id": "fi-who-q4",
+          "type": "multiple_choice",
+          "prompt": "What is the careful way to know if you must file this year?",
+          "choices": [
+            "Check the filing threshold for your status on irs.gov",
+            "Ask whether your friend filed",
+            "File only if you owe more than $1,000"
+          ],
+          "answer": 0,
+          "explain": "Thresholds depend on age, status, and the year. The IRS page is the list."
+        },
+        {
+          "id": "fi-who-q5",
+          "type": "fill_blank",
+          "prompt": "Net self-employment of $___ or more usually means you must file.",
+          "choices": [
+            "400",
+            "4,000",
+            "40,000"
+          ],
+          "answer": 0,
+          "explain": "The common figure is $400 of net self-employment income."
+        }
+      ]
+    },
+    {
+      "id": "fi-when",
+      "type": "lesson",
+      "title": "Deadlines and Extensions",
+      "summary": "More time to file is not more time to pay.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fi-when-q1",
+          "type": "info",
+          "title": "April, then October",
+          "body": "A calendar-year return is usually due **April 15**. If that day is a weekend or a holiday, the due date moves to the next business day.\n\nA [[filing extension]] usually gives you until **October 15** to send the form. The tax is still due in April. An **$800** tax unpaid from April 15 to October 15 is six months late even if the form is on time."
+        },
+        {
+          "id": "fi-when-q2",
+          "type": "multiple_choice",
+          "prompt": "What does an extension extend?",
+          "choices": [
+            "The time to file the return",
+            "The time to pay the tax",
+            "The time to earn the income"
+          ],
+          "answer": 0,
+          "explain": "File later. Pay on time."
+        },
+        {
+          "id": "fi-when-q3",
+          "type": "number",
+          "prompt": "The tax due on April 15 is $800. An extension is filed and the return is sent on October 15. How much of that tax was still due in April?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "All $800. The extension did not move the payment."
+        },
+        {
+          "id": "fi-when-q4",
+          "type": "number",
+          "prompt": "April 15 to October 15 is how many months?",
+          "answer": 6,
+          "unit": "months",
+          "explain": "October 15 is six months after April 15."
+        },
+        {
+          "id": "fi-when-q5",
+          "type": "true_false",
+          "prompt": "A return filed on October 15, under an extension, was required to include the payment back in April.",
+          "answer": true,
+          "explain": "The form may be on time in October. The payment was due in April."
+        }
+      ]
+    },
+    {
+      "id": "fi-papers",
+      "type": "lesson",
+      "format": "sort",
+      "title": "What to Gather",
+      "summary": "The return is only as good as the stack.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fi-papers-q1",
+          "type": "info",
+          "title": "The usual pile",
+          "body": "Bring the [[W-2|w-2]] from each job, any [[1099|form-1099]], and the records of a credit you will claim. A grocery receipt is not a tax form.\n\nLast year’s return helps you type the numbers. It does not replace this year’s W-2."
+        },
+        {
+          "id": "fi-papers-q2",
+          "type": "sort",
+          "prompt": "Sort the pile.",
+          "buckets": [
+            "Bring it",
+            "Leave it out"
+          ],
+          "items": [
+            [
+              "This year’s W-2",
+              0
+            ],
+            [
+              "A Form 1099-INT for bank interest",
+              0
+            ],
+            [
+              "A grocery receipt for ordinary food",
+              1
+            ],
+            [
+              "A birthday card",
+              1
+            ]
+          ],
+          "explain": "Income forms come in. Ordinary groceries and greeting cards do not."
+        },
+        {
+          "id": "fi-papers-q3",
+          "type": "multiple_choice",
+          "prompt": "You had two jobs. How many W-2s do you need?",
+          "choices": [
+            "Both",
+            "The larger one",
+            "Neither, if you remember the pay"
+          ],
+          "answer": 0,
+          "explain": "Each employer reports its own wages and withholding."
+        },
+        {
+          "id": "fi-papers-q4",
+          "type": "true_false",
+          "prompt": "A grocery receipt belongs in the tax pile for a person who did not itemize and did not run a business.",
+          "answer": false,
+          "explain": "Ordinary food is not a line on that return."
+        },
+        {
+          "id": "fi-papers-q5",
+          "type": "fill_blank",
+          "prompt": "Bank interest arrives on a Form ___.",
+          "choices": [
+            "1099-INT",
+            "W-4",
+            "extension"
+          ],
+          "answer": 0,
+          "explain": "1099-INT. The W-4 is the withholding form, not the interest form."
+        }
+      ]
+    },
+    {
+      "id": "fi-status",
+      "type": "lesson",
+      "title": "Filing Status",
+      "summary": "It picks the deduction and the brackets.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fi-status-q1",
+          "type": "info",
+          "title": "Five names",
+          "body": "The common statuses are single, married filing jointly, married filing separately, head of household, and qualifying surviving spouse.\n\nHead of household is not “I own a house.” It is usually an unmarried person who paid for a home for a qualifying person. The 2026 standard deduction you already saw is **$16,100** single and **$24,150** head of household."
+        },
+        {
+          "id": "fi-status-q2",
+          "type": "multiple_choice",
+          "prompt": "Two spouses can choose which pair?",
+          "choices": [
+            "Married filing jointly or married filing separately",
+            "Single and head of household, both at once",
+            "A status from a different year"
+          ],
+          "answer": 0,
+          "explain": "Spouses pick joint or separate. They do not each file as single."
+        },
+        {
+          "id": "fi-status-q3",
+          "type": "true_false",
+          "prompt": "Owning a house, by itself, makes you head of household.",
+          "answer": false,
+          "explain": "The status is about a qualifying person and paying for the home, not about the mortgage."
+        },
+        {
+          "id": "fi-status-q4",
+          "type": "number",
+          "prompt": "How much larger is the 2026 head-of-household standard deduction than the single one?",
+          "answer": 8050,
+          "unit": "$",
+          "explain": "$24,150 − $16,100 = $8,050."
+        },
+        {
+          "id": "fi-status-q5",
+          "type": "fill_blank",
+          "prompt": "Spouses who file together use married filing ___.",
+          "choices": [
+            "jointly",
+            "single",
+            "separately and jointly"
+          ],
+          "answer": 0,
+          "explain": "Jointly is the shared return. Separately is the other choice."
+        }
+      ]
+    },
+    {
+      "id": "fi-help",
+      "type": "lesson",
+      "format": "call",
+      "title": "Free Help or a Preparer",
+      "summary": "The fee is not the same thing as a correct return.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fi-help-q1",
+          "type": "info",
+          "title": "Three doors",
+          "body": "IRS Free File and VITA can cost nothing if you qualify. Paid software and a preparer charge a fee. This page does not grade an income cap, because those caps change. Check irs.gov for the year.\n\nWhoever prepares it, you sign it. The **$350** fee does not move the tax rules."
+        },
+        {
+          "id": "fi-help-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Do it yourself, if you qualify",
+              "subtitle": "IRS Free File or VITA",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Software fee on this Free File offer",
+                  "amount": 0.0
+                }
+              ],
+              "note": "A $0 fee only if you qualify. Check irs.gov."
+            },
+            {
+              "kind": "statement",
+              "title": "A paid preparer",
+              "subtitle": "You still sign the return",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Preparer fee",
+                  "amount": 350.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much more is the preparer’s fee than the $0 Free File offer, if you qualify for that offer?",
+          "answer": 350,
+          "unit": "$",
+          "explain": "$350 − $0 = $350."
+        },
+        {
+          "id": "fi-help-q3",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Do it yourself, if you qualify",
+              "subtitle": "IRS Free File or VITA",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Software fee on this Free File offer",
+                  "amount": 0.0
+                }
+              ],
+              "note": "A $0 fee only if you qualify. Check irs.gov."
+            },
+            {
+              "kind": "statement",
+              "title": "A paid preparer",
+              "subtitle": "You still sign the return",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Preparer fee",
+                  "amount": 350.0
+                }
+              ]
+            }
+          ],
+          "prompt": "You qualify for Free File and your return is the single-filer case from this course. Which page has the lower fee?",
+          "choices": [
+            "Free File or VITA",
+            "The $350 preparer",
+            "The fees match"
+          ],
+          "answer": 0,
+          "why": [
+            "The offer on this page is $0 if you qualify.",
+            "The preparer charges $350.",
+            "They differ by $350."
+          ],
+          "explain": "Qualify first. If you do, the fee on this pair is $0 versus $350."
+        },
+        {
+          "id": "fi-help-q4",
+          "type": "true_false",
+          "prompt": "A preparer’s signature replaces yours.",
+          "answer": false,
+          "explain": "You sign your return. The preparer can be wrong, and the return is still yours."
+        },
+        {
+          "id": "fi-help-q5",
+          "type": "multiple_choice",
+          "prompt": "VITA and Free File are the right first look when what is true?",
+          "choices": [
+            "You might qualify for free help",
+            "You want a fee in every case",
+            "You would rather skip the W-2"
+          ],
+          "answer": 0,
+          "explain": "Check the qualification. Then decide if a fee buys you something the free option does not."
+        }
+      ]
+    },
+    {
+      "id": "fi-1040",
+      "type": "lesson",
+      "format": "document",
+      "title": "A Simplified Form 1040",
+      "summary": "Five lines. The refund is not one of the wages.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fi-1040-q1",
+          "type": "info",
+          "title": "The story you already know",
+          "body": "This is the single filer with **$40,000** of wages, the 2026 [[standard deduction]] of **$16,100**, tax of **$2,620**, and withholding of **$3,000**.\n\nThe lines are different kinds of numbers. Do not add the wages to the tax."
+        },
+        {
+          "id": "fi-1040-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A simplified Form 1040",
+            "subtitle": "Single, 2026",
+            "lines": [
+              {
+                "id": "wages",
+                "label": "Wages",
+                "amount": 40000.0
+              },
+              {
+                "id": "agi",
+                "label": "Adjusted gross income",
+                "amount": 40000.0
+              },
+              {
+                "id": "taxable",
+                "label": "Taxable income",
+                "amount": 23900.0
+              },
+              {
+                "id": "tax",
+                "label": "Tax",
+                "amount": 2620.0
+              },
+              {
+                "id": "held",
+                "label": "Federal income tax withheld",
+                "amount": 3000.0
+              }
+            ],
+            "note": "Taxable income is wages minus the $16,100 standard deduction. The lines are not one total."
+          },
+          "prompt": "What is taxable income on this form?",
+          "answer": 23900,
+          "unit": "$",
+          "explain": "$40,000 − $16,100 = $23,900."
+        },
+        {
+          "id": "fi-1040-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A simplified Form 1040",
+            "subtitle": "Single, 2026",
+            "lines": [
+              {
+                "id": "wages",
+                "label": "Wages",
+                "amount": 40000.0
+              },
+              {
+                "id": "agi",
+                "label": "Adjusted gross income",
+                "amount": 40000.0
+              },
+              {
+                "id": "taxable",
+                "label": "Taxable income",
+                "amount": 23900.0
+              },
+              {
+                "id": "tax",
+                "label": "Tax",
+                "amount": 2620.0
+              },
+              {
+                "id": "held",
+                "label": "Federal income tax withheld",
+                "amount": 3000.0
+              }
+            ],
+            "note": "Taxable income is wages minus the $16,100 standard deduction. The lines are not one total."
+          },
+          "prompt": "What is the refund?",
+          "answer": 380,
+          "unit": "$",
+          "explain": "$3,000 − $2,620 = $380."
+        },
+        {
+          "id": "fi-1040-q4",
+          "type": "multiple_choice",
+          "prompt": "Which line is the prepayment?",
+          "choices": [
+            "Federal income tax withheld, $3,000",
+            "Wages, $40,000",
+            "Taxable income, $23,900"
+          ],
+          "answer": 0,
+          "explain": "Withholding is what was already sent. Wages are what you earned."
+        },
+        {
+          "id": "fi-1040-q5",
+          "type": "true_false",
+          "prompt": "Adding all five lines gives a number the IRS uses.",
+          "answer": false,
+          "explain": "They are not the same kind of dollar. The refund is withholding minus tax."
+        }
+      ]
+    },
+    {
+      "id": "fi-efile",
+      "type": "lesson",
+      "title": "E-file and Direct Deposit",
+      "summary": "The refund goes where the numbers say.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fi-efile-q1",
+          "type": "info",
+          "title": "Type the account twice",
+          "body": "E-file sends the return electronically. Direct deposit sends a refund to the routing number and account number you enter.\n\nA refund of **$380** deposited to the right account is $380. The same refund sent to a wrong account is a problem you have to unwind. Paper checks are slower."
+        },
+        {
+          "id": "fi-efile-q2",
+          "type": "multiple_choice",
+          "prompt": "What does direct deposit need?",
+          "choices": [
+            "The right routing number and account number",
+            "Only your employer’s name",
+            "A paper check from last year"
+          ],
+          "answer": 0,
+          "explain": "Those two numbers are the address of the account."
+        },
+        {
+          "id": "fi-efile-q3",
+          "type": "number",
+          "prompt": "The refund is $380 and the preparer fee was $0. How much of the refund is left after a $0 fee?",
+          "answer": 380,
+          "unit": "$",
+          "explain": "$380 − $0 = $380. A fee would come out of your pocket, not out of the tax math."
+        },
+        {
+          "id": "fi-efile-q4",
+          "type": "true_false",
+          "prompt": "E-file means you no longer need the W-2.",
+          "answer": false,
+          "explain": "E-file is how the return travels. The W-2 is still the source of the wages and the withholding."
+        },
+        {
+          "id": "fi-efile-q5",
+          "type": "fill_blank",
+          "prompt": "A wrong account number can send the refund to the wrong ___.",
+          "choices": [
+            "account",
+            "bracket",
+            "state"
+          ],
+          "answer": 0,
+          "explain": "Check the digits before you submit."
+        }
+      ]
+    },
+    {
+      "id": "fi-denise",
+      "type": "lesson",
+      "format": "story",
+      "title": "Denise Fixes a Mistake",
+      "summary": "An extension paid on time. A credit fixed later.",
+      "xp": 10,
+      "story": {
+        "title": "Denise fixes a return",
+        "character": "Denise, 41",
+        "body": "Denise is 41 and a clinic manager. She filed an extension and paid her **$800** tax on April 15, then sent the return in June. The payment was on time. The form used the extra time.\n\nIn August she finds a **$200** credit the return left off. She files an [[amended return]], usually Form 1040-X. She does not file the original form a second time.\n\nThe credit would have cut her tax from **$800** to **$600**. She checks irs.gov for how long an amended return for that year is allowed. The usual window is about three years."
+      },
+      "steps": [
+        {
+          "id": "fi-denise-q1",
+          "type": "number",
+          "prompt": "Denise’s original tax was $800. The missed credit is $200. What should the tax have been?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$800 − $200 = $600."
+        },
+        {
+          "id": "fi-denise-q2",
+          "type": "number",
+          "prompt": "How much did she overpay if she already paid the $800?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$800 − $600 = $200."
+        },
+        {
+          "id": "fi-denise-q3",
+          "type": "multiple_choice",
+          "prompt": "How does she fix the filed return?",
+          "choices": [
+            "An amended return, usually Form 1040-X",
+            "A second copy of the original return",
+            "A new W-4 sent to the IRS"
+          ],
+          "answer": 0,
+          "explain": "The amended return is the correction. A second original is not."
+        },
+        {
+          "id": "fi-denise-q4",
+          "type": "true_false",
+          "prompt": "Her extension let her pay the $800 in October.",
+          "answer": false,
+          "explain": "She paid in April. The extension covered the form, not the payment."
+        },
+        {
+          "id": "fi-denise-q5",
+          "type": "fill_blank",
+          "prompt": "The form that usually fixes a filed return is Form ___.",
+          "choices": [
+            "1040-X",
+            "W-4",
+            "1099"
+          ],
+          "answer": 0,
+          "explain": "1040-X. Then check the deadline for that year on irs.gov."
+        }
+      ]
+    },
+    {
+      "id": "fi-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "fi-trial",
+      "type": "boss",
+      "title": "Den Trial: Filing Your Return",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "fi-trial-q1",
+          "type": "true_false",
+          "prompt": "An extension to file is also an extension to pay.",
+          "answer": false,
+          "explain": "The return can wait until October. The tax is still due in April."
+        },
+        {
+          "id": "fi-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "Which paper reports wages and federal income tax withheld?",
+          "choices": [
+            "Form W-2",
+            "A grocery receipt",
+            "Form W-4"
+          ],
+          "answer": 0,
+          "explain": "The W-2 is the wage report. The W-4 is the withholding request."
+        },
+        {
+          "id": "fi-trial-q3",
+          "type": "number",
+          "prompt": "A return left off a $150 credit. The tax paid was $900. What should the tax have been?",
+          "answer": 750,
+          "unit": "$",
+          "explain": "$900 − $150 = $750."
+        },
+        {
+          "id": "fi-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "You qualify for free help. What is the first door?",
+          "choices": [
+            "IRS Free File or VITA",
+            "The most expensive preparer in town",
+            "Skipping the return"
+          ],
+          "answer": 0,
+          "explain": "Check that you qualify, then use the free door before you pay $350."
+        }
+      ]
+    }
+  ]
+}

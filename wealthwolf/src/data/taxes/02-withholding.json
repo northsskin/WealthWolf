@@ -1,0 +1,738 @@
+{
+  "id": "withholding",
+  "section": "taxes",
+  "order": 2,
+  "title": "Withholding & the W-4",
+  "description": "The prepayment on the paycheck, the form that sets it, and the refund that is not a prize.",
+  "wolfLine": "A refund is your money coming home late.",
+  "terms": {
+    "withholding": {
+      "term": "Withholding",
+      "definition": "Tax your employer takes out of each paycheck and sends to the IRS in your name. It is a prepayment, not a separate extra tax.",
+      "example": "A $2,620 income-tax bill and $3,000 withheld means a $380 refund."
+    },
+    "w-4": {
+      "term": "W-4",
+      "definition": "The form you give your employer so it knows how much federal income tax to withhold. You can change it when a job, a marriage, or a second paycheck changes the picture.",
+      "example": "Chris has two jobs. Each W-4 was filled out as if it were his only job, so too little was withheld."
+    }
+  },
+  "lessons": [
+    {
+      "id": "wh-what",
+      "type": "lesson",
+      "title": "What Withholding Is",
+      "summary": "The IRS is already collecting during the year.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wh-what-q1",
+          "type": "info",
+          "title": "A prepayment",
+          "body": "[[Withholding]] is federal income tax taken from the paycheck. It is credited against the bill you saw in the last unit.\n\nIt is not [[FICA]]. FICA is Social Security and Medicare. A W-4 changes the income-tax withholding, not the FICA rate."
+        },
+        {
+          "id": "wh-what-q2",
+          "type": "multiple_choice",
+          "prompt": "What is withholding?",
+          "choices": [
+            "Income tax your employer sends ahead, in your name",
+            "A fee the employer keeps",
+            "The standard deduction"
+          ],
+          "answer": 0,
+          "explain": "It is your money, parked with the IRS until the return sorts it out."
+        },
+        {
+          "id": "wh-what-q3",
+          "type": "number",
+          "prompt": "The tax is $2,620 and withholding is $3,000. How much comes back?",
+          "answer": 380,
+          "unit": "$",
+          "explain": "$3,000 − $2,620 = $380."
+        },
+        {
+          "id": "wh-what-q4",
+          "type": "number",
+          "prompt": "The tax is $2,620 and withholding is $2,000. How much do you still owe?",
+          "answer": 620,
+          "unit": "$",
+          "explain": "$2,620 − $2,000 = $620."
+        },
+        {
+          "id": "wh-what-q5",
+          "type": "true_false",
+          "prompt": "Withholding is a second tax on top of the income tax.",
+          "answer": false,
+          "explain": "It is the income tax, paid early. The return compares it with the real bill."
+        }
+      ]
+    },
+    {
+      "id": "wh-when",
+      "type": "lesson",
+      "title": "When to Update the W-4",
+      "summary": "A life change is a form, not a hope.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wh-when-q1",
+          "type": "info",
+          "title": "The form is yours",
+          "body": "A [[W-4|w-4]] tells the employer how much federal income tax to withhold. Fill a new one when you marry, have a child, add a job, or your refund or your bill keeps surprising you.\n\nThe IRS withholding estimator on irs.gov is the tool. This lesson does not fill the form for you."
+        },
+        {
+          "id": "wh-when-q2",
+          "type": "multiple_choice",
+          "prompt": "Which change is a reason to look at the W-4 again?",
+          "choices": [
+            "You take a second job",
+            "You buy the same groceries",
+            "Your commute is one block shorter"
+          ],
+          "answer": 0,
+          "explain": "A second paycheck changes the tax. The estimator is built for that."
+        },
+        {
+          "id": "wh-when-q3",
+          "type": "true_false",
+          "prompt": "A W-4 changes the FICA rate.",
+          "answer": false,
+          "explain": "FICA is set by law. The W-4 changes income-tax withholding."
+        },
+        {
+          "id": "wh-when-q4",
+          "type": "multiple_choice",
+          "prompt": "Where is the careful place to estimate a new W-4?",
+          "choices": [
+            "The IRS withholding estimator",
+            "A comment thread",
+            "Last year’s refund, with no new numbers"
+          ],
+          "answer": 0,
+          "explain": "The estimator uses your pay, your other job, and your filing status."
+        },
+        {
+          "id": "wh-when-q5",
+          "type": "fill_blank",
+          "prompt": "You give the W-4 to your ___.",
+          "choices": [
+            "employer",
+            "state legislature",
+            "bank"
+          ],
+          "answer": 0,
+          "explain": "The employer is who withholds. The IRS is who receives it."
+        }
+      ]
+    },
+    {
+      "id": "wh-either",
+      "type": "lesson",
+      "title": "Refund or a Bill",
+      "summary": "Both are your money. The timing is the difference.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wh-either-q1",
+          "type": "info",
+          "title": "A refund is not a prize",
+          "body": "A refund means withholding was larger than the tax. A bill means it was smaller. The tax can be the same either way.\n\nOn a **$2,620** tax, withholding of **$3,000** refunds **$380**. Withholding of **$2,200** means you owe **$420**."
+        },
+        {
+          "id": "wh-either-q2",
+          "type": "number",
+          "prompt": "Tax $2,620, withholding $2,200. How much do you owe?",
+          "answer": 420,
+          "unit": "$",
+          "explain": "$2,620 − $2,200 = $420."
+        },
+        {
+          "id": "wh-either-q3",
+          "type": "number",
+          "prompt": "How much more was withheld in the $3,000 case than in the $2,200 case?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "$3,000 − $2,200 = $800."
+        },
+        {
+          "id": "wh-either-q4",
+          "type": "multiple_choice",
+          "prompt": "What is a refund?",
+          "choices": [
+            "Your own overpayment, sent back",
+            "A bonus from the IRS",
+            "Proof you paid no tax"
+          ],
+          "answer": 0,
+          "explain": "You paid $3,000 toward a $2,620 bill. The $380 was always yours."
+        },
+        {
+          "id": "wh-either-q5",
+          "type": "true_false",
+          "prompt": "Owing at filing time means the return was done wrong.",
+          "answer": false,
+          "explain": "It means withholding was short of the bill. The return can still be right."
+        }
+      ]
+    },
+    {
+      "id": "wh-estimator",
+      "type": "lesson",
+      "title": "The IRS Estimator",
+      "summary": "Use the official one when two numbers disagree.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wh-estimator-q1",
+          "type": "info",
+          "title": "Bring the paystubs",
+          "body": "The IRS withholding estimator asks for pay, how often you are paid, other jobs, and credits. It suggests a [[W-4|w-4]].\n\nA guess that “a refund is always good” skips the tool. A **$1,200** refund on a **$2,620** tax means **$3,820** was withheld. That is **$1,200** you did not have during the year."
+        },
+        {
+          "id": "wh-estimator-q2",
+          "type": "number",
+          "prompt": "The tax is $2,620 and the refund is $1,200. How much was withheld?",
+          "answer": 3820,
+          "unit": "$",
+          "explain": "$2,620 + $1,200 = $3,820."
+        },
+        {
+          "id": "wh-estimator-q3",
+          "type": "number",
+          "prompt": "How much more is that than a withholding of $2,620, which would refund $0 of income tax?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$3,820 − $2,620 = $1,200. A $0 refund here means withholding matched the tax."
+        },
+        {
+          "id": "wh-estimator-q4",
+          "type": "multiple_choice",
+          "prompt": "What should you type into the estimator?",
+          "choices": [
+            "The pay on your stubs, including a second job",
+            "The refund you wish you could have",
+            "Only the FICA line"
+          ],
+          "answer": 0,
+          "explain": "The tool is only as good as the pay you enter."
+        },
+        {
+          "id": "wh-estimator-q5",
+          "type": "true_false",
+          "prompt": "A big refund is proof the estimator is required by law.",
+          "answer": false,
+          "explain": "The estimator is a tool. A big refund is a clue that withholding was high, not a legal duty to use one website."
+        }
+      ]
+    },
+    {
+      "id": "wh-two",
+      "type": "lesson",
+      "title": "Two Jobs",
+      "summary": "Each job may withhold as if it were the only one.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wh-two-q1",
+          "type": "info",
+          "title": "The brackets do not know about each other",
+          "body": "Job A pays **$30,000** and withholds **$1,500**. Job B pays **$20,000** and withholds **$800**. Together the wages are **$50,000** and the withholding is **$2,300**.\n\nEach [[W-4|w-4]] may assume it is the only job, so each one aims at the low brackets. The combined taxable income does not."
+        },
+        {
+          "id": "wh-two-q2",
+          "type": "number",
+          "prompt": "What are the two jobs’ wages together?",
+          "answer": 50000,
+          "unit": "$",
+          "explain": "$30,000 + $20,000 = $50,000."
+        },
+        {
+          "id": "wh-two-q3",
+          "type": "number",
+          "prompt": "What is the withholding from both jobs?",
+          "answer": 2300,
+          "unit": "$",
+          "explain": "$1,500 + $800 = $2,300."
+        },
+        {
+          "id": "wh-two-q4",
+          "type": "number",
+          "prompt": "Single, 2026. Taxable income on $50,000 is $33,900. The tax is $1,240 plus 12% of $21,500, which is $3,820. How much is still unpaid?",
+          "answer": 1520,
+          "unit": "$",
+          "explain": "$3,820 − $2,300 = $1,520. $50,000 − $16,100 = $33,900. $33,900 − $12,400 = $21,500. $21,500 × 0.12 = $2,580. $1,240 + $2,580 = $3,820."
+        },
+        {
+          "id": "wh-two-q5",
+          "type": "true_false",
+          "prompt": "Two small withholdings add up to the same result as one W-4 that knows about both jobs.",
+          "answer": false,
+          "explain": "Each job may withhold too little because it cannot see the other paycheck."
+        }
+      ]
+    },
+    {
+      "id": "wh-form",
+      "type": "lesson",
+      "format": "document",
+      "title": "A W-4’s Extra Line",
+      "summary": "The extra box is a dollar amount, not a feeling.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wh-form-q1",
+          "type": "info",
+          "title": "Twenty-six paychecks",
+          "body": "This [[W-4|w-4]] asks the employer to withhold an extra **$40** each paycheck. There are **26** paychecks. That extra is **$1,040** for the year.\n\nIt sits on top of the **$2,200** the employer was already withholding."
+        },
+        {
+          "id": "wh-form-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Withholding you asked for",
+            "subtitle": "One employer",
+            "lines": [
+              {
+                "id": "base",
+                "label": "Federal income tax withheld before the extra",
+                "amount": 2200.0
+              },
+              {
+                "id": "extra",
+                "label": "Extra withholding, $40 × 26 paychecks",
+                "amount": 1040.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Federal income tax withheld",
+                "amount": 3240.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "What is $40 extra across 26 paychecks?",
+          "answer": 1040,
+          "unit": "$",
+          "explain": "$40 × 26 = $1,040."
+        },
+        {
+          "id": "wh-form-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Withholding you asked for",
+            "subtitle": "One employer",
+            "lines": [
+              {
+                "id": "base",
+                "label": "Federal income tax withheld before the extra",
+                "amount": 2200.0
+              },
+              {
+                "id": "extra",
+                "label": "Extra withholding, $40 × 26 paychecks",
+                "amount": 1040.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Federal income tax withheld",
+                "amount": 3240.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "What is total federal income tax withheld on this page?",
+          "answer": 3240,
+          "unit": "$",
+          "explain": "$2,200 + $1,040 = $3,240."
+        },
+        {
+          "id": "wh-form-q4",
+          "type": "multiple_choice",
+          "prompt": "Why would someone add the extra $40?",
+          "choices": [
+            "A second job is not withholding enough",
+            "To increase the FICA rate",
+            "To raise the standard deduction"
+          ],
+          "answer": 0,
+          "explain": "The extra line is how you catch up when the ordinary withholding is short."
+        },
+        {
+          "id": "wh-form-q5",
+          "type": "true_false",
+          "prompt": "The extra $40 is paid once a year.",
+          "answer": false,
+          "explain": "It is per paycheck. Twenty-six of them make $1,040."
+        }
+      ]
+    },
+    {
+      "id": "wh-loan",
+      "type": "lesson",
+      "format": "call",
+      "title": "A Refund Is a 0% Loan",
+      "summary": "The bigger refund is the same tax, paid earlier.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wh-loan-q1",
+          "type": "number",
+          "context": "Both pages have the same **$2,620** tax. The large refund is your money, returned later, with no interest.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Withholding that overshoots",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "Federal income tax",
+                  "amount": 2620.0
+                },
+                {
+                  "id": "held",
+                  "label": "Federal income tax withheld",
+                  "amount": 4000.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Refund",
+                  "amount": 1380.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Withholding that lands closer",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "Federal income tax",
+                  "amount": 2620.0
+                },
+                {
+                  "id": "held",
+                  "label": "Federal income tax withheld",
+                  "amount": 2800.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Refund",
+                  "amount": 180.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "How much is the refund when $4,000 was withheld?",
+          "answer": 1380,
+          "unit": "$",
+          "explain": "$4,000 − $2,620 = $1,380."
+        },
+        {
+          "id": "wh-loan-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Withholding that overshoots",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "Federal income tax",
+                  "amount": 2620.0
+                },
+                {
+                  "id": "held",
+                  "label": "Federal income tax withheld",
+                  "amount": 4000.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Refund",
+                  "amount": 1380.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Withholding that lands closer",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "Federal income tax",
+                  "amount": 2620.0
+                },
+                {
+                  "id": "held",
+                  "label": "Federal income tax withheld",
+                  "amount": 2800.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Refund",
+                  "amount": 180.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "How much is the refund when $2,800 was withheld?",
+          "answer": 180,
+          "unit": "$",
+          "explain": "$2,800 − $2,620 = $180."
+        },
+        {
+          "id": "wh-loan-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Withholding that overshoots",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "Federal income tax",
+                  "amount": 2620.0
+                },
+                {
+                  "id": "held",
+                  "label": "Federal income tax withheld",
+                  "amount": 4000.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Refund",
+                  "amount": 1380.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Withholding that lands closer",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "Federal income tax",
+                  "amount": 2620.0
+                },
+                {
+                  "id": "held",
+                  "label": "Federal income tax withheld",
+                  "amount": 2800.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Refund",
+                  "amount": 180.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "How much more stayed out of the paychecks on the $4,000 page?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$4,000 − $2,800 = $1,200. That is also $1,380 − $180."
+        },
+        {
+          "id": "wh-loan-q4",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Withholding that overshoots",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "Federal income tax",
+                  "amount": 2620.0
+                },
+                {
+                  "id": "held",
+                  "label": "Federal income tax withheld",
+                  "amount": 4000.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Refund",
+                  "amount": 1380.0,
+                  "strong": true
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Withholding that lands closer",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "Federal income tax",
+                  "amount": 2620.0
+                },
+                {
+                  "id": "held",
+                  "label": "Federal income tax withheld",
+                  "amount": 2800.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Refund",
+                  "amount": 180.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "The tax is the same. Which page leaves more money in the paychecks during the year?",
+          "choices": [
+            "Withholding of $2,800",
+            "Withholding of $4,000",
+            "They leave the same amount in the paychecks"
+          ],
+          "answer": 0,
+          "why": [
+            "$2,800 is the smaller prepayment.",
+            "The extra $1,200 comes back only as a refund.",
+            "The withholdings differ by $1,200."
+          ],
+          "explain": "The $4,000 page withholds $1,200 more and refunds that $1,200 later."
+        },
+        {
+          "id": "wh-loan-q5",
+          "type": "true_false",
+          "prompt": "The $1,380 refund is interest the IRS pays you for waiting.",
+          "answer": false,
+          "explain": "It is your own $1,200 of extra withholding, plus the smaller refund on the other page. No interest is added here."
+        }
+      ]
+    },
+    {
+      "id": "wh-chris",
+      "type": "lesson",
+      "format": "story",
+      "title": "Chris Has Two Jobs",
+      "summary": "The shortfall is the tax minus what both jobs sent.",
+      "xp": 10,
+      "story": {
+        "title": "Chris has two jobs",
+        "character": "Chris, 24",
+        "body": "Chris is 24 and works two jobs. One pays **$30,000** and withholds **$1,500** of federal income tax. The other pays **$20,000** and withholds **$800**.\n\nTogether that is **$50,000** of wages and **$2,300** withheld. He is single. The 2026 [[standard deduction]] leaves taxable income of **$33,900**, and the tax is **$3,820**.\n\nHe owes **$1,520**. Each [[W-4|w-4]] was filled out as if it were the only job. The IRS estimator is the next step, not a bigger hope for a refund."
+      },
+      "steps": [
+        {
+          "id": "wh-chris-q1",
+          "type": "number",
+          "prompt": "How much did both jobs withhold?",
+          "answer": 2300,
+          "unit": "$",
+          "explain": "$1,500 + $800 = $2,300."
+        },
+        {
+          "id": "wh-chris-q2",
+          "type": "number",
+          "prompt": "His tax is $3,820. How much does he still owe?",
+          "answer": 1520,
+          "unit": "$",
+          "explain": "$3,820 − $2,300 = $1,520."
+        },
+        {
+          "id": "wh-chris-q3",
+          "type": "number",
+          "prompt": "What is his taxable income on $50,000 of wages?",
+          "answer": 33900,
+          "unit": "$",
+          "explain": "$50,000 − $16,100 = $33,900."
+        },
+        {
+          "id": "wh-chris-q4",
+          "type": "multiple_choice",
+          "prompt": "What is the useful fix before next April?",
+          "choices": [
+            "A new W-4, checked with the IRS estimator",
+            "Ignore the second job on both forms",
+            "Ask payroll to stop FICA"
+          ],
+          "answer": 0,
+          "explain": "The estimator can see both jobs. The old forms could not."
+        },
+        {
+          "id": "wh-chris-q5",
+          "type": "true_false",
+          "prompt": "Chris owes $1,520 because the 12% bracket taxed his first dollar.",
+          "answer": false,
+          "explain": "The first $12,400 was still taxed at 10%. He owes because $2,300 was withheld toward a $3,820 bill."
+        }
+      ]
+    },
+    {
+      "id": "wh-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "wh-trial",
+      "type": "boss",
+      "title": "Den Trial: Withholding & the W-4",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "wh-trial-q1",
+          "type": "number",
+          "prompt": "Tax is $1,800 and withholding is $1,250. How much is still owed?",
+          "answer": 550,
+          "unit": "$",
+          "explain": "$1,800 − $1,250 = $550."
+        },
+        {
+          "id": "wh-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "A second job starts in June. What should you revisit?",
+          "choices": [
+            "The W-4, with the IRS estimator",
+            "Only the FICA percent",
+            "Nothing until the refund arrives"
+          ],
+          "answer": 0,
+          "explain": "The new paycheck changes the withholding math."
+        },
+        {
+          "id": "wh-trial-q3",
+          "type": "true_false",
+          "prompt": "A larger refund means you paid less tax.",
+          "answer": false,
+          "explain": "It means more tax was prepaid. The bill is a separate number."
+        },
+        {
+          "id": "wh-trial-q4",
+          "type": "number",
+          "prompt": "An extra $25 is withheld for 24 paychecks. How much is that for the year?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$25 × 24 = $600."
+        }
+      ]
+    }
+  ]
+}

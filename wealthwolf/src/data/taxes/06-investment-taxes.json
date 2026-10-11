@@ -1,0 +1,703 @@
+{
+  "id": "investment-taxes",
+  "section": "taxes",
+  "order": 6,
+  "title": "Taxes on Investments",
+  "description": "Gains, dividends, basis, and the year that changes the rate in the example.",
+  "wolfLine": "The gain is the sale minus the basis. The year decides which rate this example uses.",
+  "terms": {
+    "capital-gain": {
+      "term": "Capital gain",
+      "definition": "Profit from selling an investment for more than your cost basis. Held a year or less, it is short-term. Held more than a year, it is long-term.",
+      "example": "Bought at $2,000, sold at $2,600. The gain is $600."
+    },
+    "cost-basis": {
+      "term": "Cost basis",
+      "definition": "What you paid for an investment, including commissions you cannot ignore. The gain is the sale minus this number.",
+      "example": "Eight shares at $25 each have a cost basis of $200."
+    }
+  },
+  "lessons": [
+    {
+      "id": "vt-gain",
+      "type": "lesson",
+      "title": "A Capital Gain",
+      "summary": "The profit is the sale minus what you paid.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "vt-gain-q1",
+          "type": "info",
+          "title": "Two prices",
+          "body": "A [[capital gain]] is the sale price minus your [[cost basis]]. Bought at **$2,000**, sold at **$2,600**, the gain is **$600**.\n\nA loss is the same math when the sale is lower. This unit is education, not a reason to buy or sell."
+        },
+        {
+          "id": "vt-gain-q2",
+          "type": "number",
+          "prompt": "What is the gain on a $2,000 purchase sold for $2,600?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$2,600 − $2,000 = $600."
+        },
+        {
+          "id": "vt-gain-q3",
+          "type": "number",
+          "prompt": "The same investment is sold for $1,700. What is the loss?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$2,000 − $1,700 = $300."
+        },
+        {
+          "id": "vt-gain-q4",
+          "type": "multiple_choice",
+          "prompt": "What is cost basis, in this example?",
+          "choices": [
+            "The $2,000 you paid",
+            "The $2,600 sale",
+            "The tax rate"
+          ],
+          "answer": 0,
+          "explain": "Basis is what you paid. The sale is what you received."
+        },
+        {
+          "id": "vt-gain-q5",
+          "type": "true_false",
+          "prompt": "A gain is taxed as if the whole sale price were profit.",
+          "answer": false,
+          "explain": "Only the $600 above the $2,000 basis is the gain."
+        }
+      ]
+    },
+    {
+      "id": "vt-term",
+      "type": "lesson",
+      "title": "Short or Long",
+      "summary": "More than a year changes the rate in this example.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "vt-term-q1",
+          "type": "info",
+          "title": "Eleven months, or a year and a day",
+          "body": "Held a year or less, the **$600** gain is short-term and taxed as ordinary income. This example puts it in a **22%** ordinary rate, so the tax is **$132**.\n\nHeld more than a year, it is long-term. This example uses a stated **15%** long-term rate, so the tax is **$90**. The 0%, 15%, and 20% cutoffs depend on income. This lesson does not invent those cutoffs. Waiting saves **$42** in this example."
+        },
+        {
+          "id": "vt-term-q2",
+          "type": "number",
+          "prompt": "The $600 short-term gain is taxed at the stated 22%. What is the tax?",
+          "answer": 132,
+          "unit": "$",
+          "explain": "$600 × 0.22 = $132."
+        },
+        {
+          "id": "vt-term-q3",
+          "type": "number",
+          "prompt": "The $600 long-term gain is taxed at the stated 15%. What is the tax?",
+          "answer": 90,
+          "unit": "$",
+          "explain": "$600 × 0.15 = $90."
+        },
+        {
+          "id": "vt-term-q4",
+          "type": "number",
+          "prompt": "How much less tax is the long-term result in this example?",
+          "answer": 42,
+          "unit": "$",
+          "explain": "$132 − $90 = $42."
+        },
+        {
+          "id": "vt-term-q5",
+          "type": "true_false",
+          "prompt": "Selling after 11 months gets the long-term rate.",
+          "answer": false,
+          "explain": "Eleven months is a year or less. Long-term means more than a year."
+        }
+      ]
+    },
+    {
+      "id": "vt-div",
+      "type": "lesson",
+      "title": "Dividends",
+      "summary": "Qualified is not the same word as ordinary.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "vt-div-q1",
+          "type": "info",
+          "title": "Two names on the form",
+          "body": "A dividend is a payment from a stock or a fund you still hold. **Qualified** dividends can be taxed at the long-term rates. **Ordinary** dividends are taxed as ordinary income.\n\nIn this example, **$400** of qualified dividends at a stated **15%** cost **$60**. **$100** of ordinary dividends at a stated **22%** cost **$22**. Not every dividend is qualified."
+        },
+        {
+          "id": "vt-div-q2",
+          "type": "number",
+          "prompt": "What is 15% of $400 of qualified dividends, at that stated rate?",
+          "answer": 60,
+          "unit": "$",
+          "explain": "$400 × 0.15 = $60."
+        },
+        {
+          "id": "vt-div-q3",
+          "type": "number",
+          "prompt": "What is 22% of $100 of ordinary dividends, at that stated rate?",
+          "answer": 22,
+          "unit": "$",
+          "explain": "$100 × 0.22 = $22."
+        },
+        {
+          "id": "vt-div-q4",
+          "type": "number",
+          "prompt": "What is the tax on both dividends in this example?",
+          "answer": 82,
+          "unit": "$",
+          "explain": "$60 + $22 = $82."
+        },
+        {
+          "id": "vt-div-q5",
+          "type": "true_false",
+          "prompt": "Every dividend is qualified and taxed at the long-term rate.",
+          "answer": false,
+          "explain": "Ordinary dividends are taxed as ordinary income. The form tells you which is which."
+        }
+      ]
+    },
+    {
+      "id": "vt-basis",
+      "type": "lesson",
+      "title": "Cost Basis",
+      "summary": "The shares remember what you paid.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "vt-basis-q1",
+          "type": "info",
+          "title": "Count the shares",
+          "body": "Eight shares at **$25** each have a [[cost basis]] of **$200**. Sold at **$40** each, the proceeds are **$320**. The [[capital gain]] is **$120**.\n\nReinvested dividends can raise the basis. Ignoring them makes the gain look bigger than it is."
+        },
+        {
+          "id": "vt-basis-q2",
+          "type": "number",
+          "prompt": "What is the cost basis of 8 shares at $25?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "8 × $25 = $200."
+        },
+        {
+          "id": "vt-basis-q3",
+          "type": "number",
+          "prompt": "What are the proceeds of those 8 shares at $40?",
+          "answer": 320,
+          "unit": "$",
+          "explain": "8 × $40 = $320."
+        },
+        {
+          "id": "vt-basis-q4",
+          "type": "number",
+          "prompt": "What is the gain?",
+          "answer": 120,
+          "unit": "$",
+          "explain": "$320 − $200 = $120."
+        },
+        {
+          "id": "vt-basis-q5",
+          "type": "true_false",
+          "prompt": "The gain is $320, because that is what the buyer paid you.",
+          "answer": false,
+          "explain": "The gain is $120. The other $200 is your own basis coming back."
+        }
+      ]
+    },
+    {
+      "id": "vt-harvest",
+      "type": "lesson",
+      "title": "Tax-Loss Harvesting",
+      "summary": "A loss can cancel a gain. A quick buyback can cancel the loss.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "vt-harvest-q1",
+          "type": "info",
+          "title": "Net them",
+          "body": "Tax-loss harvesting means selling an investment that is down so the loss can offset a gain. A **$500** gain and a **$200** loss leave a **$300** net gain.\n\nA wash sale can disallow the loss if you buy the same investment within **30 days** before or after the sale. This is the common rule, at a high level. It is not a trading plan."
+        },
+        {
+          "id": "vt-harvest-q2",
+          "type": "number",
+          "prompt": "A $500 gain and a $200 loss. What is the net gain?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$500 − $200 = $300."
+        },
+        {
+          "id": "vt-harvest-q3",
+          "type": "number",
+          "prompt": "How much of the $500 gain did the loss offset?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "The loss is $200, so $200 of the gain is offset."
+        },
+        {
+          "id": "vt-harvest-q4",
+          "type": "multiple_choice",
+          "prompt": "What can disallow the loss?",
+          "choices": [
+            "Buying the same investment back within 30 days",
+            "Waiting more than a year to sell",
+            "Keeping the shares and never selling"
+          ],
+          "answer": 0,
+          "explain": "That quick buyback is the wash-sale problem. Holding is not a sale, so there is no loss to claim yet."
+        },
+        {
+          "id": "vt-harvest-q5",
+          "type": "true_false",
+          "prompt": "A loss you have not sold is a deduction this year.",
+          "answer": false,
+          "explain": "The loss is real on paper only until you sell. Unsold shares have not produced a deductible loss."
+        }
+      ]
+    },
+    {
+      "id": "vt-year",
+      "type": "lesson",
+      "format": "call",
+      "title": "Why the Year Matters",
+      "summary": "Same gain. The rate on this pair is the whole difference.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "vt-year-q1",
+          "type": "number",
+          "context": "Both pages are the same **$600** [[capital gain]]. The holding period is the only change.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Sold at 11 months",
+              "lines": [
+                {
+                  "id": "gain",
+                  "label": "Short-term gain",
+                  "amount": 600.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Tax at the stated 22%",
+                  "amount": 132.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Sold after more than a year",
+              "lines": [
+                {
+                  "id": "gain",
+                  "label": "Long-term gain",
+                  "amount": 600.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Tax at the stated 15%",
+                  "amount": 90.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What is the tax on the 11-month page?",
+          "answer": 132,
+          "unit": "$",
+          "explain": "$600 × 0.22 = $132."
+        },
+        {
+          "id": "vt-year-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Sold at 11 months",
+              "lines": [
+                {
+                  "id": "gain",
+                  "label": "Short-term gain",
+                  "amount": 600.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Tax at the stated 22%",
+                  "amount": 132.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Sold after more than a year",
+              "lines": [
+                {
+                  "id": "gain",
+                  "label": "Long-term gain",
+                  "amount": 600.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Tax at the stated 15%",
+                  "amount": 90.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What is the tax on the long-term page?",
+          "answer": 90,
+          "unit": "$",
+          "explain": "$600 × 0.15 = $90."
+        },
+        {
+          "id": "vt-year-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Sold at 11 months",
+              "lines": [
+                {
+                  "id": "gain",
+                  "label": "Short-term gain",
+                  "amount": 600.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Tax at the stated 22%",
+                  "amount": 132.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Sold after more than a year",
+              "lines": [
+                {
+                  "id": "gain",
+                  "label": "Long-term gain",
+                  "amount": 600.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Tax at the stated 15%",
+                  "amount": 90.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much tax does waiting past a year save in this example?",
+          "answer": 42,
+          "unit": "$",
+          "explain": "$132 − $90 = $42."
+        },
+        {
+          "id": "vt-year-q4",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Sold at 11 months",
+              "lines": [
+                {
+                  "id": "gain",
+                  "label": "Short-term gain",
+                  "amount": 600.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Tax at the stated 22%",
+                  "amount": 132.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Sold after more than a year",
+              "lines": [
+                {
+                  "id": "gain",
+                  "label": "Long-term gain",
+                  "amount": 600.0
+                },
+                {
+                  "id": "tax",
+                  "label": "Tax at the stated 15%",
+                  "amount": 90.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Which page has the smaller tax, on these stated rates?",
+          "choices": [
+            "The long-term sale",
+            "The 11-month sale",
+            "They match"
+          ],
+          "answer": 0,
+          "why": [
+            "$90 is the smaller tax.",
+            "11 months is still short-term here.",
+            "The taxes differ by $42."
+          ],
+          "explain": "Long-term is $90. Eleven months is $132."
+        },
+        {
+          "id": "vt-year-q5",
+          "type": "true_false",
+          "prompt": "The long-term page has a smaller gain.",
+          "answer": false,
+          "explain": "Both gains are $600. The rate changed, not the gain."
+        }
+      ]
+    },
+    {
+      "id": "vt-elena",
+      "type": "lesson",
+      "format": "story",
+      "title": "Interest, Even If You Leave It",
+      "summary": "Form 1099-INT does not wait for a withdrawal.",
+      "xp": 10,
+      "story": {
+        "title": "Elena’s savings interest",
+        "character": "Elena, 44",
+        "body": "Elena is 44 and a teacher. Her savings account paid **$80** of interest. She left it in the account.\n\nThe bank will report it on Form 1099-INT. The **$80** is taxable even though she did not withdraw it. It is not a [[capital gain]]. She did not sell anything.\n\nShe also still holds a fund. Unsold, it has no gain to report this year, whatever the screen says it is “worth.”"
+      },
+      "steps": [
+        {
+          "id": "vt-elena-q1",
+          "type": "number",
+          "prompt": "How much interest did the savings account pay?",
+          "answer": 80,
+          "unit": "$",
+          "explain": "The story’s figure is $80."
+        },
+        {
+          "id": "vt-elena-q2",
+          "type": "multiple_choice",
+          "prompt": "Why is the $80 taxable this year?",
+          "choices": [
+            "Interest is income when it is paid, even if it stays in the account",
+            "Only withdrawn cash is income",
+            "Interest is a long-term capital gain"
+          ],
+          "answer": 0,
+          "explain": "Leaving it in the account does not defer it. A sale is a different event."
+        },
+        {
+          "id": "vt-elena-q3",
+          "type": "true_false",
+          "prompt": "The unsold fund produces a capital gain this year because the price went up on the screen.",
+          "answer": false,
+          "explain": "The gain waits for a sale. An unsold fund is still hers."
+        },
+        {
+          "id": "vt-elena-q4",
+          "type": "multiple_choice",
+          "prompt": "Which form reports the bank interest?",
+          "choices": [
+            "Form 1099-INT",
+            "Form W-4",
+            "Schedule C"
+          ],
+          "answer": 0,
+          "explain": "1099-INT is the interest form. The W-4 is withholding. Schedule C is a business."
+        },
+        {
+          "id": "vt-elena-q5",
+          "type": "fill_blank",
+          "prompt": "Interest left in the account is still ___.",
+          "choices": [
+            "taxable",
+            "a capital loss",
+            "a standard deduction"
+          ],
+          "answer": 0,
+          "explain": "Taxable. The withdrawal is not what makes it income."
+        }
+      ]
+    },
+    {
+      "id": "vt-1099",
+      "type": "lesson",
+      "format": "document",
+      "title": "A Brokerage 1099",
+      "summary": "Read the gain from two lines, not from their sum.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "vt-1099-q1",
+          "type": "info",
+          "title": "Four different facts",
+          "body": "Proceeds **$2,600**. [[Cost basis]] **$2,000**. Qualified dividends **$400**. Interest **$80**.\n\nAdding all four lines is not a tax. The gain is proceeds minus basis."
+        },
+        {
+          "id": "vt-1099-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Brokerage summary",
+            "subtitle": "These lines are not one total",
+            "lines": [
+              {
+                "id": "proceeds",
+                "label": "Proceeds from the sale",
+                "amount": 2600.0
+              },
+              {
+                "id": "basis",
+                "label": "Cost basis",
+                "amount": 2000.0
+              },
+              {
+                "id": "qual",
+                "label": "Qualified dividends",
+                "amount": 400.0
+              },
+              {
+                "id": "interest",
+                "label": "Interest",
+                "amount": 80.0
+              }
+            ]
+          },
+          "prompt": "What is the capital gain on this page?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$2,600 − $2,000 = $600."
+        },
+        {
+          "id": "vt-1099-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Brokerage summary",
+            "subtitle": "These lines are not one total",
+            "lines": [
+              {
+                "id": "proceeds",
+                "label": "Proceeds from the sale",
+                "amount": 2600.0
+              },
+              {
+                "id": "basis",
+                "label": "Cost basis",
+                "amount": 2000.0
+              },
+              {
+                "id": "qual",
+                "label": "Qualified dividends",
+                "amount": 400.0
+              },
+              {
+                "id": "interest",
+                "label": "Interest",
+                "amount": 80.0
+              }
+            ]
+          },
+          "prompt": "What is the interest on this page?",
+          "answer": 80,
+          "unit": "$",
+          "explain": "The interest line is $80."
+        },
+        {
+          "id": "vt-1099-q4",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Brokerage summary",
+            "subtitle": "These lines are not one total",
+            "lines": [
+              {
+                "id": "proceeds",
+                "label": "Proceeds from the sale",
+                "amount": 2600.0
+              },
+              {
+                "id": "basis",
+                "label": "Cost basis",
+                "amount": 2000.0
+              },
+              {
+                "id": "qual",
+                "label": "Qualified dividends",
+                "amount": 400.0
+              },
+              {
+                "id": "interest",
+                "label": "Interest",
+                "amount": 80.0
+              }
+            ]
+          },
+          "prompt": "Qualified dividends are $400. At a stated 15% rate, what is the tax on that line alone?",
+          "answer": 60,
+          "unit": "$",
+          "explain": "$400 × 0.15 = $60. That rate is the example’s stated rate, not a cutoff this page computed."
+        },
+        {
+          "id": "vt-1099-q5",
+          "type": "true_false",
+          "prompt": "The four lines should be added together and called the gain.",
+          "answer": false,
+          "explain": "The gain is $600. Dividends and interest are their own income."
+        }
+      ]
+    },
+    {
+      "id": "vt-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "vt-trial",
+      "type": "boss",
+      "title": "Den Trial: Taxes on Investments",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "vt-trial-q1",
+          "type": "number",
+          "prompt": "Cost basis is $900. The sale is $1,200. What is the gain?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$1,200 − $900 = $300."
+        },
+        {
+          "id": "vt-trial-q2",
+          "type": "number",
+          "prompt": "A $1,000 short-term gain is taxed at a stated 24%. What is the tax?",
+          "answer": 240,
+          "unit": "$",
+          "explain": "$1,000 × 0.24 = $240."
+        },
+        {
+          "id": "vt-trial-q3",
+          "type": "true_false",
+          "prompt": "A sale after 400 days is still short-term.",
+          "answer": false,
+          "explain": "More than a year is long-term. 400 days is more than a year."
+        },
+        {
+          "id": "vt-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "Interest of $50 posted to a savings account and left there is:",
+          "choices": [
+            "Taxable interest",
+            "A capital gain",
+            "Invisible until you withdraw it"
+          ],
+          "answer": 0,
+          "explain": "It is interest income for the year it was paid."
+        }
+      ]
+    }
+  ]
+}

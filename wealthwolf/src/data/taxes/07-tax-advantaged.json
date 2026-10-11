@@ -1,0 +1,624 @@
+{
+  "id": "tax-advantaged",
+  "section": "taxes",
+  "order": 7,
+  "title": "Tax-Advantaged Accounts",
+  "description": "Traditional or Roth, the 2026 limits, and the penalty on an early traditional withdrawal.",
+  "wolfLine": "The match is free pay. The early withdrawal is a penalty.",
+  "terms": {
+    "traditional-ira": {
+      "term": "Traditional IRA",
+      "definition": "An individual retirement account. A contribution can be deductible now, and withdrawals in retirement are usually taxed.",
+      "example": "A $2,000 deductible contribution in the 12% bracket saves $240 this year."
+    },
+    "roth-ira": {
+      "term": "Roth IRA",
+      "definition": "An individual retirement account you fund with money that has already been taxed. Qualified withdrawals later are tax-free.",
+      "example": "A $2,000 Roth contribution saves $0 of tax this year. The qualified withdrawals are the point."
+    }
+  },
+  "lessons": [
+    {
+      "id": "ta-which",
+      "type": "lesson",
+      "format": "call",
+      "title": "Now or Later",
+      "summary": "Same $2,000. The tax moves to a different year.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ta-which-q1",
+          "type": "number",
+          "context": "A [[traditional IRA]] can be a deduction now. A [[Roth IRA]] is funded after tax. Qualified Roth withdrawals later are tax-free. This is the trade, not a personal plan.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Traditional IRA",
+              "subtitle": "Deductible in this example",
+              "lines": [
+                {
+                  "id": "put",
+                  "label": "Contribution",
+                  "amount": 2000.0
+                },
+                {
+                  "id": "save",
+                  "label": "Tax saved this year at 12%",
+                  "amount": 240.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Roth IRA",
+              "subtitle": "No deduction this year",
+              "lines": [
+                {
+                  "id": "put",
+                  "label": "Contribution",
+                  "amount": 2000.0
+                },
+                {
+                  "id": "now",
+                  "label": "Tax already paid on that money, at 12%",
+                  "amount": 240.0
+                }
+              ]
+            }
+          ],
+          "prompt": "A $2,000 deductible traditional contribution is in the 12% bracket. How much tax does it save this year?",
+          "answer": 240,
+          "unit": "$",
+          "explain": "$2,000 × 0.12 = $240."
+        },
+        {
+          "id": "ta-which-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Traditional IRA",
+              "subtitle": "Deductible in this example",
+              "lines": [
+                {
+                  "id": "put",
+                  "label": "Contribution",
+                  "amount": 2000.0
+                },
+                {
+                  "id": "save",
+                  "label": "Tax saved this year at 12%",
+                  "amount": 240.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Roth IRA",
+              "subtitle": "No deduction this year",
+              "lines": [
+                {
+                  "id": "put",
+                  "label": "Contribution",
+                  "amount": 2000.0
+                },
+                {
+                  "id": "now",
+                  "label": "Tax already paid on that money, at 12%",
+                  "amount": 240.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Which page buys a deduction this year?",
+          "choices": [
+            "The traditional IRA",
+            "The Roth IRA",
+            "Both"
+          ],
+          "answer": 0,
+          "why": [
+            "The $240 is tax saved this year.",
+            "The Roth contribution is not deductible.",
+            "Only the traditional page is a deduction."
+          ],
+          "explain": "The traditional page saves $240 now. The Roth page already paid that $240."
+        },
+        {
+          "id": "ta-which-q3",
+          "type": "multiple_choice",
+          "prompt": "Which page is built so a qualified withdrawal later is tax-free?",
+          "choices": [
+            "The Roth IRA",
+            "The traditional IRA",
+            "Neither. Both are taxed again later"
+          ],
+          "answer": 0,
+          "explain": "That is the Roth bargain. Traditional withdrawals are usually taxed later."
+        },
+        {
+          "id": "ta-which-q4",
+          "type": "true_false",
+          "prompt": "The Roth contribution in this pair saves $240 of tax this year.",
+          "answer": false,
+          "explain": "The $240 on the Roth page is tax already paid. The traditional page is the one that saves it."
+        },
+        {
+          "id": "ta-which-q5",
+          "type": "fill_blank",
+          "prompt": "Qualified Roth withdrawals are ___.",
+          "choices": [
+            "tax-free",
+            "taxed again",
+            "a capital loss"
+          ],
+          "answer": 0,
+          "explain": "Tax-free, when they are qualified. That is why you paid tax on the way in."
+        }
+      ]
+    },
+    {
+      "id": "ta-limits",
+      "type": "lesson",
+      "title": "2026 Limits",
+      "summary": "The employee deferral and the IRA cap are different numbers.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ta-limits-q1",
+          "type": "info",
+          "title": "Label the year",
+          "body": "For 2026, the employee [[401(k)|401k]] deferral limit is **$24,500**. The catch-up at age 50 is **$8,000**, so **$32,500**. At ages 60, 61, 62, and 63 the catch-up is **$11,250**, so **$35,750**.\n\nThe IRA limit, traditional and Roth combined, is **$7,500**, plus **$1,100** at age 50, so **$8,600**. The employer match is not part of the $24,500."
+        },
+        {
+          "id": "ta-limits-q2",
+          "type": "number",
+          "prompt": "What is the 2026 employee 401(k) deferral limit, before any catch-up?",
+          "answer": 24500,
+          "unit": "$",
+          "explain": "$24,500 for 2026."
+        },
+        {
+          "id": "ta-limits-q3",
+          "type": "number",
+          "prompt": "At age 50, the 401(k) catch-up is $8,000. What is the total you can defer?",
+          "answer": 32500,
+          "unit": "$",
+          "explain": "$24,500 + $8,000 = $32,500."
+        },
+        {
+          "id": "ta-limits-q4",
+          "type": "number",
+          "prompt": "What is the 2026 IRA limit before the age-50 catch-up?",
+          "answer": 7500,
+          "unit": "$",
+          "explain": "$7,500, shared by traditional and Roth contributions."
+        },
+        {
+          "id": "ta-limits-q5",
+          "type": "number",
+          "prompt": "At age 50, the IRA catch-up is $1,100. What is the total IRA limit?",
+          "answer": 8600,
+          "unit": "$",
+          "explain": "$7,500 + $1,100 = $8,600."
+        }
+      ]
+    },
+    {
+      "id": "ta-hsa",
+      "type": "lesson",
+      "title": "The HSA’s Three Tax Breaks",
+      "summary": "In, growth, and qualified money out.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ta-hsa-q1",
+          "type": "info",
+          "title": "Already on the path",
+          "body": "An [[HSA|health-savings-account]] can be pre-tax or deductible on the way in, can grow without a yearly tax, and can come out tax-free for qualified medical costs.\n\nFor 2026 the contribution limit is **$4,400** with self-only coverage and **$8,750** with family coverage, plus **$1,000** at age 55. You need a qualifying health plan. This is the same HSA you already met."
+        },
+        {
+          "id": "ta-hsa-q2",
+          "type": "number",
+          "prompt": "What is the 2026 HSA limit for self-only coverage, before the age-55 catch-up?",
+          "answer": 4400,
+          "unit": "$",
+          "explain": "$4,400."
+        },
+        {
+          "id": "ta-hsa-q3",
+          "type": "number",
+          "prompt": "What is the 2026 family HSA limit, before that catch-up?",
+          "answer": 8750,
+          "unit": "$",
+          "explain": "$8,750."
+        },
+        {
+          "id": "ta-hsa-q4",
+          "type": "number",
+          "prompt": "Age 55 adds $1,000. What is the self-only total then?",
+          "answer": 5400,
+          "unit": "$",
+          "explain": "$4,400 + $1,000 = $5,400."
+        },
+        {
+          "id": "ta-hsa-q5",
+          "type": "true_false",
+          "prompt": "An HSA is the same account as a 529 plan.",
+          "answer": false,
+          "explain": "An HSA is for qualified medical costs. A 529 is for education."
+        }
+      ]
+    },
+    {
+      "id": "ta-529",
+      "type": "lesson",
+      "title": "A 529, Again",
+      "summary": "Education money. Not a promised return.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ta-529-q1",
+          "type": "info",
+          "title": "The tax piece",
+          "body": "A [[529 plan]] is still the education account from the family unit. Qualified withdrawals are tax-free at the federal level. The investments inside can fall.\n\n**$150** a month is **$1,800** a year of contributions. That is the part you choose. The balance later is not a rate this course will invent."
+        },
+        {
+          "id": "ta-529-q2",
+          "type": "number",
+          "prompt": "What is $150 a month for a year?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$150 × 12 = $1,800."
+        },
+        {
+          "id": "ta-529-q3",
+          "type": "multiple_choice",
+          "prompt": "What is the federal tax rule this lesson will stand behind?",
+          "choices": [
+            "Qualified education withdrawals are tax-free",
+            "The balance rises by a set percent",
+            "Contributions are always deductible on the federal return"
+          ],
+          "answer": 0,
+          "explain": "The qualified withdrawal is the rule. A federal deduction for the contribution is not the promise."
+        },
+        {
+          "id": "ta-529-q4",
+          "type": "true_false",
+          "prompt": "A 529 contribution and an HSA contribution share one 2026 limit.",
+          "answer": false,
+          "explain": "They are different accounts with different limits."
+        },
+        {
+          "id": "ta-529-q5",
+          "type": "fill_blank",
+          "prompt": "A qualified 529 withdrawal for education is federally ___.",
+          "choices": [
+            "tax-free",
+            "taxed as wages",
+            "a payroll tax"
+          ],
+          "answer": 0,
+          "explain": "Tax-free when it is qualified. The investment result is separate."
+        }
+      ]
+    },
+    {
+      "id": "ta-order",
+      "type": "lesson",
+      "title": "Which Account First",
+      "summary": "A common sketch. Not an order the IRS requires.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ta-order-q1",
+          "type": "info",
+          "title": "Match, then the expensive debt, then the HSA",
+          "body": "A common order: take the full employer match, pay high-interest debt, fund an [[HSA|health-savings-account]] if you qualify, then an IRA or more of the [[401(k)|401k]].\n\nThe match is a 100% return on the dollars it matches. Skipping it to buy a taxable fund first gives away that match. This is a sketch, not a rule for every household."
+        },
+        {
+          "id": "ta-order-q2",
+          "type": "order",
+          "prompt": "Put this common sketch in order.",
+          "items": [
+            "Take the full employer match",
+            "Pay high-interest debt",
+            "Fund an HSA if you qualify",
+            "Add an IRA or more of the 401(k)"
+          ],
+          "explain": "The match is first because it is extra pay. High-interest debt and a qualifying HSA come before the extra retirement dollars."
+        },
+        {
+          "id": "ta-order-q3",
+          "type": "multiple_choice",
+          "prompt": "The employer matches dollar for dollar up to a cap. What is the cost of not contributing enough to get the full match?",
+          "choices": [
+            "You leave the match uncollected",
+            "The IRS fines you the same amount",
+            "Your standard deduction shrinks"
+          ],
+          "answer": 0,
+          "explain": "The match is pay you do not receive. It is not a fine."
+        },
+        {
+          "id": "ta-order-q4",
+          "type": "true_false",
+          "prompt": "This order is required by the tax code.",
+          "answer": false,
+          "explain": "It is a common sketch. A household with no match, or no qualifying health plan, starts in a different place."
+        },
+        {
+          "id": "ta-order-q5",
+          "type": "fill_blank",
+          "prompt": "The first stop in this sketch is the employer ___.",
+          "choices": [
+            "match",
+            "penalty",
+            "extension"
+          ],
+          "answer": 0,
+          "explain": "Match. It is the piece of pay that depends on your contribution."
+        }
+      ]
+    },
+    {
+      "id": "ta-early",
+      "type": "lesson",
+      "title": "Early Withdrawals",
+      "summary": "Usually a 10% penalty, plus the tax.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ta-early-q1",
+          "type": "info",
+          "title": "Before 59½",
+          "body": "Money taken from a [[traditional IRA]] or a 401(k) before age **59½** is usually hit with a **10%** penalty, and it is usually taxed as income. Exceptions exist. This lesson stays with the common case.\n\nA **$1,000** early traditional withdrawal has a **$100** penalty. The **$1,000** is also income. Roth contributions, not the earnings, can usually come out without tax or penalty. Do not treat the whole Roth account that way."
+        },
+        {
+          "id": "ta-early-q2",
+          "type": "number",
+          "prompt": "What is the 10% penalty on a $1,000 early traditional withdrawal?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$1,000 × 0.10 = $100."
+        },
+        {
+          "id": "ta-early-q3",
+          "type": "number",
+          "prompt": "The $1,000 is also taxed in the 12% bracket. How much income tax does that add, on top of the penalty?",
+          "answer": 120,
+          "unit": "$",
+          "explain": "$1,000 × 0.12 = $120. The penalty is separate."
+        },
+        {
+          "id": "ta-early-q4",
+          "type": "number",
+          "prompt": "What do the $100 penalty and the $120 of income tax cost together?",
+          "answer": 220,
+          "unit": "$",
+          "explain": "$100 + $120 = $220. You also no longer have the $1,000 invested."
+        },
+        {
+          "id": "ta-early-q5",
+          "type": "true_false",
+          "prompt": "Roth contributions and Roth earnings follow the exact same early-withdrawal rule.",
+          "answer": false,
+          "explain": "Contributions can usually come out. Earnings have their own rules. The traditional withdrawal is the one with the usual 10% penalty."
+        }
+      ]
+    },
+    {
+      "id": "ta-spot",
+      "type": "lesson",
+      "format": "spot",
+      "title": "The Withdrawal on the Statement",
+      "summary": "The deferral is the plan. The withdrawal is the leak.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ta-spot-q1",
+          "type": "info",
+          "title": "Three lines",
+          "body": "The **$4,000** deferral is money going in. The **$1,000** line is an early withdrawal from a [[traditional IRA]]. The **$100** is the 10% penalty.\n\nThe deferral is not the problem."
+        },
+        {
+          "id": "ta-spot-q2",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "Retirement account, March",
+            "lines": [
+              {
+                "id": "defer",
+                "label": "Employee 401(k) deferral",
+                "amount": 4000.0
+              },
+              {
+                "id": "out",
+                "label": "Early traditional IRA withdrawal",
+                "amount": 1000.0
+              },
+              {
+                "id": "pen",
+                "label": "10% early-withdrawal penalty",
+                "amount": 100.0
+              }
+            ]
+          },
+          "prompt": "Which line is the early withdrawal?",
+          "answer": "out",
+          "explain": "The $1,000 traditional IRA withdrawal is the line. The penalty is the cost of that line, not a second withdrawal."
+        },
+        {
+          "id": "ta-spot-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Retirement account, March",
+            "lines": [
+              {
+                "id": "defer",
+                "label": "Employee 401(k) deferral",
+                "amount": 4000.0
+              },
+              {
+                "id": "out",
+                "label": "Early traditional IRA withdrawal",
+                "amount": 1000.0
+              },
+              {
+                "id": "pen",
+                "label": "10% early-withdrawal penalty",
+                "amount": 100.0
+              }
+            ]
+          },
+          "prompt": "What is 10% of that $1,000 withdrawal?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$1,000 × 0.10 = $100."
+        },
+        {
+          "id": "ta-spot-q4",
+          "type": "multiple_choice",
+          "prompt": "Which line is the useful one?",
+          "choices": [
+            "The $4,000 deferral",
+            "The early withdrawal",
+            "The penalty"
+          ],
+          "answer": 0,
+          "explain": "The deferral is the contribution. The other two are the leak and its cost."
+        },
+        {
+          "id": "ta-spot-q5",
+          "type": "true_false",
+          "prompt": "The penalty replaces the income tax on the withdrawal.",
+          "answer": false,
+          "explain": "The $100 is the penalty. The $1,000 is usually income as well."
+        }
+      ]
+    },
+    {
+      "id": "ta-kim",
+      "type": "lesson",
+      "format": "story",
+      "title": "Kim’s $6,000",
+      "summary": "The IRA cap is $7,500. She is assigning less than that.",
+      "xp": 10,
+      "story": {
+        "title": "Kim splits $6,000",
+        "character": "Kim, 36",
+        "body": "Kim is 36 and a nurse. She has **$6,000** to assign this year, after she has already taken her employer match. She is in the 12% bracket.\n\nA **$2,000** [[traditional IRA]] deduction would save **$240**. She still wants at least **$2,000** in a [[Roth IRA]], because she wants qualified withdrawals later to be tax-free. The 2026 IRA limit is **$7,500**, so **$6,000** fits inside it if every IRA dollar stays at or under that cap.\n\nShe assigns the whole $6,000. The Roth gets at least $2,000. The rest can be a traditional IRA or a taxable brokerage account."
+      },
+      "steps": [
+        {
+          "id": "ta-kim-q1",
+          "type": "allocate",
+          "prompt": "Assign $6,000. The Roth IRA needs at least $2,000. Assign every dollar.",
+          "total": 6000,
+          "step": 100,
+          "categories": [
+            {
+              "label": "Roth IRA",
+              "min": 2000
+            },
+            {
+              "label": "Traditional IRA"
+            },
+            {
+              "label": "Taxable brokerage"
+            }
+          ],
+          "explain": "The Roth gets at least $2,000. All $6,000 is assigned, and $6,000 is under the 2026 IRA limit of $7,500."
+        },
+        {
+          "id": "ta-kim-q2",
+          "type": "number",
+          "prompt": "If all $6,000 went into IRAs, how much of the $7,500 limit would be left?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$7,500 − $6,000 = $1,500."
+        },
+        {
+          "id": "ta-kim-q3",
+          "type": "number",
+          "prompt": "A $2,000 traditional deduction in her 12% bracket saves how much this year?",
+          "answer": 240,
+          "unit": "$",
+          "explain": "$2,000 × 0.12 = $240."
+        },
+        {
+          "id": "ta-kim-q4",
+          "type": "multiple_choice",
+          "prompt": "Why can she put the whole $6,000 into IRAs and still be inside the 2026 limit?",
+          "choices": [
+            "$6,000 is less than $7,500",
+            "$6,000 is the 401(k) limit",
+            "Roth dollars do not count toward the IRA limit"
+          ],
+          "answer": 0,
+          "explain": "Traditional and Roth share the $7,500 limit. $6,000 fits."
+        },
+        {
+          "id": "ta-kim-q5",
+          "type": "true_false",
+          "prompt": "Her employer match is part of the $24,500 employee deferral limit.",
+          "answer": false,
+          "explain": "The $24,500 is what she defers from her pay. The match is the employer’s money, under a different cap."
+        }
+      ]
+    },
+    {
+      "id": "ta-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "ta-trial",
+      "type": "boss",
+      "title": "Den Trial: Tax-Advantaged Accounts",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "ta-trial-q1",
+          "type": "number",
+          "prompt": "A $3,000 deductible traditional contribution is in the 22% bracket. How much tax does it save this year?",
+          "answer": 660,
+          "unit": "$",
+          "explain": "$3,000 × 0.22 = $660."
+        },
+        {
+          "id": "ta-trial-q2",
+          "type": "number",
+          "prompt": "What is the 2026 employee 401(k) deferral limit before catch-up?",
+          "answer": 24500,
+          "unit": "$",
+          "explain": "$24,500."
+        },
+        {
+          "id": "ta-trial-q3",
+          "type": "number",
+          "prompt": "An early traditional withdrawal is $2,000. What is the 10% penalty?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$2,000 × 0.10 = $200."
+        },
+        {
+          "id": "ta-trial-q4",
+          "type": "true_false",
+          "prompt": "Qualified Roth withdrawals are taxed a second time.",
+          "answer": false,
+          "explain": "Qualified Roth withdrawals are tax-free. That is the point of paying tax on the way in."
+        }
+      ]
+    }
+  ]
+}
