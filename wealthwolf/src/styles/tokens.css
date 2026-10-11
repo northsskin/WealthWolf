@@ -1,0 +1,221 @@
+/* ==========================================================================
+   Wealthwolf design system: "Red Ink Ledger"
+
+   Money is kept in a ledger. The page is paper, text is ink, structure comes
+   from ruled lines, and the Wolf marks your page in red pen and stamps what
+   you've earned in gold. Every value in the app references a token below;
+   if a component needs something that isn't here, add it here first.
+
+   Colour semantics follow bookkeeping:
+     ink    everything structural        red    mistakes, losses, the Wolf's pen
+     green  correct ("in the black")     gold   earned rewards: XP, stamps, ranks
+   Each accent has a fill (backgrounds, borders), a -text variant that stays
+   readable on paper, an -edge for pressable depth and a -tint for washes.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Paper and ink ------------------------------------------------------- */
+  --paper: #ffffff;
+  --paper-raised: #f7f6f2; /* table heads, inputs at rest, quiet panels */
+  --ink: #17140f;
+  --ink-muted: #57514a;
+  --ink-faint: #8f887e; /* pencil: hints, locked, placeholder */
+  --rule: #e8e4db; /* ledger hairlines */
+  --rule-strong: #cdc7ba; /* control borders */
+  --track: #ece8df; /* empty bars, locked fills */
+  --track-edge: #d6d0c3;
+
+  /* Accents ------------------------------------------------------------- */
+  --gold: #f0a91b;
+  --gold-text: #8f5600;
+  --gold-edge: #b87a00;
+  --gold-tint: #fdf3dc;
+  --gold-stamp: #c8870a; /* gold ink, deep enough to read through the stamp texture */
+
+  --green: #2a9d5c;
+  --green-text: #1b7343;
+  --green-edge: #1d7444;
+  --green-tint: #e8f5ec;
+
+  --red: #d4342a;
+  --red-text: #c0261d;
+  --red-edge: #9e1f18;
+  --red-tint: #fbeae8;
+
+  --on-ink: #ffffff; /* text on an ink-filled button */
+  --on-accent: #17140f; /* text on gold */
+  --on-signal: #ffffff; /* text on green / red */
+
+  --scrim: rgb(23 20 15 / 0.45);
+  --elev-color: rgb(23 20 15 / 0.14);
+
+  /* The Wolf mark ------------------------------------------------------- */
+  --wolf-head: #17140f;
+  --wolf-ear: #57514a;
+  --wolf-blaze: #ffffff;
+  --wolf-eye: #f0a91b;
+  --wolf-nose: #17140f;
+
+  /* Typography ---------------------------------------------------------- */
+  --font-sans: 'Archivo Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 22px;
+  --text-xl: 28px;
+  --text-2xl: 36px;
+  --text-3xl: 48px;
+  --text-display: clamp(56px, 9.5vw, 128px);
+
+  --weight-regular: 400;
+  --weight-medium: 600;
+  --weight-heavy: 800;
+
+  --stretch-condensed: 66%; /* stamped headers: display, section titles */
+  --stretch-normal: 100%;
+
+  --leading-display: 0.88;
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-normal: 1.5;
+  --leading-loose: 1.9;
+
+  --tracking-caps: 0.08em; /* small uppercase labels */
+  --tracking-display: 0.005em;
+
+  /* Space: 4px base. Ledger rows are 48px. ----------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --row: 48px;
+
+  /* Shape: two radii and a circle. Paper is square-ish. ------------------ */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-full: 999px;
+
+  --line: 1px; /* ledger rules */
+  --stroke: 2px; /* control borders */
+  --stroke-heavy: 3px; /* the inked "next" seal, the fill-in-the-gap line */
+  --total-rule: 4px; /* drawn double, under totals, the way accountants do */
+  --depth: 4px; /* pressable bottom edge */
+
+  /* Controls ------------------------------------------------------------ */
+  --control-sm: 40px;
+  --control-md: 48px;
+  --control-lg: 56px;
+
+  /* Icons scale with the text beside them -------------------------------- */
+  --icon: 1.15em;
+  --icon-stroke: 2.25;
+  --icon-stroke-bold: 3;
+  --mark-xs: 20px;
+  --mark-sm: 28px;
+  --mark-md: 40px;
+  --mark-lg: 64px;
+  --mark-xl: 112px;
+
+  /* Motion -------------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-stamp: cubic-bezier(0.3, 1.5, 0.5, 1); /* overshoot, like a stamp hitting paper */
+  --dur-press: 90ms;
+  --dur-fast: 160ms;
+  --dur-base: 260ms;
+  --dur-slow: 520ms;
+  --dur-draw: 700ms; /* a red-pen stroke */
+  --dur-loop: 1800ms; /* the only repeating motion: "do this next" cues */
+  --stagger: 90ms;
+
+  /* Elevation: paper is flat. Only things that float above it get a shadow. */
+  --elev-float: 0 12px 32px var(--elev-color);
+
+  /* Layers -------------------------------------------------------------- */
+  --z-sticky: 10;
+  --z-bar: 20;
+  --z-float: 40;
+  --z-header: 50;
+  --z-dialog: 100;
+
+  /* Layout -------------------------------------------------------------- */
+  --container: 1120px;
+  --measure: 640px;
+  --gutter: 32px;
+  --num-col: 56px; /* ledger line numbers, left of the red margin rule */
+  --aside-w: 300px;
+  --float-w: 300px; /* popovers */
+  --dialog-w: 420px;
+  --stamp-lg: 180px;
+  --stamp-md: 150px;
+  --stamp-sm: 112px;
+  --topbar-h: 64px;
+
+  /* Breakpoints (media queries can't read variables, so these are the only
+     three widths any stylesheet may use): 560px phone, 760px small tablet,
+     1000px where the sidebar drops below the path. */
+}
+
+@media (max-width: 760px) {
+  :root {
+    --gutter: 16px;
+    --num-col: 36px;
+  }
+}
+
+/* Night ledger: same book, lamp off. */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --paper: #121110;
+  --paper-raised: #1b1a18;
+  --ink: #efece5;
+  --ink-muted: #aca69b;
+  --ink-faint: #747067;
+  --rule: #2a2825;
+  --rule-strong: #3d3a35;
+  --track: #262421;
+  --track-edge: #34312c;
+
+  --gold: #f2b23a;
+  --gold-text: #f5c25e;
+  --gold-edge: #a8740c;
+  --gold-tint: #2b2213;
+  --gold-stamp: #f2b23a;
+
+  --green: #3fbf75;
+  --green-text: #5fd590;
+  --green-edge: #237a49;
+  --green-tint: #142a1d;
+
+  --red: #f05a4f;
+  --red-text: #ff7a6f;
+  --red-edge: #a3281f;
+  --red-tint: #33171a;
+
+  --on-ink: #121110;
+  --on-accent: #121110;
+  --on-signal: #121110;
+
+  --scrim: rgb(0 0 0 / 0.6);
+  --elev-color: rgb(0 0 0 / 0.5);
+
+  --wolf-head: #efece5;
+  --wolf-ear: #747067;
+  --wolf-blaze: #121110;
+  --wolf-eye: #f2b23a;
+  --wolf-nose: #121110;
+}

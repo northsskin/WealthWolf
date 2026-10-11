@@ -1,0 +1,405 @@
+/* The glossary: the index at the back of the ledger. Unit headers reuse the
+   path's section header (SkillPath.css) so the two pages read as one book. */
+
+.gloss {
+  min-height: 100vh;
+}
+
+.gloss__body {
+  display: grid;
+  grid-template-columns: minmax(0, var(--measure)) var(--aside-w);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'head aside'
+    'list aside';
+  justify-content: space-between;
+  column-gap: var(--space-12);
+  width: min(var(--container), 100% - 2 * var(--gutter));
+  margin-inline: auto;
+  padding-bottom: var(--space-16);
+}
+
+/* ---- Head ---------------------------------------------------------------- */
+
+.gloss__head {
+  grid-area: head;
+  padding-top: var(--space-6);
+}
+
+.backlink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  border-radius: var(--radius-sm);
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-caps);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.backlink:hover {
+  color: var(--ink);
+}
+
+.gloss__title {
+  margin-top: var(--space-4);
+  font-size: var(--text-3xl);
+}
+
+.gloss__sub {
+  margin-top: var(--space-3);
+  max-width: 34em;
+  color: var(--ink-muted);
+}
+
+/* ---- Aside: count and drill ------------------------------------------------ */
+
+.gloss__aside {
+  grid-area: aside;
+  position: sticky;
+  top: calc(var(--topbar-h) + var(--space-6));
+  align-self: start;
+  display: grid;
+  gap: var(--space-8);
+  padding-top: var(--space-6);
+}
+
+.gbar {
+  height: var(--space-2);
+  margin-top: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--track);
+  overflow: hidden;
+}
+
+.gbar span {
+  display: block;
+  height: 100%;
+  background: var(--gold);
+}
+
+.gloss__tally {
+  margin-top: var(--space-3);
+}
+
+.gloss__tally .receipt__line {
+  padding: var(--space-1) 0;
+  font-size: var(--text-sm);
+}
+
+.gloss__tally .receipt__line dd {
+  font-size: var(--text-sm);
+}
+
+.gpanel__title {
+  margin-top: var(--space-1);
+  font-size: var(--text-xl);
+}
+
+.gloss__aside .panel__copy {
+  margin-top: var(--space-2);
+}
+
+.gpanel__btn {
+  margin-top: var(--space-4);
+}
+
+/* ---- Tools: search and order ---------------------------------------------- */
+
+.gloss__list {
+  grid-area: list;
+}
+
+.gloss__tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+.gsearch {
+  display: flex;
+  flex: 1 1 220px;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--control-md);
+  padding: 0 var(--space-2) 0 var(--space-3);
+  border: var(--stroke) solid var(--rule-strong);
+  border-radius: var(--radius-md);
+  background: var(--paper-raised);
+  color: var(--ink-faint);
+  font-size: var(--text-md);
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
+}
+
+.gsearch:hover {
+  border-color: var(--ink-faint);
+}
+
+/* The field's own outline is off; the whole box takes the focus ring instead. */
+.gsearch:focus-within {
+  border-color: var(--ink);
+  background: var(--paper);
+  color: var(--ink-muted);
+}
+
+.gsearch input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  appearance: none;
+}
+
+.gsearch input::placeholder {
+  color: var(--ink-faint);
+}
+
+.gsearch input::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+.gsearch__clear {
+  display: grid;
+  place-items: center;
+  width: var(--space-8);
+  height: var(--space-8);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--ink-faint);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.gsearch__clear:hover {
+  color: var(--ink);
+}
+
+.seg {
+  display: flex;
+  gap: var(--space-1);
+  height: var(--control-md);
+  padding: var(--space-1);
+  border: var(--stroke) solid var(--rule-strong);
+  border-radius: var(--radius-md);
+}
+
+.seg button {
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
+}
+
+.seg button:hover {
+  color: var(--ink);
+}
+
+.seg button[aria-pressed='true'] {
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+/* ---- Sections ------------------------------------------------------------- */
+
+.gunit:first-of-type,
+.gletter:first-of-type {
+  margin-top: var(--space-6);
+}
+
+/* A–Z: the letter sits in the margin like a thumb-index tab, in the Wolf's red. */
+.gletter {
+  display: grid;
+  grid-template-columns: var(--space-10) minmax(0, 1fr);
+  column-gap: var(--space-3);
+  border-top: var(--stroke) solid var(--ink);
+}
+
+.gletter__head {
+  position: sticky;
+  top: calc(var(--topbar-h) + var(--space-2));
+  align-self: start;
+  padding-top: var(--space-5);
+  color: var(--red-text);
+  font-size: var(--text-2xl);
+}
+
+.gletter .word:last-child {
+  border-bottom: 0;
+}
+
+/* ---- One word ------------------------------------------------------------- */
+
+.words {
+  margin: 0;
+}
+
+.word {
+  padding: var(--space-5) 0;
+  border-bottom: var(--line) solid var(--rule);
+}
+
+.word__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.word__term {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-heavy);
+  line-height: var(--leading-tight);
+}
+
+/* The Wolf underlines a word you keep missing. */
+.word--shaky .word__term {
+  position: relative;
+}
+
+.word__mark {
+  position: absolute;
+  left: calc(var(--space-1) * -1);
+  bottom: calc(var(--space-2) * -1);
+  width: calc(100% + var(--space-2));
+  height: var(--space-2);
+}
+
+.word__def {
+  margin: var(--space-2) 0 0;
+}
+
+.word__example {
+  margin: var(--space-3) 0 0;
+  padding: var(--space-2) var(--space-3);
+  border-left: var(--stroke) solid var(--gold);
+  background: var(--paper-raised);
+  color: var(--ink-muted);
+  font-size: var(--text-sm);
+}
+
+.word__example .eyebrow {
+  margin-right: var(--space-1);
+  color: var(--ink);
+}
+
+.word__meta {
+  margin: var(--space-3) 0 0;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.wtag {
+  flex-shrink: 0;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-caps);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.wtag--solid {
+  background: var(--green-tint);
+  color: var(--green-text);
+}
+
+.wtag--shaky {
+  background: var(--red-tint);
+  color: var(--red-text);
+}
+
+.wtag--practising {
+  box-shadow: inset 0 0 0 var(--line) var(--rule-strong);
+  color: var(--ink-muted);
+}
+
+/* ---- Words not met yet: names in pencil ------------------------------------ */
+
+.ahead {
+  padding: var(--space-5) 0 0;
+}
+
+.ahead__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ahead__word {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3) var(--space-1) var(--space-2);
+  border: var(--line) dashed var(--rule-strong);
+  border-radius: var(--radius-sm);
+  color: var(--ink-faint);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+}
+
+/* ---- Notes ---------------------------------------------------------------- */
+
+.gloss__empty,
+.gloss__footnote {
+  margin-top: var(--space-8);
+  color: var(--ink-muted);
+}
+
+.gloss__footnote strong,
+.gloss__empty strong {
+  color: var(--ink);
+}
+
+@media (max-width: 1000px) {
+  .gloss__body {
+    grid-template-columns: minmax(0, var(--measure));
+    grid-template-areas:
+      'head'
+      'aside'
+      'list';
+    justify-content: center;
+  }
+
+  .gloss__aside {
+    position: static;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+    padding-top: var(--space-8);
+  }
+}
+
+@media (max-width: 560px) {
+  .gloss__aside {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-8);
+  }
+}

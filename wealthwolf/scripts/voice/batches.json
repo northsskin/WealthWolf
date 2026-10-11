@@ -1,0 +1,242 @@
+[
+  {
+    "name": "lines-1",
+    "lines": [
+      {
+        "key": "mf-cash-flow-i1",
+        "text": "Start here. Money only ever does two things. It comes in to you, and it goes out from you. That's it. Get a grip on both and you're already ahead of most people. No experience needed. We'll teach every word as we go.",
+        "hash": "0aad2735"
+      },
+      {
+        "key": "mf-cash-flow-q1",
+        "text": "Money that comes in to you is called income.",
+        "hash": "88f91dc8"
+      },
+      {
+        "key": "mf-cash-flow-q2",
+        "text": "Money that goes out to pay for something is an expense.",
+        "hash": "7f6a8db1"
+      },
+      {
+        "key": "mf-cash-flow-q5",
+        "text": "Take your expenses away from your income and you get your cash flow: what’s left over. Earn $2,000, spend $1,500, and your cash flow is $500.",
+        "hash": "0ceba595"
+      },
+      {
+        "key": "mf-cash-flow-q6",
+        "text": "When income is bigger than expenses, cash flow is positive. When expenses are bigger, it's negative: you're spending money you don't have.",
+        "hash": "1233db43"
+      },
+      {
+        "key": "mf-paycheck-q1",
+        "text": "Here’s your first pay stub from a coffee shop job. Your gross pay is everything you earned, before anything is taken out.",
+        "hash": "f293ec2a"
+      },
+      {
+        "key": "mf-paycheck-q2",
+        "text": "Money taken out of your pay before you get it is a deduction. Taxes are deductions. So is money you choose to save for retirement.",
+        "hash": "6fdd00e4"
+      },
+      {
+        "key": "mf-paycheck-q3",
+        "text": "What’s left after every deduction is your take-home pay, also called net pay. It’s the number that actually lands in your account.",
+        "hash": "e4500249"
+      },
+      {
+        "key": "mf-paycheck-q4",
+        "text": "Not every deduction is a tax. Some of it is still your money, just saved for later.",
+        "hash": "034b70c1"
+      },
+      {
+        "key": "mf-fixed-variable-q1",
+        "text": "Some expenses cost exactly the same every month, like rent. Those are fixed expenses.",
+        "hash": "9946dc7f"
+      },
+      {
+        "key": "mf-fixed-variable-q2",
+        "text": "Other expenses go up and down depending on what you do, like food or fuel. Those are variable expenses.",
+        "hash": "d58e60e7"
+      },
+      {
+        "key": "mf-fixed-variable-q5",
+        "text": "Add both kinds together to get your total spending. Fixed $1,000 plus variable $500 equals $1,500 a month.",
+        "hash": "02ebfce2"
+      },
+      {
+        "key": "mf-needs-wants-q1",
+        "text": "A need is something you have to pay for to live and work: a place to live, basic food, getting to your job.",
+        "hash": "340dde90"
+      },
+      {
+        "key": "mf-needs-wants-q2",
+        "text": "A want is something that makes life nicer, but you'd be fine without it.",
+        "hash": "a648e594"
+      },
+      {
+        "key": "mf-needs-wants-q4",
+        "text": "Careful: wants love to hide inside needs. Food is a need, but takeout every night is a want.",
+        "hash": "2fd8433d"
+      },
+      {
+        "key": "mf-needs-wants-q6",
+        "text": "When people start earning more, they often spend more on wants without noticing. That's called lifestyle creep.",
+        "hash": "21d20b29"
+      }
+    ],
+    "prompt": "Start here. Money only ever does two things. It comes in to you, and it goes out from you. That's it. Get a grip on both and you're already ahead of most people. No experience needed. We'll teach every word as we go. [long pause] Money that comes in to you is called income. [long pause] Money that goes out to pay for something is an expense. [long pause] Take your expenses away from your income and you get your cash flow: what’s left over. Earn $2,000, spend $1,500, and your cash flow is $500. [long pause] When income is bigger than expenses, cash flow is positive. When expenses are bigger, it's negative: you're spending money you don't have. [long pause] Here’s your first pay stub from a coffee shop job. Your gross pay is everything you earned, before anything is taken out. [long pause] Money taken out of your pay before you get it is a deduction. Taxes are deductions. So is money you choose to save for retirement. [long pause] What’s left after every deduction is your take-home pay, also called net pay. It’s the number that actually lands in your account. [long pause] Not every deduction is a tax. Some of it is still your money, just saved for later. [long pause] Some expenses cost exactly the same every month, like rent. Those are fixed expenses. [long pause] Other expenses go up and down depending on what you do, like food or fuel. Those are variable expenses. [long pause] Add both kinds together to get your total spending. Fixed $1,000 plus variable $500 equals $1,500 a month. [long pause] A need is something you have to pay for to live and work: a place to live, basic food, getting to your job. [long pause] A want is something that makes life nicer, but you'd be fine without it. [long pause] Careful: wants love to hide inside needs. Food is a need, but takeout every night is a want. [long pause] When people start earning more, they often spend more on wants without noticing. That's called lifestyle creep."
+  },
+  {
+    "name": "lines-2",
+    "lines": [
+      {
+        "key": "mf-needs-wants-q9",
+        "text": "Groceries are a need. But a want can still sneak into the basket.",
+        "hash": "ae3e2c7c"
+      },
+      {
+        "key": "mf-jordan-q5",
+        "text": "Planning a month before it starts beats wondering where it went.",
+        "hash": "03a02c46"
+      },
+      {
+        "key": "mf-net-worth-q1",
+        "text": "An asset is something you own that's worth money: savings in the bank, a car, a laptop you could sell.",
+        "hash": "56435799"
+      },
+      {
+        "key": "mf-net-worth-q2",
+        "text": "A liability is money you owe to someone else, like a loan you're still paying back.",
+        "hash": "d8229105"
+      },
+      {
+        "key": "mf-net-worth-q3",
+        "text": "Your net worth is everything you own minus everything you owe. Own $10,000, owe $4,000, and your net worth is $6,000.",
+        "hash": "069230db"
+      },
+      {
+        "key": "mf-net-worth-q6",
+        "text": "Net worth can drop below zero. If you owe more than you own, it's negative. That's common when you're starting out. What matters is that it grows.",
+        "hash": "77573cd1"
+      },
+      {
+        "key": "mf-bills-q1",
+        "text": "Every bill has a due date: the last day to pay it without being late.",
+        "hash": "9cb69ad0"
+      },
+      {
+        "key": "mf-bills-q3",
+        "text": "Pay after the due date and many companies add a late fee: a penalty for paying late. Read the small print at the bottom.",
+        "hash": "0c51263a"
+      },
+      {
+        "key": "mf-bills-q4",
+        "text": "Read the lines, not just the total. Mistakes and surprise charges hide in there.",
+        "hash": "dd9d5aa4"
+      },
+      {
+        "key": "mf-bills-q6",
+        "text": "Comparing two prices? Line them up over the same stretch of time, like a full year.",
+        "hash": "213defd3"
+      }
+    ],
+    "prompt": "Groceries are a need. But a want can still sneak into the basket. [long pause] Planning a month before it starts beats wondering where it went. [long pause] An asset is something you own that's worth money: savings in the bank, a car, a laptop you could sell. [long pause] A liability is money you owe to someone else, like a loan you're still paying back. [long pause] Your net worth is everything you own minus everything you owe. Own $10,000, owe $4,000, and your net worth is $6,000. [long pause] Net worth can drop below zero. If you owe more than you own, it's negative. That's common when you're starting out. What matters is that it grows. [long pause] Every bill has a due date: the last day to pay it without being late. [long pause] Pay after the due date and many companies add a late fee: a penalty for paying late. Read the small print at the bottom. [long pause] Read the lines, not just the total. Mistakes and surprise charges hide in there. [long pause] Comparing two prices? Line them up over the same stretch of time, like a full year."
+  },
+  {
+    "name": "barks",
+    "lines": [
+      {
+        "key": "bark-sharp",
+        "text": "Sharp.",
+        "hash": "073fc66b"
+      },
+      {
+        "key": "bark-clean",
+        "text": "Clean.",
+        "hash": "5c6a7dd0"
+      },
+      {
+        "key": "bark-that-s-the-one",
+        "text": "That's the one.",
+        "hash": "efb2c5bd"
+      },
+      {
+        "key": "bark-nailed-it",
+        "text": "Nailed it.",
+        "hash": "767e7f65"
+      },
+      {
+        "key": "bark-exactly",
+        "text": "Exactly.",
+        "hash": "2bb56707"
+      },
+      {
+        "key": "bark-pack-leader-energy",
+        "text": "Pack-leader energy.",
+        "hash": "aa4cdaf0"
+      },
+      {
+        "key": "bark-correct-obviously",
+        "text": "Correct. Obviously.",
+        "hash": "672fd75b"
+      },
+      {
+        "key": "bark-not-quite",
+        "text": "Not quite.",
+        "hash": "6fc35f5a"
+      },
+      {
+        "key": "bark-missed-it",
+        "text": "Missed it.",
+        "hash": "7be48f09"
+      },
+      {
+        "key": "bark-close-but-no",
+        "text": "Close, but no.",
+        "hash": "bf462de5"
+      },
+      {
+        "key": "bark-nope",
+        "text": "Nope.",
+        "hash": "80a30e5d"
+      },
+      {
+        "key": "bark-strike-1",
+        "text": "Strike 1.",
+        "hash": "ceed821e"
+      },
+      {
+        "key": "bark-strike-2",
+        "text": "Strike 2.",
+        "hash": "f0f47369"
+      },
+      {
+        "key": "bark-third-strike",
+        "text": "Third strike.",
+        "hash": "0ef68dca"
+      }
+    ],
+    "prompt": "Sharp. [long pause] Clean. [long pause] That's the one. [long pause] Nailed it. [long pause] Exactly. [long pause] Pack-leader energy. [long pause] Correct. Obviously. [long pause] Not quite. [long pause] Missed it. [long pause] Close, but no. [long pause] Nope. [long pause] Strike 1. [long pause] Strike 2. [long pause] Third strike."
+  },
+  {
+    "name": "mf-jordan-story",
+    "lines": [
+      {
+        "key": "mf-jordan-story",
+        "text": "Where did it all go? Jordan just moved into a first apartment and started a full-time job. Every month, $2,400 of take-home pay lands in Jordan’s account. Rent is $1,100. Phone and internet are $100. Groceries come to about $300. This month Jordan also spent $420 eating out and $180 on two concerts, and put $0 into savings. At the end of the month Jordan opens the bank app and wonders where it all went.",
+        "hash": "29e83d04"
+      }
+    ],
+    "prompt": "Where did it all go? Jordan just moved into a first apartment and started a full-time job. Every month, $2,400 of take-home pay lands in Jordan’s account. Rent is $1,100. Phone and internet are $100. Groceries come to about $300. This month Jordan also spent $420 eating out and $180 on two concerts, and put $0 into savings. At the end of the month Jordan opens the bank app and wonders where it all went."
+  },
+  {
+    "name": "mf-snapshot-story",
+    "lines": [
+      {
+        "key": "mf-snapshot-story",
+        "text": "A one-page check-up Maya sat down to see where she stands. Each month she takes home $3,200. Her expenses: rent $1,300, groceries $350, a car payment of $280, her phone $60, and about $700 on eating out and shopping. She owns a car worth $9,000 and has $2,500 in the bank. She still owes $6,000 on the car and $1,200 to a friend.",
+        "hash": "e8990616"
+      }
+    ],
+    "prompt": "A one-page check-up Maya sat down to see where she stands. Each month she takes home $3,200. Her expenses: rent $1,300, groceries $350, a car payment of $280, her phone $60, and about $700 on eating out and shopping. She owns a car worth $9,000 and has $2,500 in the bank. She still owes $6,000 on the car and $1,200 to a friend."
+  }
+]

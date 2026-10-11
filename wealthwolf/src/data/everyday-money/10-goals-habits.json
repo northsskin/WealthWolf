@@ -1,0 +1,746 @@
+{
+  "id": "goals-habits",
+  "section": "everyday-money",
+  "order": 10,
+  "title": "Goals & Money Habits",
+  "description": "Turn wishes into numbers, and numbers into habits.",
+  "wolfLine": "A goal without a number is just a wish.",
+  "terms": {
+    "smart-goal": {
+      "term": "SMART goal",
+      "definition": "A goal that’s Specific, Measurable, Achievable, Relevant and Time-bound: exactly what, how much, and by when.",
+      "example": "Save $1,500 for an emergency fund in 10 months."
+    },
+    "time-horizon": {
+      "term": "Time horizon",
+      "definition": "How far away a goal is. Short-term is under a year, mid-term is 1 to 5 years, long-term is more than 5.",
+      "example": "A car in 3 years has a mid-term time horizon."
+    },
+    "present-bias": {
+      "term": "Present bias",
+      "definition": "The pull to choose a smaller reward now over a bigger one later.",
+      "example": "Spending your trip savings on a sale today."
+    }
+  },
+  "lessons": [
+    {
+      "id": "gh-goals",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Goals That Work",
+      "summary": "Turn “save more” into a number and a date.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gh-goals-q1",
+          "type": "multiple_choice",
+          "context": "A [[SMART goal|smart-goal]] is Specific, Measurable, Achievable, Relevant and Time-bound. In plain words: exactly what, how much, and by when.",
+          "prompt": "Which is a SMART goal?",
+          "choices": [
+            "Save $3,000 for a car down payment by next December",
+            "Get better with money",
+            "Be rich"
+          ],
+          "answer": 0,
+          "explain": "What, how much, by when. The other two can’t be measured."
+        },
+        {
+          "id": "gh-goals-q2",
+          "type": "sort",
+          "prompt": "SMART or vague?",
+          "buckets": [
+            "SMART",
+            "Vague"
+          ],
+          "items": [
+            [
+              "Save $500 for a laptop by March",
+              0
+            ],
+            [
+              "Save more this year",
+              1
+            ],
+            [
+              "Build a $1,500 emergency fund in 10 months",
+              0
+            ],
+            [
+              "Stop wasting money",
+              1
+            ],
+            [
+              "Be better with spending",
+              1
+            ],
+            [
+              "Put $50 into savings every payday this year",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "gh-goals-q3",
+          "type": "number",
+          "prompt": "Goal: $1,500 in 10 months. How much a month?",
+          "answer": 150,
+          "unit": "$",
+          "explain": "$1,500 ÷ 10 = $150."
+        },
+        {
+          "id": "gh-goals-q4",
+          "type": "true_false",
+          "prompt": "Writing a goal down and checking it every month makes you more likely to hit it.",
+          "answer": true,
+          "explain": "What gets checked gets done."
+        },
+        {
+          "id": "gh-goals-q5",
+          "type": "multiple_choice",
+          "prompt": "Your $1,500 goal is at $600 after 6 months. Are you on track?",
+          "choices": [
+            "Behind: you should be at $900",
+            "On track",
+            "Ahead"
+          ],
+          "answer": 0,
+          "explain": "$150 × 6 = $900 planned. You’re $300 behind."
+        },
+        {
+          "id": "gh-goals-q6",
+          "type": "number",
+          "prompt": "To still finish on time in the last 4 months, how much a month do you need now?",
+          "answer": 225,
+          "unit": "$",
+          "explain": "($1,500 − $600) ÷ 4 = $225."
+        }
+      ]
+    },
+    {
+      "id": "gh-horizons",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Short, Mid and Long Term",
+      "summary": "When you need the money changes where it should live.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gh-horizons-q1",
+          "type": "multiple_choice",
+          "context": "A goal’s [[time horizon]] is how far away it is. Short-term: under a year. Mid-term: 1 to 5 years. Long-term: more than 5 years.",
+          "prompt": "Saving for a car in 3 years is…",
+          "choices": [
+            "Mid-term",
+            "Short-term",
+            "Long-term"
+          ],
+          "answer": 0,
+          "explain": "Between 1 and 5 years away."
+        },
+        {
+          "id": "gh-horizons-q2",
+          "type": "sort",
+          "prompt": "Sort the goals by time horizon.",
+          "buckets": [
+            "Short",
+            "Mid",
+            "Long"
+          ],
+          "items": [
+            [
+              "A concert in 2 months",
+              0
+            ],
+            [
+              "Retirement",
+              2
+            ],
+            [
+              "A home deposit in 4 years",
+              1
+            ],
+            [
+              "A new phone this year",
+              0
+            ],
+            [
+              "A child’s college in 15 years",
+              2
+            ],
+            [
+              "A wedding in 2 years",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "gh-horizons-q3",
+          "type": "multiple_choice",
+          "prompt": "Where should money for a short-term goal live?",
+          "choices": [
+            "Somewhere safe and easy to reach, like savings",
+            "Somewhere its value might drop",
+            "Under the mattress"
+          ],
+          "answer": 0,
+          "explain": "If you need it soon, it can’t be at risk."
+        },
+        {
+          "id": "gh-horizons-q4",
+          "type": "true_false",
+          "prompt": "Long-term goals can wait until you’re older.",
+          "answer": false,
+          "explain": "Long goals need the most time. Starting early is the cheat code."
+        },
+        {
+          "id": "gh-horizons-q5",
+          "type": "number",
+          "prompt": "A $3,600 goal in 3 years. How much a month?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "3 years = 36 months. $3,600 ÷ 36 = $100."
+        },
+        {
+          "id": "gh-horizons-q6",
+          "type": "multiple_choice",
+          "prompt": "Money is tight. Which goal do you fund first?",
+          "choices": [
+            "A small emergency fund",
+            "A luxury trip",
+            "A new TV"
+          ],
+          "answer": 0,
+          "explain": "Protection first, fun second."
+        }
+      ]
+    },
+    {
+      "id": "gh-priorities",
+      "type": "lesson",
+      "title": "What Comes First",
+      "summary": "Every goal wants your money. Put them in line.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gh-priorities-q1",
+          "type": "info",
+          "title": "A common order",
+          "body": "Every goal wants your money. A common order: keep the lights on, build a small cushion, grow it to a real safety net, then work on bigger goals. You can work on several at once, but the order tells you what wins when money is short."
+        },
+        {
+          "id": "gh-priorities-q2",
+          "type": "order",
+          "prompt": "Put these in the usual priority order.",
+          "items": [
+            "Pay rent, food and bills",
+            "Build a $1,000 starter emergency fund",
+            "Grow it to 3 months of essential expenses",
+            "Save for bigger goals like a car or a trip"
+          ],
+          "explain": "Survive, cushion, safety net, then goals."
+        },
+        {
+          "id": "gh-priorities-q3",
+          "type": "multiple_choice",
+          "prompt": "You have $1,000 spare and no emergency fund yet. Best move?",
+          "choices": [
+            "Start the emergency fund",
+            "Book a trip",
+            "Buy new headphones"
+          ],
+          "answer": 0,
+          "explain": "The cushion protects every other goal."
+        },
+        {
+          "id": "gh-priorities-q4",
+          "type": "true_false",
+          "prompt": "You can work on more than one goal at a time by splitting each paycheck.",
+          "answer": true,
+          "explain": "Splitting keeps every goal moving."
+        },
+        {
+          "id": "gh-priorities-q5",
+          "type": "number",
+          "prompt": "You save $300 a month: 60% to the emergency fund, 40% to a trip. How much goes to the trip?",
+          "answer": 120,
+          "unit": "$",
+          "explain": "$300 × 0.40 = $120."
+        },
+        {
+          "id": "gh-priorities-q6",
+          "type": "multiple_choice",
+          "prompt": "A goal stops mattering to you. What now?",
+          "choices": [
+            "Move its money to a goal that does matter",
+            "Keep saving for it anyway",
+            "Spend the money right away"
+          ],
+          "answer": 0,
+          "explain": "Goals change. Let the money follow."
+        }
+      ]
+    },
+    {
+      "id": "gh-habits",
+      "type": "lesson",
+      "title": "Small Habits, Big Numbers",
+      "summary": "Tiny daily amounts, huge yearly totals.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gh-habits-q1",
+          "type": "number",
+          "context": "Tiny daily amounts become big yearly ones. Multiply by 365.",
+          "prompt": "$4 a day for a year. What’s the total?",
+          "answer": 1460,
+          "unit": "$",
+          "explain": "$4 × 365 = $1,460."
+        },
+        {
+          "id": "gh-habits-q2",
+          "type": "number",
+          "prompt": "$10 a week for 10 years, which is 520 weeks?",
+          "answer": 5200,
+          "unit": "$",
+          "explain": "$10 × 520 = $5,200."
+        },
+        {
+          "id": "gh-habits-q3",
+          "type": "multiple_choice",
+          "context": "Habits stick when they’re easy and automatic. Make the good choice the default.",
+          "prompt": "Which habit is easiest to keep?",
+          "choices": [
+            "An automatic $20 transfer every payday",
+            "Remembering to save whatever is left",
+            "Saving only when you feel rich"
+          ],
+          "answer": 0,
+          "explain": "Automatic means it happens even on bad weeks."
+        },
+        {
+          "id": "gh-habits-q4",
+          "type": "true_false",
+          "prompt": "Rounding every card purchase up to the next dollar and saving the change can add up.",
+          "answer": true,
+          "explain": "Many banks will do it for you."
+        },
+        {
+          "id": "gh-habits-q5",
+          "type": "number",
+          "prompt": "Round-ups average $0.45 a purchase, and you make 60 purchases a month. How much do you save a month?",
+          "answer": 27,
+          "unit": "$",
+          "explain": "$0.45 × 60 = $27."
+        },
+        {
+          "id": "gh-habits-q6",
+          "type": "multiple_choice",
+          "prompt": "You missed your savings transfer one month. Best response?",
+          "choices": [
+            "Restart on the next payday",
+            "Give up",
+            "Stop saving for a year"
+          ],
+          "answer": 0,
+          "explain": "One miss is a blip. Quitting is the real cost."
+        }
+      ]
+    },
+    {
+      "id": "gh-brain-traps",
+      "type": "lesson",
+      "title": "Brain Traps",
+      "summary": "Why smart people still overspend.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gh-brain-traps-q1",
+          "type": "multiple_choice",
+          "context": "[[Present bias]] is the pull to choose a reward now over a bigger one later.",
+          "prompt": "Which is present bias?",
+          "choices": [
+            "Spending your trip savings on a sale today",
+            "Making a budget",
+            "Checking your balance"
+          ],
+          "answer": 0,
+          "explain": "Today’s deal beat next month’s trip."
+        },
+        {
+          "id": "gh-brain-traps-q2",
+          "type": "multiple_choice",
+          "prompt": "Why is “it’s only $5” dangerous?",
+          "choices": [
+            "Lots of “only $5” adds up fast",
+            "$5 is a lot",
+            "It isn’t"
+          ],
+          "answer": 0,
+          "explain": "Twenty “only $5” moments is $100."
+        },
+        {
+          "id": "gh-brain-traps-q3",
+          "type": "true_false",
+          "prompt": "Treating a tax refund as free money and spending it all is a common trap.",
+          "answer": true,
+          "explain": "A refund is your own money coming back. Give it a job like any other."
+        },
+        {
+          "id": "gh-brain-traps-q4",
+          "type": "multiple_choice",
+          "prompt": "Your friends eat out a lot and you feel the pressure. Healthy move?",
+          "choices": [
+            "Suggest cheaper plans sometimes, or join less often",
+            "Go every time and stop saving",
+            "Stop seeing your friends"
+          ],
+          "answer": 0,
+          "explain": "Friends who matter will take a picnic."
+        },
+        {
+          "id": "gh-brain-traps-q5",
+          "type": "sort",
+          "prompt": "Trap or smart move?",
+          "buckets": [
+            "Trap",
+            "Smart move"
+          ],
+          "items": [
+            [
+              "Buying it because everyone has one",
+              0
+            ],
+            [
+              "Waiting a day before a big buy",
+              1
+            ],
+            [
+              "Spending a bonus in a week",
+              0
+            ],
+            [
+              "Saving half of every raise",
+              1
+            ],
+            [
+              "“I deserve it” purchases every week",
+              0
+            ],
+            [
+              "Automating your savings",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "gh-brain-traps-q6",
+          "type": "multiple_choice",
+          "prompt": "What’s the best defense against brain traps?",
+          "choices": [
+            "Rules decided in advance, like a budget and a waiting rule",
+            "Willpower in the moment",
+            "Never shopping again"
+          ],
+          "answer": 0,
+          "explain": "Decide when you’re calm, not when you’re in the store."
+        }
+      ]
+    },
+    {
+      "id": "gh-money-date",
+      "type": "lesson",
+      "title": "Your Weekly Money Date",
+      "summary": "Ten minutes a week keeps the whole plan on track.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gh-money-date-q1",
+          "type": "info",
+          "title": "Ten minutes, once a week",
+          "body": "Once a week, take ten minutes: check your balance and pending transactions, look at spending by category, move money if a category ran hot, and nudge your goals."
+        },
+        {
+          "id": "gh-money-date-q2",
+          "type": "order",
+          "prompt": "Put the weekly check-in in order.",
+          "items": [
+            "Check your balance and pending transactions",
+            "Look at this week’s spending",
+            "Move money between categories if needed",
+            "Check progress on your goals"
+          ],
+          "explain": "Where you stand, what happened, fix it, look ahead."
+        },
+        {
+          "id": "gh-money-date-q3",
+          "type": "true_false",
+          "prompt": "A weekly check-in only matters when something went wrong.",
+          "answer": false,
+          "explain": "It’s how you catch things before they go wrong."
+        },
+        {
+          "id": "gh-money-date-q4",
+          "type": "multiple_choice",
+          "prompt": "When’s the best time for a money date?",
+          "choices": [
+            "The same time every week, like Sunday evening",
+            "Only when you feel like it",
+            "Once a year"
+          ],
+          "answer": 0,
+          "explain": "A fixed time turns it into a habit."
+        },
+        {
+          "id": "gh-money-date-q5",
+          "type": "multiple_choice",
+          "prompt": "At your check-in you see $45 on snacks this week. The budget was $25. What do you do?",
+          "choices": [
+            "Move $20 from fun to food and plan better next week",
+            "Ignore it",
+            "Stop eating snacks forever"
+          ],
+          "answer": 0,
+          "explain": "Patch it, then plan."
+        },
+        {
+          "id": "gh-money-date-q6",
+          "type": "number",
+          "prompt": "Ten minutes a week for 52 weeks. About how many hours a year is that? Round to the nearest hour.",
+          "answer": 9,
+          "unit": "hours",
+          "explain": "10 × 52 = 520 minutes. 520 ÷ 60 = 8.7, about 9 hours a year."
+        }
+      ]
+    },
+    {
+      "id": "gh-morgan",
+      "type": "lesson",
+      "format": "story",
+      "title": "Morgan’s Plan",
+      "summary": "Three goals, one paycheck. Make it fit.",
+      "xp": 10,
+      "story": {
+        "title": "One year, three goals",
+        "character": "Morgan, 25, dental assistant",
+        "body": "Morgan takes home **$3,000** a month. Needs (rent, food, transport, phone) cost **$1,850**. Morgan wants three things this year:\n\nA **$1,200** starter emergency fund within 12 months. A **$900** trip in August, eight months away. A new laptop for **$720**, a year from now.\n\nRight now Morgan spends whatever isn’t needed, about **$1,150** a month on wants, and saves nothing."
+      },
+      "steps": [
+        {
+          "id": "gh-morgan-q1",
+          "type": "number",
+          "prompt": "How much a month for the trip, eight months away?",
+          "answer": 112.5,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$900 ÷ 8 = $112.50."
+        },
+        {
+          "id": "gh-morgan-q2",
+          "type": "number",
+          "prompt": "How much a month for the laptop, 12 months away?",
+          "answer": 60,
+          "unit": "$",
+          "explain": "$720 ÷ 12 = $60."
+        },
+        {
+          "id": "gh-morgan-q3",
+          "type": "number",
+          "prompt": "And for the $1,200 emergency fund in 12 months?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$1,200 ÷ 12 = $100."
+        },
+        {
+          "id": "gh-morgan-q4",
+          "type": "number",
+          "prompt": "What’s Morgan’s total monthly saving for all three goals?",
+          "answer": 272.5,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$112.50 + $60 + $100 = $272.50."
+        },
+        {
+          "id": "gh-morgan-q5",
+          "type": "number",
+          "prompt": "After needs and goals, how much is left for wants?",
+          "answer": 877.5,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$3,000 − $1,850 − $272.50 = $877.50."
+        },
+        {
+          "id": "gh-morgan-q6",
+          "type": "allocate",
+          "prompt": "Plan Morgan’s month. Needs are fixed, and goals need at least $300 (rounded up from $272.50 to leave some slack).",
+          "total": 3000,
+          "step": 50,
+          "categories": [
+            {
+              "label": "Needs",
+              "fixed": 1850
+            },
+            {
+              "label": "Goals",
+              "min": 300
+            },
+            {
+              "label": "Wants"
+            }
+          ],
+          "explain": "Every plan works if needs are covered, goals get at least $300, and nothing is left without a job."
+        }
+      ]
+    },
+    {
+      "id": "gh-plan",
+      "type": "lesson",
+      "format": "call",
+      "title": "Your First Money Plan",
+      "summary": "Everything from this section, on one page.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gh-plan-q1",
+          "type": "info",
+          "title": "Everything in one plan",
+          "body": "You’ve learned to track, budget, bank, save and spend smart. A money plan puts it on one page: what comes in, what goes out, what you’re building, and the habits that keep it running."
+        },
+        {
+          "id": "gh-plan-q2",
+          "type": "order",
+          "prompt": "Put your money plan in order.",
+          "items": [
+            "Know your take-home pay",
+            "Cover needs and bills",
+            "Pay yourself first: savings and goals",
+            "Plan wants with what’s left",
+            "Check in weekly, review monthly"
+          ],
+          "explain": "In, out, future you, fun, follow-up."
+        },
+        {
+          "id": "gh-plan-q3",
+          "type": "multiple_choice",
+          "prompt": "Which account setup supports the plan?",
+          "choices": [
+            "Checking for bills, a separate savings account, alerts on",
+            "One account for everything, no alerts",
+            "All cash at home"
+          ],
+          "answer": 0,
+          "explain": "Separate pots and early warnings."
+        },
+        {
+          "id": "gh-plan-q4",
+          "type": "allocate",
+          "context": "Put it all together: give every dollar of one month a job.",
+          "prompt": "Plan a $2,800 take-home month. Rent and phone are fixed. Groceries need at least $300, transport at least $150, savings at least $300.",
+          "total": 2800,
+          "step": 50,
+          "categories": [
+            {
+              "label": "Rent",
+              "fixed": 1100
+            },
+            {
+              "label": "Phone",
+              "fixed": 50
+            },
+            {
+              "label": "Groceries",
+              "min": 300
+            },
+            {
+              "label": "Transport",
+              "min": 150
+            },
+            {
+              "label": "Savings",
+              "min": 300
+            },
+            {
+              "label": "Fun"
+            }
+          ],
+          "explain": "Needs covered, savings protected, every dollar given a job."
+        },
+        {
+          "id": "gh-plan-q5",
+          "type": "true_false",
+          "prompt": "A money plan should change when your life changes.",
+          "answer": true,
+          "explain": "New job, new city, new goal: new plan."
+        },
+        {
+          "id": "gh-plan-q6",
+          "type": "multiple_choice",
+          "prompt": "Which one habit holds the whole plan together?",
+          "choices": [
+            "Checking in regularly",
+            "Earning more",
+            "Never spending on fun"
+          ],
+          "answer": 0,
+          "explain": "A plan you look at is a plan that works."
+        }
+      ]
+    },
+    {
+      "id": "gh-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "gh-trial",
+      "type": "boss",
+      "title": "Den Trial: Goals & Habits",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "gh-trial-q1",
+          "type": "number",
+          "prompt": "A $2,400 goal in 12 months. How much a month?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$2,400 ÷ 12 = $200."
+        },
+        {
+          "id": "gh-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "A home deposit in 4 years has what time horizon?",
+          "choices": [
+            "Mid-term",
+            "Short-term",
+            "Long-term"
+          ],
+          "answer": 0,
+          "explain": "Between 1 and 5 years."
+        },
+        {
+          "id": "gh-trial-q3",
+          "type": "true_false",
+          "prompt": "Choosing a sale today over your planned trip is an example of present bias.",
+          "answer": true,
+          "explain": "Now beat later."
+        },
+        {
+          "id": "gh-trial-q4",
+          "type": "order",
+          "prompt": "Put these in priority order.",
+          "items": [
+            "Cover rent, food and bills",
+            "Starter emergency fund",
+            "Bigger goals"
+          ],
+          "explain": "Survive, cushion, then build."
+        }
+      ]
+    }
+  ]
+}

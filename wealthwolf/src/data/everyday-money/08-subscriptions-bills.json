@@ -1,0 +1,1073 @@
+{
+  "id": "subscriptions-bills",
+  "section": "everyday-money",
+  "order": 8,
+  "title": "Subscriptions & Bills",
+  "description": "Tame the charges that come back every month.",
+  "wolfLine": "Every subscription is a little hand in your pocket. Count the hands.",
+  "terms": {
+    "subscription": {
+      "term": "Subscription",
+      "definition": "A service that charges you again and again, monthly or yearly, until you cancel.",
+      "example": "A $15.99 streaming service billed on the 4th of every month."
+    },
+    "auto-renewal": {
+      "term": "Auto-renewal",
+      "definition": "When a subscription renews and charges you automatically unless you cancel first.",
+      "example": "Your yearly app plan charges $59.99 again on its anniversary."
+    },
+    "free-trial": {
+      "term": "Free trial",
+      "definition": "A free taste of a paid service that usually turns into a paid subscription when it ends, unless you cancel.",
+      "example": "Seven days free, then $14.99 a month on the card you entered."
+    },
+    "utility": {
+      "term": "Utility",
+      "definition": "A basic home service you pay for as you use it, like electricity, water, gas or trash.",
+      "example": "A water bill based on how many gallons you used."
+    },
+    "autopay": {
+      "term": "Autopay",
+      "definition": "Letting a company take a bill out of your account automatically each month.",
+      "example": "Your phone bill pulls itself from checking on the 14th."
+    },
+    "promotional-rate": {
+      "term": "Promotional rate",
+      "definition": "A low starting price for new customers that jumps after a set time, often 12 months.",
+      "example": "Internet at $40 a month for year one, then $70."
+    }
+  },
+  "lessons": [
+    {
+      "id": "sb-subscriptions",
+      "type": "lesson",
+      "title": "The Subscription Pile",
+      "summary": "Little monthly charges, big yearly totals.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sb-subscriptions-q1",
+          "type": "multiple_choice",
+          "context": "A [[subscription]] charges you again and again, monthly or yearly, until you cancel.",
+          "prompt": "Which of these is a subscription?",
+          "choices": [
+            "A streaming service that bills you every month",
+            "A pair of shoes",
+            "A bus ticket"
+          ],
+          "answer": 0,
+          "explain": "It charges again every month until you stop it."
+        },
+        {
+          "id": "sb-subscriptions-q2",
+          "type": "number",
+          "prompt": "You pay for 4 streaming services: $12, $16, $9 and $15 a month. What’s the monthly total?",
+          "answer": 52,
+          "unit": "$",
+          "explain": "$12 + $16 + $9 + $15 = $52."
+        },
+        {
+          "id": "sb-subscriptions-q3",
+          "type": "number",
+          "prompt": "What’s that over a year?",
+          "answer": 624,
+          "unit": "$",
+          "explain": "$52 × 12 = $624."
+        },
+        {
+          "id": "sb-subscriptions-q4",
+          "type": "true_false",
+          "prompt": "Small subscriptions are harmless because each one is cheap.",
+          "answer": false,
+          "explain": "Five $10 subscriptions are $600 a year."
+        },
+        {
+          "id": "sb-subscriptions-q5",
+          "type": "multiple_choice",
+          "context": "Most subscriptions have [[auto-renewal]]: they renew and charge you automatically unless you cancel first.",
+          "prompt": "Your yearly app plan renews tomorrow and you never use it. What do you do?",
+          "choices": [
+            "Cancel it today",
+            "Let it renew",
+            "Delete the app"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "That’s another year paid for something you don’t use.",
+            "Deleting the app doesn’t cancel the subscription. You’d keep paying."
+          ],
+          "explain": "Cancel before the renewal date and you won’t be charged again."
+        },
+        {
+          "id": "sb-subscriptions-q6",
+          "type": "fill_blank",
+          "prompt": "A subscription keeps charging you until you ___.",
+          "choices": [
+            "cancel it",
+            "stop using it",
+            "delete the app"
+          ],
+          "answer": 0,
+          "explain": "Only canceling stops the charges."
+        }
+      ]
+    },
+    {
+      "id": "sb-free-trials",
+      "type": "lesson",
+      "title": "Free Trials",
+      "summary": "Free until it isn’t. Set the reminder.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sb-free-trials-q1",
+          "type": "multiple_choice",
+          "context": "A [[free trial]] gives you a service free for a while, but you usually enter your card first. When it ends, it becomes a paid subscription.",
+          "prompt": "Why do free trials ask for your card?",
+          "choices": [
+            "So they can start charging when the trial ends",
+            "To check your age",
+            "To send you a gift"
+          ],
+          "answer": 0,
+          "explain": "The card is how “free” becomes “paid.”"
+        },
+        {
+          "id": "sb-free-trials-q2",
+          "type": "multiple_choice",
+          "prompt": "Best habit when you start a free trial?",
+          "choices": [
+            "Set a reminder to cancel a day or two before it ends",
+            "Trust yourself to remember",
+            "Use a different email each time"
+          ],
+          "answer": 0,
+          "explain": "Reminders beat memory every time."
+        },
+        {
+          "id": "sb-free-trials-q3",
+          "type": "number",
+          "prompt": "You forget to cancel a trial for a $14.99-a-month app and notice 3 months later. How much did you pay?",
+          "answer": 44.97,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$14.99 × 3 = $44.97."
+        },
+        {
+          "id": "sb-free-trials-q4",
+          "type": "true_false",
+          "prompt": "Canceling a free trial early usually still lets you use it until the trial ends.",
+          "answer": true,
+          "explain": "Most services keep it running to the end date, so cancel right after signing up."
+        },
+        {
+          "id": "sb-free-trials-q5",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking · Nov 1–8",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "groc",
+                "date": "Nov 2",
+                "label": "City Grocer",
+                "amount": -61.3
+              },
+              {
+                "id": "stream",
+                "date": "Nov 4",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "fit",
+                "date": "Nov 5",
+                "label": "FitPro Premium, trial ended",
+                "amount": -19.99
+              },
+              {
+                "id": "gas",
+                "date": "Nov 6",
+                "label": "Shell gas station",
+                "amount": -33.0
+              },
+              {
+                "id": "phone",
+                "date": "Nov 8",
+                "label": "Ridgeline Mobile",
+                "amount": -69.34
+              }
+            ]
+          },
+          "prompt": "You only meant to try FitPro for free. Tap the charge to stop.",
+          "answer": "fit",
+          "explain": "The trial ended and turned into a paid plan."
+        },
+        {
+          "id": "sb-free-trials-q6",
+          "type": "multiple_choice",
+          "prompt": "A “free” gift box only asks you to pay $4.95 shipping. What should you check first?",
+          "choices": [
+            "Whether it signs you up for a monthly subscription",
+            "The color of the box",
+            "Nothing, it’s free"
+          ],
+          "answer": 0,
+          "explain": "“Just pay shipping” offers often hide a monthly plan in the small print."
+        }
+      ]
+    },
+    {
+      "id": "sb-audit",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Subscription Audit",
+      "summary": "List every repeating charge. Keep what earns its place.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sb-audit-q1",
+          "type": "info",
+          "title": "Once a year, audit everything",
+          "body": "Pull up your last two months of statements and list every repeating charge. For each one, ask: did I use this in the last month? Would I sign up again today, at this price?"
+        },
+        {
+          "id": "sb-audit-q2",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Repeating charges · November",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "stream",
+                "date": "Nov 4",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "music",
+                "date": "Nov 6",
+                "label": "Spotlite Music",
+                "amount": -10.99
+              },
+              {
+                "id": "cloud",
+                "date": "Nov 9",
+                "label": "CloudBox Storage",
+                "amount": -2.99
+              },
+              {
+                "id": "gym",
+                "date": "Nov 12",
+                "label": "PowerGym membership",
+                "amount": -39.99
+              },
+              {
+                "id": "news",
+                "date": "Nov 20",
+                "label": "NewsDaily app",
+                "amount": -4.99
+              }
+            ]
+          },
+          "prompt": "You haven’t been to the gym since spring. Tap the subscription to cancel first.",
+          "answer": "gym",
+          "explain": "The biggest charge, for something you don’t use."
+        },
+        {
+          "id": "sb-audit-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Repeating charges · November",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "stream",
+                "date": "Nov 4",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "music",
+                "date": "Nov 6",
+                "label": "Spotlite Music",
+                "amount": -10.99
+              },
+              {
+                "id": "cloud",
+                "date": "Nov 9",
+                "label": "CloudBox Storage",
+                "amount": -2.99
+              },
+              {
+                "id": "gym",
+                "date": "Nov 12",
+                "label": "PowerGym membership",
+                "amount": -39.99
+              },
+              {
+                "id": "news",
+                "date": "Nov 20",
+                "label": "NewsDaily app",
+                "amount": -4.99
+              }
+            ]
+          },
+          "prompt": "Add up every subscription on this statement.",
+          "answer": 74.95,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$15.99 + $10.99 + $2.99 + $39.99 + $4.99 = $74.95."
+        },
+        {
+          "id": "sb-audit-q4",
+          "type": "number",
+          "prompt": "How much does canceling the gym save over a year?",
+          "answer": 479.88,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$39.99 × 12 = $479.88."
+        },
+        {
+          "id": "sb-audit-q5",
+          "type": "sort",
+          "prompt": "Keep or cancel?",
+          "buckets": [
+            "Keep",
+            "Cancel"
+          ],
+          "items": [
+            [
+              "Music app you use every day",
+              0
+            ],
+            [
+              "Gym you haven’t visited in 4 months",
+              1
+            ],
+            [
+              "A second streaming service you forgot about",
+              1
+            ],
+            [
+              "Cloud storage holding your photos",
+              0
+            ],
+            [
+              "News app you never open",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "sb-audit-q6",
+          "type": "multiple_choice",
+          "prompt": "Not sure whether you’ll miss it?",
+          "choices": [
+            "Cancel it. You can always sign up again",
+            "Keep paying just in case",
+            "Pay for a full year upfront"
+          ],
+          "answer": 0,
+          "explain": "If you miss it, rejoin. Most people never do."
+        }
+      ]
+    },
+    {
+      "id": "sb-utilities",
+      "type": "lesson",
+      "format": "document",
+      "title": "Utility Bills",
+      "summary": "Read a water bill and see which part you control.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sb-utilities-q1",
+          "type": "multiple_choice",
+          "context": "A [[utility]] is a basic home service you pay for as you use it: electricity, water, gas, trash.",
+          "prompt": "Which of these is a utility?",
+          "choices": [
+            "Water",
+            "Streaming",
+            "A gym"
+          ],
+          "answer": 0,
+          "explain": "A basic home service you pay for as you use it."
+        },
+        {
+          "id": "sb-utilities-q2",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Clearwater Utilities",
+            "subtitle": "Water bill",
+            "meta": [
+              [
+                "Account",
+                "7720-3341"
+              ],
+              [
+                "Service period",
+                "Oct 1–31"
+              ],
+              [
+                "Due date",
+                "Nov 18"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "base",
+                "label": "Base charge",
+                "amount": 18.0
+              },
+              {
+                "id": "water",
+                "label": "Water used, 4,000 gallons",
+                "amount": 24.0
+              },
+              {
+                "id": "sewer",
+                "label": "Sewer service",
+                "amount": 22.5
+              },
+              {
+                "id": "tax",
+                "label": "Taxes and fees",
+                "amount": 3.25
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 67.75,
+                "strong": true
+              }
+            ],
+            "note": "Water is charged at $6.00 per 1,000 gallons."
+          },
+          "prompt": "What’s the total due on this bill?",
+          "answer": 67.75,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$18.00 + $24.00 + $22.50 + $3.25 = $67.75."
+        },
+        {
+          "id": "sb-utilities-q3",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Clearwater Utilities",
+            "subtitle": "Water bill",
+            "meta": [
+              [
+                "Account",
+                "7720-3341"
+              ],
+              [
+                "Service period",
+                "Oct 1–31"
+              ],
+              [
+                "Due date",
+                "Nov 18"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "base",
+                "label": "Base charge",
+                "amount": 18.0
+              },
+              {
+                "id": "water",
+                "label": "Water used, 4,000 gallons",
+                "amount": 24.0
+              },
+              {
+                "id": "sewer",
+                "label": "Sewer service",
+                "amount": 22.5
+              },
+              {
+                "id": "tax",
+                "label": "Taxes and fees",
+                "amount": 3.25
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 67.75,
+                "strong": true
+              }
+            ],
+            "note": "Water is charged at $6.00 per 1,000 gallons."
+          },
+          "prompt": "How much of the bill depends on how much water you used?",
+          "answer": 24,
+          "unit": "$",
+          "explain": "Just the “Water used” line: $24.00."
+        },
+        {
+          "id": "sb-utilities-q4",
+          "type": "number",
+          "context": "Use-based charges grow with use.",
+          "doc": {
+            "kind": "bill",
+            "title": "Clearwater Utilities",
+            "subtitle": "Water bill",
+            "meta": [
+              [
+                "Account",
+                "7720-3341"
+              ],
+              [
+                "Service period",
+                "Oct 1–31"
+              ],
+              [
+                "Due date",
+                "Nov 18"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "base",
+                "label": "Base charge",
+                "amount": 18.0
+              },
+              {
+                "id": "water",
+                "label": "Water used, 4,000 gallons",
+                "amount": 24.0
+              },
+              {
+                "id": "sewer",
+                "label": "Sewer service",
+                "amount": 22.5
+              },
+              {
+                "id": "tax",
+                "label": "Taxes and fees",
+                "amount": 3.25
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 67.75,
+                "strong": true
+              }
+            ],
+            "note": "Water is charged at $6.00 per 1,000 gallons."
+          },
+          "prompt": "Next month you use 6,000 gallons. At the same rate, what will the water line cost?",
+          "answer": 36,
+          "unit": "$",
+          "explain": "6 × $6.00 = $36.00."
+        },
+        {
+          "id": "sb-utilities-q5",
+          "type": "true_false",
+          "doc": {
+            "kind": "bill",
+            "title": "Clearwater Utilities",
+            "subtitle": "Water bill",
+            "meta": [
+              [
+                "Account",
+                "7720-3341"
+              ],
+              [
+                "Service period",
+                "Oct 1–31"
+              ],
+              [
+                "Due date",
+                "Nov 18"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "base",
+                "label": "Base charge",
+                "amount": 18.0
+              },
+              {
+                "id": "water",
+                "label": "Water used, 4,000 gallons",
+                "amount": 24.0
+              },
+              {
+                "id": "sewer",
+                "label": "Sewer service",
+                "amount": 22.5
+              },
+              {
+                "id": "tax",
+                "label": "Taxes and fees",
+                "amount": 3.25
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 67.75,
+                "strong": true
+              }
+            ],
+            "note": "Water is charged at $6.00 per 1,000 gallons."
+          },
+          "prompt": "The base charge stays the same even if you use less water.",
+          "answer": true,
+          "explain": "It’s a fixed cost. Only the use-based line moves."
+        },
+        {
+          "id": "sb-utilities-q6",
+          "type": "multiple_choice",
+          "prompt": "A bill says “Estimated reading.” What does that mean?",
+          "choices": [
+            "They guessed your usage, and the next real reading will correct it",
+            "It’s a fake bill",
+            "You don’t have to pay it"
+          ],
+          "answer": 0,
+          "explain": "Pay it, but expect an adjustment next time."
+        }
+      ]
+    },
+    {
+      "id": "sb-autopay",
+      "type": "lesson",
+      "title": "Autopay: Friend or Foe",
+      "summary": "Never miss a due date, without getting blindsided.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sb-autopay-q1",
+          "type": "multiple_choice",
+          "context": "[[Autopay]] lets a company take the bill out of your account automatically every month.",
+          "prompt": "What’s the biggest upside of autopay?",
+          "choices": [
+            "You never miss a due date",
+            "Your bills get cheaper",
+            "You never need to look at them again"
+          ],
+          "answer": 0,
+          "explain": "No late fees from forgetting."
+        },
+        {
+          "id": "sb-autopay-q2",
+          "type": "multiple_choice",
+          "prompt": "What’s the biggest risk?",
+          "choices": [
+            "A bill pulls when your account is low and overdraws it",
+            "Your bill vanishes",
+            "You pay twice as much"
+          ],
+          "answer": 0,
+          "explain": "Autopay doesn’t check your balance first."
+        },
+        {
+          "id": "sb-autopay-q3",
+          "type": "true_false",
+          "prompt": "With autopay on, you can stop reading your bills.",
+          "answer": false,
+          "explain": "A wrong charge on autopay just gets paid. Still read every bill."
+        },
+        {
+          "id": "sb-autopay-q4",
+          "type": "sort",
+          "prompt": "Good fit for autopay?",
+          "buckets": [
+            "Good fit",
+            "Watch closely"
+          ],
+          "items": [
+            [
+              "Rent that’s the same every month",
+              0
+            ],
+            [
+              "A phone plan with a fixed price",
+              0
+            ],
+            [
+              "Electricity that swings with the seasons",
+              1
+            ],
+            [
+              "A bill you think has mistakes",
+              1
+            ],
+            [
+              "Car insurance",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "sb-autopay-q5",
+          "type": "multiple_choice",
+          "prompt": "Payday is the 15th. Your phone autopay pulls on the 10th, when your account is lowest. What’s the fix?",
+          "choices": [
+            "Move the autopay date to after the 15th",
+            "Hope there’s enough",
+            "Turn off direct deposit"
+          ],
+          "answer": 0,
+          "explain": "Most companies let you choose the date. Line it up with payday."
+        },
+        {
+          "id": "sb-autopay-q6",
+          "type": "number",
+          "prompt": "Your account has $310. Three autopays hit on the same day: $85 phone, $140 insurance, $95 internet. How much are you short?",
+          "answer": 10,
+          "unit": "$",
+          "explain": "$85 + $140 + $95 = $320. $320 − $310 = $10 short."
+        }
+      ]
+    },
+    {
+      "id": "sb-bill-calendar",
+      "type": "lesson",
+      "title": "Your Bill Calendar",
+      "summary": "Line up due dates with paydays so no week is a surprise.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sb-bill-calendar-q1",
+          "type": "info",
+          "title": "Every bill, on one page",
+          "body": "Write down every bill, its amount and its due date, then sort them by date. Now you can see which paycheck pays what, and which week is tight."
+        },
+        {
+          "id": "sb-bill-calendar-q2",
+          "type": "order",
+          "prompt": "Put these bills in due-date order.",
+          "items": [
+            "Rent, due the 1st",
+            "Internet, due the 7th",
+            "Phone, due the 14th",
+            "Car insurance, due the 22nd"
+          ],
+          "explain": "Earliest first."
+        },
+        {
+          "id": "sb-bill-calendar-q3",
+          "type": "number",
+          "prompt": "Bills due between the 1st and the 14th: rent $1,100, internet $60, phone $45. How much has to come from your first paycheck?",
+          "answer": 1205,
+          "unit": "$",
+          "explain": "$1,100 + $60 + $45 = $1,205."
+        },
+        {
+          "id": "sb-bill-calendar-q4",
+          "type": "number",
+          "prompt": "Your first paycheck is $1,250. How much is left after those bills?",
+          "answer": 45,
+          "unit": "$",
+          "explain": "$1,250 − $1,205 = $45."
+        },
+        {
+          "id": "sb-bill-calendar-q5",
+          "type": "multiple_choice",
+          "prompt": "That leaves $45 for two weeks of food. What helps?",
+          "choices": [
+            "Ask to move a due date later in the month",
+            "Skip the internet bill",
+            "Pay rent late"
+          ],
+          "answer": 0,
+          "explain": "Moving the phone bill to the 20th puts it on the second paycheck."
+        },
+        {
+          "id": "sb-bill-calendar-q6",
+          "type": "true_false",
+          "prompt": "Many companies will move your due date if you ask.",
+          "answer": true,
+          "explain": "It’s usually a two-minute call or a setting in your account."
+        }
+      ]
+    },
+    {
+      "id": "sb-lower-bills",
+      "type": "lesson",
+      "format": "call",
+      "title": "Lower Your Bills",
+      "summary": "Promotions end. Prices are negotiable.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sb-lower-bills-q1",
+          "type": "multiple_choice",
+          "context": "A [[promotional rate]] is a low price for new customers that jumps after a set time, often 12 months.",
+          "prompt": "Your internet was $40 a month for the first year and is now $70. What happened?",
+          "choices": [
+            "The promotional rate ended",
+            "You used more internet",
+            "It’s a late fee"
+          ],
+          "answer": 0,
+          "explain": "Introductory prices quietly expire."
+        },
+        {
+          "id": "sb-lower-bills-q2",
+          "type": "number",
+          "prompt": "How much more is that per year?",
+          "answer": 360,
+          "unit": "$",
+          "explain": "($70 − $40) × 12 = $360."
+        },
+        {
+          "id": "sb-lower-bills-q3",
+          "type": "multiple_choice",
+          "prompt": "What’s the best first move?",
+          "choices": [
+            "Call and ask for a better rate, mentioning other offers",
+            "Pay it and say nothing",
+            "Stop paying"
+          ],
+          "answer": 0,
+          "explain": "Companies often have a retention offer for customers who ask."
+        },
+        {
+          "id": "sb-lower-bills-q4",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Your current plan",
+              "subtitle": "Lakeside Internet",
+              "lines": [
+                {
+                  "id": "price",
+                  "label": "Monthly price, after promotion",
+                  "amount": 70.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "New provider",
+              "subtitle": "Fiberline",
+              "lines": [
+                {
+                  "id": "price",
+                  "label": "Monthly price",
+                  "amount": 45.0
+                },
+                {
+                  "id": "install",
+                  "label": "Installation, one time",
+                  "amount": 99.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Over one year, which is cheaper?",
+          "choices": [
+            "Switching to Fiberline",
+            "Staying with Lakeside"
+          ],
+          "answer": 0,
+          "explain": "Lakeside: $70 × 12 = $840. Fiberline: $45 × 12 + $99 = $639."
+        },
+        {
+          "id": "sb-lower-bills-q5",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Your current plan",
+              "subtitle": "Lakeside Internet",
+              "lines": [
+                {
+                  "id": "price",
+                  "label": "Monthly price, after promotion",
+                  "amount": 70.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "New provider",
+              "subtitle": "Fiberline",
+              "lines": [
+                {
+                  "id": "price",
+                  "label": "Monthly price",
+                  "amount": 45.0
+                },
+                {
+                  "id": "install",
+                  "label": "Installation, one time",
+                  "amount": 99.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much does switching save in the first year?",
+          "answer": 201,
+          "unit": "$",
+          "explain": "$840 − $639 = $201."
+        },
+        {
+          "id": "sb-lower-bills-q6",
+          "type": "true_false",
+          "prompt": "Phone, internet and insurance prices are often negotiable.",
+          "answer": true,
+          "explain": "Ask once a year. The worst they can say is no."
+        }
+      ]
+    },
+    {
+      "id": "sb-monthly-yearly",
+      "type": "lesson",
+      "title": "Monthly or Yearly?",
+      "summary": "Paying upfront saves money, if you’ll really use it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sb-monthly-yearly-q1",
+          "type": "multiple_choice",
+          "context": "Many subscriptions are cheaper if you pay for a whole year at once.",
+          "prompt": "$12 a month, or $99 for the year. Which is cheaper over a full year?",
+          "choices": [
+            "The yearly plan",
+            "The monthly plan"
+          ],
+          "answer": 0,
+          "explain": "Monthly: $12 × 12 = $144. Yearly: $99."
+        },
+        {
+          "id": "sb-monthly-yearly-q2",
+          "type": "number",
+          "prompt": "How much does the yearly plan save?",
+          "answer": 45,
+          "unit": "$",
+          "explain": "$144 − $99 = $45."
+        },
+        {
+          "id": "sb-monthly-yearly-q3",
+          "type": "multiple_choice",
+          "prompt": "When is the yearly plan a bad idea?",
+          "choices": [
+            "When you’re not sure you’ll use it all year",
+            "When it’s cheaper",
+            "Never"
+          ],
+          "answer": 0,
+          "explain": "A discount on something you stop using isn’t a saving."
+        },
+        {
+          "id": "sb-monthly-yearly-q4",
+          "type": "number",
+          "prompt": "You’d quit after 6 months. What would monthly cost you?",
+          "answer": 72,
+          "unit": "$",
+          "explain": "$12 × 6 = $72."
+        },
+        {
+          "id": "sb-monthly-yearly-q5",
+          "type": "multiple_choice",
+          "prompt": "So for 6 months of use, which was cheaper?",
+          "choices": [
+            "Monthly, at $72",
+            "Yearly, at $99"
+          ],
+          "answer": 0,
+          "explain": "$72 beats $99 if you only use it half the year."
+        },
+        {
+          "id": "sb-monthly-yearly-q6",
+          "type": "true_false",
+          "prompt": "A yearly plan auto-renews too, so set a reminder before it does.",
+          "answer": true,
+          "explain": "Otherwise next year’s $99 arrives on its own."
+        }
+      ]
+    },
+    {
+      "id": "sb-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "sb-trial",
+      "type": "boss",
+      "title": "Den Trial: Subscriptions & Bills",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "sb-trial-q1",
+          "type": "number",
+          "prompt": "Three subscriptions at $11, $15 and $8 a month. What do they cost in a year?",
+          "answer": 408,
+          "unit": "$",
+          "explain": "($11 + $15 + $8) × 12 = $408."
+        },
+        {
+          "id": "sb-trial-q2",
+          "type": "true_false",
+          "prompt": "Deleting an app cancels its subscription.",
+          "answer": false,
+          "explain": "You have to cancel the subscription itself."
+        },
+        {
+          "id": "sb-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "Internet was $45 for a year and is now $75. What ended?",
+          "choices": [
+            "A promotional rate",
+            "A free trial",
+            "Autopay"
+          ],
+          "answer": 0,
+          "explain": "The intro price expired."
+        },
+        {
+          "id": "sb-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "What’s the main risk of autopay?",
+          "choices": [
+            "It can overdraw your account if the balance is low",
+            "It makes bills more expensive",
+            "It cancels your plan"
+          ],
+          "answer": 0,
+          "explain": "Line autopay dates up with payday."
+        }
+      ]
+    }
+  ]
+}

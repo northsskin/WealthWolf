@@ -1,0 +1,40 @@
+[
+  {
+    "id": "everyday-money",
+    "order": 1,
+    "title": "Everyday Money",
+    "description": "Earn it, plan it, bank it, keep it. The money skills you use every single week.",
+    "trial": {
+      "id": "em-section-trial",
+      "title": "Section Trial: Everyday Money",
+      "summary": "Twelve questions from the whole section. Three strikes and you’re out.",
+      "xp": 50,
+      "draw": 12
+    }
+  },
+  {
+    "id": "earning",
+    "order": 2,
+    "title": "Earning",
+    "description": "Paychecks, benefits, raises, side hustles and your own business: how money comes in, and how to bring in more.",
+    "trial": {
+      "id": "earn-section-trial",
+      "title": "Section Trial: Earning",
+      "summary": "Twelve questions from the whole section. Three strikes and you’re out.",
+      "xp": 50,
+      "draw": 12
+    }
+  },
+  {
+    "id": "credit-debt",
+    "order": 3,
+    "title": "Credit & Debt",
+    "description": "Borrowing without getting eaten alive. More units are being written."
+  },
+  {
+    "id": "investing",
+    "order": 4,
+    "title": "Investing",
+    "description": "Make your money work while you sleep. More units are being written."
+  }
+]

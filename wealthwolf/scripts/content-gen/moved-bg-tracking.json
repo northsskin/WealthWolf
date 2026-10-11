@@ -1,0 +1,85 @@
+{
+  "lesson": {
+    "id": "bg-tracking",
+    "type": "lesson",
+    "title": "Track the Leaks",
+    "summary": "Find where the money actually goes.",
+    "xp": 10,
+    "steps": [
+      {
+        "id": "bg-tracking-q1",
+        "type": "multiple_choice",
+        "context": "A budget is the plan. [[Tracking]] is checking what you actually spent, so you can see whether you stuck to it.",
+        "prompt": "Why track your spending?",
+        "choices": [
+          "To get a bigger paycheck",
+          "To see where your money really goes",
+          "Because banks require it"
+        ],
+        "answer": 1,
+        "explain": "Most people guess low. Tracking shows the truth."
+      },
+      {
+        "id": "bg-tracking-q2",
+        "type": "number",
+        "context": "Small habits add up. A $3 snack every workday, about 20 days a month, costs $3 × 20 = $60 a month.",
+        "prompt": "A coffee costs $5. You buy one every workday, about 20 days a month. What's that per month?",
+        "answer": 100,
+        "explain": "$5 × 20 = $100 a month.",
+        "unit": "$"
+      },
+      {
+        "id": "bg-tracking-q3",
+        "type": "number",
+        "prompt": "At $100 a month, what does that coffee habit cost over a year (12 months)?",
+        "answer": 1200,
+        "explain": "$100 × 12 = $1,200. Small habit, big number.",
+        "unit": "$"
+      },
+      {
+        "id": "bg-tracking-q4",
+        "type": "multiple_choice",
+        "context": "A [[budget leak]] is money that slips away on things you barely notice or don't really use.",
+        "prompt": "Which of these is most likely a budget leak?",
+        "choices": [
+          "Your rent",
+          "A subscription you forgot you're paying for",
+          "Your weekly groceries"
+        ],
+        "answer": 1,
+        "explain": "Paying every month for something you don't use. Cancel it."
+      },
+      {
+        "id": "bg-tracking-q5",
+        "type": "true_false",
+        "prompt": "Small purchases don't matter as long as each one is cheap.",
+        "answer": false,
+        "explain": "Ten small buys a week is one big buy a month."
+      },
+      {
+        "id": "bg-tracking-q6",
+        "type": "multiple_choice",
+        "prompt": "Tracking shows you spent $300 on takeout last month. What's the smart move?",
+        "choices": [
+          "Stop tracking so you don't feel bad",
+          "Ignore it",
+          "Set a takeout limit in next month's budget"
+        ],
+        "answer": 2,
+        "explain": "Tracking finds the leak. The budget plugs it."
+      }
+    ]
+  },
+  "terms": {
+    "tracking": {
+      "term": "Tracking",
+      "definition": "Writing down what you actually spend, so you can compare it with your budget.",
+      "example": "Checking your bank app at the end of each week and noting what went where."
+    },
+    "budget-leak": {
+      "term": "Budget leak",
+      "definition": "Money that slips away on things you barely notice or don't really use.",
+      "example": "A subscription you forgot about, or daily snacks that add up."
+    }
+  }
+}

@@ -1,0 +1,939 @@
+{
+  "id": "payments",
+  "section": "everyday-money",
+  "order": 9,
+  "title": "Cash, Cards & Payment Apps",
+  "description": "Cash, debit, credit and payment apps: which to use, and how not to get burned.",
+  "wolfLine": "Money moves fast now. Make sure it’s going where you meant.",
+  "terms": {
+    "peer-to-peer-payment": {
+      "term": "Peer-to-peer payment",
+      "definition": "Sending money straight from one person to another with an app like Venmo, Zelle or Cash App.",
+      "example": "Paying a friend back $12 for pizza from your phone."
+    },
+    "sales-tax": {
+      "term": "Sales tax",
+      "definition": "A tax added to the price at the register. In most US states the shelf price doesn’t include it.",
+      "example": "A $40 jacket with 7% sales tax costs $42.80."
+    },
+    "foreign-transaction-fee": {
+      "term": "Foreign transaction fee",
+      "definition": "An extra charge, often 3%, when you pay in another currency or with a store based abroad.",
+      "example": "Spend $500 on a trip and a 3% fee adds $15."
+    }
+  },
+  "lessons": [
+    {
+      "id": "pm-ways-to-pay",
+      "type": "lesson",
+      "title": "Ways to Pay",
+      "summary": "Cash, debit, credit and apps all move money. Differently.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pm-ways-to-pay-q1",
+          "type": "info",
+          "title": "Four ways to pay",
+          "body": "Cash, debit cards, credit cards and payment apps all move money, but they work differently: whose money it is, how fast it moves, and what protection you get if something goes wrong."
+        },
+        {
+          "id": "pm-ways-to-pay-q2",
+          "type": "multiple_choice",
+          "context": "A [[credit card]] lets you buy now and pay later. The money is borrowed from the card company, and you get a bill each month.",
+          "prompt": "You pay $50 with a credit card. Whose money paid the store?",
+          "choices": [
+            "The card company’s, and now you owe it back",
+            "Yours, straight from checking",
+            "Nobody’s"
+          ],
+          "answer": 0,
+          "explain": "A credit card is a loan you pay back when the bill comes."
+        },
+        {
+          "id": "pm-ways-to-pay-q3",
+          "type": "sort",
+          "prompt": "Whose money is it?",
+          "buckets": [
+            "Your money, right now",
+            "Borrowed, paid back later"
+          ],
+          "items": [
+            [
+              "Cash",
+              0
+            ],
+            [
+              "Debit card",
+              0
+            ],
+            [
+              "Credit card",
+              1
+            ],
+            [
+              "Payment app linked to your bank account",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "pm-ways-to-pay-q4",
+          "type": "true_false",
+          "prompt": "Paying with a credit card always costs the same as paying with a debit card.",
+          "answer": false,
+          "explain": "Not if you leave part of the bill unpaid. Then you pay interest on top."
+        },
+        {
+          "id": "pm-ways-to-pay-q5",
+          "type": "multiple_choice",
+          "prompt": "Which way of paying leaves no record unless you write it down?",
+          "choices": [
+            "Cash",
+            "Debit card",
+            "Credit card"
+          ],
+          "answer": 0,
+          "explain": "Cash leaves no trail."
+        },
+        {
+          "id": "pm-ways-to-pay-q6",
+          "type": "match",
+          "prompt": "Match each way to pay.",
+          "pairs": [
+            [
+              "Cash",
+              "Paper money, gone when it’s spent"
+            ],
+            [
+              "Debit card",
+              "Spends from your checking account"
+            ],
+            [
+              "Credit card",
+              "Borrowed money, billed monthly"
+            ],
+            [
+              "Payment app",
+              "Sends money between people from your phone"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pm-debit-vs-credit",
+      "type": "lesson",
+      "format": "call",
+      "title": "Debit vs. Credit",
+      "summary": "Same plastic, very different rules.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pm-debit-vs-credit-q1",
+          "type": "multiple_choice",
+          "prompt": "A thief spends $500 with your stolen card. With which card is your own money missing while the bank investigates?",
+          "choices": [
+            "Debit",
+            "Credit"
+          ],
+          "answer": 0,
+          "explain": "Debit fraud takes your real cash until it’s sorted out. Credit card fraud is the card company’s money."
+        },
+        {
+          "id": "pm-debit-vs-credit-q2",
+          "type": "true_false",
+          "prompt": "If you pay your credit card bill in full every month, you pay no interest.",
+          "answer": true,
+          "explain": "Pay in full, and the borrowing is free."
+        },
+        {
+          "id": "pm-debit-vs-credit-q3",
+          "type": "number",
+          "context": "If you don’t pay the bill in full, the card charges interest on what’s left. Rates around 24% a year are common.",
+          "prompt": "You leave $500 unpaid on a card charging about 24% a year. Roughly how much interest is that over a year?",
+          "answer": 120,
+          "unit": "$",
+          "explain": "$500 × 0.24 = $120."
+        },
+        {
+          "id": "pm-debit-vs-credit-q4",
+          "type": "multiple_choice",
+          "prompt": "Which habit is safest for a beginner?",
+          "choices": [
+            "Only put on credit what you could pay with cash today, then pay in full",
+            "Use credit for things you can’t afford yet",
+            "Pay just the minimum each month"
+          ],
+          "answer": 0,
+          "explain": "Treat it like a debit card that sends one bill."
+        },
+        {
+          "id": "pm-debit-vs-credit-q5",
+          "type": "multiple_choice",
+          "prompt": "Which card builds a credit history?",
+          "choices": [
+            "A credit card",
+            "A debit card"
+          ],
+          "answer": 0,
+          "explain": "Credit history comes from borrowing and paying back on time. More on that in the Credit & Debt section."
+        },
+        {
+          "id": "pm-debit-vs-credit-q6",
+          "type": "fill_blank",
+          "prompt": "With a ___ card, the money comes straight out of your checking account.",
+          "choices": [
+            "debit",
+            "credit",
+            "gift"
+          ],
+          "answer": 0,
+          "explain": "Debit means your own money."
+        }
+      ]
+    },
+    {
+      "id": "pm-apps",
+      "type": "lesson",
+      "title": "Payment Apps",
+      "summary": "Instant and easy. Also instant and final.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pm-apps-q1",
+          "type": "multiple_choice",
+          "context": "A [[peer-to-peer payment]] app (like Venmo, Zelle or Cash App) sends money from one person to another in seconds.",
+          "prompt": "What’s a payment app best for?",
+          "choices": [
+            "Paying back a friend you know",
+            "Buying from a stranger online",
+            "Paying someone who says you won a prize"
+          ],
+          "answer": 0,
+          "explain": "Use it with people you know and trust."
+        },
+        {
+          "id": "pm-apps-q2",
+          "type": "true_false",
+          "prompt": "If you send money to the wrong person on a payment app, you can always get it back.",
+          "answer": false,
+          "explain": "Payments are often instant and final. Check the name and number before you hit send."
+        },
+        {
+          "id": "pm-apps-q3",
+          "type": "multiple_choice",
+          "prompt": "Before sending $60 to a friend, what should you check?",
+          "choices": [
+            "Their exact name or number, and the amount",
+            "Their favorite color",
+            "Nothing"
+          ],
+          "answer": 0,
+          "explain": "One wrong digit sends your money to a stranger."
+        },
+        {
+          "id": "pm-apps-q4",
+          "type": "multiple_choice",
+          "prompt": "A stranger “accidentally” sends you $200 and asks you to send it back. What’s going on?",
+          "choices": [
+            "Probably a scam: their $200 may vanish later, and yours won’t come back",
+            "An honest mistake",
+            "A refund you were owed"
+          ],
+          "answer": 0,
+          "explain": "Tell them to ask their bank to reverse it. Don’t send your own money."
+        },
+        {
+          "id": "pm-apps-q5",
+          "type": "number",
+          "prompt": "An instant transfer to your bank costs 1.75%. How much is that on $400?",
+          "answer": 7,
+          "unit": "$",
+          "explain": "$400 × 0.0175 = $7."
+        },
+        {
+          "id": "pm-apps-q6",
+          "type": "true_false",
+          "prompt": "Money sitting in a payment app balance may not have FDIC insurance.",
+          "answer": true,
+          "explain": "Many app balances aren’t bank deposits. Move larger amounts to your insured account."
+        }
+      ]
+    },
+    {
+      "id": "pm-tips-tax",
+      "type": "lesson",
+      "title": "Tips & Sales Tax",
+      "summary": "The price on the tag isn’t the price you pay.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pm-tips-tax-q1",
+          "type": "number",
+          "context": "[[Sales tax]] is added at the register in most US states. The price on the tag usually doesn’t include it.",
+          "prompt": "A $40 jacket with 7% sales tax. What do you pay?",
+          "answer": 42.8,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$40 × 0.07 = $2.80 tax. $40 + $2.80 = $42.80."
+        },
+        {
+          "id": "pm-tips-tax-q2",
+          "type": "number",
+          "prompt": "8.25% sales tax on a $200 purchase. How much is the tax?",
+          "answer": 16.5,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$200 × 0.0825 = $16.50."
+        },
+        {
+          "id": "pm-tips-tax-q3",
+          "type": "multiple_choice",
+          "prompt": "Where do US prices usually include sales tax already?",
+          "choices": [
+            "Hardly anywhere, so add it in your head",
+            "Everywhere",
+            "Only online"
+          ],
+          "answer": 0,
+          "explain": "Expect the register total to be a bit higher than the tag."
+        },
+        {
+          "id": "pm-tips-tax-q4",
+          "type": "number",
+          "context": "To work out a tip, multiply. 20% is the same as × 0.20.",
+          "prompt": "What’s a 20% tip on a $45 meal?",
+          "answer": 9,
+          "unit": "$",
+          "explain": "$45 × 0.20 = $9."
+        },
+        {
+          "id": "pm-tips-tax-q5",
+          "type": "number",
+          "prompt": "What’s a 15% tip on $60?",
+          "answer": 9,
+          "unit": "$",
+          "explain": "$60 × 0.15 = $9."
+        },
+        {
+          "id": "pm-tips-tax-q6",
+          "type": "true_false",
+          "prompt": "A quick way to find 20%: find 10% by moving the decimal point one place left, then double it.",
+          "answer": true,
+          "explain": "10% of $45 is $4.50. Double it: $9."
+        }
+      ]
+    },
+    {
+      "id": "pm-split",
+      "type": "lesson",
+      "format": "document",
+      "title": "Splitting the Bill",
+      "summary": "Dinner for two: tax, tip and who owes what.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pm-split-q1",
+          "type": "number",
+          "doc": {
+            "kind": "receipt",
+            "title": "Luigi’s Trattoria",
+            "subtitle": "Table 6 · Fri 8:05 PM",
+            "lines": [
+              {
+                "id": "pizza",
+                "label": "Margherita pizza",
+                "amount": 16.0
+              },
+              {
+                "id": "lasagna",
+                "label": "Lasagna",
+                "amount": 19.5
+              },
+              {
+                "id": "salad",
+                "label": "Caesar salad",
+                "amount": 12.0
+              },
+              {
+                "id": "tiramisu",
+                "label": "Tiramisu",
+                "amount": 9.0
+              },
+              {
+                "id": "drinks",
+                "label": "Lemonade",
+                "qty": 4,
+                "amount": 18.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Subtotal",
+                "amount": 74.5
+              },
+              {
+                "label": "Sales tax, 8%",
+                "amount": 5.96
+              },
+              {
+                "label": "Total",
+                "amount": 80.46,
+                "strong": true
+              }
+            ],
+            "note": "Tip not included."
+          },
+          "prompt": "What’s the total before tip?",
+          "answer": 80.46,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "It’s printed at the bottom: $80.46."
+        },
+        {
+          "id": "pm-split-q2",
+          "type": "number",
+          "context": "Tip is usually worked out on the total before tax, often 18–20%.",
+          "doc": {
+            "kind": "receipt",
+            "title": "Luigi’s Trattoria",
+            "subtitle": "Table 6 · Fri 8:05 PM",
+            "lines": [
+              {
+                "id": "pizza",
+                "label": "Margherita pizza",
+                "amount": 16.0
+              },
+              {
+                "id": "lasagna",
+                "label": "Lasagna",
+                "amount": 19.5
+              },
+              {
+                "id": "salad",
+                "label": "Caesar salad",
+                "amount": 12.0
+              },
+              {
+                "id": "tiramisu",
+                "label": "Tiramisu",
+                "amount": 9.0
+              },
+              {
+                "id": "drinks",
+                "label": "Lemonade",
+                "qty": 4,
+                "amount": 18.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Subtotal",
+                "amount": 74.5
+              },
+              {
+                "label": "Sales tax, 8%",
+                "amount": 5.96
+              },
+              {
+                "label": "Total",
+                "amount": 80.46,
+                "strong": true
+              }
+            ],
+            "note": "Tip not included."
+          },
+          "prompt": "A 20% tip on the $74.50 subtotal?",
+          "answer": 14.9,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$74.50 × 0.20 = $14.90."
+        },
+        {
+          "id": "pm-split-q3",
+          "type": "number",
+          "doc": {
+            "kind": "receipt",
+            "title": "Luigi’s Trattoria",
+            "subtitle": "Table 6 · Fri 8:05 PM",
+            "lines": [
+              {
+                "id": "pizza",
+                "label": "Margherita pizza",
+                "amount": 16.0
+              },
+              {
+                "id": "lasagna",
+                "label": "Lasagna",
+                "amount": 19.5
+              },
+              {
+                "id": "salad",
+                "label": "Caesar salad",
+                "amount": 12.0
+              },
+              {
+                "id": "tiramisu",
+                "label": "Tiramisu",
+                "amount": 9.0
+              },
+              {
+                "id": "drinks",
+                "label": "Lemonade",
+                "qty": 4,
+                "amount": 18.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Subtotal",
+                "amount": 74.5
+              },
+              {
+                "label": "Sales tax, 8%",
+                "amount": 5.96
+              },
+              {
+                "label": "Total",
+                "amount": 80.46,
+                "strong": true
+              }
+            ],
+            "note": "Tip not included."
+          },
+          "prompt": "You split the total plus tip evenly between 2 friends. What does each pay?",
+          "answer": 47.68,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$80.46 + $14.90 = $95.36. $95.36 ÷ 2 = $47.68."
+        },
+        {
+          "id": "pm-split-q4",
+          "type": "multiple_choice",
+          "doc": {
+            "kind": "receipt",
+            "title": "Luigi’s Trattoria",
+            "subtitle": "Table 6 · Fri 8:05 PM",
+            "lines": [
+              {
+                "id": "pizza",
+                "label": "Margherita pizza",
+                "amount": 16.0
+              },
+              {
+                "id": "lasagna",
+                "label": "Lasagna",
+                "amount": 19.5
+              },
+              {
+                "id": "salad",
+                "label": "Caesar salad",
+                "amount": 12.0
+              },
+              {
+                "id": "tiramisu",
+                "label": "Tiramisu",
+                "amount": 9.0
+              },
+              {
+                "id": "drinks",
+                "label": "Lemonade",
+                "qty": 4,
+                "amount": 18.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Subtotal",
+                "amount": 74.5
+              },
+              {
+                "label": "Sales tax, 8%",
+                "amount": 5.96
+              },
+              {
+                "label": "Total",
+                "amount": 80.46,
+                "strong": true
+              }
+            ],
+            "note": "Tip not included."
+          },
+          "prompt": "You had the salad and one lemonade. Your friend had everything else. What’s the fairest split?",
+          "choices": [
+            "Each pays for what they ordered",
+            "Split it 50/50",
+            "Whoever picked the restaurant pays"
+          ],
+          "answer": 0,
+          "explain": "Even splits are easy, but item-by-item is fair when orders are lopsided."
+        },
+        {
+          "id": "pm-split-q5",
+          "type": "number",
+          "doc": {
+            "kind": "receipt",
+            "title": "Luigi’s Trattoria",
+            "subtitle": "Table 6 · Fri 8:05 PM",
+            "lines": [
+              {
+                "id": "pizza",
+                "label": "Margherita pizza",
+                "amount": 16.0
+              },
+              {
+                "id": "lasagna",
+                "label": "Lasagna",
+                "amount": 19.5
+              },
+              {
+                "id": "salad",
+                "label": "Caesar salad",
+                "amount": 12.0
+              },
+              {
+                "id": "tiramisu",
+                "label": "Tiramisu",
+                "amount": 9.0
+              },
+              {
+                "id": "drinks",
+                "label": "Lemonade",
+                "qty": 4,
+                "amount": 18.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Subtotal",
+                "amount": 74.5
+              },
+              {
+                "label": "Sales tax, 8%",
+                "amount": 5.96
+              },
+              {
+                "label": "Total",
+                "amount": 80.46,
+                "strong": true
+              }
+            ],
+            "note": "Tip not included."
+          },
+          "prompt": "Your items: the salad and one $4.50 lemonade. What’s your subtotal?",
+          "answer": 16.5,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$12.00 + $4.50 = $16.50."
+        },
+        {
+          "id": "pm-split-q6",
+          "type": "true_false",
+          "prompt": "When you split by item, tax and tip should be shared in the same proportion.",
+          "answer": true,
+          "explain": "You ordered about 22% of the food, so you cover about 22% of the tax and tip."
+        }
+      ]
+    },
+    {
+      "id": "pm-cash",
+      "type": "lesson",
+      "title": "Cash Still Counts",
+      "summary": "Why paper money still has a place.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pm-cash-q1",
+          "type": "multiple_choice",
+          "context": "Paying with cash feels different. Handing over real bills makes spending more noticeable, so many people spend less.",
+          "prompt": "Why do some people budget with cash?",
+          "choices": [
+            "It’s harder to overspend money you can see",
+            "Cash earns interest",
+            "Every store gives a cash discount"
+          ],
+          "answer": 0,
+          "explain": "Watching the bills leave your hand makes spending feel real."
+        },
+        {
+          "id": "pm-cash-q2",
+          "type": "true_false",
+          "prompt": "Some stores and gas stations charge less if you pay with cash.",
+          "answer": true,
+          "explain": "Card fees cost them money, so some pass the saving on."
+        },
+        {
+          "id": "pm-cash-q3",
+          "type": "multiple_choice",
+          "context": "At many stores you can ask for cash back at the register when you pay with debit, usually with no fee.",
+          "prompt": "You need $40 in cash. Cheapest way?",
+          "choices": [
+            "Cash back at the grocery register with your debit card",
+            "An out-of-network ATM with two fees",
+            "Borrowing from a payday lender"
+          ],
+          "answer": 0,
+          "explain": "Many stores give cash back with a debit purchase for free."
+        },
+        {
+          "id": "pm-cash-q4",
+          "type": "number",
+          "prompt": "Your weekly cash budget is $80. You’ve spent $23, $18 and $27. How much is left?",
+          "answer": 12,
+          "unit": "$",
+          "explain": "$80 − $23 − $18 − $27 = $12."
+        },
+        {
+          "id": "pm-cash-q5",
+          "type": "multiple_choice",
+          "prompt": "What’s the downside of cash?",
+          "choices": [
+            "If it’s lost or stolen, it’s gone",
+            "It’s too slow",
+            "It’s illegal in some stores"
+          ],
+          "answer": 0,
+          "explain": "No fraud protection, no getting it back."
+        },
+        {
+          "id": "pm-cash-q6",
+          "type": "order",
+          "prompt": "A cash week: put it in order.",
+          "items": [
+            "Decide the week’s cash amount",
+            "Take it out once, fee-free",
+            "Spend only what’s in your wallet",
+            "Note what’s left at the end of the week"
+          ],
+          "explain": "Plan, withdraw, spend, review."
+        }
+      ]
+    },
+    {
+      "id": "pm-scam",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Request or Scam?",
+      "summary": "Payment apps are a scammer’s favorite tool. Spot the setup.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pm-scam-q1",
+          "type": "spot",
+          "context": "Scammers love payment apps because money moves instantly and is hard to get back.",
+          "doc": {
+            "kind": "statement",
+            "title": "QuickPay",
+            "subtitle": "Activity and requests",
+            "lines": [
+              {
+                "id": "jamie",
+                "date": "Nov 3",
+                "label": "From Jamie: pizza",
+                "amount": 12.0
+              },
+              {
+                "id": "prize",
+                "date": "Nov 4",
+                "label": "Request from “Prize Center”: release fee",
+                "amount": -49.99
+              },
+              {
+                "id": "mom",
+                "date": "Nov 5",
+                "label": "To Mom: phone bill",
+                "amount": -35.0
+              },
+              {
+                "id": "chris",
+                "date": "Nov 6",
+                "label": "From Chris: concert tickets",
+                "amount": 40.0
+              }
+            ]
+          },
+          "prompt": "Tap the request you should decline.",
+          "answer": "prize",
+          "explain": "A real prize never charges a fee to “release” it."
+        },
+        {
+          "id": "pm-scam-q2",
+          "type": "multiple_choice",
+          "prompt": "Why is a “release fee” for a prize a red flag?",
+          "choices": [
+            "Real prizes don’t make you pay to collect them",
+            "Fees are normal for prizes",
+            "It isn’t a red flag"
+          ],
+          "answer": 0,
+          "explain": "If you have to pay to win, you didn’t win."
+        },
+        {
+          "id": "pm-scam-q3",
+          "type": "true_false",
+          "prompt": "Payment app scammers often pretend to be your bank, a store, or someone you know.",
+          "answer": true,
+          "explain": "Check by calling the real person or company yourself."
+        },
+        {
+          "id": "pm-scam-q4",
+          "type": "multiple_choice",
+          "prompt": "Someone selling concert tickets online wants payment through an app. What’s safer?",
+          "choices": [
+            "Buy through a platform with buyer protection, or pay by credit card",
+            "Pay first, they seem nice",
+            "Send extra to be sure"
+          ],
+          "answer": 0,
+          "explain": "Payment apps rarely protect purchases from strangers."
+        },
+        {
+          "id": "pm-scam-q5",
+          "type": "order",
+          "prompt": "You think you’ve been scammed on an app. Put it in order.",
+          "items": [
+            "Report it in the app",
+            "Call your bank",
+            "Change your password",
+            "Report it to the FTC"
+          ],
+          "explain": "Fast reports give you the best chance of getting money back."
+        },
+        {
+          "id": "pm-scam-q6",
+          "type": "multiple_choice",
+          "prompt": "Who should you send money to with a payment app?",
+          "choices": [
+            "People you know and trust",
+            "Anyone who asks politely",
+            "Sellers you just met online"
+          ],
+          "answer": 0,
+          "explain": "Treat it like handing over cash."
+        }
+      ]
+    },
+    {
+      "id": "pm-abroad",
+      "type": "lesson",
+      "title": "Paying Online & Abroad",
+      "summary": "Hidden fees on trips and risky checkouts.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pm-abroad-q1",
+          "type": "number",
+          "context": "A [[foreign transaction fee]] is an extra charge, often 3%, when you pay in another currency or with a store based abroad.",
+          "prompt": "You spend $500 abroad on a card with a 3% foreign transaction fee. How much is the fee?",
+          "answer": 15,
+          "unit": "$",
+          "explain": "$500 × 0.03 = $15."
+        },
+        {
+          "id": "pm-abroad-q2",
+          "type": "multiple_choice",
+          "prompt": "A card machine abroad asks: pay in dollars or local currency?",
+          "choices": [
+            "Local currency, to avoid the machine’s worse exchange rate",
+            "Dollars, always",
+            "It makes no difference"
+          ],
+          "answer": 0,
+          "explain": "Paying in dollars lets the shop pick the exchange rate, and it’s rarely a good one."
+        },
+        {
+          "id": "pm-abroad-q3",
+          "type": "multiple_choice",
+          "prompt": "Shopping online, what makes a site safer?",
+          "choices": [
+            "A store you know, a secure checkout, and paying by credit card",
+            "A pop-up saying you won",
+            "Everything 90% off"
+          ],
+          "answer": 0,
+          "explain": "Too-good deals and pop-ups are classic warning signs."
+        },
+        {
+          "id": "pm-abroad-q4",
+          "type": "true_false",
+          "prompt": "Saving your card on lots of small websites is low risk.",
+          "answer": false,
+          "explain": "Every site that stores your card is another place it can leak."
+        },
+        {
+          "id": "pm-abroad-q5",
+          "type": "number",
+          "prompt": "A trip costs $1,200 on a card with a 3% foreign transaction fee. What’s the fee?",
+          "answer": 36,
+          "unit": "$",
+          "explain": "$1,200 × 0.03 = $36."
+        },
+        {
+          "id": "pm-abroad-q6",
+          "type": "multiple_choice",
+          "prompt": "Which card is best for travel?",
+          "choices": [
+            "One with no foreign transaction fee",
+            "The one with the nicest design",
+            "A debit card with ATM fees"
+          ],
+          "answer": 0,
+          "explain": "Many cards charge 0%. Check before you go."
+        }
+      ]
+    },
+    {
+      "id": "pm-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "pm-trial",
+      "type": "boss",
+      "title": "Den Trial: Ways to Pay",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "pm-trial-q1",
+          "type": "number",
+          "prompt": "What’s a 20% tip on a $35 meal?",
+          "answer": 7,
+          "unit": "$",
+          "explain": "$35 × 0.20 = $7."
+        },
+        {
+          "id": "pm-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "Your card is stolen and used. Which card keeps your own cash safe while the bank investigates?",
+          "choices": [
+            "Credit",
+            "Debit"
+          ],
+          "answer": 0,
+          "explain": "With credit, it’s the card company’s money on the line."
+        },
+        {
+          "id": "pm-trial-q3",
+          "type": "true_false",
+          "prompt": "Payments sent on a peer-to-peer app are easy to reverse.",
+          "answer": false,
+          "explain": "They’re usually instant and final."
+        },
+        {
+          "id": "pm-trial-q4",
+          "type": "number",
+          "prompt": "6% sales tax on a $150 purchase. How much is the tax?",
+          "answer": 9,
+          "unit": "$",
+          "explain": "$150 × 0.06 = $9."
+        }
+      ]
+    }
+  ]
+}

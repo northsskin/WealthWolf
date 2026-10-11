@@ -1,0 +1,935 @@
+{
+  "id": "smart-spending",
+  "section": "everyday-money",
+  "order": 7,
+  "title": "Smart Spending",
+  "description": "Get more for every dollar: unit prices, sale tricks, impulse buys.",
+  "wolfLine": "A sale is only a deal if you were going to buy it anyway.",
+  "terms": {
+    "unit-price": {
+      "term": "Unit price",
+      "definition": "The price for one unit (an ounce, a pound, a roll), so you can compare packs of different sizes.",
+      "example": "A 24 oz jar for $4.80 is $0.20 an ounce."
+    },
+    "cost-per-use": {
+      "term": "Cost per use",
+      "definition": "The price divided by how many times you’ll use something.",
+      "example": "$120 boots worn 300 times cost $0.40 a wear."
+    },
+    "anchor-price": {
+      "term": "Anchor price",
+      "definition": "A big “was” price shown next to a sale price, so the sale price feels like a steal.",
+      "example": "“Was $200, now $99!” The $200 is the anchor."
+    },
+    "impulse-buy": {
+      "term": "Impulse buy",
+      "definition": "Something you buy on the spot, unplanned, because it grabbed you in the moment.",
+      "example": "Candy at the checkout that wasn’t on your list."
+    },
+    "opportunity-cost": {
+      "term": "Opportunity cost",
+      "definition": "What you give up when you choose one thing over another.",
+      "example": "Spend $60 on a game, and that $60 can’t go into savings."
+    },
+    "refurbished": {
+      "term": "Refurbished",
+      "definition": "Returned or used, then checked and repaired by the seller, and sold again for less, often with a warranty.",
+      "example": "A refurbished laptop for $780 instead of $1,100 new."
+    }
+  },
+  "lessons": [
+    {
+      "id": "ss-unit-price",
+      "type": "lesson",
+      "format": "call",
+      "title": "Unit Prices",
+      "summary": "Compare packs of different sizes the right way.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ss-unit-price-q1",
+          "type": "multiple_choice",
+          "context": "The [[unit price]] is the price for one unit (an ounce, a pound, a roll), so you can compare packs of different sizes.",
+          "prompt": "A 10 oz bag of rice costs $2.00. What’s the unit price?",
+          "choices": [
+            "$0.20 an ounce",
+            "$2.00 an ounce",
+            "$10 an ounce"
+          ],
+          "answer": 0,
+          "explain": "$2.00 ÷ 10 = $0.20 an ounce."
+        },
+        {
+          "id": "ss-unit-price-q2",
+          "type": "number",
+          "prompt": "A 24 oz jar of peanut butter costs $4.80. What’s the price per ounce?",
+          "answer": 0.2,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$4.80 ÷ 24 = $0.20 an ounce."
+        },
+        {
+          "id": "ss-unit-price-q3",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "receipt",
+              "title": "Small pack",
+              "subtitle": "Shelf price",
+              "lines": [
+                {
+                  "id": "rolls",
+                  "label": "Paper towels, 12 rolls",
+                  "amount": 9.0
+                }
+              ]
+            },
+            {
+              "kind": "receipt",
+              "title": "Big pack",
+              "subtitle": "Shelf price",
+              "lines": [
+                {
+                  "id": "rolls",
+                  "label": "Paper towels, 30 rolls",
+                  "amount": 19.5
+                }
+              ]
+            }
+          ],
+          "prompt": "Which pack is cheaper per roll?",
+          "choices": [
+            "The 30-roll pack",
+            "The 12-roll pack"
+          ],
+          "answer": 0,
+          "explain": "12 rolls: $9.00 ÷ 12 = $0.75 a roll. 30 rolls: $19.50 ÷ 30 = $0.65 a roll."
+        },
+        {
+          "id": "ss-unit-price-q4",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "receipt",
+              "title": "Small pack",
+              "subtitle": "Shelf price",
+              "lines": [
+                {
+                  "id": "rolls",
+                  "label": "Paper towels, 12 rolls",
+                  "amount": 9.0
+                }
+              ]
+            },
+            {
+              "kind": "receipt",
+              "title": "Big pack",
+              "subtitle": "Shelf price",
+              "lines": [
+                {
+                  "id": "rolls",
+                  "label": "Paper towels, 30 rolls",
+                  "amount": 19.5
+                }
+              ]
+            }
+          ],
+          "prompt": "What’s the big pack’s price per roll?",
+          "answer": 0.65,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$19.50 ÷ 30 = $0.65."
+        },
+        {
+          "id": "ss-unit-price-q5",
+          "type": "true_false",
+          "prompt": "The bigger pack is always the better deal.",
+          "answer": false,
+          "explain": "Usually, not always. Check the unit price, and only buy big if you’ll use it before it goes bad."
+        },
+        {
+          "id": "ss-unit-price-q6",
+          "type": "multiple_choice",
+          "prompt": "When is the bigger pack a bad deal even though it’s cheaper per unit?",
+          "choices": [
+            "When half of it goes bad before you use it",
+            "When it’s on the bottom shelf",
+            "Never"
+          ],
+          "answer": 0,
+          "explain": "Food you throw away has a unit price of “all of it.”"
+        }
+      ]
+    },
+    {
+      "id": "ss-cost-per-use",
+      "type": "lesson",
+      "title": "Cost per Use",
+      "summary": "Why the pricier thing is sometimes the cheaper one.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ss-cost-per-use-q1",
+          "type": "multiple_choice",
+          "context": "[[Cost per use]] is the price divided by how many times you’ll use something. A cheap thing used once can cost more per use than a pricey thing used every day.",
+          "prompt": "What does cost per use tell you?",
+          "choices": [
+            "How much each use really costs",
+            "The sale price",
+            "The tax on an item"
+          ],
+          "answer": 0,
+          "explain": "It spreads the price over every time you use the thing."
+        },
+        {
+          "id": "ss-cost-per-use-q2",
+          "type": "number",
+          "prompt": "Boots cost $120 and you’ll wear them about 300 times. What’s the cost per wear?",
+          "answer": 0.4,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$120 ÷ 300 = $0.40."
+        },
+        {
+          "id": "ss-cost-per-use-q3",
+          "type": "number",
+          "prompt": "Cheaper boots cost $45 but fall apart after about 50 wears. Cost per wear?",
+          "answer": 0.9,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$45 ÷ 50 = $0.90."
+        },
+        {
+          "id": "ss-cost-per-use-q4",
+          "type": "multiple_choice",
+          "prompt": "Which boots are the better buy?",
+          "choices": [
+            "The $120 pair",
+            "The $45 pair"
+          ],
+          "answer": 0,
+          "explain": "$0.40 a wear beats $0.90 a wear."
+        },
+        {
+          "id": "ss-cost-per-use-q5",
+          "type": "number",
+          "prompt": "A $60 outfit you’ll wear twice. Cost per wear?",
+          "answer": 30,
+          "unit": "$",
+          "explain": "$60 ÷ 2 = $30 a wear."
+        },
+        {
+          "id": "ss-cost-per-use-q6",
+          "type": "number",
+          "prompt": "A gym membership is $50 a month and you go 4 times a month. Cost per visit?",
+          "answer": 12.5,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$50 ÷ 4 = $12.50 a visit."
+        },
+        {
+          "id": "ss-cost-per-use-q7",
+          "type": "true_false",
+          "prompt": "Cost per use only works for clothes.",
+          "answer": false,
+          "explain": "Phones, tools, memberships: anything you use again and again."
+        }
+      ]
+    },
+    {
+      "id": "ss-sale-tricks",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Sale Tricks",
+      "summary": "How stores make spending feel like saving.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ss-sale-tricks-q1",
+          "type": "multiple_choice",
+          "context": "An [[anchor price]] is the big “was” price stores show so the sale price feels like a steal.",
+          "prompt": "“Was $200, now $99!” What does the $200 do?",
+          "choices": [
+            "Makes $99 feel cheap, whether or not it is",
+            "Proves it’s worth $200",
+            "Shows the store is losing money"
+          ],
+          "answer": 0,
+          "explain": "The “was” price may never have been what anyone actually paid."
+        },
+        {
+          "id": "ss-sale-tricks-q2",
+          "type": "true_false",
+          "prompt": "If something is 50% off, buying it saves you money.",
+          "answer": false,
+          "explain": "You only save if you’d have bought it anyway. Otherwise you spent 50%."
+        },
+        {
+          "id": "ss-sale-tricks-q3",
+          "type": "number",
+          "prompt": "Buy one, get one 50% off. Each shirt is $30. What do two cost?",
+          "answer": 45,
+          "unit": "$",
+          "explain": "$30 + $15 = $45."
+        },
+        {
+          "id": "ss-sale-tricks-q4",
+          "type": "multiple_choice",
+          "prompt": "You need one shirt. Is buy-one-get-one-50%-off a deal?",
+          "choices": [
+            "Only if you’d really wear a second shirt",
+            "Always, it’s a sale",
+            "Never"
+          ],
+          "answer": 0,
+          "explain": "One shirt costs $30. Two cost $45. Only worth it if you wanted two."
+        },
+        {
+          "id": "ss-sale-tricks-q5",
+          "type": "number",
+          "context": "“Free shipping over $50” is designed to get you to add things.",
+          "prompt": "Your cart is $41 and shipping is $6. To get free shipping over $50, you add a $14 item you don’t need. How much more did you spend than if you’d paid shipping?",
+          "answer": 8,
+          "unit": "$",
+          "explain": "$14 − $6 = $8 more, for something you didn’t want."
+        },
+        {
+          "id": "ss-sale-tricks-q6",
+          "type": "sort",
+          "prompt": "Real deal or trick?",
+          "buckets": [
+            "Could be a real deal",
+            "Usually a trick"
+          ],
+          "items": [
+            [
+              "Lower unit price on something you use every week",
+              0
+            ],
+            [
+              "“Only 2 left!” countdown banner",
+              1
+            ],
+            [
+              "Adding items to reach free shipping",
+              1
+            ],
+            [
+              "Sale on a winter coat you already planned to buy",
+              0
+            ],
+            [
+              "“Was $300” on something that never sold for $300",
+              1
+            ],
+            [
+              "Coupon for your usual groceries",
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ss-impulse",
+      "type": "lesson",
+      "title": "Impulse Buys",
+      "summary": "Wait a day. Most wants wear off.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ss-impulse-q1",
+          "type": "multiple_choice",
+          "context": "An [[impulse buy]] is something you buy on the spot, unplanned, because it grabbed you in the moment.",
+          "prompt": "Which is an impulse buy?",
+          "choices": [
+            "Candy at the checkout that wasn’t on your list",
+            "This week’s planned groceries",
+            "Your monthly bus pass"
+          ],
+          "answer": 0,
+          "explain": "Unplanned, grabbed in the moment: that’s an impulse buy."
+        },
+        {
+          "id": "ss-impulse-q2",
+          "type": "multiple_choice",
+          "context": "The 24-hour rule: if it isn’t a need and wasn’t planned, wait a day. If you still want it tomorrow, it might be worth it.",
+          "prompt": "You see $80 sneakers you love. What does the 24-hour rule say?",
+          "choices": [
+            "Wait a day, then decide",
+            "Buy now before they’re gone",
+            "Never buy sneakers"
+          ],
+          "answer": 0,
+          "explain": "If you still want them tomorrow, they might be worth it."
+        },
+        {
+          "id": "ss-impulse-q3",
+          "type": "number",
+          "prompt": "You make about 6 impulse buys a month at $15 each. What’s that in a year?",
+          "answer": 1080,
+          "unit": "$",
+          "explain": "6 × $15 × 12 = $1,080."
+        },
+        {
+          "id": "ss-impulse-q4",
+          "type": "true_false",
+          "prompt": "Saved card details and one-click checkout make impulse buys easier.",
+          "answer": true,
+          "explain": "Every step removed is one less moment to think."
+        },
+        {
+          "id": "ss-impulse-q5",
+          "type": "multiple_choice",
+          "prompt": "Which trick cuts impulse buys the most?",
+          "choices": [
+            "Removing saved cards and waiting a day",
+            "Shopping when you’re bored",
+            "Following more brands online"
+          ],
+          "answer": 0,
+          "explain": "A little friction gives your brain time to catch up."
+        },
+        {
+          "id": "ss-impulse-q6",
+          "type": "order",
+          "prompt": "Something catches your eye online. Put the smart steps in order.",
+          "items": [
+            "Add it to a wish list instead of the cart",
+            "Wait at least 24 hours",
+            "Check if it fits your budget",
+            "Buy it, or let it go"
+          ],
+          "explain": "Park it, wait, check, decide."
+        }
+      ]
+    },
+    {
+      "id": "ss-receipt-check",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Check the Receipt",
+      "summary": "Scanners make mistakes. Catch them before you leave.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ss-receipt-check-q1",
+          "type": "spot",
+          "context": "Prices on the shelf and prices at the register don’t always match.",
+          "doc": {
+            "kind": "receipt",
+            "title": "Fresh Market",
+            "subtitle": "Store #214 · Tue 6:18 PM",
+            "lines": [
+              {
+                "id": "milk",
+                "label": "Milk, half gallon",
+                "amount": 3.29
+              },
+              {
+                "id": "yogurt",
+                "label": "Greek yogurt, 4-pack",
+                "amount": 4.99
+              },
+              {
+                "id": "apples",
+                "label": "Apples, 2 lb",
+                "amount": 4.1
+              },
+              {
+                "id": "pasta",
+                "label": "Pasta, 1 lb",
+                "amount": 1.79
+              },
+              {
+                "id": "cheese",
+                "label": "Cheddar cheese",
+                "amount": 5.49
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total",
+                "amount": 19.66,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "The shelf tag said the yogurt was $3.49. Tap the line that’s wrong.",
+          "answer": "yogurt",
+          "explain": "It rang up at $4.99, not $3.49."
+        },
+        {
+          "id": "ss-receipt-check-q2",
+          "type": "number",
+          "doc": {
+            "kind": "receipt",
+            "title": "Fresh Market",
+            "subtitle": "Store #214 · Tue 6:18 PM",
+            "lines": [
+              {
+                "id": "milk",
+                "label": "Milk, half gallon",
+                "amount": 3.29
+              },
+              {
+                "id": "yogurt",
+                "label": "Greek yogurt, 4-pack",
+                "amount": 4.99
+              },
+              {
+                "id": "apples",
+                "label": "Apples, 2 lb",
+                "amount": 4.1
+              },
+              {
+                "id": "pasta",
+                "label": "Pasta, 1 lb",
+                "amount": 1.79
+              },
+              {
+                "id": "cheese",
+                "label": "Cheddar cheese",
+                "amount": 5.49
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total",
+                "amount": 19.66,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "How much were you overcharged?",
+          "answer": 1.5,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$4.99 − $3.49 = $1.50."
+        },
+        {
+          "id": "ss-receipt-check-q3",
+          "type": "spot",
+          "doc": {
+            "kind": "receipt",
+            "title": "Bean There Café",
+            "subtitle": "Order #88",
+            "lines": [
+              {
+                "id": "latte",
+                "label": "Large latte",
+                "amount": 5.25
+              },
+              {
+                "id": "oat",
+                "label": "Oat milk",
+                "amount": 0.75
+              },
+              {
+                "id": "shot",
+                "label": "Extra espresso shot",
+                "amount": 0.95
+              },
+              {
+                "id": "muffin",
+                "label": "Blueberry muffin",
+                "amount": 3.1
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total",
+                "amount": 10.05,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "You ordered a large latte with oat milk and a muffin. Tap the charge you didn’t ask for.",
+          "answer": "shot",
+          "explain": "Nobody asked for the extra shot."
+        },
+        {
+          "id": "ss-receipt-check-q4",
+          "type": "true_false",
+          "prompt": "Stores sometimes scan the wrong price, so checking your receipt is worth the ten seconds.",
+          "answer": true,
+          "explain": "Especially on sale items, where the shelf and the register often disagree."
+        },
+        {
+          "id": "ss-receipt-check-q5",
+          "type": "multiple_choice",
+          "prompt": "You spot a mistake after leaving the store. Best move?",
+          "choices": [
+            "Go back or call with the receipt",
+            "Let it go, it’s only $1.50",
+            "Post an angry review"
+          ],
+          "answer": 0,
+          "explain": "Most stores fix it on the spot, and some give you the item free."
+        },
+        {
+          "id": "ss-receipt-check-q6",
+          "type": "number",
+          "prompt": "If you were overcharged $1.50 every week, what would that add up to over a year of 52 weeks?",
+          "answer": 78,
+          "unit": "$",
+          "explain": "$1.50 × 52 = $78."
+        }
+      ]
+    },
+    {
+      "id": "ss-opportunity-cost",
+      "type": "lesson",
+      "title": "What Else Could It Buy?",
+      "summary": "Every yes is a no to something else.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ss-opportunity-cost-q1",
+          "type": "multiple_choice",
+          "context": "[[Opportunity cost]] is what you give up when you choose one thing over another.",
+          "prompt": "You spend $60 on a new game. What’s the opportunity cost?",
+          "choices": [
+            "Whatever else that $60 could have done, like going into savings",
+            "Nothing, it was on sale",
+            "$60 of taxes"
+          ],
+          "answer": 0,
+          "explain": "Not that the game was bad. Just that the $60 can’t do anything else now."
+        },
+        {
+          "id": "ss-opportunity-cost-q2",
+          "type": "number",
+          "prompt": "A $6 lunch out every workday, about 20 days a month. What’s that a month?",
+          "answer": 120,
+          "unit": "$",
+          "explain": "$6 × 20 = $120."
+        },
+        {
+          "id": "ss-opportunity-cost-q3",
+          "type": "number",
+          "prompt": "And over a year?",
+          "answer": 1440,
+          "unit": "$",
+          "explain": "$120 × 12 = $1,440."
+        },
+        {
+          "id": "ss-opportunity-cost-q4",
+          "type": "number",
+          "prompt": "Making lunch costs about $2. Over a year, how much more does buying lunch cost than making it?",
+          "answer": 960,
+          "unit": "$",
+          "explain": "($6 − $2) × 20 days × 12 months = $960."
+        },
+        {
+          "id": "ss-opportunity-cost-q5",
+          "type": "true_false",
+          "prompt": "Thinking about opportunity cost means never buying anything fun.",
+          "answer": false,
+          "explain": "It means choosing on purpose. Buy the fun thing, knowing what it cost."
+        },
+        {
+          "id": "ss-opportunity-cost-q6",
+          "type": "multiple_choice",
+          "prompt": "Which question captures opportunity cost?",
+          "choices": [
+            "What else could this money do?",
+            "Is it on sale?",
+            "Do my friends have one?"
+          ],
+          "answer": 0,
+          "explain": "Ask it before any purchase that isn’t a need."
+        }
+      ]
+    },
+    {
+      "id": "ss-big-purchase",
+      "type": "lesson",
+      "format": "call",
+      "title": "Big Purchase, Smart Way",
+      "summary": "New vs. refurbished, add-ons and “only $70 a month.”",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ss-big-purchase-q1",
+          "type": "multiple_choice",
+          "context": "A [[refurbished]] item was returned or used, then checked and repaired by the seller. It often comes with a warranty and costs much less.",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "New laptop",
+              "subtitle": "TechWorld",
+              "lines": [
+                {
+                  "id": "price",
+                  "label": "Price",
+                  "amount": 1100.0
+                },
+                {
+                  "id": "warranty",
+                  "label": "1-year warranty",
+                  "amount": 0.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Refurbished laptop",
+              "subtitle": "TechWorld Certified",
+              "lines": [
+                {
+                  "id": "price",
+                  "label": "Price, same model",
+                  "amount": 780.0
+                },
+                {
+                  "id": "warranty",
+                  "label": "1-year warranty",
+                  "amount": 0.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Same model, both with a 1-year warranty. Which is the better deal?",
+          "choices": [
+            "The refurbished one",
+            "The new one"
+          ],
+          "answer": 0,
+          "explain": "Same machine, same warranty, $320 less."
+        },
+        {
+          "id": "ss-big-purchase-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "New laptop",
+              "subtitle": "TechWorld",
+              "lines": [
+                {
+                  "id": "price",
+                  "label": "Price",
+                  "amount": 1100.0
+                },
+                {
+                  "id": "warranty",
+                  "label": "1-year warranty",
+                  "amount": 0.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Refurbished laptop",
+              "subtitle": "TechWorld Certified",
+              "lines": [
+                {
+                  "id": "price",
+                  "label": "Price, same model",
+                  "amount": 780.0
+                },
+                {
+                  "id": "warranty",
+                  "label": "1-year warranty",
+                  "amount": 0.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much does the refurbished one save?",
+          "answer": 320,
+          "unit": "$",
+          "explain": "$1,100 − $780 = $320."
+        },
+        {
+          "id": "ss-big-purchase-q3",
+          "type": "multiple_choice",
+          "context": "Store protection plans often cost a lot for problems that rarely happen.",
+          "prompt": "The store offers a $150 “protection plan” on the $780 laptop. What should you check first?",
+          "choices": [
+            "What it covers that the free warranty doesn’t",
+            "Nothing, always buy it",
+            "Whether the cashier recommends it"
+          ],
+          "answer": 0,
+          "explain": "Many plans repeat what the warranty already covers."
+        },
+        {
+          "id": "ss-big-purchase-q4",
+          "type": "number",
+          "context": "Monthly payments can hide extra cost. Always add it all up.",
+          "prompt": "“Only $70 a month for 12 months!” What’s the total?",
+          "answer": 840,
+          "unit": "$",
+          "explain": "$70 × 12 = $840."
+        },
+        {
+          "id": "ss-big-purchase-q5",
+          "type": "number",
+          "prompt": "Compared with paying $780 upfront, how much extra is that?",
+          "answer": 60,
+          "unit": "$",
+          "explain": "$840 − $780 = $60."
+        },
+        {
+          "id": "ss-big-purchase-q6",
+          "type": "order",
+          "prompt": "Before a big purchase, put these steps in order.",
+          "items": [
+            "Decide what you need it to do",
+            "Compare prices, including refurbished",
+            "Check the total cost, not the monthly price",
+            "Wait a day, then buy"
+          ],
+          "explain": "Need, compare, total, wait."
+        }
+      ]
+    },
+    {
+      "id": "ss-taylor",
+      "type": "lesson",
+      "format": "story",
+      "title": "Taylor’s Shopping Trip",
+      "summary": "One errand, four purchases. Work out what happened.",
+      "xp": 10,
+      "story": {
+        "title": "The $40 errand",
+        "character": "Taylor, 23, warehouse shift lead",
+        "body": "Taylor went to the store for one thing: a **$40** pair of work gloves.\n\nNear the entrance, a speaker was marked “Was $120, now **$69**!” Taylor grabbed it. At checkout there was a buy-one-get-one-50%-off deal on **$12** phone chargers, so Taylor took two. A **$3** pack of gum went in at the register.\n\nTaylor already owned a speaker and one working charger."
+      },
+      "steps": [
+        {
+          "id": "ss-taylor-q1",
+          "type": "number",
+          "prompt": "How much did the two chargers cost?",
+          "answer": 18,
+          "unit": "$",
+          "explain": "$12 + $6 = $18."
+        },
+        {
+          "id": "ss-taylor-q2",
+          "type": "number",
+          "prompt": "What was Taylor’s total bill?",
+          "answer": 130,
+          "unit": "$",
+          "explain": "$40 + $69 + $18 + $3 = $130."
+        },
+        {
+          "id": "ss-taylor-q3",
+          "type": "number",
+          "prompt": "Taylor planned to spend $40. How far over plan was the trip?",
+          "answer": 90,
+          "unit": "$",
+          "explain": "$130 − $40 = $90."
+        },
+        {
+          "id": "ss-taylor-q4",
+          "type": "sort",
+          "prompt": "Planned or impulse?",
+          "buckets": [
+            "Planned",
+            "Impulse"
+          ],
+          "items": [
+            [
+              "Work gloves",
+              0
+            ],
+            [
+              "Speaker",
+              1
+            ],
+            [
+              "Two chargers",
+              1
+            ],
+            [
+              "Gum",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "ss-taylor-q5",
+          "type": "multiple_choice",
+          "prompt": "What made the speaker feel like a deal?",
+          "choices": [
+            "The “Was $120” anchor price",
+            "Taylor needed a speaker",
+            "The store was out of gloves"
+          ],
+          "answer": 0,
+          "explain": "The anchor did the selling."
+        },
+        {
+          "id": "ss-taylor-q6",
+          "type": "multiple_choice",
+          "prompt": "Taylor can return the speaker within 30 days. Smart move?",
+          "choices": [
+            "Return it: Taylor already has one",
+            "Keep it, returning is awkward",
+            "Buy a second one while it’s cheap"
+          ],
+          "answer": 0,
+          "explain": "A $69 refund turns a $90 overspend into $21."
+        }
+      ]
+    },
+    {
+      "id": "ss-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "ss-trial",
+      "type": "boss",
+      "title": "Den Trial: Smart Spending",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "ss-trial-q1",
+          "type": "number",
+          "prompt": "16 oz costs $3.20. 40 oz costs $7.20. What’s the 40 oz price per ounce?",
+          "answer": 0.18,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$7.20 ÷ 40 = $0.18 an ounce, cheaper than $0.20."
+        },
+        {
+          "id": "ss-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "“Was $90, now $45.” What’s the $90?",
+          "choices": [
+            "An anchor price",
+            "A unit price",
+            "A tax"
+          ],
+          "answer": 0,
+          "explain": "It’s there to make $45 feel small."
+        },
+        {
+          "id": "ss-trial-q3",
+          "type": "true_false",
+          "prompt": "Cost per use can make a pricier item the cheaper choice.",
+          "answer": true,
+          "explain": "If it lasts much longer, yes."
+        },
+        {
+          "id": "ss-trial-q4",
+          "type": "number",
+          "prompt": "$9 a day on snacks for 20 workdays. What’s that a month?",
+          "answer": 180,
+          "unit": "$",
+          "explain": "$9 × 20 = $180."
+        }
+      ]
+    }
+  ]
+}

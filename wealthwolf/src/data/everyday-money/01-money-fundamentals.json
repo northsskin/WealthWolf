@@ -1,0 +1,1741 @@
+{
+  "id": "money-fundamentals",
+  "section": "everyday-money",
+  "order": 1,
+  "title": "Money Fundamentals",
+  "description": "Where money comes from, where it goes, and how to read the paperwork.",
+  "wolfLine": "Broke is a habit. So is rich. Pick one.",
+  "terms": {
+    "income": {
+      "term": "Income",
+      "definition": "Money that comes in to you.",
+      "example": "The pay from your job, or money from selling something you own."
+    },
+    "expense": {
+      "term": "Expense",
+      "definition": "Money that goes out of your pocket to pay for something.",
+      "example": "Rent, groceries, a bus ticket, a phone bill."
+    },
+    "cash-flow": {
+      "term": "Cash flow",
+      "definition": "What's left after you take your expenses away from your income.",
+      "example": "Earn $2,000 a month, spend $1,500, and your cash flow is $500."
+    },
+    "gross-pay": {
+      "term": "Gross pay",
+      "definition": "What you earned before anything is taken out.",
+      "example": "80 hours at $17.50 an hour is $1,400 gross pay."
+    },
+    "deduction": {
+      "term": "Deduction",
+      "definition": "Money taken out of your pay before you get it, like taxes or retirement savings.",
+      "example": "Federal income tax and Social Security are deductions."
+    },
+    "take-home-pay": {
+      "term": "Take-home pay",
+      "definition": "What actually lands in your bank account after every deduction. Also called net pay.",
+      "example": "$1,400 gross pay minus $320.60 of deductions is $1,079.40 take-home pay."
+    },
+    "fixed-expense": {
+      "term": "Fixed expense",
+      "definition": "An expense that costs the same amount every month.",
+      "example": "Rent, or a phone plan with a set monthly price."
+    },
+    "variable-expense": {
+      "term": "Variable expense",
+      "definition": "An expense that changes from month to month, depending on what you do.",
+      "example": "Groceries, fuel, eating out."
+    },
+    "need": {
+      "term": "Need",
+      "definition": "Something you have to pay for to live and work.",
+      "example": "A place to live, basic food, getting to your job."
+    },
+    "want": {
+      "term": "Want",
+      "definition": "Something that makes life nicer, but you'd be fine without.",
+      "example": "Concert tickets, a new video game, takeout."
+    },
+    "lifestyle-creep": {
+      "term": "Lifestyle creep",
+      "definition": "When you earn more and your spending quietly rises to match, so you don't end up any better off.",
+      "example": "You get a raise, then start eating out more until the raise is gone."
+    },
+    "asset": {
+      "term": "Asset",
+      "definition": "Something you own that's worth money.",
+      "example": "Money in the bank, a car, a laptop you could sell."
+    },
+    "liability": {
+      "term": "Liability",
+      "definition": "Money you owe to someone else.",
+      "example": "A car loan you're still paying off."
+    },
+    "net-worth": {
+      "term": "Net worth",
+      "definition": "Everything you own minus everything you owe.",
+      "example": "Own $10,000, owe $4,000, and your net worth is $6,000."
+    },
+    "due-date": {
+      "term": "Due date",
+      "definition": "The last day you can pay a bill without it counting as late.",
+      "example": "An electricity bill due Oct 21 must be paid by Oct 21."
+    },
+    "late-fee": {
+      "term": "Late fee",
+      "definition": "An extra charge for paying a bill after its due date.",
+      "example": "Pay an $84 bill four days late and it becomes $99."
+    }
+  },
+  "lessons": [
+    {
+      "id": "mf-cash-flow",
+      "type": "lesson",
+      "title": "Money In, Money Out",
+      "summary": "Where money comes from and where it goes.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mf-cash-flow-i1",
+          "type": "info",
+          "title": "Start here",
+          "body": "Money only ever does two things. It comes **in** to you, and it goes **out** from you.\n\nThat's it. Get a grip on both and you're already ahead of most people. No experience needed. We'll teach every word as we go."
+        },
+        {
+          "id": "mf-cash-flow-q1",
+          "type": "multiple_choice",
+          "context": "Money that comes **in** to you is called [[income]].",
+          "prompt": "Which of these is income?",
+          "choices": [
+            "The pay you get from your job",
+            "The rent you pay",
+            "Your phone bill"
+          ],
+          "answer": 0,
+          "explain": "Pay from a job is the most common kind of [[income]]. Selling something you own counts too."
+        },
+        {
+          "id": "mf-cash-flow-q2",
+          "type": "multiple_choice",
+          "context": "Money that goes **out** to pay for something is an [[expense]].",
+          "prompt": "Which of these is an expense?",
+          "choices": [
+            "The pay from your job",
+            "Your weekly groceries",
+            "Money a friend pays you back"
+          ],
+          "answer": 1,
+          "explain": "You pay for groceries, so money goes out. That's an [[expense]]."
+        },
+        {
+          "id": "mf-cash-flow-q3",
+          "type": "true_false",
+          "prompt": "The rent you pay each month is [[income]].",
+          "answer": false,
+          "explain": "Rent is money going out, so it's an [[expense]]."
+        },
+        {
+          "id": "mf-cash-flow-q5",
+          "type": "number",
+          "context": "Take your expenses away from your income and you get your [[cash flow]]: what’s left over. Earn $2,000, spend $1,500, and your cash flow is $500.",
+          "prompt": "You earn $3,200 a month and spend $2,900. What’s your cash flow?",
+          "answer": 300,
+          "explain": "$3,200 − $2,900 = $300. That’s money you can save, or use to pay off what you owe.",
+          "unit": "$"
+        },
+        {
+          "id": "mf-cash-flow-q6",
+          "type": "fill_blank",
+          "context": "When income is bigger than expenses, cash flow is **positive**. When expenses are bigger, it's **negative**: you're spending money you don't have.",
+          "prompt": "You earn $1,800 a month but spend $2,000. Your cash flow is ___.",
+          "choices": [
+            "negative",
+            "positive",
+            "zero"
+          ],
+          "answer": 0,
+          "explain": "You’re $200 short every month. That gap has to come from savings or borrowing."
+        },
+        {
+          "id": "mf-cash-flow-q7",
+          "type": "multiple_choice",
+          "prompt": "Your [[cash flow]] is positive. What does that tell you?",
+          "choices": [
+            "You spend more than you earn",
+            "You earn more than you spend",
+            "You have no expenses at all"
+          ],
+          "answer": 1,
+          "explain": "Money left over every month. That's the goal."
+        },
+        {
+          "id": "mf-cash-flow-q4",
+          "type": "match",
+          "prompt": "Recap: match each word to what it means.",
+          "pairs": [
+            [
+              "Income",
+              "Money coming in"
+            ],
+            [
+              "Expense",
+              "Money going out"
+            ],
+            [
+              "Cash flow",
+              "What's left after expenses"
+            ],
+            [
+              "Negative cash flow",
+              "Spending more than you earn"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mf-paycheck",
+      "type": "lesson",
+      "format": "document",
+      "title": "Your First Paycheck",
+      "summary": "Read a real pay stub: what you earned, what got taken, what you keep.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mf-paycheck-q1",
+          "type": "multiple_choice",
+          "context": "Here’s your first pay stub from a coffee shop job. Your [[gross pay]] is everything you earned, before anything is taken out.",
+          "doc": {
+            "kind": "paystub",
+            "title": "Northside Coffee Co.",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Sep 1–15"
+              ],
+              [
+                "Pay date",
+                "Sep 20"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "gross",
+                "section": "Earnings",
+                "label": "Regular pay, 80 hrs × $17.50",
+                "amount": 1400.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -112.0
+              },
+              {
+                "id": "state",
+                "section": "Deductions",
+                "label": "State income tax",
+                "amount": -45.5
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -86.8
+              },
+              {
+                "id": "medicare",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -20.3
+              },
+              {
+                "id": "401k",
+                "section": "Deductions",
+                "label": "401(k) retirement savings",
+                "amount": -56.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Gross pay",
+                "amount": 1400.0
+              },
+              {
+                "label": "Total deductions",
+                "amount": -320.6
+              },
+              {
+                "label": "Net pay",
+                "amount": 1079.4,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "How much did you earn for these two weeks, before anything came out?",
+          "choices": [
+            "$1,400.00",
+            "$1,079.40",
+            "$320.60"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "That’s what’s left after deductions. Gross is before.",
+            "That’s the total taken out, not what you earned."
+          ],
+          "explain": "Gross pay is the top line: 80 hours × $17.50."
+        },
+        {
+          "id": "mf-paycheck-q2",
+          "type": "number",
+          "context": "Money taken out of your pay before you get it is a [[deduction]]. Taxes are deductions. So is money you choose to save for retirement.",
+          "doc": {
+            "kind": "paystub",
+            "title": "Northside Coffee Co.",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Sep 1–15"
+              ],
+              [
+                "Pay date",
+                "Sep 20"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "gross",
+                "section": "Earnings",
+                "label": "Regular pay, 80 hrs × $17.50",
+                "amount": 1400.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -112.0
+              },
+              {
+                "id": "state",
+                "section": "Deductions",
+                "label": "State income tax",
+                "amount": -45.5
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -86.8
+              },
+              {
+                "id": "medicare",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -20.3
+              },
+              {
+                "id": "401k",
+                "section": "Deductions",
+                "label": "401(k) retirement savings",
+                "amount": -56.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Gross pay",
+                "amount": 1400.0
+              },
+              {
+                "label": "Total deductions",
+                "amount": -320.6
+              },
+              {
+                "label": "Net pay",
+                "amount": 1079.4,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "How much federal income tax came out of this paycheck?",
+          "answer": 112,
+          "unit": "$",
+          "explain": "Federal income tax: $112.00. It’s listed under Deductions."
+        },
+        {
+          "id": "mf-paycheck-q3",
+          "type": "multiple_choice",
+          "context": "What’s left after every deduction is your [[take-home pay]], also called net pay. It’s the number that actually lands in your account.",
+          "doc": {
+            "kind": "paystub",
+            "title": "Northside Coffee Co.",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Sep 1–15"
+              ],
+              [
+                "Pay date",
+                "Sep 20"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "gross",
+                "section": "Earnings",
+                "label": "Regular pay, 80 hrs × $17.50",
+                "amount": 1400.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -112.0
+              },
+              {
+                "id": "state",
+                "section": "Deductions",
+                "label": "State income tax",
+                "amount": -45.5
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -86.8
+              },
+              {
+                "id": "medicare",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -20.3
+              },
+              {
+                "id": "401k",
+                "section": "Deductions",
+                "label": "401(k) retirement savings",
+                "amount": -56.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Gross pay",
+                "amount": 1400.0
+              },
+              {
+                "label": "Total deductions",
+                "amount": -320.6
+              },
+              {
+                "label": "Net pay",
+                "amount": 1079.4,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "How much actually lands in your bank account?",
+          "choices": [
+            "$1,079.40",
+            "$1,400.00",
+            "$1,287.50"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "That’s gross pay. Deductions come out first.",
+            "That only takes out the federal tax. Every deduction comes out."
+          ],
+          "explain": "$1,400.00 − $320.60 of deductions = $1,079.40."
+        },
+        {
+          "id": "mf-paycheck-q4",
+          "type": "spot",
+          "context": "Not every deduction is a tax. Some of it is still your money, just saved for later.",
+          "prompt": "One deduction is you saving for retirement, not a tax. Tap it.",
+          "doc": {
+            "kind": "paystub",
+            "title": "Northside Coffee Co.",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Sep 1–15"
+              ],
+              [
+                "Pay date",
+                "Sep 20"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "gross",
+                "section": "Earnings",
+                "label": "Regular pay, 80 hrs × $17.50",
+                "amount": 1400.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -112.0
+              },
+              {
+                "id": "state",
+                "section": "Deductions",
+                "label": "State income tax",
+                "amount": -45.5
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -86.8
+              },
+              {
+                "id": "medicare",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -20.3
+              },
+              {
+                "id": "401k",
+                "section": "Deductions",
+                "label": "401(k) retirement savings",
+                "amount": -56.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Gross pay",
+                "amount": 1400.0
+              },
+              {
+                "label": "Total deductions",
+                "amount": -320.6
+              },
+              {
+                "label": "Net pay",
+                "amount": 1079.4,
+                "strong": true
+              }
+            ]
+          },
+          "answer": "401k",
+          "explain": "A 401(k) is a retirement account. That $56 is still yours, invested for later."
+        },
+        {
+          "id": "mf-paycheck-q5",
+          "type": "number",
+          "doc": {
+            "kind": "paystub",
+            "title": "Northside Coffee Co.",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Sep 1–15"
+              ],
+              [
+                "Pay date",
+                "Sep 20"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "gross",
+                "section": "Earnings",
+                "label": "Regular pay, 80 hrs × $17.50",
+                "amount": 1400.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -112.0
+              },
+              {
+                "id": "state",
+                "section": "Deductions",
+                "label": "State income tax",
+                "amount": -45.5
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -86.8
+              },
+              {
+                "id": "medicare",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -20.3
+              },
+              {
+                "id": "401k",
+                "section": "Deductions",
+                "label": "401(k) retirement savings",
+                "amount": -56.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Gross pay",
+                "amount": 1400.0
+              },
+              {
+                "label": "Total deductions",
+                "amount": -320.6
+              },
+              {
+                "label": "Net pay",
+                "amount": 1079.4,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "You get paid twice a month, the same amount each time. What’s your take-home pay for the month?",
+          "answer": 2158.8,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$1,079.40 × 2 = $2,158.80. That’s the number to plan your month around, not $2,800."
+        },
+        {
+          "id": "mf-paycheck-q6",
+          "type": "true_false",
+          "prompt": "Your gross pay is the amount that lands in your bank account.",
+          "answer": false,
+          "explain": "That’s [[take-home pay]]. Gross pay is before deductions."
+        },
+        {
+          "id": "mf-paycheck-q7",
+          "type": "fill_blank",
+          "prompt": "Taxes taken out of your paycheck are called ___.",
+          "choices": [
+            "deductions",
+            "bonuses",
+            "refunds"
+          ],
+          "answer": 0,
+          "explain": "They’re deducted before the money reaches you."
+        }
+      ]
+    },
+    {
+      "id": "mf-fixed-variable",
+      "type": "lesson",
+      "title": "Fixed vs. Variable",
+      "summary": "Which costs are locked in and which you control.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mf-fixed-variable-q1",
+          "type": "multiple_choice",
+          "context": "Some [[expenses|expense]] cost exactly the same every month, like rent. Those are [[fixed expenses|fixed-expense]].",
+          "prompt": "Which of these is most likely a fixed expense?",
+          "choices": [
+            "Groceries",
+            "Your monthly rent",
+            "Nights out"
+          ],
+          "answer": 1,
+          "explain": "Same rent, every month. Fixed."
+        },
+        {
+          "id": "mf-fixed-variable-q2",
+          "type": "multiple_choice",
+          "context": "Other expenses go up and down depending on what you do, like food or fuel. Those are [[variable expenses|variable-expense]].",
+          "prompt": "Which of these is a variable expense?",
+          "choices": [
+            "Fuel for your car",
+            "Your rent",
+            "A phone plan that costs the same every month"
+          ],
+          "answer": 0,
+          "explain": "Drive more, spend more. Drive less, spend less. Variable."
+        },
+        {
+          "id": "mf-fixed-variable-q3",
+          "type": "true_false",
+          "prompt": "Groceries are a [[fixed expense]].",
+          "answer": false,
+          "explain": "Your grocery bill changes month to month, so it's a [[variable expense]]."
+        },
+        {
+          "id": "mf-fixed-variable-q4",
+          "type": "match",
+          "prompt": "Match each word to what it means.",
+          "pairs": [
+            [
+              "Fixed expense",
+              "Costs the same every month"
+            ],
+            [
+              "Variable expense",
+              "Changes month to month"
+            ],
+            [
+              "Income",
+              "Money coming in"
+            ],
+            [
+              "Expense",
+              "Money going out"
+            ]
+          ]
+        },
+        {
+          "id": "mf-fixed-variable-q5",
+          "type": "number",
+          "context": "Add both kinds together to get your total spending. Fixed $1,000 + variable $500 = $1,500 a month.",
+          "prompt": "Your fixed expenses are $1,200 a month and your variable expenses are $700. What do you spend in total?",
+          "answer": 1900,
+          "explain": "$1,200 + $700 = $1,900.",
+          "unit": "$"
+        },
+        {
+          "id": "mf-fixed-variable-q6",
+          "type": "multiple_choice",
+          "prompt": "You want to free up some money this month. Which is usually quickest to cut?",
+          "choices": [
+            "Fixed expenses, like rent",
+            "Your income",
+            "Variable expenses, like eating out"
+          ],
+          "answer": 2,
+          "explain": "You can't change your rent tomorrow, but you can skip takeout tonight."
+        },
+        {
+          "id": "mf-fixed-variable-q7",
+          "type": "fill_blank",
+          "prompt": "A gym membership that costs the same every month is a ___ expense.",
+          "choices": [
+            "fixed",
+            "variable"
+          ],
+          "answer": 0,
+          "explain": "Same price every month, so it's fixed, even though you could cancel it."
+        },
+        {
+          "id": "mf-fixed-variable-q8",
+          "type": "sort",
+          "prompt": "Sort these monthly costs.",
+          "buckets": [
+            "Fixed",
+            "Variable"
+          ],
+          "items": [
+            [
+              "Rent",
+              0
+            ],
+            [
+              "Groceries",
+              1
+            ],
+            [
+              "Car insurance",
+              0
+            ],
+            [
+              "Gas for the car",
+              1
+            ],
+            [
+              "Streaming subscription",
+              0
+            ],
+            [
+              "Eating out",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mf-needs-wants",
+      "type": "lesson",
+      "title": "Needs vs. Wants",
+      "summary": "Separate survival from impulse.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mf-needs-wants-q1",
+          "type": "multiple_choice",
+          "context": "A [[need]] is something you have to pay for to live and work: a place to live, basic food, getting to your job.",
+          "prompt": "Which of these is a need?",
+          "choices": [
+            "A streaming subscription",
+            "Rent",
+            "Concert tickets"
+          ],
+          "answer": 1,
+          "explain": "You need somewhere to live. The rest is optional."
+        },
+        {
+          "id": "mf-needs-wants-q2",
+          "type": "multiple_choice",
+          "context": "A [[want]] is something that makes life nicer, but you'd be fine without it.",
+          "prompt": "Which of these is a want?",
+          "choices": [
+            "Electricity for your home",
+            "Basic groceries",
+            "A new video game"
+          ],
+          "answer": 2,
+          "explain": "Fun, but you'd survive without it. That's a [[want]]."
+        },
+        {
+          "id": "mf-needs-wants-q3",
+          "type": "true_false",
+          "prompt": "Upgrading to the newest phone when yours still works fine is a [[need]].",
+          "answer": false,
+          "explain": "A working phone is a need. The upgrade is a want."
+        },
+        {
+          "id": "mf-needs-wants-q4",
+          "type": "multiple_choice",
+          "context": "Careful: wants love to hide inside needs. Food is a need, but takeout every night is a want.",
+          "prompt": "You need a car to get to work, so you buy a brand-new one with leather seats and a premium sound system. Which part is the want?",
+          "choices": [
+            "Having a car at all",
+            "Fuel to drive to work",
+            "The leather seats and sound system"
+          ],
+          "answer": 2,
+          "explain": "The car is the need. The extras are wants riding along."
+        },
+        {
+          "id": "mf-needs-wants-q6",
+          "type": "multiple_choice",
+          "context": "When people start earning more, they often spend more on wants without noticing. That's called [[lifestyle creep]].",
+          "prompt": "You got a raise six months ago, but you're not saving any more than before. What probably happened?",
+          "choices": [
+            "Lifestyle creep",
+            "Your rent disappeared",
+            "Your income went down"
+          ],
+          "answer": 0,
+          "explain": "The extra money got spent on wants, a little at a time."
+        },
+        {
+          "id": "mf-needs-wants-q7",
+          "type": "multiple_choice",
+          "prompt": "You need to cut spending fast. Where do you look first?",
+          "choices": [
+            "Needs, like rent",
+            "Wants",
+            "Your income"
+          ],
+          "answer": 1,
+          "explain": "Wants can go tomorrow without breaking anything."
+        },
+        {
+          "id": "mf-needs-wants-q8",
+          "type": "sort",
+          "prompt": "Need or want? Sort them.",
+          "buckets": [
+            "Need",
+            "Want"
+          ],
+          "items": [
+            [
+              "Rent",
+              0
+            ],
+            [
+              "Concert tickets",
+              1
+            ],
+            [
+              "Electricity",
+              0
+            ],
+            [
+              "A new video game",
+              1
+            ],
+            [
+              "Basic groceries",
+              0
+            ],
+            [
+              "Takeout every night",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "mf-needs-wants-q9",
+          "type": "spot",
+          "context": "Groceries are a need. But a want can still sneak into the basket.",
+          "prompt": "Here’s this week’s grocery receipt. Tap the want.",
+          "doc": {
+            "kind": "receipt",
+            "title": "Fresh Market",
+            "subtitle": "Store #214 · Sat 10:42 AM",
+            "lines": [
+              {
+                "id": "rice",
+                "label": "Rice, 5 lb",
+                "amount": 6.49
+              },
+              {
+                "id": "eggs",
+                "label": "Eggs, dozen",
+                "amount": 3.99
+              },
+              {
+                "id": "chicken",
+                "label": "Chicken thighs",
+                "amount": 8.75
+              },
+              {
+                "id": "bananas",
+                "label": "Bananas",
+                "amount": 1.89
+              },
+              {
+                "id": "energy",
+                "qty": 4,
+                "label": "Energy drink",
+                "amount": 11.96
+              },
+              {
+                "id": "bread",
+                "label": "Bread",
+                "amount": 3.29
+              }
+            ],
+            "totals": [
+              {
+                "label": "Subtotal",
+                "amount": 36.37
+              },
+              {
+                "label": "Sales tax",
+                "amount": 0.96
+              },
+              {
+                "label": "Total",
+                "amount": 37.33,
+                "strong": true
+              }
+            ],
+            "note": "Tax charged on non-food items only."
+          },
+          "answer": "energy",
+          "explain": "Four energy drinks a week is $11.96, or over $600 a year."
+        }
+      ]
+    },
+    {
+      "id": "mf-jordan",
+      "type": "lesson",
+      "format": "story",
+      "title": "Jordan’s First Month",
+      "summary": "Read about one real-feeling month, then work out where the money went.",
+      "xp": 10,
+      "story": {
+        "title": "Where did it all go?",
+        "character": "Jordan, 22, first apartment",
+        "body": "Jordan just moved into a first apartment and started a full-time job. Every month, **$2,400** of take-home pay lands in Jordan’s account.\n\nRent is **$1,100**. Phone and internet are **$100**. Groceries come to about **$300**. This month Jordan also spent **$420** eating out and **$180** on two concerts, and put **$0** into savings.\n\nAt the end of the month Jordan opens the bank app and wonders where it all went."
+      },
+      "steps": [
+        {
+          "id": "mf-jordan-q1",
+          "type": "number",
+          "prompt": "Add up everything Jordan spent this month.",
+          "answer": 2100,
+          "unit": "$",
+          "explain": "$1,100 + $100 + $300 + $420 + $180 = $2,100."
+        },
+        {
+          "id": "mf-jordan-q2",
+          "type": "number",
+          "prompt": "What was Jordan’s cash flow for the month?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$2,400 − $2,100 = $300. Positive, but none of it was saved on purpose."
+        },
+        {
+          "id": "mf-jordan-q3",
+          "type": "sort",
+          "prompt": "Sort Jordan’s spending.",
+          "buckets": [
+            "Need",
+            "Want"
+          ],
+          "items": [
+            [
+              "Rent",
+              0
+            ],
+            [
+              "Phone and internet",
+              0
+            ],
+            [
+              "Groceries",
+              0
+            ],
+            [
+              "Eating out",
+              1
+            ],
+            [
+              "Concert tickets",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "mf-jordan-q4",
+          "type": "multiple_choice",
+          "prompt": "Jordan wants to save $300 next month without missing rent. Best plan?",
+          "choices": [
+            "Eat out half as often and skip the concerts",
+            "Skip next month’s rent",
+            "Stop buying groceries",
+            "Wait and save whatever is left at the end"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "Rent is a need, and missing it can cost you your home.",
+            "Groceries are a need. Cut wants first.",
+            "That’s exactly what happened this month: $0 saved."
+          ],
+          "explain": "Half the eating out saves $210, skipping the concerts saves $180. That’s $390, more than enough."
+        },
+        {
+          "id": "mf-jordan-q5",
+          "type": "allocate",
+          "context": "Planning a month before it starts beats wondering where it went.",
+          "prompt": "Plan Jordan’s next month. Give every dollar of the $2,400 a job, with at least $300 going to savings.",
+          "total": 2400,
+          "step": 50,
+          "categories": [
+            {
+              "label": "Rent",
+              "fixed": 1100
+            },
+            {
+              "label": "Phone and internet",
+              "fixed": 100
+            },
+            {
+              "label": "Groceries",
+              "min": 300
+            },
+            {
+              "label": "Eating out"
+            },
+            {
+              "label": "Fun"
+            },
+            {
+              "label": "Savings",
+              "min": 300
+            }
+          ],
+          "explain": "Any plan works if the needs are covered, savings gets at least $300 and nothing is left without a job."
+        },
+        {
+          "id": "mf-jordan-q6",
+          "type": "true_false",
+          "prompt": "If Jordan’s income stays the same, saving more has to come from spending less.",
+          "answer": true,
+          "explain": "Same money in means the savings come out of what goes out. Wants first."
+        }
+      ]
+    },
+    {
+      "id": "mf-net-worth",
+      "type": "lesson",
+      "title": "Your Net Worth",
+      "summary": "The one number that keeps score.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mf-net-worth-q1",
+          "type": "multiple_choice",
+          "context": "An [[asset]] is something you own that's worth money: savings in the bank, a car, a laptop you could sell.",
+          "prompt": "Which of these is an asset?",
+          "choices": [
+            "Money in your savings",
+            "Your phone bill",
+            "A loan you still owe"
+          ],
+          "answer": 0,
+          "explain": "It's yours and it's worth money. Asset."
+        },
+        {
+          "id": "mf-net-worth-q2",
+          "type": "multiple_choice",
+          "context": "A [[liability]] is money you owe to someone else, like a loan you're still paying back.",
+          "prompt": "Which of these is a liability?",
+          "choices": [
+            "Cash in your wallet",
+            "A car loan you're paying off",
+            "A bike you've fully paid for"
+          ],
+          "answer": 1,
+          "explain": "You still owe it, so it's a liability."
+        },
+        {
+          "id": "mf-net-worth-q3",
+          "type": "number",
+          "context": "Your [[net worth]] is everything you own minus everything you owe. Own $10,000, owe $4,000, and your net worth is $6,000.",
+          "prompt": "You have $8,000 in savings and owe $5,000 on a car loan. What’s your net worth?",
+          "answer": 3000,
+          "explain": "$8,000 − $5,000 = $3,000.",
+          "unit": "$"
+        },
+        {
+          "id": "mf-net-worth-q4",
+          "type": "match",
+          "prompt": "Match each word to what it means.",
+          "pairs": [
+            [
+              "Asset",
+              "Something you own that's worth money"
+            ],
+            [
+              "Liability",
+              "Money you owe"
+            ],
+            [
+              "Net worth",
+              "What you own minus what you owe"
+            ],
+            [
+              "Cash flow",
+              "Income minus expenses"
+            ]
+          ]
+        },
+        {
+          "id": "mf-net-worth-q5",
+          "type": "true_false",
+          "prompt": "If you earn a lot, your net worth is automatically high.",
+          "answer": false,
+          "explain": "Earn a lot and spend it all, and you own nothing. Net worth is what you keep."
+        },
+        {
+          "id": "mf-net-worth-q6",
+          "type": "number",
+          "context": "Net worth can drop below zero. If you owe more than you own, it's negative. That's common when you're starting out. What matters is that it grows.",
+          "prompt": "You own $12,000 and owe $15,000. What’s your net worth? (Use the +/− button for a negative number.)",
+          "answer": -3000,
+          "explain": "$12,000 − $15,000 = −$3,000. Now you know the number to beat.",
+          "unit": "$"
+        },
+        {
+          "id": "mf-net-worth-q7",
+          "type": "multiple_choice",
+          "prompt": "Which of these raises your net worth?",
+          "choices": [
+            "Taking a new loan to buy a TV",
+            "Paying off part of a loan",
+            "Spending your savings on a holiday"
+          ],
+          "answer": 1,
+          "explain": "Owe less, and your net worth goes up."
+        }
+      ]
+    },
+    {
+      "id": "mf-bills",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Bill Stack",
+      "summary": "Read two real bills, catch a charge that shouldn’t be there, pick the cheaper plan.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mf-bills-q1",
+          "type": "multiple_choice",
+          "context": "Every bill has a [[due date]]: the last day to pay it without being late.",
+          "doc": {
+            "kind": "bill",
+            "title": "Bright Power",
+            "subtitle": "Electricity bill",
+            "meta": [
+              [
+                "Account",
+                "40-118-2207"
+              ],
+              [
+                "Billing period",
+                "Sep 3–Oct 2"
+              ],
+              [
+                "Due date",
+                "Oct 21"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "use",
+                "label": "Electricity used, 412 kWh",
+                "amount": 61.8
+              },
+              {
+                "id": "delivery",
+                "label": "Delivery charge",
+                "amount": 14.5
+              },
+              {
+                "id": "tax",
+                "label": "Taxes and fees",
+                "amount": 7.82
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 84.12,
+                "strong": true
+              }
+            ],
+            "note": "Payments received after Oct 21 add a $15.00 late fee."
+          },
+          "prompt": "What’s the last day you can pay this bill on time?",
+          "choices": [
+            "Oct 21",
+            "Oct 2",
+            "Sep 3"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "That’s when the billing period ended, not the deadline.",
+            "That’s when the billing period started."
+          ],
+          "explain": "The due date is boxed at the top: Oct 21."
+        },
+        {
+          "id": "mf-bills-q2",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Bright Power",
+            "subtitle": "Electricity bill",
+            "meta": [
+              [
+                "Account",
+                "40-118-2207"
+              ],
+              [
+                "Billing period",
+                "Sep 3–Oct 2"
+              ],
+              [
+                "Due date",
+                "Oct 21"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "use",
+                "label": "Electricity used, 412 kWh",
+                "amount": 61.8
+              },
+              {
+                "id": "delivery",
+                "label": "Delivery charge",
+                "amount": 14.5
+              },
+              {
+                "id": "tax",
+                "label": "Taxes and fees",
+                "amount": 7.82
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 84.12,
+                "strong": true
+              }
+            ],
+            "note": "Payments received after Oct 21 add a $15.00 late fee."
+          },
+          "prompt": "How much do you owe on this bill in total?",
+          "answer": 84.12,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$61.80 + $14.50 + $7.82 = $84.12."
+        },
+        {
+          "id": "mf-bills-q3",
+          "type": "number",
+          "context": "Pay after the due date and many companies add a [[late fee]]: a penalty for paying late. Read the small print at the bottom.",
+          "doc": {
+            "kind": "bill",
+            "title": "Bright Power",
+            "subtitle": "Electricity bill",
+            "meta": [
+              [
+                "Account",
+                "40-118-2207"
+              ],
+              [
+                "Billing period",
+                "Sep 3–Oct 2"
+              ],
+              [
+                "Due date",
+                "Oct 21"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "use",
+                "label": "Electricity used, 412 kWh",
+                "amount": 61.8
+              },
+              {
+                "id": "delivery",
+                "label": "Delivery charge",
+                "amount": 14.5
+              },
+              {
+                "id": "tax",
+                "label": "Taxes and fees",
+                "amount": 7.82
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 84.12,
+                "strong": true
+              }
+            ],
+            "note": "Payments received after Oct 21 add a $15.00 late fee."
+          },
+          "prompt": "You forget, and pay on Oct 25. How much do you pay now?",
+          "answer": 99.12,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$84.12 + $15.00 late fee = $99.12. Same electricity, $15 more."
+        },
+        {
+          "id": "mf-bills-q4",
+          "type": "spot",
+          "context": "Read the lines, not just the total. Mistakes and surprise charges hide in there.",
+          "prompt": "You didn’t leave the country this month. Which charge shouldn’t be on your phone bill?",
+          "doc": {
+            "kind": "bill",
+            "title": "Ridgeline Mobile",
+            "subtitle": "Phone bill",
+            "meta": [
+              [
+                "Account",
+                "555-0148"
+              ],
+              [
+                "Due date",
+                "Oct 14"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "plan",
+                "label": "Unlimited Basic plan",
+                "amount": 40.0
+              },
+              {
+                "id": "device",
+                "label": "Phone payment, 12 of 24",
+                "amount": 22.5
+              },
+              {
+                "id": "roam",
+                "label": "International roaming day pass × 3",
+                "amount": 30.0
+              },
+              {
+                "id": "tax",
+                "label": "Taxes and fees",
+                "amount": 6.84
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 99.34,
+                "strong": true
+              }
+            ]
+          },
+          "answer": "roam",
+          "explain": "Three roaming day passes at $10 each. Call the company and ask them to remove it."
+        },
+        {
+          "id": "mf-bills-q5",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Ridgeline Mobile",
+            "subtitle": "Phone bill",
+            "meta": [
+              [
+                "Account",
+                "555-0148"
+              ],
+              [
+                "Due date",
+                "Oct 14"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "plan",
+                "label": "Unlimited Basic plan",
+                "amount": 40.0
+              },
+              {
+                "id": "device",
+                "label": "Phone payment, 12 of 24",
+                "amount": 22.5
+              },
+              {
+                "id": "roam",
+                "label": "International roaming day pass × 3",
+                "amount": 30.0
+              },
+              {
+                "id": "tax",
+                "label": "Taxes and fees",
+                "amount": 6.84
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total due",
+                "amount": 99.34,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "They agree to take that charge off. What should the new total be?",
+          "answer": 69.34,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$99.34 − $30.00 = $69.34."
+        },
+        {
+          "id": "mf-bills-q6",
+          "type": "multiple_choice",
+          "context": "Comparing two prices? Line them up over the same stretch of time, like a full year.",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Plan A",
+              "subtitle": "Ridgeline Unlimited",
+              "lines": [
+                {
+                  "id": "price",
+                  "label": "Monthly price",
+                  "amount": 40.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Activation fee, one time",
+                  "amount": 0.0
+                }
+              ],
+              "note": "Unlimited talk, text and data."
+            },
+            {
+              "kind": "bill",
+              "title": "Plan B",
+              "subtitle": "Cedar Prepaid",
+              "lines": [
+                {
+                  "id": "price",
+                  "label": "Monthly price",
+                  "amount": 30.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Activation fee, one time",
+                  "amount": 50.0
+                }
+              ],
+              "note": "Unlimited talk, text and data."
+            }
+          ],
+          "prompt": "Over one year, which plan costs less, and by how much?",
+          "choices": [
+            "Plan B, by $70",
+            "Plan A, by $70",
+            "Plan B, by $120",
+            "They cost the same"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "Plan A is $480 a year. Plan B is $410 even with its fee.",
+            "That forgets Plan B’s $50 activation fee.",
+            "Plan A is $480 a year. Plan B is $410."
+          ],
+          "explain": "Plan A: $40 × 12 = $480. Plan B: $30 × 12 + $50 = $410."
+        },
+        {
+          "id": "mf-bills-q7",
+          "type": "true_false",
+          "prompt": "Paying a bill a day after its due date is fine as long as you pay the full amount.",
+          "answer": false,
+          "explain": "Late is late. You can get a [[late fee]], and repeated late payments can hurt you later."
+        }
+      ]
+    },
+    {
+      "id": "mf-snapshot",
+      "type": "lesson",
+      "format": "story",
+      "title": "Maya’s Money Check-Up",
+      "summary": "Cash flow and net worth for one real-feeling person.",
+      "xp": 10,
+      "story": {
+        "title": "A one-page check-up",
+        "character": "Maya, 28, retail manager",
+        "body": "Maya sat down to see where she stands. Each month she takes home **$3,200**. Her expenses: rent **$1,300**, groceries **$350**, a car payment of **$280**, her phone **$60**, and about **$700** on eating out and shopping.\n\nShe owns a car worth **$9,000** and has **$2,500** in the bank. She still owes **$6,000** on the car and **$1,200** to a friend."
+      },
+      "steps": [
+        {
+          "id": "mf-snapshot-q1",
+          "type": "number",
+          "prompt": "Add up Maya’s monthly expenses.",
+          "answer": 2690,
+          "unit": "$",
+          "explain": "$1,300 + $350 + $280 + $60 + $700 = $2,690."
+        },
+        {
+          "id": "mf-snapshot-q2",
+          "type": "number",
+          "prompt": "What’s her monthly cash flow?",
+          "answer": 510,
+          "unit": "$",
+          "explain": "$3,200 − $2,690 = $510."
+        },
+        {
+          "id": "mf-snapshot-q3",
+          "type": "number",
+          "prompt": "Add up her assets.",
+          "answer": 11500,
+          "unit": "$",
+          "explain": "Car $9,000 + bank $2,500 = $11,500."
+        },
+        {
+          "id": "mf-snapshot-q4",
+          "type": "number",
+          "prompt": "Add up her liabilities.",
+          "answer": 7200,
+          "unit": "$",
+          "explain": "Car $6,000 + friend $1,200 = $7,200."
+        },
+        {
+          "id": "mf-snapshot-q5",
+          "type": "number",
+          "prompt": "What’s her net worth?",
+          "answer": 4300,
+          "unit": "$",
+          "explain": "$11,500 − $7,200 = $4,300."
+        },
+        {
+          "id": "mf-snapshot-q6",
+          "type": "sort",
+          "prompt": "Need or want?",
+          "buckets": [
+            "Need",
+            "Want"
+          ],
+          "items": [
+            [
+              "Rent",
+              0
+            ],
+            [
+              "Groceries",
+              0
+            ],
+            [
+              "Car payment",
+              0
+            ],
+            [
+              "Phone",
+              0
+            ],
+            [
+              "Eating out and shopping",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "mf-snapshot-q7",
+          "type": "multiple_choice",
+          "prompt": "Maya wants her net worth to grow faster. Best first move?",
+          "choices": [
+            "Trim eating out and shopping, and save the difference",
+            "Buy a more expensive car",
+            "Stop paying what she owes on the car"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "A pricier car usually means more owed, and a car loses value.",
+            "Missing payments brings fees and bigger trouble."
+          ],
+          "explain": "Every dollar moved from wants to savings raises her net worth."
+        }
+      ]
+    },
+    {
+      "id": "mf-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you're closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "mf-trial",
+      "type": "boss",
+      "title": "Den Trial: Fundamentals",
+      "summary": "Nine questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 3,
+      "steps": [
+        {
+          "id": "mf-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "You earn more than last year, but your savings haven't grown. Most likely culprit?",
+          "choices": [
+            "Positive cash flow",
+            "Lifestyle creep",
+            "Your net worth went up"
+          ],
+          "answer": 1,
+          "explain": "Spending quietly rose to match the raise. Classic [[lifestyle creep]]."
+        },
+        {
+          "id": "mf-trial-q2",
+          "type": "number",
+          "prompt": "You earn $2,800 a month. Rent is $1,100, bills are $600, and food and fun come to $900. What’s your cash flow?",
+          "answer": 200,
+          "explain": "$2,800 − $1,100 − $600 − $900 = $200.",
+          "unit": "$"
+        },
+        {
+          "id": "mf-trial-q3",
+          "type": "true_false",
+          "prompt": "Your net worth can go up even if your income stays the same.",
+          "answer": true,
+          "explain": "Spend less or pay down what you owe, and it rises. Income isn't the only lever."
+        },
+        {
+          "id": "mf-trial-q4",
+          "type": "fill_blank",
+          "prompt": "A car loan you're still paying back is a ___.",
+          "choices": [
+            "liability",
+            "asset",
+            "need"
+          ],
+          "answer": 0,
+          "explain": "You owe it, so it's a [[liability]]."
+        },
+        {
+          "id": "mf-trial-q5",
+          "type": "multiple_choice",
+          "prompt": "Which move improves your cash flow fastest?",
+          "choices": [
+            "Checking your net worth every day",
+            "Cutting a few big wants",
+            "Buying a nicer car"
+          ],
+          "answer": 1,
+          "explain": "Less going out means more left over, starting this month."
+        },
+        {
+          "id": "mf-trial-q6",
+          "type": "number",
+          "doc": {
+            "kind": "paystub",
+            "title": "Harbor Grocery",
+            "subtitle": "Pay stub · Employee: You",
+            "meta": [
+              [
+                "Pay period",
+                "Oct 1–15"
+              ],
+              [
+                "Pay date",
+                "Oct 20"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "gross",
+                "section": "Earnings",
+                "label": "Regular pay, 80 hrs × $15.00",
+                "amount": 1200.0
+              },
+              {
+                "id": "fed",
+                "section": "Deductions",
+                "label": "Federal income tax",
+                "amount": -84.0
+              },
+              {
+                "id": "state",
+                "section": "Deductions",
+                "label": "State income tax",
+                "amount": -36.0
+              },
+              {
+                "id": "ss",
+                "section": "Deductions",
+                "label": "Social Security",
+                "amount": -74.4
+              },
+              {
+                "id": "medicare",
+                "section": "Deductions",
+                "label": "Medicare",
+                "amount": -17.4
+              }
+            ],
+            "totals": [
+              {
+                "label": "Gross pay",
+                "amount": 1200.0
+              },
+              {
+                "label": "Total deductions",
+                "amount": -211.8
+              }
+            ]
+          },
+          "prompt": "This stub doesn’t print the net pay. How much lands in your bank account?",
+          "answer": 988.2,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$1,200.00 − $211.80 of deductions = $988.20."
+        }
+      ]
+    }
+  ]
+}

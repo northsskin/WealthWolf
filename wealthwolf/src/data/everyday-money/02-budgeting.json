@@ -1,0 +1,823 @@
+{
+  "id": "budgeting",
+  "section": "everyday-money",
+  "order": 2,
+  "title": "Budgeting",
+  "description": "Tell your money where to go before it wanders off.",
+  "wolfLine": "A budget isn't a cage. It's a battle plan.",
+  "terms": {
+    "budget": {
+      "term": "Budget",
+      "definition": "A plan for your money: you decide ahead of time how much goes to each thing.",
+      "example": "$1,000 for rent, $300 for food, $200 for saving."
+    },
+    "50-30-20": {
+      "term": "50/30/20 rule",
+      "definition": "A simple budget: 50% of take-home pay for needs, 30% for wants, 20% for saving and paying off what you owe.",
+      "example": "Take home $2,000: $1,000 needs, $600 wants, $400 saving."
+    },
+    "zero-based-budget": {
+      "term": "Zero-based budget",
+      "definition": "A budget where you give every bit of your take-home pay a job, until nothing is left unplanned.",
+      "example": "Earn $2,000: $1,200 needs + $400 wants + $400 saving = $2,000. Nothing left without a job."
+    },
+    "sinking-fund": {
+      "term": "Sinking fund",
+      "definition": "Money you save a little at a time for a cost you know is coming.",
+      "example": "Saving $100 a month for six months to pay for a $600 holiday."
+    },
+    "irregular-income": {
+      "term": "Irregular income",
+      "definition": "Pay that changes from month to month, like tips, gig work or commission.",
+      "example": "Earning $2,900 one month and $1,800 the next driving for delivery apps."
+    },
+    "income-buffer": {
+      "term": "Income buffer",
+      "definition": "Money saved from good months to cover slow ones, so your bills still get paid when income dips.",
+      "example": "Parking $1,500 from a strong month and drawing on it when a slow month comes in short."
+    }
+  },
+  "lessons": [
+    {
+      "id": "bg-why-budget",
+      "type": "lesson",
+      "title": "Why Budget?",
+      "summary": "A plan you make before the money shows up.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bg-why-budget-q1",
+          "type": "info",
+          "title": "Money with a plan",
+          "body": "A [[budget]] is a plan for your money. Before the month starts, you decide how much goes to rent, food, fun and saving.\n\nWithout one, the month decides for you. Money goes wherever the day takes it, and you find out what happened once it’s gone."
+        },
+        {
+          "id": "bg-why-budget-q2",
+          "type": "multiple_choice",
+          "prompt": "When do you make a budget?",
+          "choices": [
+            "Before the money is spent",
+            "After the month ends",
+            "Only when you’re broke"
+          ],
+          "answer": 0,
+          "explain": "A budget is a plan, and plans come first."
+        },
+        {
+          "id": "bg-why-budget-q3",
+          "type": "true_false",
+          "context": "A budget isn’t only about cutting back. It also tells you how much you **can** spend on fun without worrying.",
+          "prompt": "A budget means you can never spend money on fun.",
+          "answer": false,
+          "explain": "A good budget includes fun on purpose. Then you can enjoy it without guilt."
+        },
+        {
+          "id": "bg-why-budget-q4",
+          "type": "multiple_choice",
+          "context": "Every budget starts with one number: how much actually comes in. Use your [[take-home pay]], not your pay before taxes.",
+          "prompt": "Your pay before taxes is $3,200. $2,600 lands in your account. Which number should your budget start from?",
+          "choices": [
+            "$3,200",
+            "$2,600",
+            "$600"
+          ],
+          "answer": 1,
+          "explain": "Budget the money you actually get: $2,600."
+        },
+        {
+          "id": "bg-why-budget-q5",
+          "type": "number",
+          "context": "A budget is simple subtraction: money in, minus everything you’ve planned. Whatever is left still needs a plan.",
+          "prompt": "You take home $2,600. You’ve planned $1,200 for rent, $350 for food and $150 for your phone and bus pass. How much is still unplanned?",
+          "answer": 900,
+          "unit": "$",
+          "explain": "$2,600 − $1,200 − $350 − $150 = $900. That money still needs a job."
+        },
+        {
+          "id": "bg-why-budget-q6",
+          "type": "multiple_choice",
+          "prompt": "Which is the best reason to budget?",
+          "choices": [
+            "To decide where your money goes before it goes",
+            "Because banks require it",
+            "To make your income bigger"
+          ],
+          "answer": 0,
+          "explain": "A budget doesn’t change what you earn. It changes how much of it you control."
+        },
+        {
+          "id": "bg-why-budget-q7",
+          "type": "order",
+          "prompt": "Put these first budget steps in order.",
+          "items": [
+            "Find your take-home pay",
+            "List your must-pay bills",
+            "Plan food, transport and fun",
+            "Give what’s left to saving"
+          ],
+          "explain": "Money in, must-pays, everyday costs, then the rest gets a job."
+        }
+      ]
+    },
+    {
+      "id": "bg-50-30-20",
+      "type": "lesson",
+      "title": "The 50/30/20 Rule",
+      "summary": "A simple split for needs, wants and your future.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bg-50-30-20-q1",
+          "type": "multiple_choice",
+          "context": "A [[budget]] is a plan for your money. You decide ahead of time how much goes where, instead of finding out at the end of the month.",
+          "prompt": "What is a budget?",
+          "choices": [
+            "A type of bank account",
+            "A plan for where your money goes",
+            "A loan from the bank"
+          ],
+          "answer": 1,
+          "explain": "A plan, made before you spend."
+        },
+        {
+          "id": "bg-50-30-20-q2",
+          "type": "multiple_choice",
+          "context": "Your job might pay one number, but taxes come out first. What actually lands in your account is your [[take-home pay]].",
+          "prompt": "Your job pays $3,000 a month. After taxes, $2,400 lands in your account. What's your take-home pay?",
+          "choices": [
+            "$3,000",
+            "$600",
+            "$2,400"
+          ],
+          "answer": 2,
+          "explain": "$2,400 is what you can actually spend and save, so that's what you budget with."
+        },
+        {
+          "id": "bg-50-30-20-q3",
+          "type": "multiple_choice",
+          "context": "The [[50/30/20 rule|50-30-20]] is an easy first budget. Split your take-home pay: **50%** for [[needs|need]], **30%** for [[wants|want]], **20%** for saving.",
+          "prompt": "In the 50/30/20 rule, what is the 20% for?",
+          "choices": [
+            "Saving",
+            "Wants",
+            "Rent"
+          ],
+          "answer": 0,
+          "explain": "20% goes to future you: saving, and paying off anything you owe."
+        },
+        {
+          "id": "bg-50-30-20-q4",
+          "type": "number",
+          "context": "To find a percentage, multiply. 20% of $1,000 is $1,000 × 0.20 = $200.",
+          "prompt": "You take home $4,000 a month. Using 50/30/20, how much goes to saving?",
+          "answer": 800,
+          "explain": "$4,000 × 0.20 = $800.",
+          "unit": "$"
+        },
+        {
+          "id": "bg-50-30-20-q5",
+          "type": "number",
+          "prompt": "Same $4,000 take-home. How much is the needs budget (50%)?",
+          "answer": 2000,
+          "explain": "50% is half. Half of $4,000 is $2,000.",
+          "unit": "$"
+        },
+        {
+          "id": "bg-50-30-20-q6",
+          "type": "true_false",
+          "context": "In expensive cities, needs can cost more than 50%. That's okay. Take the extra from wants, and protect your saving.",
+          "prompt": "If your needs cost more than 50%, you should cut your saving first.",
+          "answer": false,
+          "explain": "Squeeze wants before you touch the 20%."
+        },
+        {
+          "id": "bg-50-30-20-q7",
+          "type": "fill_blank",
+          "prompt": "The 30% in the 50/30/20 rule is for ___.",
+          "choices": [
+            "needs",
+            "wants",
+            "taxes"
+          ],
+          "answer": 1,
+          "explain": "Thirty percent for fun, guilt-free, as long as it stays at thirty."
+        }
+      ]
+    },
+    {
+      "id": "bg-50-30-20-build",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Build a 50/30/20 Budget",
+      "summary": "Sort real costs into needs, wants and saving, then split a paycheck.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bg-50-30-20-build-q1",
+          "type": "sort",
+          "context": "Quick reminder: 50% needs, 30% wants, 20% saving.",
+          "prompt": "Sort Priya’s monthly costs.",
+          "buckets": [
+            "Need",
+            "Want",
+            "Saving"
+          ],
+          "items": [
+            [
+              "Rent",
+              0
+            ],
+            [
+              "Bus pass",
+              0
+            ],
+            [
+              "Groceries",
+              0
+            ],
+            [
+              "Streaming service",
+              1
+            ],
+            [
+              "Weekend brunch",
+              1
+            ],
+            [
+              "Emergency fund deposit",
+              2
+            ],
+            [
+              "Holiday savings",
+              2
+            ],
+            [
+              "Gym membership",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "bg-50-30-20-build-q2",
+          "type": "number",
+          "prompt": "Priya takes home $3,400 a month. What’s her 50% needs budget?",
+          "answer": 1700,
+          "unit": "$",
+          "explain": "$3,400 × 0.50 = $1,700."
+        },
+        {
+          "id": "bg-50-30-20-build-q3",
+          "type": "number",
+          "prompt": "And her 30% wants budget?",
+          "answer": 1020,
+          "unit": "$",
+          "explain": "$3,400 × 0.30 = $1,020."
+        },
+        {
+          "id": "bg-50-30-20-build-q4",
+          "type": "number",
+          "prompt": "And the 20% for saving?",
+          "answer": 680,
+          "unit": "$",
+          "explain": "$3,400 × 0.20 = $680."
+        },
+        {
+          "id": "bg-50-30-20-build-q5",
+          "type": "number",
+          "context": "Now add up what her needs really cost and compare.",
+          "prompt": "Priya’s needs: rent $1,250, groceries $370, bus pass $85, phone $45. What do her needs cost in total?",
+          "answer": 1750,
+          "unit": "$",
+          "explain": "$1,250 + $370 + $85 + $45 = $1,750."
+        },
+        {
+          "id": "bg-50-30-20-build-q6",
+          "type": "multiple_choice",
+          "prompt": "Her needs ($1,750) are $50 over the $1,700 needs budget. What’s the best fix?",
+          "choices": [
+            "Take the $50 from wants",
+            "Take the $50 from saving",
+            "Ignore it"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "Protect the 20%. Squeeze wants first.",
+            "Then the plan stops matching real life."
+          ],
+          "explain": "Wants drop to $970. Saving stays at $680."
+        },
+        {
+          "id": "bg-50-30-20-build-q7",
+          "type": "allocate",
+          "context": "Now give every dollar a job, the 50/30/20 way.",
+          "prompt": "Split Priya’s $3,400. Needs must cover at least $1,750, and saving gets at least $680. Type an amount or use the buttons.",
+          "total": 3400,
+          "step": 10,
+          "categories": [
+            {
+              "label": "Needs",
+              "min": 1750
+            },
+            {
+              "label": "Wants"
+            },
+            {
+              "label": "Saving",
+              "min": 680
+            }
+          ],
+          "explain": "Needs covered, saving protected, and every dollar has a job."
+        },
+        {
+          "id": "bg-50-30-20-build-q8",
+          "type": "true_false",
+          "prompt": "In 50/30/20, paying off money you owe faster than required counts toward the 20%.",
+          "answer": true,
+          "explain": "The 20% is for future you: saving, and paying down what you owe."
+        }
+      ]
+    },
+    {
+      "id": "bg-zero-based",
+      "type": "lesson",
+      "title": "Zero-Based Budgeting",
+      "summary": "Give every unit of income a job.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bg-zero-based-q1",
+          "type": "multiple_choice",
+          "context": "In a [[zero-based budget]], you give every bit of your take-home pay a job (bills, food, saving, fun) until there's nothing left without one.",
+          "prompt": "In a zero-based budget, what does the \"zero\" mean?",
+          "choices": [
+            "You end the month with no money",
+            "You spend nothing",
+            "No money is left without a job"
+          ],
+          "answer": 2,
+          "explain": "Zero unplanned money, not zero money."
+        },
+        {
+          "id": "bg-zero-based-q2",
+          "type": "number",
+          "context": "Example: take home $2,000. Give $1,200 to needs, $400 to wants and $400 to saving. $2,000 − $1,200 − $400 − $400 = $0. Every bit has a job.",
+          "prompt": "You take home $3,000. You've planned $1,400 for needs, $600 for wants and $700 for saving. How much still needs a job?",
+          "answer": 300,
+          "explain": "$3,000 − $1,400 − $600 − $700 = $300. Give it a job too.",
+          "unit": "$"
+        },
+        {
+          "id": "bg-zero-based-q3",
+          "type": "true_false",
+          "prompt": "In a zero-based budget, putting money into saving counts as giving it a job.",
+          "answer": true,
+          "explain": "Saving is a job. The money is still yours, just with orders."
+        },
+        {
+          "id": "bg-zero-based-q4",
+          "type": "multiple_choice",
+          "prompt": "When should you make your zero-based budget?",
+          "choices": [
+            "Before the month starts",
+            "At the end of the month",
+            "Only when you run out of money"
+          ],
+          "answer": 0,
+          "explain": "Plan first, so money has orders before it arrives."
+        },
+        {
+          "id": "bg-zero-based-q5",
+          "type": "order",
+          "prompt": "Put the zero-based budget steps in order.",
+          "items": [
+            "Write down your take-home pay",
+            "Give every bit of it a job",
+            "Watch what you spend during the month",
+            "Adjust next month's plan"
+          ],
+          "explain": "Plan, assign, watch, adjust. Then repeat."
+        },
+        {
+          "id": "bg-zero-based-q6",
+          "type": "fill_blank",
+          "prompt": "In a zero-based budget, the money left without a job should equal ___.",
+          "choices": [
+            "half your pay",
+            "zero",
+            "your rent"
+          ],
+          "answer": 1,
+          "explain": "Every bit has somewhere to go."
+        }
+      ]
+    },
+    {
+      "id": "bg-pay-period",
+      "type": "lesson",
+      "title": "Budgeting by Paycheck",
+      "summary": "Paid every two weeks? Match each bill to the paycheck that pays it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bg-pay-period-q1",
+          "type": "info",
+          "title": "Paydays and due dates",
+          "body": "Many jobs pay every two weeks, not once a month. Your money arrives in pieces, while your bills are due on their own dates.\n\nThe trick is to plan **per paycheck**: decide which bills each paycheck pays, so the rent money is already there when rent is due."
+        },
+        {
+          "id": "bg-pay-period-q2",
+          "type": "multiple_choice",
+          "prompt": "Paid every two weeks, why do most months have two paychecks but a couple have three?",
+          "choices": [
+            "52 weeks ÷ 2 = 26 paychecks, and 26 doesn’t split evenly into 12 months",
+            "Employers pay extra in some months",
+            "It’s a payroll mistake"
+          ],
+          "answer": 0,
+          "explain": "26 paychecks across 12 months means two months get a third one."
+        },
+        {
+          "id": "bg-pay-period-q3",
+          "type": "number",
+          "prompt": "You get $1,200 every two weeks. How much is that in a year of 26 paychecks?",
+          "answer": 31200,
+          "unit": "$",
+          "explain": "$1,200 × 26 = $31,200."
+        },
+        {
+          "id": "bg-pay-period-q4",
+          "type": "number",
+          "prompt": "Spread over 12 months, what’s that per month on average?",
+          "answer": 2600,
+          "unit": "$",
+          "explain": "$31,200 ÷ 12 = $2,600."
+        },
+        {
+          "id": "bg-pay-period-q5",
+          "type": "multiple_choice",
+          "context": "Plan each month on **two** paychecks. When a third arrives, it’s a bonus you can give a job.",
+          "prompt": "A month brings a third paycheck. Smart move?",
+          "choices": [
+            "Give it a job, like savings or a goal",
+            "Spend it, it was unexpected",
+            "Ignore it and see where it goes"
+          ],
+          "answer": 0,
+          "explain": "Your budget runs on two paychecks. The third can jump-start a goal."
+        },
+        {
+          "id": "bg-pay-period-q6",
+          "type": "sort",
+          "prompt": "Your paychecks land on the 1st and the 15th. Which paycheck should pay each bill?",
+          "buckets": [
+            "1st paycheck",
+            "15th paycheck"
+          ],
+          "items": [
+            [
+              "Rent, due the 1st",
+              0
+            ],
+            [
+              "Internet, due the 5th",
+              0
+            ],
+            [
+              "Electricity, due the 12th",
+              0
+            ],
+            [
+              "Phone, due the 20th",
+              1
+            ],
+            [
+              "Car insurance, due the 25th",
+              1
+            ]
+          ],
+          "explain": "Each bill comes out of the last paycheck before its due date."
+        },
+        {
+          "id": "bg-pay-period-q7",
+          "type": "true_false",
+          "prompt": "A bill due on the 10th should come out of the paycheck you get on the 15th.",
+          "answer": false,
+          "explain": "The 15th is too late. Pay it from the paycheck that arrives before the due date."
+        }
+      ]
+    },
+    {
+      "id": "bg-irregular-income",
+      "type": "lesson",
+      "format": "story",
+      "title": "Sam’s Uneven Paychecks",
+      "summary": "When income jumps around, budget for the slow months.",
+      "xp": 10,
+      "story": {
+        "title": "Feast or famine",
+        "character": "Sam, 26, delivery driver",
+        "body": "Sam drives for two delivery apps. Some months are great, some are slow. Over the last four months Sam earned **$2,900**, **$1,800**, **$2,400** and **$3,300**.\n\nIn the good months Sam spent freely. In the slow month, rent was late and Sam paid a **$50** late fee.\n\nSam’s must-pay costs (rent, phone, insurance, groceries) come to **$1,700** a month."
+      },
+      "steps": [
+        {
+          "id": "bg-irregular-income-q1",
+          "type": "number",
+          "prompt": "What was Sam’s lowest month?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$1,800, in the second month."
+        },
+        {
+          "id": "bg-irregular-income-q2",
+          "type": "number",
+          "prompt": "What’s Sam’s average month? Add up the four months and divide by 4.",
+          "answer": 2600,
+          "unit": "$",
+          "explain": "($2,900 + $1,800 + $2,400 + $3,300) ÷ 4 = $10,400 ÷ 4 = $2,600."
+        },
+        {
+          "id": "bg-irregular-income-q3",
+          "type": "multiple_choice",
+          "context": "With [[irregular income]], plan each month around your **lowest** month, not your best one.",
+          "prompt": "Which number should Sam build the monthly budget on?",
+          "choices": [
+            "$3,300, the best month",
+            "$2,600, the average",
+            "$1,800, the lowest month"
+          ],
+          "answer": 2,
+          "why": [
+            "A plan built on the best month breaks in a slow one.",
+            "Closer, but plenty of months come in under the average.",
+            ""
+          ],
+          "explain": "Plan on $1,800. Anything above it is extra."
+        },
+        {
+          "id": "bg-irregular-income-q4",
+          "type": "number",
+          "prompt": "Sam’s must-pays are $1,700. In the lowest month, how much is left after them?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$1,800 − $1,700 = $100. Tight, but covered."
+        },
+        {
+          "id": "bg-irregular-income-q5",
+          "type": "multiple_choice",
+          "context": "A good-month habit: park the extra in an [[income buffer]], then pay yourself a steady amount from it in slow months.",
+          "prompt": "In a $3,300 month, Sam plans on $1,800. What should happen to the other $1,500?",
+          "choices": [
+            "It goes into the buffer for slow months",
+            "Spend it, it’s a good month",
+            "Leave it in checking and see"
+          ],
+          "answer": 0,
+          "explain": "Good months fill the buffer. Slow months draw from it."
+        },
+        {
+          "id": "bg-irregular-income-q6",
+          "type": "true_false",
+          "prompt": "With an income buffer, Sam wouldn’t have paid that $50 late fee.",
+          "answer": true,
+          "explain": "The slow month could have borrowed from the good ones."
+        }
+      ]
+    },
+    {
+      "id": "bg-sinking-funds",
+      "type": "lesson",
+      "title": "Sinking Funds",
+      "summary": "Stop being ambushed by costs you saw coming.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bg-sinking-funds-q1",
+          "type": "multiple_choice",
+          "context": "A [[sinking fund]] is money you save a little at a time for a cost you **know** is coming, like a holiday or a yearly bill.",
+          "prompt": "Which of these is a good fit for a sinking fund?",
+          "choices": [
+            "A trip you're taking next summer",
+            "A surprise hospital bill",
+            "Your daily coffee"
+          ],
+          "answer": 0,
+          "explain": "You know it's coming and roughly what it costs. Perfect."
+        },
+        {
+          "id": "bg-sinking-funds-q2",
+          "type": "number",
+          "context": "To work out the monthly amount, divide the cost by the months you have. $600 in 6 months: $600 ÷ 6 = $100 a month.",
+          "prompt": "Car insurance of $900 is due in 6 months. How much should you save each month?",
+          "answer": 150,
+          "explain": "$900 ÷ 6 = $150 a month.",
+          "unit": "$"
+        },
+        {
+          "id": "bg-sinking-funds-q3",
+          "type": "number",
+          "prompt": "You want $1,200 for a trip in 10 months. How much a month?",
+          "answer": 120,
+          "explain": "$1,200 ÷ 10 = $120 a month.",
+          "unit": "$"
+        },
+        {
+          "id": "bg-sinking-funds-q4",
+          "type": "true_false",
+          "prompt": "A sinking fund is meant for surprise bills you didn't see coming.",
+          "answer": false,
+          "explain": "Sinking funds are for costs you can see coming. Surprises need a different safety net, and you'll build one in the next module."
+        },
+        {
+          "id": "bg-sinking-funds-q5",
+          "type": "fill_blank",
+          "prompt": "Gifts you buy every December are predictable, so they belong in a ___ fund.",
+          "choices": [
+            "surprise",
+            "sinking",
+            "wants"
+          ],
+          "answer": 1,
+          "explain": "Same time every year. Save a little each month."
+        },
+        {
+          "id": "bg-sinking-funds-q6",
+          "type": "multiple_choice",
+          "prompt": "What's the point of a sinking fund?",
+          "choices": [
+            "So a big planned cost doesn't wreck one month's budget",
+            "To avoid making a budget",
+            "To spend more on wants"
+          ],
+          "answer": 0,
+          "explain": "Spread the hit over many months instead of taking it all at once."
+        }
+      ]
+    },
+    {
+      "id": "bg-when-it-breaks",
+      "type": "lesson",
+      "format": "call",
+      "title": "When the Budget Breaks",
+      "summary": "Overspent? Move money, don’t quit.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bg-when-it-breaks-q1",
+          "type": "multiple_choice",
+          "context": "Every budget breaks sometimes: a car repair, a birthday, a bad week. The fix isn’t to quit. It’s to move money from one category to another.",
+          "prompt": "You’ve spent your whole $300 food budget by the 20th. What’s the best move?",
+          "choices": [
+            "Move $80 from your fun budget to food",
+            "Stop eating",
+            "Give up on budgeting this month",
+            "Borrow from next month’s budget"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "Food is a need. Cut wants, not meals.",
+            "One overspend doesn’t cancel the whole plan.",
+            "That starts next month already in a hole."
+          ],
+          "explain": "Move money from a want to the need. The plan still balances."
+        },
+        {
+          "id": "bg-when-it-breaks-q2",
+          "type": "number",
+          "prompt": "Your fun budget was $200. You move $80 to food. How much fun money is left?",
+          "answer": 120,
+          "unit": "$",
+          "explain": "$200 − $80 = $120."
+        },
+        {
+          "id": "bg-when-it-breaks-q3",
+          "type": "multiple_choice",
+          "prompt": "A friend’s wedding costs $250 you didn’t plan for. Which category should pay first?",
+          "choices": [
+            "Fun and eating out",
+            "Rent",
+            "Your emergency savings"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "Rent can’t move. It’s a need with a due date.",
+            "A wedding you knew about isn’t an emergency."
+          ],
+          "explain": "Take it from wants. Next year, a [[sinking fund]] for gifts and events means no scramble."
+        },
+        {
+          "id": "bg-when-it-breaks-q4",
+          "type": "true_false",
+          "prompt": "If you overspend one month, you should cut next month’s saving to make up for it.",
+          "answer": false,
+          "explain": "Trim next month’s wants instead, and keep saving first."
+        },
+        {
+          "id": "bg-when-it-breaks-q5",
+          "type": "multiple_choice",
+          "context": "When a category runs over every single month, it isn’t bad luck. The plan is wrong.",
+          "prompt": "Your gas budget is $120, but you spend about $160 every month. What’s the fix?",
+          "choices": [
+            "Raise gas to $160 and take $40 from somewhere else",
+            "Keep it at $120 and try harder",
+            "Stop tracking gas"
+          ],
+          "answer": 0,
+          "explain": "Budget what things actually cost, then balance it somewhere else."
+        },
+        {
+          "id": "bg-when-it-breaks-q6",
+          "type": "order",
+          "prompt": "You overspent. Put the fix in order.",
+          "items": [
+            "Notice which category ran over",
+            "Move money in from a want",
+            "Work out why it happened",
+            "Adjust next month’s plan"
+          ],
+          "explain": "Spot it, patch it, understand it, plan better."
+        },
+        {
+          "id": "bg-when-it-breaks-q7",
+          "type": "multiple_choice",
+          "prompt": "Which mindset keeps a budget alive?",
+          "choices": [
+            "Progress, not perfection",
+            "One slip and it’s over",
+            "Only budget in good months"
+          ],
+          "answer": 0,
+          "explain": "Most months won’t be perfect. That’s normal."
+        }
+      ]
+    },
+    {
+      "id": "bg-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you're closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "bg-trial",
+      "type": "boss",
+      "title": "Den Trial: Budgeting",
+      "summary": "Eight questions. Three strikes and you're out.",
+      "xp": 25,
+      "draw": 3,
+      "steps": [
+        {
+          "id": "bg-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "You overspent on wants this month. Best move?",
+          "choices": [
+            "Give up on budgeting",
+            "Adjust next month's plan and keep going",
+            "Stop tracking"
+          ],
+          "answer": 1,
+          "explain": "Budgets bend. Wolves adapt."
+        },
+        {
+          "id": "bg-trial-q2",
+          "type": "number",
+          "prompt": "Your take-home pay is $5,000. Using 50/30/20, how big is the wants budget?",
+          "answer": 1500,
+          "explain": "30% of $5,000 = $1,500.",
+          "unit": "$"
+        },
+        {
+          "id": "bg-trial-q3",
+          "type": "fill_blank",
+          "prompt": "Saving a little each month for a cost you know is coming is called a ___ fund.",
+          "choices": [
+            "sinking",
+            "leak",
+            "zero"
+          ],
+          "answer": 0,
+          "explain": "A [[sinking fund]]."
+        },
+        {
+          "id": "bg-trial-q4",
+          "type": "true_false",
+          "prompt": "A budget should change when your life changes.",
+          "answer": true,
+          "explain": "New job, new city, new baby: new plan."
+        },
+        {
+          "id": "bg-trial-q5",
+          "type": "number",
+          "prompt": "A $600 laptop is due in 4 months. How much should go into its sinking fund each month?",
+          "answer": 150,
+          "explain": "$600 ÷ 4 = $150.",
+          "unit": "$"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+.done {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.done__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-6);
+  width: min(var(--measure), 100% - 2 * var(--gutter));
+  margin-inline: auto;
+  padding: var(--space-10) 0;
+}
+
+/* ---- The receipt ------------------------------------------------------- */
+
+.receipt {
+  position: relative;
+  padding-top: var(--space-4);
+  border-top: var(--stroke) solid var(--ink);
+}
+
+.done__title {
+  margin-top: var(--space-2);
+  font-size: var(--text-3xl);
+}
+
+.done__sub {
+  margin-top: var(--space-2);
+  max-width: 28em;
+  color: var(--ink-muted);
+}
+
+.receipt__lines {
+  margin: var(--space-6) 0 0;
+}
+
+.receipt__line {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+}
+
+/* Dotted leader between the label and its figure. */
+.receipt__line dt {
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+  gap: var(--space-2);
+  color: var(--ink-muted);
+}
+
+.receipt__line dt::after {
+  content: '';
+  flex: 1;
+  border-bottom: var(--stroke) dotted var(--rule-strong);
+  translate: 0 calc(var(--space-1) * -1);
+}
+
+.receipt__line dd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
+  font-size: var(--text-md);
+}
+
+.receipt__note {
+  font-size: var(--text-xs);
+  color: var(--ink-faint);
+}
+
+.receipt__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: var(--space-2);
+  padding: var(--space-3) 0;
+  border-top: var(--line) solid var(--ink);
+  border-bottom: var(--total-rule) double var(--ink);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-heavy);
+}
+
+.receipt__total .figure {
+  color: var(--gold-text);
+}
+
+.receipt__unsaved {
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-left: var(--depth) solid var(--red);
+  background: var(--red-tint);
+  color: var(--ink-muted);
+  font-size: var(--text-sm);
+}
+
+.receipt__unsaved strong {
+  color: var(--red-text);
+}
+
+.receipt__words {
+  margin-top: var(--space-6);
+}
+
+.receipt__words-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.receipt__words-link {
+  border-radius: var(--radius-sm);
+  color: var(--ink-muted);
+  font-size: var(--text-sm);
+  text-underline-offset: 0.2em;
+}
+
+.receipt__words-link:hover {
+  color: var(--ink);
+}
+
+.receipt__words-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.receipt__stamp {
+  position: absolute;
+  top: calc(var(--space-6) * -1);
+  right: 0;
+  width: var(--stamp-md);
+}
+
+.done__hint {
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+/* ---- Rank meter --------------------------------------------------------- */
+
+.meter {
+  padding-top: var(--space-4);
+  border-top: var(--stroke) solid var(--ink);
+}
+
+.meter__labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+.meter__rank {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-heavy);
+  font-stretch: var(--stretch-condensed);
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.meter__labels .tabular {
+  font-size: var(--text-sm);
+}
+
+.meter__bar {
+  height: var(--space-3);
+  margin-top: var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--track);
+  overflow: hidden;
+}
+
+.meter__bar span {
+  display: block;
+  height: 100%;
+  background: var(--gold);
+  transition: width var(--dur-slow) var(--ease-out);
+}
+
+.done__rankup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  border: var(--stroke) solid var(--gold-edge);
+  border-radius: var(--radius-md);
+  background: var(--gold-tint);
+  animation: rankup-in var(--dur-base) var(--ease-stamp) var(--dur-slow) backwards;
+}
+
+.done__rankup-badge {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: var(--control-md);
+  height: var(--control-md);
+  border-radius: var(--radius-full);
+  background: var(--gold);
+  color: var(--on-accent);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-heavy);
+  font-stretch: var(--stretch-condensed);
+}
+
+.done__rankup p {
+  color: var(--ink-muted);
+}
+
+.done__rankup strong {
+  color: var(--ink);
+}
+
+@keyframes rankup-in {
+  from {
+    opacity: 0;
+    scale: 0.94;
+  }
+}
+
+@media (max-width: 760px) {
+  .done__actions {
+    flex-direction: column-reverse;
+    gap: var(--space-3);
+  }
+
+  .receipt__stamp {
+    width: var(--stamp-sm);
+    top: calc(var(--space-4) * -1);
+  }
+
+  .done__title {
+    font-size: var(--text-2xl);
+    max-width: 60%;
+  }
+}

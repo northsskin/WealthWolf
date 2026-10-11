@@ -1,0 +1,1161 @@
+{
+  "id": "tracking",
+  "section": "everyday-money",
+  "order": 3,
+  "title": "Tracking Your Spending",
+  "description": "Find out where your money really goes, not where you think it goes.",
+  "wolfLine": "You can’t fix what you won’t look at.",
+  "terms": {
+    "tracking": {
+      "term": "Tracking",
+      "definition": "Writing down what you actually spend, so you can compare it with your budget.",
+      "example": "Checking your bank app at the end of each week and noting what went where."
+    },
+    "budget-leak": {
+      "term": "Budget leak",
+      "definition": "Money that slips away on things you barely notice or don't really use.",
+      "example": "A subscription you forgot about, or daily snacks that add up."
+    },
+    "spending-category": {
+      "term": "Spending category",
+      "definition": "A bucket you group purchases into, like housing, food, transport or fun, so you can see totals.",
+      "example": "Groceries, lunch at work and coffee all go in “Food.”"
+    },
+    "transaction": {
+      "term": "Transaction",
+      "definition": "One movement of money: a purchase, a payment or a deposit, with a date and an amount.",
+      "example": "Oct 2, City Grocer, $54.20."
+    },
+    "envelope-method": {
+      "term": "Envelope method",
+      "definition": "Budgeting with cash: each category gets its own envelope, and when it’s empty, that category is done for the month.",
+      "example": "Put $200 in a “Food” envelope. Spend it, and food is done until next month."
+    },
+    "emotional-spending": {
+      "term": "Emotional spending",
+      "definition": "Buying things to change how you feel (bored, stressed, sad or celebrating) rather than because you planned to.",
+      "example": "Ordering clothes at midnight after a terrible day."
+    }
+  },
+  "lessons": [
+    {
+      "id": "bg-tracking",
+      "type": "lesson",
+      "title": "Track the Leaks",
+      "summary": "Find where the money actually goes.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bg-tracking-q1",
+          "type": "multiple_choice",
+          "context": "A budget is the plan. [[Tracking]] is checking what you actually spent, so you can see whether you stuck to it.",
+          "prompt": "Why track your spending?",
+          "choices": [
+            "To get a bigger paycheck",
+            "To see where your money really goes",
+            "Because banks require it"
+          ],
+          "answer": 1,
+          "explain": "Most people guess low. Tracking shows the truth."
+        },
+        {
+          "id": "bg-tracking-q2",
+          "type": "number",
+          "context": "Small habits add up. A $3 snack every workday, about 20 days a month, costs $3 × 20 = $60 a month.",
+          "prompt": "A coffee costs $5. You buy one every workday, about 20 days a month. What's that per month?",
+          "answer": 100,
+          "explain": "$5 × 20 = $100 a month.",
+          "unit": "$"
+        },
+        {
+          "id": "bg-tracking-q3",
+          "type": "number",
+          "prompt": "At $100 a month, what does that coffee habit cost over a year (12 months)?",
+          "answer": 1200,
+          "explain": "$100 × 12 = $1,200. Small habit, big number.",
+          "unit": "$"
+        },
+        {
+          "id": "bg-tracking-q4",
+          "type": "multiple_choice",
+          "context": "A [[budget leak]] is money that slips away on things you barely notice or don't really use.",
+          "prompt": "Which of these is most likely a budget leak?",
+          "choices": [
+            "Your rent",
+            "A subscription you forgot you're paying for",
+            "Your weekly groceries"
+          ],
+          "answer": 1,
+          "explain": "Paying every month for something you don't use. Cancel it."
+        },
+        {
+          "id": "bg-tracking-q5",
+          "type": "true_false",
+          "prompt": "Small purchases don't matter as long as each one is cheap.",
+          "answer": false,
+          "explain": "Ten small buys a week is one big buy a month."
+        },
+        {
+          "id": "bg-tracking-q6",
+          "type": "multiple_choice",
+          "prompt": "Tracking shows you spent $300 on takeout last month. What's the smart move?",
+          "choices": [
+            "Stop tracking so you don't feel bad",
+            "Ignore it",
+            "Set a takeout limit in next month's budget"
+          ],
+          "answer": 2,
+          "explain": "Tracking finds the leak. The budget plugs it."
+        }
+      ]
+    },
+    {
+      "id": "tr-categories",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Spending Categories",
+      "summary": "Put every purchase in a bucket so you can see the pattern.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "tr-categories-q1",
+          "type": "multiple_choice",
+          "context": "To see where money goes, group each purchase into a [[spending category]]: housing, food, transport, fun and so on.",
+          "prompt": "Which category does a bus ticket belong in?",
+          "choices": [
+            "Transport",
+            "Food",
+            "Housing"
+          ],
+          "answer": 0,
+          "explain": "Getting around is transport."
+        },
+        {
+          "id": "tr-categories-q2",
+          "type": "sort",
+          "prompt": "Sort last week’s spending into categories.",
+          "buckets": [
+            "Food",
+            "Transport",
+            "Fun"
+          ],
+          "items": [
+            [
+              "Groceries",
+              0
+            ],
+            [
+              "Gas",
+              1
+            ],
+            [
+              "Movie tickets",
+              2
+            ],
+            [
+              "Lunch at work",
+              0
+            ],
+            [
+              "Bus pass",
+              1
+            ],
+            [
+              "Video game",
+              2
+            ],
+            [
+              "Coffee",
+              0
+            ]
+          ]
+        },
+        {
+          "id": "tr-categories-q3",
+          "type": "multiple_choice",
+          "prompt": "Which set of categories is easiest to stick with?",
+          "choices": [
+            "Housing, food, transport, fun, saving, other",
+            "A separate category for every store",
+            "No categories at all"
+          ],
+          "answer": 0,
+          "explain": "Five to eight categories is plenty. Too many and you’ll stop tracking."
+        },
+        {
+          "id": "tr-categories-q4",
+          "type": "number",
+          "context": "What matters is the total in each bucket. Add up everything in one category.",
+          "prompt": "Food this week: groceries $64, lunch $12, coffee $9, more groceries $38. What’s the food total?",
+          "answer": 123,
+          "unit": "$",
+          "explain": "$64 + $12 + $9 + $38 = $123."
+        },
+        {
+          "id": "tr-categories-q5",
+          "type": "number",
+          "prompt": "If every week looks like that, about how much goes on food in a month? Use 4 weeks.",
+          "answer": 492,
+          "unit": "$",
+          "explain": "$123 × 4 = $492."
+        },
+        {
+          "id": "tr-categories-q6",
+          "type": "true_false",
+          "prompt": "A coffee bought on the way to work belongs in the transport category.",
+          "answer": false,
+          "explain": "It’s food. Where you bought it doesn’t change what it is."
+        },
+        {
+          "id": "tr-categories-q7",
+          "type": "multiple_choice",
+          "prompt": "What’s the point of categories?",
+          "choices": [
+            "To see which kind of spending is biggest",
+            "To keep your bank happy",
+            "To spend more in each one"
+          ],
+          "answer": 0,
+          "explain": "Totals by category show you where to look first."
+        }
+      ]
+    },
+    {
+      "id": "tr-spending-log",
+      "type": "lesson",
+      "format": "document",
+      "title": "Read Your Spending Log",
+      "summary": "One week of real transactions. Find the pattern.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "tr-spending-log-q1",
+          "type": "multiple_choice",
+          "context": "Every purchase is a [[transaction]]: one line with a date, a name and an amount.",
+          "doc": {
+            "kind": "statement",
+            "title": "Your spending",
+            "subtitle": "Budgeting app · Oct 1–7",
+            "lines": [
+              {
+                "id": "rent",
+                "date": "Oct 1",
+                "label": "Rent, Oak Street Apartments",
+                "amount": -1150.0
+              },
+              {
+                "id": "groc1",
+                "date": "Oct 2",
+                "label": "City Grocer",
+                "amount": -54.2
+              },
+              {
+                "id": "gas",
+                "date": "Oct 2",
+                "label": "Shell gas station",
+                "amount": -38.0
+              },
+              {
+                "id": "lunch",
+                "date": "Oct 3",
+                "label": "Taco Spot",
+                "amount": -11.75
+              },
+              {
+                "id": "stream",
+                "date": "Oct 4",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "groc2",
+                "date": "Oct 5",
+                "label": "City Grocer",
+                "amount": -27.4
+              },
+              {
+                "id": "movie",
+                "date": "Oct 6",
+                "label": "Cinema 8",
+                "amount": -24.0
+              },
+              {
+                "id": "coffee",
+                "date": "Oct 7",
+                "label": "Bean There Café",
+                "amount": -6.25
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total spent",
+                "amount": -1327.59,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "How many transactions happened on Oct 2?",
+          "choices": [
+            "One",
+            "Two",
+            "Three"
+          ],
+          "answer": 1,
+          "explain": "City Grocer and the gas station."
+        },
+        {
+          "id": "tr-spending-log-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Your spending",
+            "subtitle": "Budgeting app · Oct 1–7",
+            "lines": [
+              {
+                "id": "rent",
+                "date": "Oct 1",
+                "label": "Rent, Oak Street Apartments",
+                "amount": -1150.0
+              },
+              {
+                "id": "groc1",
+                "date": "Oct 2",
+                "label": "City Grocer",
+                "amount": -54.2
+              },
+              {
+                "id": "gas",
+                "date": "Oct 2",
+                "label": "Shell gas station",
+                "amount": -38.0
+              },
+              {
+                "id": "lunch",
+                "date": "Oct 3",
+                "label": "Taco Spot",
+                "amount": -11.75
+              },
+              {
+                "id": "stream",
+                "date": "Oct 4",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "groc2",
+                "date": "Oct 5",
+                "label": "City Grocer",
+                "amount": -27.4
+              },
+              {
+                "id": "movie",
+                "date": "Oct 6",
+                "label": "Cinema 8",
+                "amount": -24.0
+              },
+              {
+                "id": "coffee",
+                "date": "Oct 7",
+                "label": "Bean There Café",
+                "amount": -6.25
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total spent",
+                "amount": -1327.59,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "How much went on groceries this week?",
+          "answer": 81.6,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$54.20 + $27.40 = $81.60."
+        },
+        {
+          "id": "tr-spending-log-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Your spending",
+            "subtitle": "Budgeting app · Oct 1–7",
+            "lines": [
+              {
+                "id": "rent",
+                "date": "Oct 1",
+                "label": "Rent, Oak Street Apartments",
+                "amount": -1150.0
+              },
+              {
+                "id": "groc1",
+                "date": "Oct 2",
+                "label": "City Grocer",
+                "amount": -54.2
+              },
+              {
+                "id": "gas",
+                "date": "Oct 2",
+                "label": "Shell gas station",
+                "amount": -38.0
+              },
+              {
+                "id": "lunch",
+                "date": "Oct 3",
+                "label": "Taco Spot",
+                "amount": -11.75
+              },
+              {
+                "id": "stream",
+                "date": "Oct 4",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "groc2",
+                "date": "Oct 5",
+                "label": "City Grocer",
+                "amount": -27.4
+              },
+              {
+                "id": "movie",
+                "date": "Oct 6",
+                "label": "Cinema 8",
+                "amount": -24.0
+              },
+              {
+                "id": "coffee",
+                "date": "Oct 7",
+                "label": "Bean There Café",
+                "amount": -6.25
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total spent",
+                "amount": -1327.59,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "Not counting rent, how much was spent this week?",
+          "answer": 177.59,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$1,327.59 − $1,150.00 = $177.59."
+        },
+        {
+          "id": "tr-spending-log-q4",
+          "type": "multiple_choice",
+          "doc": {
+            "kind": "statement",
+            "title": "Your spending",
+            "subtitle": "Budgeting app · Oct 1–7",
+            "lines": [
+              {
+                "id": "rent",
+                "date": "Oct 1",
+                "label": "Rent, Oak Street Apartments",
+                "amount": -1150.0
+              },
+              {
+                "id": "groc1",
+                "date": "Oct 2",
+                "label": "City Grocer",
+                "amount": -54.2
+              },
+              {
+                "id": "gas",
+                "date": "Oct 2",
+                "label": "Shell gas station",
+                "amount": -38.0
+              },
+              {
+                "id": "lunch",
+                "date": "Oct 3",
+                "label": "Taco Spot",
+                "amount": -11.75
+              },
+              {
+                "id": "stream",
+                "date": "Oct 4",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "groc2",
+                "date": "Oct 5",
+                "label": "City Grocer",
+                "amount": -27.4
+              },
+              {
+                "id": "movie",
+                "date": "Oct 6",
+                "label": "Cinema 8",
+                "amount": -24.0
+              },
+              {
+                "id": "coffee",
+                "date": "Oct 7",
+                "label": "Bean There Café",
+                "amount": -6.25
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total spent",
+                "amount": -1327.59,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "After rent, which category was biggest this week?",
+          "choices": [
+            "Food",
+            "Transport",
+            "Fun"
+          ],
+          "answer": 0,
+          "explain": "Food: $54.20 + $11.75 + $27.40 + $6.25 = $99.60. Transport was $38.00, fun $39.99."
+        },
+        {
+          "id": "tr-spending-log-q5",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Your spending",
+            "subtitle": "Budgeting app · Oct 1–7",
+            "lines": [
+              {
+                "id": "rent",
+                "date": "Oct 1",
+                "label": "Rent, Oak Street Apartments",
+                "amount": -1150.0
+              },
+              {
+                "id": "groc1",
+                "date": "Oct 2",
+                "label": "City Grocer",
+                "amount": -54.2
+              },
+              {
+                "id": "gas",
+                "date": "Oct 2",
+                "label": "Shell gas station",
+                "amount": -38.0
+              },
+              {
+                "id": "lunch",
+                "date": "Oct 3",
+                "label": "Taco Spot",
+                "amount": -11.75
+              },
+              {
+                "id": "stream",
+                "date": "Oct 4",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "groc2",
+                "date": "Oct 5",
+                "label": "City Grocer",
+                "amount": -27.4
+              },
+              {
+                "id": "movie",
+                "date": "Oct 6",
+                "label": "Cinema 8",
+                "amount": -24.0
+              },
+              {
+                "id": "coffee",
+                "date": "Oct 7",
+                "label": "Bean There Café",
+                "amount": -6.25
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total spent",
+                "amount": -1327.59,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "How much did fun cost: the streaming service and the movie?",
+          "answer": 39.99,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$15.99 + $24.00 = $39.99."
+        },
+        {
+          "id": "tr-spending-log-q6",
+          "type": "true_false",
+          "prompt": "One week of transactions is enough to plan a whole year.",
+          "answer": false,
+          "explain": "One week is a snapshot. Track a full month to see the real pattern."
+        }
+      ]
+    },
+    {
+      "id": "tr-methods",
+      "type": "lesson",
+      "title": "Ways to Track",
+      "summary": "App, spreadsheet, envelopes or a notebook: pick the one you’ll keep.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "tr-methods-q1",
+          "type": "info",
+          "title": "Pick a method you’ll keep",
+          "body": "There’s no single right way to track. What matters is doing it every week.\n\n**Bank app:** already lists every card payment. **Budgeting app:** sorts transactions into categories for you. **Spreadsheet:** you type them in and see totals. **Notebook:** old school, and it works."
+        },
+        {
+          "id": "tr-methods-q2",
+          "type": "multiple_choice",
+          "context": "The [[envelope method]] is an old trick: cash for each category goes in its own envelope. When an envelope is empty, that category is done for the month.",
+          "prompt": "Your fun envelope is empty on the 22nd. What does the envelope method say?",
+          "choices": [
+            "No more fun spending until next month",
+            "Take money from the rent envelope",
+            "Use a card instead"
+          ],
+          "answer": 0,
+          "explain": "An empty envelope means that category is done. That’s the whole point."
+        },
+        {
+          "id": "tr-methods-q3",
+          "type": "true_false",
+          "prompt": "Cash purchases still need tracking, even though they don’t show up in your bank app.",
+          "answer": true,
+          "explain": "Cash leaves no trail unless you write it down."
+        },
+        {
+          "id": "tr-methods-q4",
+          "type": "multiple_choice",
+          "prompt": "How often should you check your spending?",
+          "choices": [
+            "About once a week",
+            "Once a year",
+            "Only when your account is empty"
+          ],
+          "answer": 0,
+          "explain": "Weekly is often enough to catch problems, and rare enough to stick with."
+        },
+        {
+          "id": "tr-methods-q5",
+          "type": "match",
+          "prompt": "Match each method to what it’s best at.",
+          "pairs": [
+            [
+              "Bank app",
+              "Already lists every card payment"
+            ],
+            [
+              "Envelopes",
+              "Makes overspending physically impossible"
+            ],
+            [
+              "Spreadsheet",
+              "Totals and charts you control"
+            ],
+            [
+              "Notebook",
+              "Works with zero tech"
+            ]
+          ]
+        },
+        {
+          "id": "tr-methods-q6",
+          "type": "multiple_choice",
+          "prompt": "Which tracking method is best?",
+          "choices": [
+            "The one you’ll actually keep using",
+            "The most expensive app",
+            "Whatever your friends use"
+          ],
+          "answer": 0,
+          "explain": "A simple method you use beats a perfect one you abandon."
+        }
+      ]
+    },
+    {
+      "id": "tr-over-budget",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Where It Went Over",
+      "summary": "Compare the month with the plan and find what broke it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "tr-over-budget-q1",
+          "type": "spot",
+          "context": "Tracking pays off when you compare it with your plan. Each line shows what you planned, and the amount is what you actually spent.",
+          "doc": {
+            "kind": "statement",
+            "title": "October by category",
+            "subtitle": "Budgeting app · Spent vs. planned",
+            "lines": [
+              {
+                "id": "housing",
+                "label": "Housing (planned $1,150)",
+                "amount": -1150.0
+              },
+              {
+                "id": "groceries",
+                "label": "Groceries (planned $320)",
+                "amount": -310.0
+              },
+              {
+                "id": "transport",
+                "label": "Transport (planned $150)",
+                "amount": -140.0
+              },
+              {
+                "id": "eatout",
+                "label": "Eating out (planned $120)",
+                "amount": -260.0
+              },
+              {
+                "id": "fun",
+                "label": "Fun (planned $100)",
+                "amount": -95.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total spent",
+                "amount": -1955.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "Tap the category that went way over its plan.",
+          "answer": "eatout",
+          "explain": "Eating out: $260 spent against $120 planned."
+        },
+        {
+          "id": "tr-over-budget-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "October by category",
+            "subtitle": "Budgeting app · Spent vs. planned",
+            "lines": [
+              {
+                "id": "housing",
+                "label": "Housing (planned $1,150)",
+                "amount": -1150.0
+              },
+              {
+                "id": "groceries",
+                "label": "Groceries (planned $320)",
+                "amount": -310.0
+              },
+              {
+                "id": "transport",
+                "label": "Transport (planned $150)",
+                "amount": -140.0
+              },
+              {
+                "id": "eatout",
+                "label": "Eating out (planned $120)",
+                "amount": -260.0
+              },
+              {
+                "id": "fun",
+                "label": "Fun (planned $100)",
+                "amount": -95.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total spent",
+                "amount": -1955.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "By how much did eating out go over?",
+          "answer": 140,
+          "unit": "$",
+          "explain": "$260 − $120 = $140."
+        },
+        {
+          "id": "tr-over-budget-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "October by category",
+            "subtitle": "Budgeting app · Spent vs. planned",
+            "lines": [
+              {
+                "id": "housing",
+                "label": "Housing (planned $1,150)",
+                "amount": -1150.0
+              },
+              {
+                "id": "groceries",
+                "label": "Groceries (planned $320)",
+                "amount": -310.0
+              },
+              {
+                "id": "transport",
+                "label": "Transport (planned $150)",
+                "amount": -140.0
+              },
+              {
+                "id": "eatout",
+                "label": "Eating out (planned $120)",
+                "amount": -260.0
+              },
+              {
+                "id": "fun",
+                "label": "Fun (planned $100)",
+                "amount": -95.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total spent",
+                "amount": -1955.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "The plan for all five categories added up to $1,840. How far over was the whole month?",
+          "answer": 115,
+          "unit": "$",
+          "explain": "$1,955 − $1,840 = $115."
+        },
+        {
+          "id": "tr-over-budget-q4",
+          "type": "multiple_choice",
+          "prompt": "What’s the most useful next step?",
+          "choices": [
+            "Find out why eating out ran over, then set a realistic limit",
+            "Delete the budget",
+            "Spend less on groceries to make up for it"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "The budget did its job: it showed you the leak.",
+            "Groceries were already under plan, and they’re a need."
+          ],
+          "explain": "The budget just showed you something useful. Use it."
+        },
+        {
+          "id": "tr-over-budget-q5",
+          "type": "true_false",
+          "prompt": "The money left over in groceries, transport and fun can cover part of the overspend.",
+          "answer": true,
+          "explain": "$10 + $10 + $5 = $25 under plan. Moving it helps, but it doesn’t cover $140."
+        }
+      ]
+    },
+    {
+      "id": "tr-riley",
+      "type": "lesson",
+      "format": "story",
+      "title": "Riley’s Receipts",
+      "summary": "A month of receipts tells a story. Add it up.",
+      "xp": 10,
+      "story": {
+        "title": "The receipt shoebox",
+        "character": "Riley, 24, junior designer",
+        "body": "Riley kept every receipt in a shoebox for a month, then added them up on a Sunday night.\n\nThe big ones were no surprise: **$1,050** rent and **$340** groceries. The surprise was everything else: **22** coffees at **$5** each, **9** takeout dinners at about **$18**, and **$64** of apps and games Riley barely remembered buying.\n\nRiley takes home **$2,500** a month and had been wondering why there was never anything left."
+      },
+      "steps": [
+        {
+          "id": "tr-riley-q1",
+          "type": "number",
+          "prompt": "How much did the coffees cost?",
+          "answer": 110,
+          "unit": "$",
+          "explain": "22 × $5 = $110."
+        },
+        {
+          "id": "tr-riley-q2",
+          "type": "number",
+          "prompt": "And the takeout dinners?",
+          "answer": 162,
+          "unit": "$",
+          "explain": "9 × $18 = $162."
+        },
+        {
+          "id": "tr-riley-q3",
+          "type": "number",
+          "prompt": "Add up coffee, takeout and the apps.",
+          "answer": 336,
+          "unit": "$",
+          "explain": "$110 + $162 + $64 = $336."
+        },
+        {
+          "id": "tr-riley-q4",
+          "type": "number",
+          "prompt": "Now add rent and groceries. What was the shoebox total for the month?",
+          "answer": 1726,
+          "unit": "$",
+          "explain": "$1,050 + $340 + $336 = $1,726."
+        },
+        {
+          "id": "tr-riley-q5",
+          "type": "multiple_choice",
+          "prompt": "Riley takes home $2,500 but the receipts only add to $1,726. What’s the most likely reason nothing is left?",
+          "choices": [
+            "Some spending never made it into the shoebox",
+            "The bank lost the money",
+            "Riley’s rent is too low"
+          ],
+          "answer": 0,
+          "explain": "$774 is missing. Card taps, bills that pay themselves and cash rarely all come with receipts. That’s why tracking in a bank app helps."
+        },
+        {
+          "id": "tr-riley-q6",
+          "type": "multiple_choice",
+          "prompt": "Riley wants to free up $150 a month. Which plan does it?",
+          "choices": [
+            "Cut takeout to 2 dinners and coffee to 10 cups",
+            "Skip rent once",
+            "Stop buying groceries"
+          ],
+          "answer": 0,
+          "explain": "7 fewer dinners × $18 = $126, plus 12 fewer coffees × $5 = $60. That’s $186 a month."
+        }
+      ]
+    },
+    {
+      "id": "tr-patterns",
+      "type": "lesson",
+      "title": "Spotting Patterns",
+      "summary": "Payday splurges, weekend leaks, bad-day buys.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "tr-patterns-q1",
+          "type": "multiple_choice",
+          "context": "Look past single purchases to patterns: when, where and why you spend.",
+          "prompt": "Most of your spending happens in the three days after payday. What’s that?",
+          "choices": [
+            "A payday splurge",
+            "A budget",
+            "A deduction"
+          ],
+          "answer": 0,
+          "explain": "Money feels endless right after payday. It isn’t."
+        },
+        {
+          "id": "tr-patterns-q2",
+          "type": "multiple_choice",
+          "context": "[[Emotional spending]] means buying to change how you feel: bored, stressed, sad, or celebrating.",
+          "prompt": "Which is most likely emotional spending?",
+          "choices": [
+            "Ordering $60 of clothes at midnight after a terrible day",
+            "Buying groceries for the week",
+            "Paying your phone bill"
+          ],
+          "answer": 0,
+          "explain": "A bad day, a late hour, an unplanned buy: classic emotional spending."
+        },
+        {
+          "id": "tr-patterns-q3",
+          "type": "true_false",
+          "prompt": "Noticing what triggers your spending makes it easier to change.",
+          "answer": true,
+          "explain": "Once you know the trigger, you can plan around it."
+        },
+        {
+          "id": "tr-patterns-q4",
+          "type": "number",
+          "prompt": "You spend about $45 every Saturday on things you didn’t plan. What’s that over a year of 52 Saturdays?",
+          "answer": 2340,
+          "unit": "$",
+          "explain": "$45 × 52 = $2,340."
+        },
+        {
+          "id": "tr-patterns-q5",
+          "type": "multiple_choice",
+          "prompt": "What’s a good fix for a payday splurge?",
+          "choices": [
+            "Move savings out on payday, before you can spend it",
+            "Get paid less often",
+            "Delete your bank app"
+          ],
+          "answer": 0,
+          "explain": "If it’s gone before the splurge starts, there’s less to splurge."
+        },
+        {
+          "id": "tr-patterns-q6",
+          "type": "sort",
+          "prompt": "Planned or emotional? Sort them.",
+          "buckets": [
+            "Planned",
+            "Emotional"
+          ],
+          "items": [
+            [
+              "Weekly grocery shop",
+              0
+            ],
+            [
+              "Late-night shopping after a fight",
+              1
+            ],
+            [
+              "Birthday gift you budgeted for",
+              0
+            ],
+            [
+              "Retail therapy after a bad exam",
+              1
+            ],
+            [
+              "Monthly bus pass",
+              0
+            ],
+            [
+              "Buying something because you were bored",
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tr-monthly-review",
+      "type": "lesson",
+      "title": "The Monthly Check-In",
+      "summary": "Fifteen minutes that steer next month.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "tr-monthly-review-q1",
+          "type": "info",
+          "title": "Fifteen minutes, once a month",
+          "body": "At the end of each month, sit down with your tracking and your budget. Compare, adjust, and set up next month. Fifteen minutes is enough."
+        },
+        {
+          "id": "tr-monthly-review-q2",
+          "type": "order",
+          "prompt": "Put the monthly check-in in order.",
+          "items": [
+            "Add up spending by category",
+            "Compare each category with the plan",
+            "Work out why anything ran over",
+            "Set next month’s budget"
+          ],
+          "explain": "Total, compare, understand, plan."
+        },
+        {
+          "id": "tr-monthly-review-q3",
+          "type": "multiple_choice",
+          "prompt": "You came in $60 under budget this month. What’s a good use of it?",
+          "choices": [
+            "Give it a job, like savings or a goal",
+            "Let it sit and quietly disappear",
+            "Spend it fast before it’s gone"
+          ],
+          "answer": 0,
+          "explain": "Money without a job wanders off. Give it one."
+        },
+        {
+          "id": "tr-monthly-review-q4",
+          "type": "true_false",
+          "prompt": "If a category is under budget three months in a row, you can shrink it and move the money somewhere useful.",
+          "answer": true,
+          "explain": "Your plan should match real life. Free that money up."
+        },
+        {
+          "id": "tr-monthly-review-q5",
+          "type": "number",
+          "context": "Compare months to see whether you’re improving.",
+          "prompt": "Eating out was $310 in September and $240 in October. How much less did you spend?",
+          "answer": 70,
+          "unit": "$",
+          "explain": "$310 − $240 = $70."
+        },
+        {
+          "id": "tr-monthly-review-q6",
+          "type": "number",
+          "prompt": "If you keep October’s level, how much do you save over 12 months compared with September’s?",
+          "answer": 840,
+          "unit": "$",
+          "explain": "$70 × 12 = $840."
+        },
+        {
+          "id": "tr-monthly-review-q7",
+          "type": "multiple_choice",
+          "prompt": "What’s the real goal of tracking?",
+          "choices": [
+            "Making better choices next month",
+            "Feeling guilty about last month",
+            "Having the most detailed spreadsheet"
+          ],
+          "answer": 0,
+          "explain": "Tracking looks back so you can plan forward."
+        }
+      ]
+    },
+    {
+      "id": "tr-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "tr-trial",
+      "type": "boss",
+      "title": "Den Trial: Tracking",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "tr-trial-q1",
+          "type": "number",
+          "prompt": "Your food spending for four weeks was $88, $102, $95 and $115. What’s the total for the month?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$88 + $102 + $95 + $115 = $400."
+        },
+        {
+          "id": "tr-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "Which habit catches spending problems early?",
+          "choices": [
+            "Checking your spending every week",
+            "Checking once a year",
+            "Never looking"
+          ],
+          "answer": 0,
+          "explain": "Weekly checks catch a leak before it becomes a flood."
+        },
+        {
+          "id": "tr-trial-q3",
+          "type": "true_false",
+          "prompt": "The envelope method works by limiting each category to the cash in its envelope.",
+          "answer": true,
+          "explain": "Empty envelope, category done."
+        },
+        {
+          "id": "tr-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "Your transport plan was $150 and you spent $190. What’s the honest next move?",
+          "choices": [
+            "Find out why, then adjust the plan",
+            "Pretend it didn’t happen",
+            "Stop tracking transport"
+          ],
+          "answer": 0,
+          "explain": "Either the plan was too low or something changed. Find out which."
+        }
+      ]
+    }
+  ]
+}

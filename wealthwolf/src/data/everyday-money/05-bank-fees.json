@@ -1,0 +1,1511 @@
+{
+  "id": "bank-fees",
+  "section": "everyday-money",
+  "order": 5,
+  "title": "Bank Fees & Statements",
+  "description": "Read a statement, dodge the fees, and catch the bank’s mistakes.",
+  "wolfLine": "Fees are small bites. Enough small bites and you’re dinner.",
+  "terms": {
+    "bank-statement": {
+      "term": "Bank statement",
+      "definition": "The monthly record of your account: the starting balance, every transaction, and the ending balance.",
+      "example": "September’s statement: opened at $640.00, closed at $1,609.12."
+    },
+    "maintenance-fee": {
+      "term": "Maintenance fee",
+      "definition": "A monthly charge just for having the account, often waived if you meet a condition like a minimum balance.",
+      "example": "$12 a month unless you keep $1,500 in the account."
+    },
+    "overdraft": {
+      "term": "Overdraft",
+      "definition": "Spending more than you have in your account, when the bank lets the payment go through anyway.",
+      "example": "Buying a $26 lunch with $20 in the account."
+    },
+    "overdraft-fee": {
+      "term": "Overdraft fee",
+      "definition": "What a bank charges each time a payment overdraws your account, often about $35.",
+      "example": "A $6 overdraft plus a $35 fee: that lunch really cost $41 more than you had."
+    },
+    "overdraft-protection": {
+      "term": "Overdraft protection",
+      "definition": "A setting that covers a shortfall by moving money from your savings, instead of charging an overdraft fee.",
+      "example": "You’re $6 short, so $6 moves over from savings automatically."
+    },
+    "dispute": {
+      "term": "Dispute",
+      "definition": "Asking your bank to investigate a charge you think is wrong and reverse it.",
+      "example": "Reporting a $64 charge from a store you’ve never shopped at."
+    },
+    "reconcile": {
+      "term": "Reconcile",
+      "definition": "Checking your own record of spending against the bank’s, line by line, until they match.",
+      "example": "Your notes say $450 left, the bank says $415. Reconciling finds the missing $35."
+    }
+  },
+  "lessons": [
+    {
+      "id": "bf-statement",
+      "type": "lesson",
+      "format": "document",
+      "title": "Reading a Bank Statement",
+      "summary": "What came in, what went out, and what was left.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bf-statement-q1",
+          "type": "multiple_choice",
+          "context": "A [[bank statement]] is the monthly record of your account: what you started with, every transaction, and what you ended with.",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking statement · Sep 1–30",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "pay1",
+                "date": "Sep 5",
+                "label": "Direct deposit, Northside Coffee",
+                "amount": 1079.4
+              },
+              {
+                "id": "rent",
+                "date": "Sep 6",
+                "label": "Rent, Oak Street Apartments",
+                "amount": -950.0
+              },
+              {
+                "id": "groc",
+                "date": "Sep 9",
+                "label": "City Grocer",
+                "amount": -82.35
+              },
+              {
+                "id": "phone",
+                "date": "Sep 14",
+                "label": "Ridgeline Mobile",
+                "amount": -69.34
+              },
+              {
+                "id": "pay2",
+                "date": "Sep 19",
+                "label": "Direct deposit, Northside Coffee",
+                "amount": 1079.4
+              },
+              {
+                "id": "atm",
+                "date": "Sep 21",
+                "label": "ATM withdrawal",
+                "amount": -60.0
+              },
+              {
+                "id": "stream",
+                "date": "Sep 24",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "fee",
+                "date": "Sep 30",
+                "label": "Monthly maintenance fee",
+                "amount": -12.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Opening balance",
+                "amount": 640.0
+              },
+              {
+                "label": "Closing balance",
+                "amount": 1609.12,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "What was the balance at the start of September?",
+          "choices": [
+            "$640.00",
+            "$1,609.12",
+            "$1,079.40"
+          ],
+          "answer": 0,
+          "explain": "The opening balance, at the bottom of the statement."
+        },
+        {
+          "id": "bf-statement-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking statement · Sep 1–30",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "pay1",
+                "date": "Sep 5",
+                "label": "Direct deposit, Northside Coffee",
+                "amount": 1079.4
+              },
+              {
+                "id": "rent",
+                "date": "Sep 6",
+                "label": "Rent, Oak Street Apartments",
+                "amount": -950.0
+              },
+              {
+                "id": "groc",
+                "date": "Sep 9",
+                "label": "City Grocer",
+                "amount": -82.35
+              },
+              {
+                "id": "phone",
+                "date": "Sep 14",
+                "label": "Ridgeline Mobile",
+                "amount": -69.34
+              },
+              {
+                "id": "pay2",
+                "date": "Sep 19",
+                "label": "Direct deposit, Northside Coffee",
+                "amount": 1079.4
+              },
+              {
+                "id": "atm",
+                "date": "Sep 21",
+                "label": "ATM withdrawal",
+                "amount": -60.0
+              },
+              {
+                "id": "stream",
+                "date": "Sep 24",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "fee",
+                "date": "Sep 30",
+                "label": "Monthly maintenance fee",
+                "amount": -12.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Opening balance",
+                "amount": 640.0
+              },
+              {
+                "label": "Closing balance",
+                "amount": 1609.12,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "How much money came in this month?",
+          "answer": 2158.8,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "Two paychecks: $1,079.40 + $1,079.40 = $2,158.80."
+        },
+        {
+          "id": "bf-statement-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking statement · Sep 1–30",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "pay1",
+                "date": "Sep 5",
+                "label": "Direct deposit, Northside Coffee",
+                "amount": 1079.4
+              },
+              {
+                "id": "rent",
+                "date": "Sep 6",
+                "label": "Rent, Oak Street Apartments",
+                "amount": -950.0
+              },
+              {
+                "id": "groc",
+                "date": "Sep 9",
+                "label": "City Grocer",
+                "amount": -82.35
+              },
+              {
+                "id": "phone",
+                "date": "Sep 14",
+                "label": "Ridgeline Mobile",
+                "amount": -69.34
+              },
+              {
+                "id": "pay2",
+                "date": "Sep 19",
+                "label": "Direct deposit, Northside Coffee",
+                "amount": 1079.4
+              },
+              {
+                "id": "atm",
+                "date": "Sep 21",
+                "label": "ATM withdrawal",
+                "amount": -60.0
+              },
+              {
+                "id": "stream",
+                "date": "Sep 24",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "fee",
+                "date": "Sep 30",
+                "label": "Monthly maintenance fee",
+                "amount": -12.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Opening balance",
+                "amount": 640.0
+              },
+              {
+                "label": "Closing balance",
+                "amount": 1609.12,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "How much went out?",
+          "answer": 1189.68,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$950.00 + $82.35 + $69.34 + $60.00 + $15.99 + $12.00 = $1,189.68."
+        },
+        {
+          "id": "bf-statement-q4",
+          "type": "multiple_choice",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking statement · Sep 1–30",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "pay1",
+                "date": "Sep 5",
+                "label": "Direct deposit, Northside Coffee",
+                "amount": 1079.4
+              },
+              {
+                "id": "rent",
+                "date": "Sep 6",
+                "label": "Rent, Oak Street Apartments",
+                "amount": -950.0
+              },
+              {
+                "id": "groc",
+                "date": "Sep 9",
+                "label": "City Grocer",
+                "amount": -82.35
+              },
+              {
+                "id": "phone",
+                "date": "Sep 14",
+                "label": "Ridgeline Mobile",
+                "amount": -69.34
+              },
+              {
+                "id": "pay2",
+                "date": "Sep 19",
+                "label": "Direct deposit, Northside Coffee",
+                "amount": 1079.4
+              },
+              {
+                "id": "atm",
+                "date": "Sep 21",
+                "label": "ATM withdrawal",
+                "amount": -60.0
+              },
+              {
+                "id": "stream",
+                "date": "Sep 24",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "fee",
+                "date": "Sep 30",
+                "label": "Monthly maintenance fee",
+                "amount": -12.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Opening balance",
+                "amount": 640.0
+              },
+              {
+                "label": "Closing balance",
+                "amount": 1609.12,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "Which line is a fee the bank charged you?",
+          "choices": [
+            "Sep 30, Monthly maintenance fee",
+            "Sep 21, ATM withdrawal",
+            "Sep 6, Rent"
+          ],
+          "answer": 0,
+          "explain": "The ATM withdrawal was your own cash. The $12 is the bank’s fee."
+        },
+        {
+          "id": "bf-statement-q5",
+          "type": "number",
+          "context": "Every statement balances: opening + money in − money out = closing.",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking statement · Sep 1–30",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "pay1",
+                "date": "Sep 5",
+                "label": "Direct deposit, Northside Coffee",
+                "amount": 1079.4
+              },
+              {
+                "id": "rent",
+                "date": "Sep 6",
+                "label": "Rent, Oak Street Apartments",
+                "amount": -950.0
+              },
+              {
+                "id": "groc",
+                "date": "Sep 9",
+                "label": "City Grocer",
+                "amount": -82.35
+              },
+              {
+                "id": "phone",
+                "date": "Sep 14",
+                "label": "Ridgeline Mobile",
+                "amount": -69.34
+              },
+              {
+                "id": "pay2",
+                "date": "Sep 19",
+                "label": "Direct deposit, Northside Coffee",
+                "amount": 1079.4
+              },
+              {
+                "id": "atm",
+                "date": "Sep 21",
+                "label": "ATM withdrawal",
+                "amount": -60.0
+              },
+              {
+                "id": "stream",
+                "date": "Sep 24",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "fee",
+                "date": "Sep 30",
+                "label": "Monthly maintenance fee",
+                "amount": -12.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Opening balance",
+                "amount": 640.0
+              },
+              {
+                "label": "Closing balance",
+                "amount": 1609.12,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "Check the math: $640.00 + money in − money out. What should the closing balance be?",
+          "answer": 1609.12,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$640.00 + $2,158.80 − $1,189.68 = $1,609.12. It matches."
+        },
+        {
+          "id": "bf-statement-q6",
+          "type": "true_false",
+          "prompt": "It’s worth reading your statement every month, even if you check your app.",
+          "answer": true,
+          "explain": "Fees and mistakes hide in plain sight."
+        }
+      ]
+    },
+    {
+      "id": "bf-fees",
+      "type": "lesson",
+      "title": "The Fee List",
+      "summary": "Small charges that add up to real money.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bf-fees-q1",
+          "type": "multiple_choice",
+          "context": "A [[maintenance fee]] is what a bank charges each month just for having the account. Many banks waive it if you meet a condition.",
+          "prompt": "Your bank charges $12 a month unless you keep $1,500 in the account. You keep about $900. Do you pay?",
+          "choices": [
+            "Yes, $12 every month",
+            "No",
+            "Only once a year"
+          ],
+          "answer": 0,
+          "explain": "$900 is under the $1,500 needed to skip the fee."
+        },
+        {
+          "id": "bf-fees-q2",
+          "type": "number",
+          "prompt": "What does that fee cost you over a year?",
+          "answer": 144,
+          "unit": "$",
+          "explain": "$12 × 12 = $144."
+        },
+        {
+          "id": "bf-fees-q3",
+          "type": "multiple_choice",
+          "prompt": "What’s the cheapest fix?",
+          "choices": [
+            "Switch to a no-fee account",
+            "Keep paying $144 a year",
+            "Close every account and use only cash"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "That’s $144 a year for nothing.",
+            "You’d lose insurance, direct deposit and your debit card."
+          ],
+          "explain": "Plenty of insured accounts charge nothing."
+        },
+        {
+          "id": "bf-fees-q4",
+          "type": "sort",
+          "prompt": "Fee or free? Sort these.",
+          "buckets": [
+            "Often a fee",
+            "Usually free"
+          ],
+          "items": [
+            [
+              "Using another bank’s ATM",
+              0
+            ],
+            [
+              "Depositing your paycheck",
+              1
+            ],
+            [
+              "Maintenance, below the minimum balance",
+              0
+            ],
+            [
+              "Checking your balance in the app",
+              1
+            ],
+            [
+              "Paper statements by mail",
+              0
+            ],
+            [
+              "Debit card purchases",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "bf-fees-q5",
+          "type": "number",
+          "context": "Fees add up like any other cost.",
+          "prompt": "This year you paid $144 in maintenance fees, $78 in ATM fees and $24 for paper statements. What’s the total?",
+          "answer": 246,
+          "unit": "$",
+          "explain": "$144 + $78 + $24 = $246."
+        },
+        {
+          "id": "bf-fees-q6",
+          "type": "multiple_choice",
+          "prompt": "Many banks drop the maintenance fee if you…",
+          "choices": [
+            "set up direct deposit",
+            "visit the branch every week",
+            "ask for paper statements"
+          ],
+          "answer": 0,
+          "explain": "Direct deposit is the most common way to get the fee waived."
+        }
+      ]
+    },
+    {
+      "id": "bf-overdraft",
+      "type": "lesson",
+      "title": "Overdrafts",
+      "summary": "How a $6 shortfall becomes a $41 coffee.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bf-overdraft-q1",
+          "type": "multiple_choice",
+          "context": "An [[overdraft]] happens when you spend more than is in your account. Some banks let the payment through anyway, then charge an [[overdraft fee]].",
+          "prompt": "Your account has $20. You buy a $26 lunch and the bank lets it through. What happened?",
+          "choices": [
+            "You overdrew the account",
+            "You earned interest",
+            "You made a deposit"
+          ],
+          "answer": 0,
+          "explain": "You spent $6 more than you had."
+        },
+        {
+          "id": "bf-overdraft-q2",
+          "type": "number",
+          "context": "Overdraft fees are often around $35, no matter how small the overdraft is.",
+          "prompt": "You overdraw by $6 and the bank charges a $35 fee. How much did that $6 really cost you?",
+          "answer": 41,
+          "unit": "$",
+          "explain": "$6 + $35 = $41."
+        },
+        {
+          "id": "bf-overdraft-q3",
+          "type": "number",
+          "prompt": "Three small purchases each overdraw your account on the same day, at $35 each. Total fees?",
+          "answer": 105,
+          "unit": "$",
+          "explain": "3 × $35 = $105."
+        },
+        {
+          "id": "bf-overdraft-q4",
+          "type": "multiple_choice",
+          "context": "[[Overdraft protection]] links your savings to checking, so a shortfall is covered by a transfer instead of a fee.",
+          "prompt": "Which costs less for a $6 shortfall?",
+          "choices": [
+            "A free or cheap transfer from savings",
+            "A $35 overdraft fee"
+          ],
+          "answer": 0,
+          "explain": "Moving your own $6 beats paying $35 for the privilege."
+        },
+        {
+          "id": "bf-overdraft-q5",
+          "type": "true_false",
+          "prompt": "You can usually ask your bank to decline card payments instead of overdrafting.",
+          "answer": true,
+          "explain": "Opting out means a declined card instead of a $35 fee."
+        },
+        {
+          "id": "bf-overdraft-q6",
+          "type": "multiple_choice",
+          "prompt": "What’s the best way to avoid overdrafts?",
+          "choices": [
+            "Low-balance alerts, and checking your available balance",
+            "Hoping for the best",
+            "Spending only on weekends"
+          ],
+          "answer": 0,
+          "explain": "An alert at $50 gives you time to act."
+        }
+      ]
+    },
+    {
+      "id": "bf-spot-fee",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Spot the Fee",
+      "summary": "Three statements. Find the charge you could have dodged.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bf-spot-fee-q1",
+          "type": "spot",
+          "context": "Fees don’t announce themselves. They sit quietly between normal purchases.",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking · Oct 1–10",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "groc",
+                "date": "Oct 2",
+                "label": "City Grocer",
+                "amount": -46.1
+              },
+              {
+                "id": "gas",
+                "date": "Oct 3",
+                "label": "Shell gas station",
+                "amount": -31.0
+              },
+              {
+                "id": "atm",
+                "date": "Oct 4",
+                "label": "ATM withdrawal, Corner Mart",
+                "amount": -40.0
+              },
+              {
+                "id": "atmfee",
+                "date": "Oct 4",
+                "label": "Out-of-network ATM fee",
+                "amount": -3.5
+              },
+              {
+                "id": "stream",
+                "date": "Oct 7",
+                "label": "StreamMax",
+                "amount": -15.99
+              },
+              {
+                "id": "lunch",
+                "date": "Oct 9",
+                "label": "Taco Spot",
+                "amount": -12.4
+              }
+            ]
+          },
+          "prompt": "Tap the fee.",
+          "answer": "atmfee",
+          "explain": "$3.50 just to reach your own money. Your own bank’s ATMs are usually free."
+        },
+        {
+          "id": "bf-spot-fee-q2",
+          "type": "true_false",
+          "prompt": "A $3.50 ATM fee on a $40 withdrawal is almost 9% of the cash.",
+          "answer": true,
+          "explain": "$3.50 ÷ $40 = 0.0875. Nearly 9%."
+        },
+        {
+          "id": "bf-spot-fee-q3",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking · Oct 11–17",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "rent",
+                "date": "Oct 12",
+                "label": "Rent, Oak Street Apartments",
+                "amount": -950.0
+              },
+              {
+                "id": "coffee",
+                "date": "Oct 14",
+                "label": "Bean There Café",
+                "amount": -5.75
+              },
+              {
+                "id": "odfee",
+                "date": "Oct 14",
+                "label": "Overdraft fee",
+                "amount": -35.0
+              },
+              {
+                "id": "groc",
+                "date": "Oct 15",
+                "label": "City Grocer",
+                "amount": -38.2
+              },
+              {
+                "id": "pay",
+                "date": "Oct 17",
+                "label": "Direct deposit, Northside Coffee",
+                "amount": 1079.4
+              }
+            ]
+          },
+          "prompt": "Which charge could you have avoided by opting out of overdraft?",
+          "answer": "odfee",
+          "explain": "Opted out, the coffee would have been declined. Annoying, but free."
+        },
+        {
+          "id": "bf-spot-fee-q4",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking · Oct 11–17",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "rent",
+                "date": "Oct 12",
+                "label": "Rent, Oak Street Apartments",
+                "amount": -950.0
+              },
+              {
+                "id": "coffee",
+                "date": "Oct 14",
+                "label": "Bean There Café",
+                "amount": -5.75
+              },
+              {
+                "id": "odfee",
+                "date": "Oct 14",
+                "label": "Overdraft fee",
+                "amount": -35.0
+              },
+              {
+                "id": "groc",
+                "date": "Oct 15",
+                "label": "City Grocer",
+                "amount": -38.2
+              },
+              {
+                "id": "pay",
+                "date": "Oct 17",
+                "label": "Direct deposit, Northside Coffee",
+                "amount": 1079.4
+              }
+            ]
+          },
+          "prompt": "How much did that $5.75 coffee really cost?",
+          "answer": 40.75,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$5.75 + $35.00 = $40.75."
+        },
+        {
+          "id": "bf-spot-fee-q5",
+          "type": "multiple_choice",
+          "prompt": "What would have prevented it?",
+          "choices": [
+            "A low-balance alert, or opting out of overdraft",
+            "Paying for coffee with a card next time",
+            "Buying a bigger coffee"
+          ],
+          "answer": 0,
+          "explain": "Either one turns a $40 coffee back into a $6 one."
+        },
+        {
+          "id": "bf-spot-fee-q6",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Account charges · Oct 31",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "maint",
+                "date": "Oct 31",
+                "label": "Monthly maintenance fee, waived",
+                "amount": 0.0
+              },
+              {
+                "id": "paper",
+                "date": "Oct 31",
+                "label": "Paper statement fee",
+                "amount": -2.0
+              },
+              {
+                "id": "interest",
+                "date": "Oct 31",
+                "label": "Interest earned",
+                "amount": 0.04
+              }
+            ]
+          },
+          "prompt": "You already get statements in the app. Which charge can you switch off?",
+          "answer": "paper",
+          "explain": "Go paperless and the $2 a month disappears: $24 a year."
+        }
+      ]
+    },
+    {
+      "id": "bf-double-charge",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Charged Twice",
+      "summary": "Mistakes and strangers on your statement: how to fight back.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bf-double-charge-q1",
+          "type": "spot",
+          "context": "Mistakes happen, and so does fraud. Read every line, not just the total.",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking · Oct 17–23",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "groc",
+                "date": "Oct 17",
+                "label": "City Grocer",
+                "amount": -52.8
+              },
+              {
+                "id": "tech1",
+                "date": "Oct 18",
+                "label": "TechWorld, headphones",
+                "amount": -89.99
+              },
+              {
+                "id": "tech2",
+                "date": "Oct 18",
+                "label": "TechWorld, headphones",
+                "amount": -89.99
+              },
+              {
+                "id": "quik",
+                "date": "Oct 20",
+                "label": "QuikShop Online",
+                "amount": -64.0
+              },
+              {
+                "id": "gas",
+                "date": "Oct 21",
+                "label": "Shell gas station",
+                "amount": -35.5
+              }
+            ]
+          },
+          "prompt": "You’ve never shopped at QuikShop. Tap the charge that isn’t yours.",
+          "answer": "quik",
+          "explain": "A charge from a store you’ve never used can mean someone has your card details."
+        },
+        {
+          "id": "bf-double-charge-q2",
+          "type": "multiple_choice",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking · Oct 17–23",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "groc",
+                "date": "Oct 17",
+                "label": "City Grocer",
+                "amount": -52.8
+              },
+              {
+                "id": "tech1",
+                "date": "Oct 18",
+                "label": "TechWorld, headphones",
+                "amount": -89.99
+              },
+              {
+                "id": "tech2",
+                "date": "Oct 18",
+                "label": "TechWorld, headphones",
+                "amount": -89.99
+              },
+              {
+                "id": "quik",
+                "date": "Oct 20",
+                "label": "QuikShop Online",
+                "amount": -64.0
+              },
+              {
+                "id": "gas",
+                "date": "Oct 21",
+                "label": "Shell gas station",
+                "amount": -35.5
+              }
+            ]
+          },
+          "prompt": "You bought one pair of headphones. How many times were you charged?",
+          "choices": [
+            "Twice",
+            "Once",
+            "Three times"
+          ],
+          "answer": 0,
+          "explain": "Two identical TechWorld lines on the same day."
+        },
+        {
+          "id": "bf-double-charge-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking · Oct 17–23",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "groc",
+                "date": "Oct 17",
+                "label": "City Grocer",
+                "amount": -52.8
+              },
+              {
+                "id": "tech1",
+                "date": "Oct 18",
+                "label": "TechWorld, headphones",
+                "amount": -89.99
+              },
+              {
+                "id": "tech2",
+                "date": "Oct 18",
+                "label": "TechWorld, headphones",
+                "amount": -89.99
+              },
+              {
+                "id": "quik",
+                "date": "Oct 20",
+                "label": "QuikShop Online",
+                "amount": -64.0
+              },
+              {
+                "id": "gas",
+                "date": "Oct 21",
+                "label": "Shell gas station",
+                "amount": -35.5
+              }
+            ]
+          },
+          "prompt": "Counting the double charge and the QuikShop charge, how much should come back to you?",
+          "answer": 153.99,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$89.99 + $64.00 = $153.99."
+        },
+        {
+          "id": "bf-double-charge-q4",
+          "type": "multiple_choice",
+          "context": "To [[dispute]] a charge means asking your bank to investigate it and reverse it.",
+          "prompt": "A charge is wrong. When should you dispute it?",
+          "choices": [
+            "As soon as you notice",
+            "After a year",
+            "Never, banks don’t make mistakes"
+          ],
+          "answer": 0,
+          "explain": "Act fast. You get the most protection when you report quickly, usually within 60 days of the statement."
+        },
+        {
+          "id": "bf-double-charge-q5",
+          "type": "order",
+          "prompt": "Put a dispute in order.",
+          "items": [
+            "Lock your card if it might be fraud",
+            "Report the charge to your bank",
+            "Explain what’s wrong and keep your records",
+            "Check the refund shows up on your statement"
+          ],
+          "explain": "Stop it, report it, document it, confirm it."
+        },
+        {
+          "id": "bf-double-charge-q6",
+          "type": "true_false",
+          "prompt": "If a card charge is fraud, keep using the card until the bank calls you.",
+          "answer": false,
+          "explain": "Lock it now. A new card is free."
+        }
+      ]
+    },
+    {
+      "id": "bf-reconcile",
+      "type": "lesson",
+      "title": "Does It Add Up?",
+      "summary": "Check your numbers against the bank’s.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bf-reconcile-q1",
+          "type": "multiple_choice",
+          "context": "To [[reconcile]] your account means checking your own records against the bank’s, line by line, so nothing surprises you.",
+          "prompt": "What’s the point of reconciling?",
+          "choices": [
+            "Catching mistakes, fees and fraud",
+            "Earning interest",
+            "Paying less tax"
+          ],
+          "answer": 0,
+          "explain": "If your numbers and the bank’s don’t match, something happened you didn’t know about."
+        },
+        {
+          "id": "bf-reconcile-q2",
+          "type": "number",
+          "prompt": "Opening balance $300. Money in $1,200. Money out $1,050. What’s the closing balance?",
+          "answer": 450,
+          "unit": "$",
+          "explain": "$300 + $1,200 − $1,050 = $450."
+        },
+        {
+          "id": "bf-reconcile-q3",
+          "type": "number",
+          "prompt": "Your records say $450, but the bank shows $415. How big is the gap?",
+          "answer": 35,
+          "unit": "$",
+          "explain": "$450 − $415 = $35."
+        },
+        {
+          "id": "bf-reconcile-q4",
+          "type": "multiple_choice",
+          "prompt": "A $35 gap. What’s the most likely cause?",
+          "choices": [
+            "An overdraft fee or charge you didn’t record",
+            "The bank gave you money",
+            "A math error the bank makes every month"
+          ],
+          "answer": 0,
+          "explain": "$35 is exactly a typical overdraft fee. Check the statement."
+        },
+        {
+          "id": "bf-reconcile-q5",
+          "type": "true_false",
+          "prompt": "Pending transactions can make your records and the bank’s balance disagree for a day or two.",
+          "answer": true,
+          "explain": "Give pending payments time to post before you worry."
+        },
+        {
+          "id": "bf-reconcile-q6",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank",
+            "subtitle": "Checking · Nov 1–10",
+            "meta": [
+              [
+                "Account",
+                "•••• 4417"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "pay",
+                "date": "Nov 1",
+                "label": "Direct deposit, Harbor Grocery",
+                "amount": 845.0
+              },
+              {
+                "id": "rent",
+                "date": "Nov 2",
+                "label": "Rent",
+                "amount": -600.0
+              },
+              {
+                "id": "groc",
+                "date": "Nov 6",
+                "label": "City Grocer",
+                "amount": -63.45
+              },
+              {
+                "id": "power",
+                "date": "Nov 9",
+                "label": "Bright Power",
+                "amount": -84.12
+              }
+            ],
+            "totals": [
+              {
+                "label": "Opening balance",
+                "amount": 210.0
+              }
+            ]
+          },
+          "prompt": "Work out the closing balance for this statement.",
+          "answer": 307.43,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$210.00 + $845.00 − $600.00 − $63.45 − $84.12 = $307.43."
+        }
+      ]
+    },
+    {
+      "id": "bf-choose",
+      "type": "lesson",
+      "format": "call",
+      "title": "Pick the Better Account",
+      "summary": "Compare two accounts on what you’d actually pay.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bf-choose-q1",
+          "type": "multiple_choice",
+          "context": "Compare accounts on what **you** would pay, based on how you actually bank.",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Harbor Classic",
+              "subtitle": "Checking account",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Monthly fee",
+                  "amount": 10.0
+                },
+                {
+                  "id": "atm",
+                  "label": "Other banks’ ATMs, each time",
+                  "amount": 3.0
+                },
+                {
+                  "id": "od",
+                  "label": "Overdraft fee",
+                  "amount": 35.0
+                }
+              ],
+              "note": "Monthly fee waived with a $1,000 balance."
+            },
+            {
+              "kind": "bill",
+              "title": "Cloud Free Checking",
+              "subtitle": "Online bank checking",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Monthly fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "atm",
+                  "label": "ATMs in network",
+                  "amount": 0.0
+                },
+                {
+                  "id": "od",
+                  "label": "Overdraft fee (purchases declined instead)",
+                  "amount": 0.0
+                }
+              ],
+              "note": "No branches."
+            }
+          ],
+          "prompt": "You keep about $400 in checking and use other banks’ ATMs twice a month. Which account costs less?",
+          "choices": [
+            "Cloud Free Checking",
+            "Harbor Classic"
+          ],
+          "answer": 0,
+          "explain": "With $400 you’d pay Harbor’s $10 fee every month, plus ATM fees."
+        },
+        {
+          "id": "bf-choose-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Harbor Classic",
+              "subtitle": "Checking account",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Monthly fee",
+                  "amount": 10.0
+                },
+                {
+                  "id": "atm",
+                  "label": "Other banks’ ATMs, each time",
+                  "amount": 3.0
+                },
+                {
+                  "id": "od",
+                  "label": "Overdraft fee",
+                  "amount": 35.0
+                }
+              ],
+              "note": "Monthly fee waived with a $1,000 balance."
+            },
+            {
+              "kind": "bill",
+              "title": "Cloud Free Checking",
+              "subtitle": "Online bank checking",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Monthly fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "atm",
+                  "label": "ATMs in network",
+                  "amount": 0.0
+                },
+                {
+                  "id": "od",
+                  "label": "Overdraft fee (purchases declined instead)",
+                  "amount": 0.0
+                }
+              ],
+              "note": "No branches."
+            }
+          ],
+          "prompt": "With Harbor Classic, what would you pay in a year? $10 a month, plus two $3 ATM fees a month.",
+          "answer": 192,
+          "unit": "$",
+          "explain": "$10 × 12 = $120, plus 2 × $3 × 12 = $72. $192 a year."
+        },
+        {
+          "id": "bf-choose-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Harbor Classic",
+              "subtitle": "Checking account",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Monthly fee",
+                  "amount": 10.0
+                },
+                {
+                  "id": "atm",
+                  "label": "Other banks’ ATMs, each time",
+                  "amount": 3.0
+                },
+                {
+                  "id": "od",
+                  "label": "Overdraft fee",
+                  "amount": 35.0
+                }
+              ],
+              "note": "Monthly fee waived with a $1,000 balance."
+            },
+            {
+              "kind": "bill",
+              "title": "Cloud Free Checking",
+              "subtitle": "Online bank checking",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Monthly fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "atm",
+                  "label": "ATMs in network",
+                  "amount": 0.0
+                },
+                {
+                  "id": "od",
+                  "label": "Overdraft fee (purchases declined instead)",
+                  "amount": 0.0
+                }
+              ],
+              "note": "No branches."
+            }
+          ],
+          "prompt": "And with Cloud Free Checking?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "Nothing. Same insurance, no fees."
+        },
+        {
+          "id": "bf-choose-q4",
+          "type": "multiple_choice",
+          "prompt": "When could Harbor Classic make sense?",
+          "choices": [
+            "If you always keep $1,000 or more and use their ATMs",
+            "If you like paying fees",
+            "Never"
+          ],
+          "answer": 0,
+          "explain": "Then the fees disappear, and you get branches too."
+        },
+        {
+          "id": "bf-choose-q5",
+          "type": "true_false",
+          "prompt": "The account with the most branches is always the best deal.",
+          "answer": false,
+          "explain": "Branches cost money, and someone pays for them: often you."
+        }
+      ]
+    },
+    {
+      "id": "bf-kai",
+      "type": "lesson",
+      "format": "story",
+      "title": "Kai’s Expensive Week",
+      "summary": "Follow one week of small purchases into a big hole.",
+      "xp": 10,
+      "story": {
+        "title": "$31 of spending, $70 of fees",
+        "character": "Kai, 20, college student",
+        "body": "Kai’s checking account had **$18** on Monday. Payday wasn’t until Friday.\n\nOn Monday Kai bought a **$5** coffee. On Tuesday, another **$5** coffee and a **$9** lunch. On Wednesday, a **$12** phone top-up. Kai’s bank lets payments through when the account is short, and charges **$35** for each one that overdraws it.\n\nOn Friday Kai’s **$420** paycheck arrived, and the account looked strangely small."
+      },
+      "steps": [
+        {
+          "id": "bf-kai-q1",
+          "type": "number",
+          "prompt": "Add up everything Kai spent from Monday to Wednesday.",
+          "answer": 31,
+          "unit": "$",
+          "explain": "$5 + $5 + $9 + $12 = $31."
+        },
+        {
+          "id": "bf-kai-q2",
+          "type": "number",
+          "prompt": "Kai started with $18. By how much did Kai overdraw the account?",
+          "answer": 13,
+          "unit": "$",
+          "explain": "$31 − $18 = $13."
+        },
+        {
+          "id": "bf-kai-q3",
+          "type": "multiple_choice",
+          "prompt": "Which purchase was the first to overdraw the account?",
+          "choices": [
+            "Tuesday’s lunch",
+            "Monday’s coffee",
+            "Tuesday’s coffee"
+          ],
+          "answer": 0,
+          "explain": "$18 − $5 − $5 = $8 left. The $9 lunch took it to −$1."
+        },
+        {
+          "id": "bf-kai-q4",
+          "type": "number",
+          "prompt": "Two purchases went through while the account was short. How much in overdraft fees?",
+          "answer": 70,
+          "unit": "$",
+          "explain": "2 × $35 = $70."
+        },
+        {
+          "id": "bf-kai-q5",
+          "type": "number",
+          "prompt": "Friday’s $420 paycheck arrives. What’s left after the −$13 balance and the $70 of fees?",
+          "answer": 337,
+          "unit": "$",
+          "explain": "$420 − $13 − $70 = $337."
+        },
+        {
+          "id": "bf-kai-q6",
+          "type": "multiple_choice",
+          "prompt": "Which one change would have saved Kai the $70?",
+          "choices": [
+            "Opting out of overdraft, so the card was declined",
+            "Buying a bigger lunch",
+            "Checking the balance on Friday"
+          ],
+          "answer": 0,
+          "explain": "A declined card is embarrassing for a second. $70 hurts for a week."
+        }
+      ]
+    },
+    {
+      "id": "bf-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "bf-trial",
+      "type": "boss",
+      "title": "Den Trial: Fees & Statements",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "bf-trial-q1",
+          "type": "number",
+          "prompt": "You overdraw by $4 and pay a $35 fee. What did the overdraft really cost?",
+          "answer": 39,
+          "unit": "$",
+          "explain": "$4 + $35 = $39."
+        },
+        {
+          "id": "bf-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "What does reconciling your account catch?",
+          "choices": [
+            "Fees, mistakes and fraud",
+            "Extra interest",
+            "A higher credit score"
+          ],
+          "answer": 0,
+          "explain": "If the numbers don’t match, find out why."
+        },
+        {
+          "id": "bf-trial-q3",
+          "type": "true_false",
+          "prompt": "A maintenance fee can often be avoided with direct deposit or a minimum balance.",
+          "answer": true,
+          "explain": "Ask your bank exactly what waives it."
+        },
+        {
+          "id": "bf-trial-q4",
+          "type": "number",
+          "prompt": "Opening balance $500. In $900, out $1,150. What’s the closing balance?",
+          "answer": 250,
+          "unit": "$",
+          "explain": "$500 + $900 − $1,150 = $250."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,859 @@
+{
+  "id": "banking",
+  "section": "everyday-money",
+  "order": 4,
+  "title": "Banking Basics",
+  "description": "Checking, savings, debit cards and deposits: how a bank account actually works.",
+  "wolfLine": "A bank is a den for your money. Pick a good one.",
+  "terms": {
+    "fdic-insurance": {
+      "term": "FDIC insurance",
+      "definition": "US government protection for bank deposits: if an insured bank fails, you get your money back, up to $250,000 per person, per bank.",
+      "example": "Your bank closes with $3,000 of yours inside. The FDIC pays you the $3,000."
+    },
+    "direct-deposit": {
+      "term": "Direct deposit",
+      "definition": "Your pay sent electronically straight into your bank account, with no paper check.",
+      "example": "Your paycheck lands in checking every other Friday morning."
+    },
+    "checking-account": {
+      "term": "Checking account",
+      "definition": "A bank account for everyday money: your pay lands there, and card payments and bills come out of it.",
+      "example": "Your paycheck arrives, then rent and groceries leave from the same account."
+    },
+    "debit-card": {
+      "term": "Debit card",
+      "definition": "A card that spends money straight from your checking account.",
+      "example": "Tap it for a $30 shirt and $30 leaves your checking account right away."
+    },
+    "atm": {
+      "term": "ATM",
+      "definition": "A cash machine. Use your debit card and PIN to take out or deposit cash.",
+      "example": "Taking $60 out of the machine outside your bank."
+    },
+    "deposit": {
+      "term": "Deposit",
+      "definition": "Money going into your account, like your pay, a check or cash.",
+      "example": "Your $1,079.40 paycheck arriving is a deposit."
+    },
+    "available-balance": {
+      "term": "Available balance",
+      "definition": "The money you can actually spend right now, after holds and pending payments.",
+      "example": "Your balance is $520, but a $400 check is on hold, so $120 is available."
+    },
+    "pending-transaction": {
+      "term": "Pending transaction",
+      "definition": "A payment that’s started but hasn’t finished going through. The money is already promised.",
+      "example": "A $58 grocery charge from last night that hasn’t come off your balance yet."
+    },
+    "credit-union": {
+      "term": "Credit union",
+      "definition": "A bank-like institution owned by its members, which often means lower fees and better rates.",
+      "example": "A credit union for teachers in your county."
+    },
+    "online-bank": {
+      "term": "Online bank",
+      "definition": "A bank with no branches: everything happens in an app or website, which often means fewer fees.",
+      "example": "An app-only bank with no monthly fee and a higher savings rate."
+    },
+    "two-factor-authentication": {
+      "term": "Two-factor authentication",
+      "definition": "Logging in with two things: your password plus a code sent to your phone.",
+      "example": "You type your password, then a 6-digit code your bank texts you."
+    }
+  },
+  "lessons": [
+    {
+      "id": "bk-why-bank",
+      "type": "lesson",
+      "title": "Why Use a Bank?",
+      "summary": "Safer than a mattress, and it does work for you.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bk-why-bank-q1",
+          "type": "info",
+          "title": "Your money’s home base",
+          "body": "A bank keeps your money safe, lets you pay bills and spend with a card, and gives your employer somewhere to send your pay.\n\nCash at home can be lost, stolen or burned, and nobody pays it back. Money in an insured bank is protected."
+        },
+        {
+          "id": "bk-why-bank-q2",
+          "type": "multiple_choice",
+          "context": "Most US bank accounts have [[FDIC insurance]]: if the bank fails, the government pays you back, up to **$250,000** per person, per bank.",
+          "prompt": "Your bank goes out of business. You had $3,000 in your account. What happens?",
+          "choices": [
+            "FDIC insurance pays it back",
+            "The money is gone",
+            "You get back half"
+          ],
+          "answer": 0,
+          "explain": "Up to $250,000 per person, per bank, is covered. Your $3,000 is safe."
+        },
+        {
+          "id": "bk-why-bank-q3",
+          "type": "true_false",
+          "prompt": "Cash hidden at home is protected by FDIC insurance.",
+          "answer": false,
+          "explain": "FDIC insurance only covers money in an insured bank."
+        },
+        {
+          "id": "bk-why-bank-q4",
+          "type": "multiple_choice",
+          "context": "With [[direct deposit]], your employer sends your pay straight into your account. No paper check needed.",
+          "prompt": "What’s the main benefit of direct deposit?",
+          "choices": [
+            "Your pay arrives on its own, often faster",
+            "You get paid more",
+            "You skip taxes"
+          ],
+          "answer": 0,
+          "explain": "No paper check to lose, no trip to the bank, and often the money arrives sooner."
+        },
+        {
+          "id": "bk-why-bank-q5",
+          "type": "multiple_choice",
+          "prompt": "Which is the safest place for $2,000 of savings?",
+          "choices": [
+            "An FDIC-insured bank account",
+            "A shoebox under your bed",
+            "Your wallet"
+          ],
+          "answer": 0,
+          "explain": "Insured, protected, and it can earn a little interest."
+        },
+        {
+          "id": "bk-why-bank-q6",
+          "type": "fill_blank",
+          "prompt": "If your bank fails, FDIC insurance covers up to ___ per person, per bank.",
+          "choices": [
+            "$2,500",
+            "$250,000",
+            "$2.5 million"
+          ],
+          "answer": 1,
+          "explain": "$250,000. More than enough for most people."
+        }
+      ]
+    },
+    {
+      "id": "bk-checking-savings",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Checking vs. Savings",
+      "summary": "One account for spending, one for keeping.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bk-checking-savings-q1",
+          "type": "multiple_choice",
+          "context": "A [[checking account]] is for everyday money: your pay lands there, and bills and card payments come out of it.",
+          "prompt": "What’s a checking account for?",
+          "choices": [
+            "Everyday spending and bills",
+            "Money you won’t touch for years",
+            "Borrowing money"
+          ],
+          "answer": 0,
+          "explain": "Checking is where money comes and goes."
+        },
+        {
+          "id": "bk-checking-savings-q2",
+          "type": "multiple_choice",
+          "context": "A [[savings account]] is for money you’re keeping, not spending. It usually pays you a little [[interest]]: extra money for leaving it there.",
+          "prompt": "Where should next year’s holiday money live?",
+          "choices": [
+            "In savings",
+            "In checking with the rent money",
+            "In your wallet"
+          ],
+          "answer": 0,
+          "explain": "Separate and growing, so you don’t spend it by accident."
+        },
+        {
+          "id": "bk-checking-savings-q3",
+          "type": "sort",
+          "prompt": "Checking or savings? Sort them.",
+          "buckets": [
+            "Checking",
+            "Savings"
+          ],
+          "items": [
+            [
+              "Paying rent",
+              0
+            ],
+            [
+              "Emergency money",
+              1
+            ],
+            [
+              "Buying groceries with your card",
+              0
+            ],
+            [
+              "Money for a car in two years",
+              1
+            ],
+            [
+              "Your paycheck landing",
+              0
+            ],
+            [
+              "Holiday fund",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "bk-checking-savings-q4",
+          "type": "true_false",
+          "prompt": "Keeping savings in a separate account makes you less likely to spend it by accident.",
+          "answer": true,
+          "explain": "Out of sight of your card, out of reach of your impulses."
+        },
+        {
+          "id": "bk-checking-savings-q5",
+          "type": "number",
+          "context": "Savings interest is shown as a yearly percentage. 1% of $1,000 is $10 a year.",
+          "prompt": "Your savings account pays 2% a year. How much interest does $1,500 earn in a year?",
+          "answer": 30,
+          "unit": "$",
+          "explain": "$1,500 × 0.02 = $30."
+        },
+        {
+          "id": "bk-checking-savings-q6",
+          "type": "multiple_choice",
+          "prompt": "Why not keep everything in savings?",
+          "choices": [
+            "Savings accounts aren’t built for daily card payments and bills",
+            "Savings accounts are illegal for young people",
+            "Savings never pay interest"
+          ],
+          "answer": 0,
+          "explain": "Many savings accounts limit withdrawals. Checking handles the daily traffic."
+        },
+        {
+          "id": "bk-checking-savings-q7",
+          "type": "multiple_choice",
+          "prompt": "You get paid. What’s a simple setup?",
+          "choices": [
+            "Pay lands in checking, and a set amount moves to savings",
+            "Everything stays in checking",
+            "Everything goes into savings"
+          ],
+          "answer": 0,
+          "explain": "Spend from one account, build in the other."
+        }
+      ]
+    },
+    {
+      "id": "bk-opening",
+      "type": "lesson",
+      "title": "Opening an Account",
+      "summary": "What to bring, what to ask, what to skip.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bk-opening-q1",
+          "type": "info",
+          "title": "What you’ll need",
+          "body": "To open an account you usually need a photo ID, your Social Security number, an address, and sometimes a small first deposit.\n\nUnder 18? You’ll usually need a parent or guardian on the account with you."
+        },
+        {
+          "id": "bk-opening-q2",
+          "type": "multiple_choice",
+          "prompt": "Which do you usually need to open a bank account?",
+          "choices": [
+            "A photo ID and your Social Security number",
+            "A credit card",
+            "A job offer letter"
+          ],
+          "answer": 0,
+          "explain": "Banks have to check who you are. ID and Social Security number do that."
+        },
+        {
+          "id": "bk-opening-q3",
+          "type": "multiple_choice",
+          "prompt": "Before you sign up, what’s the most important thing to ask?",
+          "choices": [
+            "What fees could I be charged, and how do I avoid them?",
+            "What color is the debit card?",
+            "How many branches are downtown?"
+          ],
+          "answer": 0,
+          "explain": "Fees are where a “free” account stops being free."
+        },
+        {
+          "id": "bk-opening-q4",
+          "type": "order",
+          "prompt": "Put opening an account in order.",
+          "items": [
+            "Compare a few banks or credit unions",
+            "Check the fees and the insurance",
+            "Apply with your ID and Social Security number",
+            "Make your first deposit and set up direct deposit"
+          ],
+          "explain": "Shop, check, apply, fund."
+        },
+        {
+          "id": "bk-opening-q5",
+          "type": "true_false",
+          "prompt": "A bank asking for your Social Security number when you open an account is normal.",
+          "answer": true,
+          "explain": "Banks are required to confirm who you are. Just never give it to someone who contacts you out of the blue."
+        },
+        {
+          "id": "bk-opening-q6",
+          "type": "multiple_choice",
+          "prompt": "The banker offers a credit card, an overdraft plan and a paid “account protection” add-on. What do you do?",
+          "choices": [
+            "Say no for now and open just the basic accounts",
+            "Sign up for everything",
+            "Walk out without an account"
+          ],
+          "answer": 0,
+          "explain": "Start simple. You can always add things later once you understand them."
+        }
+      ]
+    },
+    {
+      "id": "bk-debit-atm",
+      "type": "lesson",
+      "title": "Debit Cards & ATMs",
+      "summary": "Spending your own money, one tap at a time.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bk-debit-atm-q1",
+          "type": "multiple_choice",
+          "context": "A [[debit card]] spends money straight from your checking account. Tap it, and the money leaves.",
+          "prompt": "You buy a $30 shirt with your debit card. Where does the money come from?",
+          "choices": [
+            "Your checking account",
+            "The bank lends it to you",
+            "Your savings account"
+          ],
+          "answer": 0,
+          "explain": "Straight out of checking, right away."
+        },
+        {
+          "id": "bk-debit-atm-q2",
+          "type": "multiple_choice",
+          "context": "An [[ATM]] is a cash machine. Your debit card and PIN (a secret 4-digit code) let you take out cash.",
+          "prompt": "Which of these is a mistake?",
+          "choices": [
+            "Writing your PIN on the back of your card",
+            "Covering the keypad as you type your PIN",
+            "Memorizing your PIN"
+          ],
+          "answer": 0,
+          "explain": "Lose the card and you’ve handed over the code too."
+        },
+        {
+          "id": "bk-debit-atm-q3",
+          "type": "number",
+          "context": "ATMs outside your bank’s network often charge a fee, and your own bank may charge one too.",
+          "prompt": "The ATM charges $3.50 and your own bank adds $2.50. What does it cost to take out $40?",
+          "answer": 6,
+          "unit": "$",
+          "explain": "$3.50 + $2.50 = $6 to get $40. That’s 15% of the cash."
+        },
+        {
+          "id": "bk-debit-atm-q4",
+          "type": "number",
+          "prompt": "You do that twice a week for a year, 104 times. What do the fees add up to?",
+          "answer": 624,
+          "unit": "$",
+          "explain": "$6 × 104 = $624."
+        },
+        {
+          "id": "bk-debit-atm-q5",
+          "type": "true_false",
+          "prompt": "With a debit card, you can never spend more than what’s in your account.",
+          "answer": false,
+          "explain": "Some banks let the payment through anyway and charge a fee for it. You’ll meet that trap in the next unit."
+        },
+        {
+          "id": "bk-debit-atm-q6",
+          "type": "multiple_choice",
+          "prompt": "Your debit card is lost. First move?",
+          "choices": [
+            "Lock or report it in your bank app right away",
+            "Wait a week to see if it turns up",
+            "Keep using the card number online"
+          ],
+          "answer": 0,
+          "explain": "Lock it now. You can unlock it if it turns up in your jacket."
+        },
+        {
+          "id": "bk-debit-atm-q7",
+          "type": "fill_blank",
+          "prompt": "A debit card takes money from your ___ account.",
+          "choices": [
+            "checking",
+            "savings",
+            "credit"
+          ],
+          "answer": 0,
+          "explain": "Checking. That’s what it’s linked to."
+        }
+      ]
+    },
+    {
+      "id": "bk-deposits",
+      "type": "lesson",
+      "title": "Money In: Deposits & Holds",
+      "summary": "Why your balance and your spendable money can differ.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bk-deposits-q1",
+          "type": "multiple_choice",
+          "context": "A [[deposit]] is money going into your account: your pay, a check, cash at the counter.",
+          "prompt": "Which of these is a deposit?",
+          "choices": [
+            "Your paycheck arriving",
+            "Paying your phone bill",
+            "Taking cash from an ATM"
+          ],
+          "answer": 0,
+          "explain": "Money in is a deposit. The other two are money out."
+        },
+        {
+          "id": "bk-deposits-q2",
+          "type": "multiple_choice",
+          "context": "When you deposit a check, the bank may hold it for a day or two before you can spend it. Your [[available balance]] is what you can spend right now.",
+          "prompt": "You deposit a $400 check this morning. Your account shows $520, but your available balance is $120. Why?",
+          "choices": [
+            "The check is on hold",
+            "The bank took a $400 fee",
+            "Someone stole $400"
+          ],
+          "answer": 0,
+          "explain": "$520 − $400 on hold = $120 you can use right now."
+        },
+        {
+          "id": "bk-deposits-q3",
+          "type": "number",
+          "prompt": "Your balance is $860. A $250 check you deposited is still on hold. What’s your available balance?",
+          "answer": 610,
+          "unit": "$",
+          "explain": "$860 − $250 = $610."
+        },
+        {
+          "id": "bk-deposits-q4",
+          "type": "true_false",
+          "prompt": "You should spend based on your available balance, not your total balance.",
+          "answer": true,
+          "explain": "The available balance is the real number."
+        },
+        {
+          "id": "bk-deposits-q5",
+          "type": "multiple_choice",
+          "prompt": "You deposited a check by photographing it in your bank app. What should you do with the paper check?",
+          "choices": [
+            "Keep it safe for a couple of weeks, then destroy it",
+            "Deposit it again at the branch",
+            "Hand it back to the person who wrote it"
+          ],
+          "answer": 0,
+          "explain": "Keep it until the deposit fully clears. Depositing it twice causes real trouble."
+        },
+        {
+          "id": "bk-deposits-q6",
+          "type": "order",
+          "prompt": "Put a phone check deposit in order.",
+          "items": [
+            "Sign the back of the check",
+            "Photograph it in your bank app",
+            "Wait for the hold to clear",
+            "Spend the money"
+          ],
+          "explain": "Sign, snap, wait, spend."
+        }
+      ]
+    },
+    {
+      "id": "bk-alex",
+      "type": "lesson",
+      "format": "story",
+      "title": "Alex Checks the Balance",
+      "summary": "A balance can look bigger than it really is.",
+      "xp": 10,
+      "story": {
+        "title": "Plenty of money. Or not?",
+        "character": "Alex, 19, first checking account",
+        "body": "On Friday morning Alex’s banking app shows a balance of **$412**. Alex wants to buy a concert ticket.\n\nWhat Alex doesn’t notice: three [[pending transactions|pending-transaction]] haven’t finished going through. A **$58** grocery run, **$24** of gas and **$9** for a streaming service. Pending means the money is already promised, even though the balance hasn’t dropped yet.\n\nThe concert ticket costs **$340**."
+      },
+      "steps": [
+        {
+          "id": "bk-alex-q1",
+          "type": "number",
+          "prompt": "Add up the three pending transactions.",
+          "answer": 91,
+          "unit": "$",
+          "explain": "$58 + $24 + $9 = $91."
+        },
+        {
+          "id": "bk-alex-q2",
+          "type": "number",
+          "prompt": "How much does Alex really have once they go through?",
+          "answer": 321,
+          "unit": "$",
+          "explain": "$412 − $91 = $321."
+        },
+        {
+          "id": "bk-alex-q3",
+          "type": "multiple_choice",
+          "prompt": "Can Alex afford the $340 ticket today?",
+          "choices": [
+            "No, there’s only $321 once the pending payments clear",
+            "Yes, the balance says $412",
+            "Yes, pending payments don’t count"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "The balance is out of date by $91.",
+            "They count. The money is already promised."
+          ],
+          "explain": "The balance hasn’t caught up with what’s already been spent."
+        },
+        {
+          "id": "bk-alex-q4",
+          "type": "number",
+          "prompt": "How much is Alex short?",
+          "answer": 19,
+          "unit": "$",
+          "explain": "$340 − $321 = $19."
+        },
+        {
+          "id": "bk-alex-q5",
+          "type": "true_false",
+          "prompt": "Pending transactions can take a day or two to fully go through.",
+          "answer": true,
+          "explain": "That’s why the balance lags behind."
+        },
+        {
+          "id": "bk-alex-q6",
+          "type": "multiple_choice",
+          "prompt": "Which habit would have saved Alex?",
+          "choices": [
+            "Checking pending transactions before a big purchase",
+            "Only looking at the balance",
+            "Never buying concert tickets"
+          ],
+          "answer": 0,
+          "explain": "Balance minus pending is what you really have."
+        }
+      ]
+    },
+    {
+      "id": "bk-account-types",
+      "type": "lesson",
+      "format": "call",
+      "title": "Banks, Credit Unions & Online Banks",
+      "summary": "Three kinds of homes for your money. Compare them.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bk-account-types-q1",
+          "type": "multiple_choice",
+          "context": "A [[credit union]] is like a bank, but owned by its members. Profits come back as lower fees and better rates.",
+          "prompt": "Who owns a credit union?",
+          "choices": [
+            "Its members",
+            "The government",
+            "One wealthy owner"
+          ],
+          "answer": 0,
+          "explain": "Members own it, so profits go back to them."
+        },
+        {
+          "id": "bk-account-types-q2",
+          "type": "multiple_choice",
+          "context": "An [[online bank]] has no branches. Lower costs often mean fewer fees and better interest on savings.",
+          "prompt": "What’s the usual trade-off with an online bank?",
+          "choices": [
+            "No branch to walk into",
+            "No insurance on your money",
+            "No debit card"
+          ],
+          "answer": 0,
+          "explain": "Insured online banks are just as protected. You just can’t visit one."
+        },
+        {
+          "id": "bk-account-types-q3",
+          "type": "multiple_choice",
+          "context": "Compare accounts on what **you** would pay, based on how you actually bank.",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "City Bank Everyday",
+              "subtitle": "Checking account",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Monthly fee",
+                  "amount": 12.0
+                },
+                {
+                  "id": "atm",
+                  "label": "Other banks’ ATMs, each time",
+                  "amount": 3.0
+                }
+              ],
+              "note": "Monthly fee waived if you keep $1,500 or more in the account."
+            },
+            {
+              "kind": "bill",
+              "title": "Cloud Checking",
+              "subtitle": "Online bank checking",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Monthly fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "atm",
+                  "label": "ATMs in a 55,000-machine network",
+                  "amount": 0.0
+                }
+              ],
+              "note": "No branches. Everything happens in the app."
+            }
+          ],
+          "prompt": "You usually keep about $600 in checking. Which account costs you less?",
+          "choices": [
+            "Cloud Checking",
+            "City Bank Everyday"
+          ],
+          "answer": 0,
+          "explain": "With $600 you’d never reach City Bank’s $1,500 waiver, so you’d pay $12 every month."
+        },
+        {
+          "id": "bk-account-types-q4",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "City Bank Everyday",
+              "subtitle": "Checking account",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Monthly fee",
+                  "amount": 12.0
+                },
+                {
+                  "id": "atm",
+                  "label": "Other banks’ ATMs, each time",
+                  "amount": 3.0
+                }
+              ],
+              "note": "Monthly fee waived if you keep $1,500 or more in the account."
+            },
+            {
+              "kind": "bill",
+              "title": "Cloud Checking",
+              "subtitle": "Online bank checking",
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Monthly fee",
+                  "amount": 0.0
+                },
+                {
+                  "id": "atm",
+                  "label": "ATMs in a 55,000-machine network",
+                  "amount": 0.0
+                }
+              ],
+              "note": "No branches. Everything happens in the app."
+            }
+          ],
+          "prompt": "With $600 in the account, what would City Bank’s monthly fee cost you over a year?",
+          "answer": 144,
+          "unit": "$",
+          "explain": "$12 × 12 = $144."
+        },
+        {
+          "id": "bk-account-types-q5",
+          "type": "true_false",
+          "prompt": "Online banks and credit unions can’t be insured.",
+          "answer": false,
+          "explain": "Insured online banks have FDIC insurance. Credit unions have the same kind of cover through the NCUA."
+        },
+        {
+          "id": "bk-account-types-q6",
+          "type": "sort",
+          "prompt": "Which is it?",
+          "buckets": [
+            "Bank",
+            "Credit union",
+            "Online bank"
+          ],
+          "items": [
+            [
+              "Owned by investors who want a profit",
+              0
+            ],
+            [
+              "Owned by its members",
+              1
+            ],
+            [
+              "No branches, all in an app",
+              2
+            ],
+            [
+              "You join through where you live or work",
+              1
+            ],
+            [
+              "Lower fees because there are no branches",
+              2
+            ],
+            [
+              "Big branch network across the country",
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bk-safe",
+      "type": "lesson",
+      "title": "Keep Your Account Safe",
+      "summary": "Passwords, codes and alerts: lock the den.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bk-safe-q1",
+          "type": "multiple_choice",
+          "context": "Most account break-ins start with a stolen password, not a bank robbery.",
+          "prompt": "Which password is strongest?",
+          "choices": [
+            "A long phrase only you know, used nowhere else",
+            "Your birthday",
+            "The same password you use everywhere"
+          ],
+          "answer": 0,
+          "explain": "Long, unique, and not guessable from your social media."
+        },
+        {
+          "id": "bk-safe-q2",
+          "type": "multiple_choice",
+          "context": "[[Two-factor authentication]] means logging in takes two things: your password **and** a code sent to your phone.",
+          "prompt": "Someone steals your password. With two-factor on, what stops them?",
+          "choices": [
+            "They don’t have the code from your phone",
+            "Nothing",
+            "The password expires"
+          ],
+          "answer": 0,
+          "explain": "Without your phone, the password alone isn’t enough."
+        },
+        {
+          "id": "bk-safe-q3",
+          "type": "true_false",
+          "prompt": "Your bank may text you to ask for your full password or PIN.",
+          "answer": false,
+          "explain": "Banks never ask for your PIN or password by text, email or phone. Anyone who does is a scammer."
+        },
+        {
+          "id": "bk-safe-q4",
+          "type": "multiple_choice",
+          "context": "Turn on alerts. Your bank can message you for every purchase, low balances and big withdrawals.",
+          "prompt": "You get an alert for a $240 purchase you didn’t make. First move?",
+          "choices": [
+            "Lock your card and call the bank on the number printed on your card",
+            "Reply to the text with your details",
+            "Wait and see if more charges appear"
+          ],
+          "answer": 0,
+          "explain": "Use a number you trust, never one from the message."
+        },
+        {
+          "id": "bk-safe-q5",
+          "type": "order",
+          "prompt": "A strange charge shows up. Put your response in order.",
+          "items": [
+            "Lock your card in the app",
+            "Call the bank on the number on your card",
+            "Report the charge as fraud",
+            "Change your password"
+          ],
+          "explain": "Stop the bleeding, tell the bank, then lock things down."
+        },
+        {
+          "id": "bk-safe-q6",
+          "type": "true_false",
+          "prompt": "Logging into your bank on public café Wi-Fi is as safe as at home.",
+          "answer": false,
+          "explain": "Public Wi-Fi can be watched. Use your phone’s data or a network you trust."
+        }
+      ]
+    },
+    {
+      "id": "bk-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "bk-trial",
+      "type": "boss",
+      "title": "Den Trial: Banking",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "bk-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "Which account should your paycheck land in?",
+          "choices": [
+            "Checking",
+            "Savings",
+            "A payment app"
+          ],
+          "answer": 0,
+          "explain": "Checking, then move your saving out."
+        },
+        {
+          "id": "bk-trial-q2",
+          "type": "number",
+          "prompt": "Your balance is $730, with pending charges of $85 and $40. How much is available to spend?",
+          "answer": 605,
+          "unit": "$",
+          "explain": "$730 − $85 − $40 = $605."
+        },
+        {
+          "id": "bk-trial-q3",
+          "type": "true_false",
+          "prompt": "FDIC insurance covers up to $250,000 per person, per bank.",
+          "answer": true,
+          "explain": "That’s the limit."
+        },
+        {
+          "id": "bk-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "A text says “Your account is locked. Reply with your PIN.” What is it?",
+          "choices": [
+            "A scam",
+            "Your bank",
+            "A routine check"
+          ],
+          "answer": 0,
+          "explain": "Banks never ask for your PIN. Delete it."
+        }
+      ]
+    }
+  ]
+}

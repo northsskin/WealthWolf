@@ -1,0 +1,61 @@
+.rankprog__name {
+  margin-top: var(--space-2);
+  font-size: var(--text-2xl);
+}
+
+.rankprog__tagline {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+.rankprog__bar {
+  height: var(--space-3);
+  margin-top: var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--track);
+  overflow: hidden;
+}
+
+.rankprog__bar span {
+  display: block;
+  height: 100%;
+  min-width: var(--space-2);
+  background: var(--gold);
+  transition: width var(--dur-slow) var(--ease-out);
+}
+
+.rankprog__next {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+.rankprog__next .figure {
+  color: var(--ink);
+}
+
+.rankprog__ladder {
+  display: flex;
+  gap: var(--space-1);
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rankprog__ladder li {
+  flex: 1;
+  padding: var(--space-1) 0;
+  border-radius: var(--radius-sm);
+  background: var(--track);
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.rankprog__ladder li.is-earned {
+  background: var(--gold);
+  color: var(--on-accent);
+}

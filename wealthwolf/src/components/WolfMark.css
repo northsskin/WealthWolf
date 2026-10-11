@@ -1,0 +1,10 @@
+.wolfmark {
+  display: block;
+  flex-shrink: 0;
+}
+
+.wolfmark--xs { width: var(--mark-xs); height: var(--mark-xs); }
+.wolfmark--sm { width: var(--mark-sm); height: var(--mark-sm); }
+.wolfmark--md { width: var(--mark-md); height: var(--mark-md); }
+.wolfmark--lg { width: var(--mark-lg); height: var(--mark-lg); }
+.wolfmark--xl { width: var(--mark-xl); height: var(--mark-xl); }

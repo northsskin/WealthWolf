@@ -1,0 +1,477 @@
+{
+  "id": "debt-credit",
+  "section": "credit-debt",
+  "order": 1,
+  "title": "Debt & Credit",
+  "description": "Use debt as a tool, not a leash.",
+  "wolfLine": "Interest works against you too. Fight back.",
+  "terms": {
+    "debt": {
+      "term": "Debt",
+      "definition": "Money you've borrowed and still have to pay back.",
+      "example": "You borrow $1,000 from a bank. You now have $1,000 of debt."
+    },
+    "loan": {
+      "term": "Loan",
+      "definition": "Money a lender gives you now, which you repay over time, usually with interest.",
+      "example": "A car loan: the bank pays for the car, you pay the bank back each month."
+    },
+    "credit-card": {
+      "term": "Credit card",
+      "definition": "A card that lets you buy now and pay later. Whatever you don't pay off each month gets charged interest.",
+      "example": "Buy a $500 TV on the card, pay $100 this month, and you're charged interest on the other $400."
+    },
+    "good-debt": {
+      "term": "Good debt",
+      "definition": "Cheap borrowing for something that builds your future, like a home or a skill that raises your pay.",
+      "example": "An affordable loan for training that gets you a better-paid job."
+    },
+    "bad-debt": {
+      "term": "Bad debt",
+      "definition": "Expensive borrowing for things that quickly lose their value.",
+      "example": "A holiday paid for on a credit card you can't pay off."
+    },
+    "mortgage": {
+      "term": "Mortgage",
+      "definition": "A big loan used to buy a home, usually paid back over 15 to 30 years.",
+      "example": "The bank lends you most of the price of a flat, and you repay it monthly."
+    },
+    "apr": {
+      "term": "APR",
+      "definition": "Annual Percentage Rate: the yearly cost of borrowing, shown as a percentage. Higher means more expensive.",
+      "example": "Borrow $1,000 at 10% APR for a year and it costs you about $100."
+    },
+    "balance": {
+      "term": "Balance",
+      "definition": "How much you still owe on a card or loan right now.",
+      "example": "Spend $700 on a card, pay back $200, and your balance is $500."
+    },
+    "minimum-payment": {
+      "term": "Minimum payment",
+      "definition": "The smallest amount a lender lets you pay each month. Pay only this and your debt shrinks very slowly.",
+      "example": "You owe $2,000, but the card only asks for $40 this month."
+    },
+    "avalanche-method": {
+      "term": "Avalanche method",
+      "definition": "A way to pay off debts: pay the minimum on all of them, then put every spare bit of money toward the one with the highest APR.",
+      "example": "Clear the 29% store card before the 7% car loan."
+    },
+    "snowball-method": {
+      "term": "Snowball method",
+      "definition": "A way to pay off debts: pay the minimum on all of them, then attack the smallest balance first for quick wins.",
+      "example": "Clear the $400 phone plan before the $7,500 car loan."
+    },
+    "credit-score": {
+      "term": "Credit score",
+      "definition": "A number that tells lenders how reliable you are at paying back money. Higher is better.",
+      "example": "A good score can get you a loan with a lower APR."
+    },
+    "credit-limit": {
+      "term": "Credit limit",
+      "definition": "The most you're allowed to borrow on a credit card.",
+      "example": "A card with a $2,000 limit lets you owe up to $2,000 on it."
+    },
+    "credit-utilization": {
+      "term": "Credit utilization",
+      "definition": "How much of your credit limit you're using, as a percentage: balance ÷ limit. Lower is better for your credit score.",
+      "example": "Owe $500 on a $1,000 limit and your utilization is 50%."
+    }
+  },
+  "lessons": [
+    {
+      "id": "dc-good-bad-debt",
+      "type": "lesson",
+      "title": "What Is Debt?",
+      "summary": "Borrowing, loans, and what it really costs.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dc-good-bad-debt-q1",
+          "type": "multiple_choice",
+          "context": "[[Debt]] is money you've borrowed and still have to pay back.",
+          "prompt": "You borrow $1,000 from a bank to buy a laptop. What do you now have?",
+          "choices": [
+            "Income",
+            "Debt",
+            "An emergency fund"
+          ],
+          "answer": 1,
+          "explain": "Borrowed money isn't yours to keep. It's debt until you pay it back."
+        },
+        {
+          "id": "dc-good-bad-debt-q2",
+          "type": "multiple_choice",
+          "context": "A [[loan]] is one common way to borrow: a lender gives you money now, and you pay it back over time. You usually pay back **more** than you borrowed. The extra is [[interest]], and this time you're the one paying it.",
+          "prompt": "You borrow $1,000 and pay back $1,100 in total. What's the extra $100?",
+          "choices": [
+            "Interest",
+            "Income",
+            "Savings"
+          ],
+          "answer": 0,
+          "explain": "The price of using someone else's money."
+        },
+        {
+          "id": "dc-good-bad-debt-q3",
+          "type": "multiple_choice",
+          "context": "A [[credit card]] lets you buy now and pay later. If you don't pay the full bill each month, you're charged interest on what's left, and it's usually a lot.",
+          "prompt": "You buy a $500 TV on a credit card and pay back $100 this month. What happens to the other $400?",
+          "choices": [
+            "The store pays it",
+            "It disappears",
+            "You're charged interest on it"
+          ],
+          "answer": 2,
+          "explain": "Whatever you don't pay off keeps costing you."
+        },
+        {
+          "id": "dc-good-bad-debt-q4",
+          "type": "multiple_choice",
+          "context": "Cheap borrowing that builds your future, like a home or a skill that raises your pay, is often called [[good debt]]. Expensive borrowing for things that quickly lose value is [[bad debt]].",
+          "prompt": "Which of these is closest to bad debt?",
+          "choices": [
+            "A low-cost loan for training that raises your pay",
+            "A holiday on a credit card you can't pay off",
+            "An affordable loan to buy a home"
+          ],
+          "answer": 1,
+          "explain": "High interest, and the holiday is over long before the debt is."
+        },
+        {
+          "id": "dc-good-bad-debt-q5",
+          "type": "true_false",
+          "prompt": "All debt is bad.",
+          "answer": false,
+          "explain": "Cheap debt that builds your future can be a smart move. Expensive debt for fun rarely is."
+        },
+        {
+          "id": "dc-good-bad-debt-q6",
+          "type": "multiple_choice",
+          "context": "A [[mortgage]] is a big loan used to buy a home. People usually pay it back over 15 to 30 years.",
+          "prompt": "What is a mortgage for?",
+          "choices": [
+            "Buying a home",
+            "Buying groceries",
+            "Paying a phone bill"
+          ],
+          "answer": 0,
+          "explain": "Homes cost too much to buy outright, so most people borrow."
+        },
+        {
+          "id": "dc-good-bad-debt-q7",
+          "type": "match",
+          "prompt": "Recap: match each word to what it means.",
+          "pairs": [
+            [
+              "Loan",
+              "Borrowed money you repay over time"
+            ],
+            [
+              "Credit card",
+              "Buy now, pay later"
+            ],
+            [
+              "Mortgage",
+              "A loan to buy a home"
+            ],
+            [
+              "Interest",
+              "The extra you pay to borrow"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dc-apr",
+      "type": "lesson",
+      "title": "APR, Decoded",
+      "summary": "What borrowing really costs you each year.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dc-apr-q1",
+          "type": "multiple_choice",
+          "context": "Lenders show the yearly cost of borrowing as a percentage called the [[APR]]. A higher APR means more expensive debt.",
+          "prompt": "One card has a 12% APR. Another has 24%. Which is cheaper to borrow on?",
+          "choices": [
+            "24% APR",
+            "12% APR",
+            "They cost the same"
+          ],
+          "answer": 1,
+          "explain": "Lower APR, lower cost."
+        },
+        {
+          "id": "dc-apr-q2",
+          "type": "number",
+          "context": "Rough yearly cost = amount you owe × APR. Owe $1,000 at 10% APR for a year and it costs about $1,000 × 0.10 = $100.",
+          "prompt": "You owe $2,000 on a card at 20% APR for a whole year. Roughly how much interest is that?",
+          "answer": 400,
+          "explain": "$2,000 × 0.20 = $400. Cards add interest monthly, so the real number is a bit higher.",
+          "unit": "$"
+        },
+        {
+          "id": "dc-apr-q3",
+          "type": "number",
+          "context": "The amount you still owe on a card or loan is your [[balance]].",
+          "prompt": "You spent $700 on your card and paid back $200. What's your balance?",
+          "answer": 500,
+          "explain": "$700 − $200 = $500 still owed.",
+          "unit": "$"
+        },
+        {
+          "id": "dc-apr-q4",
+          "type": "multiple_choice",
+          "context": "Every month, a card asks for at least a small [[minimum payment]]. Pay only that, and interest keeps the balance alive for a very long time.",
+          "prompt": "What happens if you only ever pay the minimum?",
+          "choices": [
+            "The debt is gone in a month",
+            "The card company forgives the rest",
+            "The debt drags on for years because of interest"
+          ],
+          "answer": 2,
+          "explain": "Minimums are designed to keep you paying. Pay more whenever you can."
+        },
+        {
+          "id": "dc-apr-q5",
+          "type": "true_false",
+          "context": "Stretching a loan over more years makes each monthly payment smaller, but you pay interest for longer.",
+          "prompt": "A smaller monthly payment always means a cheaper loan.",
+          "answer": false,
+          "explain": "Smaller payments over more years can cost more in total."
+        },
+        {
+          "id": "dc-apr-q6",
+          "type": "fill_blank",
+          "prompt": "APR stands for Annual Percentage ___.",
+          "choices": [
+            "Return",
+            "Rate",
+            "Ratio"
+          ],
+          "answer": 1,
+          "explain": "Annual Percentage Rate."
+        }
+      ]
+    },
+    {
+      "id": "dc-avalanche-snowball",
+      "type": "lesson",
+      "title": "Avalanche vs. Snowball",
+      "summary": "Two ways to kill debt. Pick your weapon.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dc-avalanche-snowball-q1",
+          "type": "multiple_choice",
+          "context": "The [[avalanche method]]: pay the minimum on every debt, then put every spare bit of money toward the one with the **highest APR**.",
+          "prompt": "Using the avalanche method, which debt do you attack first?",
+          "choices": [
+            "Car loan · 7% APR",
+            "Store card · 29% APR",
+            "Student loan · 4% APR"
+          ],
+          "answer": 1,
+          "explain": "Highest APR first. It's costing you the most."
+        },
+        {
+          "id": "dc-avalanche-snowball-q2",
+          "type": "order",
+          "prompt": "Avalanche method: order these debts from first to last to pay off.",
+          "items": [
+            "Store card · 29% APR",
+            "Credit card · 22% APR",
+            "Car loan · 7% APR",
+            "Student loan · 4% APR"
+          ],
+          "explain": "Highest APR to lowest."
+        },
+        {
+          "id": "dc-avalanche-snowball-q3",
+          "type": "multiple_choice",
+          "context": "The [[snowball method]]: pay the minimum on everything, then attack the **smallest balance** first. Every debt you clear feels like a win.",
+          "prompt": "Using the snowball method, which debt goes first?",
+          "choices": [
+            "Phone plan · $400 left",
+            "Car loan · $7,500 left",
+            "Student loan · $15,000 left"
+          ],
+          "answer": 0,
+          "explain": "Smallest balance first. Quick win, then roll that money into the next one."
+        },
+        {
+          "id": "dc-avalanche-snowball-q4",
+          "type": "order",
+          "prompt": "Snowball method: order these debts from first to last to pay off.",
+          "items": [
+            "Phone plan · $400 left",
+            "Credit card · $1,800 left",
+            "Car loan · $7,500 left",
+            "Student loan · $15,000 left"
+          ],
+          "explain": "Smallest balance to biggest."
+        },
+        {
+          "id": "dc-avalanche-snowball-q5",
+          "type": "multiple_choice",
+          "prompt": "Which method usually saves the most money overall?",
+          "choices": [
+            "Avalanche",
+            "Snowball",
+            "They always save the same"
+          ],
+          "answer": 0,
+          "explain": "Clearing the highest APR first means less interest. Snowball wins on motivation."
+        },
+        {
+          "id": "dc-avalanche-snowball-q6",
+          "type": "true_false",
+          "prompt": "With either method, you keep paying the minimum on every debt.",
+          "answer": true,
+          "explain": "Missed minimums mean fees and damage. Extra money goes to one target."
+        }
+      ]
+    },
+    {
+      "id": "dc-credit-score",
+      "type": "lesson",
+      "title": "Credit Scores",
+      "summary": "The reputation lenders check before they say yes.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dc-credit-score-q1",
+          "type": "multiple_choice",
+          "context": "Your [[credit score]] is a number that tells lenders how reliable you are at paying back money. Higher is better.",
+          "prompt": "What does a high credit score usually get you?",
+          "choices": [
+            "A higher salary",
+            "Easier approval and a lower APR",
+            "Free money from the bank"
+          ],
+          "answer": 1,
+          "explain": "Lenders charge less to people they trust."
+        },
+        {
+          "id": "dc-credit-score-q2",
+          "type": "multiple_choice",
+          "prompt": "Which habit helps your credit score most?",
+          "choices": [
+            "Paying every bill on time",
+            "Opening lots of cards at once",
+            "Missing a payment now and then"
+          ],
+          "answer": 0,
+          "explain": "On-time payments are the biggest single factor. Never miss."
+        },
+        {
+          "id": "dc-credit-score-q3",
+          "type": "multiple_choice",
+          "context": "Your [[credit limit]] is the most you're allowed to borrow on a card.",
+          "prompt": "Your card has a $5,000 credit limit. What does that mean?",
+          "choices": [
+            "You must spend $5,000",
+            "You have $5,000 in savings",
+            "You can owe up to $5,000 on it"
+          ],
+          "answer": 2,
+          "explain": "It's a ceiling, not a target."
+        },
+        {
+          "id": "dc-credit-score-q4",
+          "type": "number",
+          "context": "[[Credit utilization]] is how much of your limit you're using: balance ÷ limit, as a percentage. Owe $500 on a $1,000 limit and you're at 50%.",
+          "prompt": "Your limit is $5,000 and your balance is $1,500. What's your utilization?",
+          "answer": 30,
+          "unit": "%",
+          "explain": "$1,500 ÷ $5,000 = 0.30, which is 30%."
+        },
+        {
+          "id": "dc-credit-score-q5",
+          "type": "true_false",
+          "prompt": "Lower credit utilization is generally better for your credit score.",
+          "answer": true,
+          "explain": "Using a small slice of your limit shows you're not stretched."
+        },
+        {
+          "id": "dc-credit-score-q6",
+          "type": "true_false",
+          "prompt": "Checking your own credit score lowers it.",
+          "answer": false,
+          "explain": "Looking at your own score is free and harmless."
+        }
+      ]
+    },
+    {
+      "id": "dc-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you're closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "dc-trial",
+      "type": "boss",
+      "title": "Den Trial: Debt",
+      "summary": "Eight questions. Three strikes and you're out.",
+      "xp": 25,
+      "draw": 3,
+      "steps": [
+        {
+          "id": "dc-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "You only ever pay the minimum on a credit card. What happens?",
+          "choices": [
+            "The balance clears within a year",
+            "Interest keeps the debt alive for years",
+            "Your credit limit drops to zero"
+          ],
+          "answer": 1,
+          "explain": "Pay above the [[minimum payment]] whenever you can."
+        },
+        {
+          "id": "dc-trial-q2",
+          "type": "order",
+          "prompt": "Avalanche method: order from first to last to pay off.",
+          "items": [
+            "Store card · 32% APR",
+            "Credit card · 24% APR",
+            "Personal loan · 11% APR",
+            "Mortgage · 5% APR"
+          ],
+          "explain": "Highest APR first."
+        },
+        {
+          "id": "dc-trial-q3",
+          "type": "number",
+          "prompt": "A $3,000 balance sits at 18% APR for a year. Roughly how much interest is that?",
+          "answer": 540,
+          "explain": "$3,000 × 0.18 = $540.",
+          "unit": "$"
+        },
+        {
+          "id": "dc-trial-q4",
+          "type": "true_false",
+          "prompt": "The snowball method pays off the highest APR first.",
+          "answer": false,
+          "explain": "That's the avalanche. Snowball goes smallest balance first."
+        },
+        {
+          "id": "dc-trial-q5",
+          "type": "fill_blank",
+          "prompt": "The yearly cost of borrowing, shown as a percentage, is the ___.",
+          "choices": [
+            "balance",
+            "APR",
+            "limit"
+          ],
+          "answer": 1,
+          "explain": "Annual Percentage Rate."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+/* The word drill borrows the lesson player's shell; only the cue is its own. */
+
+.cue {
+  margin: var(--space-4) 0 0;
+  padding: var(--space-5) var(--space-6);
+  border-left: var(--depth) solid var(--gold);
+  background: var(--paper-raised);
+  line-height: var(--leading-snug);
+  text-wrap: pretty;
+}
+
+/* Showing a meaning: read it like a definition. */
+.cue--meaning {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+}
+
+/* Showing a word: set it like a glossary headword. */
+.cue--word {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-heavy);
+  font-stretch: var(--stretch-condensed);
+  line-height: var(--leading-tight);
+  text-transform: uppercase;
+}
+
+/* Whole definitions as options: smaller and lighter, so three of them still scan. */
+.choices--word .option {
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+}
+
+.choices--word .option.is-selected {
+  font-weight: var(--weight-medium);
+}
+
+@media (max-width: 760px) {
+  .cue {
+    padding: var(--space-4);
+  }
+
+  .drill__actions {
+    flex-direction: column-reverse;
+    gap: var(--space-3);
+  }
+}

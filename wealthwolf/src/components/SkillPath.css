@@ -1,0 +1,322 @@
+.path {
+  padding-bottom: var(--space-12);
+}
+
+/* ---- Module: a ledger section header -------------------------------- */
+
+.unit + .unit {
+  margin-top: var(--space-12);
+}
+
+.unit__header {
+  position: sticky;
+  top: var(--topbar-h);
+  z-index: var(--z-sticky);
+  display: grid;
+  grid-template-columns: var(--space-10) minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-4) 0 var(--space-3);
+  border-bottom: var(--stroke) solid var(--ink);
+  background: var(--paper);
+}
+
+.unit__no {
+  font-size: var(--text-sm);
+  color: var(--red-text);
+}
+
+.unit__title {
+  font-size: var(--text-2xl);
+}
+
+.unit--locked .unit__title,
+.unit--locked .unit__desc {
+  color: var(--ink-faint);
+}
+
+.unit__desc {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+.unit__count {
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+.unit--completed .unit__count {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--gold);
+  color: var(--on-accent);
+  text-transform: uppercase;
+  font-size: var(--text-xs);
+}
+
+/* The Wolf's margin note for the module. */
+.unit__wolf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin: var(--space-6) auto var(--space-8);
+  max-width: var(--measure);
+  color: var(--red-text);
+  font-size: var(--text-sm);
+  font-style: italic;
+  font-weight: var(--weight-medium);
+}
+
+/* ---- Track + trail ---------------------------------------------------- */
+
+.unit__track {
+  position: relative;
+  margin-inline: auto;
+}
+
+.unit__trail {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+
+/* Pencilled route ahead, inked in gold behind you. */
+.trail {
+  fill: none;
+  stroke: var(--rule-strong);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 2 10;
+}
+
+.trail.is-done {
+  stroke: var(--gold-edge);
+  stroke-width: 4;
+  stroke-dasharray: none;
+}
+
+/* ---- Nodes: seals ------------------------------------------------------ */
+
+.node-wrap {
+  position: absolute;
+  translate: -50% -50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.node-wrap.is-open {
+  z-index: var(--z-float);
+}
+
+.node {
+  --size: 72px;
+  --edge: var(--track-edge);
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--size);
+  height: var(--size);
+  border: 0;
+  border-radius: var(--radius-full);
+  font-size: var(--text-2xl);
+  cursor: pointer;
+  box-shadow: 0 var(--depth) 0 var(--edge);
+  transition:
+    transform var(--dur-press) var(--ease-out),
+    box-shadow var(--dur-press) var(--ease-out);
+}
+
+.node:active {
+  transform: translateY(var(--depth));
+  box-shadow: 0 0 0 var(--edge);
+}
+
+.node--boss {
+  --size: 84px;
+  border-radius: var(--radius-md);
+}
+
+/* Done: a gold seal, each pressed at its own slight angle. */
+.node--completed {
+  --edge: var(--gold-edge);
+  background: var(--gold);
+  color: var(--on-accent);
+  box-shadow:
+    inset 0 0 0 var(--space-1) var(--gold),
+    inset 0 0 0 calc(var(--space-1) + var(--stroke)) var(--gold-edge),
+    0 var(--depth) 0 var(--edge);
+}
+
+.node--completed:active {
+  box-shadow:
+    inset 0 0 0 var(--space-1) var(--gold),
+    inset 0 0 0 calc(var(--space-1) + var(--stroke)) var(--gold-edge);
+}
+
+.node--completed > * {
+  rotate: var(--tilt);
+}
+
+.node--completed .lucide {
+  stroke-width: var(--icon-stroke-bold);
+}
+
+/* Next: inked, with the one looping cue on the page. */
+.node--available {
+  --edge: var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  outline: var(--stroke-heavy) solid var(--ink);
+  outline-offset: calc(var(--stroke-heavy) * -1);
+}
+
+.node--available::after {
+  content: '';
+  position: absolute;
+  inset: calc(var(--space-2) * -1);
+  border: var(--stroke) solid var(--ink);
+  border-radius: inherit;
+  opacity: 0;
+  animation: cue var(--dur-loop) var(--ease-out) infinite;
+  pointer-events: none;
+}
+
+/* Later: pencilled in. */
+.node--locked {
+  --edge: transparent;
+  background: var(--paper);
+  color: var(--ink-faint);
+  outline: var(--stroke) dashed var(--rule-strong);
+  outline-offset: calc(var(--stroke) * -1);
+  font-size: var(--text-xl);
+}
+
+.node .wolfmark {
+  width: 56%;
+  height: 56%;
+}
+
+.node__start {
+  position: absolute;
+  bottom: calc(100% + var(--space-3));
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: var(--paper);
+  font-size: var(--text-md);
+  font-weight: var(--weight-heavy);
+  font-stretch: var(--stretch-condensed);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.node__start::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50% 0;
+  border: var(--space-2) solid transparent;
+  border-top-color: var(--ink);
+}
+
+/* ---- Popover ------------------------------------------------------------ */
+
+.popover {
+  position: absolute;
+  top: calc(100% + var(--space-4));
+  left: 50%;
+  translate: calc(-50% + var(--shift, 0px)) 0;
+  padding: var(--space-4);
+  border: var(--stroke) solid var(--ink);
+  border-radius: var(--radius-md);
+  background: var(--paper);
+  box-shadow: var(--elev-float);
+  text-align: left;
+  animation: float-in var(--dur-fast) var(--ease-out);
+}
+
+.popover--available .popover__type {
+  color: var(--red-text);
+}
+
+.popover__title {
+  margin-top: var(--space-1);
+  font-size: var(--text-lg);
+}
+
+.popover__summary {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+.popover__cta {
+  margin-top: var(--space-4);
+  min-height: var(--control-sm);
+  font-size: var(--text-md);
+}
+
+.popover__locked {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--paper-raised);
+  color: var(--ink-muted);
+  font-size: var(--text-sm);
+}
+
+/* ---- End cap ------------------------------------------------------------- */
+
+.path__end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-12);
+  padding: var(--space-8);
+  border-top: var(--stroke) dashed var(--rule-strong);
+  text-align: center;
+}
+
+.path__end-title {
+  margin-top: var(--space-2);
+  font-size: var(--text-xl);
+}
+
+.path__end-sub {
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+.path__next {
+  margin-top: var(--space-3);
+  min-height: var(--control-sm);
+  font-size: var(--text-md);
+}
+
+@keyframes cue {
+  0% {
+    opacity: 0.6;
+    scale: 0.9;
+  }
+  100% {
+    opacity: 0;
+    scale: 1.15;
+  }
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    translate: calc(-50% + var(--shift, 0px)) calc(var(--space-1) * -1);
+  }
+}

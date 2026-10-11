@@ -1,0 +1,22 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+.logo__word {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-heavy);
+  font-stretch: var(--stretch-condensed);
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@media (max-width: 560px) {
+  .logo__word {
+    display: none;
+  }
+}

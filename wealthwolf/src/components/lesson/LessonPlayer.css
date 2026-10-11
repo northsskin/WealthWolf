@@ -1,0 +1,161 @@
+.player {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  /* Cards slide in from the side; don't let that flash a sideways scrollbar on phones. */
+  overflow-x: clip;
+}
+
+.player__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: min(var(--container), 100% - 2 * var(--gutter));
+  height: var(--topbar-h);
+  margin-inline: auto;
+}
+
+.player__icon-btn {
+  display: grid;
+  place-items: center;
+  width: var(--control-sm);
+  height: var(--control-sm);
+  flex-shrink: 0;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--ink-faint);
+  font-size: var(--text-lg);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.player__icon-btn:hover {
+  color: var(--ink);
+}
+
+.player__progress-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.player__progress {
+  height: var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--track);
+  overflow: hidden;
+}
+
+.player__progress span {
+  display: block;
+  height: 100%;
+  background: var(--gold);
+  transition: width var(--dur-slow) var(--ease-out);
+}
+
+.player--boss .player__progress span {
+  background: var(--red);
+}
+
+.player__combo {
+  position: absolute;
+  bottom: calc(100% + var(--space-2));
+  left: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--gold-text);
+  animation: pop-in var(--dur-base) var(--ease-stamp);
+}
+
+.player__strikes {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.strike {
+  display: grid;
+  place-items: center;
+  width: var(--space-6);
+  height: var(--space-6);
+  border: var(--stroke) dashed var(--rule-strong);
+  border-radius: var(--radius-sm);
+  color: transparent;
+  font-size: var(--text-sm);
+}
+
+.strike.is-hit {
+  border: 0;
+  background: var(--red);
+  color: var(--on-signal);
+  animation: pop-in var(--dur-base) var(--ease-stamp);
+}
+
+.strike .lucide {
+  stroke-width: var(--icon-stroke-bold);
+}
+
+.player__hearts {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--red-text);
+  font-size: var(--text-md);
+}
+
+.player__hearts .figure {
+  color: var(--ink);
+}
+
+.player__hearts.is-hit .lucide {
+  animation: heart-hit var(--dur-slow) var(--ease-out);
+}
+
+.player__main {
+  display: grid;
+  width: min(var(--measure), 100% - 2 * var(--gutter));
+  margin-inline: auto;
+  padding: var(--space-10) 0 var(--space-12);
+}
+
+.dialog__heart {
+  color: var(--red-text);
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    scale: 0.6;
+  }
+}
+
+@keyframes heart-hit {
+  25% {
+    scale: 1.3;
+  }
+  50% {
+    scale: 0.85;
+  }
+}
+
+@media (max-width: 760px) {
+  .player__header {
+    gap: var(--space-2);
+  }
+
+  .player__main {
+    padding: var(--space-5) 0 var(--space-8);
+  }
+
+  .player__sound {
+    display: none;
+  }
+
+  .strike {
+    width: var(--space-5);
+    height: var(--space-5);
+  }
+}

@@ -1,0 +1,500 @@
+{
+  "id": "investing",
+  "section": "investing",
+  "order": 1,
+  "title": "Investing Basics",
+  "description": "Make your money hunt while you sleep.",
+  "wolfLine": "Time in the market beats timing the market.",
+  "terms": {
+    "investing": {
+      "term": "Investing",
+      "definition": "Putting money into something you expect to grow in value over time.",
+      "example": "Buying a small piece of a company and holding it for years."
+    },
+    "return": {
+      "term": "Return",
+      "definition": "How much your investment grew (or shrank), often shown as a percentage.",
+      "example": "Invest $1,000, it becomes $1,080: an $80 return, or 8%."
+    },
+    "compound-growth": {
+      "term": "Compound growth",
+      "definition": "When your returns start earning returns of their own, so growth speeds up over time.",
+      "example": "$1,000 grows 10% to $1,100. Next year's 10% is on $1,100, not $1,000."
+    },
+    "rule-of-72": {
+      "term": "Rule of 72",
+      "definition": "A shortcut: divide 72 by your yearly return to see roughly how many years it takes to double your money.",
+      "example": "At 8% a year: 72 ÷ 8 = about 9 years to double."
+    },
+    "stock": {
+      "term": "Stock",
+      "definition": "A tiny piece of ownership in a company. Also called a share.",
+      "example": "Own one share of a coffee chain and you own a sliver of every café."
+    },
+    "bond": {
+      "term": "Bond",
+      "definition": "A loan you give to a company or government. They pay you interest, then return your money at the end.",
+      "example": "Lend $1,000 to the government for 5 years and get interest every year."
+    },
+    "risk": {
+      "term": "Risk",
+      "definition": "The chance that an investment drops in value, or swings up and down a lot.",
+      "example": "A single company's stock can fall 50% in a bad year. That's high risk."
+    },
+    "dividend": {
+      "term": "Dividend",
+      "definition": "A share of a company's profit, paid out to the people who own its stock.",
+      "example": "You own 10 shares and the company pays $1 per share: you get $10."
+    },
+    "portfolio": {
+      "term": "Portfolio",
+      "definition": "All of your investments, taken together.",
+      "example": "A few stocks, one bond and an index fund make up your portfolio."
+    },
+    "fund": {
+      "term": "Fund",
+      "definition": "A pot of money from lots of people, invested in many things at once. You buy a slice of the pot.",
+      "example": "One purchase gets you a little of hundreds of companies."
+    },
+    "index": {
+      "term": "Index",
+      "definition": "A list that tracks a group of investments, like a country's biggest companies.",
+      "example": "A list of the 500 largest companies in one country."
+    },
+    "index-fund": {
+      "term": "Index fund",
+      "definition": "A fund that simply buys everything on an index, instead of trying to pick winners. Usually cheap.",
+      "example": "One index fund can own all 500 companies on a list."
+    },
+    "expense-ratio": {
+      "term": "Expense ratio",
+      "definition": "The yearly fee a fund charges, as a percentage of what you've invested.",
+      "example": "A 0.1% expense ratio on $10,000 costs $10 a year."
+    },
+    "diversification": {
+      "term": "Diversification",
+      "definition": "Spreading your money across lots of different investments, so one bad one can't sink you.",
+      "example": "Owning hundreds of companies in many countries instead of just one."
+    },
+    "concentration-risk": {
+      "term": "Concentration risk",
+      "definition": "The danger of having too much money in one place. If that one thing fails, you lose big.",
+      "example": "All your savings in the company you work for."
+    }
+  },
+  "lessons": [
+    {
+      "id": "iv-compound",
+      "type": "lesson",
+      "title": "Compound Growth",
+      "summary": "Returns that earn their own returns.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "iv-compound-q1",
+          "type": "multiple_choice",
+          "context": "[[Investing]] means putting money into something you expect to grow in value. The growth you get is your [[return]].",
+          "prompt": "You invest $1,000 and a year later it's worth $1,080. What's the extra $80?",
+          "choices": [
+            "A fee",
+            "Your return",
+            "Debt"
+          ],
+          "answer": 1,
+          "explain": "Your money grew by $80. That's your return, or 8%."
+        },
+        {
+          "id": "iv-compound-q2",
+          "type": "number",
+          "context": "Returns are usually a percentage. A 10% return on $1,000 is $1,000 × 0.10 = $100, so you'd have $1,100.",
+          "prompt": "You invest $2,000 and earn a 10% return in a year. What's it worth now?",
+          "answer": 2200,
+          "explain": "$2,000 + $200 = $2,200.",
+          "unit": "$"
+        },
+        {
+          "id": "iv-compound-q3",
+          "type": "multiple_choice",
+          "context": "With [[compound growth]], next year's return is earned on your original money **plus** last year's return. Growth earns more growth.",
+          "prompt": "Your $1,000 grew to $1,100. Next year, you'll earn a return on…",
+          "choices": [
+            "Only the original $1,000",
+            "Only the $100",
+            "The full $1,100"
+          ],
+          "answer": 2,
+          "explain": "Last year's return is now working for you too."
+        },
+        {
+          "id": "iv-compound-q4",
+          "type": "number",
+          "prompt": "That $1,100 earns another 10% in year two. What's it worth now?",
+          "answer": 1210,
+          "explain": "$1,100 × 1.10 = $1,210. The extra $10 is growth on last year's growth.",
+          "unit": "$"
+        },
+        {
+          "id": "iv-compound-q5",
+          "type": "number",
+          "context": "Here's a shortcut, the [[Rule of 72]]. Divide 72 by your yearly return to see roughly how many years your money takes to double. At 8%: 72 ÷ 8 = 9 years.",
+          "prompt": "Roughly how many years does it take to double your money at 6% a year?",
+          "answer": 12,
+          "unit": "years",
+          "explain": "72 ÷ 6 = 12 years."
+        },
+        {
+          "id": "iv-compound-q6",
+          "type": "true_false",
+          "prompt": "Starting to invest 10 years earlier can matter more than investing a bigger amount later.",
+          "answer": true,
+          "explain": "Early money gets more years of compound growth. Time beats size."
+        }
+      ]
+    },
+    {
+      "id": "iv-stocks-bonds",
+      "type": "lesson",
+      "title": "Stocks vs. Bonds",
+      "summary": "Owning versus lending.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "iv-stocks-bonds-q1",
+          "type": "multiple_choice",
+          "context": "A [[stock]] (also called a share) is a tiny piece of ownership in a company. If the company does well, your piece can become worth more.",
+          "prompt": "You buy a stock in a coffee chain. What do you now own?",
+          "choices": [
+            "A tiny piece of the company",
+            "A loan to the company",
+            "A free coffee every day"
+          ],
+          "answer": 0,
+          "explain": "You're a part-owner. A very small one."
+        },
+        {
+          "id": "iv-stocks-bonds-q2",
+          "type": "multiple_choice",
+          "context": "A [[bond]] is a loan **you** give to a company or government. They pay you interest, then hand your money back at the end.",
+          "prompt": "You buy a government bond. What are you doing?",
+          "choices": [
+            "Buying part of the government",
+            "Lending money to the government",
+            "Paying a tax"
+          ],
+          "answer": 1,
+          "explain": "You're the lender this time. They pay you interest."
+        },
+        {
+          "id": "iv-stocks-bonds-q3",
+          "type": "multiple_choice",
+          "context": "[[Risk]] is the chance your investment drops or swings around a lot. Stocks swing more than bonds, so they're riskier, but over long periods they've usually grown more.",
+          "prompt": "Which is usually riskier?",
+          "choices": [
+            "Bonds",
+            "Stocks",
+            "They're the same"
+          ],
+          "answer": 1,
+          "explain": "Bigger swings, bigger long-run growth. That's the trade."
+        },
+        {
+          "id": "iv-stocks-bonds-q4",
+          "type": "multiple_choice",
+          "context": "Some companies share part of their profit with the people who own their stock. That payment is a [[dividend]].",
+          "prompt": "You own a stock and the company pays you a slice of its profit. What's that called?",
+          "choices": [
+            "Interest",
+            "A loan",
+            "A dividend"
+          ],
+          "answer": 2,
+          "explain": "Profit shared with owners. That's you."
+        },
+        {
+          "id": "iv-stocks-bonds-q5",
+          "type": "multiple_choice",
+          "context": "Everything you've invested in, taken together, is your [[portfolio]].",
+          "prompt": "You own a few stocks and one bond. What's that collection called?",
+          "choices": [
+            "Your portfolio",
+            "Your budget",
+            "Your balance"
+          ],
+          "answer": 0,
+          "explain": "All your investments, in one word."
+        },
+        {
+          "id": "iv-stocks-bonds-q6",
+          "type": "match",
+          "prompt": "Recap: match each word to what it means.",
+          "pairs": [
+            [
+              "Stock",
+              "A piece of a company"
+            ],
+            [
+              "Bond",
+              "A loan that pays you interest"
+            ],
+            [
+              "Dividend",
+              "Profit paid to stock owners"
+            ],
+            [
+              "Portfolio",
+              "All your investments together"
+            ]
+          ]
+        },
+        {
+          "id": "iv-stocks-bonds-q7",
+          "type": "multiple_choice",
+          "prompt": "You'll need your money in one year for a house deposit. What fits better?",
+          "choices": [
+            "All of it in stocks",
+            "One exciting company's stock",
+            "Mostly safe, steady places like a savings account"
+          ],
+          "answer": 2,
+          "explain": "Stocks can drop right before you need the cash. Short timeline, low risk."
+        }
+      ]
+    },
+    {
+      "id": "iv-index-funds",
+      "type": "lesson",
+      "title": "Index Funds",
+      "summary": "Buy the whole haystack instead of hunting for the needle.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "iv-index-funds-q1",
+          "type": "multiple_choice",
+          "context": "A [[fund]] pools money from lots of people and invests it in many things at once. You buy a slice of the pot.",
+          "prompt": "Why do people buy funds?",
+          "choices": [
+            "To own lots of investments with one purchase",
+            "To make sure they never lose money",
+            "To borrow money"
+          ],
+          "answer": 0,
+          "explain": "One purchase, many investments."
+        },
+        {
+          "id": "iv-index-funds-q2",
+          "type": "multiple_choice",
+          "context": "An [[index]] is a list that tracks a group of companies, like a country's 500 biggest. An [[index fund]] simply buys everything on that list.",
+          "prompt": "What does an index fund do?",
+          "choices": [
+            "Picks the single best stock",
+            "Buys every company on a list",
+            "Promises a profit"
+          ],
+          "answer": 1,
+          "explain": "No guessing which company wins. You own them all."
+        },
+        {
+          "id": "iv-index-funds-q3",
+          "type": "multiple_choice",
+          "context": "Every fund charges a yearly fee called the [[expense ratio]], a percentage of what you've invested. Index funds are usually cheap.",
+          "prompt": "Two funds own the same things. One's expense ratio is 1%, the other's is 0.1%. Which leaves you more money?",
+          "choices": [
+            "The 1% fund",
+            "The 0.1% fund",
+            "No difference"
+          ],
+          "answer": 1,
+          "explain": "Lower fee, more left for you."
+        },
+        {
+          "id": "iv-index-funds-q4",
+          "type": "number",
+          "prompt": "You have $50,000 in a fund with a 1% expense ratio. What's the fee each year?",
+          "answer": 500,
+          "explain": "$50,000 × 0.01 = $500, every single year.",
+          "unit": "$"
+        },
+        {
+          "id": "iv-index-funds-q5",
+          "type": "number",
+          "prompt": "Same $50,000 in a fund with a 0.1% expense ratio. What's the fee each year?",
+          "answer": 50,
+          "explain": "$50,000 × 0.001 = $50. You keep the other $450.",
+          "unit": "$"
+        },
+        {
+          "id": "iv-index-funds-q6",
+          "type": "true_false",
+          "context": "Some funds pay experts to pick stocks and try to beat an index. Over long periods, most of them end up behind once their higher fees are counted.",
+          "prompt": "Paying an expert to pick stocks usually beats an index fund over the long run.",
+          "answer": false,
+          "explain": "Most fall behind after fees. That's why index funds are so popular."
+        }
+      ]
+    },
+    {
+      "id": "iv-diversification",
+      "type": "lesson",
+      "title": "Diversification",
+      "summary": "Don't let one bad bet sink the pack.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "iv-diversification-q1",
+          "type": "multiple_choice",
+          "context": "[[Diversification]] means spreading your money across lots of different investments, so one bad one can't sink you.",
+          "prompt": "Which portfolio is more diversified?",
+          "choices": [
+            "All your money in one company",
+            "An index fund holding hundreds of companies",
+            "Three companies in the same industry"
+          ],
+          "answer": 1,
+          "explain": "Hundreds of companies means no single one can wipe you out."
+        },
+        {
+          "id": "iv-diversification-q2",
+          "type": "multiple_choice",
+          "context": "Having too much money in one place is called [[concentration risk]]. If that one thing fails, you lose big.",
+          "prompt": "Which of these has the most concentration risk?",
+          "choices": [
+            "A global index fund",
+            "A mix of stocks and bonds",
+            "All your savings in the company you work for"
+          ],
+          "answer": 2,
+          "explain": "If the company struggles, you could lose your job and your savings at once."
+        },
+        {
+          "id": "iv-diversification-q3",
+          "type": "true_false",
+          "prompt": "A diversified portfolio can never lose money.",
+          "answer": false,
+          "explain": "When everything falls, it falls too. Just less painfully than one bad bet."
+        },
+        {
+          "id": "iv-diversification-q4",
+          "type": "match",
+          "context": "You can diversify in lots of ways: across companies, industries, countries, and types of investment.",
+          "prompt": "Match each way to diversify with an example.",
+          "pairs": [
+            [
+              "Companies",
+              "Hundreds of businesses, not one"
+            ],
+            [
+              "Industries",
+              "Tech, healthcare and energy"
+            ],
+            [
+              "Countries",
+              "Your home country plus others"
+            ],
+            [
+              "Investment types",
+              "Stocks and bonds"
+            ]
+          ]
+        },
+        {
+          "id": "iv-diversification-q5",
+          "type": "multiple_choice",
+          "prompt": "Why mix stocks and bonds in one portfolio?",
+          "choices": [
+            "They often move differently, which smooths out the ride",
+            "Bonds always beat stocks",
+            "It removes all risk"
+          ],
+          "answer": 0,
+          "explain": "When one dips, the other often holds steady."
+        },
+        {
+          "id": "iv-diversification-q6",
+          "type": "fill_blank",
+          "prompt": "Spreading your money across many investments is called ___.",
+          "choices": [
+            "concentration",
+            "diversification",
+            "budgeting"
+          ],
+          "answer": 1,
+          "explain": "Spread out so no single hit takes you down."
+        }
+      ]
+    },
+    {
+      "id": "iv-sim",
+      "type": "sim",
+      "title": "Portfolio Simulator",
+      "summary": "Build a portfolio and fast-forward 30 years.",
+      "xp": 20,
+      "steps": []
+    },
+    {
+      "id": "iv-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you're closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "iv-trial",
+      "type": "boss",
+      "title": "Den Trial: Investing",
+      "summary": "Eight questions. Three strikes and you're out.",
+      "xp": 25,
+      "draw": 3,
+      "steps": [
+        {
+          "id": "iv-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "Your diversified portfolio drops 20% in a month. You're investing for 30 years. Best move?",
+          "choices": [
+            "Sell everything now",
+            "Stay the course and keep investing",
+            "Move it all into one stock that's holding up"
+          ],
+          "answer": 1,
+          "explain": "Drops are the price of admission. Panic is the expensive part."
+        },
+        {
+          "id": "iv-trial-q2",
+          "type": "number",
+          "prompt": "Using the Rule of 72, roughly how many years does it take to double your money at 9% a year?",
+          "answer": 8,
+          "unit": "years",
+          "explain": "72 ÷ 9 = 8 years."
+        },
+        {
+          "id": "iv-trial-q3",
+          "type": "true_false",
+          "prompt": "A stock is a loan to a company.",
+          "answer": false,
+          "explain": "That's a [[bond]]. A [[stock]] is ownership."
+        },
+        {
+          "id": "iv-trial-q4",
+          "type": "fill_blank",
+          "prompt": "A fund's yearly fee is called the expense ___.",
+          "choices": [
+            "rate",
+            "ratio",
+            "return"
+          ],
+          "answer": 1,
+          "explain": "[[Expense ratio]]. Check it before you buy anything."
+        },
+        {
+          "id": "iv-trial-q5",
+          "type": "number",
+          "prompt": "$1,000 grows 10% a year for two years. What's it worth at the end?",
+          "answer": 1210,
+          "explain": "$1,000 → $1,100 → $1,210.",
+          "unit": "$"
+        }
+      ]
+    }
+  ]
+}

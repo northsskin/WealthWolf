@@ -1,0 +1,920 @@
+{
+  "id": "saving",
+  "section": "everyday-money",
+  "order": 6,
+  "title": "Saving & Safety Net",
+  "description": "Build the cushion that keeps one bad month from wrecking your year.",
+  "wolfLine": "The pack survives winter because it planned in summer.",
+  "terms": {
+    "pay-yourself-first": {
+      "term": "Pay yourself first",
+      "definition": "Moving money into savings as soon as you get paid, before you spend on anything else.",
+      "example": "Payday: $200 goes straight to savings, then you pay bills and live on the rest."
+    },
+    "emergency-fund": {
+      "term": "Emergency fund",
+      "definition": "Cash you keep only for real surprises, like losing your job or an urgent repair.",
+      "example": "Your car breaks down and you need it for work. The emergency fund pays."
+    },
+    "essential-expenses": {
+      "term": "Essential expenses",
+      "definition": "Your needs: the costs you must keep paying no matter what.",
+      "example": "Rent, food, bills, getting to work."
+    },
+    "savings-account": {
+      "term": "Savings account",
+      "definition": "A bank account for money you're not planning to spend yet. The bank keeps it safe and pays you a little for holding it.",
+      "example": "Where your emergency fund lives."
+    },
+    "interest": {
+      "term": "Interest",
+      "definition": "Extra money paid for using someone else's money. A bank pays you interest on savings. You pay interest when you borrow.",
+      "example": "Keep $1,000 in savings at 3% for a year and the bank adds $30."
+    },
+    "high-yield-savings": {
+      "term": "High-yield savings account",
+      "definition": "A savings account that pays more interest than a regular one, while keeping your money just as safe.",
+      "example": "Regular account pays 0.5% a year. A high-yield one pays 4%."
+    },
+    "liquid": {
+      "term": "Liquid",
+      "definition": "Easy to turn into cash quickly, without losing any of its value.",
+      "example": "Money in a savings account is liquid. A house is not."
+    },
+    "automatic-transfer": {
+      "term": "Automatic transfer",
+      "definition": "A payment you set up once that moves money between accounts on a schedule, without you doing anything.",
+      "example": "Every payday, $150 moves from your spending account to savings."
+    },
+    "apy": {
+      "term": "APY",
+      "definition": "Annual percentage yield: what your savings earn in a year, counting the interest your interest earns.",
+      "example": "$5,000 at 4.00% APY earns about $200 in a year."
+    },
+    "savings-goal": {
+      "term": "Savings goal",
+      "definition": "A target with three parts: what it’s for, how much it costs, and when you need it.",
+      "example": "$1,800 for a used scooter by June."
+    }
+  },
+  "lessons": [
+    {
+      "id": "sv-why-save",
+      "type": "lesson",
+      "title": "Why Save?",
+      "summary": "Savings turn emergencies into inconveniences.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sv-why-save-q1",
+          "type": "info",
+          "title": "Future you is counting on you",
+          "body": "Saving means keeping some of today’s money for later. It turns a broken phone, a lost job or a surprise bill from a crisis into an annoyance.\n\nIt’s also how you pay for big things (a car, a trip, a deposit on an apartment) without borrowing."
+        },
+        {
+          "id": "sv-why-save-q2",
+          "type": "multiple_choice",
+          "prompt": "Your laptop dies. Which is the better place to be?",
+          "choices": [
+            "Having $800 saved and buying a new one",
+            "Having nothing and borrowing at a high cost",
+            "Going without one for months"
+          ],
+          "answer": 0,
+          "explain": "Savings make it a shopping trip instead of a crisis."
+        },
+        {
+          "id": "sv-why-save-q3",
+          "type": "sort",
+          "prompt": "What kind of saving is it? Sort them.",
+          "buckets": [
+            "Safety net",
+            "Goal"
+          ],
+          "items": [
+            [
+              "A surprise car repair",
+              0
+            ],
+            [
+              "A trip to Japan next year",
+              1
+            ],
+            [
+              "Rent if you lose your job",
+              0
+            ],
+            [
+              "A new bike in the spring",
+              1
+            ],
+            [
+              "A vet bill you didn’t see coming",
+              0
+            ],
+            [
+              "A deposit on your own apartment",
+              1
+            ]
+          ]
+        },
+        {
+          "id": "sv-why-save-q4",
+          "type": "number",
+          "prompt": "Saving $25 a week, how much do you have after a year of 52 weeks?",
+          "answer": 1300,
+          "unit": "$",
+          "explain": "$25 × 52 = $1,300."
+        },
+        {
+          "id": "sv-why-save-q5",
+          "type": "true_false",
+          "prompt": "You need a big income before saving is worth it.",
+          "answer": false,
+          "explain": "$25 a week is $1,300 a year. Starting small builds the habit."
+        },
+        {
+          "id": "sv-why-save-q6",
+          "type": "multiple_choice",
+          "prompt": "What’s the hardest part of saving for most people?",
+          "choices": [
+            "Starting, then sticking with it",
+            "Finding a bank",
+            "Doing the math"
+          ],
+          "answer": 0,
+          "explain": "That’s why the next lessons are about making it automatic."
+        }
+      ]
+    },
+    {
+      "id": "sv-pay-yourself-first",
+      "type": "lesson",
+      "title": "Pay Yourself First",
+      "summary": "Savings come off the top, not out of the leftovers.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sv-pay-yourself-first-q1",
+          "type": "multiple_choice",
+          "context": "To [[pay yourself first|pay-yourself-first]] means moving money into savings the moment you get paid, before you spend on anything else.",
+          "prompt": "It's payday. If you pay yourself first, what happens first?",
+          "choices": [
+            "You pay for takeout",
+            "Money moves into your savings",
+            "You wait to see what's left at month-end"
+          ],
+          "answer": 1,
+          "explain": "Your savings get their cut before anything else touches the money."
+        },
+        {
+          "id": "sv-pay-yourself-first-q2",
+          "type": "true_false",
+          "prompt": "Saving whatever happens to be left at the end of the month works just as well.",
+          "answer": false,
+          "explain": "There's rarely anything left. Take your cut first."
+        },
+        {
+          "id": "sv-pay-yourself-first-q3",
+          "type": "number",
+          "context": "10% is the same as dividing by 10. 10% of $2,000 is $200.",
+          "prompt": "You take home $2,500 and pay yourself 10% first. How much goes to savings?",
+          "answer": 250,
+          "explain": "$2,500 ÷ 10 = $250.",
+          "unit": "$"
+        },
+        {
+          "id": "sv-pay-yourself-first-q4",
+          "type": "true_false",
+          "prompt": "Paying yourself first only works if you earn a lot.",
+          "answer": false,
+          "explain": "A small amount still builds the habit. Start at 1% if you have to."
+        },
+        {
+          "id": "sv-pay-yourself-first-q5",
+          "type": "number",
+          "context": "Can't manage 10%? Start at 5%, which is half of 10%, and raise it later.",
+          "prompt": "You save 5% of a $3,000 take-home. How much is that per month?",
+          "answer": 150,
+          "explain": "10% of $3,000 is $300, and half of that is $150.",
+          "unit": "$"
+        },
+        {
+          "id": "sv-pay-yourself-first-q6",
+          "type": "number",
+          "prompt": "At $150 a month, how much have you saved after a year (12 months)?",
+          "answer": 1800,
+          "explain": "$150 × 12 = $1,800. From a habit you barely notice.",
+          "unit": "$"
+        },
+        {
+          "id": "sv-pay-yourself-first-q7",
+          "type": "fill_blank",
+          "prompt": "When you pay yourself first, savings leave your account ___ you get paid.",
+          "choices": [
+            "a month after",
+            "right after",
+            "whenever"
+          ],
+          "answer": 1,
+          "explain": "Before you get a chance to spend it."
+        }
+      ]
+    },
+    {
+      "id": "sv-emergency-fund",
+      "type": "lesson",
+      "title": "The Emergency Fund",
+      "summary": "How much cushion you actually need.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sv-emergency-fund-q1",
+          "type": "multiple_choice",
+          "context": "An [[emergency fund]] is cash you keep only for real surprises: losing your job, a medical bill, a car that breaks down.",
+          "prompt": "Which of these is a real emergency?",
+          "choices": [
+            "A big sale on a TV",
+            "Your car breaks down and you need it for work",
+            "A friend's birthday party"
+          ],
+          "answer": 1,
+          "explain": "Unexpected, urgent and necessary. That's what the fund is for."
+        },
+        {
+          "id": "sv-emergency-fund-q2",
+          "type": "multiple_choice",
+          "context": "A common goal is to save 3 to 6 months of [[essential expenses]]: the needs you must keep paying no matter what.",
+          "prompt": "Which of these is an essential expense?",
+          "choices": [
+            "Concert tickets",
+            "A new jacket you like",
+            "Rent"
+          ],
+          "answer": 2,
+          "explain": "Lose your job and rent is still due. Essential."
+        },
+        {
+          "id": "sv-emergency-fund-q3",
+          "type": "number",
+          "context": "Goal = essential expenses per month × number of months. $1,000 a month for 3 months = $3,000.",
+          "prompt": "Your essential expenses are $1,800 a month. How big is a 3-month emergency fund?",
+          "answer": 5400,
+          "explain": "$1,800 × 3 = $5,400.",
+          "unit": "$"
+        },
+        {
+          "id": "sv-emergency-fund-q4",
+          "type": "true_false",
+          "prompt": "If you use your emergency fund, you should build it back up afterwards.",
+          "answer": true,
+          "explain": "Refill the cushion before the next surprise."
+        },
+        {
+          "id": "sv-emergency-fund-q5",
+          "type": "multiple_choice",
+          "context": "The bigger the risk of a bad month, the bigger the cushion you want.",
+          "prompt": "Who should aim for the bigger end, around 6 months?",
+          "choices": [
+            "Someone whose pay changes a lot from month to month",
+            "Someone with a very steady job and no one relying on them",
+            "Nobody needs that much"
+          ],
+          "answer": 0,
+          "explain": "Less predictable income, thicker cushion."
+        },
+        {
+          "id": "sv-emergency-fund-q6",
+          "type": "number",
+          "context": "Six months of expenses sounds huge, so build it in steps. To see how long a goal takes, divide the goal by what you save each month.",
+          "prompt": "You save $300 a month toward a $3,600 emergency fund. How many months until you get there?",
+          "answer": 12,
+          "unit": "months",
+          "explain": "$3,600 ÷ $300 = 12 months."
+        }
+      ]
+    },
+    {
+      "id": "sv-dana",
+      "type": "lesson",
+      "format": "story",
+      "title": "Dana’s Rainy Day",
+      "summary": "A real emergency, a real fund, and what happens next.",
+      "xp": 10,
+      "story": {
+        "title": "The transmission",
+        "character": "Dana, 31, home care nurse",
+        "body": "Dana needs a car to get to patients’ homes. Last Tuesday the transmission failed. The repair: **$1,450**.\n\nA few years ago that would have meant borrowing. This time Dana had an emergency fund of **$4,200**, built up at **$145** a month.\n\nDana’s essential expenses are **$1,900** a month."
+      },
+      "steps": [
+        {
+          "id": "sv-dana-q1",
+          "type": "number",
+          "prompt": "How much is left in the fund after the repair?",
+          "answer": 2750,
+          "unit": "$",
+          "explain": "$4,200 − $1,450 = $2,750."
+        },
+        {
+          "id": "sv-dana-q2",
+          "type": "multiple_choice",
+          "prompt": "Was this a real emergency?",
+          "choices": [
+            "Yes: Dana needs the car to earn a living",
+            "No: it’s a want",
+            "No: it was planned"
+          ],
+          "answer": 0,
+          "explain": "Unexpected, necessary and urgent. That’s exactly what the fund is for."
+        },
+        {
+          "id": "sv-dana-q3",
+          "type": "number",
+          "prompt": "Before the repair, how many full months of essential expenses did Dana have saved? Round down to whole months.",
+          "answer": 2,
+          "unit": "months",
+          "explain": "$4,200 ÷ $1,900 = 2.2, so 2 full months."
+        },
+        {
+          "id": "sv-dana-q4",
+          "type": "number",
+          "prompt": "At $145 a month, how many months will it take to rebuild the $1,450?",
+          "answer": 10,
+          "unit": "months",
+          "explain": "$1,450 ÷ $145 = 10 months."
+        },
+        {
+          "id": "sv-dana-q5",
+          "type": "multiple_choice",
+          "prompt": "What should Dana do now?",
+          "choices": [
+            "Keep saving $145 a month until it’s back to $4,200",
+            "Stop saving, the emergency is over",
+            "Spend the rest on something fun"
+          ],
+          "answer": 0,
+          "explain": "Refill the cushion before the next surprise."
+        },
+        {
+          "id": "sv-dana-q6",
+          "type": "true_false",
+          "prompt": "Using an emergency fund for an emergency means you failed.",
+          "answer": false,
+          "explain": "That’s exactly what it’s for. Then you refill it."
+        }
+      ]
+    },
+    {
+      "id": "sv-where-to-park",
+      "type": "lesson",
+      "title": "Where to Keep It",
+      "summary": "Safe, easy to reach, and earning something.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sv-where-to-park-q1",
+          "type": "multiple_choice",
+          "context": "A [[savings account]] is a bank account for money you're not planning to spend yet. The bank keeps it safe.",
+          "prompt": "What's a savings account for?",
+          "choices": [
+            "Paying for everyday shopping",
+            "Borrowing money",
+            "Holding money you're not spending yet"
+          ],
+          "answer": 2,
+          "explain": "Out of your everyday spending, but still yours."
+        },
+        {
+          "id": "sv-where-to-park-q2",
+          "type": "multiple_choice",
+          "context": "Banks pay you a little extra for keeping your money with them. That extra is called [[interest]].",
+          "prompt": "Your savings account adds a little extra money every year. What is that extra called?",
+          "choices": [
+            "Interest",
+            "A fee",
+            "Income tax"
+          ],
+          "answer": 0,
+          "explain": "The bank pays you for holding your cash."
+        },
+        {
+          "id": "sv-where-to-park-q3",
+          "type": "number",
+          "context": "Interest is usually a yearly percentage. $1,000 at 3% earns $1,000 × 0.03 = $30 in a year.",
+          "prompt": "$10,000 sits in a savings account paying 4% a year. How much interest does it earn in one year?",
+          "answer": 400,
+          "explain": "$10,000 × 0.04 = $400.",
+          "unit": "$"
+        },
+        {
+          "id": "sv-where-to-park-q4",
+          "type": "multiple_choice",
+          "context": "A [[high-yield savings account|high-yield-savings]] pays more interest than a regular one, and your money is just as safe.",
+          "prompt": "You have $10,000. A regular account pays 0.5% a year, a high-yield account pays 4%. Which earns more?",
+          "choices": [
+            "The regular account",
+            "The high-yield account",
+            "They earn the same"
+          ],
+          "answer": 1,
+          "explain": "$400 a year versus $50. Same money, more growth."
+        },
+        {
+          "id": "sv-where-to-park-q5",
+          "type": "multiple_choice",
+          "context": "Money is [[liquid]] if you can turn it into cash quickly without losing any of it. Emergency money has to be liquid.",
+          "prompt": "Which of these is the most liquid?",
+          "choices": [
+            "A house",
+            "Money locked away for ten years",
+            "Cash in a savings account"
+          ],
+          "answer": 2,
+          "explain": "You can move it today, and it's all still there."
+        },
+        {
+          "id": "sv-where-to-park-q6",
+          "type": "true_false",
+          "prompt": "Your emergency fund should be somewhere you can't touch it for years.",
+          "answer": false,
+          "explain": "Emergencies don't wait. Keep it [[liquid]]."
+        }
+      ]
+    },
+    {
+      "id": "sv-interest-math",
+      "type": "lesson",
+      "format": "document",
+      "title": "Watch It Grow",
+      "summary": "Read a savings statement and see interest earning interest.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sv-interest-math-q1",
+          "type": "multiple_choice",
+          "context": "Banks show savings rates as [[APY]], the annual percentage yield: what you’ll earn in a year, counting the interest your interest earns.",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank Savings",
+            "subtitle": "Year summary",
+            "meta": [
+              [
+                "Account",
+                "•••• 9902"
+              ],
+              [
+                "APY",
+                "4.00%"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "q1",
+                "date": "Mar 31",
+                "label": "Interest paid",
+                "amount": 49.27
+              },
+              {
+                "id": "q2",
+                "date": "Jun 30",
+                "label": "Interest paid",
+                "amount": 49.75
+              },
+              {
+                "id": "q3",
+                "date": "Sep 30",
+                "label": "Interest paid",
+                "amount": 50.24
+              },
+              {
+                "id": "q4",
+                "date": "Dec 31",
+                "label": "Interest paid",
+                "amount": 50.74
+              }
+            ],
+            "totals": [
+              {
+                "label": "Opening balance",
+                "amount": 5000.0
+              },
+              {
+                "label": "Closing balance",
+                "amount": 5200.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "What APY does this account pay?",
+          "choices": [
+            "4.00%",
+            "1.00%",
+            "40%"
+          ],
+          "answer": 0,
+          "explain": "It’s right at the top: 4.00%."
+        },
+        {
+          "id": "sv-interest-math-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank Savings",
+            "subtitle": "Year summary",
+            "meta": [
+              [
+                "Account",
+                "•••• 9902"
+              ],
+              [
+                "APY",
+                "4.00%"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "q1",
+                "date": "Mar 31",
+                "label": "Interest paid",
+                "amount": 49.27
+              },
+              {
+                "id": "q2",
+                "date": "Jun 30",
+                "label": "Interest paid",
+                "amount": 49.75
+              },
+              {
+                "id": "q3",
+                "date": "Sep 30",
+                "label": "Interest paid",
+                "amount": 50.24
+              },
+              {
+                "id": "q4",
+                "date": "Dec 31",
+                "label": "Interest paid",
+                "amount": 50.74
+              }
+            ],
+            "totals": [
+              {
+                "label": "Opening balance",
+                "amount": 5000.0
+              },
+              {
+                "label": "Closing balance",
+                "amount": 5200.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "Add up the four interest lines. How much did the account earn this year?",
+          "answer": 200.0,
+          "unit": "$",
+          "explain": "$49.27 + $49.75 + $50.24 + $50.74 = $200.00."
+        },
+        {
+          "id": "sv-interest-math-q3",
+          "type": "number",
+          "prompt": "Without the statement: what’s 4% of $5,000?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$5,000 × 0.04 = $200. APY tells you the year’s total up front."
+        },
+        {
+          "id": "sv-interest-math-q4",
+          "type": "multiple_choice",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Bank Savings",
+            "subtitle": "Year summary",
+            "meta": [
+              [
+                "Account",
+                "•••• 9902"
+              ],
+              [
+                "APY",
+                "4.00%"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "q1",
+                "date": "Mar 31",
+                "label": "Interest paid",
+                "amount": 49.27
+              },
+              {
+                "id": "q2",
+                "date": "Jun 30",
+                "label": "Interest paid",
+                "amount": 49.75
+              },
+              {
+                "id": "q3",
+                "date": "Sep 30",
+                "label": "Interest paid",
+                "amount": 50.24
+              },
+              {
+                "id": "q4",
+                "date": "Dec 31",
+                "label": "Interest paid",
+                "amount": 50.74
+              }
+            ],
+            "totals": [
+              {
+                "label": "Opening balance",
+                "amount": 5000.0
+              },
+              {
+                "label": "Closing balance",
+                "amount": 5200.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "Why does each interest line get a little bigger?",
+          "choices": [
+            "Earlier interest is now earning interest too",
+            "The bank feels generous",
+            "The APY went up"
+          ],
+          "answer": 0,
+          "explain": "Each quarter’s interest joins the balance, so the next quarter pays on a bigger number."
+        },
+        {
+          "id": "sv-interest-math-q5",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Main Street Savings",
+              "subtitle": "Savings account",
+              "meta": [
+                [
+                  "APY",
+                  "0.50%"
+                ]
+              ],
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Monthly fee",
+                  "amount": 0.0
+                }
+              ]
+            },
+            {
+              "kind": "bill",
+              "title": "Cloud High-Yield Savings",
+              "subtitle": "Online savings account",
+              "meta": [
+                [
+                  "APY",
+                  "4.00%"
+                ]
+              ],
+              "lines": [
+                {
+                  "id": "fee",
+                  "label": "Monthly fee",
+                  "amount": 0.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Same $5,000 for a year. How much more does the 4.00% account earn than the 0.50% one?",
+          "answer": 175,
+          "unit": "$",
+          "explain": "4.00%: $5,000 × 0.04 = $200. 0.50%: $5,000 × 0.005 = $25. $200 − $25 = $175."
+        },
+        {
+          "id": "sv-interest-math-q6",
+          "type": "true_false",
+          "prompt": "Savings account rates can change over time.",
+          "answer": true,
+          "explain": "Most savings rates move with the economy. Check yours once or twice a year."
+        }
+      ]
+    },
+    {
+      "id": "sv-goals",
+      "type": "lesson",
+      "title": "Saving for a Goal",
+      "summary": "What, how much, by when. Then divide.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sv-goals-q1",
+          "type": "multiple_choice",
+          "context": "A [[savings goal]] has three parts: what it’s for, how much it costs, and when you need it.",
+          "prompt": "Which is a real savings goal?",
+          "choices": [
+            "$1,800 for a used scooter by June",
+            "Save more",
+            "Be rich someday"
+          ],
+          "answer": 0,
+          "explain": "It has all three parts: what, how much and when."
+        },
+        {
+          "id": "sv-goals-q2",
+          "type": "number",
+          "prompt": "You need $1,800 in 9 months. How much a month?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$1,800 ÷ 9 = $200."
+        },
+        {
+          "id": "sv-goals-q3",
+          "type": "number",
+          "prompt": "You can only manage $150 a month. How many months will $1,800 take?",
+          "answer": 12,
+          "unit": "months",
+          "explain": "$1,800 ÷ $150 = 12 months."
+        },
+        {
+          "id": "sv-goals-q4",
+          "type": "multiple_choice",
+          "prompt": "Two goals: $600 for a trip in 4 months, and $2,400 for a car in 24 months. You can save $250 a month. Which split works?",
+          "choices": [
+            "$150 to the trip and $100 to the car",
+            "All $250 to the car, then the trip",
+            "$125 to each"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "The trip would get nothing before it’s due.",
+            "The trip would only reach $500 by month four."
+          ],
+          "explain": "$150 × 4 = $600 for the trip. $100 × 24 = $2,400 for the car. Both on time."
+        },
+        {
+          "id": "sv-goals-q5",
+          "type": "true_false",
+          "prompt": "Giving each goal its own savings bucket makes progress easier to see.",
+          "answer": true,
+          "explain": "Many banks let you split savings into named pots for exactly this."
+        },
+        {
+          "id": "sv-goals-q6",
+          "type": "order",
+          "prompt": "Set up a goal. Put the steps in order.",
+          "items": [
+            "Name the goal",
+            "Price it",
+            "Pick a deadline",
+            "Divide to get the monthly amount",
+            "Automate the transfer"
+          ],
+          "explain": "What, how much, when, how much a month, then put it on autopilot."
+        }
+      ]
+    },
+    {
+      "id": "sv-automate",
+      "type": "lesson",
+      "title": "Automate It",
+      "summary": "Take willpower out of the equation.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sv-automate-q1",
+          "type": "multiple_choice",
+          "context": "An [[automatic transfer]] moves money between your accounts on a schedule. You set it up once and it runs by itself.",
+          "prompt": "Why set up an automatic transfer to savings on payday?",
+          "choices": [
+            "You save without needing willpower",
+            "It doubles your pay",
+            "Banks require it"
+          ],
+          "answer": 0,
+          "explain": "Willpower runs out. Automation doesn't."
+        },
+        {
+          "id": "sv-automate-q2",
+          "type": "order",
+          "prompt": "Put a pay-yourself-first payday in order.",
+          "items": [
+            "Your pay lands in your account",
+            "The automatic transfer moves savings out",
+            "Your bills get paid",
+            "You spend what's left"
+          ],
+          "explain": "Savings move before anything else touches the money."
+        },
+        {
+          "id": "sv-automate-q3",
+          "type": "true_false",
+          "prompt": "Automatic transfers work best when they happen right after payday.",
+          "answer": true,
+          "explain": "Catch the money before you can spend it."
+        },
+        {
+          "id": "sv-automate-q4",
+          "type": "multiple_choice",
+          "context": "Keep your savings in a **separate account** from your spending money. If you can't see it every day, you're less tempted to spend it.",
+          "prompt": "Why keep savings in a separate account?",
+          "choices": [
+            "Mixing them is against the rules",
+            "So you're less tempted to spend it",
+            "To pay more fees"
+          ],
+          "answer": 1,
+          "explain": "Out of sight, out of reach."
+        },
+        {
+          "id": "sv-automate-q5",
+          "type": "number",
+          "prompt": "You automate $150 a week into savings. How much is that over a year (52 weeks)?",
+          "answer": 7800,
+          "explain": "$150 × 52 = $7,800.",
+          "unit": "$"
+        },
+        {
+          "id": "sv-automate-q6",
+          "type": "multiple_choice",
+          "prompt": "Your pay goes up by $200 a month. What's the smartest move?",
+          "choices": [
+            "Spend the extra $200",
+            "Stop saving now that you earn more",
+            "Raise your automatic transfer"
+          ],
+          "answer": 2,
+          "explain": "Save the raise before [[lifestyle creep]] finds it."
+        }
+      ]
+    },
+    {
+      "id": "sv-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you're closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "sv-trial",
+      "type": "boss",
+      "title": "Den Trial: Saving",
+      "summary": "Eight questions. Three strikes and you're out.",
+      "xp": 25,
+      "draw": 3,
+      "steps": [
+        {
+          "id": "sv-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "Your car needs a surprise repair so you can get to work. What should pay for it?",
+          "choices": [
+            "Your holiday sinking fund",
+            "Your emergency fund",
+            "Skipping this month's rent"
+          ],
+          "answer": 1,
+          "explain": "Exactly what the [[emergency fund]] is for. Then rebuild it."
+        },
+        {
+          "id": "sv-trial-q2",
+          "type": "number",
+          "prompt": "Your essential expenses are $2,200 a month. How big is a 6-month emergency fund?",
+          "answer": 13200,
+          "explain": "$2,200 × 6 = $13,200.",
+          "unit": "$"
+        },
+        {
+          "id": "sv-trial-q3",
+          "type": "true_false",
+          "prompt": "Emergency money should be liquid.",
+          "answer": true,
+          "explain": "If you can't reach it fast, it can't save you."
+        },
+        {
+          "id": "sv-trial-q4",
+          "type": "fill_blank",
+          "prompt": "Moving money to savings before you spend anything is called paying yourself ___.",
+          "choices": [
+            "last",
+            "later",
+            "first"
+          ],
+          "answer": 2,
+          "explain": "First cut is yours."
+        },
+        {
+          "id": "sv-trial-q5",
+          "type": "number",
+          "prompt": "$5,000 sits in a high-yield savings account paying 4% a year. How much interest does it earn in a year?",
+          "answer": 200,
+          "explain": "$5,000 × 0.04 = $200.",
+          "unit": "$"
+        }
+      ]
+    }
+  ]
+}
