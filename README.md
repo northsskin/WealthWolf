@@ -18,6 +18,8 @@ Open http://localhost:5190. The port is fixed, because Google sign-in only allow
 
 `npm run dev:unlocked` does the same with every lesson unlocked and no account needed, for testing content.
 
+`npm run check` checks every lesson file and lists any problems. Run it after changing content.
+
 `npm run build` makes a production build in `wealthwolf/dist/`.
 
 ## Accounts (Supabase)
@@ -46,6 +48,13 @@ wealthwolf/src/data/
   - Assume the learner knows nothing.
   - Mix lesson formats.
   - Use US rules, and label yearly figures with their year.
+
+### Building the remaining sections
+
+- [`docs/CONTENT_GUIDE.md`](docs/CONTENT_GUIDE.md) explains how a section is made and checked.
+- [`docs/prompts/`](docs/prompts) has a ready-to-paste prompt for each of Sections 3–8, for Cursor or another AI agent.
+- Build them in order (3, 4, 5, 6, 7, 8): later sections build on words taught in earlier ones.
+- Use one branch and pull request per section. Every section adds itself to `sections.json`, so if two run at once, expect to merge that file.
 
 ## Design
 

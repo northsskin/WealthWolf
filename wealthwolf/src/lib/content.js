@@ -174,7 +174,8 @@ export function currentLessonId(completed) {
 }
 
 // Content is hand-written JSON, so catch authoring mistakes loudly in dev.
-function validate() {
+// Returns a list of problems; `npm run check` runs it from the command line.
+export function validateContent() {
   const problems = []
   const seen = new Set()
   const check = (ok, where, msg) => ok || problems.push(`${where}: ${msg}`)
@@ -272,7 +273,10 @@ function validate() {
     }
   }
   for (const id of Object.keys(glossary)) check(introduced.has(id), `term ${id}`, 'defined but never taught')
-  if (problems.length) console.warn(`[content] ${problems.length} problem(s):\n${problems.join('\n')}`)
+  return problems
 }
 
-if (import.meta.env.DEV) validate()
+if (import.meta.env.DEV && typeof window !== 'undefined') {
+  const problems = validateContent()
+  if (problems.length) console.warn(`[content] ${problems.length} problem(s):\n${problems.join('\n')}`)
+}
