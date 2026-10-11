@@ -12,7 +12,7 @@ terms = {
 
 charge = lesson('cb-chargeoff', 'Charge-Offs', 'Written off is not the same as forgiven.', [
     mc('What is a charge-off?',
-       ['The lender writes the debt off as a loss, often around 180 days late', 'The debt is forgiven', 'The balance becomes a reward'], 0,
+       ['The lender writes the debt off as a loss, often around 180 days late', 'The debt is forgiven', 'The account is closed and the balance is paused'], 0,
        'They stopped hoping. You did not stop owing.',
        context='A [[charge-off]] usually happens after many months late, often about 180 days. The lender may sell the debt. It can sit on your [[credit report]] for about seven years. Paying it later does not erase that clock.'),
     tf('A charged-off debt is forgiven and you can ignore letters about it.', False,
@@ -38,7 +38,7 @@ rights = lesson('cb-rights', 'What Collectors Cannot Do', 'They can ask for the 
     tf('A collector can have you arrested for an unpaid credit-card bill.', False,
        'Ordinary consumer debt is not a crime. A threat of arrest is a tactic.'),
     mc('What time of day is off limits for collector calls?',
-       ['Before 8 a.m. and after 9 p.m.', 'Only Sundays', 'There is no limit'], 0,
+       ['Before 8 a.m. and after 9 p.m.', 'Weekends', 'There is no limit'], 0,
        'Those are the federal edges.'),
     mc('They keep calling after you ask them, in writing, to stop calling. What can you do?',
        ['Tell them in writing to stop, and report the harassment', 'Pay so they will be nice', 'Ignore the law. They are allowed to harass'], 0,
@@ -46,7 +46,7 @@ rights = lesson('cb-rights', 'What Collectors Cannot Do', 'They can ask for the 
     tf('“We will sue” is always a lie.', False,
        'Sometimes they can sue. Sometimes it is a bluff. Validation and the dates tell you more than the tone.'),
     mc('Who enforces these rules?',
-       ['The Consumer Financial Protection Bureau and the FTC, among others', 'The card’s rewards program', 'Nobody'], 0,
+       ['The Consumer Financial Protection Bureau and the FTC, among others', 'The credit bureaus', 'Nobody'], 0,
        'Report abuse. Do not debate it on the phone at 3 a.m.'),
 ], fmt='sort')
 
@@ -90,7 +90,7 @@ sol = lesson('cb-time-limit', 'Time Limits', 'The right to sue is not the same i
     mc('Why be careful about sending a small “good faith” payment on a very old debt?',
        ['In some states it can restart the time they have to sue', 'It deletes the report', 'It is required by federal law'], 0,
        'A friendly payment can have a legal side effect.'),
-    fill('The time they have to sue is set by your ___, not by the collector’s script.', ['state', 'mood', 'credit score'], 0, 'State law. Confirm it.'),
+    fill('The time they have to sue is set by your ___, not by the collector’s script.', ['state', 'lender', 'credit score'], 0, 'State law. Confirm it.'),
 ])
 
 settle_a = [
@@ -133,7 +133,7 @@ bank = lesson('cb-bankruptcy', 'Bankruptcy, at a High Level', 'A court, a cost, 
        'You pay into a plan. The mark is about 7 years.'),
     tf('Bankruptcy is free and wipes student loans in a typical case.', False,
        'It costs money to file, and most student loans usually stay.'),
-    mc('How long can a Chapter 7 bankruptcy stay on a credit report?', ['Up to 10 years', '10 weeks', 'Until you ask nicely'], 0,
+    mc('How long can a Chapter 7 bankruptcy stay on a credit report?', ['Up to 10 years', '10 weeks', 'Until the debts are repaid'], 0,
        'Up to 10 years.'),
     mc('How long is a Chapter 13 mark, in the usual case?', ['About 7 years', 'About 7 weeks', 'Forever'], 0,
        'About 7 years from filing.'),
@@ -177,7 +177,7 @@ rebuild = lesson('cb-rebuild', 'Afterward', 'The mark ages. New on-time payments
        'Small, secured, and boring.'),
     num('A Chapter 7 was filed in 2020. The 10-year mark runs to about what year?', 2030, '2020 + 10 = 2030.', unit=None),
     mc('While you wait, what do you check?',
-       ['All three credit reports, for errors and for accounts that are not yours', 'Nothing', 'Only the ads'], 0,
+       ['All three credit reports, for errors and for accounts that are not yours', 'Nothing', 'Only your credit score'], 0,
        'The file can still be wrong. Wrong is worth a dispute.'),
     fill('Accurate negative marks come off when the ___ runs out, not when a stranger promises.', ['clock', 'sale', 'reward'], 0,
          'Seven years for most marks. Up to ten for Chapter 7.'),
@@ -186,7 +186,7 @@ rebuild = lesson('cb-rebuild', 'Afterward', 'The mark ages. New on-time payments
 trial_steps = [
     tf('A charge-off means the debt is forgiven.', False, 'It was written off. You can still owe it.'),
     mc('A collector threatens jail over a credit-card bill. That threat is…',
-       ['Not allowed', 'Required by law', 'A sign you should pay in cash tonight'], 0,
+       ['Not allowed', 'Required by law', 'Allowed if the debt is over $1,000'], 0,
        'Ordinary consumer debt is not a reason to threaten arrest.'),
     mc('Chapter 7 can stay on a credit report for up to how long?', ['10 years', '10 days', 'One billing cycle'], 0,
        'Up to 10 years.'),

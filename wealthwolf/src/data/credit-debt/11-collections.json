@@ -38,7 +38,7 @@
           "choices": [
             "The lender writes the debt off as a loss, often around 180 days late",
             "The debt is forgiven",
-            "The balance becomes a reward"
+            "The account is closed and the balance is paused"
           ],
           "answer": 0,
           "explain": "They stopped hoping. You did not stop owing."
@@ -153,7 +153,7 @@
           "prompt": "What time of day is off limits for collector calls?",
           "choices": [
             "Before 8 a.m. and after 9 p.m.",
-            "Only Sundays",
+            "Weekends",
             "There is no limit"
           ],
           "answer": 0,
@@ -184,7 +184,7 @@
           "prompt": "Who enforces these rules?",
           "choices": [
             "The Consumer Financial Protection Bureau and the FTC, among others",
-            "The card’s rewards program",
+            "The credit bureaus",
             "Nobody"
           ],
           "answer": 0,
@@ -354,7 +354,7 @@
           "prompt": "The time they have to sue is set by your ___, not by the collector’s script.",
           "choices": [
             "state",
-            "mood",
+            "lender",
             "credit score"
           ],
           "answer": 0,
@@ -518,7 +518,7 @@
           "choices": [
             "Up to 10 years",
             "10 weeks",
-            "Until you ask nicely"
+            "Until the debts are repaid"
           ],
           "answer": 0,
           "explain": "Up to 10 years."
@@ -676,7 +676,7 @@
           "choices": [
             "All three credit reports, for errors and for accounts that are not yours",
             "Nothing",
-            "Only the ads"
+            "Only your credit score"
           ],
           "answer": 0,
           "explain": "The file can still be wrong. Wrong is worth a dispute."
@@ -726,7 +726,7 @@
           "choices": [
             "Not allowed",
             "Required by law",
-            "A sign you should pay in cash tonight"
+            "Allowed if the debt is over $1,000"
           ],
           "answer": 0,
           "explain": "Ordinary consumer debt is not a reason to threaten arrest."

@@ -61,7 +61,7 @@ secured = lesson('dc-secured', 'Secured or Unsecured', 'Some loans have somethin
        ['Take the car and sell it', 'Nothing, the car is yours', 'Erase the loan'], 0,
        'That is the deal you signed.'),
     mc('Why might a lender offer a lower rate on a secured loan?',
-       ['They can take the property if you do not pay', 'Secured loans are illegal to price high', 'The rate is set by your birthday'], 0,
+       ['They can take the property if you do not pay', 'The loan is smaller, so the bank charges less', 'Your credit score stops mattering'], 0,
        'Less risk for them, so they can charge less.'),
     match('Match each loan to what sits behind it.',
           [('Car loan', 'The car'), ('Typical credit card', 'Only your promise to pay'), ('Boat loan', 'The boat')]),
@@ -87,7 +87,7 @@ agreement = lesson('dc-agreement', 'The Loan Agreement', 'The page you sign is t
     tf('Once you sign, a late payment can cost an extra fee on top of the payment.', True,
        'The note says so. The payment is not the only number that matters.'),
     mc('What should you know before you sign?',
-       ['The total you will pay, not just the monthly payment', 'Only the monthly payment', 'Only the lender’s logo'], 0,
+       ['The total you will pay, not just the monthly payment', 'Only the monthly payment', 'Only the interest rate'], 0,
        'The monthly number hides the $360.'),
 ], fmt='document')
 

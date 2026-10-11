@@ -262,9 +262,9 @@
           "context": "The [[avalanche method]]: pay the minimum on every debt, then put every spare bit of money toward the one with the **highest APR**.",
           "prompt": "Using the avalanche method, which debt do you attack first?",
           "choices": [
-            "Car loan ┬╖ 7% APR",
-            "Store card ┬╖ 29% APR",
-            "Student loan ┬╖ 4% APR"
+            "Car loan · 7% APR",
+            "Store card · 29% APR",
+            "Student loan · 4% APR"
           ],
           "answer": 1,
           "explain": "Highest APR first. It’s costing you the most."
@@ -274,10 +274,10 @@
           "type": "order",
           "prompt": "Avalanche method: order these debts from first to last to pay off.",
           "items": [
-            "Store card ┬╖ 29% APR",
-            "Credit card ┬╖ 22% APR",
-            "Car loan ┬╖ 7% APR",
-            "Student loan ┬╖ 4% APR"
+            "Store card · 29% APR",
+            "Credit card · 22% APR",
+            "Car loan · 7% APR",
+            "Student loan · 4% APR"
           ],
           "explain": "Highest APR to lowest."
         },
@@ -287,9 +287,9 @@
           "context": "The [[snowball method]]: pay the minimum on everything, then attack the **smallest balance** first. Every debt you clear feels like a win.",
           "prompt": "Using the snowball method, which debt goes first?",
           "choices": [
-            "Phone plan ┬╖ $400 left",
-            "Car loan ┬╖ $7,500 left",
-            "Student loan ┬╖ $15,000 left"
+            "Phone plan · $400 left",
+            "Car loan · $7,500 left",
+            "Student loan · $15,000 left"
           ],
           "answer": 0,
           "explain": "Smallest balance first. Quick win, then roll that money into the next one."
@@ -299,10 +299,10 @@
           "type": "order",
           "prompt": "Snowball method: order these debts from first to last to pay off.",
           "items": [
-            "Phone plan ┬╖ $400 left",
-            "Credit card ┬╖ $1,800 left",
-            "Car loan ┬╖ $7,500 left",
-            "Student loan ┬╖ $15,000 left"
+            "Phone plan · $400 left",
+            "Credit card · $1,800 left",
+            "Car loan · $7,500 left",
+            "Student loan · $15,000 left"
           ],
           "explain": "Smallest balance to biggest."
         },

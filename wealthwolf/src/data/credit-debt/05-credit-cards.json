@@ -28,7 +28,7 @@
       "type": "lesson",
       "format": "document",
       "title": "The Card Statement",
-      "summary": "Three numbers matter: the statement balance, the minimum, and the due date.",
+      "summary": "Read a real month on a card: what you spent, what you owe, what’s due.",
       "xp": 10,
       "steps": [
         {
@@ -36,158 +36,413 @@
           "type": "number",
           "context": "The [[statement balance]] is what you owed when the bill was cut. The [[minimum payment]] is the smallest amount that keeps the account in good standing. The [[due date]] is the last day to pay on time.",
           "doc": {
-            "kind": "bill",
+            "kind": "statement",
             "title": "Harbor Card",
-            "subtitle": "October statement",
+            "subtitle": "Statement · Sep 26 – Oct 25",
             "meta": [
               [
-                "Statement balance",
-                "$480.00"
+                "Credit limit",
+                "$1,500.00"
               ],
               [
                 "Minimum payment",
                 "$25.00"
               ],
               [
-                "Due date",
-                "Oct 21"
+                "Payment due date",
+                "Nov 21"
               ]
             ],
             "lines": [
               {
-                "id": "purch",
-                "label": "Purchases this period",
-                "amount": 480.0
+                "id": "pay",
+                "date": "Sep 28",
+                "label": "Payment, thank you",
+                "amount": -312.4
+              },
+              {
+                "id": "groc",
+                "date": "Oct 2",
+                "label": "City Grocer",
+                "amount": 64.18
+              },
+              {
+                "id": "gas",
+                "date": "Oct 5",
+                "label": "Shell gas station",
+                "amount": 38.0
+              },
+              {
+                "id": "stream",
+                "date": "Oct 9",
+                "label": "StreamMax",
+                "amount": 15.99
+              },
+              {
+                "id": "tech",
+                "date": "Oct 14",
+                "label": "TechWorld, headphones",
+                "amount": 89.99
+              },
+              {
+                "id": "taco",
+                "date": "Oct 20",
+                "label": "Taco Spot",
+                "amount": 22.84
+              },
+              {
+                "id": "pharm",
+                "date": "Oct 24",
+                "label": "Corner Pharmacy",
+                "amount": 18.6
               }
             ],
             "totals": [
               {
-                "label": "Statement balance",
-                "amount": 480.0,
-                "strong": true
+                "label": "Previous balance",
+                "amount": 312.4
               }
             ],
-            "note": "Interest rate 24% APR. Pay the statement balance by Oct 21 to avoid interest."
+            "note": "Purchase APR 24%. Pay the new balance in full by Nov 21 and these purchases are not charged interest."
           },
-          "prompt": "What is the statement balance?",
-          "answer": 480,
+          "prompt": "Add up this month’s purchases. Leave out the payment.",
+          "answer": 249.6,
           "unit": "$",
-          "explain": "The total for this period: $480."
+          "tolerance": 0.005,
+          "explain": "$64.18 + $38.00 + $15.99 + $89.99 + $22.84 + $18.60 = $249.60."
         },
         {
           "id": "cc-statement-q2",
           "type": "number",
           "doc": {
-            "kind": "bill",
+            "kind": "statement",
             "title": "Harbor Card",
-            "subtitle": "October statement",
+            "subtitle": "Statement · Sep 26 – Oct 25",
             "meta": [
               [
-                "Statement balance",
-                "$480.00"
+                "Credit limit",
+                "$1,500.00"
               ],
               [
                 "Minimum payment",
                 "$25.00"
               ],
               [
-                "Due date",
-                "Oct 21"
+                "Payment due date",
+                "Nov 21"
               ]
             ],
             "lines": [
               {
-                "id": "purch",
-                "label": "Purchases this period",
-                "amount": 480.0
+                "id": "pay",
+                "date": "Sep 28",
+                "label": "Payment, thank you",
+                "amount": -312.4
+              },
+              {
+                "id": "groc",
+                "date": "Oct 2",
+                "label": "City Grocer",
+                "amount": 64.18
+              },
+              {
+                "id": "gas",
+                "date": "Oct 5",
+                "label": "Shell gas station",
+                "amount": 38.0
+              },
+              {
+                "id": "stream",
+                "date": "Oct 9",
+                "label": "StreamMax",
+                "amount": 15.99
+              },
+              {
+                "id": "tech",
+                "date": "Oct 14",
+                "label": "TechWorld, headphones",
+                "amount": 89.99
+              },
+              {
+                "id": "taco",
+                "date": "Oct 20",
+                "label": "Taco Spot",
+                "amount": 22.84
+              },
+              {
+                "id": "pharm",
+                "date": "Oct 24",
+                "label": "Corner Pharmacy",
+                "amount": 18.6
               }
             ],
             "totals": [
               {
-                "label": "Statement balance",
-                "amount": 480.0,
-                "strong": true
+                "label": "Previous balance",
+                "amount": 312.4
               }
             ],
-            "note": "Interest rate 24% APR. Pay the statement balance by Oct 21 to avoid interest."
+            "note": "Purchase APR 24%. Pay the new balance in full by Nov 21 and these purchases are not charged interest."
           },
-          "prompt": "What is the minimum payment on this bill?",
-          "answer": 25,
+          "prompt": "The previous balance of $312.40 was paid in full on Sep 28. What is the new statement balance?",
+          "answer": 249.6,
           "unit": "$",
-          "explain": "The bill asks for at least $25."
+          "tolerance": 0.005,
+          "explain": "$312.40 − $312.40 + $249.60 = $249.60."
         },
         {
           "id": "cc-statement-q3",
           "type": "multiple_choice",
           "doc": {
-            "kind": "bill",
+            "kind": "statement",
             "title": "Harbor Card",
-            "subtitle": "October statement",
+            "subtitle": "Statement · Sep 26 – Oct 25",
             "meta": [
               [
-                "Statement balance",
-                "$480.00"
+                "Credit limit",
+                "$1,500.00"
               ],
               [
                 "Minimum payment",
                 "$25.00"
               ],
               [
-                "Due date",
-                "Oct 21"
+                "Payment due date",
+                "Nov 21"
               ]
             ],
             "lines": [
               {
-                "id": "purch",
-                "label": "Purchases this period",
-                "amount": 480.0
+                "id": "pay",
+                "date": "Sep 28",
+                "label": "Payment, thank you",
+                "amount": -312.4
+              },
+              {
+                "id": "groc",
+                "date": "Oct 2",
+                "label": "City Grocer",
+                "amount": 64.18
+              },
+              {
+                "id": "gas",
+                "date": "Oct 5",
+                "label": "Shell gas station",
+                "amount": 38.0
+              },
+              {
+                "id": "stream",
+                "date": "Oct 9",
+                "label": "StreamMax",
+                "amount": 15.99
+              },
+              {
+                "id": "tech",
+                "date": "Oct 14",
+                "label": "TechWorld, headphones",
+                "amount": 89.99
+              },
+              {
+                "id": "taco",
+                "date": "Oct 20",
+                "label": "Taco Spot",
+                "amount": 22.84
+              },
+              {
+                "id": "pharm",
+                "date": "Oct 24",
+                "label": "Corner Pharmacy",
+                "amount": 18.6
               }
             ],
             "totals": [
               {
-                "label": "Statement balance",
-                "amount": 480.0,
-                "strong": true
+                "label": "Previous balance",
+                "amount": 312.4
               }
             ],
-            "note": "Interest rate 24% APR. Pay the statement balance by Oct 21 to avoid interest."
+            "note": "Purchase APR 24%. Pay the new balance in full by Nov 21 and these purchases are not charged interest."
           },
-          "prompt": "When is this bill due?",
+          "prompt": "When is the payment due?",
           "choices": [
-            "Oct 21",
-            "Whenever you feel like it",
-            "The day you opened the card"
+            "Nov 21",
+            "Oct 25, when the statement closed",
+            "Dec 21, a month after the bill"
           ],
           "answer": 0,
-          "explain": "Oct 21 is printed on the statement."
+          "why": [
+            "",
+            "That’s when the billing period ended. You have until the due date to pay.",
+            "Paying then would be a month late."
+          ],
+          "explain": "The due date is printed on the statement."
         },
         {
           "id": "cc-statement-q4",
           "type": "number",
-          "prompt": "You pay the $480 statement balance. How much of this period’s purchases is left unpaid?",
-          "answer": 0,
-          "unit": "$",
-          "explain": "$480 − $480 = $0."
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Card",
+            "subtitle": "Statement · Sep 26 – Oct 25",
+            "meta": [
+              [
+                "Credit limit",
+                "$1,500.00"
+              ],
+              [
+                "Minimum payment",
+                "$25.00"
+              ],
+              [
+                "Payment due date",
+                "Nov 21"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "pay",
+                "date": "Sep 28",
+                "label": "Payment, thank you",
+                "amount": -312.4
+              },
+              {
+                "id": "groc",
+                "date": "Oct 2",
+                "label": "City Grocer",
+                "amount": 64.18
+              },
+              {
+                "id": "gas",
+                "date": "Oct 5",
+                "label": "Shell gas station",
+                "amount": 38.0
+              },
+              {
+                "id": "stream",
+                "date": "Oct 9",
+                "label": "StreamMax",
+                "amount": 15.99
+              },
+              {
+                "id": "tech",
+                "date": "Oct 14",
+                "label": "TechWorld, headphones",
+                "amount": 89.99
+              },
+              {
+                "id": "taco",
+                "date": "Oct 20",
+                "label": "Taco Spot",
+                "amount": 22.84
+              },
+              {
+                "id": "pharm",
+                "date": "Oct 24",
+                "label": "Corner Pharmacy",
+                "amount": 18.6
+              }
+            ],
+            "totals": [
+              {
+                "label": "Previous balance",
+                "amount": 312.4
+              }
+            ],
+            "note": "Purchase APR 24%. Pay the new balance in full by Nov 21 and these purchases are not charged interest."
+          },
+          "prompt": "What share of the $1,500 limit does the new balance use? Round to the nearest whole percent.",
+          "answer": 17,
+          "unit": "%",
+          "explain": "$249.60 ÷ $1,500 = 0.166, about 17%."
         },
         {
           "id": "cc-statement-q5",
           "type": "true_false",
-          "prompt": "Paying the minimum keeps you from being late. It does not pay off the balance.",
+          "prompt": "Paying only the $25 minimum by Nov 21 keeps you from being late, but interest starts on the rest.",
           "answer": true,
           "explain": "On time and paid off are two different jobs."
         },
         {
           "id": "cc-statement-q6",
           "type": "multiple_choice",
-          "prompt": "Which number, paid by the due date, usually avoids interest on these purchases?",
+          "doc": {
+            "kind": "statement",
+            "title": "Harbor Card",
+            "subtitle": "Statement · Sep 26 – Oct 25",
+            "meta": [
+              [
+                "Credit limit",
+                "$1,500.00"
+              ],
+              [
+                "Minimum payment",
+                "$25.00"
+              ],
+              [
+                "Payment due date",
+                "Nov 21"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "pay",
+                "date": "Sep 28",
+                "label": "Payment, thank you",
+                "amount": -312.4
+              },
+              {
+                "id": "groc",
+                "date": "Oct 2",
+                "label": "City Grocer",
+                "amount": 64.18
+              },
+              {
+                "id": "gas",
+                "date": "Oct 5",
+                "label": "Shell gas station",
+                "amount": 38.0
+              },
+              {
+                "id": "stream",
+                "date": "Oct 9",
+                "label": "StreamMax",
+                "amount": 15.99
+              },
+              {
+                "id": "tech",
+                "date": "Oct 14",
+                "label": "TechWorld, headphones",
+                "amount": 89.99
+              },
+              {
+                "id": "taco",
+                "date": "Oct 20",
+                "label": "Taco Spot",
+                "amount": 22.84
+              },
+              {
+                "id": "pharm",
+                "date": "Oct 24",
+                "label": "Corner Pharmacy",
+                "amount": 18.6
+              }
+            ],
+            "totals": [
+              {
+                "label": "Previous balance",
+                "amount": 312.4
+              }
+            ],
+            "note": "Purchase APR 24%. Pay the new balance in full by Nov 21 and these purchases are not charged interest."
+          },
+          "prompt": "Which amount, paid by Nov 21, avoids interest on these purchases?",
           "choices": [
-            "The statement balance",
-            "The minimum payment",
-            "Half the minimum"
+            "The full $249.60 statement balance",
+            "The $25 minimum payment",
+            "Only what you spent after Oct 25"
           ],
           "answer": 0,
-          "explain": "The full statement balance. The minimum leaves the rest to grow."
+          "explain": "Pay the statement balance in full. The minimum leaves the rest to grow."
         }
       ]
     },
@@ -328,15 +583,21 @@
     {
       "id": "cc-min-trap",
       "type": "lesson",
-      "title": "The Minimum Trap",
+      "format": "story",
+      "title": "Nico’s Minimum Trap",
       "summary": "Small payments stretch a balance for years.",
       "xp": 10,
+      "story": {
+        "title": "The $50 that barely moved",
+        "character": "Nico, 24, line cook",
+        "body": "Nico put a **$2,400** TV and sound system on a card that charges **18%** a year, which works out to **1.5%** a month.\n\nThe card only asks for a **$50** minimum payment, so that’s what he pays. A friend told him the balance would be gone in about four years. It won’t be."
+      },
       "steps": [
         {
           "id": "cc-min-trap-q1",
           "type": "number",
-          "context": "If the [[minimum payment]] is $50 and interest is $36, only $14 of your payment touches the [[balance]].",
-          "prompt": "You owe $2,400 at 18% APR. The monthly rate is 1.5%. How much interest this month?",
+          "context": "When you pay only the [[minimum payment]], interest takes its share first. Whatever is left is all that touches the [[balance]].",
+          "prompt": "How much interest does the first month add? (1.5% of $2,400)",
           "answer": 36,
           "unit": "$",
           "explain": "$2,400 × 0.015 = $36."
@@ -344,7 +605,7 @@
         {
           "id": "cc-min-trap-q2",
           "type": "number",
-          "prompt": "You pay that $50 minimum. How much of it cuts the principal?",
+          "prompt": "He pays the $50 minimum. How much of it cuts the principal?",
           "answer": 14,
           "unit": "$",
           "explain": "$50 − $36 = $14."
@@ -359,34 +620,42 @@
         },
         {
           "id": "cc-min-trap-q4",
-          "type": "multiple_choice",
-          "prompt": "What is the trap?",
-          "choices": [
-            "You pay every month and the balance barely moves",
-            "The balance vanishes after one minimum",
-            "The bank forgives the rest at month 12"
-          ],
-          "answer": 0,
-          "explain": "Most of the payment is interest."
+          "type": "number",
+          "prompt": "With no interest at all, how many $50 payments would clear $2,400?",
+          "answer": 48,
+          "unit": "payments",
+          "explain": "$2,400 ÷ $50 = 48 months: the four years his friend meant. With 1.5% a month of interest, it takes about 86 payments, over seven years."
         },
         {
           "id": "cc-min-trap-q5",
+          "type": "multiple_choice",
+          "prompt": "What is the trap?",
+          "choices": [
+            "He pays every month and the balance barely moves",
+            "The card stops charging interest once he pays the minimum",
+            "The minimum rises to cover the interest"
+          ],
+          "answer": 0,
+          "explain": "Most of each payment is interest."
+        },
+        {
+          "id": "cc-min-trap-q6",
           "type": "true_false",
           "prompt": "Paying more than the minimum, and aiming it at this card, shortens the trap.",
           "answer": true,
           "explain": "Extra dollars go to principal, which cuts next month’s interest."
         },
         {
-          "id": "cc-min-trap-q6",
+          "id": "cc-min-trap-q7",
           "type": "multiple_choice",
-          "prompt": "You can afford $150 this month, not just $50. Where should the extra $100 go?",
+          "prompt": "Nico can afford $150 this month, not just $50. Where should the extra $100 go?",
           "choices": [
             "Onto this balance",
             "Into a second purchase on the same card",
-            "Nowhere. The minimum is the goal"
+            "Into savings while he keeps paying the minimum"
           ],
           "answer": 0,
-          "explain": "The extra $100 cuts principal. A new purchase digs the hole again."
+          "explain": "At 18%, paying the card down beats almost any savings rate."
         }
       ]
     },

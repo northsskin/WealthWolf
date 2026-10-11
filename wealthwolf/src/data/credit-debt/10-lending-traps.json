@@ -163,8 +163,8 @@
           "prompt": "What does a title loan use as collateral?",
           "choices": [
             "Your car’s title",
-            "Your next birthday",
-            "A credit card you do not have"
+            "Your next paycheck",
+            "Your credit score"
           ],
           "answer": 0,
           "explain": "The car is how they get paid if you do not."
@@ -321,7 +321,7 @@
           "choices": [
             "What do I pay back, in dollars, and what can they take?",
             "How fast can I get the money",
-            "How big is the word “approved”"
+            "Whether the payment is under $100"
           ],
           "answer": 0,
           "explain": "Approval is easy when the price is ugly."
@@ -504,7 +504,7 @@
           "choices": [
             "You receive $200 and pay back $285",
             "“Approved”",
-            "A picture of a smile"
+            "“No credit check needed”"
           ],
           "answer": 0,
           "explain": "Dollars in, dollars out."
@@ -514,57 +514,220 @@
     {
       "id": "lt-better",
       "type": "lesson",
+      "format": "call",
       "title": "Better Options When You Are Short",
-      "summary": "Slow help is usually cheaper than fast cash.",
+      "summary": "Slow help is usually cheaper than fast cash. Compare two loans.",
       "xp": 10,
       "steps": [
         {
           "id": "lt-better-q1",
           "type": "multiple_choice",
-          "context": "When cash is short, the order is: billers and a payment plan, then anything you can sell or pause, then a credit union or a person who will not take your car. A payday loan is the last door, not the first.",
-          "prompt": "A $150 bill is due and you are short. What is worth trying before a payday loan?",
+          "context": "When cash is short, try billers and payment plans first, then anything you can sell or pause, then a credit union. Many credit unions offer members small loans with capped fees. A payday loan is the last door, not the first.",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "QuickCash payday loan",
+              "subtitle": "Due in full on your next payday",
+              "lines": [
+                {
+                  "id": "get",
+                  "label": "You receive",
+                  "amount": 300.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Fee for every two weeks you keep it",
+                  "amount": 45.0
+                }
+              ],
+              "note": "Can’t repay in full? Rolling it over means paying the $45 again."
+            },
+            {
+              "kind": "bill",
+              "title": "Lakeshore Credit Union",
+              "subtitle": "Small-dollar loan for members",
+              "meta": [
+                [
+                  "APR",
+                  "28%"
+                ]
+              ],
+              "lines": [
+                {
+                  "id": "get",
+                  "label": "You receive",
+                  "amount": 300.0
+                },
+                {
+                  "id": "app",
+                  "label": "Application fee",
+                  "amount": 20.0
+                },
+                {
+                  "id": "pay",
+                  "label": "3 monthly payments of $104.70",
+                  "amount": 314.1
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay back",
+                  "amount": 334.1,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "A $300 car repair can’t wait, and you need about three months to pay it back. Which costs less?",
           "choices": [
-            "Ask the biller for a payment date, and cut or pause something else",
-            "A title loan",
-            "A second payday loan to pay the first"
+            "The credit-union loan",
+            "The payday loan"
           ],
           "answer": 0,
-          "explain": "A biller would often rather get the money late than not at all."
+          "explain": "Compare the dollars you pay back, not how fast the money arrives."
         },
         {
           "id": "lt-better-q2",
           "type": "number",
-          "prompt": "You pause a $40 subscription and sell a $90 item you do not use. How much of a $150 gap does that close?",
-          "answer": 130,
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "QuickCash payday loan",
+              "subtitle": "Due in full on your next payday",
+              "lines": [
+                {
+                  "id": "get",
+                  "label": "You receive",
+                  "amount": 300.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Fee for every two weeks you keep it",
+                  "amount": 45.0
+                }
+              ],
+              "note": "Can’t repay in full? Rolling it over means paying the $45 again."
+            },
+            {
+              "kind": "bill",
+              "title": "Lakeshore Credit Union",
+              "subtitle": "Small-dollar loan for members",
+              "meta": [
+                [
+                  "APR",
+                  "28%"
+                ]
+              ],
+              "lines": [
+                {
+                  "id": "get",
+                  "label": "You receive",
+                  "amount": 300.0
+                },
+                {
+                  "id": "app",
+                  "label": "Application fee",
+                  "amount": 20.0
+                },
+                {
+                  "id": "pay",
+                  "label": "3 monthly payments of $104.70",
+                  "amount": 314.1
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay back",
+                  "amount": 334.1,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "The credit-union loan: what does it cost you beyond the $300?",
+          "answer": 34.1,
           "unit": "$",
-          "explain": "$40 + $90 = $130."
+          "tolerance": 0.005,
+          "explain": "$334.10 − $300.00 = $34.10."
         },
         {
           "id": "lt-better-q3",
           "type": "number",
-          "prompt": "How much of the $150 is still short?",
-          "answer": 20,
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "QuickCash payday loan",
+              "subtitle": "Due in full on your next payday",
+              "lines": [
+                {
+                  "id": "get",
+                  "label": "You receive",
+                  "amount": 300.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Fee for every two weeks you keep it",
+                  "amount": 45.0
+                }
+              ],
+              "note": "Can’t repay in full? Rolling it over means paying the $45 again."
+            },
+            {
+              "kind": "bill",
+              "title": "Lakeshore Credit Union",
+              "subtitle": "Small-dollar loan for members",
+              "meta": [
+                [
+                  "APR",
+                  "28%"
+                ]
+              ],
+              "lines": [
+                {
+                  "id": "get",
+                  "label": "You receive",
+                  "amount": 300.0
+                },
+                {
+                  "id": "app",
+                  "label": "Application fee",
+                  "amount": 20.0
+                },
+                {
+                  "id": "pay",
+                  "label": "3 monthly payments of $104.70",
+                  "amount": 314.1
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Total you pay back",
+                  "amount": 334.1,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "Rolled over every two weeks for 12 weeks, the payday loan means six $45 fees. What do they add up to?",
+          "answer": 270,
           "unit": "$",
-          "explain": "$150 − $130 = $20. A $20 gap is not a reason for a 390% loan."
+          "explain": "6 × $45 = $270, and you still owe the $300."
         },
         {
           "id": "lt-better-q4",
-          "type": "true_false",
-          "prompt": "A payment plan on a medical bill can cost less than a payday loan.",
-          "answer": true,
-          "explain": "Many billers will split a balance. Ask before you borrow."
+          "type": "number",
+          "prompt": "How much more does the payday route cost than the whole credit-union loan?",
+          "answer": 235.9,
+          "unit": "$",
+          "tolerance": 0.005,
+          "explain": "$270.00 − $34.10 = $235.90."
         },
         {
           "id": "lt-better-q5",
-          "type": "multiple_choice",
-          "prompt": "Which option puts the car at risk?",
-          "choices": [
-            "A title loan",
-            "A payment plan with the hospital",
-            "Selling an old phone"
-          ],
-          "answer": 0,
-          "explain": "The title is the car."
+          "type": "true_false",
+          "prompt": "A payment plan with the repair shop or a hospital can cost less than either loan.",
+          "answer": true,
+          "explain": "Many billers will split a balance. Ask before you borrow."
         },
         {
           "id": "lt-better-q6",
@@ -681,8 +844,8 @@
           "prompt": "A title loan puts which asset on the line?",
           "choices": [
             "Your car",
-            "Your grocery receipt",
-            "A streaming password"
+            "Your paycheck",
+            "Your credit score"
           ],
           "answer": 0,
           "explain": "The title is the collateral."

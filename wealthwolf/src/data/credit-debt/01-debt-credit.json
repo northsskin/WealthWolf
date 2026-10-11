@@ -382,8 +382,8 @@
           "prompt": "Why might a lender offer a lower rate on a secured loan?",
           "choices": [
             "They can take the property if you do not pay",
-            "Secured loans are illegal to price high",
-            "The rate is set by your birthday"
+            "The loan is smaller, so the bank charges less",
+            "Your credit score stops mattering"
           ],
           "answer": 0,
           "explain": "Less risk for them, so they can charge less."
@@ -584,7 +584,7 @@
           "choices": [
             "The total you will pay, not just the monthly payment",
             "Only the monthly payment",
-            "Only the lender’s logo"
+            "Only the interest rate"
           ],
           "answer": 0,
           "explain": "The monthly number hides the $360."

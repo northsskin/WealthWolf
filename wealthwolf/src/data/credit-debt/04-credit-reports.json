@@ -38,7 +38,7 @@
           "choices": [
             "The file of your accounts, payments, and inquiries",
             "A single number from 300 to 850",
-            "Your tax return"
+            "A list of your bank balances"
           ],
           "answer": 0,
           "explain": "The file comes first. The score is calculated from it."
@@ -154,7 +154,7 @@
           "prompt": "Why check all three reports?",
           "choices": [
             "An error or a fraud account may sit on only one of them",
-            "The law says you pick a favorite",
+            "Lenders only look at one, so check the best",
             "They always show the same score"
           ],
           "answer": 0,
@@ -206,7 +206,7 @@
           "choices": [
             "Every week",
             "Once in your life",
-            "Only in December"
+            "Once a year"
           ],
           "answer": 0,
           "explain": "Weekly, at the official site."
@@ -249,7 +249,7 @@
           "choices": [
             "A report from Equifax, Experian, and TransUnion",
             "Only the bureau you like",
-            "Your old tax return"
+            "The free score in your card’s app"
           ],
           "answer": 0,
           "explain": "Three files. One sitting can still hide a problem."
@@ -558,27 +558,38 @@
     {
       "id": "cr-dispute",
       "type": "lesson",
-      "title": "Disputing an Error",
-      "summary": "Tell the bureau what is wrong, in writing, and keep a copy.",
+      "format": "story",
+      "title": "Tasha Disputes an Error",
+      "summary": "A paid bill showing as unpaid. Here’s how she gets it fixed.",
       "xp": 10,
+      "story": {
+        "title": "The bill she already paid",
+        "character": "Tasha, 31, dental hygienist",
+        "body": "Tasha pulled her free reports before applying for an apartment. Experian and TransUnion looked right. Equifax showed a **$640** medical collection marked unpaid, plus a street she moved away from four years ago.\n\nShe had paid that **$640** bill in full last March. She still has the receipt and the hospital’s letter showing a balance of **$0**."
+      },
       "steps": [
         {
           "id": "cr-dispute-q1",
           "type": "multiple_choice",
-          "context": "If a report is wrong, you dispute it: you tell the [[credit bureau]] what is incorrect and ask for a fix. Do it with each bureau that shows the error. Send copies of proof, and keep your own copy. This is not the same as asking your bank to reverse a charge.",
-          "prompt": "An old address and a paid-off loan still show as open. What is that?",
+          "context": "If a report is wrong, you dispute it: you tell the [[credit bureau]] what is incorrect and ask for a fix. Send copies of proof, and keep your own copy. This is not the same as asking your bank to reverse a charge.",
+          "prompt": "What should Tasha do about the $640 collection?",
           "choices": [
-            "Errors you can dispute",
-            "Facts you are not allowed to question",
-            "A hard inquiry"
+            "Dispute it with Equifax, with her receipt as proof",
+            "Pay the $640 again so it goes away",
+            "Wait seven years for it to drop off"
           ],
           "answer": 0,
-          "explain": "Wrong facts get challenged."
+          "why": [
+            "",
+            "Paying twice doesn’t fix the record, and it costs $640.",
+            "It’s wrong now. Don’t wait out a mistake."
+          ],
+          "explain": "Wrong facts get disputed, with proof."
         },
         {
           "id": "cr-dispute-q2",
           "type": "order",
-          "prompt": "Put a dispute in order.",
+          "prompt": "Put Tasha’s dispute in order.",
           "items": [
             "Find the wrong line on the report",
             "Write what is wrong and include proof",
@@ -590,30 +601,30 @@
         {
           "id": "cr-dispute-q3",
           "type": "true_false",
-          "prompt": "You should dispute a wrong account with every bureau that lists it.",
+          "prompt": "Tasha only needs to dispute with Equifax, because the other two reports are right.",
           "answer": true,
-          "explain": "A fix at one bureau does not rewrite the others."
+          "explain": "Dispute with every bureau that shows the error. Here, that’s one."
         },
         {
           "id": "cr-dispute-q4",
           "type": "multiple_choice",
-          "prompt": "What belongs in the dispute?",
+          "prompt": "What belongs in Tasha’s dispute?",
           "choices": [
-            "What is wrong, and a copy of anything that proves it",
-            "Only your opinion, with no details",
-            "Your card number in a text to a stranger"
+            "What is wrong, plus copies of the receipt and the $0 letter",
+            "A note saying she is upset, with no details",
+            "Her original receipt, with no copy kept"
           ],
           "answer": 0,
-          "explain": "Specific and documented."
+          "explain": "Specific, documented, and she keeps the originals."
         },
         {
           "id": "cr-dispute-q5",
           "type": "multiple_choice",
-          "prompt": "The bureau corrects the fake account. What do you do next?",
+          "prompt": "Equifax says the collection is fixed. What does Tasha do next?",
           "choices": [
-            "Check that the line is actually gone, on a fresh report",
-            "Assume it is fixed forever",
-            "Close every real account too"
+            "Pull a fresh Equifax report and check the line is gone",
+            "Assume it is fixed for good",
+            "Dispute it again to be safe"
           ],
           "answer": 0,
           "explain": "Trust the new report, not the promise."
@@ -673,7 +684,7 @@
           "choices": [
             "No. Existing accounts still work",
             "Yes. Every card is frozen shut",
-            "Only on weekends"
+            "Only cards opened in the last year"
           ],
           "answer": 0,
           "explain": "The lock is on new applications."
@@ -691,7 +702,7 @@
           "prompt": "When is a freeze especially worth it?",
           "choices": [
             "After a data leak, or if a fake account just showed up",
-            "Only after you retire",
+            "Only once your credit is already bad",
             "When you want a higher score this week"
           ],
           "answer": 0,
@@ -702,6 +713,7 @@
     {
       "id": "cr-how-long",
       "type": "lesson",
+      "format": "sort",
       "title": "How Long Marks Stay",
       "summary": "Most bad news lasts years. The clock is federal, not a rumor.",
       "xp": 10,
@@ -714,49 +726,66 @@
         },
         {
           "id": "cr-how-long-q2",
-          "type": "multiple_choice",
-          "prompt": "About how long can a late payment stay on a report?",
-          "choices": [
+          "type": "sort",
+          "prompt": "How long does each mark usually stay on a report?",
+          "buckets": [
+            "About 2 years",
             "About 7 years",
-            "About 7 weeks",
-            "Forever"
+            "Up to 10 years"
           ],
-          "answer": 0,
-          "explain": "Seven years is the usual federal limit for late payments."
+          "items": [
+            [
+              "A hard inquiry",
+              0
+            ],
+            [
+              "A late payment",
+              1
+            ],
+            [
+              "A collection account",
+              1
+            ],
+            [
+              "A charged-off card",
+              1
+            ],
+            [
+              "A Chapter 13 bankruptcy",
+              1
+            ],
+            [
+              "A Chapter 7 bankruptcy",
+              2
+            ]
+          ]
         },
         {
           "id": "cr-how-long-q3",
           "type": "multiple_choice",
-          "prompt": "About how long can a Chapter 7 bankruptcy stay?",
+          "prompt": "About how long can a late payment stay on a report?",
           "choices": [
-            "Up to 10 years",
-            "1 year",
-            "Until you ask"
+            "About 7 years",
+            "About 2 years",
+            "Until you pay the account off"
           ],
           "answer": 0,
-          "explain": "Chapter 7 is the long one: up to 10 years."
+          "why": [
+            "",
+            "That’s a hard inquiry.",
+            "Paying helps from then on, but the late mark keeps its own clock."
+          ],
+          "explain": "Seven years is the usual federal limit for late payments."
         },
         {
           "id": "cr-how-long-q4",
-          "type": "multiple_choice",
-          "prompt": "About how long does a hard inquiry stay?",
-          "choices": [
-            "About 2 years",
-            "About 10 years",
-            "Until the loan is paid"
-          ],
-          "answer": 0,
-          "explain": "Two years, and the score often cares less after the first year."
-        },
-        {
-          "id": "cr-how-long-q5",
           "type": "true_false",
           "prompt": "A credit freeze deletes late payments.",
           "answer": false,
           "explain": "A freeze blocks new pulls. It does not erase history."
         },
         {
-          "id": "cr-how-long-q6",
+          "id": "cr-how-long-q5",
           "type": "number",
           "prompt": "A late payment is reported in 2026. About what year does that seven-year clock run out?",
           "answer": 2033,
@@ -788,7 +817,7 @@
           "choices": [
             "AnnualCreditReport.com",
             "Whatever the newest ad says",
-            "Your streaming app"
+            "Any app that shows a free score"
           ],
           "answer": 0,
           "explain": "Type the official address yourself."

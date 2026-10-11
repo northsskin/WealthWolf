@@ -226,13 +226,13 @@
           "prompt": "The 6-year payment is $80 smaller. Why can it still be the worse deal?",
           "choices": [
             "You pay $3,360 more interest",
-            "Shorter loans are illegal",
+            "The 6-year loan costs less overall, since each payment is smaller",
             "The car costs less on the long loan"
           ],
           "answer": 0,
           "why": [
             "$3,360 more interest.",
-            "Both loans are ordinary.",
+            "Smaller payments, but 24 more of them.",
             "You borrowed $16,000 either way."
           ],
           "explain": "$300 looks easier. The total is $21,600 instead of $18,240."
@@ -620,7 +620,7 @@
           "choices": [
             "The total you will pay, not just the $40",
             "Nothing. A smaller payment is always cheaper",
-            "The color of the car"
+            "Only the new interest rate"
           ],
           "answer": 0,
           "explain": "A longer loan can cost more interest even when the payment drops."

@@ -230,7 +230,7 @@
           "choices": [
             "The balance grew, so the rate hits a bigger number",
             "The APR went up by itself",
-            "Months get longer"
+            "The lender adds a fee every second month"
           ],
           "answer": 0,
           "explain": "$20 of interest became part of the balance."
@@ -300,7 +300,7 @@
           "choices": [
             "Interest is added month by month, and then interest hits that too",
             "APR ignores the balance",
-            "Banks round every charge up to $100"
+            "The rate is applied once a year, to the highest balance"
           ],
           "answer": 0,
           "explain": "The rough yearly figure is a floor, not the whole story."
@@ -618,27 +618,84 @@
     {
       "id": "ia-fees-in-apr",
       "type": "lesson",
+      "format": "document",
       "title": "Fees Inside the APR",
-      "summary": "A fee is part of the price, even when the rate looks low.",
+      "summary": "Read a loan disclosure and find the cost the rate leaves out.",
       "xp": 10,
       "steps": [
         {
           "id": "ia-fees-in-apr-q1",
           "type": "multiple_choice",
-          "context": "An [[origination fee]] is money the lender takes for setting up the loan. [[APR]] is meant to include fees like this, so you can compare offers. The interest rate alone can look cheaper than the loan really is.",
-          "prompt": "What is an origination fee?",
+          "context": "An [[origination fee]] is money the lender takes for setting up the loan. [[APR]] is meant to include fees like this, so you can compare offers. The interest rate alone can make a loan look cheaper than it is.",
+          "doc": {
+            "kind": "bill",
+            "title": "Lakeshore Credit Union",
+            "subtitle": "Personal loan disclosure",
+            "meta": [
+              [
+                "Interest rate",
+                "10% a year"
+              ],
+              [
+                "Term",
+                "12 months, repaid at the end"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "amount",
+                "label": "Amount you receive",
+                "amount": 2000.0
+              },
+              {
+                "id": "fee",
+                "label": "Origination fee, paid at signing",
+                "amount": 100.0
+              }
+            ],
+            "note": "The fee is part of what this loan costs you."
+          },
+          "prompt": "What is the origination fee on this loan?",
           "choices": [
-            "A charge for setting up the loan",
-            "Interest from last year",
-            "A reward for paying early"
+            "A $100 charge for setting up the loan",
+            "Interest the lender takes in advance",
+            "A deposit you get back at the end"
           ],
           "answer": 0,
-          "explain": "It is part of the cost of borrowing."
+          "explain": "It’s a cost of borrowing, and you don’t get it back."
         },
         {
           "id": "ia-fees-in-apr-q2",
           "type": "number",
-          "prompt": "You borrow $2,000 for one year at 10% interest, plus a $100 origination fee. How much is the interest?",
+          "doc": {
+            "kind": "bill",
+            "title": "Lakeshore Credit Union",
+            "subtitle": "Personal loan disclosure",
+            "meta": [
+              [
+                "Interest rate",
+                "10% a year"
+              ],
+              [
+                "Term",
+                "12 months, repaid at the end"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "amount",
+                "label": "Amount you receive",
+                "amount": 2000.0
+              },
+              {
+                "id": "fee",
+                "label": "Origination fee, paid at signing",
+                "amount": 100.0
+              }
+            ],
+            "note": "The fee is part of what this loan costs you."
+          },
+          "prompt": "How much interest will the $2,000 cost over the year at 10%?",
           "answer": 200,
           "unit": "$",
           "explain": "$2,000 × 0.10 = $200."
@@ -646,18 +703,74 @@
         {
           "id": "ia-fees-in-apr-q3",
           "type": "number",
-          "prompt": "Add the fee. What did this loan cost you in the first year?",
+          "doc": {
+            "kind": "bill",
+            "title": "Lakeshore Credit Union",
+            "subtitle": "Personal loan disclosure",
+            "meta": [
+              [
+                "Interest rate",
+                "10% a year"
+              ],
+              [
+                "Term",
+                "12 months, repaid at the end"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "amount",
+                "label": "Amount you receive",
+                "amount": 2000.0
+              },
+              {
+                "id": "fee",
+                "label": "Origination fee, paid at signing",
+                "amount": 100.0
+              }
+            ],
+            "note": "The fee is part of what this loan costs you."
+          },
+          "prompt": "Add the fee. What does this loan cost you in total?",
           "answer": 300,
           "unit": "$",
-          "explain": "$200 + $100 = $300."
+          "explain": "$200 interest + $100 fee = $300."
         },
         {
           "id": "ia-fees-in-apr-q4",
           "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Lakeshore Credit Union",
+            "subtitle": "Personal loan disclosure",
+            "meta": [
+              [
+                "Interest rate",
+                "10% a year"
+              ],
+              [
+                "Term",
+                "12 months, repaid at the end"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "amount",
+                "label": "Amount you receive",
+                "amount": 2000.0
+              },
+              {
+                "id": "fee",
+                "label": "Origination fee, paid at signing",
+                "amount": 100.0
+              }
+            ],
+            "note": "The fee is part of what this loan costs you."
+          },
           "prompt": "That $300 is what percent of the $2,000 you borrowed?",
           "answer": 15,
           "unit": "%",
-          "explain": "$300 ÷ $2,000 = 0.15, which is 15%."
+          "explain": "$300 ÷ $2,000 = 0.15, which is 15%. The headline rate said 10%."
         },
         {
           "id": "ia-fees-in-apr-q5",
@@ -669,13 +782,18 @@
         {
           "id": "ia-fees-in-apr-q6",
           "type": "multiple_choice",
-          "prompt": "Two loans both say 10% interest. One has a $100 fee and one has no fee. Which comparison do you trust?",
+          "prompt": "Two loans both say 10% interest. One has a $100 fee and one has none. What do you compare?",
           "choices": [
             "The APR, or the total dollars you pay",
             "The interest rate alone",
-            "Whichever advertisement is bigger"
+            "The monthly payment alone"
           ],
           "answer": 0,
+          "why": [
+            "",
+            "Both say 10%. The fee is what makes one dearer.",
+            "A small payment can hide a longer or costlier loan."
+          ],
           "explain": "Dollars out the door beat a single percentage."
         }
       ]
@@ -742,7 +860,7 @@
           "prompt": "What is the careful comparison?",
           "choices": [
             "Total dollars, not the size of the monthly payment",
-            "Whichever sign is brighter",
+            "Whichever offer says 0% in the ad",
             "The number of months alone"
           ],
           "answer": 0,

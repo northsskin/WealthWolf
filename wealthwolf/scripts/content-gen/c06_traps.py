@@ -71,7 +71,7 @@ annual = lesson('ct-annual-fee', 'Is the Annual Fee Worth It?', 'The extra perce
     num('You only spend $2,000. The 3% card pays $60 before the fee. What is left after the $80 fee?', -20,
         '$60 − $80 = −$20. You paid for the privilege.'),
     mc('You spend about $2,000 a year on the card and always pay in full. Which card?',
-       ['The 1% card with no fee', 'The 3% card with the $80 fee', 'Whichever is metal'], 0,
+       ['The 1% card with no fee', 'The 3% card with the $80 fee', 'They come out the same over a year'], 0,
        'At $2,000 the fee eats the bonus and more.'),
     tf('A higher cash-back rate is a better deal even when you barely use the card.', False,
        'The fee can be bigger than the rewards.'),
@@ -93,19 +93,27 @@ intro = lesson('ct-intro-apr', 'The 0% Intro Rate', 'Zero has an expiration date
        'Plan for the rate on the letter, not the rate in the ad.'),
 ])
 
-transfer = lesson('ct-transfer', 'Balance Transfers', 'A lower rate can be worth a fee. Only if the debt actually gets paid.', [
-    num('You transfer $4,000 with a 3% fee. How much is the fee?', 120, '$4,000 × 0.03 = $120.',
-        context='A [[balance transfer]] moves debt to a new card. The fee, often 3%, is added to what you owe. A 0% window only helps if you pay the debt down before it shuts.'),
-    num('What is the balance on the new card the day the transfer posts?', 4120, '$4,000 + $120 = $4,120.'),
-    num('The old card was 24% APR. A rough year of interest on $4,000 would have been?', 960, '$4,000 × 0.24 = $960.'),
-    num('If you pay the new card off during a 0% year, how much less is the $120 fee than that $960 of interest?', 840,
-        '$960 − $120 = $840. That gap is the point of the move, and it vanishes if the balance is still there when the rate jumps.'),
-    tf('After a transfer, you should keep spending on the old card.', False,
+OFFER = doc('bill', 'Summit Card', [('bal', 'Balance moved from your old card', 4000.00)],
+            subtitle='Balance transfer offer',
+            meta=[['Transfer fee', '3% of the amount moved'], ['Intro APR', '0% for 12 months'], ['APR after that', '26%']],
+            note='Any balance left after month 12 is charged 26% APR.')
+assert 4000 * 0.03 == 120 and 4000 + 120 == 4120 and 4000 * 0.24 == 960 and 4120 - 12 * 100 == 2920
+transfer = lesson('ct-transfer', 'Balance Transfers', 'Read the offer: a lower rate can be worth a fee, if the debt gets paid.', [
+    num('How much is the transfer fee on $4,000?', 120, '$4,000 × 0.03 = $120.',
+        context='A [[balance transfer]] moves debt to a new card. The fee, often 3%, is added to what you owe. A 0% window only helps if you pay the debt down before it shuts.',
+        doc=OFFER),
+    num('What is the balance on the new card the day the transfer posts?', 4120, '$4,000 + $120 = $4,120.', doc=OFFER),
+    num('The old card charged 24% APR. A rough year of interest on $4,000 there would have been?', 960, '$4,000 × 0.24 = $960.'),
+    num('If you clear the new card during the 0% year, how much less is the $120 fee than that $960 of interest?', 840,
+        '$960 − $120 = $840. That gap is the point of the move.'),
+    num('You can only pay $100 a month. How much is still owed when the 0% year ends?', 2920,
+        '$4,120 − 12 × $100 = $2,920, now charged 26%.', doc=OFFER),
+    tf('After a transfer, keep spending on the old card.', False,
        'You moved the debt. Adding new debt puts you back where you started.'),
-    mc('The 0% period is 12 months and you can only pay $100 a month. $4,120 ÷ $100 is about 41 months. Is this transfer a good fit?',
-       ['No. The debt outlasts the 0% window by years', 'Yes. Any transfer is a win', 'Yes, if the fee is under $500'], 0,
-       'Do the months before you do the move.'),
-])
+    mc('So, at $100 a month, is this transfer a good fit?',
+       ['No. Most of the debt outlasts the 0% window', 'Yes. Any transfer is a win', 'Yes, because the fee is under $500'], 0,
+       'Do the months before you make the move.'),
+], fmt='document')
 
 store = lesson('ct-store-card', 'Store Cards', 'Today’s discount can cost more than it saves.', [
     num('A $150 jacket is 20% off if you open the store card. How much is the discount?', 30, '$150 × 0.20 = $30.',

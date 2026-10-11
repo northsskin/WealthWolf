@@ -182,7 +182,7 @@
           "choices": [
             "Paying on time, and keeping balances low",
             "The year you opened your first card",
-            "Your parents’ old loans"
+            "How many cards you have ever opened"
           ],
           "answer": 0,
           "explain": "History length takes years. Payments and balances move now."
@@ -241,7 +241,7 @@
           "prompt": "Which is the safer habit?",
           "choices": [
             "Autopay at least the minimum, then pay extra when you can",
-            "Waiting until you feel like paying",
+            "Paying in full, whenever you remember",
             "Paying a day after the due date to earn interest"
           ],
           "answer": 0,
@@ -259,15 +259,45 @@
     {
       "id": "cs-utilization",
       "type": "lesson",
+      "format": "document",
       "title": "Utilization Math",
-      "summary": "Balance divided by limit. Lower is kinder to the score.",
+      "summary": "Read three cards, then work out what the score sees.",
       "xp": 10,
       "steps": [
         {
           "id": "cs-utilization-q1",
           "type": "number",
-          "context": "[[Credit utilization]] is balance ÷ [[credit limit]]. A common rule of thumb is to stay under 30%, and lower is better. It is a habit, not a law.",
-          "prompt": "Limit $1,500. Balance $450. What is your utilization?",
+          "context": "[[Credit utilization]] is balance ÷ [[credit limit]]. Scores look at each card and at all of them together. A common rule of thumb is to stay under 30%, and lower is better.",
+          "doc": {
+            "kind": "statement",
+            "title": "Your cards",
+            "subtitle": "Balances on statement day",
+            "lines": [
+              {
+                "id": "harbor",
+                "label": "Harbor Card · limit $1,500",
+                "amount": 450.0
+              },
+              {
+                "id": "store",
+                "label": "City Store Card · limit $500",
+                "amount": 400.0
+              },
+              {
+                "id": "cloud",
+                "label": "Cloud Card · limit $2,000",
+                "amount": 150.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total balance",
+                "amount": 1000.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "What is the utilization on the Harbor Card alone?",
           "answer": 30,
           "unit": "%",
           "explain": "$450 ÷ $1,500 = 0.30, which is 30%."
@@ -275,43 +305,159 @@
         {
           "id": "cs-utilization-q2",
           "type": "number",
-          "prompt": "Limit $2,500. Balance $250. What is your utilization?",
-          "answer": 10,
+          "doc": {
+            "kind": "statement",
+            "title": "Your cards",
+            "subtitle": "Balances on statement day",
+            "lines": [
+              {
+                "id": "harbor",
+                "label": "Harbor Card · limit $1,500",
+                "amount": 450.0
+              },
+              {
+                "id": "store",
+                "label": "City Store Card · limit $500",
+                "amount": 400.0
+              },
+              {
+                "id": "cloud",
+                "label": "Cloud Card · limit $2,000",
+                "amount": 150.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total balance",
+                "amount": 1000.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "And on the City Store Card?",
+          "answer": 80,
           "unit": "%",
-          "explain": "$250 ÷ $2,500 = 0.10, which is 10%."
+          "explain": "$400 ÷ $500 = 0.80, which is 80%."
         },
         {
           "id": "cs-utilization-q3",
           "type": "number",
-          "prompt": "You owe $800 on a $1,000 limit. How much must you pay so the balance is $300?",
-          "answer": 500,
+          "doc": {
+            "kind": "statement",
+            "title": "Your cards",
+            "subtitle": "Balances on statement day",
+            "lines": [
+              {
+                "id": "harbor",
+                "label": "Harbor Card · limit $1,500",
+                "amount": 450.0
+              },
+              {
+                "id": "store",
+                "label": "City Store Card · limit $500",
+                "amount": 400.0
+              },
+              {
+                "id": "cloud",
+                "label": "Cloud Card · limit $2,000",
+                "amount": 150.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total balance",
+                "amount": 1000.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "Add up the three limits. What is your total credit limit?",
+          "answer": 4000,
           "unit": "$",
-          "explain": "$800 − $300 = $500."
+          "explain": "$1,500 + $500 + $2,000 = $4,000."
         },
         {
           "id": "cs-utilization-q4",
           "type": "number",
-          "prompt": "After that payment, what is utilization on the $1,000 limit?",
-          "answer": 30,
+          "doc": {
+            "kind": "statement",
+            "title": "Your cards",
+            "subtitle": "Balances on statement day",
+            "lines": [
+              {
+                "id": "harbor",
+                "label": "Harbor Card · limit $1,500",
+                "amount": 450.0
+              },
+              {
+                "id": "store",
+                "label": "City Store Card · limit $500",
+                "amount": 400.0
+              },
+              {
+                "id": "cloud",
+                "label": "Cloud Card · limit $2,000",
+                "amount": 150.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total balance",
+                "amount": 1000.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "What is your overall utilization: total balance ÷ total limit?",
+          "answer": 25,
           "unit": "%",
-          "explain": "$300 ÷ $1,000 = 30%."
+          "explain": "$1,000 ÷ $4,000 = 0.25, which is 25%."
         },
         {
           "id": "cs-utilization-q5",
           "type": "multiple_choice",
-          "prompt": "Which balance looks better on a $4,000 limit?",
+          "doc": {
+            "kind": "statement",
+            "title": "Your cards",
+            "subtitle": "Balances on statement day",
+            "lines": [
+              {
+                "id": "harbor",
+                "label": "Harbor Card · limit $1,500",
+                "amount": 450.0
+              },
+              {
+                "id": "store",
+                "label": "City Store Card · limit $500",
+                "amount": 400.0
+              },
+              {
+                "id": "cloud",
+                "label": "Cloud Card · limit $2,000",
+                "amount": 150.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total balance",
+                "amount": 1000.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "You have $300 extra this month. Where does it fix the worst number?",
           "choices": [
-            "$400",
-            "$3,200",
-            "$3,900"
+            "Pay down the City Store Card",
+            "Pay down the Cloud Card",
+            "Split it evenly across all three"
           ],
           "answer": 0,
           "why": [
-            "10% used.",
-            "80% used.",
-            "97.5% used."
+            "",
+            "That card is already at 7.5%. The store card is the one at 80%.",
+            "Helpful, but the store card stays high."
           ],
-          "explain": "$400 is 10%. $3,200 is 80%. $3,900 is almost the whole limit."
+          "explain": "$100 left on a $500 limit is 20%, down from 80%."
         },
         {
           "id": "cs-utilization-q6",
@@ -325,9 +471,15 @@
     {
       "id": "cs-length",
       "type": "lesson",
-      "title": "Length of History",
-      "summary": "Old accounts are a track record. Closing them can shrink it.",
+      "format": "story",
+      "title": "Nina’s Oldest Card",
+      "summary": "Old accounts are a track record. Closing one can cost more than the fee.",
       "xp": 10,
+      "story": {
+        "title": "The old student card",
+        "character": "Nina, 29, office manager",
+        "body": "Nina opened her first credit card at **21**: a student card with a **$1,000** limit. She has used it for gas ever since and paid it in full every month. Two years ago she added a second card with a **$3,000** limit.\n\nNow the student card charges a **$45** annual fee, and she is thinking of closing it. Her statements usually add up to about **$800** across both cards, which she pays in full."
+      },
       "steps": [
         {
           "id": "cs-length-q1",
@@ -335,58 +487,60 @@
           "context": "Length of history is about 15% of a FICO score. An old card you keep open and pay can help. Closing your oldest card can shorten the story lenders see.",
           "prompt": "What does “length of credit history” look at?",
           "choices": [
-            "How long your accounts have been open, and how long since you used them",
-            "How long your shift at work is",
-            "How many years until a loan is illegal"
+            "How long your accounts have been open",
+            "How long you have had your current job",
+            "How long until your loans are paid off"
           ],
           "answer": 0,
           "explain": "Older, well-kept accounts help."
         },
         {
           "id": "cs-length-q2",
-          "type": "true_false",
-          "prompt": "Closing your oldest credit card can shorten your credit history.",
-          "answer": true,
-          "explain": "That account’s age may stop counting the way it did."
+          "type": "number",
+          "prompt": "Nina is 29 and opened the student card at 21. How old is that account?",
+          "answer": 8,
+          "unit": "years",
+          "explain": "29 − 21 = 8 years."
         },
         {
           "id": "cs-length-q3",
-          "type": "multiple_choice",
-          "prompt": "You opened your first card 8 years ago and a second card last month. Which one is the long history?",
-          "choices": [
-            "The 8-year-old card",
-            "The new card",
-            "Whichever has the higher balance"
-          ],
-          "answer": 0,
-          "explain": "Age is the point of this factor."
+          "type": "true_false",
+          "prompt": "Closing the student card could shorten the history lenders see.",
+          "answer": true,
+          "explain": "It is her oldest account."
         },
         {
           "id": "cs-length-q4",
           "type": "number",
-          "prompt": "Your oldest account was opened in 2018. It is now 2026. How many years has it been open?",
-          "answer": 8,
-          "unit": "years",
-          "explain": "2026 − 2018 = 8 years."
+          "prompt": "With both cards open, her $800 is what share of her $4,000 total limit?",
+          "answer": 20,
+          "unit": "%",
+          "explain": "$800 ÷ $4,000 = 20%."
         },
         {
           "id": "cs-length-q5",
-          "type": "multiple_choice",
-          "prompt": "A new borrower has a thin file. What does that mean?",
-          "choices": [
-            "There is not much history for a lender to read",
-            "Their score is automatically 850",
-            "They cannot be charged interest"
-          ],
-          "answer": 0,
-          "explain": "Thin is not the same as bad. It means “we hardly know you.”"
+          "type": "number",
+          "prompt": "If she closes the $1,000 card, what share of the remaining $3,000 limit is $800? Round to the nearest whole percent.",
+          "answer": 27,
+          "unit": "%",
+          "explain": "$800 ÷ $3,000 = 0.267, about 27%. Same spending, higher utilization."
         },
         {
           "id": "cs-length-q6",
-          "type": "true_false",
-          "prompt": "Keeping an old card open, with a zero or small balance, can help the length factor.",
-          "answer": true,
-          "explain": "The account keeps aging. You do not have to carry debt for that."
+          "type": "multiple_choice",
+          "prompt": "What is a common middle path for Nina?",
+          "choices": [
+            "Ask the issuer to switch it to a no-fee card and keep it open",
+            "Close it and open a new card to replace the limit",
+            "Close it, since old accounts stop counting after five years"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "A new card means a hard inquiry and a brand-new account.",
+            "Old accounts keep counting. That’s the point of this factor."
+          ],
+          "explain": "She keeps the history and the limit, and drops the fee."
         }
       ]
     },
@@ -423,7 +577,7 @@
           "prompt": "You apply for four cards in one week. What is the likely result?",
           "choices": [
             "Several hard inquiries, and maybe a lower score",
-            "A higher score, because you look popular",
+            "A higher score, because you have more credit available",
             "The old inquiries get deleted"
           ],
           "answer": 0,
@@ -435,8 +589,8 @@
           "prompt": "Rate-shopping one car loan at three lenders in a short window is often treated more kindly than four random cards. Why?",
           "choices": [
             "Scoring models often group loan shopping into one search",
-            "Car loans are invisible",
-            "Inquiries only count in December"
+            "Car loans don’t appear on credit reports",
+            "Lenders delete inquiries once a loan is approved"
           ],
           "answer": 0,
           "explain": "One car, one search. Do not stretch it across months."
@@ -455,7 +609,7 @@
           "choices": [
             "hard",
             "soft",
-            "secret"
+            "monthly"
           ],
           "answer": 0,
           "explain": "Hard inquiry. Your own check is the harmless kind."
@@ -465,19 +619,68 @@
     {
       "id": "cs-from-zero",
       "type": "lesson",
+      "format": "call",
       "title": "Building Credit from Zero",
-      "summary": "No history yet. A small, boring account starts one.",
+      "summary": "Two common first steps. Pick the one that fits your budget.",
       "xp": 10,
       "steps": [
         {
           "id": "cs-from-zero-q1",
           "type": "multiple_choice",
           "context": "A [[secured card]] asks for a deposit, often the same size as the [[credit limit]]. Use a little, pay the statement in full, and on-time payments start a history. A credit-builder loan is the other common door: you pay into a small loan, and those payments get reported.",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Secured card",
+              "subtitle": "Harbor Bank",
+              "meta": [
+                [
+                  "Credit limit",
+                  "$300"
+                ],
+                [
+                  "APR",
+                  "27%"
+                ]
+              ],
+              "lines": [
+                {
+                  "id": "deposit",
+                  "label": "Deposit, refundable",
+                  "amount": 300.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 0.0
+                }
+              ],
+              "note": "Pay the statement in full and the APR never applies."
+            },
+            {
+              "kind": "bill",
+              "title": "Credit-builder loan",
+              "subtitle": "Lakeshore Credit Union",
+              "lines": [
+                {
+                  "id": "loan",
+                  "label": "Loan held in savings for you",
+                  "amount": 600.0
+                },
+                {
+                  "id": "pay",
+                  "label": "12 monthly payments of $52",
+                  "amount": 624.0
+                }
+              ],
+              "note": "You get the $600 at the end. The rest is interest and fees."
+            }
+          ],
           "prompt": "What is a secured card?",
           "choices": [
-            "A card you open by putting down a deposit, often equal to the limit",
-            "A card that spends your savings with no bill",
-            "A debit card"
+            "A card you open with a deposit, often equal to the limit",
+            "A prepaid card that never reports to the bureaus",
+            "A debit card linked to your savings"
           ],
           "answer": 0,
           "explain": "The deposit backs the limit while you build a record."
@@ -485,41 +688,238 @@
         {
           "id": "cs-from-zero-q2",
           "type": "number",
-          "prompt": "You put down $300 and the secured card’s limit is $300. You spend $30. What is your utilization?",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Secured card",
+              "subtitle": "Harbor Bank",
+              "meta": [
+                [
+                  "Credit limit",
+                  "$300"
+                ],
+                [
+                  "APR",
+                  "27%"
+                ]
+              ],
+              "lines": [
+                {
+                  "id": "deposit",
+                  "label": "Deposit, refundable",
+                  "amount": 300.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 0.0
+                }
+              ],
+              "note": "Pay the statement in full and the APR never applies."
+            },
+            {
+              "kind": "bill",
+              "title": "Credit-builder loan",
+              "subtitle": "Lakeshore Credit Union",
+              "lines": [
+                {
+                  "id": "loan",
+                  "label": "Loan held in savings for you",
+                  "amount": 600.0
+                },
+                {
+                  "id": "pay",
+                  "label": "12 monthly payments of $52",
+                  "amount": 624.0
+                }
+              ],
+              "note": "You get the $600 at the end. The rest is interest and fees."
+            }
+          ],
+          "prompt": "On the secured card you spend $30 a month and pay it in full. What is your utilization on the $300 limit?",
           "answer": 10,
           "unit": "%",
           "explain": "$30 ÷ $300 = 10%."
         },
         {
           "id": "cs-from-zero-q3",
-          "type": "multiple_choice",
-          "prompt": "What should you do with that $30 charge?",
-          "choices": [
-            "Pay it in full, on time",
-            "Pay nothing so the deposit covers it",
-            "Spend the other $270 too"
+          "type": "number",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Secured card",
+              "subtitle": "Harbor Bank",
+              "meta": [
+                [
+                  "Credit limit",
+                  "$300"
+                ],
+                [
+                  "APR",
+                  "27%"
+                ]
+              ],
+              "lines": [
+                {
+                  "id": "deposit",
+                  "label": "Deposit, refundable",
+                  "amount": 300.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 0.0
+                }
+              ],
+              "note": "Pay the statement in full and the APR never applies."
+            },
+            {
+              "kind": "bill",
+              "title": "Credit-builder loan",
+              "subtitle": "Lakeshore Credit Union",
+              "lines": [
+                {
+                  "id": "loan",
+                  "label": "Loan held in savings for you",
+                  "amount": 600.0
+                },
+                {
+                  "id": "pay",
+                  "label": "12 monthly payments of $52",
+                  "amount": 624.0
+                }
+              ],
+              "note": "You get the $600 at the end. The rest is interest and fees."
+            }
           ],
-          "answer": 0,
-          "explain": "The deposit is not a free pass. The bill is still yours."
+          "prompt": "What does the credit-builder loan cost in total, beyond the $600 you get back?",
+          "answer": 24,
+          "unit": "$",
+          "explain": "$624 − $600 = $24."
         },
         {
           "id": "cs-from-zero-q4",
-          "type": "true_false",
-          "prompt": "A debit card builds a credit score the same way a credit card does.",
-          "answer": false,
-          "explain": "Debit spends your own money. It usually is not a credit account."
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Secured card",
+              "subtitle": "Harbor Bank",
+              "meta": [
+                [
+                  "Credit limit",
+                  "$300"
+                ],
+                [
+                  "APR",
+                  "27%"
+                ]
+              ],
+              "lines": [
+                {
+                  "id": "deposit",
+                  "label": "Deposit, refundable",
+                  "amount": 300.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 0.0
+                }
+              ],
+              "note": "Pay the statement in full and the APR never applies."
+            },
+            {
+              "kind": "bill",
+              "title": "Credit-builder loan",
+              "subtitle": "Lakeshore Credit Union",
+              "lines": [
+                {
+                  "id": "loan",
+                  "label": "Loan held in savings for you",
+                  "amount": 600.0
+                },
+                {
+                  "id": "pay",
+                  "label": "12 monthly payments of $52",
+                  "amount": 624.0
+                }
+              ],
+              "note": "You get the $600 at the end. The rest is interest and fees."
+            }
+          ],
+          "prompt": "Rina has $300 saved but no room in her budget for a new monthly bill. Which fits her?",
+          "choices": [
+            "The secured card, used lightly and paid in full",
+            "The credit-builder loan",
+            "Neither: her debit card already builds credit"
+          ],
+          "answer": 0,
+          "why": [
+            "",
+            "It adds a $52 bill every month for a year.",
+            "Debit cards usually don’t report to the bureaus."
+          ],
+          "explain": "The deposit is money she has. The loan would add a $52 bill every month."
         },
         {
           "id": "cs-from-zero-q5",
           "type": "multiple_choice",
-          "prompt": "A credit-builder loan is useful because…",
+          "docs": [
+            {
+              "kind": "bill",
+              "title": "Secured card",
+              "subtitle": "Harbor Bank",
+              "meta": [
+                [
+                  "Credit limit",
+                  "$300"
+                ],
+                [
+                  "APR",
+                  "27%"
+                ]
+              ],
+              "lines": [
+                {
+                  "id": "deposit",
+                  "label": "Deposit, refundable",
+                  "amount": 300.0
+                },
+                {
+                  "id": "fee",
+                  "label": "Annual fee",
+                  "amount": 0.0
+                }
+              ],
+              "note": "Pay the statement in full and the APR never applies."
+            },
+            {
+              "kind": "bill",
+              "title": "Credit-builder loan",
+              "subtitle": "Lakeshore Credit Union",
+              "lines": [
+                {
+                  "id": "loan",
+                  "label": "Loan held in savings for you",
+                  "amount": 600.0
+                },
+                {
+                  "id": "pay",
+                  "label": "12 monthly payments of $52",
+                  "amount": 624.0
+                }
+              ],
+              "note": "You get the $600 at the end. The rest is interest and fees."
+            }
+          ],
+          "prompt": "Malik can spare $52 a month but has nothing saved to lock up. Which fits him?",
           "choices": [
-            "The payments can be reported, and you end up with the money you paid in",
-            "It erases old late payments",
-            "It raises your salary"
+            "The credit-builder loan",
+            "The secured card"
           ],
           "answer": 0,
-          "explain": "You are practicing paying, and the record shows it."
+          "explain": "No deposit needed, and he ends the year with $600 saved."
         },
         {
           "id": "cs-from-zero-q6",
@@ -683,7 +1083,7 @@
           "choices": [
             "Applying for a new card",
             "Looking at your own score",
-            "Reading a lesson about credit"
+            "A card company sending you a pre-approved offer"
           ],
           "answer": 0,
           "explain": "You applied to borrow. That is the hard kind."

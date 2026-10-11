@@ -28,7 +28,7 @@ factors = lesson('cs-factors', 'What the Score Weighs', 'Five ingredients. Two o
     tf('Every credit score in the country uses these exact five weights.', False,
        'FICO does. Other scores have their own formulas.'),
     mc('You can control which two factors fastest?',
-       ['Paying on time, and keeping balances low', 'The year you opened your first card', 'Your parents’ old loans'], 0,
+       ['Paying on time, and keeping balances low', 'The year you opened your first card', 'How many cards you have ever opened'], 0,
        'History length takes years. Payments and balances move now.'),
 ])
 
@@ -43,41 +43,55 @@ history = lesson('cs-history', 'Payment History', 'One late payment echoes. A lo
        'Thirty days late is a negative mark. Under federal rules it can stay about seven years.'),
     num('You have 24 months of payments and 1 of them was late. How many were on time?', 23, '24 − 1 = 23. One miss still stings.', unit=None),
     mc('Which is the safer habit?',
-       ['Autopay at least the minimum, then pay extra when you can', 'Waiting until you feel like paying', 'Paying a day after the due date to earn interest'], 0,
+       ['Autopay at least the minimum, then pay extra when you can', 'Paying in full, whenever you remember', 'Paying a day after the due date to earn interest'], 0,
        'Autopay covers the “on time” job. Extra payments do the “get out of debt” job.'),
     tf('A single late payment is a secret. Lenders never see it.', False, 'It can land on your credit report.'),
 ])
 
-util = lesson('cs-utilization', 'Utilization Math', 'Balance divided by limit. Lower is kinder to the score.', [
-    num('Limit $1,500. Balance $450. What is your utilization?', 30, '$450 ÷ $1,500 = 0.30, which is 30%.',
-        context='[[Credit utilization]] is balance ÷ [[credit limit]]. A common rule of thumb is to stay under 30%, and lower is better. It is a habit, not a law.', unit='%'),
-    num('Limit $2,500. Balance $250. What is your utilization?', 10, '$250 ÷ $2,500 = 0.10, which is 10%.', unit='%'),
-    num('You owe $800 on a $1,000 limit. How much must you pay so the balance is $300?', 500, '$800 − $300 = $500.'),
-    num('After that payment, what is utilization on the $1,000 limit?', 30, '$300 ÷ $1,000 = 30%.', unit='%'),
-    mc('Which balance looks better on a $4,000 limit?', ['$400', '$3,200', '$3,900'], 0,
-       '$400 is 10%. $3,200 is 80%. $3,900 is almost the whole limit.',
-       why=['10% used.', '80% used.', '97.5% used.']),
+CARDS = doc('statement', 'Your cards', [
+    ('harbor', 'Harbor Card · limit $1,500', 450.00),
+    ('store', 'City Store Card · limit $500', 400.00),
+    ('cloud', 'Cloud Card · limit $2,000', 150.00)],
+    subtitle='Balances on statement day', totals=[('Total balance', 1000.00, True)])
+assert 450 + 400 + 150 == 1000 and 1500 + 500 + 2000 == 4000
+util = lesson('cs-utilization', 'Utilization Math', 'Read three cards, then work out what the score sees.', [
+    num('What is the utilization on the Harbor Card alone?', 30, '$450 ÷ $1,500 = 0.30, which is 30%.',
+        context='[[Credit utilization]] is balance ÷ [[credit limit]]. Scores look at each card and at all of them together. A common rule of thumb is to stay under 30%, and lower is better.',
+        unit='%', doc=CARDS),
+    num('And on the City Store Card?', 80, '$400 ÷ $500 = 0.80, which is 80%.', unit='%', doc=CARDS),
+    num('Add up the three limits. What is your total credit limit?', 4000, '$1,500 + $500 + $2,000 = $4,000.', doc=CARDS),
+    num('What is your overall utilization: total balance ÷ total limit?', 25, '$1,000 ÷ $4,000 = 0.25, which is 25%.', unit='%', doc=CARDS),
+    mc('You have $300 extra this month. Where does it fix the worst number?',
+       ['Pay down the City Store Card', 'Pay down the Cloud Card', 'Split it evenly across all three'], 0,
+       '$100 left on a $500 limit is 20%, down from 80%.',
+       why=['', 'That card is already at 7.5%. The store card is the one at 80%.', 'Helpful, but the store card stays high.'],
+       doc=CARDS),
     tf('Maxing out a card, even if you pay on time, can still hurt the score.', True,
        'On-time payments and high utilization are different factors.'),
-])
+], fmt='document')
 
-length = lesson('cs-length', 'Length of History', 'Old accounts are a track record. Closing them can shrink it.', [
+nina_story = {
+    'title': 'The old student card',
+    'character': 'Nina, 29, office manager',
+    'body': 'Nina opened her first credit card at **21**: a student card with a **$1,000** limit. She has used it for gas ever since and paid it in full every month. Two years ago she added a second card with a **$3,000** limit.\n\n'
+            'Now the student card charges a **$45** annual fee, and she is thinking of closing it. Her statements usually add up to about **$800** across both cards, which she pays in full.',
+}
+assert 800 / 4000 == 0.20 and round(800 / 3000 * 100) == 27
+length = lesson('cs-length', 'Nina’s Oldest Card', 'Old accounts are a track record. Closing one can cost more than the fee.', [
     mc('What does “length of credit history” look at?',
-       ['How long your accounts have been open, and how long since you used them', 'How long your shift at work is', 'How many years until a loan is illegal'], 0,
+       ['How long your accounts have been open', 'How long you have had your current job', 'How long until your loans are paid off'], 0,
        'Older, well-kept accounts help.',
        context='Length of history is about 15% of a FICO score. An old card you keep open and pay can help. Closing your oldest card can shorten the story lenders see.'),
-    tf('Closing your oldest credit card can shorten your credit history.', True,
-       'That account’s age may stop counting the way it did.'),
-    mc('You opened your first card 8 years ago and a second card last month. Which one is the long history?',
-       ['The 8-year-old card', 'The new card', 'Whichever has the higher balance'], 0,
-       'Age is the point of this factor.'),
-    num('Your oldest account was opened in 2018. It is now 2026. How many years has it been open?', 8, '2026 − 2018 = 8 years.', unit='years'),
-    mc('A new borrower has a thin file. What does that mean?',
-       ['There is not much history for a lender to read', 'Their score is automatically 850', 'They cannot be charged interest'], 0,
-       'Thin is not the same as bad. It means “we hardly know you.”'),
-    tf('Keeping an old card open, with a zero or small balance, can help the length factor.', True,
-       'The account keeps aging. You do not have to carry debt for that.'),
-])
+    num('Nina is 29 and opened the student card at 21. How old is that account?', 8, '29 − 21 = 8 years.', unit='years'),
+    tf('Closing the student card could shorten the history lenders see.', True, 'It is her oldest account.'),
+    num('With both cards open, her $800 is what share of her $4,000 total limit?', 20, '$800 ÷ $4,000 = 20%.', unit='%'),
+    num('If she closes the $1,000 card, what share of the remaining $3,000 limit is $800? Round to the nearest whole percent.', 27,
+        '$800 ÷ $3,000 = 0.267, about 27%. Same spending, higher utilization.', unit='%'),
+    mc('What is a common middle path for Nina?',
+       ['Ask the issuer to switch it to a no-fee card and keep it open', 'Close it and open a new card to replace the limit', 'Close it, since old accounts stop counting after five years'], 0,
+       'She keeps the history and the limit, and drops the fee.',
+       why=['', 'A new card means a hard inquiry and a brand-new account.', 'Old accounts keep counting. That’s the point of this factor.']),
+], fmt='story', story=nina_story)
 
 inquiry = lesson('cs-inquiries', 'New Credit and Hard Inquiries', 'Shopping for a loan leaves footprints. Checking yourself does not.', [
     mc('What is a hard inquiry?',
@@ -86,35 +100,42 @@ inquiry = lesson('cs-inquiries', 'New Credit and Hard Inquiries', 'Shopping for 
        context='A [[hard inquiry]] happens when you apply for credit. It can dip a score a little and stays on the report for about two years. You checking your own score is not a hard inquiry.'),
     tf('Looking up your own credit score lowers it.', False, 'That check is yours. It does not count as a hard inquiry.'),
     mc('You apply for four cards in one week. What is the likely result?',
-       ['Several hard inquiries, and maybe a lower score', 'A higher score, because you look popular', 'The old inquiries get deleted'], 0,
+       ['Several hard inquiries, and maybe a lower score', 'A higher score, because you have more credit available', 'The old inquiries get deleted'], 0,
        'A burst of new applications looks risky.'),
     mc('Rate-shopping one car loan at three lenders in a short window is often treated more kindly than four random cards. Why?',
-       ['Scoring models often group loan shopping into one search', 'Car loans are invisible', 'Inquiries only count in December'], 0,
+       ['Scoring models often group loan shopping into one search', 'Car loans don’t appear on credit reports', 'Lenders delete inquiries once a loan is approved'], 0,
        'One car, one search. Do not stretch it across months.'),
     num('A hard inquiry stays about two years. You applied in 2026. About what year does it drop off?', 2028,
         '2026 + 2 = 2028.', unit=None),
-    fill('A lender’s credit check when you apply is a ___ inquiry.', ['hard', 'soft', 'secret'], 0, 'Hard inquiry. Your own check is the harmless kind.'),
+    fill('A lender’s credit check when you apply is a ___ inquiry.', ['hard', 'soft', 'monthly'], 0, 'Hard inquiry. Your own check is the harmless kind.'),
 ])
 
-zero = lesson('cs-from-zero', 'Building Credit from Zero', 'No history yet. A small, boring account starts one.', [
+SECURED = doc('bill', 'Secured card', [('deposit', 'Deposit, refundable', 300.00), ('fee', 'Annual fee', 0.00)],
+              subtitle='Harbor Bank', meta=[['Credit limit', '$300'], ['APR', '27%']],
+              note='Pay the statement in full and the APR never applies.')
+BUILDER = doc('bill', 'Credit-builder loan', [('loan', 'Loan held in savings for you', 600.00), ('pay', '12 monthly payments of $52', 624.00)],
+              subtitle='Lakeshore Credit Union', note='You get the $600 at the end. The rest is interest and fees.')
+assert 52 * 12 == 624 and 624 - 600 == 24
+zero = lesson('cs-from-zero', 'Building Credit from Zero', 'Two common first steps. Pick the one that fits your budget.', [
     mc('What is a secured card?',
-       ['A card you open by putting down a deposit, often equal to the limit', 'A card that spends your savings with no bill', 'A debit card'], 0,
+       ['A card you open with a deposit, often equal to the limit', 'A prepaid card that never reports to the bureaus', 'A debit card linked to your savings'], 0,
        'The deposit backs the limit while you build a record.',
-       context='A [[secured card]] asks for a deposit, often the same size as the [[credit limit]]. Use a little, pay the statement in full, and on-time payments start a history. A credit-builder loan is the other common door: you pay into a small loan, and those payments get reported.'),
-    num('You put down $300 and the secured card’s limit is $300. You spend $30. What is your utilization?', 10,
-        '$30 ÷ $300 = 10%.', unit='%'),
-    mc('What should you do with that $30 charge?',
-       ['Pay it in full, on time', 'Pay nothing so the deposit covers it', 'Spend the other $270 too'], 0,
-       'The deposit is not a free pass. The bill is still yours.'),
-    tf('A debit card builds a credit score the same way a credit card does.', False,
-       'Debit spends your own money. It usually is not a credit account.'),
-    mc('A credit-builder loan is useful because…',
-       ['The payments can be reported, and you end up with the money you paid in', 'It erases old late payments', 'It raises your salary'], 0,
-       'You are practicing paying, and the record shows it.'),
+       context='A [[secured card]] asks for a deposit, often the same size as the [[credit limit]]. Use a little, pay the statement in full, and on-time payments start a history. A credit-builder loan is the other common door: you pay into a small loan, and those payments get reported.',
+       docs=[SECURED, BUILDER]),
+    num('On the secured card you spend $30 a month and pay it in full. What is your utilization on the $300 limit?', 10,
+        '$30 ÷ $300 = 10%.', unit='%', docs=[SECURED, BUILDER]),
+    num('What does the credit-builder loan cost in total, beyond the $600 you get back?', 24, '$624 − $600 = $24.', docs=[SECURED, BUILDER]),
+    mc('Rina has $300 saved but no room in her budget for a new monthly bill. Which fits her?',
+       ['The secured card, used lightly and paid in full', 'The credit-builder loan', 'Neither: her debit card already builds credit'], 0,
+       'The deposit is money she has. The loan would add a $52 bill every month.',
+       why=['', 'It adds a $52 bill every month for a year.', 'Debit cards usually don’t report to the bureaus.'], docs=[SECURED, BUILDER]),
+    mc('Malik can spare $52 a month but has nothing saved to lock up. Which fits him?',
+       ['The credit-builder loan', 'The secured card'], 0,
+       'No deposit needed, and he ends the year with $600 saved.', docs=[SECURED, BUILDER]),
     mc('Which habit builds the file without digging a hole?',
        ['Small balance, paid in full, every month', 'Max the card and pay the minimum', 'Apply for five cards this week'], 0,
        'Boring and on time wins.'),
-])
+], fmt='call')
 
 myths = lesson('cs-myths', 'Score Myths', 'Sort the rumor from the rule.', [
     sort('Myth or fact?', ['Myth', 'Fact'], [
@@ -144,7 +165,7 @@ trial_steps = [
     num('Balance $600, limit $2,000. What is the utilization?', 30, '$600 ÷ $2,000 = 30%.', unit='%'),
     tf('A secured card requires a deposit and can be a first credit account.', True, 'The deposit backs a small limit.'),
     mc('Which check is a hard inquiry?',
-       ['Applying for a new card', 'Looking at your own score', 'Reading a lesson about credit'], 0,
+       ['Applying for a new card', 'Looking at your own score', 'A card company sending you a pre-approved offer'], 0,
        'You applied to borrow. That is the hard kind.'),
 ]
 

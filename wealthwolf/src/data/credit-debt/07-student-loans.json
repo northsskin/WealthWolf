@@ -68,8 +68,8 @@
           "prompt": "Where do you check which federal plans your loan can use?",
           "choices": [
             "studentaid.gov",
-            "A store card’s app",
-            "The school’s bookstore"
+            "Your bank’s website",
+            "The lender’s ads"
           ],
           "answer": 0,
           "explain": "The official site. Plan names change, and 2026 is not 2019."
@@ -305,7 +305,7 @@
           "choices": [
             "Your loan servicer, and studentaid.gov",
             "A classmate",
-            "The campus cafe"
+            "The college admissions office"
           ],
           "answer": 0,
           "explain": "The servicer is the company that collects the payments."
@@ -316,14 +316,14 @@
       "id": "sl-plans",
       "type": "lesson",
       "title": "Repayment Plans",
-      "summary": "One plan is a fixed payoff. Another follows your paycheck. SAVE is not on the menu.",
+      "summary": "One plan is a fixed payoff. Another follows your paycheck. The list changes, so check it.",
       "xp": 10,
       "steps": [
         {
           "id": "sl-plans-q1",
           "type": "info",
-          "title": "What was true in 2026",
-          "body": "A standard plan uses a fixed payment meant to clear the loan in about 10 years. An [[income-driven repayment]] plan sets the payment from your income instead.\n\nThe Saving on a Valuable Education (SAVE) plan ended in 2026 after a court order. Do not sign up for it. Which other plans you can use depends on when your loan was made. Check studentaid.gov before you pick."
+          "title": "Plans change. Check the official list",
+          "body": "A standard plan uses a fixed payment meant to clear the loan in about 10 years. An [[income-driven repayment]] plan sets the payment from your income instead.\n\nThe Saving on a Valuable Education (SAVE) plan was blocked by the courts, and Congress voted in 2025 to phase it out. It isn’t open to new borrowers. Which other plans you can use depends on when your loan was made. Check studentaid.gov before you pick."
         },
         {
           "id": "sl-plans-q2",
@@ -344,7 +344,7 @@
           "choices": [
             "Your income and family size",
             "Only the school’s ranking",
-            "Your credit-card rewards"
+            "Your credit score"
           ],
           "answer": 0,
           "explain": "The payment follows the paycheck. A lower payment can mean more interest over time."
@@ -354,7 +354,7 @@
           "type": "true_false",
           "prompt": "In 2026, new borrowers should enroll in the SAVE plan.",
           "answer": false,
-          "explain": "SAVE ended in 2026. Use the plans studentaid.gov still lists for your loan."
+          "explain": "SAVE isn’t open to new borrowers. Use the plans studentaid.gov lists for your loan."
         },
         {
           "id": "sl-plans-q5",
@@ -679,8 +679,8 @@
           "prompt": "What belongs in the comparison?",
           "choices": [
             "Loans at graduation, not just this year’s tuition sticker",
-            "The dining hall",
-            "The school’s social account"
+            "Only this year’s tuition",
+            "The school’s ranking alone"
           ],
           "answer": 0,
           "explain": "The number you repay is the one that matters."
@@ -808,9 +808,9 @@
         {
           "id": "sl-trial-q3",
           "type": "true_false",
-          "prompt": "The SAVE repayment plan was still open to new borrowers in late 2026.",
+          "prompt": "New borrowers could still sign up for the SAVE repayment plan in 2026.",
           "answer": false,
-          "explain": "A court order ended SAVE in 2026."
+          "explain": "Courts blocked SAVE and a 2025 law is phasing it out. studentaid.gov lists the plans open to you."
         },
         {
           "id": "sl-trial-q4",

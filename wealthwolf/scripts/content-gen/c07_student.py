@@ -21,7 +21,7 @@ fed = lesson('sl-federal-private', 'Federal or Private', 'Federal loans come wit
        ['The federal loan, and only then consider private', 'The private loan, because the ads are bigger', 'A credit card for tuition'], 0,
        'Federal loans first. Private loans fill a gap, they do not replace the safer option.'),
     mc('Where do you check which federal plans your loan can use?',
-       ['studentaid.gov', 'A store card’s app', 'The school’s bookstore'], 0,
+       ['studentaid.gov', 'Your bank’s website', 'The lender’s ads'], 0,
        'The official site. Plan names change, and 2026 is not 2019.'),
     match('Match the lender to the loan.',
           [('U.S. student-aid program', 'Federal student loan'), ('A bank', 'Private student loan'), ('A card issuer', 'Not a student loan at all')]),
@@ -84,22 +84,22 @@ grace = lesson('sl-after-school', 'Before the First Bill', 'Federal loans usuall
     tf('You can apply for an income-driven plan before the first payment is due.', True,
        'Doing it early means the first bill is the one you actually chose.'),
     mc('Who tells you the real due date?',
-       ['Your loan servicer, and studentaid.gov', 'A classmate', 'The campus cafe'], 0,
+       ['Your loan servicer, and studentaid.gov', 'A classmate', 'The college admissions office'], 0,
        'The servicer is the company that collects the payments.'),
 ])
 
-plans = lesson('sl-plans', 'Repayment Plans', 'One plan is a fixed payoff. Another follows your paycheck. SAVE is not on the menu.', [
-    info('What was true in 2026',
+plans = lesson('sl-plans', 'Repayment Plans', 'One plan is a fixed payoff. Another follows your paycheck. The list changes, so check it.', [
+    info('Plans change. Check the official list',
          'A standard plan uses a fixed payment meant to clear the loan in about 10 years. An [[income-driven repayment]] plan sets the payment from your income instead.\n\n'
-         'The Saving on a Valuable Education (SAVE) plan ended in 2026 after a court order. Do not sign up for it. Which other plans you can use depends on when your loan was made. Check studentaid.gov before you pick.'),
+         'The Saving on a Valuable Education (SAVE) plan was blocked by the courts, and Congress voted in 2025 to phase it out. It isn’t open to new borrowers. Which other plans you can use depends on when your loan was made. Check studentaid.gov before you pick.'),
     mc('What does a standard plan try to do?',
        ['Pay the loan off on a fixed schedule, often about 10 years', 'Set the payment from your income', 'Erase the loan at graduation'], 0,
        'Fixed payment, fixed clock.'),
     mc('What does an income-driven plan look at?',
-       ['Your income and family size', 'Only the school’s ranking', 'Your credit-card rewards'], 0,
+       ['Your income and family size', 'Only the school’s ranking', 'Your credit score'], 0,
        'The payment follows the paycheck. A lower payment can mean more interest over time.'),
     tf('In 2026, new borrowers should enroll in the SAVE plan.', False,
-       'SAVE ended in 2026. Use the plans studentaid.gov still lists for your loan.'),
+       'SAVE isn’t open to new borrowers. Use the plans studentaid.gov lists for your loan.'),
     mc('A lower monthly payment under an income-driven plan can mean…',
        ['You pay for longer, and you may pay more interest', 'The loan is free', 'The principal vanishes'], 0,
        'Smaller is not the same as cheaper.'),
@@ -153,7 +153,7 @@ school = lesson('sl-school-cost', 'Choose the School with the Cost', 'The job ca
     tf('A more expensive school is worth it whenever the campus is nicer.', False,
        'Worth it depends on the pay you can earn and the debt you can carry.'),
     mc('What belongs in the comparison?',
-       ['Loans at graduation, not just this year’s tuition sticker', 'The dining hall', 'The school’s social account'], 0,
+       ['Loans at graduation, not just this year’s tuition sticker', 'Only this year’s tuition', 'The school’s ranking alone'], 0,
        'The number you repay is the one that matters.'),
     mc('You can work a year and cut School B’s loans by $8,000. What is the new gap versus School A’s $18,000?',
        ['$14,000 more than School A', '$8,000 more', 'School B becomes cheaper'], 0,
@@ -164,7 +164,7 @@ trial_steps = [
     mc('Interest on which federal loan starts while you are still in school?',
        ['Unsubsidized', 'Subsidized', 'Neither'], 0, 'Unsubsidized interest does not wait.'),
     num('$4,000 unsubsidized at 5% simple interest for 2 years in school. How much interest?', 400, '$4,000 × 0.05 × 2 = $400.'),
-    tf('The SAVE repayment plan was still open to new borrowers in late 2026.', False, 'A court order ended SAVE in 2026.'),
+    tf('New borrowers could still sign up for the SAVE repayment plan in 2026.', False, 'Courts blocked SAVE and a 2025 law is phasing it out. studentaid.gov lists the plans open to you.'),
     num('A summary shows $200 a month for 10 years. What do those payments add up to?', 24000, '$200 × 120 = $24,000.'),
 ]
 

@@ -10,25 +10,39 @@ terms = {
                          'Take $200 cash. A 5% fee adds $10, so you owe $210 before a single day’s interest.'),
 }
 
-stmt_lines = [('purch', 'Purchases this period', 480)]
-assert stmt_lines[0][2] == 480
-STMT = doc('bill', 'Harbor Card', stmt_lines, subtitle='October statement',
-           meta=[['Statement balance', '$480.00'], ['Minimum payment', '$25.00'], ['Due date', 'Oct 21']],
-           totals=[('Statement balance', 480, True)],
-           note='Interest rate 24% APR. Pay the statement balance by Oct 21 to avoid interest.')
-statement = lesson('cc-statement', 'The Card Statement', 'Three numbers matter: the statement balance, the minimum, and the due date.', [
-    num('What is the statement balance?', 480, 'The total for this period: $480.',
+stmt_lines = [
+    ('pay', 'Payment, thank you', -312.40, {'date': 'Sep 28'}),
+    ('groc', 'City Grocer', 64.18, {'date': 'Oct 2'}),
+    ('gas', 'Shell gas station', 38.00, {'date': 'Oct 5'}),
+    ('stream', 'StreamMax', 15.99, {'date': 'Oct 9'}),
+    ('tech', 'TechWorld, headphones', 89.99, {'date': 'Oct 14'}),
+    ('taco', 'Taco Spot', 22.84, {'date': 'Oct 20'}),
+    ('pharm', 'Corner Pharmacy', 18.60, {'date': 'Oct 24'}),
+]
+purchases = total(l[2] for l in stmt_lines if l[2] > 0)
+new_balance = total([312.40, -312.40, purchases])
+assert purchases == 249.60 and new_balance == 249.60 and round(249.60 / 1500 * 100) == 17
+STMT = doc('statement', 'Harbor Card', stmt_lines, subtitle='Statement · Sep 26 – Oct 25',
+           meta=[['Credit limit', '$1,500.00'], ['Minimum payment', '$25.00'], ['Payment due date', 'Nov 21']],
+           totals=[('Previous balance', 312.40)],
+           note='Purchase APR 24%. Pay the new balance in full by Nov 21 and these purchases are not charged interest.')
+statement = lesson('cc-statement', 'The Card Statement', 'Read a real month on a card: what you spent, what you owe, what’s due.', [
+    num('Add up this month’s purchases. Leave out the payment.', purchases,
+        '$64.18 + $38.00 + $15.99 + $89.99 + $22.84 + $18.60 = $249.60.',
         context='The [[statement balance]] is what you owed when the bill was cut. The [[minimum payment]] is the smallest amount that keeps the account in good standing. The [[due date]] is the last day to pay on time.',
         doc=STMT),
-    num('What is the minimum payment on this bill?', 25, 'The bill asks for at least $25.', doc=STMT),
-    mc('When is this bill due?', ['Oct 21', 'Whenever you feel like it', 'The day you opened the card'], 0,
-       'Oct 21 is printed on the statement.', doc=STMT),
-    num('You pay the $480 statement balance. How much of this period’s purchases is left unpaid?', 0, '$480 − $480 = $0.'),
-    tf('Paying the minimum keeps you from being late. It does not pay off the balance.', True,
+    num('The previous balance of $312.40 was paid in full on Sep 28. What is the new statement balance?', new_balance,
+        '$312.40 − $312.40 + $249.60 = $249.60.', doc=STMT),
+    mc('When is the payment due?', ['Nov 21', 'Oct 25, when the statement closed', 'Dec 21, a month after the bill'], 0,
+       'The due date is printed on the statement.', doc=STMT,
+       why=['', 'That’s when the billing period ended. You have until the due date to pay.', 'Paying then would be a month late.']),
+    num('What share of the $1,500 limit does the new balance use? Round to the nearest whole percent.', 17,
+        '$249.60 ÷ $1,500 = 0.166, about 17%.', unit='%', doc=STMT),
+    tf('Paying only the $25 minimum by Nov 21 keeps you from being late, but interest starts on the rest.', True,
        'On time and paid off are two different jobs.'),
-    mc('Which number, paid by the due date, usually avoids interest on these purchases?',
-       ['The statement balance', 'The minimum payment', 'Half the minimum'], 0,
-       'The full statement balance. The minimum leaves the rest to grow.'),
+    mc('Which amount, paid by Nov 21, avoids interest on these purchases?',
+       ['The full $249.60 statement balance', 'The $25 minimum payment', 'Only what you spent after Oct 25'], 0,
+       'Pay the statement balance in full. The minimum leaves the rest to grow.', doc=STMT),
 ], fmt='document')
 
 grace = lesson('cc-grace', 'The Grace Period', 'Pay the statement in full and the interest waits. Carry a balance and it does not.', [
@@ -61,20 +75,30 @@ full = lesson('cc-full-vs-min', 'In Full or the Minimum', 'The minimum keeps the
        'It is the smallest on-time payment, not a payoff plan.'),
 ])
 
-trap = lesson('cc-min-trap', 'The Minimum Trap', 'Small payments stretch a balance for years.', [
-    num('You owe $2,400 at 18% APR. The monthly rate is 1.5%. How much interest this month?', 36, '$2,400 × 0.015 = $36.',
-        context='If the [[minimum payment]] is $50 and interest is $36, only $14 of your payment touches the [[balance]].'),
-    num('You pay that $50 minimum. How much of it cuts the principal?', 14, '$50 − $36 = $14.'),
+nico_story = {
+    'title': 'The $50 that barely moved',
+    'character': 'Nico, 24, line cook',
+    'body': 'Nico put a **$2,400** TV and sound system on a card that charges **18%** a year, which works out to **1.5%** a month.\n\n'
+            'The card only asks for a **$50** minimum payment, so that’s what he pays. A friend told him the balance would be gone in about four years. It won’t be.',
+}
+assert 2400 * 0.015 == 36 and 50 - 36 == 14 and 2400 / 50 == 48
+trap = lesson('cc-min-trap', 'Nico’s Minimum Trap', 'Small payments stretch a balance for years.', [
+    num('How much interest does the first month add? (1.5% of $2,400)', 36, '$2,400 × 0.015 = $36.',
+        context='When you pay only the [[minimum payment]], interest takes its share first. Whatever is left is all that touches the [[balance]].'),
+    num('He pays the $50 minimum. How much of it cuts the principal?', 14, '$50 − $36 = $14.'),
     num('What is the balance after that one payment?', 2386, '$2,400 − $14 = $2,386. Next month’s interest is worked out on almost the same debt.'),
+    num('With no interest at all, how many $50 payments would clear $2,400?', 48,
+        '$2,400 ÷ $50 = 48 months: the four years his friend meant. With 1.5% a month of interest, it takes about 86 payments, over seven years.',
+        unit='payments'),
     mc('What is the trap?',
-       ['You pay every month and the balance barely moves', 'The balance vanishes after one minimum', 'The bank forgives the rest at month 12'], 0,
-       'Most of the payment is interest.'),
+       ['He pays every month and the balance barely moves', 'The card stops charging interest once he pays the minimum', 'The minimum rises to cover the interest'], 0,
+       'Most of each payment is interest.'),
     tf('Paying more than the minimum, and aiming it at this card, shortens the trap.', True,
        'Extra dollars go to principal, which cuts next month’s interest.'),
-    mc('You can afford $150 this month, not just $50. Where should the extra $100 go?',
-       ['Onto this balance', 'Into a second purchase on the same card', 'Nowhere. The minimum is the goal'], 0,
-       'The extra $100 cuts principal. A new purchase digs the hole again.'),
-])
+    mc('Nico can afford $150 this month, not just $50. Where should the extra $100 go?',
+       ['Onto this balance', 'Into a second purchase on the same card', 'Into savings while he keeps paying the minimum'], 0,
+       'At 18%, paying the card down beats almost any savings rate.'),
+], fmt='story', story=nico_story)
 
 limit = lesson('cc-limit-use', 'Limit and Utilization', 'The limit is a ceiling. Using all of it is not the goal.', [
     num('Limit $2,000. Balance $500. What is your utilization?', 25, '$500 ÷ $2,000 = 25%.',

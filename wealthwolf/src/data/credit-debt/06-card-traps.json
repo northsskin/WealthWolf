@@ -366,7 +366,7 @@
           "choices": [
             "The 1% card with no fee",
             "The 3% card with the $80 fee",
-            "Whichever is metal"
+            "They come out the same over a year"
           ],
           "answer": 0,
           "explain": "At $2,000 the fee eats the bonus and more."
@@ -448,15 +448,43 @@
     {
       "id": "ct-transfer",
       "type": "lesson",
+      "format": "document",
       "title": "Balance Transfers",
-      "summary": "A lower rate can be worth a fee. Only if the debt actually gets paid.",
+      "summary": "Read the offer: a lower rate can be worth a fee, if the debt gets paid.",
       "xp": 10,
       "steps": [
         {
           "id": "ct-transfer-q1",
           "type": "number",
           "context": "A [[balance transfer]] moves debt to a new card. The fee, often 3%, is added to what you owe. A 0% window only helps if you pay the debt down before it shuts.",
-          "prompt": "You transfer $4,000 with a 3% fee. How much is the fee?",
+          "doc": {
+            "kind": "bill",
+            "title": "Summit Card",
+            "subtitle": "Balance transfer offer",
+            "meta": [
+              [
+                "Transfer fee",
+                "3% of the amount moved"
+              ],
+              [
+                "Intro APR",
+                "0% for 12 months"
+              ],
+              [
+                "APR after that",
+                "26%"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "bal",
+                "label": "Balance moved from your old card",
+                "amount": 4000.0
+              }
+            ],
+            "note": "Any balance left after month 12 is charged 26% APR."
+          },
+          "prompt": "How much is the transfer fee on $4,000?",
           "answer": 120,
           "unit": "$",
           "explain": "$4,000 × 0.03 = $120."
@@ -464,6 +492,33 @@
         {
           "id": "ct-transfer-q2",
           "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Summit Card",
+            "subtitle": "Balance transfer offer",
+            "meta": [
+              [
+                "Transfer fee",
+                "3% of the amount moved"
+              ],
+              [
+                "Intro APR",
+                "0% for 12 months"
+              ],
+              [
+                "APR after that",
+                "26%"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "bal",
+                "label": "Balance moved from your old card",
+                "amount": 4000.0
+              }
+            ],
+            "note": "Any balance left after month 12 is charged 26% APR."
+          },
           "prompt": "What is the balance on the new card the day the transfer posts?",
           "answer": 4120,
           "unit": "$",
@@ -472,7 +527,7 @@
         {
           "id": "ct-transfer-q3",
           "type": "number",
-          "prompt": "The old card was 24% APR. A rough year of interest on $4,000 would have been?",
+          "prompt": "The old card charged 24% APR. A rough year of interest on $4,000 there would have been?",
           "answer": 960,
           "unit": "$",
           "explain": "$4,000 × 0.24 = $960."
@@ -480,29 +535,64 @@
         {
           "id": "ct-transfer-q4",
           "type": "number",
-          "prompt": "If you pay the new card off during a 0% year, how much less is the $120 fee than that $960 of interest?",
+          "prompt": "If you clear the new card during the 0% year, how much less is the $120 fee than that $960 of interest?",
           "answer": 840,
           "unit": "$",
-          "explain": "$960 − $120 = $840. That gap is the point of the move, and it vanishes if the balance is still there when the rate jumps."
+          "explain": "$960 − $120 = $840. That gap is the point of the move."
         },
         {
           "id": "ct-transfer-q5",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Summit Card",
+            "subtitle": "Balance transfer offer",
+            "meta": [
+              [
+                "Transfer fee",
+                "3% of the amount moved"
+              ],
+              [
+                "Intro APR",
+                "0% for 12 months"
+              ],
+              [
+                "APR after that",
+                "26%"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "bal",
+                "label": "Balance moved from your old card",
+                "amount": 4000.0
+              }
+            ],
+            "note": "Any balance left after month 12 is charged 26% APR."
+          },
+          "prompt": "You can only pay $100 a month. How much is still owed when the 0% year ends?",
+          "answer": 2920,
+          "unit": "$",
+          "explain": "$4,120 − 12 × $100 = $2,920, now charged 26%."
+        },
+        {
+          "id": "ct-transfer-q6",
           "type": "true_false",
-          "prompt": "After a transfer, you should keep spending on the old card.",
+          "prompt": "After a transfer, keep spending on the old card.",
           "answer": false,
           "explain": "You moved the debt. Adding new debt puts you back where you started."
         },
         {
-          "id": "ct-transfer-q6",
+          "id": "ct-transfer-q7",
           "type": "multiple_choice",
-          "prompt": "The 0% period is 12 months and you can only pay $100 a month. $4,120 ÷ $100 is about 41 months. Is this transfer a good fit?",
+          "prompt": "So, at $100 a month, is this transfer a good fit?",
           "choices": [
-            "No. The debt outlasts the 0% window by years",
+            "No. Most of the debt outlasts the 0% window",
             "Yes. Any transfer is a win",
-            "Yes, if the fee is under $500"
+            "Yes, because the fee is under $500"
           ],
           "answer": 0,
-          "explain": "Do the months before you do the move."
+          "explain": "Do the months before you make the move."
         }
       ]
     },

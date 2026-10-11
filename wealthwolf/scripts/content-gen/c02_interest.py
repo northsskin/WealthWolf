@@ -36,7 +36,7 @@ monthly = lesson('ia-monthly', 'Interest, Month by Month', 'Cards usually charge
     tf('Paying the balance in full stops this month’s interest from piling onto next month.', True,
        'Nothing left to charge. The [[minimum payment]] alone usually does not do that.'),
     mc('Why is the second month’s interest higher if you pay nothing?',
-       ['The balance grew, so the rate hits a bigger number', 'The APR went up by itself', 'Months get longer'], 0,
+       ['The balance grew, so the rate hits a bigger number', 'The APR went up by itself', 'The lender adds a fee every second month'], 0,
        '$20 of interest became part of the balance.'),
 ])
 
@@ -53,7 +53,7 @@ apy = lesson('ia-apr-apy', 'APR and APY', 'One is the price of borrowing. The ot
        'APY is the earnings number.'),
     tf('A lower APR on a loan means cheaper borrowing.', True, 'Lower price to borrow.'),
     mc('Why can a 20% APR card cost a bit more than balance × 0.20?',
-       ['Interest is added month by month, and then interest hits that too', 'APR ignores the balance', 'Banks round every charge up to $100'], 0,
+       ['Interest is added month by month, and then interest hits that too', 'APR ignores the balance', 'The rate is applied once a year, to the highest balance'], 0,
        'The rough yearly figure is a floor, not the whole story.'),
 ])
 
@@ -96,20 +96,27 @@ total = lesson('ia-total-cost', 'The Total Cost', 'Monthly payments hide the rea
     tf('A smaller monthly payment can mean a higher total cost.', True, 'You are paying interest for longer.'),
 ])
 
-fees = lesson('ia-fees-in-apr', 'Fees Inside the APR', 'A fee is part of the price, even when the rate looks low.', [
-    mc('What is an origination fee?', ['A charge for setting up the loan', 'Interest from last year', 'A reward for paying early'], 0,
-       'It is part of the cost of borrowing.',
-       context='An [[origination fee]] is money the lender takes for setting up the loan. [[APR]] is meant to include fees like this, so you can compare offers. The interest rate alone can look cheaper than the loan really is.'),
-    num('You borrow $2,000 for one year at 10% interest, plus a $100 origination fee. How much is the interest?', 200,
-        '$2,000 × 0.10 = $200.'),
-    num('Add the fee. What did this loan cost you in the first year?', 300, '$200 + $100 = $300.'),
-    num('That $300 is what percent of the $2,000 you borrowed?', 15, '$300 ÷ $2,000 = 0.15, which is 15%.', unit='%'),
+DISC = doc('bill', 'Lakeshore Credit Union', [
+    ('amount', 'Amount you receive', 2000.00),
+    ('fee', 'Origination fee, paid at signing', 100.00)],
+    subtitle='Personal loan disclosure', meta=[['Interest rate', '10% a year'], ['Term', '12 months, repaid at the end']],
+    note='The fee is part of what this loan costs you.')
+assert 2000 * 0.10 == 200 and 200 + 100 == 300 and 300 / 2000 == 0.15
+fees = lesson('ia-fees-in-apr', 'Fees Inside the APR', 'Read a loan disclosure and find the cost the rate leaves out.', [
+    mc('What is the origination fee on this loan?', ['A $100 charge for setting up the loan', 'Interest the lender takes in advance', 'A deposit you get back at the end'], 0,
+       'It’s a cost of borrowing, and you don’t get it back.',
+       context='An [[origination fee]] is money the lender takes for setting up the loan. [[APR]] is meant to include fees like this, so you can compare offers. The interest rate alone can make a loan look cheaper than it is.',
+       doc=DISC),
+    num('How much interest will the $2,000 cost over the year at 10%?', 200, '$2,000 × 0.10 = $200.', doc=DISC),
+    num('Add the fee. What does this loan cost you in total?', 300, '$200 interest + $100 fee = $300.', doc=DISC),
+    num('That $300 is what percent of the $2,000 you borrowed?', 15, '$300 ÷ $2,000 = 0.15, which is 15%. The headline rate said 10%.', unit='%', doc=DISC),
     tf('The interest rate and the APR can be different numbers when a loan has fees.', True,
        'The APR rolls the fee into the yearly cost.'),
-    mc('Two loans both say 10% interest. One has a $100 fee and one has no fee. Which comparison do you trust?',
-       ['The APR, or the total dollars you pay', 'The interest rate alone', 'Whichever advertisement is bigger'], 0,
-       'Dollars out the door beat a single percentage.'),
-])
+    mc('Two loans both say 10% interest. One has a $100 fee and one has none. What do you compare?',
+       ['The APR, or the total dollars you pay', 'The interest rate alone', 'The monthly payment alone'], 0,
+       'Dollars out the door beat a single percentage.',
+       why=['', 'Both say 10%. The fee is what makes one dearer.', 'A small payment can hide a longer or costlier loan.']),
+], fmt='document')
 
 maya_story = {
     'title': 'The phone plan',
@@ -127,7 +134,7 @@ maya = lesson('ia-maya', 'Maya’s Phone', 'A small monthly number can double th
        'A payment that fits can still be a bad price.'),
     tf('Using $220 of her $300 savings leaves her with some cash still set aside.', True, '$300 − $220 = $80 left.'),
     mc('What is the careful comparison?',
-       ['Total dollars, not the size of the monthly payment', 'Whichever sign is brighter', 'The number of months alone'], 0,
+       ['Total dollars, not the size of the monthly payment', 'Whichever offer says 0% in the ad', 'The number of months alone'], 0,
        '36 small payments hid a $420 charge.'),
 ], fmt='story', story=maya_story)
 

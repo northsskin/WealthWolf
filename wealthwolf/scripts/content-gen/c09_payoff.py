@@ -39,7 +39,7 @@ trap = lesson('dp-minimums', 'Minimums Keep the Debt', 'Pay every minimum. Then 
     num('You send an extra $100 to this debt. How much principal do you cut this month, interest included in the $50?', 114,
         '$14 from the minimum, plus $100 extra = $114.'),
     mc('What is the rule while you attack one debt?',
-       ['Keep paying the minimum on the others', 'Stop paying the others', 'Pay a different debt each day at random'], 0,
+       ['Keep paying the minimum on the others', 'Stop paying the others', 'Split the extra money evenly across every debt'], 0,
        'Missed minimums mean fees and marks. Extra money has one target.'),
     tf('Paying only the minimums is a payoff plan.', False, 'It is the floor. The payoff is the extra.'),
     num('After the $114 principal payment, what is the balance?', 2286, '$2,400 − $114 = $2,286.'),

@@ -41,7 +41,7 @@ rent = lesson('lt-rent-to-own', 'Rent to Own', 'The weekly payment is the advert
 
 title = lesson('lt-title', 'Title Loans', 'The loan is small. The collateral is your way to work.', [
     mc('What does a title loan use as collateral?',
-       ['Your car’s title', 'Your next birthday', 'A credit card you do not have'], 0,
+       ['Your car’s title', 'Your next paycheck', 'Your credit score'], 0,
        'The car is how they get paid if you do not.',
        context='A [[title loan]] is secured by your car. Borrow $1,000 and the lender holds the title. Miss the payments and they can take a car worth far more than $1,000.'),
     num('The car is worth $8,000. The loan is $1,000. How much of the car’s value is at risk for that loan?', 8000,
@@ -81,7 +81,7 @@ nocredit = lesson('lt-no-check', '“No Credit Check”', 'The ad is loud becaus
     tf('No credit check means the loan cannot hurt you.', False,
        'It can still take a fee, a car, or a chunk of your next paycheck.'),
     mc('Which question matters more than “Will they approve me?”',
-       ['What do I pay back, in dollars, and what can they take?', 'How fast can I get the money', 'How big is the word “approved”'], 0,
+       ['What do I pay back, in dollars, and what can they take?', 'How fast can I get the money', 'Whether the payment is under $100'], 0,
        'Approval is easy when the price is ugly.'),
     num('The ad: borrow $200, pay back $260 in two weeks. How much is the fee?', 60, '$260 − $200 = $60.'),
     num('That $60 fee is what percent of the $200?', 30, '$60 ÷ $200 = 30%, for two weeks.', unit='%'),
@@ -111,27 +111,32 @@ spot = lesson('lt-spot-ad', 'Spot the Trap', 'The friendly line is not the expen
     tf('A processing charge in the fine print is optional if you did not notice it.', False,
        'If it is on the paper you sign, it is in the deal.'),
     mc('What would a fair ad lead with?',
-       ['You receive $200 and pay back $285', '“Approved”', 'A picture of a smile'], 0,
+       ['You receive $200 and pay back $285', '“Approved”', '“No credit check needed”'], 0,
        'Dollars in, dollars out.'),
 ], fmt='spot')
 
-better = lesson('lt-better', 'Better Options When You Are Short', 'Slow help is usually cheaper than fast cash.', [
-    mc('A $150 bill is due and you are short. What is worth trying before a payday loan?',
-       ['Ask the biller for a payment date, and cut or pause something else', 'A title loan', 'A second payday loan to pay the first'], 0,
-       'A biller would often rather get the money late than not at all.',
-       context='When cash is short, the order is: billers and a payment plan, then anything you can sell or pause, then a credit union or a person who will not take your car. A payday loan is the last door, not the first.'),
-    num('You pause a $40 subscription and sell a $90 item you do not use. How much of a $150 gap does that close?', 130,
-        '$40 + $90 = $130.'),
-    num('How much of the $150 is still short?', 20, '$150 − $130 = $20. A $20 gap is not a reason for a 390% loan.'),
-    tf('A payment plan on a medical bill can cost less than a payday loan.', True,
+PAYDAY = doc('bill', 'QuickCash payday loan', [('get', 'You receive', 300.00), ('fee', 'Fee for every two weeks you keep it', 45.00)],
+             subtitle='Due in full on your next payday', note='Can’t repay in full? Rolling it over means paying the $45 again.')
+CU = doc('bill', 'Lakeshore Credit Union', [('get', 'You receive', 300.00), ('app', 'Application fee', 20.00), ('pay', '3 monthly payments of $104.70', 314.10)],
+         subtitle='Small-dollar loan for members', meta=[['APR', '28%']], totals=[('Total you pay back', 334.10, True)])
+assert 3 * 104.70 == 314.10 or abs(3 * 104.70 - 314.10) < 0.001
+assert round(334.10 - 300, 2) == 34.10 and 6 * 45 == 270 and round(270 - 34.10, 2) == 235.90
+better = lesson('lt-better', 'Better Options When You Are Short', 'Slow help is usually cheaper than fast cash. Compare two loans.', [
+    mc('A $300 car repair can’t wait, and you need about three months to pay it back. Which costs less?',
+       ['The credit-union loan', 'The payday loan'], 0,
+       'Compare the dollars you pay back, not how fast the money arrives.',
+       context='When cash is short, try billers and payment plans first, then anything you can sell or pause, then a credit union. Many credit unions offer members small loans with capped fees. A payday loan is the last door, not the first.',
+       docs=[PAYDAY, CU]),
+    num('The credit-union loan: what does it cost you beyond the $300?', 34.10, '$334.10 − $300.00 = $34.10.', docs=[PAYDAY, CU]),
+    num('Rolled over every two weeks for 12 weeks, the payday loan means six $45 fees. What do they add up to?', 270,
+        '6 × $45 = $270, and you still owe the $300.', docs=[PAYDAY, CU]),
+    num('How much more does the payday route cost than the whole credit-union loan?', 235.90, '$270.00 − $34.10 = $235.90.'),
+    tf('A payment plan with the repair shop or a hospital can cost less than either loan.', True,
        'Many billers will split a balance. Ask before you borrow.'),
-    mc('Which option puts the car at risk?',
-       ['A title loan', 'A payment plan with the hospital', 'Selling an old phone'], 0,
-       'The title is the car.'),
     order('Put the short-on-cash options from first try to last resort.',
           ['Call the biller and ask for a plan', 'Pause spending and sell something unused', 'A small credit-union loan if you can get one', 'A payday or title loan'],
           'Ask, then cut, then a normal loan, then the expensive door.'),
-])
+], fmt='call')
 
 dev_story = {
     'title': 'Four small plans',
@@ -157,7 +162,7 @@ dev = lesson('lt-dev', 'Dev’s Pile-Up', 'The plans were small. The week they l
 trial_steps = [
     num('A $20 fee on a $100 loan, every two weeks, for a full year of 26 periods. What is the APR?', 520,
         '20% × 26 = 520%.', unit='%'),
-    mc('A title loan puts which asset on the line?', ['Your car', 'Your grocery receipt', 'A streaming password'], 0,
+    mc('A title loan puts which asset on the line?', ['Your car', 'Your paycheck', 'Your credit score'], 0,
        'The title is the collateral.'),
     tf('Four buy-now-pay-later plans due the same week cost the same as one of them.', False, 'Add the payments. They leave together.'),
     num('$45 a week for 80 weeks, versus a $500 cash price. How much more do the weekly payments cost?', 3100,

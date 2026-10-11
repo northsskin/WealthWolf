@@ -12,7 +12,7 @@ terms = {
 
 vs = lesson('cr-vs-score', 'Report and Score', 'The report is the story. The score is one number squeezed out of it.', [
     mc('What is a credit report?',
-       ['The file of your accounts, payments, and inquiries', 'A single number from 300 to 850', 'Your tax return'], 0,
+       ['The file of your accounts, payments, and inquiries', 'A single number from 300 to 850', 'A list of your bank balances'], 0,
        'The file comes first. The score is calculated from it.',
        context='A [[credit report]] lists your accounts and whether you paid. A [[credit score]] is a number built from that file. The free reports at AnnualCreditReport.com do not include the score.'),
     tf('Your credit report and your credit score are the same thing.', False, 'One is the file. The other is a number made from the file.'),
@@ -36,7 +36,7 @@ bureaus = lesson('cr-bureaus', 'Three Bureaus', 'Equifax, Experian, TransUnion. 
     tf('If one bureau’s report is clean, the other two must be clean too.', False,
        'Each file is its own. Check all three.'),
     mc('Why check all three reports?',
-       ['An error or a fraud account may sit on only one of them', 'The law says you pick a favorite', 'They always show the same score'], 0,
+       ['An error or a fraud account may sit on only one of them', 'Lenders only look at one, so check the best', 'They always show the same score'], 0,
        'One clean file does not clear the other two.'),
     mc('Who do you freeze if you want new lenders blocked?',
        ['Each bureau, because a freeze at one does not cover the others', 'Only Equifax', 'Your bank’s app'], 0,
@@ -49,7 +49,7 @@ free = lesson('cr-free-reports', 'Free Reports', 'Once a week, from the official
          'AnnualCreditReport.com is the official site for the free reports required by federal law. Equifax, Experian, and TransUnion made weekly free reports permanent in 2023, and that was still the offer in 2026.\n\n'
          'Other sites may sell you a score, a subscription, or nothing. The weekly reports do not include your credit score.'),
     mc('How often could you get a free report from each big bureau in 2026?',
-       ['Every week', 'Once in your life', 'Only in December'], 0,
+       ['Every week', 'Once in your life', 'Once a year'], 0,
        'Weekly, at the official site.'),
     mc('Which site is the official one?',
        ['AnnualCreditReport.com', 'Any site that says “free score” in an ad', 'A link in a random text'], 0,
@@ -59,7 +59,7 @@ free = lesson('cr-free-reports', 'Free Reports', 'Once a week, from the official
        ['Leave. The official weekly reports do not require a card', 'Enter the card', 'Send a photo of your license in a text'], 0,
        'Paying is the clue that it is not the official free report.'),
     mc('You want all three files. What do you request?',
-       ['A report from Equifax, Experian, and TransUnion', 'Only the bureau you like', 'Your old tax return'], 0,
+       ['A report from Equifax, Experian, and TransUnion', 'Only the bureau you like', 'The free score in your card’s app'], 0,
        'Three files. One sitting can still hide a problem.'),
 ])
 
@@ -111,25 +111,32 @@ spot = lesson('cr-not-yours', 'An Account That Is Not Yours', 'Tap the line that
           'Name it, challenge it, lock new applications, then look again.'),
 ], fmt='spot')
 
-dispute = lesson('cr-dispute', 'Disputing an Error', 'Tell the bureau what is wrong, in writing, and keep a copy.', [
-    mc('An old address and a paid-off loan still show as open. What is that?',
-       ['Errors you can dispute', 'Facts you are not allowed to question', 'A hard inquiry'], 0,
-       'Wrong facts get challenged.',
-       context='If a report is wrong, you dispute it: you tell the [[credit bureau]] what is incorrect and ask for a fix. Do it with each bureau that shows the error. Send copies of proof, and keep your own copy. This is not the same as asking your bank to reverse a charge.'),
-    order('Put a dispute in order.',
+tasha_story = {
+    'title': 'The bill she already paid',
+    'character': 'Tasha, 31, dental hygienist',
+    'body': 'Tasha pulled her free reports before applying for an apartment. Experian and TransUnion looked right. Equifax showed a **$640** medical collection marked unpaid, plus a street she moved away from four years ago.\n\n'
+            'She had paid that **$640** bill in full last March. She still has the receipt and the hospital’s letter showing a balance of **$0**.',
+}
+dispute = lesson('cr-dispute', 'Tasha Disputes an Error', 'A paid bill showing as unpaid. Here’s how she gets it fixed.', [
+    mc('What should Tasha do about the $640 collection?',
+       ['Dispute it with Equifax, with her receipt as proof', 'Pay the $640 again so it goes away', 'Wait seven years for it to drop off'], 0,
+       'Wrong facts get disputed, with proof.',
+       context='If a report is wrong, you dispute it: you tell the [[credit bureau]] what is incorrect and ask for a fix. Send copies of proof, and keep your own copy. This is not the same as asking your bank to reverse a charge.',
+       why=['', 'Paying twice doesn’t fix the record, and it costs $640.', 'It’s wrong now. Don’t wait out a mistake.']),
+    order('Put Tasha’s dispute in order.',
           ['Find the wrong line on the report', 'Write what is wrong and include proof', 'Send it to the bureau that shows it', 'Read the result and check the report again'],
           'Find it, explain it, send it, confirm the fix.'),
-    tf('You should dispute a wrong account with every bureau that lists it.', True,
-       'A fix at one bureau does not rewrite the others.'),
-    mc('What belongs in the dispute?',
-       ['What is wrong, and a copy of anything that proves it', 'Only your opinion, with no details', 'Your card number in a text to a stranger'], 0,
-       'Specific and documented.'),
-    mc('The bureau corrects the fake account. What do you do next?',
-       ['Check that the line is actually gone, on a fresh report', 'Assume it is fixed forever', 'Close every real account too'], 0,
+    tf('Tasha only needs to dispute with Equifax, because the other two reports are right.', True,
+       'Dispute with every bureau that shows the error. Here, that’s one.'),
+    mc('What belongs in Tasha’s dispute?',
+       ['What is wrong, plus copies of the receipt and the $0 letter', 'A note saying she is upset, with no details', 'Her original receipt, with no copy kept'], 0,
+       'Specific, documented, and she keeps the originals.'),
+    mc('Equifax says the collection is fixed. What does Tasha do next?',
+       ['Pull a fresh Equifax report and check the line is gone', 'Assume it is fixed for good', 'Dispute it again to be safe'], 0,
        'Trust the new report, not the promise.'),
     tf('Paying a collection you do not owe is the fastest way to clean a report.', False,
        'Pay what you owe. Dispute what you do not.'),
-])
+], fmt='story', story=tasha_story)
 
 freeze = lesson('cr-freeze', 'Freezing Your Credit', 'A lock on new loans. You still use the cards you already have.', [
     mc('What does a credit freeze do?',
@@ -141,11 +148,11 @@ freeze = lesson('cr-freeze', 'Freezing Your Credit', 'A lock on new loans. You s
        ['Lift it, apply, then freeze again', 'Leave it and hope the dealer guesses', 'Close the loan you already have'], 0,
        'Thaw, shop, lock.'),
     mc('Does a freeze stop you from using a card you already have?',
-       ['No. Existing accounts still work', 'Yes. Every card is frozen shut', 'Only on weekends'], 0,
+       ['No. Existing accounts still work', 'Yes. Every card is frozen shut', 'Only cards opened in the last year'], 0,
        'The lock is on new applications.'),
     tf('Placing a credit freeze is free by law.', True, 'You do not pay the bureau to freeze or to lift a freeze.'),
     mc('When is a freeze especially worth it?',
-       ['After a data leak, or if a fake account just showed up', 'Only after you retire', 'When you want a higher score this week'], 0,
+       ['After a data leak, or if a fake account just showed up', 'Only once your credit is already bad', 'When you want a higher score this week'], 0,
        'It does not raise the score. It makes the next fake account harder.'),
 ])
 
@@ -153,20 +160,20 @@ marks = lesson('cr-how-long', 'How Long Marks Stay', 'Most bad news lasts years.
     info('The usual clocks',
          'Under the Fair Credit Reporting Act, most negative marks stay about seven years. A late payment is in that group. A Chapter 7 bankruptcy can stay up to 10 years. A hard inquiry stays about two years.\n\n'
          'These are the federal limits. Paying a collection does not rewind the clock to zero, and a credit freeze does not delete old marks.'),
-    mc('About how long can a late payment stay on a report?', ['About 7 years', 'About 7 weeks', 'Forever'], 0,
-       'Seven years is the usual federal limit for late payments.'),
-    mc('About how long can a Chapter 7 bankruptcy stay?', ['Up to 10 years', '1 year', 'Until you ask'], 0,
-       'Chapter 7 is the long one: up to 10 years.'),
-    mc('About how long does a hard inquiry stay?', ['About 2 years', 'About 10 years', 'Until the loan is paid'], 0,
-       'Two years, and the score often cares less after the first year.'),
+    sort('How long does each mark usually stay on a report?', ['About 2 years', 'About 7 years', 'Up to 10 years'],
+         [('A hard inquiry', 0), ('A late payment', 1), ('A collection account', 1), ('A charged-off card', 1),
+          ('A Chapter 13 bankruptcy', 1), ('A Chapter 7 bankruptcy', 2)]),
+    mc('About how long can a late payment stay on a report?', ['About 7 years', 'About 2 years', 'Until you pay the account off'], 0,
+       'Seven years is the usual federal limit for late payments.',
+       why=['', 'That’s a hard inquiry.', 'Paying helps from then on, but the late mark keeps its own clock.']),
     tf('A credit freeze deletes late payments.', False, 'A freeze blocks new pulls. It does not erase history.'),
     num('A late payment is reported in 2026. About what year does that seven-year clock run out?', 2033,
         '2026 + 7 = 2033.', unit=None),
-])
+], fmt='sort')
 
 trial_steps = [
     mc('Which site is the official source for a free credit report?',
-       ['AnnualCreditReport.com', 'Whatever the newest ad says', 'Your streaming app'], 0,
+       ['AnnualCreditReport.com', 'Whatever the newest ad says', 'Any app that shows a free score'], 0,
        'Type the official address yourself.'),
     tf('A credit freeze at one bureau covers all three.', False, 'Freeze each bureau on its own.'),
     mc('A Chapter 7 bankruptcy can stay on a report for up to how long?', ['10 years', '10 weeks', '10 days'], 0,
