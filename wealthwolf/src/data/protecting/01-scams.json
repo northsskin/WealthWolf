@@ -1,0 +1,637 @@
+{
+  "id": "scams",
+  "section": "protecting",
+  "order": 1,
+  "title": "Scams & Fraud",
+  "description": "Urgency, fake authority, and payments you cannot undo.",
+  "wolfLine": "The costume changes. The hurry does not.",
+  "terms": {
+    "phishing": {
+      "term": "Phishing",
+      "definition": "A fake email, text, or call that pretends to be someone you trust, so you will give up a password, a code, or money.",
+      "example": "A text that looks like your bank and asks you to tap a link and type your password."
+    }
+  },
+  "lessons": [
+    {
+      "id": "sc-how",
+      "type": "lesson",
+      "title": "How Scams Work",
+      "summary": "The trap is the feeling, not the costume.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sc-how-q1",
+          "type": "info",
+          "title": "Three levers",
+          "body": "Most scams pull the same three levers.\n\nUrgency: act today or lose something. Authority: they dress up as a bank, the police, or the government. Secrecy: they tell you not to check with anyone else."
+        },
+        {
+          "id": "sc-how-q2",
+          "type": "multiple_choice",
+          "prompt": "A text says your account closes in 15 minutes unless you tap now. Which lever is that?",
+          "choices": [
+            "Urgency",
+            "A paper receipt",
+            "A paycheck"
+          ],
+          "answer": 0,
+          "explain": "The clock is the pressure. Real problems still let you hang up and check."
+        },
+        {
+          "id": "sc-how-q3",
+          "type": "multiple_choice",
+          "prompt": "The caller says, “I am from your bank. Do not tell your family.” Which lever is the second sentence?",
+          "choices": [
+            "Secrecy",
+            "A sale",
+            "A budget"
+          ],
+          "answer": 0,
+          "explain": "Secrecy keeps you from the person who would spot the trick."
+        },
+        {
+          "id": "sc-how-q4",
+          "type": "true_false",
+          "prompt": "A real bank will ask you to keep a problem secret from the people you trust.",
+          "answer": false,
+          "explain": "Secrecy is the scammer’s rule, not the bank’s."
+        },
+        {
+          "id": "sc-how-q5",
+          "type": "fill_blank",
+          "prompt": "A message that rushes you to act before you can think is using ___.",
+          "choices": [
+            "urgency",
+            "a deductible",
+            "a paycheck"
+          ],
+          "answer": 0,
+          "explain": "Slow down. The rush is the product."
+        }
+      ]
+    },
+    {
+      "id": "sc-phishing",
+      "type": "lesson",
+      "title": "Phishing",
+      "summary": "The logo can be copied. The link is the hook.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sc-phishing-q1",
+          "type": "multiple_choice",
+          "context": "[[Phishing]] is a fake email, text, or call that pretends to be someone you trust.",
+          "prompt": "What is phishing?",
+          "choices": [
+            "A fake message that wants a password, a code, or money",
+            "A fee your bank prints on a statement",
+            "A type of savings account"
+          ],
+          "answer": 0,
+          "explain": "The disguise is the trusted name. The goal is something only you should have."
+        },
+        {
+          "id": "sc-phishing-q2",
+          "type": "true_false",
+          "prompt": "Your bank may text you to ask for your full password.",
+          "answer": false,
+          "explain": "Banks do not ask for your password or PIN by text, email, or phone."
+        },
+        {
+          "id": "sc-phishing-q3",
+          "type": "multiple_choice",
+          "prompt": "The text uses your bank’s logo and a link. What is the careful move?",
+          "choices": [
+            "Leave the link alone and open the bank’s app yourself",
+            "Tap the link so the bank can fix it",
+            "Reply with the code they asked for"
+          ],
+          "answer": 0,
+          "explain": "You go to the bank. You do not let the message take you there."
+        },
+        {
+          "id": "sc-phishing-q4",
+          "type": "multiple_choice",
+          "prompt": "A link’s real job in a phishing text is to:",
+          "choices": [
+            "Take you to a fake page that collects your login",
+            "Print a receipt",
+            "Raise your credit score"
+          ],
+          "answer": 0,
+          "explain": "The page can look perfect and still belong to someone else."
+        },
+        {
+          "id": "sc-phishing-q5",
+          "type": "true_false",
+          "prompt": "A correct logo means the message is safe.",
+          "answer": false,
+          "explain": "Logos are easy to copy. The ask is what matters."
+        }
+      ]
+    },
+    {
+      "id": "sc-spot",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Spot the Fake",
+      "summary": "One line gives the scam away.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sc-spot-q1",
+          "type": "spot",
+          "context": "Read the whole message. The honest lines make the bad line look normal.",
+          "doc": {
+            "kind": "receipt",
+            "title": "Delivery alert",
+            "subtitle": "From a number you do not know",
+            "lines": [
+              {
+                "id": "pkg",
+                "label": "Package you ordered last week",
+                "amount": 48.0
+              },
+              {
+                "id": "fee",
+                "label": "Redelivery fee, pay by gift card",
+                "amount": 12.0
+              },
+              {
+                "id": "tax",
+                "label": "Sales tax on the original order",
+                "amount": 3.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "They want you to pay",
+                "amount": 12.0,
+                "strong": true
+              }
+            ],
+            "note": "The store’s real app shows the package is already on the truck."
+          },
+          "prompt": "Which line is the trap?",
+          "answer": "fee",
+          "explain": "A surprise fee that must be paid by gift card is the hook. The package line is bait."
+        },
+        {
+          "id": "sc-spot-q2",
+          "type": "number",
+          "doc": {
+            "kind": "receipt",
+            "title": "Delivery alert",
+            "subtitle": "From a number you do not know",
+            "lines": [
+              {
+                "id": "pkg",
+                "label": "Package you ordered last week",
+                "amount": 48.0
+              },
+              {
+                "id": "fee",
+                "label": "Redelivery fee, pay by gift card",
+                "amount": 12.0
+              },
+              {
+                "id": "tax",
+                "label": "Sales tax on the original order",
+                "amount": 3.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "They want you to pay",
+                "amount": 12.0,
+                "strong": true
+              }
+            ],
+            "note": "The store’s real app shows the package is already on the truck."
+          },
+          "prompt": "How much is the gift-card fee they invented?",
+          "answer": 12,
+          "unit": "$",
+          "explain": "The redelivery line says $12."
+        },
+        {
+          "id": "sc-spot-q3",
+          "type": "multiple_choice",
+          "prompt": "Why is a gift card a warning?",
+          "choices": [
+            "Gift cards are like cash, and you cannot get them back",
+            "Gift cards earn interest",
+            "Stores only take gift cards for taxes"
+          ],
+          "answer": 0,
+          "explain": "Once the code is read, the money is gone."
+        },
+        {
+          "id": "sc-spot-q4",
+          "type": "true_false",
+          "prompt": "You should tap the link first, then decide.",
+          "answer": false,
+          "explain": "The link is how the fake page gets your login."
+        },
+        {
+          "id": "sc-spot-q5",
+          "type": "multiple_choice",
+          "prompt": "Where do you check the package instead?",
+          "choices": [
+            "The store’s app, opened by you",
+            "The link in the text",
+            "A number the text tells you to call"
+          ],
+          "answer": 0,
+          "explain": "You choose the door. The message does not."
+        }
+      ]
+    },
+    {
+      "id": "sc-calls",
+      "type": "lesson",
+      "title": "Impostor Calls",
+      "summary": "Anyone can claim a title. Hang up and call back yourself.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sc-calls-q1",
+          "type": "multiple_choice",
+          "prompt": "A caller says they are the IRS and you must pay today with gift cards. What is true?",
+          "choices": [
+            "The IRS does not demand gift cards over the phone",
+            "Gift cards are the official way to pay taxes",
+            "You should stay on the line so they do not fine you"
+          ],
+          "answer": 0,
+          "explain": "Taxes are not collected by a stranger who needs a gift card."
+        },
+        {
+          "id": "sc-calls-q2",
+          "type": "true_false",
+          "prompt": "“Your grandchild is in trouble. Do not tell their parents. Send money now.” That is a classic impostor setup.",
+          "answer": true,
+          "explain": "Urgency, a loved one’s name, and secrecy. All three levers at once."
+        },
+        {
+          "id": "sc-calls-q3",
+          "type": "multiple_choice",
+          "prompt": "Someone calls and says they are your bank’s fraud desk. What do you do?",
+          "choices": [
+            "Hang up and call the number on your card",
+            "Give them the code that just arrived by text",
+            "Move your money where they tell you"
+          ],
+          "answer": 0,
+          "explain": "The number on the card is yours to choose. Theirs is not."
+        },
+        {
+          "id": "sc-calls-q4",
+          "type": "multiple_choice",
+          "prompt": "They already know the last four digits of your account. Does that prove they are the bank?",
+          "choices": [
+            "No. Those digits leak, and scammers buy them",
+            "Yes. Only your bank can know that",
+            "Yes, if they sound polite"
+          ],
+          "answer": 0,
+          "explain": "A few digits are not a secret handshake."
+        },
+        {
+          "id": "sc-calls-q5",
+          "type": "true_false",
+          "prompt": "You owe a caller an explanation before you hang up.",
+          "answer": false,
+          "explain": "You can hang up. A real office will still be there when you call back."
+        }
+      ]
+    },
+    {
+      "id": "sc-romance",
+      "type": "lesson",
+      "title": "Romance and Investment Scams",
+      "summary": "Love and easy profits are the oldest bait.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sc-romance-q1",
+          "type": "multiple_choice",
+          "prompt": "You have never met them, and they ask you to send money for a plane ticket. What is the careful read?",
+          "choices": [
+            "This is a common romance scam",
+            "Plane tickets are always a gift",
+            "Meeting online makes the request safer"
+          ],
+          "answer": 0,
+          "explain": "The relationship is the setup. The ticket is the withdrawal."
+        },
+        {
+          "id": "sc-romance-q2",
+          "type": "true_false",
+          "prompt": "An investment that “guarantees” a huge return, and punishes you for asking questions, is a warning.",
+          "answer": true,
+          "explain": "Real investments can lose money. A guarantee plus secrecy is the tell."
+        },
+        {
+          "id": "sc-romance-q3",
+          "type": "number",
+          "prompt": "You already sent $500, then $500, then $500. How much is gone?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$500 × 3 = $1,500."
+        },
+        {
+          "id": "sc-romance-q4",
+          "type": "multiple_choice",
+          "prompt": "They say you must pay a “tax” before you can withdraw your profits. What is that?",
+          "choices": [
+            "Another payment in the same scam",
+            "A normal IRS form",
+            "Proof the profits are real"
+          ],
+          "answer": 0,
+          "explain": "The profits were never there. The tax is the next ask."
+        },
+        {
+          "id": "sc-romance-q5",
+          "type": "multiple_choice",
+          "prompt": "What should you do with the chat?",
+          "choices": [
+            "Stop paying and tell someone you trust",
+            "Send one more payment to unlock the rest",
+            "Keep it secret so you are not embarrassed"
+          ],
+          "answer": 0,
+          "explain": "Secrecy is how the loss grows. Tell someone."
+        }
+      ]
+    },
+    {
+      "id": "sc-red-flags",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Gift Cards and Wires",
+      "summary": "The payment method is the clue.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sc-red-flags-q1",
+          "type": "sort",
+          "prompt": "Red flag, or an ordinary payment?",
+          "buckets": [
+            "Red flag",
+            "Ordinary"
+          ],
+          "items": [
+            [
+              "Pay a fee with gift cards",
+              0
+            ],
+            [
+              "Wire the money today and tell no one",
+              0
+            ],
+            [
+              "A bill you expected, from a company you already pay",
+              1
+            ],
+            [
+              "A receipt from a store you stood in today",
+              1
+            ],
+            [
+              "A stranger who will not take a normal card or bank payment",
+              0
+            ]
+          ],
+          "explain": "Gift cards, wires, and secrecy move money in a way you cannot undo."
+        },
+        {
+          "id": "sc-red-flags-q2",
+          "type": "number",
+          "prompt": "Two $200 gift cards. How much would you lose?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$200 + $200 = $400."
+        },
+        {
+          "id": "sc-red-flags-q3",
+          "type": "multiple_choice",
+          "prompt": "Why do scammers love gift cards?",
+          "choices": [
+            "The code spends like cash, and the store cannot pull it back",
+            "Gift cards build your credit score",
+            "The IRS prefers them"
+          ],
+          "answer": 0,
+          "explain": "There is no refund button after the code is read."
+        },
+        {
+          "id": "sc-red-flags-q4",
+          "type": "true_false",
+          "prompt": "A wire to a stranger is easy to reverse the next day.",
+          "answer": false,
+          "explain": "A wire is built to arrive and stay."
+        },
+        {
+          "id": "sc-red-flags-q5",
+          "type": "multiple_choice",
+          "prompt": "A seller will only take a wire, and the deal closes tonight. What fits?",
+          "choices": [
+            "Treat it as a red flag and walk away",
+            "Wire it so you do not lose the deal",
+            "Send half now as a compromise"
+          ],
+          "answer": 0,
+          "explain": "A real seller can wait for a payment you can reverse."
+        }
+      ]
+    },
+    {
+      "id": "sc-first-hour",
+      "type": "lesson",
+      "title": "The First Hour",
+      "summary": "Stop the bleeding, then check the real door.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "sc-first-hour-q1",
+          "type": "order",
+          "context": "You already know [[two-factor authentication|two-factor-authentication]]: a password plus a code.",
+          "prompt": "Put the first hour in order.",
+          "items": [
+            "Stop. Do not send money or a login code",
+            "Call the real company on a number you look up yourself",
+            "Change the password and turn on two-factor authentication",
+            "Tell your bank if money already moved"
+          ],
+          "explain": "Stop first. Then use a door you chose, not the one they sent."
+        },
+        {
+          "id": "sc-first-hour-q2",
+          "type": "multiple_choice",
+          "prompt": "A code just arrived by text, and the caller wants it. What is it for?",
+          "choices": [
+            "It lets them into the account",
+            "It proves they are the bank",
+            "It cancels the scam"
+          ],
+          "answer": 0,
+          "explain": "The code is the key. Reading it aloud hands the key over."
+        },
+        {
+          "id": "sc-first-hour-q3",
+          "type": "true_false",
+          "prompt": "Paying “just this once” so they will stop is a good way to end it.",
+          "answer": false,
+          "explain": "The first payment teaches them you will pay. They ask again."
+        },
+        {
+          "id": "sc-first-hour-q4",
+          "type": "multiple_choice",
+          "prompt": "Money already left the account. Who do you tell first among these?",
+          "choices": [
+            "Your bank or the payment app",
+            "The caller, so they can refund you",
+            "No one, until you are sure"
+          ],
+          "answer": 0,
+          "explain": "The bank can sometimes freeze what is left. The caller will not."
+        },
+        {
+          "id": "sc-first-hour-q5",
+          "type": "fill_blank",
+          "prompt": "Look up the company’s number yourself. Do not use the number in the ___.",
+          "choices": [
+            "message",
+            "paycheck",
+            "glossary"
+          ],
+          "answer": 0,
+          "explain": "The message is the trap. The number you find is the exit."
+        }
+      ]
+    },
+    {
+      "id": "sc-rosa",
+      "type": "lesson",
+      "format": "story",
+      "title": "Rosa’s Fake Delivery",
+      "summary": "The logo was real. The fee was not.",
+      "xp": 10,
+      "story": {
+        "title": "The package that was never stuck",
+        "character": "Rosa, 34, delivery dispatcher",
+        "body": "Rosa is on her break when a text arrives. It uses a shipping logo and says her **$48** package is held. Pay a **$12** “redelivery fee” with a **$100** gift card, or the box goes back.\n\nShe sells nothing online and she did order a **$48** item last week. The logo looks right. The ask does not. Her store’s app, which she opens herself, says the box is on the truck."
+      },
+      "steps": [
+        {
+          "id": "sc-rosa-q1",
+          "type": "number",
+          "prompt": "How much would the gift card have cost Rosa?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "The text asks for a $100 gift card."
+        },
+        {
+          "id": "sc-rosa-q2",
+          "type": "number",
+          "prompt": "The package itself was $48. How much bigger is the gift card than the fake fee?",
+          "answer": 88,
+          "unit": "$",
+          "explain": "$100 − $12 = $88. The fee was the excuse. The card was the theft."
+        },
+        {
+          "id": "sc-rosa-q3",
+          "type": "multiple_choice",
+          "prompt": "What should Rosa do with the link?",
+          "choices": [
+            "Ignore it and trust the app she opened herself",
+            "Pay the $12 so the package moves",
+            "Send the gift-card code and ask for a receipt"
+          ],
+          "answer": 0,
+          "explain": "The app she opened is the real status. The text is the pitch."
+        },
+        {
+          "id": "sc-rosa-q4",
+          "type": "true_false",
+          "prompt": "A real carrier asks you to pay a redelivery fee with a gift card.",
+          "answer": false,
+          "explain": "Gift cards are a scammer’s payment rail."
+        },
+        {
+          "id": "sc-rosa-q5",
+          "type": "multiple_choice",
+          "prompt": "Which lever did the text use hardest?",
+          "choices": [
+            "Urgency: pay now or lose the box",
+            "A paper statement",
+            "A lower deductible"
+          ],
+          "answer": 0,
+          "explain": "The deadline is fake. The package was already coming."
+        }
+      ]
+    },
+    {
+      "id": "sc-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "sc-trial",
+      "type": "boss",
+      "title": "Den Trial: Scams & Fraud",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "sc-trial-q1",
+          "type": "multiple_choice",
+          "prompt": "Which ask is a scam’s favorite payment?",
+          "choices": [
+            "Gift cards or a wire to a stranger",
+            "A bill you already pay each month",
+            "A debit card at the store you are standing in"
+          ],
+          "answer": 0,
+          "explain": "The payment you cannot undo is the one they want."
+        },
+        {
+          "id": "sc-trial-q2",
+          "type": "true_false",
+          "prompt": "Knowing the last four digits of your account proves the caller is your bank.",
+          "answer": false,
+          "explain": "Those digits are not a secret."
+        },
+        {
+          "id": "sc-trial-q3",
+          "type": "number",
+          "prompt": "A phishing text wants two $50 gift cards. How much is that?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$50 × 2 = $100."
+        },
+        {
+          "id": "sc-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "You think a call was a scam. What is the first move?",
+          "choices": [
+            "Stop, and do not read them any code",
+            "Stay on the line until they are satisfied",
+            "Send a small payment to test them"
+          ],
+          "answer": 0,
+          "explain": "The code is the key. Keep it."
+        }
+      ]
+    }
+  ]
+}

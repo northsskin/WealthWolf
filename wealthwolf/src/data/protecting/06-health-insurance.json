@@ -1,0 +1,805 @@
+{
+  "id": "health-insurance",
+  "section": "protecting",
+  "order": 6,
+  "title": "Health Insurance",
+  "description": "Premium, deductible, copay, coinsurance, and the network that changes the bill.",
+  "wolfLine": "The monthly price is not the bill. Read both.",
+  "terms": {
+    "copay": {
+      "term": "Copay",
+      "definition": "A fixed amount you pay for a visit or a prescription. The plan pays the rest of its allowed price.",
+      "example": "A $40 copay at the clinic. The visit’s allowed price is $180. You pay $40."
+    },
+    "coinsurance": {
+      "term": "Coinsurance",
+      "definition": "Your share of a covered bill, as a percent, after the deductible is met.",
+      "example": "The deductible is met. The bill left is $1,000. At 20% coinsurance you pay $200."
+    },
+    "out-of-pocket-maximum": {
+      "term": "Out-of-pocket maximum",
+      "definition": "The most you pay in a year for covered, in-network care. After that, the plan pays 100% of covered costs.",
+      "example": "A $5,000 maximum. Once you have paid $5,000 of deductibles, copays, and coinsurance, covered care costs you $0 for the rest of the year."
+    },
+    "special-enrollment": {
+      "term": "Special enrollment",
+      "definition": "A limited window, generally 60 days, to buy or change health coverage after a qualifying event such as losing other coverage, moving, marrying, or having a baby.",
+      "example": "You lose a job’s health plan on March 1. You generally have 60 days to enroll, instead of waiting for the yearly window."
+    }
+  },
+  "lessons": [
+    {
+      "id": "hl-price",
+      "type": "lesson",
+      "title": "Premium and Deductible",
+      "summary": "One is the yearly ticket. The other is the first part of a bill.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hl-price-q1",
+          "type": "multiple_choice",
+          "context": "A health [[premium]] keeps the plan on. The [[deductible]] is what you pay on covered care before the plan shares the bill.",
+          "prompt": "On a health plan, the premium is:",
+          "choices": [
+            "What you pay to keep the plan active",
+            "The first part of each hospital bill",
+            "A percent of every bill after the deductible"
+          ],
+          "answer": 0,
+          "explain": "You pay it in quiet months too."
+        },
+        {
+          "id": "hl-price-q2",
+          "type": "number",
+          "prompt": "The premium is $150 a month. What is that for a year?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$150 × 12 = $1,800."
+        },
+        {
+          "id": "hl-price-q3",
+          "type": "number",
+          "prompt": "Your deductible is $1,500 and you have paid $400 of it. How much deductible is left?",
+          "answer": 1100,
+          "unit": "$",
+          "explain": "$1,500 − $400 = $1,100."
+        },
+        {
+          "id": "hl-price-q4",
+          "type": "true_false",
+          "prompt": "A year with no doctor visits refunds the premium.",
+          "answer": false,
+          "explain": "The premium bought the plan. It is not a deposit."
+        },
+        {
+          "id": "hl-price-q5",
+          "type": "fill_blank",
+          "prompt": "The deductible is the part of a covered bill you pay ___.",
+          "choices": [
+            "first",
+            "never",
+            "to a stranger"
+          ],
+          "answer": 0,
+          "explain": "Then coinsurance or a copay can take a turn."
+        }
+      ]
+    },
+    {
+      "id": "hl-share",
+      "type": "lesson",
+      "title": "Copay and Coinsurance",
+      "summary": "One is a flat fee. The other is a percent.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hl-share-q1",
+          "type": "multiple_choice",
+          "context": "A [[copay]] is flat. [[Coinsurance]] is a percent after the deductible.",
+          "prompt": "What is a copay?",
+          "choices": [
+            "A fixed dollar amount for a visit or a prescription",
+            "A percent of the hospital bill",
+            "The yearly premium"
+          ],
+          "answer": 0,
+          "explain": "The number does not change with the size of that visit."
+        },
+        {
+          "id": "hl-share-q2",
+          "type": "number",
+          "prompt": "The clinic’s allowed price is $180. Your copay is $40. How much do you pay for that visit?",
+          "answer": 40,
+          "unit": "$",
+          "explain": "A copay is the fixed $40, not a slice of the $180."
+        },
+        {
+          "id": "hl-share-q3",
+          "type": "number",
+          "prompt": "The deductible is already met. Coinsurance is 20% of $1,000. How much do you pay?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$1,000 × 0.20 = $200."
+        },
+        {
+          "id": "hl-share-q4",
+          "type": "number",
+          "prompt": "How much does the plan pay of that $1,000?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "$1,000 − $200 = $800."
+        },
+        {
+          "id": "hl-share-q5",
+          "type": "true_false",
+          "prompt": "Coinsurance is a second premium you pay every month.",
+          "answer": false,
+          "explain": "It shows up on a bill, after the deductible, not on the monthly premium."
+        }
+      ]
+    },
+    {
+      "id": "hl-er",
+      "type": "lesson",
+      "title": "One ER Visit",
+      "summary": "Deductible first. Then the percent. Then the yearly cap.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hl-er-q1",
+          "type": "info",
+          "title": "The bill, in order",
+          "body": "This plan’s ER has no copay. The deductible is **$1,500** and none of it is met. Coinsurance is **20%** after that. The out-of-pocket maximum is **$5,000**.\n\nThe bill is **$2,500**."
+        },
+        {
+          "id": "hl-er-q2",
+          "type": "number",
+          "context": "An [[out-of-pocket maximum]] caps what you pay in a year for covered, in-network care.",
+          "prompt": "How much of the $2,500 goes to the deductible?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "The whole $1,500 deductible is still open."
+        },
+        {
+          "id": "hl-er-q3",
+          "type": "number",
+          "prompt": "Coinsurance applies to the other $1,000. At 20%, how much is that?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$1,000 × 0.20 = $200."
+        },
+        {
+          "id": "hl-er-q4",
+          "type": "number",
+          "prompt": "How much do you pay in total for this visit?",
+          "answer": 1700,
+          "unit": "$",
+          "explain": "$1,500 + $200 = $1,700."
+        },
+        {
+          "id": "hl-er-q5",
+          "type": "number",
+          "prompt": "The out-of-pocket maximum is $5,000. After this $1,700, how much room is left before the plan pays covered care in full?",
+          "answer": 3300,
+          "unit": "$",
+          "explain": "$5,000 − $1,700 = $3,300."
+        },
+        {
+          "id": "hl-er-q6",
+          "type": "true_false",
+          "prompt": "Once you hit the out-of-pocket maximum, the plan pays 100% of covered in-network care for the rest of that year.",
+          "answer": true,
+          "explain": "That is the cap. It does not include the premium, and it does not include care the plan never covered."
+        }
+      ]
+    },
+    {
+      "id": "hl-summary",
+      "type": "lesson",
+      "format": "document",
+      "title": "A Plan Summary",
+      "summary": "Four numbers. Do not mix them up.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hl-summary-q1",
+          "type": "number",
+          "context": "The summary is the cover. The network note matters as much as the dollars.",
+          "doc": {
+            "kind": "statement",
+            "title": "Health plan summary",
+            "subtitle": "In-network",
+            "meta": [
+              [
+                "Coinsurance",
+                "20% after deductible"
+              ],
+              [
+                "Network",
+                "In-network figures only"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prem",
+                "label": "Premium for the year",
+                "amount": 2400.0
+              },
+              {
+                "id": "ded",
+                "label": "Deductible",
+                "amount": 1500.0
+              },
+              {
+                "id": "oop",
+                "label": "Out-of-pocket maximum",
+                "amount": 5000.0
+              },
+              {
+                "id": "copay",
+                "label": "Office-visit copay",
+                "amount": 40.0
+              }
+            ]
+          },
+          "prompt": "What is the yearly premium?",
+          "answer": 2400,
+          "unit": "$",
+          "explain": "That line is $2,400."
+        },
+        {
+          "id": "hl-summary-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Health plan summary",
+            "subtitle": "In-network",
+            "meta": [
+              [
+                "Coinsurance",
+                "20% after deductible"
+              ],
+              [
+                "Network",
+                "In-network figures only"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prem",
+                "label": "Premium for the year",
+                "amount": 2400.0
+              },
+              {
+                "id": "ded",
+                "label": "Deductible",
+                "amount": 1500.0
+              },
+              {
+                "id": "oop",
+                "label": "Out-of-pocket maximum",
+                "amount": 5000.0
+              },
+              {
+                "id": "copay",
+                "label": "Office-visit copay",
+                "amount": 40.0
+              }
+            ]
+          },
+          "prompt": "What is the office-visit copay?",
+          "answer": 40,
+          "unit": "$",
+          "explain": "That line is $40."
+        },
+        {
+          "id": "hl-summary-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Health plan summary",
+            "subtitle": "In-network",
+            "meta": [
+              [
+                "Coinsurance",
+                "20% after deductible"
+              ],
+              [
+                "Network",
+                "In-network figures only"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "prem",
+                "label": "Premium for the year",
+                "amount": 2400.0
+              },
+              {
+                "id": "ded",
+                "label": "Deductible",
+                "amount": 1500.0
+              },
+              {
+                "id": "oop",
+                "label": "Out-of-pocket maximum",
+                "amount": 5000.0
+              },
+              {
+                "id": "copay",
+                "label": "Office-visit copay",
+                "amount": 40.0
+              }
+            ]
+          },
+          "prompt": "What is the out-of-pocket maximum?",
+          "answer": 5000,
+          "unit": "$",
+          "explain": "That line is $5,000."
+        },
+        {
+          "id": "hl-summary-q4",
+          "type": "multiple_choice",
+          "prompt": "Which number is the monthly-style price of keeping the plan, shown here for the year?",
+          "choices": [
+            "The $2,400 premium",
+            "The $40 copay",
+            "The $5,000 maximum"
+          ],
+          "answer": 0,
+          "explain": "The premium is the ticket. The copay is a visit. The maximum is the yearly cap."
+        },
+        {
+          "id": "hl-summary-q5",
+          "type": "true_false",
+          "prompt": "These dollar figures apply to every out-of-network doctor automatically.",
+          "answer": false,
+          "explain": "The page says in-network. Out of network is a different, usually worse, set of numbers."
+        }
+      ]
+    },
+    {
+      "id": "hl-network",
+      "type": "lesson",
+      "title": "In Network or Out",
+      "summary": "The same doctor can be a bargain or a surprise.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hl-network-q1",
+          "type": "multiple_choice",
+          "context": "In-network care uses the plan’s prices. Out-of-network care often costs you more, and it may not count toward the [[out-of-pocket maximum]].",
+          "prompt": "What does in-network mean?",
+          "choices": [
+            "The doctor or hospital has a deal with your plan",
+            "The doctor is the closest one to your house",
+            "The visit is free"
+          ],
+          "answer": 0,
+          "explain": "The deal is why the allowed price is lower."
+        },
+        {
+          "id": "hl-network-q2",
+          "type": "true_false",
+          "prompt": "Going out of network usually costs the same as staying in.",
+          "answer": false,
+          "explain": "The plan’s deal stops at the edge of the network."
+        },
+        {
+          "id": "hl-network-q3",
+          "type": "multiple_choice",
+          "prompt": "You need a specialist. What do you check before the visit?",
+          "choices": [
+            "That they are in network for this plan",
+            "Only that they have a diploma on the wall",
+            "That their office is painted blue"
+          ],
+          "answer": 0,
+          "explain": "A great doctor can still be an out-of-network bill."
+        },
+        {
+          "id": "hl-network-q4",
+          "type": "multiple_choice",
+          "prompt": "An in-network hospital uses an out-of-network surgeon. What is the risk?",
+          "choices": [
+            "Part of the bill may be priced as out of network",
+            "The whole bill is free",
+            "Your premium is refunded"
+          ],
+          "answer": 0,
+          "explain": "The building and the doctor can be on different lists. Ask."
+        },
+        {
+          "id": "hl-network-q5",
+          "type": "fill_blank",
+          "prompt": "Care with a doctor who has a deal with your plan is ___.",
+          "choices": [
+            "in network",
+            "a deductible",
+            "a premium"
+          ],
+          "answer": 0,
+          "explain": "That deal is the discount."
+        }
+      ]
+    },
+    {
+      "id": "hl-sort",
+      "type": "lesson",
+      "format": "sort",
+      "title": "HMO or PPO",
+      "summary": "One plan wants a home base. The other lets you roam.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hl-sort-q1",
+          "type": "sort",
+          "context": "These are two common shapes. An emergency is treated differently from a planned visit.",
+          "prompt": "Which setup is this?",
+          "buckets": [
+            "HMO",
+            "PPO"
+          ],
+          "items": [
+            [
+              "You pick a primary doctor and get referrals to specialists",
+              0
+            ],
+            [
+              "You can see a specialist without a referral",
+              1
+            ],
+            [
+              "The network is usually smaller and the premium often lower",
+              0
+            ],
+            [
+              "The network is usually larger and the premium often higher",
+              1
+            ],
+            [
+              "Out-of-network care is rarely covered, except emergencies",
+              0
+            ]
+          ],
+          "explain": "An HMO is a tighter list and a home doctor. A PPO costs more and lets you move around."
+        },
+        {
+          "id": "hl-sort-q2",
+          "type": "multiple_choice",
+          "prompt": "You want to see a dermatologist without asking a primary doctor first. Which shape fits?",
+          "choices": [
+            "PPO",
+            "HMO",
+            "Neither. Referrals are illegal"
+          ],
+          "answer": 0,
+          "explain": "The PPO is the one that skips the referral."
+        },
+        {
+          "id": "hl-sort-q3",
+          "type": "true_false",
+          "prompt": "An HMO and a PPO always charge the same premium.",
+          "answer": false,
+          "explain": "The PPO’s extra freedom is usually not free."
+        },
+        {
+          "id": "hl-sort-q4",
+          "type": "multiple_choice",
+          "prompt": "You rarely leave one clinic and you want a lower premium. Which shape is built for that?",
+          "choices": [
+            "HMO",
+            "PPO",
+            "A policy with no network at all"
+          ],
+          "answer": 0,
+          "explain": "A smaller list is the HMO’s bargain."
+        },
+        {
+          "id": "hl-sort-q5",
+          "type": "fill_blank",
+          "prompt": "An HMO usually asks you to start with a ___ doctor.",
+          "choices": [
+            "primary",
+            "retired",
+            "out-of-network"
+          ],
+          "answer": 0,
+          "explain": "That doctor is the front door."
+        }
+      ]
+    },
+    {
+      "id": "hl-choose",
+      "type": "lesson",
+      "format": "call",
+      "title": "Two Plans",
+      "summary": "A quiet year and a sick year pick different winners.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "hl-choose-q1",
+          "type": "number",
+          "context": "Same coinsurance. The premium and the deductible are the contrast.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Plan A",
+              "subtitle": "Lower deductible",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium per month",
+                  "amount": 240.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Deductible",
+                  "amount": 500.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Plan B",
+              "subtitle": "Lower premium",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium per month",
+                  "amount": 90.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Deductible",
+                  "amount": 3000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What is Plan A’s premium for a year?",
+          "answer": 2880,
+          "unit": "$",
+          "explain": "$240 × 12 = $2,880."
+        },
+        {
+          "id": "hl-choose-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Plan A",
+              "subtitle": "Lower deductible",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium per month",
+                  "amount": 240.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Deductible",
+                  "amount": 500.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Plan B",
+              "subtitle": "Lower premium",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium per month",
+                  "amount": 90.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Deductible",
+                  "amount": 3000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What is Plan B’s premium for a year?",
+          "answer": 1080,
+          "unit": "$",
+          "explain": "$90 × 12 = $1,080."
+        },
+        {
+          "id": "hl-choose-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Plan A",
+              "subtitle": "Lower deductible",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium per month",
+                  "amount": 240.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Deductible",
+                  "amount": 500.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Plan B",
+              "subtitle": "Lower premium",
+              "lines": [
+                {
+                  "id": "prem",
+                  "label": "Premium per month",
+                  "amount": 90.0
+                },
+                {
+                  "id": "ded",
+                  "label": "Deductible",
+                  "amount": 3000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much more premium does Plan A cost per year?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$2,880 − $1,080 = $1,800."
+        },
+        {
+          "id": "hl-choose-q4",
+          "type": "multiple_choice",
+          "prompt": "You expect almost no care. Which plan costs less if that comes true?",
+          "choices": [
+            "Plan B",
+            "Plan A",
+            "They match"
+          ],
+          "answer": 0,
+          "explain": "With no bills you pay the premium. $1,080 is less than $2,880."
+        },
+        {
+          "id": "hl-choose-q5",
+          "type": "multiple_choice",
+          "prompt": "You expect a large bill and you want the smaller deductible. Which plan is that?",
+          "choices": [
+            "Plan A",
+            "Plan B",
+            "Neither has a deductible"
+          ],
+          "answer": 0,
+          "why": [
+            "$500 against $3,000.",
+            "B is the cheap premium, not the small deductible.",
+            "Both lists show a deductible."
+          ],
+          "explain": "A’s deductible is $500. B’s is $3,000."
+        },
+        {
+          "id": "hl-choose-q6",
+          "type": "true_false",
+          "prompt": "The lower premium is the better plan for every person.",
+          "answer": false,
+          "explain": "It wins a quiet year. A big bill can make the low deductible worth the extra premium."
+        }
+      ]
+    },
+    {
+      "id": "hl-luis",
+      "type": "lesson",
+      "format": "story",
+      "title": "Luis on the Marketplace",
+      "summary": "The yearly window is posted. A life change can open a shorter one.",
+      "xp": 10,
+      "story": {
+        "title": "The window and the discount",
+        "character": "Luis, 26, barista",
+        "body": "Luis’s café does not offer health insurance. He has been uninsured since he turned 26 and left a parent’s plan. The yearly [[open enrollment|open-enrollment]] window for work benefits is not his door. His door is HealthCare.gov, and he should check that site for this year’s dates.\n\nIn this example a plan’s premium is **$180** a month. An income-based discount brings his example premium to **$70**. He also learns that losing coverage, moving, marrying, or having a baby can open a special enrollment period of generally **60** days."
+      },
+      "steps": [
+        {
+          "id": "hl-luis-q1",
+          "type": "number",
+          "context": "[[Special enrollment]] is the extra window, generally 60 days, after a qualifying event. Income-based Marketplace discounts are real, and the dollar amount depends on the year and the household.",
+          "prompt": "In the example, how much less is the discounted premium per month?",
+          "answer": 110,
+          "unit": "$",
+          "explain": "$180 − $70 = $110."
+        },
+        {
+          "id": "hl-luis-q2",
+          "type": "number",
+          "prompt": "How much is that example discount over 12 months?",
+          "answer": 1320,
+          "unit": "$",
+          "explain": "$110 × 12 = $1,320."
+        },
+        {
+          "id": "hl-luis-q3",
+          "type": "number",
+          "prompt": "A special enrollment period is generally how many days?",
+          "answer": 60,
+          "unit": "days",
+          "explain": "About 60 days after the qualifying event. Check HealthCare.gov for the rule that applies to you."
+        },
+        {
+          "id": "hl-luis-q4",
+          "type": "multiple_choice",
+          "prompt": "Luis loses no job coverage, does not move, and does not have a baby. He simply waited. What is true?",
+          "choices": [
+            "He uses the yearly window posted on HealthCare.gov, not a special enrollment period",
+            "He can enroll any Tuesday",
+            "A text message can sell him a legal exception"
+          ],
+          "answer": 0,
+          "explain": "Special enrollment needs a qualifying event. The yearly window is the ordinary door."
+        },
+        {
+          "id": "hl-luis-q5",
+          "type": "true_false",
+          "prompt": "An income-based discount is the same dollar amount for every shopper.",
+          "answer": false,
+          "explain": "It depends on income, household, and the year’s rules."
+        }
+      ]
+    },
+    {
+      "id": "hl-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "hl-trial",
+      "type": "boss",
+      "title": "Den Trial: Health Insurance",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "hl-trial-q1",
+          "type": "number",
+          "prompt": "Premium $200 a month. What is the yearly premium?",
+          "answer": 2400,
+          "unit": "$",
+          "explain": "$200 × 12 = $2,400."
+        },
+        {
+          "id": "hl-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "The deductible is met. You owe 20% of a $500 covered bill. What is that share called?",
+          "choices": [
+            "Coinsurance",
+            "The premium",
+            "A state minimum"
+          ],
+          "answer": 0,
+          "explain": "A percent after the deductible is coinsurance."
+        },
+        {
+          "id": "hl-trial-q3",
+          "type": "true_false",
+          "prompt": "Out-of-network care usually costs the same as in-network care.",
+          "answer": false,
+          "explain": "The plan’s prices stop at the network."
+        },
+        {
+          "id": "hl-trial-q4",
+          "type": "number",
+          "prompt": "Out-of-pocket maximum $4,000. You have paid $2,500. How much room is left?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$4,000 − $2,500 = $1,500."
+        }
+      ]
+    }
+  ]
+}

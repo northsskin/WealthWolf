@@ -39,6 +39,19 @@
     }
   },
   {
+    "id": "protecting",
+    "order": 4,
+    "title": "Protecting What You Have",
+    "description": "Scams, identity theft and insurance: keep one bad day from undoing years of work.",
+    "trial": {
+      "id": "pr-section-trial",
+      "title": "Section Trial: Protecting What You Have",
+      "summary": "Twelve questions from the whole section. Three strikes and you’re out.",
+      "xp": 50,
+      "draw": 12
+    }
+  },
+  {
     "id": "investing",
     "order": 7,
     "title": "Investing",
