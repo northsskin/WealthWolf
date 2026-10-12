@@ -1,0 +1,640 @@
+{
+  "id": "allocation",
+  "section": "investing",
+  "order": 5,
+  "title": "Diversification & Asset Allocation",
+  "description": "Spread out, then match the mix to the date you need the money.",
+  "wolfLine": "One company is a bet. A mix is a plan.",
+  "terms": {
+    "diversification": {
+      "term": "Diversification",
+      "definition": "Spreading your money across lots of different investments, so one bad one cannot sink you.",
+      "example": "An index fund that holds hundreds of companies."
+    },
+    "concentration-risk": {
+      "term": "Concentration risk",
+      "definition": "Having too much money in one place. If that one thing fails, you lose a lot.",
+      "example": "All your savings in the company you work for."
+    },
+    "asset-allocation": {
+      "term": "Asset allocation",
+      "definition": "How you split a portfolio among types of investments, such as stocks and bonds. The split follows the timeline.",
+      "example": "80% stocks and 20% bonds for a goal that is decades away."
+    },
+    "rebalancing": {
+      "term": "Rebalancing",
+      "definition": "Putting the split back to its target after markets move it. You sell some of what grew and buy some of what lagged.",
+      "example": "Stocks grew to 90% of a portfolio whose target is 80%. Selling the extra 10% is rebalancing."
+    }
+  },
+  "lessons": [
+    {
+      "id": "iv-diversification",
+      "type": "lesson",
+      "title": "Diversification",
+      "summary": "Don’t let one bad bet sink the pack.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "iv-diversification-q1",
+          "type": "multiple_choice",
+          "context": "[[Diversification]] means spreading your money across lots of different investments, so one bad one can’t sink you.",
+          "prompt": "Which portfolio is more diversified?",
+          "choices": [
+            "All your money in one company",
+            "An index fund holding hundreds of companies",
+            "Three companies in the same industry"
+          ],
+          "answer": 1,
+          "explain": "Hundreds of companies means no single one can wipe you out. That spread is [[diversification]]."
+        },
+        {
+          "id": "iv-diversification-q2",
+          "type": "multiple_choice",
+          "context": "Having too much money in one place is called [[concentration risk]]. If that one thing fails, you lose big.",
+          "prompt": "Which of these has the most concentration risk?",
+          "choices": [
+            "A global index fund",
+            "A mix of stocks and bonds",
+            "All your savings in the company you work for"
+          ],
+          "answer": 2,
+          "explain": "[[Concentration risk]] is the pile in one place. If that company struggles, the job and the savings can fail together."
+        },
+        {
+          "id": "iv-diversification-q3",
+          "type": "true_false",
+          "prompt": "A diversified portfolio can never lose money.",
+          "answer": false,
+          "explain": "When everything falls, it falls too. Just less painfully than one bad bet."
+        },
+        {
+          "id": "iv-diversification-q4",
+          "type": "match",
+          "prompt": "Match each way to diversify with an example.",
+          "pairs": [
+            [
+              "Companies",
+              "Hundreds of businesses, not one"
+            ],
+            [
+              "Industries",
+              "Tech, healthcare and energy"
+            ],
+            [
+              "Countries",
+              "Your home country plus others"
+            ],
+            [
+              "Investment types",
+              "Stocks and bonds"
+            ]
+          ]
+        },
+        {
+          "id": "iv-diversification-q5",
+          "type": "multiple_choice",
+          "prompt": "Why mix stocks and bonds in one portfolio?",
+          "choices": [
+            "They often move differently, which smooths out the ride",
+            "Bonds always beat stocks",
+            "It removes all risk"
+          ],
+          "answer": 0,
+          "explain": "When one dips, the other often holds steadier. The mix is not a promise."
+        },
+        {
+          "id": "iv-diversification-q6",
+          "type": "fill_blank",
+          "prompt": "Spreading your money across many investments is called ___.",
+          "choices": [
+            "concentration",
+            "diversification",
+            "budgeting"
+          ],
+          "answer": 1,
+          "explain": "Spread out so no single hit takes you down."
+        }
+      ]
+    },
+    {
+      "id": "aa-horizon",
+      "type": "lesson",
+      "format": "story",
+      "title": "Allocation and Time",
+      "summary": "The years pick the mix.",
+      "xp": 10,
+      "story": {
+        "title": "Two piles",
+        "character": "Dee, 29, dental hygienist",
+        "body": "Dee has two piles of **$5,000**. One is a house down payment in **3 years**. The other is retirement in about **35 years**.\n\nThe 3-year pile stays mostly cash. The 35-year pile can be mostly stocks."
+      },
+      "steps": [
+        {
+          "id": "aa-horizon-q1",
+          "type": "info",
+          "title": "Meet Dee",
+          "body": "Dee is 29 and a dental hygienist. She has two piles, $5,000 each. One is a house down payment in 3 years. The other is retirement in about 35 years.\n\n[[Asset allocation]] is the split. The 3-year pile wants to stay mostly cash. The 35-year pile can hold mostly [[stock]]s, with some [[bond]]s."
+        },
+        {
+          "id": "aa-horizon-q2",
+          "type": "multiple_choice",
+          "prompt": "Which pile can hold mostly stocks?",
+          "choices": [
+            "The house money she needs in 3 years",
+            "The retirement money she will not use for about 35 years",
+            "Both, because stocks cannot fall for 3 years"
+          ],
+          "answer": 1,
+          "explain": "Decades can ride out drops. Three years cannot."
+        },
+        {
+          "id": "aa-horizon-q3",
+          "type": "number",
+          "prompt": "Dee’s house pile is $5,000 and she keeps it in cash. How many dollars of that pile are not in stocks?",
+          "answer": 5000,
+          "unit": "$",
+          "explain": "All $5,000 stays out of stocks. The timeline is too short."
+        },
+        {
+          "id": "aa-horizon-q4",
+          "type": "true_false",
+          "prompt": "The same split fits every goal, no matter when you need the money.",
+          "answer": false,
+          "explain": "Asset allocation follows the timeline. Soon money and later money are different jobs."
+        },
+        {
+          "id": "aa-horizon-q5",
+          "type": "multiple_choice",
+          "prompt": "What is asset allocation?",
+          "choices": [
+            "The split among types of investments",
+            "The ticker of one stock",
+            "The tax on a dividend"
+          ],
+          "answer": 0,
+          "explain": "Stocks, bonds, and cash, in proportions that match when you need the money."
+        }
+      ]
+    },
+    {
+      "id": "aa-mixes",
+      "type": "lesson",
+      "title": "Mixes and Swings",
+      "summary": "More stocks, a wider year.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "aa-mixes-q1",
+          "type": "info",
+          "title": "Two familiar mixes",
+          "body": "A mix that is 90% [[stock]]s and 10% [[bond]]s will usually swing more in a bad year than a mix that is 60% stocks and 40% bonds. Historically, on average, the stock-heavier mix has also grown more over many decades. That is the trade. It is not a forecast for next year."
+        },
+        {
+          "id": "aa-mixes-q2",
+          "type": "multiple_choice",
+          "prompt": "Which mix usually swings more in a single bad year?",
+          "choices": [
+            "90% stocks and 10% bonds",
+            "60% stocks and 40% bonds",
+            "They are required to fall the same amount"
+          ],
+          "answer": 0,
+          "explain": "More stocks, wider swings. The bonds are the calmer slice."
+        },
+        {
+          "id": "aa-mixes-q3",
+          "type": "number",
+          "prompt": "A $10,000 portfolio is 60% stocks. How many dollars are in stocks?",
+          "answer": 6000,
+          "unit": "$",
+          "explain": "0.60 × $10,000 = $6,000. The other $4,000 is the bond slice."
+        },
+        {
+          "id": "aa-mixes-q4",
+          "type": "number",
+          "prompt": "The same $10,000 is 90% stocks. How many dollars are in stocks?",
+          "answer": 9000,
+          "unit": "$",
+          "explain": "0.90 × $10,000 = $9,000."
+        },
+        {
+          "id": "aa-mixes-q5",
+          "type": "true_false",
+          "prompt": "The calmer mix is always the better one.",
+          "answer": false,
+          "explain": "Calmer fits a nearer goal. A far-off goal can accept the wider swing for the chance of more growth."
+        }
+      ]
+    },
+    {
+      "id": "aa-rebalance",
+      "type": "lesson",
+      "title": "Rebalancing",
+      "summary": "Put the split back.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "aa-rebalance-q1",
+          "type": "info",
+          "title": "The target drifted",
+          "body": "Your target [[asset allocation]] is 80% stocks and 20% bonds, on $10,000. Stocks had a big year. You now have $9,000 in stocks and $1,000 in bonds. Stocks are 90% of the pile. [[Rebalancing]] sells some of what grew and buys some of what lagged, back to the target."
+        },
+        {
+          "id": "aa-rebalance-q2",
+          "type": "number",
+          "prompt": "On $10,000, how many dollars of stocks is an 80% target?",
+          "answer": 8000,
+          "unit": "$",
+          "explain": "0.80 × $10,000 = $8,000."
+        },
+        {
+          "id": "aa-rebalance-q3",
+          "type": "number",
+          "prompt": "You have $9,000 in stocks and the target is $8,000. How many dollars of stocks do you sell?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "$9,000 − $8,000 = $1,000."
+        },
+        {
+          "id": "aa-rebalance-q4",
+          "type": "number",
+          "prompt": "Bonds are $1,000 and the 20% target on $10,000 is $2,000. How many dollars of bonds do you buy?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "$2,000 − $1,000 = $1,000. The sale of stocks pays for the bonds."
+        },
+        {
+          "id": "aa-rebalance-q5",
+          "type": "true_false",
+          "prompt": "Rebalancing means chasing whatever rose the most and buying more of it.",
+          "answer": false,
+          "explain": "It does the opposite. You trim what grew past the target and top up what fell behind."
+        }
+      ]
+    },
+    {
+      "id": "aa-world",
+      "type": "lesson",
+      "title": "Other Countries",
+      "summary": "Home is not the whole list.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "aa-world-q1",
+          "type": "info",
+          "title": "Beyond one country",
+          "body": "A fund of US companies is [[diversification]] across those companies. It is not diversification across the world. Other countries have other companies, other currencies, and other bad years. Adding them does not promise a higher return. It means one country’s slump is not your entire stock pile."
+        },
+        {
+          "id": "aa-world-q2",
+          "type": "multiple_choice",
+          "prompt": "A fund that holds only US companies is diversified across what?",
+          "choices": [
+            "Many US companies, and not the rest of the world",
+            "Every stock market on earth",
+            "Stocks and bonds in equal parts"
+          ],
+          "answer": 0,
+          "explain": "Many companies, one country. International funds are the other countries."
+        },
+        {
+          "id": "aa-world-q3",
+          "type": "true_false",
+          "prompt": "Adding international stocks guarantees a smoother year.",
+          "answer": false,
+          "explain": "Other markets fall too, sometimes in the same year. The point is that they are not the same bet."
+        },
+        {
+          "id": "aa-world-q4",
+          "type": "multiple_choice",
+          "prompt": "Why include countries besides your own?",
+          "choices": [
+            "Because foreign stocks cannot fall",
+            "So one country’s bad decade is not the whole stock pile",
+            "Because a US fund is illegal"
+          ],
+          "answer": 1,
+          "explain": "The world is a bigger list. It is still stocks, with stock risk."
+        },
+        {
+          "id": "aa-world-q5",
+          "type": "number",
+          "prompt": "A $10,000 stock pile is 70% US and 30% international. How many dollars are international?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "0.30 × $10,000 = $3,000."
+        }
+      ]
+    },
+    {
+      "id": "aa-tolerance",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Risk Tolerance",
+      "summary": "The timeline, and whether you can sleep.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "aa-tolerance-q1",
+          "type": "info",
+          "title": "Two questions",
+          "body": "Risk tolerance is how much of a drop you can hold through. The timeline still comes first. A 30-year goal can use a wide swing even if a bad month feels awful. A 2-year goal cannot, no matter how calm you feel today."
+        },
+        {
+          "id": "aa-tolerance-q2",
+          "type": "sort",
+          "prompt": "Which timeline is this money on?",
+          "buckets": [
+            "Need it soon",
+            "Can leave it for decades"
+          ],
+          "items": [
+            [
+              "A house down payment in 2 years",
+              0
+            ],
+            [
+              "Retirement about 30 years away",
+              1
+            ],
+            [
+              "Tuition due next semester",
+              0
+            ],
+            [
+              "Money you will not touch until your 60s",
+              1
+            ]
+          ],
+          "explain": "Soon money stays steady. Decades can take the stock swings."
+        },
+        {
+          "id": "aa-tolerance-q3",
+          "type": "multiple_choice",
+          "prompt": "You feel brave, and you need the money in 18 months. What wins?",
+          "choices": [
+            "The brave feeling",
+            "The 18-month timeline",
+            "Last year’s best stock"
+          ],
+          "answer": 1,
+          "explain": "Feeling brave does not make a short timeline long. The bill still arrives."
+        },
+        {
+          "id": "aa-tolerance-q4",
+          "type": "true_false",
+          "prompt": "A long timeline means a crash will not bother you.",
+          "answer": false,
+          "explain": "It can bother you. The long timeline means you do not have to sell during it."
+        },
+        {
+          "id": "aa-tolerance-q5",
+          "type": "fill_blank",
+          "prompt": "How much of a drop you can hold through is called risk ___.",
+          "choices": [
+            "tolerance",
+            "yield",
+            "ticker"
+          ],
+          "answer": 0,
+          "explain": "Tolerance. It sits next to the timeline. It does not replace it."
+        }
+      ]
+    },
+    {
+      "id": "aa-goal",
+      "type": "lesson",
+      "format": "call",
+      "title": "A Mix for a Goal",
+      "summary": "Pick the page that matches the date.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "aa-goal-q1",
+          "type": "info",
+          "title": "Match the date",
+          "body": "The two-year page is cash, because a drop would hit the goal. The thirty-year page is 80% stocks and 20% bonds. Same person can own both. The goals are different."
+        },
+        {
+          "id": "aa-goal-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Goal in two years",
+              "subtitle": "The money has a near date",
+              "lines": [
+                {
+                  "id": "cash",
+                  "label": "Savings",
+                  "amount": 10000.0
+                },
+                {
+                  "id": "stock",
+                  "label": "Stocks",
+                  "amount": 0.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Goal in thirty years",
+              "subtitle": "The money can wait",
+              "lines": [
+                {
+                  "id": "stock",
+                  "label": "Stocks",
+                  "amount": 8000.0
+                },
+                {
+                  "id": "bond",
+                  "label": "Bonds",
+                  "amount": 2000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Which page fits a house down payment in two years?",
+          "choices": [
+            "Goal in two years",
+            "Goal in thirty years"
+          ],
+          "answer": 0,
+          "explain": "Two years wants the cash page. The stock-heavy page is for the goal that can wait thirty years."
+        },
+        {
+          "id": "aa-goal-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Goal in thirty years",
+            "subtitle": "The money can wait",
+            "lines": [
+              {
+                "id": "stock",
+                "label": "Stocks",
+                "amount": 8000.0
+              },
+              {
+                "id": "bond",
+                "label": "Bonds",
+                "amount": 2000.0
+              }
+            ]
+          },
+          "prompt": "On the thirty-year page, how many dollars are in bonds?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "The bond slice is $2,000, which is 20% of $10,000."
+        },
+        {
+          "id": "aa-goal-q4",
+          "type": "true_false",
+          "prompt": "The thirty-year mix is also the right mix for the house.",
+          "answer": false,
+          "explain": "The house date is two years. That page stays in savings."
+        },
+        {
+          "id": "aa-goal-q5",
+          "type": "multiple_choice",
+          "prompt": "What changed between the pages?",
+          "choices": [
+            "The person",
+            "When the money is needed",
+            "The ticker of a single stock"
+          ],
+          "answer": 1,
+          "explain": "Asset allocation follows the date. One person, two dates, two mixes."
+        }
+      ]
+    },
+    {
+      "id": "aa-ben",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Ben’s Lopsided Portfolio",
+      "summary": "The job and the stock are the same bet.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "aa-ben-q1",
+          "type": "info",
+          "title": "One employer, twice",
+          "body": "Ben is 31 and an electrician. $8,000 of his $10,000 portfolio is stock in the company that pays him. If that company stumbles, he can lose the job and the $8,000 together. That is [[concentration risk]]."
+        },
+        {
+          "id": "aa-ben-q2",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "Ben’s portfolio",
+            "subtitle": "Most of it rides on one employer",
+            "lines": [
+              {
+                "id": "job",
+                "label": "Stock in the company that employs him",
+                "amount": 8000.0
+              },
+              {
+                "id": "fund",
+                "label": "Broad stock fund",
+                "amount": 2000.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total",
+                "amount": 10000.0
+              }
+            ]
+          },
+          "prompt": "Which line is the concentration?",
+          "answer": "job",
+          "explain": "The $8,000 employer stock is the pile in one place. The broad fund is the smaller, spread-out line."
+        },
+        {
+          "id": "aa-ben-q3",
+          "type": "number",
+          "prompt": "What percent of Ben’s $10,000 is the employer stock?",
+          "answer": 80,
+          "unit": "%",
+          "explain": "$8,000 ÷ $10,000 = 0.80, which is 80%."
+        },
+        {
+          "id": "aa-ben-q4",
+          "type": "multiple_choice",
+          "prompt": "What is the danger in that 80%?",
+          "choices": [
+            "The broad fund might be boring",
+            "A bad year for the employer can hit his paycheck and his portfolio",
+            "Bonds pay coupons"
+          ],
+          "answer": 1,
+          "explain": "The job and the stock are the same company. Diversification wants them unlinked."
+        },
+        {
+          "id": "aa-ben-q5",
+          "type": "true_false",
+          "prompt": "Ben is diversified because he also owns $2,000 of a broad fund.",
+          "answer": false,
+          "explain": "The $2,000 helps a little. $8,000 in one employer is still the concentrated pile."
+        }
+      ]
+    },
+    {
+      "id": "aa-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "aa-trial",
+      "type": "boss",
+      "title": "Den Trial: Diversification & Asset Allocation",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "aa-trial-q1",
+          "type": "number",
+          "prompt": "A $20,000 portfolio targets 70% stocks. How many dollars of stocks is that?",
+          "answer": 14000,
+          "unit": "$",
+          "explain": "0.70 × $20,000 = $14,000."
+        },
+        {
+          "id": "aa-trial-q2",
+          "type": "true_false",
+          "prompt": "Rebalancing means buying more of whatever just went up.",
+          "answer": false,
+          "explain": "You trim what grew past the target and add to what fell behind it."
+        },
+        {
+          "id": "aa-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "Which is the clearest concentration risk?",
+          "choices": [
+            "A global stock fund",
+            "90% of your portfolio in your employer’s stock",
+            "A mix of stocks and bonds"
+          ],
+          "answer": 1,
+          "explain": "One employer can take the job and the savings in the same bad year."
+        },
+        {
+          "id": "aa-trial-q4",
+          "type": "number",
+          "prompt": "Stocks drifted to $9,000 of a $10,000 portfolio. The target is $7,500. How many dollars of stocks do you sell to get back?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$9,000 − $7,500 = $1,500."
+        }
+      ]
+    }
+  ]
+}

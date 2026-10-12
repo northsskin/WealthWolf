@@ -1,0 +1,552 @@
+{
+  "id": "psychology",
+  "section": "investing",
+  "order": 9,
+  "title": "Investor Psychology",
+  "description": "Crashes, biases, and the rules you write before you need them.",
+  "wolfLine": "The screen is loud. The written rule is the plan.",
+  "terms": {
+    "recency-bias": {
+      "term": "Recency bias",
+      "definition": "Treating the latest stretch as the way things always go. A great year feels permanent. A crash feels permanent too.",
+      "example": "Last year was down, so you conclude stocks are finished."
+    },
+    "survivorship-bias": {
+      "term": "Survivorship bias",
+      "definition": "Noticing only the investments that made it, and forgetting the ones that died. A list of winners is not the list you could have picked from in advance.",
+      "example": "A “best stocks of the decade” list leaves out the companies that went to zero."
+    }
+  },
+  "lessons": [
+    {
+      "id": "ip-crash",
+      "type": "lesson",
+      "format": "document",
+      "title": "A Real Crash",
+      "summary": "The drop was real. So was the recovery.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ip-crash-q1",
+          "type": "info",
+          "title": "2007 to 2009, then 2013",
+          "body": "From its October 2007 peak to March 2009, the S&P 500 fell about 57%. Someone who sold at the bottom locked that loss in. The index regained its old peak in 2013. Holding was miserable, and it was how a holder of that index got the old price back. This is history, not a promise that the next drop will rhyme.\n\nThe page uses a round 50% so the next lesson’s math is clean. The historical drop was about 57%."
+        },
+        {
+          "id": "ip-crash-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "An example 50% drop",
+            "subtitle": "A round number, so the math is visible",
+            "lines": [
+              {
+                "id": "then",
+                "label": "Value before the drop",
+                "amount": 10000.0
+              },
+              {
+                "id": "now",
+                "label": "Value after a 50% drop",
+                "amount": 5000.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Dollars missing",
+                "amount": -5000.0
+              }
+            ],
+            "note": "From the October 2007 peak to March 2009, the S&P 500 fell about 57%. It regained that old peak in 2013."
+          },
+          "prompt": "On the example page, a $10,000 portfolio falls 50%. How many dollars are left?",
+          "answer": 5000,
+          "unit": "$",
+          "explain": "$10,000 × 0.50 = $5,000 left. The historical S&P 500 drop was about 57%, which is harsher than this round example."
+        },
+        {
+          "id": "ip-crash-q3",
+          "type": "number",
+          "prompt": "Using the course’s round figure of about 57%, how many dollars does a $10,000 investment lose?",
+          "answer": 5700,
+          "unit": "$",
+          "explain": "About 57% of $10,000 is $5,700. About $4,300 would be left. “About” matters. The real peak-to-bottom figure was roughly that."
+        },
+        {
+          "id": "ip-crash-q4",
+          "type": "true_false",
+          "prompt": "Because the S&P 500 later regained its 2007 peak, every future crash will recover on the same calendar.",
+          "answer": false,
+          "explain": "2013 is a fact about that decline. It is not a schedule you can count on next time."
+        },
+        {
+          "id": "ip-crash-q5",
+          "type": "multiple_choice",
+          "prompt": "What did selling at the March 2009 bottom do?",
+          "choices": [
+            "It avoided a loss that had not happened yet",
+            "It locked the drop in, and the holder missed the later recovery",
+            "It is what SIPC is for"
+          ],
+          "answer": 1,
+          "explain": "The loss becomes permanent when you sell. The people who held the index were the ones still there in 2013."
+        }
+      ]
+    },
+    {
+      "id": "ip-back",
+      "type": "lesson",
+      "title": "Getting Back to Even",
+      "summary": "A 50% drop asks for a 100% gain.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ip-back-q1",
+          "type": "info",
+          "title": "The hill is steeper",
+          "body": "The example portfolio fell from $10,000 to $5,000. Getting back to $10,000 means the $5,000 has to double. That is a 100% gain, not a 50% gain. This is why panic-selling at the bottom is so expensive, and why the percent down is not the percent required to recover."
+        },
+        {
+          "id": "ip-back-q2",
+          "type": "number",
+          "prompt": "A $10,000 portfolio falls 50%. How many dollars is it worth?",
+          "answer": 5000,
+          "unit": "$",
+          "explain": "$10,000 − $5,000 = $5,000."
+        },
+        {
+          "id": "ip-back-q3",
+          "type": "number",
+          "prompt": "What percent gain turns $5,000 back into $10,000?",
+          "answer": 100,
+          "unit": "%",
+          "explain": "$5,000 × 2 = $10,000. That is a 100% gain. A 50% gain would only reach $7,500."
+        },
+        {
+          "id": "ip-back-q4",
+          "type": "number",
+          "prompt": "A 50% gain on the $5,000 would reach how many dollars?",
+          "answer": 7500,
+          "unit": "$",
+          "explain": "$5,000 × 1.50 = $7,500. Still $2,500 short of where you started."
+        },
+        {
+          "id": "ip-back-q5",
+          "type": "true_false",
+          "prompt": "After a 50% drop, a 50% rise gets you back to even.",
+          "answer": false,
+          "explain": "Fifty percent of the smaller number is not fifty percent of the original. You need a 100% gain."
+        }
+      ]
+    },
+    {
+      "id": "ip-timing",
+      "type": "lesson",
+      "title": "Timing the Market",
+      "summary": "Out at the bottom, gone for the rebound.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ip-timing-q1",
+          "type": "info",
+          "title": "The expensive part",
+          "body": "Timing means jumping out and back in. In the example, you sell at $5,000 and sit in cash. The recovery to $10,000 happens without you. You still have $5,000. The person who held has their $10,000 back. Historically, on average, the rebounds have been bunched into short stretches. Missing them is the cost of waiting for “calm.”"
+        },
+        {
+          "id": "ip-timing-q2",
+          "type": "number",
+          "prompt": "You sell at $5,000 and the held portfolio recovers to $10,000. How many dollars behind is the cash?",
+          "answer": 5000,
+          "unit": "$",
+          "explain": "$10,000 − $5,000 = $5,000. That gap is the rebound you were not in for."
+        },
+        {
+          "id": "ip-timing-q3",
+          "type": "true_false",
+          "prompt": "Waiting for a calm market has been a free way to keep the gains and skip the drops.",
+          "answer": false,
+          "explain": "The drops and the rebounds are mixed together. Sitting out to feel calm often skips the rebound too."
+        },
+        {
+          "id": "ip-timing-q4",
+          "type": "multiple_choice",
+          "prompt": "Your goal is 25 years away and prices just fell. What matches “time in the market”?",
+          "choices": [
+            "Sell and wait for a headline that says it is safe",
+            "Stay invested and keep the schedule",
+            "Move everything into one stock that fell less"
+          ],
+          "answer": 1,
+          "explain": "The schedule is the plan. The headline is not."
+        },
+        {
+          "id": "ip-timing-q5",
+          "type": "fill_blank",
+          "prompt": "Jumping in and out is called ___ the market.",
+          "choices": [
+            "timing",
+            "diversifying",
+            "vesting"
+          ],
+          "answer": 0,
+          "explain": "Timing. Time in the market is the opposite habit: stay in."
+        }
+      ]
+    },
+    {
+      "id": "ip-fomo",
+      "type": "lesson",
+      "title": "FOMO and Hype",
+      "summary": "A big recent gain is not an invitation.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ip-fomo-q1",
+          "type": "info",
+          "title": "The feeling",
+          "body": "FOMO is the fear of missing out. A stock, a coin, or a fund doubles, and the stories arrive. Buying because the price already ran is a feeling, not a plan. The person who bought earlier is not proof that buying now works. This course will not name a hot investment."
+        },
+        {
+          "id": "ip-fomo-q2",
+          "type": "multiple_choice",
+          "prompt": "A stock rose 80% last month and your group chat is loud. What is the solid reading?",
+          "choices": [
+            "It has to rise another 80%",
+            "The rise already happened, and it is not a forecast",
+            "SIPC covers the next drop"
+          ],
+          "answer": 1,
+          "explain": "Past rise, past. The chat is not research."
+        },
+        {
+          "id": "ip-fomo-q3",
+          "type": "true_false",
+          "prompt": "If everyone you know is buying it, the risk is gone.",
+          "answer": false,
+          "explain": "A crowd can be early or late. Popularity is not a margin of safety."
+        },
+        {
+          "id": "ip-fomo-q4",
+          "type": "number",
+          "prompt": "You put $500 into a hyped idea and it falls 60%. How many dollars are left?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$500 × 0.40 = $200. The story did not change the math."
+        },
+        {
+          "id": "ip-fomo-q5",
+          "type": "multiple_choice",
+          "prompt": "What belongs in the plan instead of the group chat?",
+          "choices": [
+            "The goal, the date, and the mix you already wrote",
+            "Whichever ticker is loudest today",
+            "A loan, so you can buy more of the hype"
+          ],
+          "answer": 0,
+          "explain": "The written plan. Hype is a feeling with a price."
+        }
+      ]
+    },
+    {
+      "id": "ip-bias",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Two Tricks of Memory",
+      "summary": "The latest year, and the winners you can see.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ip-bias-q1",
+          "type": "info",
+          "title": "What your brain keeps",
+          "body": "[[Recency bias]] treats the latest stretch as destiny. [[Survivorship bias]] stares at the winners and forgets the investments that went to zero. A bad year is a bad year. A list of successes is not the menu you actually had."
+        },
+        {
+          "id": "ip-bias-q2",
+          "type": "sort",
+          "prompt": "What kind of thinking is this?",
+          "buckets": [
+            "Recency bias",
+            "Survivorship bias",
+            "A real change of plan"
+          ],
+          "items": [
+            [
+              "Last year was awful, so stocks are finished forever",
+              0
+            ],
+            [
+              "A list of the decade’s winners, with the dead companies left off",
+              1
+            ],
+            [
+              "You now need the money in 2 years, not 30",
+              2
+            ],
+            [
+              "The last 12 months were great, so every year will be",
+              0
+            ]
+          ],
+          "explain": "The latest year is recency. The edited winner list is survivorship. A new date for the money is an actual change."
+        },
+        {
+          "id": "ip-bias-q3",
+          "type": "true_false",
+          "prompt": "A “best of the decade” list shows every company you could have bought at the start.",
+          "answer": false,
+          "explain": "The failures are usually missing. That is survivorship bias."
+        },
+        {
+          "id": "ip-bias-q4",
+          "type": "multiple_choice",
+          "prompt": "A 30% drop this year convinces you that stocks never recover. Which bias is that?",
+          "choices": [
+            "Recency bias",
+            "A margin call",
+            "Vesting"
+          ],
+          "answer": 0,
+          "explain": "One bad stretch, treated as the whole future. History includes recoveries and also long slumps. One year is not either story by itself."
+        },
+        {
+          "id": "ip-bias-q5",
+          "type": "fill_blank",
+          "prompt": "Ignoring the investments that failed is ___ bias.",
+          "choices": [
+            "survivorship",
+            "coupon",
+            "ticker"
+          ],
+          "answer": 0,
+          "explain": "Survivorship. The graveyard is part of the real menu."
+        }
+      ]
+    },
+    {
+      "id": "ip-check",
+      "type": "lesson",
+      "title": "Checking Too Often",
+      "summary": "A daily price is a bad boss.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ip-check-q1",
+          "type": "info",
+          "title": "The app is not the plan",
+          "body": "A 30-year [[portfolio]] does not need a daily vote. Checking every hour turns a normal down day into a decision. The decision was already made when you picked the mix and the schedule. Look on a schedule you wrote in advance, not when you are bored or scared."
+        },
+        {
+          "id": "ip-check-q2",
+          "type": "multiple_choice",
+          "prompt": "Your retirement money is for age 65 and you are 30. How often does that goal need a trade?",
+          "choices": [
+            "Every time the app sends a red number",
+            "On the schedule you wrote, unless the goal itself changed",
+            "Whenever a friend texts a screenshot"
+          ],
+          "answer": 1,
+          "explain": "The schedule. A red day is not a new goal."
+        },
+        {
+          "id": "ip-check-q3",
+          "type": "true_false",
+          "prompt": "Watching the price more often makes the long-term result more accurate.",
+          "answer": false,
+          "explain": "It makes the feelings louder. The result still comes from the mix, the fees, and the years."
+        },
+        {
+          "id": "ip-check-q4",
+          "type": "number",
+          "prompt": "You check a $10,000 fund and it is down $150 today, which is 1.5%. How many dollars is that one-day move?",
+          "answer": 150,
+          "unit": "$",
+          "explain": "The move is $150. On a 30-year goal it is noise. Selling would turn the noise into a trade."
+        },
+        {
+          "id": "ip-check-q5",
+          "type": "multiple_choice",
+          "prompt": "When is a look at the account actually useful?",
+          "choices": [
+            "To rebalance on the date you planned",
+            "To react to one afternoon",
+            "To copy a stranger’s trade"
+          ],
+          "answer": 0,
+          "explain": "A planned look. The afternoon can wait."
+        }
+      ]
+    },
+    {
+      "id": "ip-rules",
+      "type": "lesson",
+      "title": "Write the Rules First",
+      "summary": "Decide before the drop, not during it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ip-rules-q1",
+          "type": "info",
+          "title": "A page you can reread",
+          "body": "Write the rules on a calm day. The goal, the date, the mix, and one sentence: you will not sell only because prices fell. When a crash shows up, you follow the page. You do not hold a meeting with your fear."
+        },
+        {
+          "id": "ip-rules-q2",
+          "type": "order",
+          "prompt": "Put the rules in the order you write them.",
+          "items": [
+            "Name the goal and the date",
+            "Choose the mix that fits that date",
+            "Write that you will not sell only because of a drop",
+            "Pick a calm date to look again"
+          ],
+          "explain": "The date picks the mix. The “do not sell on a drop” line is what you reread later. The look-again date keeps you from living in the app."
+        },
+        {
+          "id": "ip-rules-q3",
+          "type": "true_false",
+          "prompt": "The right time to invent your sell rule is in the middle of a crash.",
+          "answer": false,
+          "explain": "That is the worst time. The rule belongs to the calm day, when the goal is clear."
+        },
+        {
+          "id": "ip-rules-q4",
+          "type": "multiple_choice",
+          "prompt": "Prices fall 20% and your written rule says not to sell on a drop. The goal date has not changed. What do you do?",
+          "choices": [
+            "Follow the rule",
+            "Delete the rule because today feels different",
+            "Borrow on margin to “buy the fear”"
+          ],
+          "answer": 0,
+          "explain": "The rule was for this exact day. Follow it. Margin is still the thing to skip."
+        },
+        {
+          "id": "ip-rules-q5",
+          "type": "fill_blank",
+          "prompt": "You write the rules on a ___ day, before you need them.",
+          "choices": [
+            "calm",
+            "panic",
+            "hype"
+          ],
+          "answer": 0,
+          "explain": "Calm. Panic will not negotiate fairly."
+        }
+      ]
+    },
+    {
+      "id": "ip-ray",
+      "type": "lesson",
+      "format": "story",
+      "title": "Ray Sells at the Bottom",
+      "summary": "March 2009, in cash.",
+      "xp": 10,
+      "story": {
+        "title": "Sold in March 2009",
+        "character": "Ray, 44, hotel manager",
+        "body": "Ray’s S&P 500 index fund fell about **57%**, from **$10,000** to about **$4,300**. In March 2009 he sold.\n\nThe index regained its 2007 peak in **2013**. The shares he sold were not invested for that climb."
+      },
+      "steps": [
+        {
+          "id": "ip-ray-q1",
+          "type": "info",
+          "title": "Meet Ray",
+          "body": "Ray is 44 and a hotel manager. He owned an S&P 500 index fund. Using this course’s round figure, a drop of about 57% took it from $10,000 to $4,300. In March 2009 he sold, because he could not stand the screen.\n\nThe index regained its October 2007 peak in 2013. Ray’s sold shares were not there for that climb. This is his history lesson, not a forecast with his name on it."
+        },
+        {
+          "id": "ip-ray-q2",
+          "type": "number",
+          "prompt": "Using the round 57% figure, how many dollars were left of Ray’s $10,000 when he sold?",
+          "answer": 4300,
+          "unit": "$",
+          "explain": "$10,000 − $5,700 = $4,300. Selling took that price. The later recovery happened without those shares."
+        },
+        {
+          "id": "ip-ray-q3",
+          "type": "true_false",
+          "prompt": "Ray’s sale was protected by SIPC, because the market had fallen.",
+          "answer": false,
+          "explain": "SIPC is a failed brokerage. A falling index is market risk, and the sale made the lower price his."
+        },
+        {
+          "id": "ip-ray-q4",
+          "type": "multiple_choice",
+          "prompt": "What did Ray give up by selling?",
+          "choices": [
+            "The chance to be invested for the recovery that followed",
+            "A guaranteed 57% profit",
+            "His emergency fund rules"
+          ],
+          "answer": 0,
+          "explain": "He locked in about $4,300. Holders of the index were the ones who got the old peak back in 2013."
+        },
+        {
+          "id": "ip-ray-q5",
+          "type": "multiple_choice",
+          "prompt": "What should Ray’s written rule have said?",
+          "choices": [
+            "Sell when the screen is unbearable",
+            "Do not sell a long-term fund only because it dropped",
+            "Switch to whichever coin is popular"
+          ],
+          "answer": 1,
+          "explain": "The rule is for the unbearable day. The fund was for a long timeline. The drop was not a new timeline."
+        }
+      ]
+    },
+    {
+      "id": "ip-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "ip-trial",
+      "type": "boss",
+      "title": "Den Trial: Investor Psychology",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "ip-trial-q1",
+          "type": "number",
+          "prompt": "A $8,000 fund falls 50%. How many dollars is it worth?",
+          "answer": 4000,
+          "unit": "$",
+          "explain": "$8,000 × 0.50 = $4,000. Getting back to $8,000 would take a 100% gain."
+        },
+        {
+          "id": "ip-trial-q2",
+          "type": "true_false",
+          "prompt": "A list of famous winning stocks includes the companies that failed along the way.",
+          "answer": false,
+          "explain": "That edited list is survivorship bias. The failures are the part you do not see."
+        },
+        {
+          "id": "ip-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "From the 2007 peak to March 2009, the S&P 500 fell about how much?",
+          "choices": [
+            "About 5%",
+            "About 57%",
+            "It rose"
+          ],
+          "answer": 1,
+          "explain": "About 57%. The old peak was regained in 2013. That history is not a promise for the next drop."
+        },
+        {
+          "id": "ip-trial-q4",
+          "type": "true_false",
+          "prompt": "Checking a 30-year portfolio every hour improves the result.",
+          "answer": false,
+          "explain": "It turns noise into the urge to trade. Look on a date you chose in advance."
+        }
+      ]
+    }
+  ]
+}

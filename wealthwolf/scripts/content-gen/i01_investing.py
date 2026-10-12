@@ -1,0 +1,215 @@
+from lib import *
+
+S = 'investing'
+terms = {
+    'investing': term('Investing',
+                      'Buying something you expect to grow, or to pay you, over time. It can lose money too.',
+                      'Buying a fund and leaving it for years.'),
+    'return': term('Return',
+                   'The extra money an investment makes, or loses. A $1,000 investment that becomes $1,080 had an $80 return.',
+                   'A 10% return on $2,000 is $200.'),
+    'compound-growth': term('Compound growth',
+                            'Earning a return on your returns, not just on the money you put in.',
+                            'A $1,000 investment that grows 10% two years in a row becomes $1,210, not $1,200.'),
+    'rule-of-72': term('Rule of 72',
+                       'A shortcut for how long money takes to double. Divide 72 by the yearly rate.',
+                       'At 6% a year, 72 ÷ 6 = 12 years to double.'),
+    'stock': term('Stock',
+                  'A tiny piece of ownership in a company. If the company does well, your piece is worth more. It can also fall.',
+                  'Buying one share of a company for $40.'),
+    'bond': term('Bond',
+                 'A loan you make to a government or a company. They pay you interest and, at the end, your money back.',
+                 'Lending $1,000 to the government for ten years.'),
+    'risk': term('Risk',
+                 'The chance an investment loses money, or swings wildly, before you need it.',
+                 'A stock that might be up 20% or down 20% in a year.'),
+    'dividend': term('Dividend',
+                     'Cash some companies pay their owners out of profits. Not every stock pays one.',
+                     'A $40 stock that pays $1 a year.'),
+    'portfolio': term('Portfolio',
+                      'Everything you own as investments, taken together.',
+                      'Some stocks, some bonds, and a fund.'),
+}
+
+compound = lesson('iv-compound', 'Compound Growth', 'Money that earns money on its money.', [
+    mc('You invest $1,000 and a year later it’s worth $1,080. What’s the extra $80?',
+       ['A fee', 'Your return', 'A tax'], 1,
+       'The extra is your [[return]]: $1,080 − $1,000 = $80.',
+       context='[[Investing]] means buying something you expect to grow, or to pay you, over time. The extra you make is your [[return]]. You can lose money too.'),
+    num('You invest $2,000 and earn a 10% return in a year. What’s it worth now?', 2200,
+        '$2,000 × 1.10 = $2,200.'),
+    mc('Your $1,000 grew to $1,100. Next year, you’ll earn a return on…',
+       ['Only the original $1,000', 'Only the $100', 'The full $1,100'], 2,
+       '[[Compound growth]] means next year’s return is on the whole pile, not just the start.',
+       context='[[Compound growth]] means you earn a return on the returns too, not just on the money you first put in.'),
+    num('That $1,100 earns another 10% in year two. What’s it worth now?', 1210,
+        '$1,100 × 1.10 = $1,210. The second year’s return is $110, not $100.'),
+    num('Roughly how many years does it take to double your money at 6% a year?', 12, unit='years',
+        explain='The [[rule of 72]]: 72 ÷ 6 = 12 years. It’s a rough guide, not a promise.',
+        context='The [[rule of 72]] is a shortcut. Divide 72 by the yearly rate to see about how many years a pile takes to double.'),
+    tf('Starting to invest 10 years earlier can matter more than investing a bigger amount later.', True,
+       'Time is the fuel. The early years do a lot of the compounding.'),
+])
+
+stocks = lesson('iv-stocks-bonds', 'Stocks and Bonds', 'Own a piece, or lend your money.', [
+    mc('What is a stock?',
+       ['A tiny piece of a company', 'A loan to a company', 'A savings account'], 0,
+       'A [[stock]] is ownership. You share in the company’s wins and losses.',
+       context='A [[stock]] is a tiny piece of a company. If the company does well, your piece can be worth more. It can also fall.'),
+    mc('What is a bond?',
+       ['Ownership of a company', 'A loan to a government or a company', 'A fee'], 1,
+       'A [[bond]] is a loan you make. They pay you interest, then your money back.',
+       context='A [[bond]] is a loan you make to a government or a company. They pay interest, and at the end they pay the loan back.'),
+    mc('Which usually swings more in a given year?',
+       ['A savings account', 'Stocks', 'They are the same'], 1,
+       '[[Risk]] is the chance of a loss or a wild swing. Stocks usually swing more than a savings account.',
+       context='[[Risk]] is the chance you lose money, or the value swings hard, before you need the cash. Stocks usually swing more than bonds or savings.'),
+    mc('What is a dividend?',
+       ['A fee the company charges you', 'A tax', 'Cash some companies pay their owners'], 2,
+       'A [[dividend]] is a share of profits paid out. Plenty of stocks pay none.',
+       context='A [[dividend]] is cash some companies pay their owners out of profits. Not every stock pays one.'),
+    mc('What is a portfolio?',
+       ['All of your investments, taken together', 'A single stock', 'A loan'], 0,
+       'Your [[portfolio]] is the whole mix, not one piece.',
+       context='A [[portfolio]] is everything you own as investments, taken together.'),
+    match('Match each word with what it is.', [
+        ['Stock', 'A piece of a company'],
+        ['Bond', 'A loan you make'],
+        ['Dividend', 'Cash some companies pay owners'],
+        ['Portfolio', 'All of your investments together'],
+    ]),
+    mc('You’ll need your money in one year for a house deposit. What fits better?',
+       ['All of it in stocks', 'One exciting company’s stock', 'Mostly safe, steady places like a savings account'], 2,
+       'Stocks can drop right before you need the cash. A short timeline wants less risk.'),
+])
+
+savings_page = doc('statement', 'Cash for a move in eight months',
+                   [('bal', 'Balance', 1000), ('pay', 'Interest this year at 4% APY', 40)],
+                   totals=[('Cash you can count on', 1040)],
+                   subtitle='A savings account')
+growth_page = doc('statement', 'Money for a goal 25 years away',
+                  [('start', 'Started with', 1000), ('now', 'Value after one example year', 1080)],
+                  totals=[('Example ending value', 1080)],
+                  note='The $80 is an example return, not a promise.',
+                  subtitle='An investment account')
+
+which = lesson('iv-which', 'Saving or Investing', 'Soon money and later money do different jobs.', [
+    info('Two jobs',
+         'Saving keeps money steady for a bill you can already see. [[Investing]] is for money you can leave alone for years. The [[return]] can be larger, and it can also be a loss.\n\nA savings account’s [[APY|apy]] is the yearly rate it pays you. That rate is the steady kind.'),
+    mc('You need this $1,000 in eight months. Which page is the better home for it?',
+         [savings_page['title'], growth_page['title']], 0,
+         docs=(savings_page, growth_page),
+         explain='Eight months is soon. A drop would matter. The 25-year page can ride out a bad year. The $80 there is an example, not a promise.'),
+    num('The savings page pays 4% APY on $1,000. How many dollars of interest is that in a year?', 40,
+        '$1,000 × 0.04 = $40. That is the savings return in this example.'),
+    tf('Money you invest can be worth less than you put in.', True,
+       'A higher possible return comes with the chance of a loss. Savings is the steadier job.'),
+    mc('Which pile is a better fit for money you will not need for 25 years?',
+       ['The savings page, because it cannot grow', 'The investing page, because decades can ride out drops', 'Whichever one paid more last month'], 1,
+       'A long timeline is what makes the swings bearable. Last month is not a plan.'),
+], fmt='call')
+
+risk = lesson('iv-risk-return', 'Risk and Return', 'The wider swing is the price of the higher chance.', [
+    info('The trade',
+         'A savings account barely moves. A [[stock]] can move a lot. That wider [[risk]] is why stocks have, historically and on average, paid more than savings over many decades. It is not a promise for any one year.'),
+    mc('Which has the wider range of outcomes in a single year?',
+       ['A savings account', 'Stocks', 'They are locked to the same result'], 1,
+       'Stocks can rise a lot or fall a lot. That range is the risk.'),
+    num('A $1,000 stock investment falls 20% in a year. How many dollars did it lose?', 200,
+        '$1,000 × 0.20 = $200. It is worth $800. A bad year is part of the deal.'),
+    tf('A chance of a higher return means the investment cannot lose money.', False,
+       'The higher chance and the chance of a loss come together.'),
+    mc('A tuition bill is due in ten months. Where should that tuition money sit?',
+       ['In one company’s stock', 'In a savings account you can count on', 'In whatever rose the most last year'], 1,
+       'Ten months is a short timeline. A drop would hit the bill. Keep that cash steady.'),
+])
+
+time_in = lesson('iv-time', 'Time in the Market', 'Staying in has done more than jumping around.', [
+    info('Stay on the ride',
+         'Historically, on average, the gains have come in bursts. Sitting out to dodge a drop often means missing the rebound too. The habit that has worked is time in the market: stay invested, and keep adding.'),
+    mc('You are investing for 30 years and the market has a bad month. What fits the long habit?',
+       ['Sell everything and wait for calm', 'Keep the plan and keep adding', 'Move it all into the one stock that fell the least'], 1,
+       'A bad month is not a 30-year result. Staying in is the habit.'),
+    tf('Selling after a drop locks that drop in.', True,
+       'Once you sell, the lower price is the price you took. Staying in leaves the chance of a recovery.'),
+    num('Your plan is $100 a month. You skip six months because you are scared. How many dollars did you not add?', 600,
+        '6 × $100 = $600. Those deposits never got the later years of compounding.'),
+    fill('The long habit is called time in the ___.',
+         ['timing', 'market', 'cash'], 1,
+         'Time in the market means staying invested. Timing means trying to jump in and out.'),
+])
+
+waiting = lesson('iv-waiting', 'The Cost of Waiting', 'Ten quiet years are not free.', [
+    info('What the wait skips',
+         'Waiting does two things. You skip the deposits, and you skip the years those deposits could compound. This lesson uses an example rate of 8% a year. It is an example, not a promise.'),
+    num('You can invest $50 a month. How many dollars is that in one year?', 600,
+        '12 × $50 = $600.'),
+    num('At $50 a month, how many dollars do you deposit over 10 years, before any growth?', 6000,
+        '10 × $600 = $6,000. Waiting ten years means those deposits never happen.'),
+    num('Using the rule of 72, about how many years does an example 8% rate take to double?', 9, unit='years',
+        explain='72 ÷ 8 = 9 years. About, and only at that example rate.'),
+    num('An example 8% doubles $1,000 in about 9 years, to $2,000. How many of those dollars are growth?', 1000,
+        '$2,000 − $1,000 = $1,000 of growth. If you wait the 9 years and only then invest $1,000, that growth never starts.'),
+    tf('Waiting to invest is free, because you can always start later with the same result.', False,
+       'Later skips both the deposits and the years of compounding. The wait has a cost.'),
+])
+
+cash_doc = doc('statement', 'Cash on hand',
+               [('ef', 'Emergency fund', 1000), ('extra', 'Extra cash', 400)],
+               totals=[('Total cash', 1400)],
+               subtitle='Keep the emergency fund invested in nothing')
+
+cash = lesson('iv-cash-first', 'Emergency Fund First', 'Investing comes after the cash pile.', [
+    info('Cash, then investing',
+         'An [[emergency fund]] is cash for a surprise, not an investment. A drop in the market is a bad week to also lose your job. Fill the cash pile before you invest extra money.'),
+    num('On this page, how many dollars are the extra cash you could invest?', 400,
+        doc=cash_doc,
+        explain='The extra cash is $400. The $1,000 emergency fund stays put.'),
+    num('How many dollars stay in the emergency fund?', 1000,
+        doc=cash_doc,
+        explain='That $1,000 is for a surprise. It is not the investing pile.'),
+    tf('The emergency fund should be your first investment in stocks.', False,
+       'The emergency fund stays in cash. You invest money you can leave alone.'),
+    mc('Why not invest the emergency fund?',
+       ['Because stocks always fall', 'Because you may need it in a month when stocks are down', 'Because cash earns more than stocks'], 1,
+       'The fund has to be there on a bad day. A stock drop and a surprise bill together is the problem it prevents.'),
+], fmt='document')
+
+lily = lesson('iv-lily', 'Lily Starts Small', 'Fifty dollars is a real start.', [
+    info('Meet Lily',
+         'Lily is 23 and a cafe shift lead. She takes home about $2,200 a month. She already has a $1,000 [[emergency fund]] in savings. After rent and food she can spare $50 a month.\n\nShe will not invest the $1,000. She will invest the $50, automatically, and leave it alone.'),
+    num('How many dollars does Lily invest in a year at $50 a month?', 600,
+        '12 × $50 = $600. Small, and it is a start.'),
+    num('If she keeps that up for 10 years, how many dollars has she deposited, before any growth?', 6000,
+        '10 × $600 = $6,000. The growth, if it comes, is on top of that.'),
+    tf('Lily should move the $1,000 emergency fund into stocks so the account looks bigger.', False,
+       'The $1,000 has a job. A surprise bill should not depend on the market.'),
+    order('Put Lily’s start in order.',
+          ['Keep the $1,000 emergency fund in cash',
+           'Open the investment account',
+           'Set an automatic $50 a month',
+           'Leave the plan alone'],
+          'Cash first, then the automatic deposit, then patience.'),
+], fmt='story', story={
+    'title': 'Fifty dollars a month',
+    'character': 'Lily, 23, cafe shift lead',
+    'body': 'Lily takes home about **$2,200** a month. She already keeps **$1,000** in savings as an emergency fund.\n\nAfter rent and food she can spare **$50** a month. She will invest that, and she will not touch the $1,000.',
+})
+
+review_lesson = review('iv')
+trial_lesson = trial('iv', 'Investing', [
+    num('You invest $500 and earn a 10% return in one year. What’s it worth?', 550,
+        '$500 × 1.10 = $550. The return is $50.'),
+    num('At an example rate of 9% a year, about how many years does the rule of 72 give to double?', 8, unit='years',
+        explain='72 ÷ 9 = 8 years. About, at that example rate.'),
+    tf('A bond is a loan you make.', True,
+       'A [[bond]] is the loan. A [[stock]] is the piece of ownership.'),
+    tf('A portfolio means every dollar is in one company’s stock.', False,
+       'A [[portfolio]] is the whole mix. One company is the opposite of a mix.'),
+])
+
+write_unit('01-investing.json', 'investing', 1, 'Investing',
+           'Saving, investing, and why the years matter more than the perfect start.',
+           'Start smaller than you think, and earlier than you feel ready.',
+           terms, [compound, stocks, which, risk, time_in, waiting, cash, lily, review_lesson, trial_lesson],
+           section=S)

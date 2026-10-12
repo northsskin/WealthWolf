@@ -1,0 +1,540 @@
+{
+  "id": "workplace",
+  "section": "investing",
+  "order": 6,
+  "title": "401(k)s & the Employer Match",
+  "description": "The percent of pay, the tax door, and the match you do not want to skip.",
+  "wolfLine": "The match is pay. Raise the rate until you have all of it.",
+  "terms": {
+    "roth-401k": {
+      "term": "Roth 401(k)",
+      "definition": "A 401(k) you fund with pay that has already been taxed. Qualified withdrawals in retirement are tax-free. It is not a Roth IRA, and it does not use the Roth IRA income limit.",
+      "example": "Choosing the Roth option inside the workplace plan for $1,000 of pay."
+    }
+  },
+  "lessons": [
+    {
+      "id": "wr-rate",
+      "type": "lesson",
+      "title": "The Contribution Rate",
+      "summary": "A percent of pay, every paycheck.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wr-rate-q1",
+          "type": "info",
+          "title": "The percent",
+          "body": "The contribution rate is the slice of pay that goes into the [[401(k)|401k]] before you see it. Jamie, from the earning section, earns $52,000 and currently sends 4%. This employer matches 50 cents per dollar you put in, up to 6% of pay. That match is this plan’s rule, not a law."
+        },
+        {
+          "id": "wr-rate-q2",
+          "type": "number",
+          "prompt": "Jamie earns $52,000 and contributes 4%. How many dollars a year is that?",
+          "answer": 2080,
+          "unit": "$",
+          "explain": "0.04 × $52,000 = $2,080."
+        },
+        {
+          "id": "wr-rate-q3",
+          "type": "number",
+          "prompt": "The match is 50% of what Jamie puts in, and 4% is under the 6% cap. How many match dollars is that?",
+          "answer": 1040,
+          "unit": "$",
+          "explain": "0.50 × $2,080 = $1,040. The plan will not match past 6% of pay."
+        },
+        {
+          "id": "wr-rate-q4",
+          "type": "number",
+          "prompt": "To get the full match, Jamie needs to contribute 6%. How many dollars a year is 6% of $52,000?",
+          "answer": 3120,
+          "unit": "$",
+          "explain": "0.06 × $52,000 = $3,120. The match on that would be half, $1,560."
+        },
+        {
+          "id": "wr-rate-q5",
+          "type": "true_false",
+          "prompt": "The employer match is required by law to be 50% up to 6%.",
+          "answer": false,
+          "explain": "This lesson uses one plan’s rule. Another employer can match more, less, or nothing. Read your plan."
+        }
+      ]
+    },
+    {
+      "id": "wr-which",
+      "type": "lesson",
+      "format": "call",
+      "title": "Traditional or Roth 401(k)",
+      "summary": "The tax break now, or the tax break later.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wr-which-q1",
+          "type": "info",
+          "title": "Same plan, two tax doors",
+          "body": "A traditional [[401(k)|401k]] contribution is a [[pre-tax deduction|pre-tax-deduction]]. In the 12% bracket, $1,000 contributed saves $120 of tax this year. A [[Roth 401(k)|roth-401k]] uses pay that was already taxed, so this year saves $0. Qualified Roth withdrawals later are tax-free. Neither door is a Roth IRA."
+        },
+        {
+          "id": "wr-which-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Traditional 401(k)",
+              "subtitle": "Pre-tax. Taxable pay falls by $1,000.",
+              "lines": [
+                {
+                  "id": "in",
+                  "label": "Contribution",
+                  "amount": 1000.0
+                },
+                {
+                  "id": "save",
+                  "label": "Tax saved this year in the 12% bracket",
+                  "amount": 120.0
+                }
+              ],
+              "note": "The withdrawal in retirement is taxed."
+            },
+            {
+              "kind": "statement",
+              "title": "Roth 401(k)",
+              "subtitle": "After-tax. No break this year.",
+              "lines": [
+                {
+                  "id": "in",
+                  "label": "Contribution",
+                  "amount": 1000.0
+                },
+                {
+                  "id": "save",
+                  "label": "Tax saved this year",
+                  "amount": 0.0
+                }
+              ],
+              "note": "Qualified withdrawals in retirement are tax-free."
+            }
+          ],
+          "prompt": "Which page lowers this year’s taxable pay?",
+          "choices": [
+            "Traditional 401(k)",
+            "Roth 401(k)"
+          ],
+          "answer": 0,
+          "explain": "The traditional page is the pre-tax one. $1,000 × 0.12 = $120 saved this year. The Roth page takes the tax break later, if the withdrawal is qualified."
+        },
+        {
+          "id": "wr-which-q3",
+          "type": "number",
+          "prompt": "In the 12% bracket, how many dollars of tax does a $1,000 traditional contribution save this year?",
+          "answer": 120,
+          "unit": "$",
+          "explain": "$1,000 × 0.12 = $120. A $1,000 Roth contribution saves $0 this year."
+        },
+        {
+          "id": "wr-which-q4",
+          "type": "true_false",
+          "prompt": "A Roth 401(k) uses the same income limit as a Roth IRA.",
+          "answer": false,
+          "explain": "The Roth IRA income limit is for the IRA. A Roth 401(k), if your plan offers it, does not use that limit."
+        },
+        {
+          "id": "wr-which-q5",
+          "type": "multiple_choice",
+          "prompt": "You expect a higher tax bracket in retirement than the 12% you pay now. Which door takes the tax at today’s lower rate?",
+          "choices": [
+            "Traditional, which delays the tax",
+            "Roth, which pays the tax now",
+            "Neither, because 401(k) money is never taxed"
+          ],
+          "answer": 1,
+          "explain": "Roth pays now, at the current rate, and a qualified withdrawal later is tax-free. Traditional does the reverse. This is a sketch, not advice for your bracket."
+        }
+      ]
+    },
+    {
+      "id": "wr-menu",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Plan Menu",
+      "summary": "A short list. Read the fee and the bet.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wr-menu-q1",
+          "type": "info",
+          "title": "You do not need all four",
+          "body": "A 401(k) menu is a list the plan picked. A broad [[index fund]] with a tiny [[expense ratio]] is usually the workhorse. Your employer’s own stock can show a $0 fee and still be [[concentration risk]], because your paycheck already depends on that company."
+        },
+        {
+          "id": "wr-menu-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Plan menu, fees on $10,000",
+            "subtitle": "Four choices. The $0 fee is not the safe one.",
+            "lines": [
+              {
+                "id": "us",
+                "label": "US stock index fund, yearly fee",
+                "amount": 4.0
+              },
+              {
+                "id": "intl",
+                "label": "International stock index fund, yearly fee",
+                "amount": 6.0
+              },
+              {
+                "id": "bond",
+                "label": "Bond index fund, yearly fee",
+                "amount": 5.0
+              },
+              {
+                "id": "co",
+                "label": "Your employer’s own stock, yearly fee",
+                "amount": 0.0
+              }
+            ],
+            "note": "Fees are the expense ratio turned into dollars on $10,000."
+          },
+          "prompt": "On $10,000, how many dollars a year does the US stock index fund cost?",
+          "answer": 4,
+          "unit": "$",
+          "explain": "The US stock index line is $4. That is a 0.04% expense ratio on $10,000."
+        },
+        {
+          "id": "wr-menu-q3",
+          "type": "multiple_choice",
+          "prompt": "Which line is a single company, even though the fee is $0?",
+          "choices": [
+            "US stock index fund",
+            "Bond index fund",
+            "Your employer’s own stock"
+          ],
+          "answer": 2,
+          "explain": "A $0 fee does not fix concentration. The job and the stock are the same company."
+        },
+        {
+          "id": "wr-menu-q4",
+          "type": "true_false",
+          "prompt": "You should buy every fund on the menu so none of them feel left out.",
+          "answer": false,
+          "explain": "The menu is a list of options. A few broad, cheap funds can cover the mix. More names is not more of a plan."
+        },
+        {
+          "id": "wr-menu-q5",
+          "type": "number",
+          "prompt": "How many more dollars a year is the international index fund than the US stock index fund, on this $10,000?",
+          "answer": 2,
+          "unit": "$",
+          "explain": "$6 − $4 = $2. Both are cheap. The employer stock is the odd line, not the $2."
+        }
+      ]
+    },
+    {
+      "id": "wr-auto",
+      "type": "lesson",
+      "title": "Auto-Escalation",
+      "summary": "One percent, once a year.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wr-auto-q1",
+          "type": "info",
+          "title": "The slow raise",
+          "body": "Auto-escalation raises your contribution rate a little each year, often 1 percentage point, until you hit a cap you chose. Jamie is at 4%. A 1-point raise makes it 5%. On $52,000 that is $520 more of Jamie’s money, plus more match."
+        },
+        {
+          "id": "wr-auto-q2",
+          "type": "number",
+          "prompt": "Jamie goes from 4% to 5% of $52,000. How many more dollars a year does Jamie contribute?",
+          "answer": 520,
+          "unit": "$",
+          "explain": "1% of $52,000 = $520. The new contribution is $2,600."
+        },
+        {
+          "id": "wr-auto-q3",
+          "type": "number",
+          "prompt": "The match is 50% and 5% is still under the 6% match cap. How many extra match dollars does that $520 bring?",
+          "answer": 260,
+          "unit": "$",
+          "explain": "0.50 × $520 = $260."
+        },
+        {
+          "id": "wr-auto-q4",
+          "type": "number",
+          "prompt": "How many new dollars, Jamie’s plus the match, go in because of that one-point raise?",
+          "answer": 780,
+          "unit": "$",
+          "explain": "$520 + $260 = $780."
+        },
+        {
+          "id": "wr-auto-q5",
+          "type": "true_false",
+          "prompt": "Auto-escalation means the plan invests 100% of your pay next year.",
+          "answer": false,
+          "explain": "It nudges the rate, often by 1 point a year. You can usually opt out or pick the cap."
+        }
+      ]
+    },
+    {
+      "id": "wr-limits",
+      "type": "lesson",
+      "title": "The 2026 Limits",
+      "summary": "The employee cap, then the age add-on.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wr-limits-q1",
+          "type": "info",
+          "title": "Whose limit",
+          "body": "In 2026 the employee [[401(k)|401k]] deferral limit is $24,500. That is your money, not the match. At age 50 the catch-up is $8,000 more, for a total of $32,500. At ages 60 through 63 the catch-up is $11,250, for a total of $35,750. Jamie is 23, so Jamie gets the $24,500 cap and not the catch-up. These are IRS figures for 2026."
+        },
+        {
+          "id": "wr-limits-q2",
+          "type": "number",
+          "prompt": "What is the 2026 employee 401(k) deferral limit, in dollars, before any catch-up?",
+          "answer": 24500,
+          "unit": "$",
+          "explain": "The 2026 employee cap is $24,500. The match can sit on top. Jamie’s $2,080 is under the cap."
+        },
+        {
+          "id": "wr-limits-q3",
+          "type": "number",
+          "prompt": "At age 50 in 2026, what is the total employee deferral including the $8,000 catch-up?",
+          "answer": 32500,
+          "unit": "$",
+          "explain": "$24,500 + $8,000 = $32,500."
+        },
+        {
+          "id": "wr-limits-q4",
+          "type": "number",
+          "prompt": "At age 61 in 2026, what is the total employee deferral including the $11,250 catch-up?",
+          "answer": 35750,
+          "unit": "$",
+          "explain": "$24,500 + $11,250 = $35,750. That higher catch-up is only for ages 60 through 63."
+        },
+        {
+          "id": "wr-limits-q5",
+          "type": "true_false",
+          "prompt": "Jamie, at 23, can use the age-50 catch-up.",
+          "answer": false,
+          "explain": "The catch-up is an age rule. 23 gets the $24,500 base limit only."
+        }
+      ]
+    },
+    {
+      "id": "wr-loan",
+      "type": "lesson",
+      "title": "A Loan from the Plan",
+      "summary": "Your money leaves the market, and the job can call it due.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wr-loan-q1",
+          "type": "info",
+          "title": "Borrowing from yourself",
+          "body": "Some plans let you borrow from the [[401(k)|401k]]. A $5,000 loan is $5,000 that is not invested while you repay it. Leave the job and the loan often comes due quickly. Miss that, and it can be treated as a withdrawal: income tax, plus the usual 10% penalty if you are under 59½. It is a last resort, not a clever trick."
+        },
+        {
+          "id": "wr-loan-q2",
+          "type": "number",
+          "prompt": "How many dollars are out of the market during a $5,000 plan loan?",
+          "answer": 5000,
+          "unit": "$",
+          "explain": "The $5,000 is no longer invested. Repayments put money back over time. The missed growth is the quiet cost."
+        },
+        {
+          "id": "wr-loan-q3",
+          "type": "true_false",
+          "prompt": "Quitting the job usually leaves a 401(k) loan quietly in place for decades.",
+          "answer": false,
+          "explain": "Leaving often makes the loan due. Unpaid, it can become a taxable withdrawal, with a penalty if you are under 59½."
+        },
+        {
+          "id": "wr-loan-q4",
+          "type": "multiple_choice",
+          "prompt": "What is the strongest reason to avoid a 401(k) loan for a want, not an emergency?",
+          "choices": [
+            "The money stays invested the whole time",
+            "The money leaves the market, and the job can turn the loan into a taxable withdrawal",
+            "Loans raise your employer match"
+          ],
+          "answer": 1,
+          "explain": "Two costs: time out of the market, and a bill that can show up when you leave."
+        },
+        {
+          "id": "wr-loan-q5",
+          "type": "multiple_choice",
+          "prompt": "The 10% early-withdrawal penalty, if the unpaid loan is treated as a withdrawal, generally applies before what age?",
+          "choices": [
+            "59½",
+            "23",
+            "65, with no exceptions ever"
+          ],
+          "answer": 0,
+          "explain": "Before 59½, an early withdrawal from a traditional 401(k) is usually tax plus a 10% penalty. Some exceptions exist. Do not plan on them."
+        }
+      ]
+    },
+    {
+      "id": "wr-vest",
+      "type": "lesson",
+      "title": "When the Match Is Yours",
+      "summary": "Your dollars are yours. Theirs may have a clock.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "wr-vest-q1",
+          "type": "info",
+          "title": "A clock on their money",
+          "body": "[[Vesting]] is earning the [[employer match]] over time. Your own contributions are yours from day one. This example plan vests 25% of the match for each full year you stay. That schedule is an example, like the one in the earning section. Your plan document is the real one."
+        },
+        {
+          "id": "wr-vest-q2",
+          "type": "number",
+          "prompt": "The match so far is $2,000 and you are 50% vested. How many match dollars are yours?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "0.50 × $2,000 = $1,000. The other $1,000 goes back if you leave now."
+        },
+        {
+          "id": "wr-vest-q3",
+          "type": "number",
+          "prompt": "You contributed $4,000 of your own pay. How many of those dollars are yours, vesting aside?",
+          "answer": 4000,
+          "unit": "$",
+          "explain": "Your contributions are not on the vesting clock. All $4,000 is yours."
+        },
+        {
+          "id": "wr-vest-q4",
+          "type": "multiple_choice",
+          "prompt": "You leave after the example plan has vested 25% of a $2,000 match. How many match dollars do you keep?",
+          "choices": [
+            "$2,000",
+            "$500",
+            "$0, because matches are never yours"
+          ],
+          "answer": 1,
+          "explain": "25% of $2,000 is $500. Your own contributions still leave with you."
+        },
+        {
+          "id": "wr-vest-q5",
+          "type": "true_false",
+          "prompt": "Vesting applies to the money you put in yourself.",
+          "answer": false,
+          "explain": "Vesting is about the employer’s money. Yours is yours."
+        }
+      ]
+    },
+    {
+      "id": "wr-jamie",
+      "type": "lesson",
+      "format": "story",
+      "title": "Jamie Turns It Up",
+      "summary": "One point a year, toward the full match.",
+      "xp": 10,
+      "story": {
+        "title": "One point",
+        "character": "Jamie, 23, first salaried job",
+        "body": "Jamie earns **$52,000** and puts **4%** into the 401(k), which is **$2,080**. This plan matches 50% up to 6% of pay, so the full match would be **$1,560**. Jamie is getting **$1,040**.\n\nA 1% auto-escalation makes next year’s rate **5%**."
+      },
+      "steps": [
+        {
+          "id": "wr-jamie-q1",
+          "type": "info",
+          "title": "Meet Jamie, a year along",
+          "body": "Jamie is 23, in that first salaried job at $52,000. The 401(k) is at 4%, which is $2,080, and the match on it is $1,040. The plan matches 50% up to 6% of pay, so the full match is $1,560.\n\nJamie turns on a 1% auto-escalation. Next year the rate is 5%, if the pay stays $52,000."
+        },
+        {
+          "id": "wr-jamie-q2",
+          "type": "number",
+          "prompt": "How many match dollars is Jamie missing by contributing 4% instead of 6%?",
+          "answer": 520,
+          "unit": "$",
+          "explain": "The full match is $1,560. Jamie is getting $1,040. $1,560 − $1,040 = $520 left on the table."
+        },
+        {
+          "id": "wr-jamie-q3",
+          "type": "number",
+          "prompt": "After the one-point raise, Jamie contributes 5%. How many dollars a year is that?",
+          "answer": 2600,
+          "unit": "$",
+          "explain": "0.05 × $52,000 = $2,600."
+        },
+        {
+          "id": "wr-jamie-q4",
+          "type": "true_false",
+          "prompt": "Jamie should skip the match to pick individual stocks in the plan.",
+          "answer": false,
+          "explain": "The match is part of pay. The menu’s broad, cheap funds can hold it. Single stocks are the concentration."
+        },
+        {
+          "id": "wr-jamie-q5",
+          "type": "order",
+          "prompt": "Put Jamie’s raise in order.",
+          "items": [
+            "Get the plan’s match rule in writing",
+            "Raise the rate by 1 point, from 4% to 5%",
+            "Let the next year’s raise move it toward 6%",
+            "Leave the investments in broad, cheap funds"
+          ],
+          "explain": "The match rule first, then the slow raise, then the fund choice. 6% is where this plan’s match stops growing."
+        }
+      ]
+    },
+    {
+      "id": "wr-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "wr-trial",
+      "type": "boss",
+      "title": "Den Trial: 401(k)s & the Employer Match",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "wr-trial-q1",
+          "type": "number",
+          "prompt": "In 2026, what is the employee 401(k) deferral limit before any age catch-up?",
+          "answer": 24500,
+          "unit": "$",
+          "explain": "The 2026 employee cap is $24,500. Catch-up amounts are extra, and only at the ages the IRS names."
+        },
+        {
+          "id": "wr-trial-q2",
+          "type": "number",
+          "prompt": "A plan matches 50% up to 6% of a $40,000 salary. The worker contributes 6%. How many match dollars is that?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "6% of $40,000 is $2,400. Half of that is $1,200."
+        },
+        {
+          "id": "wr-trial-q3",
+          "type": "true_false",
+          "prompt": "Your own 401(k) contributions vest on the same clock as the employer match.",
+          "answer": false,
+          "explain": "Your contributions are yours. Vesting is the clock on the match."
+        },
+        {
+          "id": "wr-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "A Roth 401(k) contribution does what to this year’s taxable pay?",
+          "choices": [
+            "Lowers it, like a traditional contribution",
+            "Does not lower it, because the money was already taxed",
+            "Erases the employer match"
+          ],
+          "answer": 1,
+          "explain": "Roth is the after-tax door. The traditional door is the one that lowers taxable pay now."
+        }
+      ]
+    }
+  ]
+}
