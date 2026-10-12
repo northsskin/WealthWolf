@@ -1,0 +1,606 @@
+{
+  "id": "state-local-tax",
+  "section": "taxes",
+  "order": 8,
+  "title": "State & Local Taxes",
+  "description": "A wage tax is one line. Rent, sales tax, and the house can be larger.",
+  "wolfLine": "The state with the smaller wage tax is not automatically the cheaper life.",
+  "terms": {
+    "flat-tax": {
+      "term": "Flat tax",
+      "definition": "A state income tax that uses one rate on the taxable wages, instead of a series of brackets.",
+      "example": "A flat 3% of $60,000 is $1,800. The next dollar is taxed at that same 3%."
+    }
+  },
+  "lessons": [
+    {
+      "id": "st-none",
+      "type": "lesson",
+      "title": "No Wage Tax Is Not No Tax",
+      "summary": "A state can skip wages and still tax a purchase or a house.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "st-none-q1",
+          "type": "info",
+          "title": "Read the missing tax carefully",
+          "body": "Some states do not tax wages. This lesson does not grade a list of them, because a list goes stale. Check the state before a move.\n\nA state with no wage tax can still charge [[sales tax]], [[property tax]], or a tax on investment gains. “No income tax” on a job posting is not “no tax.”"
+        },
+        {
+          "id": "st-none-q2",
+          "type": "true_false",
+          "prompt": "A state with no wage tax charges no tax of any kind.",
+          "answer": false,
+          "explain": "Sales tax, property tax, or a tax on gains can still be there."
+        },
+        {
+          "id": "st-none-q3",
+          "type": "multiple_choice",
+          "prompt": "A job posting says the state has no wage tax. What do you still price?",
+          "choices": [
+            "Sales tax, property tax, and any tax on gains",
+            "Nothing. The posting covered every tax",
+            "Only the federal standard deduction"
+          ],
+          "answer": 0,
+          "explain": "The posting named one tax. The others can still change the move."
+        },
+        {
+          "id": "st-none-q4",
+          "type": "number",
+          "prompt": "A state wage tax of $0 versus a state wage tax of $2,000. How much wage tax do you save?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$2,000 − $0 = $2,000. That savings is only the wage tax."
+        },
+        {
+          "id": "st-none-q5",
+          "type": "fill_blank",
+          "prompt": "No wage tax does not mean no ___.",
+          "choices": [
+            "tax",
+            "rent",
+            "paycheck"
+          ],
+          "answer": 0,
+          "explain": "Tax. Other taxes can remain."
+        }
+      ]
+    },
+    {
+      "id": "st-shape",
+      "type": "lesson",
+      "title": "Flat or Graduated",
+      "summary": "These rates are an example, not a real state.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "st-shape-q1",
+          "type": "info",
+          "title": "One rate, or a stack",
+          "body": "A [[flat tax]] in this example is **5%** of **$40,000**, which is **$2,000**.\n\nA graduated example taxes the first **$20,000** at **2%**, which is **$400**, and the next **$20,000** at **4%**, which is **$800**. The bill is **$1,200**. Neither pair is a real state’s law. The shape is the lesson."
+        },
+        {
+          "id": "st-shape-q2",
+          "type": "number",
+          "prompt": "What is 5% of $40,000 in the flat example?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$40,000 × 0.05 = $2,000."
+        },
+        {
+          "id": "st-shape-q3",
+          "type": "number",
+          "prompt": "What is 2% of the first $20,000 in the graduated example?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$20,000 × 0.02 = $400."
+        },
+        {
+          "id": "st-shape-q4",
+          "type": "number",
+          "prompt": "What is the graduated example’s total tax?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$400 + $800 = $1,200. The second $20,000 at 4% is $800."
+        },
+        {
+          "id": "st-shape-q5",
+          "type": "number",
+          "prompt": "How much more is the flat example than the graduated example?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "$2,000 − $1,200 = $800."
+        }
+      ]
+    },
+    {
+      "id": "st-local",
+      "type": "lesson",
+      "title": "A City Can Add Its Own",
+      "summary": "The state bill is not always the last bill.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "st-local-q1",
+          "type": "info",
+          "title": "On top",
+          "body": "A city or county may tax wages too. In this example the city rate is **2%** of **$40,000**, which is **$800**, on top of whatever the state charges.\n\nThe lesson is the extra line. The 2% is not a national city rate."
+        },
+        {
+          "id": "st-local-q2",
+          "type": "number",
+          "prompt": "What is 2% of $40,000?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "$40,000 × 0.02 = $800."
+        },
+        {
+          "id": "st-local-q3",
+          "type": "number",
+          "prompt": "The state tax in this example is $2,000 and the city tax is $800. What do they add up to?",
+          "answer": 2800,
+          "unit": "$",
+          "explain": "$2,000 + $800 = $2,800."
+        },
+        {
+          "id": "st-local-q4",
+          "type": "multiple_choice",
+          "prompt": "Where does a city wage tax sit?",
+          "choices": [
+            "On top of the state tax, when the city charges one",
+            "Inside FICA",
+            "Instead of the federal standard deduction"
+          ],
+          "answer": 0,
+          "explain": "It is an extra income tax. It is not FICA and it is not the federal deduction."
+        },
+        {
+          "id": "st-local-q5",
+          "type": "true_false",
+          "prompt": "If the state tax is $2,000, no city can add more.",
+          "answer": false,
+          "explain": "This example’s city adds $800. Some places have no city tax. The paycheck is where you look."
+        }
+      ]
+    },
+    {
+      "id": "st-prop",
+      "type": "lesson",
+      "format": "document",
+      "title": "Property Tax, One Bill",
+      "summary": "The rate is local. The bill in front of you is the number.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "st-prop-q1",
+          "type": "info",
+          "title": "Use the bill",
+          "body": "[[Property tax]] is still the local tax on the home. This city’s bill is **$2,400** for the year, which is **$200** a month.\n\nA different city can bill a different amount on a similar house. Do not carry this $2,400 with you as a national rate."
+        },
+        {
+          "id": "st-prop-q2",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Property tax bill",
+            "subtitle": "One house, this city",
+            "lines": [
+              {
+                "id": "tax",
+                "label": "Property tax for the year",
+                "amount": 2400.0
+              }
+            ]
+          },
+          "prompt": "What is the yearly bill on this page?",
+          "answer": 2400,
+          "unit": "$",
+          "explain": "The bill says $2,400."
+        },
+        {
+          "id": "st-prop-q3",
+          "type": "number",
+          "doc": {
+            "kind": "bill",
+            "title": "Property tax bill",
+            "subtitle": "One house, this city",
+            "lines": [
+              {
+                "id": "tax",
+                "label": "Property tax for the year",
+                "amount": 2400.0
+              }
+            ]
+          },
+          "prompt": "What is that $2,400 per month?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$2,400 ÷ 12 = $200."
+        },
+        {
+          "id": "st-prop-q4",
+          "type": "number",
+          "prompt": "Another city bills $1,200 for the year. How much less is that per year?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$2,400 − $1,200 = $1,200."
+        },
+        {
+          "id": "st-prop-q5",
+          "type": "true_false",
+          "prompt": "This $2,400 is the property tax in every city.",
+          "answer": false,
+          "explain": "It is this bill. The next city has its own."
+        }
+      ]
+    },
+    {
+      "id": "st-sales",
+      "type": "lesson",
+      "title": "Sales Tax Is Local Too",
+      "summary": "The price on the shelf is not always the price you pay.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "st-sales-q1",
+          "type": "info",
+          "title": "At the register",
+          "body": "[[Sales tax]] is added at purchase. A **$50** item with **6%** sales tax costs **$3** in tax and **$53** in all.\n\nA state that skips a wage tax may still charge this. The 6% is this example’s rate."
+        },
+        {
+          "id": "st-sales-q2",
+          "type": "number",
+          "prompt": "What is 6% sales tax on a $50 item?",
+          "answer": 3,
+          "unit": "$",
+          "explain": "$50 × 0.06 = $3."
+        },
+        {
+          "id": "st-sales-q3",
+          "type": "number",
+          "prompt": "What do you pay in all?",
+          "answer": 53,
+          "unit": "$",
+          "explain": "$50 + $3 = $53."
+        },
+        {
+          "id": "st-sales-q4",
+          "type": "number",
+          "prompt": "The same $50 item in a place with no sales tax costs $50. How much more is the 6% place?",
+          "answer": 3,
+          "unit": "$",
+          "explain": "$53 − $50 = $3."
+        },
+        {
+          "id": "st-sales-q5",
+          "type": "true_false",
+          "prompt": "Sales tax is withheld from the paycheck like FICA.",
+          "answer": false,
+          "explain": "You pay it at the register. It is not a line on the W-2."
+        }
+      ]
+    },
+    {
+      "id": "st-move",
+      "type": "lesson",
+      "title": "Moving Mid-Year",
+      "summary": "Two states can mean two returns.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "st-move-q1",
+          "type": "info",
+          "title": "This example’s rule",
+          "body": "You earned **$30,000** in state A and **$20,000** in state B. In this example, each state taxes only the wages you earned there. State A’s wage tax is **0**. State B’s tax is **5%** of its **$20,000**, which is **$1,000**.\n\nReal states split income in more than one way. The lesson is that a move can create two filings. Check both states."
+        },
+        {
+          "id": "st-move-q2",
+          "type": "number",
+          "prompt": "What is 5% of the $20,000 earned in state B?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "$20,000 × 0.05 = $1,000."
+        },
+        {
+          "id": "st-move-q3",
+          "type": "number",
+          "prompt": "What are the wages in the two states together?",
+          "answer": 50000,
+          "unit": "$",
+          "explain": "$30,000 + $20,000 = $50,000."
+        },
+        {
+          "id": "st-move-q4",
+          "type": "multiple_choice",
+          "prompt": "Why might you file two state returns?",
+          "choices": [
+            "You earned wages in both states",
+            "The federal standard deduction requires it",
+            "FICA is paid to the state"
+          ],
+          "answer": 0,
+          "explain": "Each state may want a return for the wages earned there. This example’s tax happens to be $1,000, all in state B."
+        },
+        {
+          "id": "st-move-q5",
+          "type": "true_false",
+          "prompt": "State A’s $0 wage tax in this example means state B also charges $0.",
+          "answer": false,
+          "explain": "State B charges $1,000. Each state’s rule is its own."
+        }
+      ]
+    },
+    {
+      "id": "st-call",
+      "type": "lesson",
+      "format": "call",
+      "title": "Two Take-Home Sketches",
+      "summary": "Same wages. The state line is the difference.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "st-call-q1",
+          "type": "number",
+          "context": "Both sketches use the same **$60,000** of wages and ignore federal tax, sales tax, and rent. Only the state wage tax changes.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "State A",
+              "subtitle": "This example",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "State wage tax, 3% of $60,000",
+                  "amount": 1800.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "State B",
+              "subtitle": "This example",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "State wage tax, 6% of $60,000",
+                  "amount": 3600.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What is state A’s wage tax on $60,000?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$60,000 × 0.03 = $1,800."
+        },
+        {
+          "id": "st-call-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "State A",
+              "subtitle": "This example",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "State wage tax, 3% of $60,000",
+                  "amount": 1800.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "State B",
+              "subtitle": "This example",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "State wage tax, 6% of $60,000",
+                  "amount": 3600.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What is state B’s wage tax on $60,000?",
+          "answer": 3600,
+          "unit": "$",
+          "explain": "$60,000 × 0.06 = $3,600."
+        },
+        {
+          "id": "st-call-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "State A",
+              "subtitle": "This example",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "State wage tax, 3% of $60,000",
+                  "amount": 1800.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "State B",
+              "subtitle": "This example",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "State wage tax, 6% of $60,000",
+                  "amount": 3600.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much less state wage tax does state A charge?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$3,600 − $1,800 = $1,800."
+        },
+        {
+          "id": "st-call-q4",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "State A",
+              "subtitle": "This example",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "State wage tax, 3% of $60,000",
+                  "amount": 1800.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "State B",
+              "subtitle": "This example",
+              "lines": [
+                {
+                  "id": "tax",
+                  "label": "State wage tax, 6% of $60,000",
+                  "amount": 3600.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Looking only at these two state wage taxes, which page leaves more of the wages?",
+          "choices": [
+            "State A",
+            "State B",
+            "They take the same tax"
+          ],
+          "answer": 0,
+          "why": [
+            "$1,800 is the smaller tax.",
+            "State B takes twice as much in this example.",
+            "The taxes differ by $1,800."
+          ],
+          "explain": "State A takes $1,800. State B takes $3,600."
+        },
+        {
+          "id": "st-call-q5",
+          "type": "true_false",
+          "prompt": "The $1,800 gap is your full savings after rent and sales tax.",
+          "answer": false,
+          "explain": "This pair ignores rent and sales tax. Either one can be larger than the wage-tax gap."
+        }
+      ]
+    },
+    {
+      "id": "st-leo",
+      "type": "lesson",
+      "format": "story",
+      "title": "Leo’s Offer",
+      "summary": "The wage-tax savings lose to the rent.",
+      "xp": 10,
+      "story": {
+        "title": "Leo’s two offers",
+        "character": "Leo, 31",
+        "body": "Leo is 31 and an electrician. Both offers pay **$60,000**. State A’s wage tax in this example is **$1,800**. State B’s is **$3,600**. State A saves **$1,800** of wage tax.\n\nRent in state A costs **$400** more a month, which is **$4,800** a year. The tax savings do not cover the rent.\n\nState A costs **$3,000** more after that rent. A missing wage tax, or a smaller one, is not a cheaper life until the rent and the other taxes are on the same page."
+      },
+      "steps": [
+        {
+          "id": "st-leo-q1",
+          "type": "number",
+          "prompt": "How much wage tax does Leo save in state A?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$3,600 − $1,800 = $1,800."
+        },
+        {
+          "id": "st-leo-q2",
+          "type": "number",
+          "prompt": "What is $400 more rent for 12 months?",
+          "answer": 4800,
+          "unit": "$",
+          "explain": "$400 × 12 = $4,800."
+        },
+        {
+          "id": "st-leo-q3",
+          "type": "number",
+          "prompt": "How much more does state A cost after that rent?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$4,800 − $1,800 = $3,000."
+        },
+        {
+          "id": "st-leo-q4",
+          "type": "multiple_choice",
+          "prompt": "Which offer costs less in this story, once rent is included?",
+          "choices": [
+            "State B",
+            "State A",
+            "They cost the same"
+          ],
+          "answer": 0,
+          "explain": "State A’s tax savings are $1,800. Its extra rent is $4,800. State B is $3,000 cheaper here."
+        },
+        {
+          "id": "st-leo-q5",
+          "type": "true_false",
+          "prompt": "The lower wage tax makes state A the cheaper place to live in this story.",
+          "answer": false,
+          "explain": "The rent gap is larger than the tax gap. State A costs $3,000 more."
+        }
+      ]
+    },
+    {
+      "id": "st-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "st-trial",
+      "type": "boss",
+      "title": "Den Trial: State & Local Taxes",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "st-trial-q1",
+          "type": "number",
+          "prompt": "A flat example taxes $30,000 at 4%. What is the tax?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$30,000 × 0.04 = $1,200."
+        },
+        {
+          "id": "st-trial-q2",
+          "type": "number",
+          "prompt": "A property tax bill is $1,800. What is the monthly set-aside?",
+          "answer": 150,
+          "unit": "$",
+          "explain": "$1,800 ÷ 12 = $150."
+        },
+        {
+          "id": "st-trial-q3",
+          "type": "true_false",
+          "prompt": "A state with no wage tax cannot charge sales tax.",
+          "answer": false,
+          "explain": "Sales tax is a different tax. It can still be on the receipt."
+        },
+        {
+          "id": "st-trial-q4",
+          "type": "number",
+          "prompt": "State wage tax is $2,400 and extra rent is $3,600 a year. How much larger is the rent than the tax?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "$3,600 − $2,400 = $1,200."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,650 @@
+{
+  "id": "deductions-credits",
+  "section": "taxes",
+  "order": 4,
+  "title": "Deductions & Credits",
+  "description": "A deduction shrinks income. A credit shrinks the tax. The larger subtraction wins.",
+  "wolfLine": "A credit is not a deduction with a nicer name.",
+  "terms": {
+    "tax-deduction": {
+      "term": "Tax deduction",
+      "definition": "An amount that lowers the income the tax is figured on. In a 12% bracket, a $1,000 deduction saves $120. It does not save $1,000.",
+      "example": "A $1,000 deduction in the 12% bracket cuts the tax by $120."
+    },
+    "tax-credit": {
+      "term": "Tax credit",
+      "definition": "An amount that lowers the tax itself, dollar for dollar. A $1,000 credit saves $1,000, up to the rules for that credit.",
+      "example": "The same $1,000 as a credit saves the whole $1,000, which is $880 more than the deduction."
+    },
+    "itemized-deduction": {
+      "term": "Itemized deduction",
+      "definition": "The added-up list of allowed expenses, such as some taxes, mortgage interest, and gifts, used instead of the standard deduction when the list is larger.",
+      "example": "A list that adds to $13,000 loses to the 2026 single standard deduction of $16,100."
+    }
+  },
+  "lessons": [
+    {
+      "id": "dd-versus",
+      "type": "lesson",
+      "title": "A Deduction or a Credit",
+      "summary": "Same $1,000. Two very different savings.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dd-versus-q1",
+          "type": "info",
+          "title": "Dollars off the income, or dollars off the tax",
+          "body": "A [[tax deduction]] lowers taxable income. In the 12% bracket, **$1,000** of deduction saves **$120**.\n\nA [[tax credit]] lowers the tax. The same **$1,000** credit saves **$1,000**. The credit saves **$880** more."
+        },
+        {
+          "id": "dd-versus-q2",
+          "type": "number",
+          "prompt": "A $1,000 deduction sits in the 12% bracket. How much tax does it save?",
+          "answer": 120,
+          "unit": "$",
+          "explain": "$1,000 × 0.12 = $120."
+        },
+        {
+          "id": "dd-versus-q3",
+          "type": "number",
+          "prompt": "A $1,000 credit saves how much tax, before any cap on that credit?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "A credit cuts the tax dollar for dollar. $1,000."
+        },
+        {
+          "id": "dd-versus-q4",
+          "type": "number",
+          "prompt": "How much more does the credit save than the deduction?",
+          "answer": 880,
+          "unit": "$",
+          "explain": "$1,000 − $120 = $880."
+        },
+        {
+          "id": "dd-versus-q5",
+          "type": "true_false",
+          "prompt": "A $1,000 deduction and a $1,000 credit save the same tax in the 12% bracket.",
+          "answer": false,
+          "explain": "The deduction saves $120. The credit saves $1,000."
+        }
+      ]
+    },
+    {
+      "id": "dd-choose",
+      "type": "lesson",
+      "format": "call",
+      "title": "Standard or Itemized",
+      "summary": "Take the larger one. This list loses.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dd-choose-q1",
+          "type": "number",
+          "context": "You take the [[standard deduction]] or your [[itemized deduction|itemized-deduction]] list, whichever is larger. These amounts are the ones this example is allowed to count.",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "2026 standard deduction, single",
+              "lines": [
+                {
+                  "id": "std",
+                  "label": "Standard deduction",
+                  "amount": 16100.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Itemized list in this example",
+              "lines": [
+                {
+                  "id": "state",
+                  "label": "State income tax you may count",
+                  "amount": 5000.0
+                },
+                {
+                  "id": "mort",
+                  "label": "Mortgage interest",
+                  "amount": 6000.0
+                },
+                {
+                  "id": "gift",
+                  "label": "Gifts to charity",
+                  "amount": 2000.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Itemized deductions",
+                  "amount": 13000.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "What do the itemized lines add up to?",
+          "answer": 13000,
+          "unit": "$",
+          "explain": "$5,000 + $6,000 + $2,000 = $13,000."
+        },
+        {
+          "id": "dd-choose-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "2026 standard deduction, single",
+              "lines": [
+                {
+                  "id": "std",
+                  "label": "Standard deduction",
+                  "amount": 16100.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Itemized list in this example",
+              "lines": [
+                {
+                  "id": "state",
+                  "label": "State income tax you may count",
+                  "amount": 5000.0
+                },
+                {
+                  "id": "mort",
+                  "label": "Mortgage interest",
+                  "amount": 6000.0
+                },
+                {
+                  "id": "gift",
+                  "label": "Gifts to charity",
+                  "amount": 2000.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Itemized deductions",
+                  "amount": 13000.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "How much larger is the 2026 single standard deduction than this list?",
+          "answer": 3100,
+          "unit": "$",
+          "explain": "$16,100 − $13,000 = $3,100."
+        },
+        {
+          "id": "dd-choose-q3",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "2026 standard deduction, single",
+              "lines": [
+                {
+                  "id": "std",
+                  "label": "Standard deduction",
+                  "amount": 16100.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Itemized list in this example",
+              "lines": [
+                {
+                  "id": "state",
+                  "label": "State income tax you may count",
+                  "amount": 5000.0
+                },
+                {
+                  "id": "mort",
+                  "label": "Mortgage interest",
+                  "amount": 6000.0
+                },
+                {
+                  "id": "gift",
+                  "label": "Gifts to charity",
+                  "amount": 2000.0
+                }
+              ],
+              "totals": [
+                {
+                  "label": "Itemized deductions",
+                  "amount": 13000.0,
+                  "strong": true
+                }
+              ]
+            }
+          ],
+          "prompt": "Which one lowers taxable income more, on these two pages?",
+          "choices": [
+            "The $16,100 standard deduction",
+            "The $13,000 itemized list",
+            "They lower it by the same amount"
+          ],
+          "answer": 0,
+          "why": [
+            "$16,100 beats $13,000.",
+            "The list is real, and it is still smaller.",
+            "They differ by $3,100."
+          ],
+          "explain": "The standard deduction is $3,100 larger."
+        },
+        {
+          "id": "dd-choose-q4",
+          "type": "true_false",
+          "prompt": "You add the standard deduction on top of this itemized list.",
+          "answer": false,
+          "explain": "You choose one. Adding both would deduct twice."
+        },
+        {
+          "id": "dd-choose-q5",
+          "type": "fill_blank",
+          "prompt": "Take the standard deduction when it is ___ than the itemized list.",
+          "choices": [
+            "larger",
+            "smaller",
+            "the same tax credit"
+          ],
+          "answer": 0,
+          "explain": "Larger. The point of comparing is to keep the bigger subtraction."
+        }
+      ]
+    },
+    {
+      "id": "dd-eitc",
+      "type": "lesson",
+      "title": "The Earned Income Tax Credit",
+      "summary": "A maximum is not your credit.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dd-eitc-q1",
+          "type": "info",
+          "title": "2026, and a warning",
+          "body": "For 2026, the maximum [[tax credit|tax-credit]] called the Earned Income Tax Credit is **$8,231** for a taxpayer with three or more qualifying children. Smaller families have smaller maximums. The credit phases out as income rises.\n\nDo not treat $8,231 as the credit for one child, or for every income. The IRS EITC assistant is the way to check a real household."
+        },
+        {
+          "id": "dd-eitc-q2",
+          "type": "number",
+          "prompt": "What is the 2026 maximum EITC for three or more qualifying children?",
+          "answer": 8231,
+          "unit": "$",
+          "explain": "$8,231. That maximum is not the amount for one child."
+        },
+        {
+          "id": "dd-eitc-q3",
+          "type": "multiple_choice",
+          "prompt": "Jamal has one qualifying child. What is $8,231 to him?",
+          "choices": [
+            "The published maximum for a larger family, not a number this lesson assigns him",
+            "His credit, automatically",
+            "His standard deduction"
+          ],
+          "answer": 0,
+          "explain": "One child is not three or more. He uses the IRS assistant."
+        },
+        {
+          "id": "dd-eitc-q4",
+          "type": "true_false",
+          "prompt": "Every worker receives the $8,231 maximum in 2026.",
+          "answer": false,
+          "explain": "The maximum is for a specific family size, and income can phase the credit down to nothing."
+        },
+        {
+          "id": "dd-eitc-q5",
+          "type": "fill_blank",
+          "prompt": "The tool that checks a real EITC amount is the IRS ___ assistant.",
+          "choices": [
+            "EITC",
+            "mileage",
+            "W-4"
+          ],
+          "answer": 0,
+          "explain": "EITC assistant. A lesson should not invent the phaseout."
+        }
+      ]
+    },
+    {
+      "id": "dd-ctc",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Child Tax Credit",
+      "summary": "The Section 5 number, still for 2026.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dd-ctc-q1",
+          "type": "info",
+          "title": "Up to $2,200",
+          "body": "The [[child tax credit]] is up to **$2,200** per qualifying child for 2026. It starts to shrink above **$200,000** of income, or **$400,000** if married filing jointly.\n\nThis page is a single filer under that line, so the full **$2,200** is in play. It is not the Child and Dependent Care Credit, and it is not a dependent-care FSA."
+        },
+        {
+          "id": "dd-ctc-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "One qualifying child, 2026",
+            "subtitle": "Income under the 2026 phaseout",
+            "lines": [
+              {
+                "id": "tax",
+                "label": "Tax before this credit",
+                "amount": 2620.0
+              },
+              {
+                "id": "credit",
+                "label": "Child tax credit at the full amount",
+                "amount": 2200.0
+              }
+            ],
+            "note": "This page is not the Child and Dependent Care Credit."
+          },
+          "prompt": "What is the child tax credit on this page?",
+          "answer": 2200,
+          "unit": "$",
+          "explain": "The full 2026 amount for one qualifying child, because this income is under the phaseout."
+        },
+        {
+          "id": "dd-ctc-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "One qualifying child, 2026",
+            "subtitle": "Income under the 2026 phaseout",
+            "lines": [
+              {
+                "id": "tax",
+                "label": "Tax before this credit",
+                "amount": 2620.0
+              },
+              {
+                "id": "credit",
+                "label": "Child tax credit at the full amount",
+                "amount": 2200.0
+              }
+            ],
+            "note": "This page is not the Child and Dependent Care Credit."
+          },
+          "prompt": "Tax before the credit is $2,620. What is the tax after this $2,200 credit?",
+          "answer": 420,
+          "unit": "$",
+          "explain": "$2,620 − $2,200 = $420."
+        },
+        {
+          "id": "dd-ctc-q4",
+          "type": "true_false",
+          "prompt": "This $2,200 is the medical FSA limit.",
+          "answer": false,
+          "explain": "The medical FSA is a different account, with a different limit. This line is the child tax credit."
+        },
+        {
+          "id": "dd-ctc-q5",
+          "type": "multiple_choice",
+          "prompt": "Whose income, in 2026, is past the start of the phaseout for a single filer?",
+          "choices": [
+            "Income above $200,000",
+            "Income of $40,000",
+            "Income of $85,000"
+          ],
+          "answer": 0,
+          "explain": "The shrink starts above $200,000 for a single filer. $40,000 and $85,000 are under it."
+        }
+      ]
+    },
+    {
+      "id": "dd-school",
+      "type": "lesson",
+      "title": "Education Credits",
+      "summary": "The full American Opportunity amount is $2,500, if you qualify.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dd-school-q1",
+          "type": "info",
+          "title": "2026, Form 8863",
+          "body": "The American Opportunity Tax Credit is up to **$2,500** per eligible student: **100%** of the first **$2,000** of qualified expenses and **25%** of the next **$2,000**.\n\nFor 2026, the full credit is for modified adjusted gross income of **$80,000** or less if you are single, and it is gone above **$90,000**. Joint filers use **$160,000** and **$180,000**. This lesson does not compute a partial phaseout. The Lifetime Learning Credit is a different credit, up to **$2,000** per return."
+        },
+        {
+          "id": "dd-school-q2",
+          "type": "number",
+          "prompt": "Qualified expenses are $4,000 and you qualify for the full credit. What is 100% of the first $2,000?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "The first $2,000 counts in full."
+        },
+        {
+          "id": "dd-school-q3",
+          "type": "number",
+          "prompt": "What is 25% of the next $2,000?",
+          "answer": 500,
+          "unit": "$",
+          "explain": "$2,000 × 0.25 = $500."
+        },
+        {
+          "id": "dd-school-q4",
+          "type": "number",
+          "prompt": "What is the full American Opportunity credit from those two pieces?",
+          "answer": 2500,
+          "unit": "$",
+          "explain": "$2,000 + $500 = $2,500."
+        },
+        {
+          "id": "dd-school-q5",
+          "type": "true_false",
+          "prompt": "A single filer with modified adjusted gross income of $40,000 is over the 2026 line where this credit disappears.",
+          "answer": false,
+          "explain": "It disappears above $90,000 for a single filer. $40,000 is under the $80,000 line for the full credit."
+        }
+      ]
+    },
+    {
+      "id": "dd-refund",
+      "type": "lesson",
+      "title": "Refundable or Not",
+      "summary": "A credit can stop at the tax, or it can pay you past it.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dd-refund-q1",
+          "type": "info",
+          "title": "Two endings",
+          "body": "A nonrefundable credit can cut the tax to zero and then stop. The leftover does not come back.\n\nTax of **$400** and a **$1,000** nonrefundable credit uses **$400**. The other **$600** is lost. A refundable credit of **$1,000** against the same **$400** tax can send that **$600** back. The child tax credit is partly refundable. Do not treat every credit as cash."
+        },
+        {
+          "id": "dd-refund-q2",
+          "type": "number",
+          "prompt": "Tax is $400 and the nonrefundable credit is $1,000. How much of the credit is used?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "It can only erase the $400 of tax."
+        },
+        {
+          "id": "dd-refund-q3",
+          "type": "number",
+          "prompt": "How much of that nonrefundable credit does not come back?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$1,000 − $400 = $600."
+        },
+        {
+          "id": "dd-refund-q4",
+          "type": "number",
+          "prompt": "The credit is refundable instead. How much can come back after the $400 tax is erased?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$1,000 − $400 = $600."
+        },
+        {
+          "id": "dd-refund-q5",
+          "type": "true_false",
+          "prompt": "Every credit is refundable.",
+          "answer": false,
+          "explain": "A nonrefundable credit stops at the tax. Read the credit before you count on cash back."
+        }
+      ]
+    },
+    {
+      "id": "dd-above",
+      "type": "lesson",
+      "title": "Without Itemizing",
+      "summary": "Some subtractions happen before the standard deduction.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "dd-above-q1",
+          "type": "info",
+          "title": "Adjustments",
+          "body": "Some [[tax deduction|tax-deduction]] amounts, often called adjustments, come off income before adjusted gross income. You can take them and still take the [[standard deduction]].\n\nIn this example, wages are **$40,000** and a **$1,000** adjustment is allowed. Adjusted gross income is **$39,000**. Taxable income is **$39,000** minus **$16,100**, which is **$22,900**. That is **$1,000** less taxable income than with no adjustment."
+        },
+        {
+          "id": "dd-above-q2",
+          "type": "number",
+          "prompt": "Wages are $40,000 and the adjustment is $1,000. What is adjusted gross income?",
+          "answer": 39000,
+          "unit": "$",
+          "explain": "$40,000 − $1,000 = $39,000."
+        },
+        {
+          "id": "dd-above-q3",
+          "type": "number",
+          "prompt": "What is taxable income after the $16,100 standard deduction?",
+          "answer": 22900,
+          "unit": "$",
+          "explain": "$39,000 − $16,100 = $22,900."
+        },
+        {
+          "id": "dd-above-q4",
+          "type": "number",
+          "prompt": "Without the adjustment, taxable income was $23,900. How much lower is it now?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "$23,900 − $22,900 = $1,000. The adjustment and the standard deduction both happened."
+        },
+        {
+          "id": "dd-above-q5",
+          "type": "true_false",
+          "prompt": "An adjustment means you must itemize.",
+          "answer": false,
+          "explain": "That is the point of an adjustment. The standard deduction can still come off afterward."
+        }
+      ]
+    },
+    {
+      "id": "dd-jamal",
+      "type": "lesson",
+      "format": "story",
+      "title": "Jamal and the EITC",
+      "summary": "His bracket is 10%. The $8,231 figure is not his.",
+      "xp": 10,
+      "story": {
+        "title": "Jamal checks the EITC",
+        "character": "Jamal, 29",
+        "body": "Jamal is 29 and a warehouse lead. He is single. His wages are **$28,000**, and he has one qualifying child.\n\nThe 2026 standard deduction leaves taxable income of **$11,900**. That is inside the 10% bucket, so the income tax before credits is **$1,190**. A **$1,000** [[tax deduction]] would save him **$100**. A **$1,000** [[tax credit]] would save him **$1,000**.\n\nThe **$8,231** EITC maximum is for three or more children. Jamal does not write that number on his return. He uses the IRS EITC assistant."
+      },
+      "steps": [
+        {
+          "id": "dd-jamal-q1",
+          "type": "number",
+          "prompt": "What is Jamal’s taxable income?",
+          "answer": 11900,
+          "unit": "$",
+          "explain": "$28,000 − $16,100 = $11,900."
+        },
+        {
+          "id": "dd-jamal-q2",
+          "type": "number",
+          "prompt": "What is 10% of that $11,900, the tax before credits?",
+          "answer": 1190,
+          "unit": "$",
+          "explain": "$11,900 × 0.10 = $1,190."
+        },
+        {
+          "id": "dd-jamal-q3",
+          "type": "number",
+          "prompt": "A $1,000 deduction in his 10% bucket saves how much?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$1,000 × 0.10 = $100."
+        },
+        {
+          "id": "dd-jamal-q4",
+          "type": "multiple_choice",
+          "prompt": "What should Jamal do with the EITC?",
+          "choices": [
+            "Use the IRS EITC assistant",
+            "Claim the $8,231 maximum for three or more children",
+            "Skip it because he is in the 10% bracket"
+          ],
+          "answer": 0,
+          "explain": "One child is not the three-child maximum. The assistant handles the phaseout."
+        },
+        {
+          "id": "dd-jamal-q5",
+          "type": "true_false",
+          "prompt": "Jamal’s $11,900 of taxable income has reached the 12% bracket.",
+          "answer": false,
+          "explain": "The 12% bracket starts above $12,400. He is $500 under that line. $12,400 − $11,900 = $500."
+        }
+      ]
+    },
+    {
+      "id": "dd-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "dd-trial",
+      "type": "boss",
+      "title": "Den Trial: Deductions & Credits",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "dd-trial-q1",
+          "type": "number",
+          "prompt": "A $2,000 deduction is in the 22% bracket. How much tax does it save?",
+          "answer": 440,
+          "unit": "$",
+          "explain": "$2,000 × 0.22 = $440."
+        },
+        {
+          "id": "dd-trial-q2",
+          "type": "number",
+          "prompt": "Itemized deductions in an example are $9,000. The 2026 single standard deduction is $16,100. How much larger is the standard deduction?",
+          "answer": 7100,
+          "unit": "$",
+          "explain": "$16,100 − $9,000 = $7,100."
+        },
+        {
+          "id": "dd-trial-q3",
+          "type": "true_false",
+          "prompt": "The 2026 child tax credit maximum in this course is $2,200 per qualifying child.",
+          "answer": true,
+          "explain": "That is the 2026 amount, and it shrinks above the income lines you already learned."
+        },
+        {
+          "id": "dd-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "A $500 nonrefundable credit meets a $200 tax. How much of the credit can be refunded?",
+          "choices": [
+            "$0",
+            "$300",
+            "$500"
+          ],
+          "answer": 0,
+          "explain": "Nonrefundable means the leftover $300 does not come back. The credit used is $200."
+        }
+      ]
+    }
+  ]
+}

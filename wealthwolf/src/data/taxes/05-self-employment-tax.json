@@ -1,0 +1,664 @@
+{
+  "id": "self-employment-tax",
+  "section": "taxes",
+  "order": 5,
+  "title": "Self-Employment Taxes",
+  "description": "Both halves of FICA, a Schedule C, and the 2026 mileage rates that split in July.",
+  "wolfLine": "No employer is paying the other half. That half is still due.",
+  "terms": {
+    "self-employment-tax": {
+      "term": "Self-employment tax",
+      "definition": "The Social Security and Medicare tax a self-employed person pays on net earnings. The common case is 15.3% of 92.35% of the net, which is both the employee half and the employer half.",
+      "example": "A $10,000 self-employment base is taxed at 15.3%, which is $1,530."
+    }
+  },
+  "lessons": [
+    {
+      "id": "se-both",
+      "type": "lesson",
+      "title": "Both Halves of FICA",
+      "summary": "An employee pays one half. You pay both.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "se-both-q1",
+          "type": "info",
+          "title": "The common case",
+          "body": "[[Self-employment tax]] is both halves of [[FICA]]. In the common case, under the Social Security wage base, it is **15.3%** of **92.35%** of net self-employment earnings.\n\nOn a **$20,000** net, the base is **$18,470**. On a round **$10,000** base, 15.3% is **$1,530**. An employee’s half of FICA on $10,000 of wages is **7.65%**, or **$765**. The extra 0.9% Medicare tax is a high-income exception. This lesson does not grade that threshold."
+        },
+        {
+          "id": "se-both-q2",
+          "type": "number",
+          "prompt": "Net self-employment earnings are $20,000. What is 92.35% of that?",
+          "answer": 18470,
+          "unit": "$",
+          "explain": "$20,000 × 0.9235 = $18,470."
+        },
+        {
+          "id": "se-both-q3",
+          "type": "number",
+          "prompt": "The self-employment base in front of you is $10,000. What is 15.3% of it?",
+          "answer": 1530,
+          "unit": "$",
+          "explain": "$10,000 × 0.153 = $1,530."
+        },
+        {
+          "id": "se-both-q4",
+          "type": "number",
+          "prompt": "What is the employee half, 7.65%, on $10,000 of wages?",
+          "answer": 765,
+          "unit": "$",
+          "explain": "$10,000 × 0.0765 = $765."
+        },
+        {
+          "id": "se-both-q5",
+          "type": "number",
+          "prompt": "How much more is the $1,530 self-employment tax than that employee half?",
+          "answer": 765,
+          "unit": "$",
+          "explain": "$1,530 − $765 = $765. That gap is the employer half, which a self-employed person also pays."
+        }
+      ]
+    },
+    {
+      "id": "se-sched",
+      "type": "lesson",
+      "format": "document",
+      "title": "A Schedule C",
+      "summary": "Profit is receipts minus the costs you can deduct.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "se-sched-q1",
+          "type": "info",
+          "title": "The bottom line",
+          "body": "Schedule C is the high-level picture of one business. Gross receipts are **$40,000**. Supplies are **$2,000**. Contract help is **$3,000**. Net profit is **$35,000**.\n\nA personal grocery trip is not a line here. A [[business expense]] has to belong to the work."
+        },
+        {
+          "id": "se-sched-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Schedule C, simplified",
+            "subtitle": "One freelance business",
+            "lines": [
+              {
+                "id": "gross",
+                "label": "Gross receipts",
+                "amount": 40000.0
+              },
+              {
+                "id": "supplies",
+                "label": "Supplies",
+                "amount": -2000.0
+              },
+              {
+                "id": "help",
+                "label": "Contract help",
+                "amount": -3000.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Net profit",
+                "amount": 35000.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "What is the net profit on this page?",
+          "answer": 35000,
+          "unit": "$",
+          "explain": "$40,000 − $2,000 − $3,000 = $35,000."
+        },
+        {
+          "id": "se-sched-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Schedule C, simplified",
+            "subtitle": "One freelance business",
+            "lines": [
+              {
+                "id": "gross",
+                "label": "Gross receipts",
+                "amount": 40000.0
+              },
+              {
+                "id": "supplies",
+                "label": "Supplies",
+                "amount": -2000.0
+              },
+              {
+                "id": "help",
+                "label": "Contract help",
+                "amount": -3000.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Net profit",
+                "amount": 35000.0,
+                "strong": true
+              }
+            ]
+          },
+          "prompt": "Supplies and contract help together are how much?",
+          "answer": 5000,
+          "unit": "$",
+          "explain": "$2,000 + $3,000 = $5,000."
+        },
+        {
+          "id": "se-sched-q4",
+          "type": "multiple_choice",
+          "prompt": "Which cost belongs on this Schedule C?",
+          "choices": [
+            "Software you bought only for client work",
+            "Your household groceries",
+            "A vacation that included one work email"
+          ],
+          "answer": 0,
+          "explain": "The software is a business expense. The groceries and the vacation are personal."
+        },
+        {
+          "id": "se-sched-q5",
+          "type": "true_false",
+          "prompt": "Net profit is the gross receipts, with no costs taken off.",
+          "answer": false,
+          "explain": "Net profit is what remains. Here that is $35,000, not $40,000."
+        }
+      ]
+    },
+    {
+      "id": "se-office",
+      "type": "lesson",
+      "title": "Expenses and a Home Office",
+      "summary": "The space has to be for the work, regularly and only.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "se-office-q1",
+          "type": "info",
+          "title": "Exclusive means exclusive",
+          "body": "Ordinary [[business expense]] items, like the supplies on the Schedule C, come off the receipts.\n\nA home office usually has to be used regularly and only for the business. A desk in the living room, or a spare room that is also the guest room, usually fails that test. This lesson does not assign a dollar deduction for the room. The IRS page for the year is the method, simplified or actual."
+        },
+        {
+          "id": "se-office-q2",
+          "type": "multiple_choice",
+          "prompt": "Which space usually qualifies?",
+          "choices": [
+            "A room used only for the business, regularly",
+            "The kitchen table, also used for dinner",
+            "A guest room with a laptop in the corner"
+          ],
+          "answer": 0,
+          "explain": "Only, and regularly. Shared family space usually does not qualify."
+        },
+        {
+          "id": "se-office-q3",
+          "type": "true_false",
+          "prompt": "A personal grocery bill becomes a business expense because you thought about work while shopping.",
+          "answer": false,
+          "explain": "The cost has to be for the business. Thinking about work does not convert a personal bill."
+        },
+        {
+          "id": "se-office-q4",
+          "type": "number",
+          "prompt": "Gross receipts are $35,000. A real business expense is $5,000. What is left before any home-office method?",
+          "answer": 30000,
+          "unit": "$",
+          "explain": "$35,000 − $5,000 = $30,000. The home office is a separate question, not an automatic extra."
+        },
+        {
+          "id": "se-office-q5",
+          "type": "fill_blank",
+          "prompt": "A home office usually must be used regularly and ___ for the business.",
+          "choices": [
+            "only",
+            "socially",
+            "never"
+          ],
+          "answer": 0,
+          "explain": "Only. A mixed-use room usually stays personal."
+        }
+      ]
+    },
+    {
+      "id": "se-miles",
+      "type": "lesson",
+      "title": "Mileage in 2026",
+      "summary": "The rate changed on July 1. Use the half you drove.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "se-miles-q1",
+          "type": "info",
+          "title": "Two rates, one year",
+          "body": "For 2026, the business standard mileage rate is **72.5 cents** a mile from January through June, and **76 cents** from July through December.\n\nIt is for business miles of a self-employed person, not for an employee’s commute to a regular workplace. **1,000** miles in the second half are **$760**. The same 1,000 miles in the first half are **$725**. Both halves are **$1,485**. Do not use one rate for the whole year."
+        },
+        {
+          "id": "se-miles-q2",
+          "type": "number",
+          "prompt": "What is 1,000 business miles in July through December 2026, at 76 cents?",
+          "answer": 760,
+          "unit": "$",
+          "explain": "1,000 × $0.76 = $760."
+        },
+        {
+          "id": "se-miles-q3",
+          "type": "number",
+          "prompt": "What is 1,000 business miles in January through June 2026, at 72.5 cents?",
+          "answer": 725,
+          "unit": "$",
+          "explain": "1,000 × $0.725 = $725."
+        },
+        {
+          "id": "se-miles-q4",
+          "type": "number",
+          "prompt": "You drove 1,000 business miles in each half. What is the deduction?",
+          "answer": 1485,
+          "unit": "$",
+          "explain": "$760 + $725 = $1,485."
+        },
+        {
+          "id": "se-miles-q5",
+          "type": "true_false",
+          "prompt": "The drive from home to a regular W-2 office is a business mile at these rates.",
+          "answer": false,
+          "explain": "These rates are the self-employed business deduction. A commute to your job is personal."
+        }
+      ]
+    },
+    {
+      "id": "se-harbor",
+      "type": "lesson",
+      "title": "Quarterly Estimates",
+      "summary": "A safe harbor is a target, not a guess.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "se-harbor-q1",
+          "type": "info",
+          "title": "Match last year, or come close to this one",
+          "body": "[[Estimated taxes]] are how you pay during the year when no employer is withholding. You already know the quarterly dates.\n\nA common safe harbor is **100%** of last year’s tax, or **110%** if your adjusted gross income was over **$150,000**. Another path is **90%** of this year’s tax. Last year’s tax of **$4,000** makes the 100% target **$4,000**, or **$1,000** a quarter. The 110% target is **$4,400**, or **$1,100** a quarter."
+        },
+        {
+          "id": "se-harbor-q2",
+          "type": "number",
+          "prompt": "Last year’s tax was $4,000. What is 100% of it?",
+          "answer": 4000,
+          "unit": "$",
+          "explain": "The common safe harbor is the whole $4,000."
+        },
+        {
+          "id": "se-harbor-q3",
+          "type": "number",
+          "prompt": "Split that $4,000 into four equal quarterly payments. What is each one?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "$4,000 ÷ 4 = $1,000."
+        },
+        {
+          "id": "se-harbor-q4",
+          "type": "number",
+          "prompt": "Your adjusted gross income was over $150,000, so you use 110% of the $4,000. What is the target?",
+          "answer": 4400,
+          "unit": "$",
+          "explain": "$4,000 × 1.10 = $4,400."
+        },
+        {
+          "id": "se-harbor-q5",
+          "type": "true_false",
+          "prompt": "The quarterly dates replace the need to pay.",
+          "answer": false,
+          "explain": "The dates are when the estimates are due. A safe harbor is how much. You already learned the dates."
+        }
+      ]
+    },
+    {
+      "id": "se-records",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Keep the Records",
+      "summary": "No receipt, no easy deduction.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "se-records-q1",
+          "type": "info",
+          "title": "The file is the deduction",
+          "body": "Keep the invoice, the receipt, and a mileage log written at the time. A number you reconstruct in April is a weak record.\n\nPersonal bills do not go in the business folder just because the folder is nearby."
+        },
+        {
+          "id": "se-records-q2",
+          "type": "sort",
+          "prompt": "Sort each paper.",
+          "buckets": [
+            "Keep for the business",
+            "Personal"
+          ],
+          "items": [
+            [
+              "An invoice you sent a client",
+              0
+            ],
+            [
+              "A log of miles driven to that client",
+              0
+            ],
+            [
+              "A receipt for software used only for the work",
+              0
+            ],
+            [
+              "The household streaming bill",
+              1
+            ]
+          ],
+          "explain": "Client income, client miles, and work software stay. The streaming bill is personal."
+        },
+        {
+          "id": "se-records-q3",
+          "type": "multiple_choice",
+          "prompt": "When should the mileage log be written?",
+          "choices": [
+            "When you drive the miles",
+            "The night before you file",
+            "Only if you are audited"
+          ],
+          "answer": 0,
+          "explain": "A log from the day is a record. A log from memory is a story."
+        },
+        {
+          "id": "se-records-q4",
+          "type": "true_false",
+          "prompt": "A personal streaming bill is a business expense if it is in the same drawer as the invoices.",
+          "answer": false,
+          "explain": "The drawer does not change what the bill paid for."
+        },
+        {
+          "id": "se-records-q5",
+          "type": "fill_blank",
+          "prompt": "Write the mileage down when you ___ it.",
+          "choices": [
+            "drive",
+            "file",
+            "forget"
+          ],
+          "answer": 0,
+          "explain": "Drive. April is too late to invent the log."
+        }
+      ]
+    },
+    {
+      "id": "se-call",
+      "type": "lesson",
+      "format": "call",
+      "title": "One Half or Both",
+      "summary": "Same $10,000 base. Twice the FICA.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "se-call-q1",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Employee half on $10,000",
+              "subtitle": "The employer pays the other half",
+              "lines": [
+                {
+                  "id": "fica",
+                  "label": "FICA you pay",
+                  "amount": 765.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Self-employed on a $10,000 base",
+              "subtitle": "Both halves",
+              "lines": [
+                {
+                  "id": "se",
+                  "label": "Self-employment tax",
+                  "amount": 1530.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What does the employee pay in FICA on this page?",
+          "answer": 765,
+          "unit": "$",
+          "explain": "7.65% of $10,000 is $765."
+        },
+        {
+          "id": "se-call-q2",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Employee half on $10,000",
+              "subtitle": "The employer pays the other half",
+              "lines": [
+                {
+                  "id": "fica",
+                  "label": "FICA you pay",
+                  "amount": 765.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Self-employed on a $10,000 base",
+              "subtitle": "Both halves",
+              "lines": [
+                {
+                  "id": "se",
+                  "label": "Self-employment tax",
+                  "amount": 1530.0
+                }
+              ]
+            }
+          ],
+          "prompt": "What is the self-employment tax on the $10,000 base?",
+          "answer": 1530,
+          "unit": "$",
+          "explain": "15.3% of $10,000 is $1,530."
+        },
+        {
+          "id": "se-call-q3",
+          "type": "number",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Employee half on $10,000",
+              "subtitle": "The employer pays the other half",
+              "lines": [
+                {
+                  "id": "fica",
+                  "label": "FICA you pay",
+                  "amount": 765.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Self-employed on a $10,000 base",
+              "subtitle": "Both halves",
+              "lines": [
+                {
+                  "id": "se",
+                  "label": "Self-employment tax",
+                  "amount": 1530.0
+                }
+              ]
+            }
+          ],
+          "prompt": "How much more is the self-employed page?",
+          "answer": 765,
+          "unit": "$",
+          "explain": "$1,530 − $765 = $765."
+        },
+        {
+          "id": "se-call-q4",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Employee half on $10,000",
+              "subtitle": "The employer pays the other half",
+              "lines": [
+                {
+                  "id": "fica",
+                  "label": "FICA you pay",
+                  "amount": 765.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Self-employed on a $10,000 base",
+              "subtitle": "Both halves",
+              "lines": [
+                {
+                  "id": "se",
+                  "label": "Self-employment tax",
+                  "amount": 1530.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Who pays both halves on these two pages?",
+          "choices": [
+            "The self-employed person",
+            "The employee",
+            "Neither. FICA is optional"
+          ],
+          "answer": 0,
+          "why": [
+            "$1,530 is both halves.",
+            "The employee pays $765.",
+            "FICA is not optional."
+          ],
+          "explain": "The employee page is one half. The self-employed page is both."
+        },
+        {
+          "id": "se-call-q5",
+          "type": "true_false",
+          "prompt": "The self-employed tax on this page is smaller because there is no employer.",
+          "answer": false,
+          "explain": "There is no employer to pay the other half, so the self-employed person pays both. The page is larger, not smaller."
+        }
+      ]
+    },
+    {
+      "id": "se-rosa",
+      "type": "lesson",
+      "format": "story",
+      "title": "Rosa’s Second Year",
+      "summary": "The base, the miles, and a harbor she can name.",
+      "xp": 10,
+      "story": {
+        "title": "Rosa’s second year",
+        "character": "Rosa, 38",
+        "body": "Rosa is 38 and a freelance designer. Her second year’s net profit, before the mileage, is **$20,000**. The self-employment base is 92.35% of that, which is **$18,470**.\n\nShe also drove **1,000** miles to clients in July through December 2026. At **76 cents**, that deduction is **$760**. She does not use the January rate for those miles.\n\nShe already knows the quarterly dates. Last year’s tax was **$4,000**, and her income was under **$150,000**, so her 100% safe harbor is **$4,000**. She keeps the invoices and the mileage log as she goes."
+      },
+      "steps": [
+        {
+          "id": "se-rosa-q1",
+          "type": "number",
+          "prompt": "What is 92.35% of Rosa’s $20,000 net?",
+          "answer": 18470,
+          "unit": "$",
+          "explain": "$20,000 × 0.9235 = $18,470."
+        },
+        {
+          "id": "se-rosa-q2",
+          "type": "number",
+          "prompt": "What is her mileage deduction for those 1,000 second-half miles?",
+          "answer": 760,
+          "unit": "$",
+          "explain": "1,000 × $0.76 = $760."
+        },
+        {
+          "id": "se-rosa-q3",
+          "type": "number",
+          "prompt": "What is her 100% safe-harbor target?",
+          "answer": 4000,
+          "unit": "$",
+          "explain": "100% of last year’s $4,000 tax is $4,000."
+        },
+        {
+          "id": "se-rosa-q4",
+          "type": "number",
+          "prompt": "What is each of four equal payments toward that $4,000?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "$4,000 ÷ 4 = $1,000."
+        },
+        {
+          "id": "se-rosa-q5",
+          "type": "true_false",
+          "prompt": "Rosa should use 72.5 cents for the miles she drove in November.",
+          "answer": false,
+          "explain": "November is in the second half of 2026. Those miles are 76 cents."
+        }
+      ]
+    },
+    {
+      "id": "se-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "se-trial",
+      "type": "boss",
+      "title": "Den Trial: Self-Employment Taxes",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "se-trial-q1",
+          "type": "number",
+          "prompt": "Net self-employment earnings are $10,000. What is 92.35% of that?",
+          "answer": 9235,
+          "unit": "$",
+          "explain": "$10,000 × 0.9235 = $9,235."
+        },
+        {
+          "id": "se-trial-q2",
+          "type": "number",
+          "prompt": "A $8,000 self-employment base is taxed at 15.3%. What is the tax?",
+          "answer": 1224,
+          "unit": "$",
+          "explain": "$8,000 × 0.153 = $1,224."
+        },
+        {
+          "id": "se-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "Which miles use the 76-cent rate in 2026?",
+          "choices": [
+            "Business miles driven from July through December",
+            "January miles",
+            "The commute to a W-2 job"
+          ],
+          "answer": 0,
+          "explain": "July through December is the 76-cent half. January is 72.5 cents. The commute is not this deduction."
+        },
+        {
+          "id": "se-trial-q4",
+          "type": "true_false",
+          "prompt": "A guest room that relatives still sleep in is a clean home office.",
+          "answer": false,
+          "explain": "The space usually has to be used only for the business."
+        }
+      ]
+    }
+  ]
+}

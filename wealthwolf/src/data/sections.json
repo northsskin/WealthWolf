@@ -65,6 +65,19 @@
     }
   },
   {
+    "id": "taxes",
+    "order": 6,
+    "title": "Taxes",
+    "description": "How income tax really works, how to file, and how to legally keep more of your money.",
+    "trial": {
+      "id": "tx-section-trial",
+      "title": "Section Trial: Taxes",
+      "summary": "Twelve questions from the whole section. Three strikes and you’re out.",
+      "xp": 50,
+      "draw": 12
+    }
+  },
+  {
     "id": "investing",
     "order": 7,
     "title": "Investing",
