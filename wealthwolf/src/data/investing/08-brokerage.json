@@ -1,0 +1,597 @@
+{
+  "id": "brokerage",
+  "section": "investing",
+  "order": 8,
+  "title": "Brokerage Accounts & Placing Trades",
+  "description": "Cash accounts, order types, and the fees sitting on the receipt.",
+  "wolfLine": "Use cash. Read the confirmation. Then automate it.",
+  "terms": {
+    "market-order": {
+      "term": "Market order",
+      "definition": "An order to buy or sell now, at the best price currently available. You do not set a ceiling.",
+      "example": "Buying at whatever the latest trade is, near $50."
+    },
+    "limit-order": {
+      "term": "Limit order",
+      "definition": "An order that only trades at your price or better. A buy limit at $48 will not pay $50.",
+      "example": "“Buy if the price is $48 or less.”"
+    },
+    "margin": {
+      "term": "Margin",
+      "definition": "Borrowing from the brokerage to buy more investments. Losses can be larger than the cash you put in.",
+      "example": "Putting in $1,000 and borrowing $1,000 to buy $2,000 of stock."
+    },
+    "dollar-cost-averaging": {
+      "term": "Dollar-cost averaging",
+      "definition": "Investing the same number of dollars on a schedule, so you buy more shares when the price is lower and fewer when it is higher.",
+      "example": "$120 a month, whatever the price is that day."
+    },
+    "sipc": {
+      "term": "SIPC",
+      "definition": "The Securities Investor Protection Corporation. If your brokerage fails, it protects up to $500,000 of securities per customer, including up to $250,000 of cash. It does not protect you from the market falling.",
+      "example": "A brokerage goes under. The market dropping 20% is not an SIPC event."
+    }
+  },
+  "lessons": [
+    {
+      "id": "br-open",
+      "type": "lesson",
+      "title": "Opening the Account",
+      "summary": "The container, then the cash, then the buy.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "br-open-q1",
+          "type": "info",
+          "title": "A brokerage is the shop",
+          "body": "A brokerage account is where you buy [[stock]]s, [[bond]]s, and [[fund]]s outside a workplace plan. You prove who you are, link a bank, and send cash. The cash sits there until you place a trade. This unit stays with cash. [[Margin]] comes next, as the thing to skip."
+        },
+        {
+          "id": "br-open-q2",
+          "type": "order",
+          "prompt": "Put a first account in order.",
+          "items": [
+            "Open the brokerage and verify your identity",
+            "Link your bank",
+            "Transfer cash in",
+            "Place a buy with that cash"
+          ],
+          "explain": "No cash, no trade. The buy is last."
+        },
+        {
+          "id": "br-open-q3",
+          "type": "true_false",
+          "prompt": "Money you transfer in is invested automatically, the moment it arrives, in a stock the brokerage picks.",
+          "answer": false,
+          "explain": "A transfer is cash. You still choose the investment, unless you separately set up an automatic buy."
+        },
+        {
+          "id": "br-open-q4",
+          "type": "multiple_choice",
+          "prompt": "Which account is this lesson about?",
+          "choices": [
+            "A workplace 401(k)",
+            "A brokerage account you open yourself",
+            "A savings account at 4% APY"
+          ],
+          "answer": 1,
+          "explain": "The 401(k) is the job. This is the account at a brokerage."
+        },
+        {
+          "id": "br-open-q5",
+          "type": "number",
+          "prompt": "You transfer $500 and the trade costs $200. How many dollars of cash are left in the account after the trade?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$500 − $200 = $300 still in cash. It is not invested until you buy something with it."
+        }
+      ]
+    },
+    {
+      "id": "br-margin",
+      "type": "lesson",
+      "title": "Cash, Not Margin",
+      "summary": "Borrowed shares can wipe out more than you brought.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "br-margin-q1",
+          "type": "info",
+          "title": "Skip the loan",
+          "body": "A cash account spends your money. A [[margin]] account borrows from the brokerage so you can buy more. If the investment falls, you can lose the cash you put in and still owe the loan. Beginners stay on cash."
+        },
+        {
+          "id": "br-margin-q2",
+          "type": "number",
+          "prompt": "You put in $1,000 and borrow $1,000 to buy $2,000 of stock. The stock falls 50%, to $1,000. How many dollars do you still owe?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "The loan does not shrink with the stock. You owe $1,000, and the stock is now worth $1,000, so your equity is $0."
+        },
+        {
+          "id": "br-margin-q3",
+          "type": "number",
+          "prompt": "After that drop, how many dollars of your own $1,000 are left as equity?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "$1,000 of stock minus the $1,000 you owe is $0. The whole cash stake is gone. A deeper drop would leave you owing more than the stock is worth."
+        },
+        {
+          "id": "br-margin-q4",
+          "type": "true_false",
+          "prompt": "Margin losses stop at the cash you deposited.",
+          "answer": false,
+          "explain": "The loan stays. A hard drop can leave you owing more than the investment is worth."
+        },
+        {
+          "id": "br-margin-q5",
+          "type": "multiple_choice",
+          "prompt": "What should a beginner use?",
+          "choices": [
+            "A margin account, to buy twice as much",
+            "A cash account",
+            "A loan from the 401(k) to fund the brokerage"
+          ],
+          "answer": 1,
+          "explain": "Cash. The extra shares are not worth the chance of owing money."
+        }
+      ]
+    },
+    {
+      "id": "br-orders",
+      "type": "lesson",
+      "format": "call",
+      "title": "Market or Limit",
+      "summary": "Now, or only at your price.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "br-orders-q1",
+          "type": "info",
+          "title": "Two instructions",
+          "body": "A [[market order]] says buy now, at the best price on offer. A [[limit order]] says buy only at your price or better. A limit protects the price and can mean you get no shares."
+        },
+        {
+          "id": "br-orders-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Market order",
+              "subtitle": "Buy now, at the available price",
+              "lines": [
+                {
+                  "id": "est",
+                  "label": "Last price you are seeing",
+                  "amount": 50.0
+                }
+              ],
+              "note": "The fill can differ a little from the last price you saw."
+            },
+            {
+              "kind": "statement",
+              "title": "Limit order at $48",
+              "subtitle": "No trade if the price stays above $48",
+              "lines": [
+                {
+                  "id": "cap",
+                  "label": "Most you will pay",
+                  "amount": 48.0
+                }
+              ]
+            }
+          ],
+          "prompt": "You want the shares today and you accept the current price. Which order is that?",
+          "choices": [
+            "Market order",
+            "Limit order at $48"
+          ],
+          "answer": 0,
+          "explain": "The market order takes the available price. The $48 limit waits, and it may never fill while the price is $50."
+        },
+        {
+          "id": "br-orders-q3",
+          "type": "number",
+          "prompt": "Your limit is $48 and the only shares on offer are at $50. How many shares does that limit order buy?",
+          "answer": 0,
+          "explain": "A buy limit at $48 will not pay $50. Zero shares. That is the order doing its job."
+        },
+        {
+          "id": "br-orders-q4",
+          "type": "true_false",
+          "prompt": "A market order guarantees the last price shown on the screen.",
+          "answer": false,
+          "explain": "It takes the best available price, which can be a bit different by the time the order arrives."
+        },
+        {
+          "id": "br-orders-q5",
+          "type": "multiple_choice",
+          "prompt": "You will not pay more than $48. Which order says that?",
+          "choices": [
+            "Market order",
+            "Limit order at $48",
+            "Margin"
+          ],
+          "answer": 1,
+          "explain": "The limit is the ceiling. The market order has no ceiling."
+        }
+      ]
+    },
+    {
+      "id": "br-frac",
+      "type": "lesson",
+      "title": "Fractional Shares",
+      "summary": "A slice, when one whole share is a lot.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "br-frac-q1",
+          "type": "info",
+          "title": "Part of a share",
+          "body": "A fractional share is a piece of one share. If a share costs $200 and you invest $50, you own 0.25 of a share. You still own a slice of that one company, with that one company’s risk. It is a way to fit a budget. It is not diversification."
+        },
+        {
+          "id": "br-frac-q2",
+          "type": "number",
+          "prompt": "A share costs $200. How many dollars buy one quarter of it?",
+          "answer": 50,
+          "unit": "$",
+          "explain": "0.25 × $200 = $50."
+        },
+        {
+          "id": "br-frac-q3",
+          "type": "number",
+          "prompt": "You invest $25 in a share that costs $100. How many shares do you own? Enter 0.25 if you own a quarter.",
+          "answer": 0.25,
+          "tolerance": 0.005,
+          "explain": "$25 ÷ $100 = 0.25 of a share."
+        },
+        {
+          "id": "br-frac-q4",
+          "type": "true_false",
+          "prompt": "Owning 0.25 of one company’s share is the same as owning an index fund.",
+          "answer": false,
+          "explain": "It is still one company. The fraction only changes how much of it you bought."
+        },
+        {
+          "id": "br-frac-q5",
+          "type": "multiple_choice",
+          "prompt": "Why do brokerages offer fractional shares?",
+          "choices": [
+            "So a $50 deposit can buy part of a $200 share",
+            "So one company becomes hundreds of companies",
+            "So margin is required"
+          ],
+          "answer": 0,
+          "explain": "The fraction fits the deposit. The risk is still the company’s risk."
+        }
+      ]
+    },
+    {
+      "id": "br-confirm",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Confirmation",
+      "summary": "Shares, price, and the fee beside them.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "br-confirm-q1",
+          "type": "info",
+          "title": "Read it before you forget",
+          "body": "A confirmation is the receipt. It shows what you bought, the price, and any commission. This one is 4 shares of the made-up ticker WOLF at $50, plus a $5 commission."
+        },
+        {
+          "id": "br-confirm-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Trade confirmation",
+            "subtitle": "WOLF, a made-up ticker",
+            "lines": [
+              {
+                "id": "trade",
+                "label": "4 shares at $50",
+                "amount": 200.0
+              },
+              {
+                "id": "fee",
+                "label": "Commission",
+                "amount": 5.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "You paid",
+                "amount": 205.0,
+                "strong": true
+              }
+            ],
+            "note": "The share cost and the commission are separate lines."
+          },
+          "prompt": "How many dollars did the shares themselves cost?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "4 × $50 = $200. That line is the shares, not the fee."
+        },
+        {
+          "id": "br-confirm-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Trade confirmation",
+            "subtitle": "WOLF, a made-up ticker",
+            "lines": [
+              {
+                "id": "trade",
+                "label": "4 shares at $50",
+                "amount": 200.0
+              },
+              {
+                "id": "fee",
+                "label": "Commission",
+                "amount": 5.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "You paid",
+                "amount": 205.0,
+                "strong": true
+              }
+            ],
+            "note": "The share cost and the commission are separate lines."
+          },
+          "prompt": "How many dollars did you pay in total, shares plus commission?",
+          "answer": 205,
+          "unit": "$",
+          "explain": "$200 + $5 = $205."
+        },
+        {
+          "id": "br-confirm-q4",
+          "type": "true_false",
+          "prompt": "The commission is part of the share price, so the shares really cost $51.25 each and the fee line is optional.",
+          "answer": false,
+          "explain": "The shares cost $200. The $5 is a separate fee. Ignoring the fee line understates what left your cash."
+        },
+        {
+          "id": "br-confirm-q5",
+          "type": "multiple_choice",
+          "prompt": "What is WOLF in this confirmation?",
+          "choices": [
+            "A real company this course wants you to buy",
+            "A made-up ticker so the receipt can have a name",
+            "A type of bond"
+          ],
+          "answer": 1,
+          "explain": "The lesson needs a name on the receipt. It is not a recommendation."
+        }
+      ]
+    },
+    {
+      "id": "br-sipc",
+      "type": "lesson",
+      "title": "If the Brokerage Fails",
+      "summary": "SIPC is not a market refund.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "br-sipc-q1",
+          "type": "info",
+          "title": "What is protected",
+          "body": "[[SIPC]] steps in if your brokerage fails and your securities are missing, up to $500,000 per customer, including up to $250,000 of cash. If your stocks fall because the market fell, SIPC does not pay you back. A drop is not a failed brokerage."
+        },
+        {
+          "id": "br-sipc-q2",
+          "type": "number",
+          "prompt": "SIPC’s securities protection is up to how many dollars per customer?",
+          "answer": 500000,
+          "unit": "$",
+          "explain": "The cap is $500,000, and no more than $250,000 of that can be cash."
+        },
+        {
+          "id": "br-sipc-q3",
+          "type": "number",
+          "prompt": "You hold $600,000 of securities at one brokerage and it fails. How many dollars of that are above the $500,000 SIPC cap?",
+          "answer": 100000,
+          "unit": "$",
+          "explain": "$600,000 − $500,000 = $100,000 above the cap."
+        },
+        {
+          "id": "br-sipc-q4",
+          "type": "true_false",
+          "prompt": "SIPC replaces losses when the stock market drops.",
+          "answer": false,
+          "explain": "SIPC is about a failed brokerage, not a fallen price."
+        },
+        {
+          "id": "br-sipc-q5",
+          "type": "multiple_choice",
+          "prompt": "Which event is an SIPC kind of problem?",
+          "choices": [
+            "Your index fund falls 15% in a month",
+            "The brokerage fails and customer securities are missing",
+            "You sell at a loss"
+          ],
+          "answer": 1,
+          "explain": "A failed brokerage. The 15% drop is market risk, and selling is your trade."
+        }
+      ]
+    },
+    {
+      "id": "br-fees",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Fees to Watch",
+      "summary": "A $40 fee on a $100 trade is the whole story.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "br-fees-q1",
+          "type": "info",
+          "title": "The line that eats the trade",
+          "body": "Commissions, fund [[expense ratio]]s, and account fees all leave with your money. On a $100 trade, a $40 commission is 40% gone before the investment does anything. Many brokerages now charge $0 to trade shares. A $40 commission is a reason to look at a different brokerage."
+        },
+        {
+          "id": "br-fees-q2",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "A tiny trade",
+            "subtitle": "The fee is the problem line",
+            "lines": [
+              {
+                "id": "buy",
+                "label": "Shares",
+                "amount": 100.0
+              },
+              {
+                "id": "comm",
+                "label": "Commission",
+                "amount": 40.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Cash out",
+                "amount": 140.0
+              }
+            ]
+          },
+          "prompt": "Which line is the fee that does not belong on a $100 trade?",
+          "answer": "comm",
+          "explain": "The $40 commission is 40% of the $100 trade. The shares line is the investment. The fee is the problem."
+        },
+        {
+          "id": "br-fees-q3",
+          "type": "number",
+          "prompt": "What percent of the $100 share purchase is that $40 commission?",
+          "answer": 40,
+          "unit": "%",
+          "explain": "$40 ÷ $100 = 0.40, which is 40%."
+        },
+        {
+          "id": "br-fees-q4",
+          "type": "true_false",
+          "prompt": "A zero-commission trade means the fund inside it has no expense ratio.",
+          "answer": false,
+          "explain": "The trade can be free and the fund can still charge a yearly percent. Read both."
+        },
+        {
+          "id": "br-fees-q5",
+          "type": "multiple_choice",
+          "prompt": "Which fee keeps charging after the trade is done?",
+          "choices": [
+            "A one-time commission",
+            "A fund’s expense ratio, every year",
+            "SIPC"
+          ],
+          "answer": 1,
+          "explain": "The expense ratio is yearly. A commission, if there is one, is the trade itself."
+        }
+      ]
+    },
+    {
+      "id": "br-luis",
+      "type": "lesson",
+      "format": "story",
+      "title": "The Automatic $120",
+      "summary": "Same dollars, different prices.",
+      "xp": 10,
+      "story": {
+        "title": "Payday, every payday",
+        "character": "Luis, 27, line cook",
+        "body": "Luis invests **$120** on payday into one broad fund. Over three months the price is **$10**, then **$8**, then **$12**.\n\nHe buys **12** shares, then **15**, then **10**. The schedule did the buying."
+      },
+      "steps": [
+        {
+          "id": "br-luis-q1",
+          "type": "info",
+          "title": "Meet Luis",
+          "body": "Luis is 27 and a line cook. On payday he invests $120 into one broad [[fund]], automatically. That habit is [[dollar-cost averaging]]. Over three months the price is $10, then $8, then $12.\n\nHe buys 12 shares, then 15, then 10. He did not pick the prices. The schedule did."
+        },
+        {
+          "id": "br-luis-q2",
+          "type": "number",
+          "prompt": "At $10 a share, how many shares does $120 buy?",
+          "answer": 12,
+          "explain": "$120 ÷ $10 = 12 shares."
+        },
+        {
+          "id": "br-luis-q3",
+          "type": "number",
+          "prompt": "At $8 a share, how many shares does the next $120 buy?",
+          "answer": 15,
+          "explain": "$120 ÷ $8 = 15 shares. The lower price bought more shares."
+        },
+        {
+          "id": "br-luis-q4",
+          "type": "number",
+          "prompt": "The third month is $12 a share, so 10 shares. How many shares does Luis own after all three months?",
+          "answer": 37,
+          "explain": "12 + 15 + 10 = 37 shares. He spent 3 × $120 = $360."
+        },
+        {
+          "id": "br-luis-q5",
+          "type": "true_false",
+          "prompt": "Dollar-cost averaging promises you will beat someone who invested the whole amount on day one.",
+          "answer": false,
+          "explain": "It is a habit. It buys more shares at lower prices. It is not a promise of a higher return than investing a lump sum."
+        }
+      ]
+    },
+    {
+      "id": "br-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "br-trial",
+      "type": "boss",
+      "title": "Den Trial: Brokerage Accounts & Placing Trades",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "br-trial-q1",
+          "type": "number",
+          "prompt": "You buy $60 of a share that costs $240. What fraction of a share is that? Enter 0.25 for a quarter.",
+          "answer": 0.25,
+          "tolerance": 0.005,
+          "explain": "$60 ÷ $240 = 0.25 of a share."
+        },
+        {
+          "id": "br-trial-q2",
+          "type": "true_false",
+          "prompt": "SIPC pays you back when your fund drops.",
+          "answer": false,
+          "explain": "SIPC covers a failed brokerage, up to its caps. A market drop is not that event."
+        },
+        {
+          "id": "br-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "A buy limit at $30, when the price is $36, does what?",
+          "choices": [
+            "Buys immediately at $36",
+            "Waits, and does not pay more than $30",
+            "Borrows the $6 difference"
+          ],
+          "answer": 1,
+          "explain": "The limit is the ceiling. No fill while the price is above it."
+        },
+        {
+          "id": "br-trial-q4",
+          "type": "number",
+          "prompt": "Three automatic deposits of $100 buy shares at $10, $5, and $20. How many shares is that in total?",
+          "answer": 35,
+          "explain": "$100 ÷ $10 = 10, $100 ÷ $5 = 20, and $100 ÷ $20 = 5. 10 + 20 + 5 = 35 shares."
+        }
+      ]
+    }
+  ]
+}

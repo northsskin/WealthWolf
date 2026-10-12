@@ -1,0 +1,592 @@
+{
+  "id": "portfolio",
+  "section": "investing",
+  "order": 12,
+  "title": "Building Your Portfolio",
+  "description": "Three cheap funds, an automatic transfer, and a rule for red months.",
+  "wolfLine": "Build it once. Automate it. Then leave it alone.",
+  "terms": {
+    "three-fund-portfolio": {
+      "term": "Three-fund portfolio",
+      "definition": "A portfolio of three cheap index funds: a US stock fund, an international stock fund, and a bond fund. The split follows your timeline.",
+      "example": "A $10,000 retirement pile with $5,000 in US stocks, $2,000 international, and $3,000 in bonds."
+    }
+  },
+  "lessons": [
+    {
+      "id": "pf-three",
+      "type": "lesson",
+      "title": "The Three Funds",
+      "summary": "Home stocks, the rest of the world, and bonds.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pf-three-q1",
+          "type": "info",
+          "title": "A complete boring mix",
+          "body": "A [[three-fund portfolio]] is three cheap [[index fund]]s. One holds US stocks. One holds stocks from other countries. One holds [[bond]]s. You already know each piece. The portfolio is the split, plus the [[expense ratio]]s, plus the years you leave it alone. Nothing here is a promise of a return."
+        },
+        {
+          "id": "pf-three-q2",
+          "type": "multiple_choice",
+          "prompt": "Which three does this lesson mean?",
+          "choices": [
+            "A US stock index fund, an international stock index fund, and a bond index fund",
+            "Three individual stocks from one industry",
+            "A coin, a meme stock, and an option"
+          ],
+          "answer": 0,
+          "explain": "Those three funds cover home stocks, other countries’ stocks, and bonds. The coin and the meme stock are speculation."
+        },
+        {
+          "id": "pf-three-q3",
+          "type": "true_false",
+          "prompt": "The three-fund portfolio is three copies of the same US stock fund.",
+          "answer": false,
+          "explain": "Two of the funds are stocks, and they are different lists: the US, and the rest of the world. The third is bonds."
+        },
+        {
+          "id": "pf-three-q4",
+          "type": "number",
+          "prompt": "A $10,000 three-fund pile has $6,000 in the US stock fund and $2,000 in the international fund. How many dollars are in the bond fund?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$10,000 − $6,000 − $2,000 = $2,000."
+        },
+        {
+          "id": "pf-three-q5",
+          "type": "multiple_choice",
+          "prompt": "What does the bond fund’s job stay?",
+          "choices": [
+            "To triple the stocks",
+            "To be the steadier slice",
+            "To replace the emergency fund"
+          ],
+          "answer": 1,
+          "explain": "Steadier, not magic. The emergency fund is still cash, outside this pile."
+        }
+      ]
+    },
+    {
+      "id": "pf-enough",
+      "type": "lesson",
+      "title": "Three Is Enough",
+      "summary": "More names often means the same stocks twice.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pf-enough-q1",
+          "type": "info",
+          "title": "Overlap",
+          "body": "Five US stock funds can own the same giant companies five times. That is not more [[diversification]]. It is the same bet with more [[expense ratio]]s. Three broad funds already cover the US, other countries, and bonds. Add a fund when it adds a job you do not already have."
+        },
+        {
+          "id": "pf-enough-q2",
+          "type": "multiple_choice",
+          "prompt": "You already own a total US stock index fund. What does a second US large-company fund mostly add?",
+          "choices": [
+            "Hundreds of new companies",
+            "Overlap, plus another fee",
+            "A bond cushion"
+          ],
+          "answer": 1,
+          "explain": "The big companies are already in the total market fund. The second fund repeats them."
+        },
+        {
+          "id": "pf-enough-q3",
+          "type": "true_false",
+          "prompt": "Twelve funds are always more diversified than three broad ones.",
+          "answer": false,
+          "explain": "Diversification is different bets. Twelve overlapping funds are still one bet, with a longer fee list."
+        },
+        {
+          "id": "pf-enough-q4",
+          "type": "number",
+          "prompt": "Two overlapping funds each charge $15 a year. A single broad fund would charge $5. How many extra dollars a year do the two funds cost?",
+          "answer": 25,
+          "unit": "$",
+          "explain": "$15 + $15 = $30. $30 − $5 = $25 extra."
+        },
+        {
+          "id": "pf-enough-q5",
+          "type": "fill_blank",
+          "prompt": "Owning the same companies in several funds is called ___.",
+          "choices": [
+            "overlap",
+            "a coupon",
+            "vesting"
+          ],
+          "answer": 0,
+          "explain": "Overlap. A new fund should add a job, not a second copy."
+        }
+      ]
+    },
+    {
+      "id": "pf-mix",
+      "type": "lesson",
+      "title": "A Mix for the Years",
+      "summary": "Assign the $10,000.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pf-mix-q1",
+          "type": "info",
+          "title": "Minimums, not a single correct life",
+          "body": "This check is a 25-year-old’s $10,000 retirement pile, decades away. Put at least $5,000 in the US stock fund, at least $2,000 in the international fund, and at least $2,000 in the bond fund. Every dollar gets assigned. A heavier stock mix would also fit this timeline. The minimums are the floor for this exercise, not a required life."
+        },
+        {
+          "id": "pf-mix-q2",
+          "type": "allocate",
+          "prompt": "Assign all $10,000. Meet each minimum.",
+          "total": 10000,
+          "step": 100,
+          "categories": [
+            {
+              "label": "US stock index fund",
+              "min": 5000
+            },
+            {
+              "label": "International stock index fund",
+              "min": 2000
+            },
+            {
+              "label": "Bond index fund",
+              "min": 2000
+            }
+          ],
+          "explain": "The floors are $5,000, $2,000, and $2,000, which already add to $9,000. The last $1,000 can sit in any fund. The bond line in a simple fill ends at $3,000. Decades away can also hold more stocks. This is an exercise, not a personal plan."
+        },
+        {
+          "id": "pf-mix-q3",
+          "type": "number",
+          "prompt": "The three minimums are $5,000, $2,000, and $2,000. How many dollars is that before the last $1,000?",
+          "answer": 9000,
+          "unit": "$",
+          "explain": "$5,000 + $2,000 + $2,000 = $9,000. The pile is $10,000, so $1,000 is still free to place."
+        },
+        {
+          "id": "pf-mix-q4",
+          "type": "true_false",
+          "prompt": "This exercise is the only legal mix for a 25-year-old.",
+          "answer": false,
+          "explain": "The minimums keep every job on the page. More stocks would still fit a decades-long goal."
+        },
+        {
+          "id": "pf-mix-q5",
+          "type": "multiple_choice",
+          "prompt": "Where does the emergency fund sit relative to this $10,000?",
+          "choices": [
+            "Inside the bond fund",
+            "Outside, in cash",
+            "In a coin"
+          ],
+          "answer": 1,
+          "explain": "The emergency fund stays cash. This pile is money that can wait."
+        }
+      ]
+    },
+    {
+      "id": "pf-cost",
+      "type": "lesson",
+      "format": "spot",
+      "title": "The Cost Check",
+      "summary": "The mix is not done until you see the fee.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pf-cost-q1",
+          "type": "info",
+          "title": "Add the three fees",
+          "body": "Each [[fund]] has an [[expense ratio]]. On $10,000, a cheap three-fund mix in this example costs $8 a year. A similar mix of pricey funds costs $120. The jobs match. The bill does not."
+        },
+        {
+          "id": "pf-cost-q2",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "Fees on $10,000 a year",
+            "subtitle": "Same jobs, different bill",
+            "lines": [
+              {
+                "id": "cheap",
+                "label": "Three-fund mix, yearly fees",
+                "amount": 8.0
+              },
+              {
+                "id": "pricey",
+                "label": "Similar mix, yearly fees",
+                "amount": 120.0
+              }
+            ]
+          },
+          "prompt": "Which yearly fee should you walk away from?",
+          "answer": "pricey",
+          "explain": "$120 a year for the same kind of mix is the line to leave. The $8 mix is the cheap one."
+        },
+        {
+          "id": "pf-cost-q3",
+          "type": "number",
+          "prompt": "How many more dollars a year is the pricey mix?",
+          "answer": 112,
+          "unit": "$",
+          "explain": "$120 − $8 = $112 a year, on the same $10,000, in this example."
+        },
+        {
+          "id": "pf-cost-q4",
+          "type": "true_false",
+          "prompt": "A higher fee means the pricey mix is safer.",
+          "answer": false,
+          "explain": "The fee is money out. Safety comes from the mix and the timeline, not from paying more."
+        },
+        {
+          "id": "pf-cost-q5",
+          "type": "number",
+          "prompt": "Over 10 years, if the $112 gap stayed the same, how many extra dollars would the pricey mix take?",
+          "answer": 1120,
+          "unit": "$",
+          "explain": "10 × $112 = $1,120. This sketch holds the fee gap still. A growing balance would make a percent fee larger."
+        }
+      ]
+    },
+    {
+      "id": "pf-auto",
+      "type": "lesson",
+      "title": "Automate It",
+      "summary": "Payday does the work.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pf-auto-q1",
+          "type": "info",
+          "title": "Take yourself out of it",
+          "body": "The [[three-fund portfolio]] survives if you do not have to decide every payday. The transfer happens, the buy happens, and you look again on a date you already wrote. That is the same habit as [[dollar-cost averaging]], pointed at the three funds."
+        },
+        {
+          "id": "pf-auto-q2",
+          "type": "order",
+          "prompt": "Put the automation in order.",
+          "items": [
+            "Get paid",
+            "Automatic transfer to the IRA or brokerage",
+            "Automatic buy of the three funds",
+            "Look again only on the date you wrote"
+          ],
+          "explain": "Cash arrives, the transfer leaves, the funds get bought, and the app does not get a daily vote."
+        },
+        {
+          "id": "pf-auto-q3",
+          "type": "number",
+          "prompt": "Morgan can send $100 a month. How many dollars is that in a year?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "12 × $100 = $1,200. The mix, not the month, is the decision."
+        },
+        {
+          "id": "pf-auto-q4",
+          "type": "true_false",
+          "prompt": "An automatic plan means you never look at it again, even when the goal date changes.",
+          "answer": false,
+          "explain": "You look on the written date, and you look when the goal itself changes. You do not look because today was red."
+        },
+        {
+          "id": "pf-auto-q5",
+          "type": "multiple_choice",
+          "prompt": "What should the automatic buy purchase?",
+          "choices": [
+            "Whatever is up the most today",
+            "The three funds in the split you chose",
+            "A new coin each month"
+          ],
+          "answer": 1,
+          "explain": "The split you already chose. The automation is not permission to chase."
+        }
+      ]
+    },
+    {
+      "id": "pf-change",
+      "type": "lesson",
+      "format": "call",
+      "title": "When to Change the Plan",
+      "summary": "A new date. Not a red month.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pf-change-q1",
+          "type": "info",
+          "title": "Two pages",
+          "body": "One page is a 15% drop, from $10,000 to $8,500, and the goal is still 30 years away. The other page is the same kind of mix, except you now need the money in 3 years. Only the second page is a reason to change the [[asset allocation]]. The drop is the reason you wrote the rule."
+        },
+        {
+          "id": "pf-change-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "A bad month",
+              "subtitle": "The goal is still 30 years away",
+              "lines": [
+                {
+                  "id": "then",
+                  "label": "Value last month",
+                  "amount": 10000.0
+                },
+                {
+                  "id": "now",
+                  "label": "Value today",
+                  "amount": 8500.0
+                }
+              ],
+              "note": "A 15% drop. The date did not change."
+            },
+            {
+              "kind": "statement",
+              "title": "A new date",
+              "subtitle": "You now need the money in 3 years, not 30",
+              "lines": [
+                {
+                  "id": "stock",
+                  "label": "Still in stocks",
+                  "amount": 8000.0
+                },
+                {
+                  "id": "bond",
+                  "label": "Still in bonds",
+                  "amount": 2000.0
+                }
+              ],
+              "note": "The investments did not change. The timeline did."
+            }
+          ],
+          "prompt": "Which page is a reason to change the mix?",
+          "choices": [
+            "A bad month",
+            "A new date"
+          ],
+          "answer": 1,
+          "explain": "The new date is the change. Three years cannot wear a 30-year stock mix. The 15% drop, with the date unchanged, is the moment you follow the old rule."
+        },
+        {
+          "id": "pf-change-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A bad month",
+            "subtitle": "The goal is still 30 years away",
+            "lines": [
+              {
+                "id": "then",
+                "label": "Value last month",
+                "amount": 10000.0
+              },
+              {
+                "id": "now",
+                "label": "Value today",
+                "amount": 8500.0
+              }
+            ],
+            "note": "A 15% drop. The date did not change."
+          },
+          "prompt": "On the bad-month page, how many dollars did the $10,000 fall?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$10,000 − $8,500 = $1,500. That is 15%. It is not a new goal."
+        },
+        {
+          "id": "pf-change-q4",
+          "type": "true_false",
+          "prompt": "A 15% drop means the three-fund portfolio was the wrong idea.",
+          "answer": false,
+          "explain": "A drop is part of owning stocks. The idea is wrong when the timeline changes, or the fees are wild, not when a year is red."
+        },
+        {
+          "id": "pf-change-q5",
+          "type": "multiple_choice",
+          "prompt": "You will need the money in 3 years. What should the mix do?",
+          "choices": [
+            "Shift toward cash and bonds",
+            "Shift into one meme stock to catch up",
+            "Stay 100% in the riskiest fund because you are behind"
+          ],
+          "answer": 0,
+          "explain": "A near date wants less swing. Catching up with a bet is how people lock in the shortfall."
+        }
+      ]
+    },
+    {
+      "id": "pf-stay",
+      "type": "lesson",
+      "title": "Stay the Course",
+      "summary": "The rule was written for this month.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "pf-stay-q1",
+          "type": "info",
+          "title": "Do not take the meeting",
+          "body": "Staying the course means you keep the [[three-fund portfolio]] and the automatic buy when the screen is red, as long as the goal date is the same. Selling the $8,500 locks the $1,500 drop in. The next recovery, if it comes, happens to the people who still hold the funds. This is the habit. It is not a promise that every drop recovers on a schedule."
+        },
+        {
+          "id": "pf-stay-q2",
+          "type": "number",
+          "prompt": "You sell at $8,500 after the drop from $10,000. How many dollars of the drop did you lock in?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$10,000 − $8,500 = $1,500. The sale makes that the result."
+        },
+        {
+          "id": "pf-stay-q3",
+          "type": "true_false",
+          "prompt": "Staying the course means never changing the mix, even if you need the money next year.",
+          "answer": false,
+          "explain": "A new date is a real change. A red month is not. The course you stay is the one that still matches the date."
+        },
+        {
+          "id": "pf-stay-q4",
+          "type": "multiple_choice",
+          "prompt": "The goal is still 30 years away and the funds are down 15%. What is the move?",
+          "choices": [
+            "Sell all three funds",
+            "Keep the funds and let the next automatic buy happen",
+            "Borrow on margin to get even faster"
+          ],
+          "answer": 1,
+          "explain": "The buy happens. The rule holds. Margin is still a skip."
+        },
+        {
+          "id": "pf-stay-q5",
+          "type": "fill_blank",
+          "prompt": "Keeping the plan through a drop is called staying the ___.",
+          "choices": [
+            "course",
+            "hype",
+            "margin"
+          ],
+          "answer": 0,
+          "explain": "The course. You set it on a calm day so a loud day cannot edit it."
+        }
+      ]
+    },
+    {
+      "id": "pf-morgan",
+      "type": "lesson",
+      "format": "story",
+      "title": "Morgan Builds a Plan",
+      "summary": "The emergency fund is done. The $100 has a job.",
+      "xp": 10,
+      "story": {
+        "title": "A hundred dollars",
+        "character": "Morgan, 25, dental assistant",
+        "body": "Morgan’s starter emergency fund is now in place. She takes home about **$3,000** a month.\n\nShe will send **$100** a month to a Roth IRA and buy three cheap index funds: US stocks, international stocks, and bonds. She looks again on her birthday."
+      },
+      "steps": [
+        {
+          "id": "pf-morgan-q1",
+          "type": "info",
+          "title": "Meet Morgan, later",
+          "body": "Morgan is 25 and a dental assistant, the same Morgan who mapped a starter emergency fund. That cash fund is now in place. Take-home pay is still about $3,000 a month.\n\nMorgan will send $100 a month into a Roth IRA and buy the three cheap index funds: US stocks, international stocks, and a bond fund. The look-again date is her birthday, not tomorrow morning."
+        },
+        {
+          "id": "pf-morgan-q2",
+          "type": "number",
+          "prompt": "How many dollars a year is Morgan’s $100 a month?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "12 × $100 = $1,200. That is under the 2026 IRA limit of $7,500."
+        },
+        {
+          "id": "pf-morgan-q3",
+          "type": "true_false",
+          "prompt": "Morgan should invest the emergency fund too, so the account looks serious.",
+          "answer": false,
+          "explain": "The cash fund stays cash. The $100 is the investing pile."
+        },
+        {
+          "id": "pf-morgan-q4",
+          "type": "multiple_choice",
+          "prompt": "When does Morgan reread the plan?",
+          "choices": [
+            "Every time a fund is red",
+            "On her birthday, unless the goal date changes",
+            "When a video names a coin"
+          ],
+          "answer": 1,
+          "explain": "A written date. A red day is not a meeting."
+        },
+        {
+          "id": "pf-morgan-q5",
+          "type": "order",
+          "prompt": "Put Morgan’s plan in order.",
+          "items": [
+            "Keep the emergency fund in cash",
+            "Send $100 a month to the Roth IRA",
+            "Buy the three cheap index funds",
+            "Look again on her birthday"
+          ],
+          "explain": "Cash first, then the automatic dollars, then the three funds, then a calm date to look."
+        }
+      ]
+    },
+    {
+      "id": "iv-sim",
+      "type": "sim",
+      "title": "Portfolio Simulator",
+      "summary": "Build a portfolio and fast-forward 30 years.",
+      "xp": 20,
+      "steps": []
+    },
+    {
+      "id": "pf-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "pf-trial",
+      "type": "boss",
+      "title": "Den Trial: Building Your Portfolio",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "pf-trial-q1",
+          "type": "number",
+          "prompt": "A $9,000 portfolio is $6,000 US stocks and $2,000 international stocks. How many dollars are in bonds?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "$9,000 − $6,000 − $2,000 = $1,000."
+        },
+        {
+          "id": "pf-trial-q2",
+          "type": "true_false",
+          "prompt": "A 15% drop, with the goal still decades away, is a reason to scrap the three-fund mix.",
+          "answer": false,
+          "explain": "The drop is why the rule exists. Change the mix when the date changes, not when the month is red."
+        },
+        {
+          "id": "pf-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "Which set is the three-fund portfolio?",
+          "choices": [
+            "US stock index, international stock index, bond index",
+            "Three coins",
+            "One employer’s stock, three times"
+          ],
+          "answer": 0,
+          "explain": "Home stocks, the rest of the world, and bonds. Cheap funds, then you leave them."
+        },
+        {
+          "id": "pf-trial-q4",
+          "type": "number",
+          "prompt": "The cheap mix costs $8 a year and the pricey mix costs $120. How many dollars a year do you keep by choosing the cheap one?",
+          "answer": 112,
+          "unit": "$",
+          "explain": "$120 − $8 = $112 a year in this example."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,536 @@
+{
+  "id": "crypto",
+  "section": "investing",
+  "order": 11,
+  "title": "Crypto & Speculation",
+  "description": "Tokens, scams, and the small slice you can actually lose.",
+  "wolfLine": "A story is not a plan. The fee to unlock your money is a scam.",
+  "terms": {
+    "cryptocurrency": {
+      "term": "Cryptocurrency",
+      "definition": "A digital token recorded on a shared ledger. Its price is what the next buyer will pay. It pays no coupon and it can go to zero.",
+      "example": "A coin that was $1,000 and is later $400."
+    }
+  },
+  "lessons": [
+    {
+      "id": "cy-what",
+      "type": "lesson",
+      "title": "What Crypto Is",
+      "summary": "A token with a price, not a plan.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cy-what-q1",
+          "type": "info",
+          "title": "No coupon, no building",
+          "body": "A [[cryptocurrency]] is a digital token on a shared ledger. Nobody owes you interest. There is no company earnings line and no rent. The price is the next buyer. This unit is education. It is not a coin to buy, and it will not name one."
+        },
+        {
+          "id": "cy-what-q2",
+          "type": "multiple_choice",
+          "prompt": "What sets a coin’s price?",
+          "choices": [
+            "A coupon written on the token",
+            "Whatever the next buyer will pay",
+            "FDIC insurance"
+          ],
+          "answer": 1,
+          "explain": "No coupon, no insurance on the price. Buyers and sellers are the whole price."
+        },
+        {
+          "id": "cy-what-q3",
+          "type": "true_false",
+          "prompt": "A cryptocurrency pays a bond-style coupon.",
+          "answer": false,
+          "explain": "There is no issuer promising interest and a face value back. The price can go to zero."
+        },
+        {
+          "id": "cy-what-q4",
+          "type": "multiple_choice",
+          "prompt": "How should you read this unit?",
+          "choices": [
+            "As a list of coins to buy",
+            "As education about a risky token, not a recommendation",
+            "As a replacement for an index fund"
+          ],
+          "answer": 1,
+          "explain": "No ticker. No promise. The risks are the lesson."
+        },
+        {
+          "id": "cy-what-q5",
+          "type": "fill_blank",
+          "prompt": "A digital token whose price is the next buyer is a ___.",
+          "choices": [
+            "cryptocurrency",
+            "coupon",
+            "CD"
+          ],
+          "answer": 0,
+          "explain": "Cryptocurrency. A CD is a bank deposit. A coupon is a bond’s interest."
+        }
+      ]
+    },
+    {
+      "id": "cy-drop",
+      "type": "lesson",
+      "title": "A 60% Drop",
+      "summary": "The math does not care about the story.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cy-drop-q1",
+          "type": "info",
+          "title": "Round and harsh",
+          "body": "Crypto prices have swung harder than a broad stock [[index]]. This lesson uses one clean case: a $1,000 coin falls 60%. You have $400. The other $600 is gone unless the price comes back, which it does not owe you. Historically, on average, is the wrong phrase here. A single coin is not “the market.”"
+        },
+        {
+          "id": "cy-drop-q2",
+          "type": "number",
+          "prompt": "A $1,000 coin falls 60%. How many dollars are left?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$1,000 × 0.40 = $400."
+        },
+        {
+          "id": "cy-drop-q3",
+          "type": "number",
+          "prompt": "How many dollars did that drop destroy?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$1,000 − $400 = $600."
+        },
+        {
+          "id": "cy-drop-q4",
+          "type": "true_false",
+          "prompt": "A 60% drop needs only a 60% rise to get back to $1,000.",
+          "answer": false,
+          "explain": "$400 × 1.60 = $640. Getting from $400 back to $1,000 is a 150% gain. $400 × 2.5 = $1,000."
+        },
+        {
+          "id": "cy-drop-q5",
+          "type": "number",
+          "prompt": "What percent gain turns $400 back into $1,000?",
+          "answer": 150,
+          "unit": "%",
+          "explain": "You need $600 more on a $400 base. $600 ÷ $400 = 1.50, which is 150%."
+        }
+      ]
+    },
+    {
+      "id": "cy-scam",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Scams and Rug Pulls",
+      "summary": "The fee to unlock your money is the tell.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cy-scam-q1",
+          "type": "info",
+          "title": "Two shapes",
+          "body": "A rug pull is when the people behind a new token take the money and disappear. The other shape is a message: your coins are “up,” but you must send a fee before you can withdraw. Real investments do not charge you a secret fee to touch your own money. Nobody legitimate needs you to move coins to a stranger’s wallet so they can “fix” an account."
+        },
+        {
+          "id": "cy-scam-q2",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "A message, not a market",
+            "subtitle": "You cannot withdraw until you pay",
+            "lines": [
+              {
+                "id": "gain",
+                "label": "What they say you are “up”",
+                "amount": 2000.0
+              },
+              {
+                "id": "fee",
+                "label": "Unlock fee they want sent first",
+                "amount": 80.0
+              }
+            ],
+            "note": "A fee to unlock your own money is the scam."
+          },
+          "prompt": "Which line is the scam?",
+          "answer": "fee",
+          "explain": "The $80 unlock fee is the trap. The $2,000 “gain” is the bait. You do not pay a stranger to access your own money."
+        },
+        {
+          "id": "cy-scam-q3",
+          "type": "true_false",
+          "prompt": "A promise of 10% every day is a normal yield.",
+          "answer": false,
+          "explain": "Ten percent a day is the shape of a scam, not a bond yield. Walk away."
+        },
+        {
+          "id": "cy-scam-q4",
+          "type": "multiple_choice",
+          "prompt": "Someone asks you to send coins to a wallet they control so they can repair your account. What do you do?",
+          "choices": [
+            "Send a small test",
+            "Stop. Do not send anything. Real support does not need your coins moved to them.",
+            "Send more, because the gain looks large"
+          ],
+          "answer": 1,
+          "explain": "Moving the coins to them is the theft. Stop."
+        },
+        {
+          "id": "cy-scam-q5",
+          "type": "number",
+          "prompt": "The bait says you are up $2,000, and the unlock fee is $80. If you pay it and the “gain” was never real, how many dollars did you just hand over?",
+          "answer": 80,
+          "unit": "$",
+          "explain": "The $80 is gone. The $2,000 was a picture on a screen."
+        }
+      ]
+    },
+    {
+      "id": "cy-keep",
+      "type": "lesson",
+      "title": "Exchanges and Custody",
+      "summary": "Someone else holding it is a risk of its own.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cy-keep-q1",
+          "type": "info",
+          "title": "Who has the coins",
+          "body": "On an exchange, the platform holds the coins and you have an account. If the platform freezes withdrawals or fails, you are in line with everyone else. A private wallet puts the keys with you. Lose the keys and the coins are gone. There is no password reset. Do not assume [[SIPC]] covers a crypto app. SIPC is about securities at member brokerages, not about a coin’s price, and not about a typical crypto platform."
+        },
+        {
+          "id": "cy-keep-q2",
+          "type": "multiple_choice",
+          "prompt": "You keep coins on an exchange. Who is holding them?",
+          "choices": [
+            "The platform",
+            "SIPC",
+            "Your bank, with FDIC insurance on the coin’s price"
+          ],
+          "answer": 0,
+          "explain": "The platform. If it fails or freezes, that is your problem. The coin’s price is a separate risk."
+        },
+        {
+          "id": "cy-keep-q3",
+          "type": "true_false",
+          "prompt": "SIPC replaces a drop in a coin’s price.",
+          "answer": false,
+          "explain": "SIPC does not cover a market drop, and a typical crypto app is not that kind of brokerage protection anyway."
+        },
+        {
+          "id": "cy-keep-q4",
+          "type": "multiple_choice",
+          "prompt": "You hold the keys in a private wallet and you lose them. What happens?",
+          "choices": [
+            "The exchange resets the password",
+            "The coins are gone",
+            "FDIC sends a check"
+          ],
+          "answer": 1,
+          "explain": "No reset. The keys are the ownership. This is why “I’ll remember it” is not a plan, and why a coin is a bad place for rent money."
+        },
+        {
+          "id": "cy-keep-q5",
+          "type": "fill_blank",
+          "prompt": "If the platform holds the coins for you, that platform is the ___.",
+          "choices": [
+            "exchange",
+            "coupon",
+            "cap rate"
+          ],
+          "answer": 0,
+          "explain": "Exchange. Your account is an IOU from them until you withdraw."
+        }
+      ]
+    },
+    {
+      "id": "cy-spec",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Speculation or Investing",
+      "summary": "A plan has earnings or a coupon. A bet has a story.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cy-spec-q1",
+          "type": "info",
+          "title": "The line",
+          "body": "[[Investing]], in this course, means owning a broad fund, a bond, or a real business you can leave alone for years. Speculation is a bet that a price will rise because other people will pay more. A coin, a meme stock, and a short-term options bet sit on the speculation side. You may still do it. You do not call it the plan."
+        },
+        {
+          "id": "cy-spec-q2",
+          "type": "sort",
+          "prompt": "Which pile is this?",
+          "buckets": [
+            "The plan",
+            "A speculation"
+          ],
+          "items": [
+            [
+              "A broad index fund for a 30-year goal",
+              0
+            ],
+            [
+              "A coin bought because a video said it would triple",
+              1
+            ],
+            [
+              "A Treasury you intend to hold to maturity",
+              0
+            ],
+            [
+              "A meme stock from a screenshot",
+              1
+            ]
+          ],
+          "explain": "The plan has a job and a long date. The screenshot and the video are bets that someone else pays more."
+        },
+        {
+          "id": "cy-spec-q3",
+          "type": "true_false",
+          "prompt": "Calling a bet an investment changes what it is.",
+          "answer": false,
+          "explain": "The name does not add earnings, a coupon, or a recovery schedule."
+        },
+        {
+          "id": "cy-spec-q4",
+          "type": "multiple_choice",
+          "prompt": "Where does a coin you cannot explain sit?",
+          "choices": [
+            "In the emergency fund",
+            "On the speculation side, in money you can lose",
+            "Inside the 401(k) match, as the whole match"
+          ],
+          "answer": 1,
+          "explain": "If you do it, it is a slice you can lose. It is not the rent, the match, or the emergency fund."
+        },
+        {
+          "id": "cy-spec-q5",
+          "type": "fill_blank",
+          "prompt": "A bet that someone else will pay more is ___.",
+          "choices": [
+            "speculation",
+            "a coupon",
+            "vesting"
+          ],
+          "answer": 0,
+          "explain": "Speculation. The plan is the fund, the bond, and the years."
+        }
+      ]
+    },
+    {
+      "id": "cy-slice",
+      "type": "lesson",
+      "title": "How Much Is Too Much",
+      "summary": "Rent money is too much. A slice you can lose is the cap.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cy-slice-q1",
+          "type": "info",
+          "title": "The test",
+          "body": "The cap is the amount you can watch go to zero without missing rent, food, or the [[emergency fund]]. If that amount is $200, then $200 is the cap. A $2,000 buy is $1,800 past it. There is no clever percent that makes a coin safe. The test is the bills."
+        },
+        {
+          "id": "cy-slice-q2",
+          "type": "number",
+          "prompt": "You can afford to lose $200. You are about to buy $2,000 of a coin. How many dollars over the cap is that?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "$2,000 − $200 = $1,800 too much."
+        },
+        {
+          "id": "cy-slice-q3",
+          "type": "true_false",
+          "prompt": "Five percent of your money is a safe rule that makes a coin fine.",
+          "answer": false,
+          "explain": "No percent makes the price safe. The test is whether you can lose the dollars and still pay your life."
+        },
+        {
+          "id": "cy-slice-q4",
+          "type": "multiple_choice",
+          "prompt": "Which pile is allowed to be the speculation slice?",
+          "choices": [
+            "The emergency fund",
+            "Money you can lose without missing a bill",
+            "The rent"
+          ],
+          "answer": 1,
+          "explain": "Loseable money only. The emergency fund and the rent have jobs."
+        },
+        {
+          "id": "cy-slice-q5",
+          "type": "number",
+          "prompt": "Your cap is $200 and you already bought $200 of a coin. How many more dollars fit inside the cap?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "The cap is full. More would be money you decided you could not lose."
+        }
+      ]
+    },
+    {
+      "id": "cy-bets",
+      "type": "lesson",
+      "title": "Meme Stocks and Options",
+      "summary": "A bet can expire. The plan should not.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "cy-bets-q1",
+          "type": "info",
+          "title": "Same family as the coin",
+          "body": "A meme stock is a share people pile into because it is a story, not because you read the business. An option is a contract with a deadline. The premium you pay can expire and be worth $0. A $300 option can become nothing. Neither belongs in the emergency fund, the match, or the long-term [[index fund]]. If you touch them, they are speculation, in the small slice."
+        },
+        {
+          "id": "cy-bets-q2",
+          "type": "number",
+          "prompt": "You pay a $300 option premium and it expires worthless. How many dollars are left of that premium?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "Worthless means $0. The $300 is the cost of the bet, gone."
+        },
+        {
+          "id": "cy-bets-q3",
+          "type": "true_false",
+          "prompt": "A meme stock is a diversified index fund with a fun name.",
+          "answer": false,
+          "explain": "It is one company, plus a crowd. One company is concentration. The crowd is not a plan."
+        },
+        {
+          "id": "cy-bets-q4",
+          "type": "multiple_choice",
+          "prompt": "Where do options and meme stocks belong in this course’s sorting?",
+          "choices": [
+            "The core of the retirement mix",
+            "With speculation, in money you can lose",
+            "Inside the emergency fund, because they are exciting"
+          ],
+          "answer": 1,
+          "explain": "The slice you can lose. The retirement mix stays the broad, cheap funds."
+        },
+        {
+          "id": "cy-bets-q5",
+          "type": "multiple_choice",
+          "prompt": "What can an option do that a savings account cannot?",
+          "choices": [
+            "Expire and be worth $0",
+            "Earn a posted APY",
+            "Get FDIC insurance on the premium"
+          ],
+          "answer": 0,
+          "explain": "The deadline is the point. The premium can vanish. Savings do not expire."
+        }
+      ]
+    },
+    {
+      "id": "cy-kai",
+      "type": "lesson",
+      "format": "story",
+      "title": "Kai’s Lesson",
+      "summary": "The drop was real. The “agent” was the second trap.",
+      "xp": 10,
+      "story": {
+        "title": "The video and the agent",
+        "character": "Kai, 24, barista",
+        "body": "Kai put **$1,000** into a coin. It fell **60%**, to **$400**. A “support agent” then asked for **$200** to unlock the account.\n\nHe did not send it. His Roth IRA index fund stayed where it was."
+      },
+      "steps": [
+        {
+          "id": "cy-kai-q1",
+          "type": "info",
+          "title": "Meet Kai",
+          "body": "Kai is 24 and a barista. He put $1,000 into a coin after a video. It fell 60%, to $400. Then a “support agent” offered to unlock the loss if Kai sent $200 first.\n\nHe did not send it. His real plan, a broad index fund in his Roth IRA, was untouched. Any future bet stays inside $100 he can lose."
+        },
+        {
+          "id": "cy-kai-q2",
+          "type": "number",
+          "prompt": "How many dollars did Kai lose on the 60% drop?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "$1,000 − $400 = $600. The video did not change the subtraction."
+        },
+        {
+          "id": "cy-kai-q3",
+          "type": "number",
+          "prompt": "If he had paid the unlock fee, how many more dollars would have left, on top of the $600?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "The $200 would be a second loss. The agent does not have his coins to unlock."
+        },
+        {
+          "id": "cy-kai-q4",
+          "type": "true_false",
+          "prompt": "Kai should move his Roth IRA index fund into the coin to win the $600 back.",
+          "answer": false,
+          "explain": "The fund is the plan. Chasing the loss with the plan is how a speculation becomes the whole portfolio."
+        },
+        {
+          "id": "cy-kai-q5",
+          "type": "multiple_choice",
+          "prompt": "What did Kai get right?",
+          "choices": [
+            "Buying because of the video",
+            "Refusing to send $200 to a stranger, and leaving the index fund alone",
+            "Emptying the emergency fund to average down"
+          ],
+          "answer": 1,
+          "explain": "The drop already happened. The scam was optional, and he skipped it. The fund stayed the plan."
+        }
+      ]
+    },
+    {
+      "id": "cy-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "cy-trial",
+      "type": "boss",
+      "title": "Den Trial: Crypto & Speculation",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "cy-trial-q1",
+          "type": "number",
+          "prompt": "A $2,500 coin falls 60%. How many dollars are left?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "$2,500 × 0.40 = $1,000."
+        },
+        {
+          "id": "cy-trial-q2",
+          "type": "true_false",
+          "prompt": "You should send a fee to a stranger before you can withdraw.",
+          "answer": false,
+          "explain": "A fee to unlock your own money is the scam. Do not send it."
+        },
+        {
+          "id": "cy-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "A meme stock belongs in which pile?",
+          "choices": [
+            "The emergency fund",
+            "Speculation, with money you can lose",
+            "The bond you hold to maturity"
+          ],
+          "answer": 1,
+          "explain": "It is a bet on a crowd. The plan stays the broad fund and the real bills."
+        },
+        {
+          "id": "cy-trial-q4",
+          "type": "number",
+          "prompt": "Your loseable cap is $150 and a friend wants you to put in $500. How many dollars over the cap is $500?",
+          "answer": 350,
+          "unit": "$",
+          "explain": "$500 − $150 = $350 too much."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,608 @@
+{
+  "id": "funds",
+  "section": "investing",
+  "order": 4,
+  "title": "Funds, ETFs & Index Investing",
+  "description": "One purchase, many investments, and a fee you can actually read.",
+  "wolfLine": "Own the list. Then check what the list costs.",
+  "terms": {
+    "fund": {
+      "term": "Fund",
+      "definition": "A pool of money from lots of people, invested in many things at once. You buy a slice of the pot.",
+      "example": "One purchase that holds hundreds of stocks."
+    },
+    "index": {
+      "term": "Index",
+      "definition": "A list that tracks a group of investments, such as a country’s 500 biggest companies.",
+      "example": "A list of the 500 largest US companies."
+    },
+    "index-fund": {
+      "term": "Index fund",
+      "definition": "A fund that simply buys everything on an index. No one is picking winners.",
+      "example": "A fund that holds all 500 companies on a big-company list."
+    },
+    "expense-ratio": {
+      "term": "Expense ratio",
+      "definition": "The yearly fee a fund charges, as a percent of what you have invested.",
+      "example": "A 0.1% expense ratio on $10,000 is $10 a year."
+    },
+    "mutual-fund": {
+      "term": "Mutual fund",
+      "definition": "A fund whose price is set once a day, after the market closes.",
+      "example": "You place an order in the afternoon and get the end-of-day price."
+    },
+    "etf": {
+      "term": "ETF",
+      "definition": "An exchange-traded fund. A fund that trades through the day, like a stock.",
+      "example": "Buying an ETF at 11am at the price buyers and sellers are trading then."
+    },
+    "target-date-fund": {
+      "term": "Target-date fund",
+      "definition": "A fund with a year in its name. It starts out heavier in stocks and shifts toward bonds as that year gets closer. The year is a target, not a guarantee.",
+      "example": "A 2060 fund is built for someone hoping to retire around 2060."
+    }
+  },
+  "lessons": [
+    {
+      "id": "iv-index-funds",
+      "type": "lesson",
+      "title": "Index Funds",
+      "summary": "Buy the whole haystack instead of hunting for the needle.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "iv-index-funds-q1",
+          "type": "multiple_choice",
+          "context": "A [[fund]] pools money from lots of people and invests it in many things at once. You buy a slice of the pot.",
+          "prompt": "Why do people buy funds?",
+          "choices": [
+            "To own lots of investments with one purchase",
+            "To make sure they never lose money",
+            "To borrow money"
+          ],
+          "answer": 0,
+          "explain": "One purchase, many investments. A [[fund]] is the pot. You own a slice."
+        },
+        {
+          "id": "iv-index-funds-q2",
+          "type": "multiple_choice",
+          "context": "An [[index]] is a list that tracks a group of companies, like a country’s 500 biggest. An [[index fund]] simply buys everything on that list.",
+          "prompt": "What does an index fund do?",
+          "choices": [
+            "Picks the single best stock",
+            "Buys every company on a list",
+            "Promises a profit"
+          ],
+          "answer": 1,
+          "explain": "No guessing which company wins. An [[index fund]] owns the list."
+        },
+        {
+          "id": "iv-index-funds-q3",
+          "type": "multiple_choice",
+          "context": "Every fund charges a yearly fee called the [[expense ratio]], a percentage of what you’ve invested. Index funds are usually cheap.",
+          "prompt": "Two funds own the same things. One’s expense ratio is 1%, the other’s is 0.1%. Which leaves you more money?",
+          "choices": [
+            "The 1% fund",
+            "The 0.1% fund",
+            "No difference"
+          ],
+          "answer": 1,
+          "explain": "A lower [[expense ratio]] leaves more for you. On the same investments, the fee is the difference."
+        },
+        {
+          "id": "iv-index-funds-q4",
+          "type": "number",
+          "prompt": "You have $50,000 in a fund with a 1% expense ratio. What’s the fee each year?",
+          "answer": 500,
+          "unit": "$",
+          "explain": "$50,000 × 0.01 = $500, every single year."
+        },
+        {
+          "id": "iv-index-funds-q5",
+          "type": "number",
+          "prompt": "Same $50,000 in a fund with a 0.1% expense ratio. What’s the fee each year?",
+          "answer": 50,
+          "unit": "$",
+          "explain": "$50,000 × 0.001 = $50. You keep the other $450."
+        },
+        {
+          "id": "iv-index-funds-q6",
+          "type": "true_false",
+          "prompt": "Paying an expert to pick stocks usually beats an index fund over the long run.",
+          "answer": false,
+          "explain": "Most fall behind after fees. That’s why index funds are so popular."
+        }
+      ]
+    },
+    {
+      "id": "fe-kinds",
+      "type": "lesson",
+      "format": "sort",
+      "title": "Mutual Fund or ETF",
+      "summary": "Two wrappers. The insides can match.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fe-kinds-q1",
+          "type": "info",
+          "title": "Same pot, different door",
+          "body": "A [[mutual fund]] is priced once a day, after the close. An [[ETF]] trades through the day like a [[stock]]. Either one can be an [[index fund]]. The wrapper is not what makes it cheap or expensive. The [[expense ratio]] and what it holds are."
+        },
+        {
+          "id": "fe-kinds-q2",
+          "type": "sort",
+          "prompt": "Where does each fact belong?",
+          "buckets": [
+            "Mutual fund",
+            "ETF",
+            "Either one"
+          ],
+          "items": [
+            [
+              "Priced once, after the market closes",
+              0
+            ],
+            [
+              "Trades through the day like a stock",
+              1
+            ],
+            [
+              "Can be an index fund",
+              2
+            ],
+            [
+              "Charges an expense ratio",
+              2
+            ]
+          ],
+          "explain": "The once-a-day price is the mutual fund. The all-day trading is the ETF. Index tracking and fees can be either."
+        },
+        {
+          "id": "fe-kinds-q3",
+          "type": "true_false",
+          "prompt": "An ETF is automatically cheaper than a mutual fund.",
+          "answer": false,
+          "explain": "Either wrapper can be cheap or expensive. Read the expense ratio."
+        },
+        {
+          "id": "fe-kinds-q4",
+          "type": "multiple_choice",
+          "prompt": "You want to buy in the middle of the day at the price people are trading right then. Which wrapper does that?",
+          "choices": [
+            "A mutual fund, at the end-of-day price",
+            "An ETF",
+            "A CD"
+          ],
+          "answer": 1,
+          "explain": "The ETF trades through the day. The mutual fund waits for the closing price."
+        },
+        {
+          "id": "fe-kinds-q5",
+          "type": "fill_blank",
+          "prompt": "A fund that trades through the day like a stock is an ___.",
+          "choices": [
+            "ETF",
+            "I bond",
+            "coupon"
+          ],
+          "answer": 0,
+          "explain": "ETF is the short name for an exchange-traded fund."
+        }
+      ]
+    },
+    {
+      "id": "fe-active",
+      "type": "lesson",
+      "title": "Active or Passive",
+      "summary": "Picking winners, or owning the list.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fe-active-q1",
+          "type": "info",
+          "title": "Two jobs",
+          "body": "A passive fund, such as an [[index fund]], buys the list and holds it. An active fund pays people to pick what they think will win. Those people cost money, so the [[expense ratio]] is usually higher. Over long periods, most active funds have ended up behind a simple index once the higher fees are counted."
+        },
+        {
+          "id": "fe-active-q2",
+          "type": "multiple_choice",
+          "prompt": "Which fund is passive?",
+          "choices": [
+            "A fund that buys every company on an index",
+            "A fund whose manager trades in and out, hunting for winners",
+            "A fund that promises to beat the market"
+          ],
+          "answer": 0,
+          "explain": "Buying the list is passive. Hunting is active."
+        },
+        {
+          "id": "fe-active-q3",
+          "type": "true_false",
+          "prompt": "A higher fee is worth it whenever a person is picking the stocks.",
+          "answer": false,
+          "explain": "Most of those funds have lagged a cheap index after fees. A higher fee is a hurdle, not a medal."
+        },
+        {
+          "id": "fe-active-q4",
+          "type": "multiple_choice",
+          "prompt": "Two funds hold the same index. One charges 0.05% and one charges 0.80% because it calls itself active. Which is the odd one?",
+          "choices": [
+            "The 0.05% fund, because cheap means bad",
+            "The 0.80% fund, because you are paying active prices for a list",
+            "They are the same deal"
+          ],
+          "answer": 1,
+          "explain": "If it owns the list, you want the small fee. The label “active” does not change the holdings."
+        },
+        {
+          "id": "fe-active-q5",
+          "type": "number",
+          "prompt": "On $10,000, what is a 0.80% yearly fee, in dollars?",
+          "answer": 80,
+          "unit": "$",
+          "explain": "$10,000 × 0.008 = $80 a year. A 0.05% fee on the same pile is $5."
+        }
+      ]
+    },
+    {
+      "id": "fe-drag",
+      "type": "lesson",
+      "title": "Fees Over 30 Years",
+      "summary": "A small percent, many times.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fe-drag-q1",
+          "type": "info",
+          "title": "Hold the balance still",
+          "body": "This sketch pretends a $10,000 balance never changes, so you can see the fee by itself. A 1% [[expense ratio]] is $100 a year. A 0.1% expense ratio is $10 a year. Real life is harsher when the balance grows, because the fee is a percent of a bigger pile. These are not promised returns."
+        },
+        {
+          "id": "fe-drag-q2",
+          "type": "number",
+          "prompt": "At 1% a year on a steady $10,000, how many dollars of fees is that over 30 years?",
+          "answer": 3000,
+          "unit": "$",
+          "explain": "$100 × 30 = $3,000."
+        },
+        {
+          "id": "fe-drag-q3",
+          "type": "number",
+          "prompt": "At 0.1% a year on the same steady $10,000, how many dollars of fees is that over 30 years?",
+          "answer": 300,
+          "unit": "$",
+          "explain": "$10 × 30 = $300."
+        },
+        {
+          "id": "fe-drag-q4",
+          "type": "number",
+          "prompt": "How many more dollars does the 1% fund take over those 30 years, in this steady sketch?",
+          "answer": 2700,
+          "unit": "$",
+          "explain": "$3,000 − $300 = $2,700. Same investments, different fee."
+        },
+        {
+          "id": "fe-drag-q5",
+          "type": "true_false",
+          "prompt": "Because the sketch held the balance still, the real fee on a growing balance would be smaller.",
+          "answer": false,
+          "explain": "A percent of a larger balance is more dollars. The still sketch understates the fee, it does not overstate it."
+        }
+      ]
+    },
+    {
+      "id": "fe-sheet",
+      "type": "lesson",
+      "format": "document",
+      "title": "A Fund Fact Sheet",
+      "summary": "Holdings, fee, and no forecast.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fe-sheet-q1",
+          "type": "info",
+          "title": "What to read",
+          "body": "A fact sheet says what the [[fund]] owns and what it charges. It does not say what the fund will earn next year. On this teaching sheet the fund owns the broad US stock market and charges 0.05%."
+        },
+        {
+          "id": "fe-sheet-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Fact sheet: Total US Market",
+            "subtitle": "A teaching fund, not a recommendation",
+            "meta": [
+              [
+                "What it holds",
+                "The broad US stock market"
+              ],
+              [
+                "Expense ratio",
+                "0.05%"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "held",
+                "label": "You invested",
+                "amount": 10000.0
+              },
+              {
+                "id": "fee",
+                "label": "Yearly fee at 0.05%",
+                "amount": 5.0
+              }
+            ],
+            "note": "The fee line is $10,000 × 0.0005."
+          },
+          "prompt": "How many dollars is the yearly fee on this sheet?",
+          "answer": 5,
+          "unit": "$",
+          "explain": "$10,000 × 0.0005 = $5."
+        },
+        {
+          "id": "fe-sheet-q3",
+          "type": "multiple_choice",
+          "prompt": "What does this fund hold, according to the sheet?",
+          "choices": [
+            "One company’s stock",
+            "The broad US stock market",
+            "Only bonds"
+          ],
+          "answer": 1,
+          "explain": "The sheet says the broad US stock market. That is an index-style holding, not a single stock."
+        },
+        {
+          "id": "fe-sheet-q4",
+          "type": "true_false",
+          "prompt": "A fact sheet’s past return is a promise for next year.",
+          "answer": false,
+          "explain": "The past is a record. Next year can be higher or lower. Read the holdings and the fee."
+        },
+        {
+          "id": "fe-sheet-q5",
+          "type": "number",
+          "prompt": "If the expense ratio were 1% instead of 0.05%, how many dollars would the yearly fee be on this $10,000?",
+          "answer": 100,
+          "unit": "$",
+          "explain": "$10,000 × 0.01 = $100. That is $95 more than the $5 on the sheet."
+        }
+      ]
+    },
+    {
+      "id": "fe-target",
+      "type": "lesson",
+      "title": "Target-Date Funds",
+      "summary": "A year on the label, and a mix that shifts.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fe-target-q1",
+          "type": "info",
+          "title": "The year is a target",
+          "body": "A [[target-date fund]] has a year in its name, like 2060. It starts heavier in [[stock]]s and shifts toward [[bond]]s as that year gets closer. The year is when you hope to use the money. It is not a promise you will have enough, and it is not the year the fund closes."
+        },
+        {
+          "id": "fe-target-q2",
+          "type": "multiple_choice",
+          "prompt": "A 2060 target-date fund is built for someone who hopes to retire around when?",
+          "choices": [
+            "2060",
+            "This year",
+            "Whenever the market peaks"
+          ],
+          "answer": 0,
+          "explain": "The year is the target. Far-off targets stay heavier in stocks."
+        },
+        {
+          "id": "fe-target-q3",
+          "type": "true_false",
+          "prompt": "A target-date fund guarantees you can retire in the year on the label.",
+          "answer": false,
+          "explain": "The mix shifts. The result still depends on what markets do and how much you put in."
+        },
+        {
+          "id": "fe-target-q4",
+          "type": "multiple_choice",
+          "prompt": "As the target year gets closer, what does the mix usually do?",
+          "choices": [
+            "It shifts toward bonds",
+            "It shifts into a single stock",
+            "It stops charging an expense ratio"
+          ],
+          "answer": 0,
+          "explain": "Closer to the year, the fund usually takes less stock risk. You still check the fee."
+        },
+        {
+          "id": "fe-target-q5",
+          "type": "number",
+          "prompt": "You are 25 in 2026 and you hope to retire at 65. Which target year matches that hope?",
+          "answer": 2066,
+          "explain": "2026 + 40 = 2066. The fund year is a target around then, not a promise."
+        }
+      ]
+    },
+    {
+      "id": "fe-spot",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Spot the High Fee",
+      "summary": "Same kind of list, very different bill.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fe-spot-q1",
+          "type": "info",
+          "title": "The line that hurts",
+          "body": "Both funds hold a broad stock market. One charges about 0.05%, which is $5 on $10,000. The other charges 1.2%, which is $120. The holdings are the reason to compare them. The fee is the reason to walk away from the second."
+        },
+        {
+          "id": "fe-spot-q2",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "Two funds, same $10,000",
+            "subtitle": "Spot the fee that does not belong",
+            "lines": [
+              {
+                "id": "cheap",
+                "label": "Broad market fund, yearly fee",
+                "amount": 5.0
+              },
+              {
+                "id": "pricey",
+                "label": "Similar holdings, yearly fee",
+                "amount": 120.0
+              }
+            ],
+            "note": "Similar holdings should not cost $120 when $5 buys the same kind of list."
+          },
+          "prompt": "Which line is the high fee?",
+          "answer": "pricey",
+          "explain": "$120 is 1.2% of $10,000. The $5 line is the cheap fund. Similar list, much smaller bill."
+        },
+        {
+          "id": "fe-spot-q3",
+          "type": "number",
+          "prompt": "How many more dollars a year does the pricey fund charge on this $10,000?",
+          "answer": 115,
+          "unit": "$",
+          "explain": "$120 − $5 = $115 a year, before any growth."
+        },
+        {
+          "id": "fe-spot-q4",
+          "type": "true_false",
+          "prompt": "The pricey fund must be better because the fee is higher.",
+          "answer": false,
+          "explain": "On similar holdings the higher fee is money you do not get to keep."
+        },
+        {
+          "id": "fe-spot-q5",
+          "type": "multiple_choice",
+          "prompt": "What should you compare before you pick the pricey fund?",
+          "choices": [
+            "Only last year’s return",
+            "Whether the holdings are actually different, and what the fee is",
+            "The fund’s ticker length"
+          ],
+          "answer": 1,
+          "explain": "A different job can justify a different fund. The same job does not justify $115 more."
+        }
+      ]
+    },
+    {
+      "id": "fe-omar",
+      "type": "lesson",
+      "format": "story",
+      "title": "Omar’s First Fund",
+      "summary": "Cheap, broad, and boring on purpose.",
+      "xp": 10,
+      "story": {
+        "title": "The boring pick",
+        "character": "Omar, 26, bike mechanic",
+        "body": "Omar’s emergency fund is already cash. He has **$2,000** he will not need for decades.\n\nTwo funds both hold the broad US market. One charges **0.05%**. The other charges **1%**. He wants the smaller fee."
+      },
+      "steps": [
+        {
+          "id": "fe-omar-q1",
+          "type": "info",
+          "title": "Meet Omar",
+          "body": "Omar is 26 and a bike mechanic. His [[emergency fund]] is already in cash. He has $2,000 he will not need for decades. He wants one [[fund]], not a pile of single stocks.\n\nHe compares two funds that both hold the broad US market. One has an [[expense ratio]] of 0.05%. The other charges 1%."
+        },
+        {
+          "id": "fe-omar-q2",
+          "type": "number",
+          "prompt": "On Omar’s $2,000, how many dollars a year is the 1% fee?",
+          "answer": 20,
+          "unit": "$",
+          "explain": "$2,000 × 0.01 = $20."
+        },
+        {
+          "id": "fe-omar-q3",
+          "type": "number",
+          "prompt": "On the same $2,000, how many dollars a year is the 0.05% fee?",
+          "answer": 1,
+          "unit": "$",
+          "explain": "$2,000 × 0.0005 = $1."
+        },
+        {
+          "id": "fe-omar-q4",
+          "type": "multiple_choice",
+          "prompt": "Which fund does Omar pick, and why?",
+          "choices": [
+            "The 1% fund, because a higher fee means more help",
+            "The 0.05% fund, because the holdings match and the fee is smaller",
+            "Neither, because funds are only for experts"
+          ],
+          "answer": 1,
+          "explain": "Same kind of list. He keeps the fee at $1 instead of $20 in this first year, if the balance stays $2,000."
+        },
+        {
+          "id": "fe-omar-q5",
+          "type": "true_false",
+          "prompt": "Omar’s pick is a promise that the $2,000 will grow.",
+          "answer": false,
+          "explain": "The low fee means less drag. It does not promise a return. He still leaves the money alone for years."
+        }
+      ]
+    },
+    {
+      "id": "fe-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "fe-trial",
+      "type": "boss",
+      "title": "Den Trial: Funds, ETFs & Index Investing",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "fe-trial-q1",
+          "type": "number",
+          "prompt": "A fund charges 0.2% a year on $20,000. How many dollars is the fee this year?",
+          "answer": 40,
+          "unit": "$",
+          "explain": "$20,000 × 0.002 = $40."
+        },
+        {
+          "id": "fe-trial-q2",
+          "type": "multiple_choice",
+          "prompt": "An index fund’s job is to…",
+          "choices": [
+            "Pick next year’s winner",
+            "Buy the investments on a list",
+            "Avoid every down year"
+          ],
+          "answer": 1,
+          "explain": "It owns the [[index]]. It does not promise a profit."
+        },
+        {
+          "id": "fe-trial-q3",
+          "type": "true_false",
+          "prompt": "A mutual fund and an ETF can both be index funds.",
+          "answer": true,
+          "explain": "The wrapper differs. Either one can hold the list."
+        },
+        {
+          "id": "fe-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "A target-date fund’s year means what?",
+          "choices": [
+            "The year the fund guarantees a result",
+            "The year you are aiming to use the money",
+            "The year the fee disappears"
+          ],
+          "answer": 1,
+          "explain": "The year is a target. The mix usually shifts toward bonds as it gets closer."
+        }
+      ]
+    }
+  ]
+}

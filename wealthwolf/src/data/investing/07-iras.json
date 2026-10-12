@@ -1,0 +1,601 @@
+{
+  "id": "iras",
+  "section": "investing",
+  "order": 7,
+  "title": "IRAs: Roth vs Traditional",
+  "description": "The account you open yourself, the dollar cap, and the income cap.",
+  "wolfLine": "Under the limit, use the front door.",
+  "terms": {
+    "backdoor-roth": {
+      "term": "Backdoor Roth",
+      "definition": "A legal path some high earners use: a nondeductible traditional IRA contribution, then a conversion to a Roth IRA. If you already have pre-tax IRA money, the pro-rata rule can make part of the conversion taxable. This course names it. It does not walk the forms.",
+      "example": "Income is over the Roth IRA limit, so a direct Roth contribution is not allowed."
+    }
+  },
+  "lessons": [
+    {
+      "id": "ir-what",
+      "type": "lesson",
+      "title": "What an IRA Is",
+      "summary": "An account you open yourself.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ir-what-q1",
+          "type": "info",
+          "title": "Not the workplace plan",
+          "body": "An IRA is an individual retirement account. You open it, not your employer. A [[traditional IRA|traditional-ira]] can give you a tax break now, if you qualify. A [[Roth IRA|roth-ira]] takes the tax break later, on a qualified withdrawal. The 2026 contribution limit is $7,500 for both of them combined, plus $1,100 if you are 50 or older."
+        },
+        {
+          "id": "ir-what-q2",
+          "type": "multiple_choice",
+          "prompt": "Who opens an IRA?",
+          "choices": [
+            "Only your employer",
+            "You do",
+            "The IRS, automatically"
+          ],
+          "answer": 1,
+          "explain": "Individual means you. The 401(k) is the workplace one."
+        },
+        {
+          "id": "ir-what-q3",
+          "type": "number",
+          "prompt": "What is the 2026 IRA contribution limit, in dollars, before the age-50 catch-up?",
+          "answer": 7500,
+          "unit": "$",
+          "explain": "The 2026 limit is $7,500 across traditional and Roth IRAs combined."
+        },
+        {
+          "id": "ir-what-q4",
+          "type": "true_false",
+          "prompt": "You can put $7,500 in a traditional IRA and another $7,500 in a Roth IRA in 2026.",
+          "answer": false,
+          "explain": "The $7,500 is the total, split however you like between them. It is not $7,500 each."
+        },
+        {
+          "id": "ir-what-q5",
+          "type": "multiple_choice",
+          "prompt": "How is an IRA different from a 401(k)?",
+          "choices": [
+            "The IRA is the account you open. The 401(k) comes from the job.",
+            "They are the same account",
+            "An IRA cannot hold a fund"
+          ],
+          "answer": 0,
+          "explain": "Two containers. The limits are separate. The investments inside can look alike."
+        }
+      ]
+    },
+    {
+      "id": "ir-door",
+      "type": "lesson",
+      "format": "call",
+      "title": "Roth or Traditional",
+      "summary": "Now or later, and only if you qualify.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ir-door-q1",
+          "type": "info",
+          "title": "The same $1,000, two doors",
+          "body": "If you can deduct a [[traditional IRA|traditional-ira]] contribution, $1,000 in the 12% bracket saves $120 this year. A [[Roth IRA|roth-ira]] saves $0 this year, and a qualified withdrawal of the earnings later is tax-free. The workplace-plan rules can shrink or erase the traditional deduction. The Roth door has its own income limit."
+        },
+        {
+          "id": "ir-door-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Traditional IRA",
+              "subtitle": "The deduction is not automatic",
+              "lines": [
+                {
+                  "id": "in",
+                  "label": "Contribution",
+                  "amount": 1000.0
+                },
+                {
+                  "id": "save",
+                  "label": "Tax saved this year in the 12% bracket, if you can deduct it",
+                  "amount": 120.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Roth IRA",
+              "subtitle": "Qualified withdrawals later are tax-free",
+              "lines": [
+                {
+                  "id": "in",
+                  "label": "Contribution",
+                  "amount": 1000.0
+                },
+                {
+                  "id": "save",
+                  "label": "Tax saved this year",
+                  "amount": 0.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Which page can lower this year’s tax, if the deduction is allowed?",
+          "choices": [
+            "Traditional IRA",
+            "Roth IRA"
+          ],
+          "answer": 0,
+          "explain": "The traditional page is the deduction. $1,000 × 0.12 = $120. The Roth page pays the tax now."
+        },
+        {
+          "id": "ir-door-q3",
+          "type": "number",
+          "prompt": "If the deduction is allowed, how many dollars of tax does $1,000 save in the 12% bracket?",
+          "answer": 120,
+          "unit": "$",
+          "explain": "$1,000 × 0.12 = $120. If the deduction is not allowed, that $120 does not happen."
+        },
+        {
+          "id": "ir-door-q4",
+          "type": "true_false",
+          "prompt": "A Roth IRA contribution lowers this year’s taxable income.",
+          "answer": false,
+          "explain": "Roth money was already taxed. The favor is on a qualified withdrawal later."
+        },
+        {
+          "id": "ir-door-q5",
+          "type": "multiple_choice",
+          "prompt": "You cannot deduct a traditional IRA, and your income is under the Roth limit. Which door is the simple one?",
+          "choices": [
+            "Traditional, for a deduction you cannot take",
+            "Roth, since the traditional deduction is worth $0 here",
+            "Neither, so you skip retirement accounts"
+          ],
+          "answer": 1,
+          "explain": "A nondeductible traditional contribution is the awkward one. Under the Roth limit, the Roth door is the direct one."
+        }
+      ]
+    },
+    {
+      "id": "ir-limits",
+      "type": "lesson",
+      "format": "document",
+      "title": "The 2026 IRA Limits",
+      "summary": "The dollar cap, then the income cap.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ir-limits-q1",
+          "type": "info",
+          "title": "Two different gates",
+          "body": "The dollar gate: $7,500 in 2026, or $8,600 at age 50 or older. The income gate is for Roth IRAs. A single filer with modified AGI under $153,000 can make a full Roth contribution. At $168,000 or more, a direct Roth contribution is not allowed. Married filing jointly: full under $242,000, and none at $252,000 or more. This course will not compute a partial phase-out in between."
+        },
+        {
+          "id": "ir-limits-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "2026 IRA limits",
+            "meta": [
+              [
+                "Roth phase-out, single",
+                "$153,000 to $168,000"
+              ],
+              [
+                "Roth phase-out, married filing jointly",
+                "$242,000 to $252,000"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "base",
+                "label": "Contribution limit, under age 50",
+                "amount": 7500.0
+              },
+              {
+                "id": "extra",
+                "label": "Catch-up at age 50 or older",
+                "amount": 1100.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total at age 50 or older",
+                "amount": 8600.0,
+                "strong": true
+              }
+            ],
+            "note": "A single filer at $168,000 or more cannot make a direct Roth IRA contribution. A joint filer at $252,000 or more cannot. Under the start of the range, the full contribution is allowed."
+          },
+          "prompt": "How many dollars can someone under 50 contribute to IRAs in 2026?",
+          "answer": 7500,
+          "unit": "$",
+          "explain": "The base limit is $7,500, traditional and Roth combined."
+        },
+        {
+          "id": "ir-limits-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "2026 IRA limits",
+            "meta": [
+              [
+                "Roth phase-out, single",
+                "$153,000 to $168,000"
+              ],
+              [
+                "Roth phase-out, married filing jointly",
+                "$242,000 to $252,000"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "base",
+                "label": "Contribution limit, under age 50",
+                "amount": 7500.0
+              },
+              {
+                "id": "extra",
+                "label": "Catch-up at age 50 or older",
+                "amount": 1100.0
+              }
+            ],
+            "totals": [
+              {
+                "label": "Total at age 50 or older",
+                "amount": 8600.0,
+                "strong": true
+              }
+            ],
+            "note": "A single filer at $168,000 or more cannot make a direct Roth IRA contribution. A joint filer at $252,000 or more cannot. Under the start of the range, the full contribution is allowed."
+          },
+          "prompt": "How many dollars is the total at age 50 or older in 2026?",
+          "answer": 8600,
+          "unit": "$",
+          "explain": "$7,500 + $1,100 = $8,600."
+        },
+        {
+          "id": "ir-limits-q4",
+          "type": "true_false",
+          "prompt": "A single filer with modified AGI of $170,000 can make a direct Roth IRA contribution in 2026.",
+          "answer": false,
+          "explain": "$170,000 is over $168,000. The direct Roth contribution is not allowed. A partial amount between $153,000 and $168,000 is a real thing, and this course does not grade that math."
+        },
+        {
+          "id": "ir-limits-q5",
+          "type": "true_false",
+          "prompt": "A single filer with modified AGI of $100,000 is under the 2026 Roth IRA income limit.",
+          "answer": true,
+          "explain": "$100,000 is under $153,000, so the full Roth contribution is allowed, up to the $7,500 dollar cap and up to earned income."
+        }
+      ]
+    },
+    {
+      "id": "ir-open",
+      "type": "lesson",
+      "title": "Opening One",
+      "summary": "Four steps, then leave it alone.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ir-open-q1",
+          "type": "info",
+          "title": "The order",
+          "body": "You need earned income, such as wages. You check the limit that applies to you. Then you open the IRA, link a bank account, pick a [[fund]], and set an automatic transfer. The account is the container. The fund is what you own inside it."
+        },
+        {
+          "id": "ir-open-q2",
+          "type": "order",
+          "prompt": "Put the opening in order.",
+          "items": [
+            "Check that you have earned income and that the limit allows it",
+            "Open the IRA",
+            "Link your bank account",
+            "Choose a fund and set the automatic transfer"
+          ],
+          "explain": "The limit first, so you do not contribute money you are not allowed to. The fund is last, and then the transfer repeats."
+        },
+        {
+          "id": "ir-open-q3",
+          "type": "multiple_choice",
+          "prompt": "What do you actually own inside the IRA?",
+          "choices": [
+            "The IRA itself is the investment",
+            "The fund, or other investments, you buy in it",
+            "Your employer’s match"
+          ],
+          "answer": 1,
+          "explain": "The IRA is the container. A broad, cheap fund is a solid thing to put in it."
+        },
+        {
+          "id": "ir-open-q4",
+          "type": "true_false",
+          "prompt": "You can contribute more than you earned from work.",
+          "answer": false,
+          "explain": "The IRA contribution cannot top your earned income, and it cannot top the yearly dollar limit."
+        },
+        {
+          "id": "ir-open-q5",
+          "type": "number",
+          "prompt": "Maya earned $28,000 from work in 2026 and is under 50. What is the most she can contribute to IRAs, in dollars?",
+          "answer": 7500,
+          "unit": "$",
+          "explain": "Her wages are over $7,500, and she is under 50, so the dollar cap is the binding one: $7,500."
+        }
+      ]
+    },
+    {
+      "id": "ir-both",
+      "type": "lesson",
+      "title": "A 401(k) and an IRA",
+      "summary": "The limits are separate.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ir-both-q1",
+          "type": "info",
+          "title": "Both, if the rules allow",
+          "body": "The 2026 employee [[401(k)|401k]] limit is $24,500. The IRA limit is a separate $7,500. Using the workplace plan does not by itself ban an IRA. It can affect whether a traditional IRA contribution is deductible. A Roth IRA still has its income limit."
+        },
+        {
+          "id": "ir-both-q2",
+          "type": "number",
+          "prompt": "In 2026, a 30-year-old puts $24,500 in a 401(k) and $7,500 in a Roth IRA. How many dollars went into retirement accounts?",
+          "answer": 32000,
+          "unit": "$",
+          "explain": "$24,500 + $7,500 = $32,000. The two limits are separate, so this is allowed if the Roth income test is met and the person earned enough."
+        },
+        {
+          "id": "ir-both-q3",
+          "type": "number",
+          "prompt": "Someone puts $2,000 in a Roth IRA and wants the rest of the 2026 IRA limit in a traditional IRA. How many dollars are left?",
+          "answer": 5500,
+          "unit": "$",
+          "explain": "$7,500 − $2,000 = $5,500. The cap is shared."
+        },
+        {
+          "id": "ir-both-q4",
+          "type": "true_false",
+          "prompt": "Maxing a 401(k) uses up the IRA limit too.",
+          "answer": false,
+          "explain": "They are different limits. $24,500 at work does not reduce the $7,500 IRA cap."
+        },
+        {
+          "id": "ir-both-q5",
+          "type": "multiple_choice",
+          "prompt": "You have a 401(k) at work and your income is under the Roth IRA limit. What can you also do?",
+          "choices": [
+            "Nothing. The 401(k) blocks every IRA.",
+            "Contribute to a Roth IRA, up to the IRA limit",
+            "Skip the employer match so the IRA is allowed"
+          ],
+          "answer": 1,
+          "explain": "The match stays. The IRA is an extra container, inside its own limit."
+        }
+      ]
+    },
+    {
+      "id": "ir-back",
+      "type": "lesson",
+      "title": "The Backdoor, Named Only",
+      "summary": "A high earner’s path. Not a worksheet.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ir-back-q1",
+          "type": "info",
+          "title": "What the name means",
+          "body": "If your income is over the [[Roth IRA|roth-ira]] limit, a direct Roth contribution is not allowed. A [[backdoor Roth|backdoor-roth]] is a nondeductible contribution to a [[traditional IRA|traditional-ira]], followed by a conversion into a Roth IRA. If you already have pre-tax money in any traditional IRA, the pro-rata rule can tax part of that conversion. This lesson names the path. The forms and the tax math belong with the IRS or a tax pro, not in a quiz."
+        },
+        {
+          "id": "ir-back-q2",
+          "type": "multiple_choice",
+          "prompt": "Who is a backdoor Roth even about?",
+          "choices": [
+            "Someone under the Roth income limit",
+            "Someone whose income is too high for a direct Roth IRA contribution",
+            "Someone opening a 401(k)"
+          ],
+          "answer": 1,
+          "explain": "Under the limit, you just contribute to the Roth. The backdoor is for the person who cannot."
+        },
+        {
+          "id": "ir-back-q3",
+          "type": "true_false",
+          "prompt": "A backdoor Roth is a way to skip taxes entirely, even if you have a large pre-tax IRA.",
+          "answer": false,
+          "explain": "The pro-rata rule can make part of the conversion taxable when pre-tax IRA money already exists."
+        },
+        {
+          "id": "ir-back-q4",
+          "type": "multiple_choice",
+          "prompt": "What will this course not do?",
+          "choices": [
+            "Name the path",
+            "Walk the forms and compute a partial conversion",
+            "Mention the pro-rata rule"
+          ],
+          "answer": 1,
+          "explain": "Naming it is the lesson. The worksheet is not."
+        },
+        {
+          "id": "ir-back-q5",
+          "type": "fill_blank",
+          "prompt": "The rule that can tax part of the conversion when other traditional IRA money exists is the ___ rule.",
+          "choices": [
+            "pro-rata",
+            "ticker",
+            "coupon"
+          ],
+          "answer": 0,
+          "explain": "Pro-rata. It looks at all your traditional IRAs, not only the new dollars."
+        }
+      ]
+    },
+    {
+      "id": "ir-early",
+      "type": "lesson",
+      "title": "Taking Money Out Early",
+      "summary": "Contributions and earnings are not the same.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ir-early-q1",
+          "type": "info",
+          "title": "Roth contributions are the flexible part",
+          "body": "You can usually withdraw your own [[Roth IRA|roth-ira]] contributions at any time, without tax or penalty. The earnings are the restricted part: generally tax-free only after age 59½ and a five-year clock, with some exceptions this course will not list as a plan. A [[traditional IRA|traditional-ira]] withdrawal before 59½ is usually income tax plus a 10% penalty."
+        },
+        {
+          "id": "ir-early-q2",
+          "type": "number",
+          "prompt": "You contributed $2,000 to a Roth IRA. It is now worth $2,500. How many dollars are contributions you can usually take out?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "The $2,000 is contributions. The other $500 is earnings, and those have the extra rules."
+        },
+        {
+          "id": "ir-early-q3",
+          "type": "number",
+          "prompt": "How many dollars of that account are earnings?",
+          "answer": 500,
+          "unit": "$",
+          "explain": "$2,500 − $2,000 = $500."
+        },
+        {
+          "id": "ir-early-q4",
+          "type": "true_false",
+          "prompt": "A traditional IRA withdrawal at age 40 is usually tax-free.",
+          "answer": false,
+          "explain": "Before 59½ it is usually income tax plus a 10% penalty. The Roth contribution rule does not apply to it."
+        },
+        {
+          "id": "ir-early-q5",
+          "type": "multiple_choice",
+          "prompt": "Which pile inside a Roth IRA is the one you can usually take out early without tax or penalty?",
+          "choices": [
+            "The earnings",
+            "The contributions",
+            "The whole account, always"
+          ],
+          "answer": 1,
+          "explain": "Contributions. Earnings wait on the age and five-year rules, aside from exceptions you should not build a budget on."
+        }
+      ]
+    },
+    {
+      "id": "ir-maya",
+      "type": "lesson",
+      "format": "story",
+      "title": "Maya Opens a Roth",
+      "summary": "Under the limit, so the direct door.",
+      "xp": 10,
+      "story": {
+        "title": "The direct door",
+        "character": "Maya, 22, library assistant",
+        "body": "Maya earned **$28,000** this year. That is under the 2026 Roth IRA income limit for a single filer.\n\nShe opens a Roth IRA, contributes **$1,500**, and buys a broad index fund. A backdoor is not her situation."
+      },
+      "steps": [
+        {
+          "id": "ir-maya-q1",
+          "type": "info",
+          "title": "Meet Maya",
+          "body": "Maya is 22 and a library assistant. She earned $28,000 this year, which is under the 2026 Roth IRA income limit for a single filer. She has no IRA yet.\n\nShe opens a Roth IRA and puts in $1,500, then buys a broad [[index fund]]. She does not need a backdoor. $1,500 is under the $7,500 cap."
+        },
+        {
+          "id": "ir-maya-q2",
+          "type": "true_false",
+          "prompt": "Maya’s $28,000 income blocks a 2026 Roth IRA contribution.",
+          "answer": false,
+          "explain": "$28,000 is far under $153,000. She can contribute, up to $7,500 and up to what she earned."
+        },
+        {
+          "id": "ir-maya-q3",
+          "type": "number",
+          "prompt": "How many dollars under the $7,500 cap is Maya’s $1,500 contribution?",
+          "answer": 6000,
+          "unit": "$",
+          "explain": "$7,500 − $1,500 = $6,000 of room left. She does not have to fill it."
+        },
+        {
+          "id": "ir-maya-q4",
+          "type": "multiple_choice",
+          "prompt": "What does Maya buy inside the new IRA?",
+          "choices": [
+            "The IRA, and nothing else",
+            "A broad index fund",
+            "Her employer’s stock, because the fee is zero"
+          ],
+          "answer": 1,
+          "explain": "The Roth IRA is the container. The fund is the investment."
+        },
+        {
+          "id": "ir-maya-q5",
+          "type": "order",
+          "prompt": "Put Maya’s afternoon in order.",
+          "items": [
+            "Check that $28,000 is under the Roth income limit",
+            "Open the Roth IRA",
+            "Transfer the $1,500",
+            "Buy the broad index fund"
+          ],
+          "explain": "The limit check first. Then the account, the money, and the fund."
+        }
+      ]
+    },
+    {
+      "id": "ir-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "ir-trial",
+      "type": "boss",
+      "title": "Den Trial: IRAs: Roth vs Traditional",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "ir-trial-q1",
+          "type": "number",
+          "prompt": "At age 50 in 2026, what is the total IRA contribution limit including the catch-up?",
+          "answer": 8600,
+          "unit": "$",
+          "explain": "$7,500 + $1,100 = $8,600."
+        },
+        {
+          "id": "ir-trial-q2",
+          "type": "true_false",
+          "prompt": "Roth IRA contributions and Roth IRA earnings follow the same early-withdrawal rule.",
+          "answer": false,
+          "explain": "Contributions can usually come out. Earnings generally wait on age 59½ and the five-year clock."
+        },
+        {
+          "id": "ir-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "A direct Roth IRA contribution is not allowed for a single filer in 2026 once modified AGI reaches what?",
+          "choices": [
+            "$7,500",
+            "$168,000",
+            "$24,500"
+          ],
+          "answer": 1,
+          "explain": "$168,000 or more blocks the direct contribution. $7,500 is the dollar cap. $24,500 is the 401(k) employee cap."
+        },
+        {
+          "id": "ir-trial-q4",
+          "type": "number",
+          "prompt": "You put $3,000 in a Roth IRA in 2026 and you are under 50. How many dollars of IRA room are left?",
+          "answer": 4500,
+          "unit": "$",
+          "explain": "$7,500 − $3,000 = $4,500, shared with any traditional IRA contribution."
+        }
+      ]
+    }
+  ]
+}

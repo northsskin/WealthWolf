@@ -81,6 +81,13 @@
     "id": "investing",
     "order": 7,
     "title": "Investing",
-    "description": "Make your money work while you sleep. More units are being written."
+    "description": "Make your money work while you sleep: stocks, funds, retirement accounts and keeping your nerve.",
+    "trial": {
+      "id": "inv-section-trial",
+      "title": "Section Trial: Investing",
+      "summary": "Twelve questions from the whole section. Three strikes and you’re out.",
+      "xp": 50,
+      "draw": 12
+    }
   }
 ]

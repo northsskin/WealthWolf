@@ -1,0 +1,589 @@
+{
+  "id": "bonds",
+  "section": "investing",
+  "order": 3,
+  "title": "Bonds & Interest Rates",
+  "description": "Coupons, prices, and why a bond is a loan with a date on it.",
+  "wolfLine": "The price moves. The maturity date is the plan.",
+  "terms": {
+    "coupon": {
+      "term": "Coupon",
+      "definition": "The interest a bond pays you. A $40 coupon is $40 a year, usually split into smaller payments.",
+      "example": "A $1,000 bond with a $40 coupon pays $40 a year."
+    },
+    "maturity": {
+      "term": "Maturity",
+      "definition": "The date a bond ends. If the issuer pays, you get the face value back then.",
+      "example": "A bond that matures in 10 years pays the $1,000 face value in year 10."
+    },
+    "yield": {
+      "term": "Yield",
+      "definition": "What a bond pays you compared with the price you paid, as a percent. Coupon divided by price.",
+      "example": "A $40 coupon on a bond you buy for $800 is a 5% yield."
+    }
+  },
+  "lessons": [
+    {
+      "id": "bd-how",
+      "type": "lesson",
+      "format": "document",
+      "title": "How a Bond Works",
+      "summary": "You lend. They pay interest. Then they pay you back.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bd-how-q1",
+          "type": "info",
+          "title": "The loan, written down",
+          "body": "A [[bond]] has a face value, a [[coupon]], and a [[maturity]]. The coupon is the interest. Maturity is the end date. This page is a simple Treasury: you lend $1,000, it pays $40 a year, and it ends in 10 years."
+        },
+        {
+          "id": "bd-how-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A Treasury bond",
+            "subtitle": "You are the lender",
+            "meta": [
+              [
+                "Matures in",
+                "10 years"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "face",
+                "label": "Face value",
+                "amount": 1000.0
+              },
+              {
+                "id": "coupon",
+                "label": "Coupon each year",
+                "amount": 40.0
+              }
+            ],
+            "note": "If you hold to maturity and the issuer pays, the face value comes back. The coupon is the interest along the way."
+          },
+          "prompt": "How many dollars is the coupon each year?",
+          "answer": 40,
+          "unit": "$",
+          "explain": "The coupon is $40 a year on the $1,000 face value."
+        },
+        {
+          "id": "bd-how-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A Treasury bond",
+            "subtitle": "You are the lender",
+            "meta": [
+              [
+                "Matures in",
+                "10 years"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "face",
+                "label": "Face value",
+                "amount": 1000.0
+              },
+              {
+                "id": "coupon",
+                "label": "Coupon each year",
+                "amount": 40.0
+              }
+            ],
+            "note": "If you hold to maturity and the issuer pays, the face value comes back. The coupon is the interest along the way."
+          },
+          "prompt": "If you buy this bond for the $1,000 face value, what is the yield in percent?",
+          "answer": 4,
+          "unit": "%",
+          "explain": "$40 ÷ $1,000 = 0.04, which is 4%."
+        },
+        {
+          "id": "bd-how-q4",
+          "type": "true_false",
+          "prompt": "If you hold this bond to maturity and the issuer pays, you get the $1,000 face value back.",
+          "answer": true,
+          "explain": "The coupons were the interest. Maturity returns the face value. Selling early is a different price."
+        },
+        {
+          "id": "bd-how-q5",
+          "type": "multiple_choice",
+          "prompt": "Who is the lender on this page?",
+          "choices": [
+            "The government is lending to you",
+            "You are lending to the government",
+            "The bond is a share of a company"
+          ],
+          "answer": 1,
+          "explain": "A bond is a loan you make. A stock would be ownership."
+        }
+      ]
+    },
+    {
+      "id": "bd-who",
+      "type": "lesson",
+      "title": "Treasuries and Corporate Bonds",
+      "summary": "Same shape of loan, different borrower.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bd-who-q1",
+          "type": "info",
+          "title": "Who borrowed",
+          "body": "A Treasury is a [[bond]] from the US government. A corporate bond is a loan to a company. The company can fail to pay. The higher [[coupon]] on a corporate bond is pay for that extra chance. Neither one is a stock."
+        },
+        {
+          "id": "bd-who-q2",
+          "type": "multiple_choice",
+          "prompt": "Which borrower can more realistically fail to pay you back?",
+          "choices": [
+            "The US government, on a Treasury",
+            "A company, on a corporate bond",
+            "Neither can ever fail"
+          ],
+          "answer": 1,
+          "explain": "A company can run out of money. That extra chance is why corporate bonds usually offer more interest."
+        },
+        {
+          "id": "bd-who-q3",
+          "type": "true_false",
+          "prompt": "A Treasury bond’s price can fall before maturity.",
+          "answer": true,
+          "explain": "You can sell early for less than face value. Holding to maturity is what brings the face value back, if the issuer pays."
+        },
+        {
+          "id": "bd-who-q4",
+          "type": "multiple_choice",
+          "prompt": "Why might a corporate bond pay a higher coupon than a Treasury?",
+          "choices": [
+            "Because the company is the government",
+            "Because lenders want pay for the chance the company cannot pay",
+            "Because coupons are dividends"
+          ],
+          "answer": 1,
+          "explain": "More chance of a missed payment, more interest. It is not free extra money."
+        },
+        {
+          "id": "bd-who-q5",
+          "type": "fill_blank",
+          "prompt": "A bond from the US government is called a ___.",
+          "choices": [
+            "Treasury",
+            "dividend",
+            "ticker"
+          ],
+          "answer": 0,
+          "explain": "Treasury. A corporate bond is the loan to a company."
+        }
+      ]
+    },
+    {
+      "id": "bd-rates",
+      "type": "lesson",
+      "title": "When Rates Rise",
+      "summary": "Old bonds get cheaper so they can compete.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bd-rates-q1",
+          "type": "info",
+          "title": "The seesaw",
+          "body": "You hold a bond with a $40 [[coupon]]. New bonds start paying more, because rates rose. Nobody wants your $40 if they can get more on a new bond, unless your bond’s price falls. A lower price raises the [[yield]] for the buyer."
+        },
+        {
+          "id": "bd-rates-q2",
+          "type": "number",
+          "prompt": "Your $40 coupon bond falls to a price of $800. What is the buyer’s yield, in percent?",
+          "answer": 5,
+          "unit": "%",
+          "explain": "$40 ÷ $800 = 0.05, which is 5%."
+        },
+        {
+          "id": "bd-rates-q3",
+          "type": "number",
+          "prompt": "The face value is $1,000 and the price is $800. How many dollars below face is that price?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$1,000 − $800 = $200. That gap is the price risk if you sell now."
+        },
+        {
+          "id": "bd-rates-q4",
+          "type": "true_false",
+          "prompt": "When interest rates rise, the price of an existing bond generally falls.",
+          "answer": true,
+          "explain": "The old coupon has to compete. The price does the competing."
+        },
+        {
+          "id": "bd-rates-q5",
+          "type": "multiple_choice",
+          "prompt": "You do not need the money until maturity, and the issuer is paying. What does the $800 price mean for you?",
+          "choices": [
+            "You already lost the $200 for good",
+            "It is the price if you sell today. Maturity can still pay the $1,000 face value",
+            "The coupon stops"
+          ],
+          "answer": 1,
+          "explain": "The coupon is still $40. The $800 matters if you sell. Maturity, if the issuer pays, is the face value."
+        }
+      ]
+    },
+    {
+      "id": "bd-cd",
+      "type": "lesson",
+      "title": "CDs and I Bonds",
+      "summary": "Two ways to lock money, with rules.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bd-cd-q1",
+          "type": "info",
+          "title": "Read the lock",
+          "body": "A CD is a bank deposit for a set term. CDs at a bank are FDIC insured, generally up to $250,000 per depositor, per bank, per ownership category. Cashing out early usually costs a penalty.\n\nAn I bond is a US savings bond. The rate mixes a fixed part with inflation and changes in May and November, so this course will not grade today’s rate. Electronic I bonds are capped at $10,000 per person per calendar year. You cannot cash one in the first 12 months. Cash out before 5 years and you lose the last 3 months of interest."
+        },
+        {
+          "id": "bd-cd-q2",
+          "type": "number",
+          "prompt": "What is the electronic I bond purchase cap, in dollars, for one person in one calendar year?",
+          "answer": 10000,
+          "unit": "$",
+          "explain": "TreasuryDirect caps electronic I bonds at $10,000 per person per calendar year. The rate itself changes twice a year."
+        },
+        {
+          "id": "bd-cd-q3",
+          "type": "true_false",
+          "prompt": "You can cash a brand-new I bond after one month.",
+          "answer": false,
+          "explain": "The first 12 months are locked. Before 5 years, leaving also costs the last 3 months of interest."
+        },
+        {
+          "id": "bd-cd-q4",
+          "type": "multiple_choice",
+          "prompt": "You cash an I bond in year 3. What do the rules take?",
+          "choices": [
+            "The last 3 months of interest",
+            "Half the bond, always",
+            "Nothing, because 12 months have passed"
+          ],
+          "answer": 0,
+          "explain": "Past 12 months you can cash out. Before 5 years you forfeit the last 3 months of interest."
+        },
+        {
+          "id": "bd-cd-q5",
+          "type": "true_false",
+          "prompt": "A CD and an I bond are the same product.",
+          "answer": false,
+          "explain": "A CD is a bank deposit. An I bond is a savings bond from the US Treasury, with its own cap and lockup."
+        }
+      ]
+    },
+    {
+      "id": "bd-yield",
+      "type": "lesson",
+      "title": "Yield",
+      "summary": "The coupon only tells the story at the price you paid.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bd-yield-q1",
+          "type": "info",
+          "title": "Price changes the percent",
+          "body": "[[Yield]] is the [[coupon]] divided by the price you pay. A $30 coupon on a $1,000 price is 3%. The same $30 on a lower price is a higher yield. This is the current yield, a beginner version."
+        },
+        {
+          "id": "bd-yield-q2",
+          "type": "number",
+          "prompt": "A bond pays a $30 coupon and you buy it for $1,000. What is the yield, in percent?",
+          "answer": 3,
+          "unit": "%",
+          "explain": "$30 ÷ $1,000 = 0.03, which is 3%."
+        },
+        {
+          "id": "bd-yield-q3",
+          "type": "number",
+          "prompt": "The same $30 coupon is on a bond priced at $600. What is the yield, in percent?",
+          "answer": 5,
+          "unit": "%",
+          "explain": "$30 ÷ $600 = 0.05, which is 5%."
+        },
+        {
+          "id": "bd-yield-q4",
+          "type": "multiple_choice",
+          "prompt": "The coupon stays $30 and the price falls. What happens to the yield?",
+          "choices": [
+            "It falls",
+            "It rises",
+            "It cannot change"
+          ],
+          "answer": 1,
+          "explain": "Yield is coupon ÷ price. A smaller price makes a bigger percent."
+        },
+        {
+          "id": "bd-yield-q5",
+          "type": "true_false",
+          "prompt": "Yield and coupon are always the same number.",
+          "answer": false,
+          "explain": "They match when you pay face value. Pay a different price and the yield moves."
+        }
+      ]
+    },
+    {
+      "id": "bd-role",
+      "type": "lesson",
+      "title": "Bonds in a Portfolio",
+      "summary": "The steadier slice, not a zero-risk slice.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bd-role-q1",
+          "type": "info",
+          "title": "Why they sit next to stocks",
+          "body": "[[Stock]]s usually swing more. [[Bond]]s often swing less, and they often move differently. That is why a [[portfolio]] uses both. Bonds can still lose money if you sell when rates have risen, or if a company cannot pay."
+        },
+        {
+          "id": "bd-role-q2",
+          "type": "multiple_choice",
+          "prompt": "What job do bonds usually have next to stocks?",
+          "choices": [
+            "To guarantee the stocks rise",
+            "To be a steadier slice that often moves differently",
+            "To replace the emergency fund"
+          ],
+          "answer": 1,
+          "explain": "Steadier, not frozen. The emergency fund is still cash."
+        },
+        {
+          "id": "bd-role-q3",
+          "type": "true_false",
+          "prompt": "A bond fund cannot lose money in a year when rates rise.",
+          "answer": false,
+          "explain": "Rising rates push existing bond prices down. A fund that holds those bonds can fall."
+        },
+        {
+          "id": "bd-role-q4",
+          "type": "multiple_choice",
+          "prompt": "You need the money in one year. A 10-year bond is a weak fit because…",
+          "choices": [
+            "The coupon is illegal",
+            "You might have to sell before maturity, at a lower price",
+            "Bonds are stocks"
+          ],
+          "answer": 1,
+          "explain": "A short timeline wants cash. A long bond’s price can be down in the exact year you sell."
+        },
+        {
+          "id": "bd-role-q5",
+          "type": "number",
+          "prompt": "A portfolio is $8,000 in stocks and $2,000 in bonds. How many dollars are in the bond slice?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "The bond slice is the $2,000. The mix itself is the next unit’s subject."
+        }
+      ]
+    },
+    {
+      "id": "bd-compare",
+      "type": "lesson",
+      "format": "call",
+      "title": "A CD or a Treasury",
+      "summary": "Same dollars in this example. Different borrower.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "bd-compare-q1",
+          "type": "info",
+          "title": "Line them up",
+          "body": "Both pages pay $40 on $1,000, so 4%. The CD is a bank deposit. The Treasury is a loan to the US government. The example uses the same rate on purpose, so the choice is about the borrower and the rules, not about chasing a higher number."
+        },
+        {
+          "id": "bd-compare-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "One-year CD at a bank",
+              "subtitle": "FDIC insured, generally up to $250,000 at that bank",
+              "lines": [
+                {
+                  "id": "dep",
+                  "label": "You deposit",
+                  "amount": 1000.0
+                },
+                {
+                  "id": "pay",
+                  "label": "Interest at 4%",
+                  "amount": 40.0
+                }
+              ],
+              "note": "Leaving early usually costs a penalty."
+            },
+            {
+              "kind": "statement",
+              "title": "One-year Treasury",
+              "subtitle": "A loan to the US government",
+              "lines": [
+                {
+                  "id": "face",
+                  "label": "You lend",
+                  "amount": 1000.0
+                },
+                {
+                  "id": "pay",
+                  "label": "Coupon at 4%",
+                  "amount": 40.0
+                }
+              ],
+              "note": "Hold it the year and, if the issuer pays, the $1,000 comes back."
+            }
+          ],
+          "prompt": "Which page is a loan to the US government?",
+          "choices": [
+            "One-year CD at a bank",
+            "One-year Treasury"
+          ],
+          "answer": 1,
+          "explain": "The Treasury is the government loan. The CD is the bank deposit, with FDIC insurance up to the usual limit."
+        },
+        {
+          "id": "bd-compare-q3",
+          "type": "number",
+          "prompt": "How many dollars of interest does each page pay in this example?",
+          "answer": 40,
+          "unit": "$",
+          "explain": "Both are $1,000 × 0.04 = $40. The rate match is the point of the comparison."
+        },
+        {
+          "id": "bd-compare-q4",
+          "type": "multiple_choice",
+          "prompt": "You might need the cash in three months. Which fits better than either locked page?",
+          "choices": [
+            "The one-year CD",
+            "The one-year Treasury",
+            "A savings account you can take money from"
+          ],
+          "answer": 2,
+          "explain": "Both locked pages want the year. Three months wants the savings account."
+        },
+        {
+          "id": "bd-compare-q5",
+          "type": "true_false",
+          "prompt": "Because both pay $40, they are the same product.",
+          "answer": false,
+          "explain": "The dollars match. The borrower, the insurance, and the early-exit rules do not."
+        }
+      ]
+    },
+    {
+      "id": "bd-helen",
+      "type": "lesson",
+      "format": "story",
+      "title": "Helen Holds",
+      "summary": "The price on the screen is not the maturity check.",
+      "xp": 10,
+      "story": {
+        "title": "The screen says $800",
+        "character": "Helen, 36, school librarian",
+        "body": "Helen owns a **$1,000** Treasury with a **$40** coupon. It matures in **10 years**, and she does not need the money until then.\n\nRates rise. If she sold today she would get **$800**. The coupon is still $40."
+      },
+      "steps": [
+        {
+          "id": "bd-helen-q1",
+          "type": "info",
+          "title": "Meet Helen",
+          "body": "Helen is 36 and a school librarian. She owns the $1,000 Treasury from this unit: a $40 coupon, maturity in 10 years. She does not need the money until then.\n\nRates rise. The price she would get if she sold today falls to $800. The coupon is still $40."
+        },
+        {
+          "id": "bd-helen-q2",
+          "type": "number",
+          "prompt": "If Helen sells today at $800, how many dollars does she get?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "The sale price is $800. That is $200 below the $1,000 face value."
+        },
+        {
+          "id": "bd-helen-q3",
+          "type": "number",
+          "prompt": "If she holds and the issuer pays at maturity, how many dollars of face value come back?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "Maturity pays the $1,000 face value. The $800 was the “sell today” price, not the end."
+        },
+        {
+          "id": "bd-helen-q4",
+          "type": "true_false",
+          "prompt": "Helen’s coupon changed to $32 because the price fell.",
+          "answer": false,
+          "explain": "The coupon stays $40. The price fell so a new buyer’s yield can compete."
+        },
+        {
+          "id": "bd-helen-q5",
+          "type": "multiple_choice",
+          "prompt": "What is Helen’s fitting move if she still does not need the money?",
+          "choices": [
+            "Sell because the screen says $800",
+            "Hold to maturity, since that was the plan",
+            "Borrow to buy more of the same bond"
+          ],
+          "answer": 1,
+          "explain": "The plan was 10 years. The screen price is for someone who sells today."
+        }
+      ]
+    },
+    {
+      "id": "bd-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "bd-trial",
+      "type": "boss",
+      "title": "Den Trial: Bonds & Interest Rates",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "bd-trial-q1",
+          "type": "number",
+          "prompt": "A bond pays a $50 coupon and you buy it for $1,000. What is the yield, in percent?",
+          "answer": 5,
+          "unit": "%",
+          "explain": "$50 ÷ $1,000 = 0.05, which is 5%."
+        },
+        {
+          "id": "bd-trial-q2",
+          "type": "true_false",
+          "prompt": "You can redeem a new I bond in the first 12 months.",
+          "answer": false,
+          "explain": "The first year is locked. Before five years, cashing out also costs the last three months of interest."
+        },
+        {
+          "id": "bd-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "Rates rise and you sell a bond before maturity. What is the usual price effect?",
+          "choices": [
+            "The price rises",
+            "The price falls",
+            "The price is frozen at face value"
+          ],
+          "answer": 1,
+          "explain": "Existing bonds get cheaper so their yield can compete with new, higher rates."
+        },
+        {
+          "id": "bd-trial-q4",
+          "type": "number",
+          "prompt": "What is the electronic I bond cap, in dollars, for one person in a calendar year?",
+          "answer": 10000,
+          "unit": "$",
+          "explain": "The cap is $10,000. This trial asks the cap, not today’s changing rate."
+        }
+      ]
+    }
+  ]
+}
