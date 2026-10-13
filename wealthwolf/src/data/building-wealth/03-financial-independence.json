@@ -1,0 +1,521 @@
+{
+  "id": "financial-independence",
+  "section": "building-wealth",
+  "order": 3,
+  "title": "Financial Independence",
+  "description": "The savings rate, the 4% sketch, and the number 25 times spending.",
+  "wolfLine": "Spending writes the target. The savings rate is the lever.",
+  "terms": {
+    "savings-rate": {
+      "term": "Savings rate",
+      "definition": "The share of your pay that you keep instead of spending. Pay of $60,000 and savings of $15,000 is a 25% savings rate.",
+      "example": "Saving $1,000 of a $4,000 month is 25%."
+    },
+    "four-percent-rule": {
+      "term": "4% rule",
+      "definition": "A rule of thumb: in the first retired year, withdraw about 4% of the portfolio, then adjust that dollar amount for inflation. It is a sketch from history, not a promise.",
+      "example": "4% of $1,000,000 is $40,000 in year one."
+    },
+    "fi-number": {
+      "term": "FI number",
+      "definition": "The portfolio that could cover your yearly spending under the 4% rule of thumb. It is about 25 times yearly spending.",
+      "example": "Spending $40,000 a year points at a FI number of $1,000,000."
+    },
+    "coast-fi": {
+      "term": "Coast FI",
+      "definition": "Having enough invested that, with no more contributions, an example growth rate could reach your FI number by a chosen age. The rate is a guess, not a promise.",
+      "example": "About $100,000 left alone, doubling three times, is about $800,000."
+    }
+  },
+  "lessons": [
+    {
+      "id": "fn-rate",
+      "type": "lesson",
+      "title": "The Savings Rate",
+      "summary": "The lever you can actually pull.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fn-rate-q1",
+          "type": "info",
+          "title": "Share of pay",
+          "body": "The [[savings rate]] is the share of pay you do not spend. A raise helps. A lower spending number helps more, because the rate is savings divided by pay. Investment returns are a guess. The rate is a choice."
+        },
+        {
+          "id": "fn-rate-q2",
+          "type": "number",
+          "prompt": "Pay is $60,000 and you save $15,000. What is the savings rate, in percent?",
+          "answer": 25,
+          "unit": "%",
+          "explain": "$15,000 ÷ $60,000 = 0.25, which is 25%."
+        },
+        {
+          "id": "fn-rate-q3",
+          "type": "number",
+          "prompt": "A $4,000 month with $1,000 saved is what percent?",
+          "answer": 25,
+          "unit": "%",
+          "explain": "$1,000 ÷ $4,000 = 25%. Same rate, one month."
+        },
+        {
+          "id": "fn-rate-q4",
+          "type": "true_false",
+          "prompt": "A higher savings rate requires a higher salary.",
+          "answer": false,
+          "explain": "The rate is a share. Spending less raises it even when pay stays put."
+        },
+        {
+          "id": "fn-rate-q5",
+          "type": "number",
+          "prompt": "Pay stays $60,000 and you save $6,000 instead of $15,000. What is the savings rate, in percent?",
+          "answer": 10,
+          "unit": "%",
+          "explain": "$6,000 ÷ $60,000 = 10%."
+        }
+      ]
+    },
+    {
+      "id": "fn-four",
+      "type": "lesson",
+      "title": "The 4% Rule",
+      "summary": "A first-year sketch, with cracks.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fn-four-q1",
+          "type": "info",
+          "title": "What the rule actually says",
+          "body": "The [[4% rule|four-percent-rule]] says: in year one of retirement, withdraw about 4% of the portfolio, then adjust that dollar amount for [[inflation]] each year. It is a rule of thumb from US history. A very long retirement, a crash in the first years, or fierce inflation can break it. It is not a guarantee, and it is not “spend 4% of whatever is left each year.”"
+        },
+        {
+          "id": "fn-four-q2",
+          "type": "number",
+          "prompt": "What is 4% of a $1,000,000 portfolio, in dollars, for year one?",
+          "answer": 40000,
+          "unit": "$",
+          "explain": "$1,000,000 × 0.04 = $40,000."
+        },
+        {
+          "id": "fn-four-q3",
+          "type": "number",
+          "prompt": "Inflation in the example is 3%. What is the year-two withdrawal if you adjust the $40,000?",
+          "answer": 41200,
+          "unit": "$",
+          "explain": "$40,000 × 1.03 = $41,200. You adjust the dollars, you do not take 4% of a smaller pile."
+        },
+        {
+          "id": "fn-four-q4",
+          "type": "true_false",
+          "prompt": "The 4% rule promises the money will last no matter what the first years do.",
+          "answer": false,
+          "explain": "Bad early returns and a very long retirement are the cracks. The rule is a sketch."
+        },
+        {
+          "id": "fn-four-q5",
+          "type": "multiple_choice",
+          "prompt": "Which version matches the rule?",
+          "choices": [
+            "Always spend 4% of this year’s balance",
+            "Spend about 4% in year one, then adjust those dollars for inflation",
+            "Spend the whole gain, every year"
+          ],
+          "answer": 1,
+          "explain": "Year one is the 4%. Later years inflate that dollar amount. They do not restart the percent on a shrunken pile."
+        }
+      ]
+    },
+    {
+      "id": "fn-number",
+      "type": "lesson",
+      "format": "document",
+      "title": "Your FI Number",
+      "summary": "Twenty-five times spending.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fn-number-q1",
+          "type": "info",
+          "title": "Turn the rule around",
+          "body": "If year one is 4% of the pile, the pile is 25 times spending. That portfolio is your [[FI number]]. Spending of $40,000 points at $1,000,000. Spend less, and the number shrinks. The market still has to cooperate. The number is a target, not a balance you have."
+        },
+        {
+          "id": "fn-number-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A FI sketch",
+            "subtitle": "The 4% rule turned around",
+            "lines": [
+              {
+                "id": "spend",
+                "label": "Yearly spending",
+                "amount": 40000.0
+              },
+              {
+                "id": "pile",
+                "label": "25 times that spending",
+                "amount": 1000000.0
+              }
+            ],
+            "note": "25 times spending is 1 ÷ 0.04. It is a rule of thumb, not a quote."
+          },
+          "prompt": "Yearly spending is $40,000. What is 25 times that, in dollars?",
+          "answer": 1000000,
+          "unit": "$",
+          "explain": "25 × $40,000 = $1,000,000."
+        },
+        {
+          "id": "fn-number-q3",
+          "type": "number",
+          "prompt": "Spending is $30,000 a year. What is the FI number?",
+          "answer": 750000,
+          "unit": "$",
+          "explain": "25 × $30,000 = $750,000. A lower life has a lower target."
+        },
+        {
+          "id": "fn-number-q4",
+          "type": "true_false",
+          "prompt": "The FI number is the salary you need to earn forever.",
+          "answer": false,
+          "explain": "It is a portfolio target, about 25 times spending. Pay is how you feed it. Spending is what sets it."
+        },
+        {
+          "id": "fn-number-q5",
+          "type": "number",
+          "prompt": "How many dollars of yearly spending does a $500,000 FI number describe, at 4%?",
+          "answer": 20000,
+          "unit": "$",
+          "explain": "$500,000 × 0.04 = $20,000, which is the same as $500,000 ÷ 25."
+        }
+      ]
+    },
+    {
+      "id": "fn-lean",
+      "type": "lesson",
+      "title": "Lean or Regular",
+      "summary": "The number is the spending.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fn-lean-q1",
+          "type": "info",
+          "title": "Two targets, one person",
+          "body": "Regular FI uses the spending you actually want. Lean FI uses a smaller life on purpose. Neither is more virtuous. A lean [[FI number]] is just a smaller multiple. If regular spending is $40,000, the target is $1,000,000. Lean spending of $25,000 is $625,000."
+        },
+        {
+          "id": "fn-lean-q2",
+          "type": "number",
+          "prompt": "What is the lean FI number on $25,000 of yearly spending?",
+          "answer": 625000,
+          "unit": "$",
+          "explain": "25 × $25,000 = $625,000."
+        },
+        {
+          "id": "fn-lean-q3",
+          "type": "number",
+          "prompt": "How many fewer dollars is that than the $1,000,000 regular target?",
+          "answer": 375000,
+          "unit": "$",
+          "explain": "$1,000,000 − $625,000 = $375,000. The gap is the spending you agreed to skip."
+        },
+        {
+          "id": "fn-lean-q4",
+          "type": "true_false",
+          "prompt": "Lean FI means the 4% rule no longer has cracks.",
+          "answer": false,
+          "explain": "A smaller pile can still be hit by a bad early retirement. Lean changes the target, not the uncertainty."
+        },
+        {
+          "id": "fn-lean-q5",
+          "type": "multiple_choice",
+          "prompt": "What actually changed between the two numbers?",
+          "choices": [
+            "The law of inflation",
+            "How much life you are asking the portfolio to buy",
+            "The federal funds rate"
+          ],
+          "answer": 1,
+          "explain": "Spending sets the number. Lean is a smaller ask."
+        }
+      ]
+    },
+    {
+      "id": "fn-coast",
+      "type": "lesson",
+      "title": "Coast FI",
+      "summary": "Enough that the example could finish the job.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fn-coast-q1",
+          "type": "info",
+          "title": "Stop adding, on paper",
+          "body": "[[Coast FI]] means the pile you already have could reach the [[FI number]] by a chosen age if you never add another dollar. This sketch uses an example 8% rate. The [[rule of 72]] says that doubles in about 9 years. Three doubles is 27 years, and 2 × 2 × 2 = 8. So $100,000 might become about $800,000. The 8% is an example, not a promise."
+        },
+        {
+          "id": "fn-coast-q2",
+          "type": "number",
+          "prompt": "At an example 8%, about how many years does the rule of 72 give for one doubling?",
+          "answer": 9,
+          "unit": "years",
+          "explain": "72 ÷ 8 = 9 years. About, and only at that example rate."
+        },
+        {
+          "id": "fn-coast-q3",
+          "type": "number",
+          "prompt": "$100,000 doubles three times. About how many dollars is that?",
+          "answer": 800000,
+          "unit": "$",
+          "explain": "$100,000 × 2 × 2 × 2 = $800,000. Three example doubles, no new deposits."
+        },
+        {
+          "id": "fn-coast-q4",
+          "type": "true_false",
+          "prompt": "Coast FI means you can stop saving and the result is guaranteed.",
+          "answer": false,
+          "explain": "The doubling is an example rate. A lower rate, or spending that creeps up, moves the finish line."
+        },
+        {
+          "id": "fn-coast-q5",
+          "type": "multiple_choice",
+          "prompt": "What are you allowed to stop, in the coast idea?",
+          "choices": [
+            "New contributions, on paper",
+            "Having an emergency fund",
+            "Paying rent"
+          ],
+          "answer": 0,
+          "explain": "Contributions. The life, the cash pile, and the guess about returns are still there."
+        }
+      ]
+    },
+    {
+      "id": "fn-ordinary",
+      "type": "lesson",
+      "title": "An Ordinary Income",
+      "summary": "The number follows spending, not a job title.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fn-ordinary-q1",
+          "type": "info",
+          "title": "A teacher-sized life",
+          "body": "Financial independence is not a fortune reserved for a huge salary. A household that can live on $30,000 a year is aiming at about $750,000 under the [[4% rule|four-percent-rule]]. A household that spends $80,000 is aiming at $2,000,000. The salary helps you save. The spending writes the target."
+        },
+        {
+          "id": "fn-ordinary-q2",
+          "type": "number",
+          "prompt": "What is the FI number for $30,000 of yearly spending?",
+          "answer": 750000,
+          "unit": "$",
+          "explain": "25 × $30,000 = $750,000."
+        },
+        {
+          "id": "fn-ordinary-q3",
+          "type": "number",
+          "prompt": "What is the FI number for $80,000 of yearly spending?",
+          "answer": 2000000,
+          "unit": "$",
+          "explain": "25 × $80,000 = $2,000,000."
+        },
+        {
+          "id": "fn-ordinary-q4",
+          "type": "true_false",
+          "prompt": "A modest salary makes a FI number impossible.",
+          "answer": false,
+          "explain": "The number is 25 times spending. A modest life is a smaller number, and the savings rate is the lever."
+        },
+        {
+          "id": "fn-ordinary-q5",
+          "type": "multiple_choice",
+          "prompt": "Which change shrinks the FI number?",
+          "choices": [
+            "A higher spending target",
+            "A lower spending target",
+            "A scarier headline"
+          ],
+          "answer": 1,
+          "explain": "Lower spending, smaller multiple. The headline does not rewrite the formula."
+        }
+      ]
+    },
+    {
+      "id": "fn-paths",
+      "type": "lesson",
+      "format": "call",
+      "title": "Two Paths",
+      "summary": "Same pay. Different share.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "fn-paths-q1",
+          "type": "info",
+          "title": "The gap is the rate",
+          "body": "Both pages start from $60,000 of pay. One saves 10%, which is $6,000. The other saves 25%, which is $15,000. Returns are not on the page. The only difference is the [[savings rate]]."
+        },
+        {
+          "id": "fn-paths-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Save 10%",
+              "subtitle": "A $6,000 year",
+              "lines": [
+                {
+                  "id": "save",
+                  "label": "Saved from $60,000 of pay",
+                  "amount": 6000.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Save 25%",
+              "subtitle": "A $15,000 year",
+              "lines": [
+                {
+                  "id": "save",
+                  "label": "Saved from $60,000 of pay",
+                  "amount": 15000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Which page puts more dollars to work this year?",
+          "choices": [
+            "Save 10%",
+            "Save 25%"
+          ],
+          "answer": 1,
+          "explain": "25% is $15,000. 10% is $6,000. Same pay, $9,000 more saved on the higher rate."
+        },
+        {
+          "id": "fn-paths-q3",
+          "type": "number",
+          "prompt": "How many more dollars does the 25% page save this year?",
+          "answer": 9000,
+          "unit": "$",
+          "explain": "$15,000 − $6,000 = $9,000."
+        },
+        {
+          "id": "fn-paths-q4",
+          "type": "true_false",
+          "prompt": "The 10% page will catch up automatically, because returns are required to be higher for people who save less.",
+          "answer": false,
+          "explain": "Nothing promises a higher return for a lower rate. The deposit gap is real every year."
+        },
+        {
+          "id": "fn-paths-q5",
+          "type": "number",
+          "prompt": "Over 10 years, before any growth, how many more dollars does the 25% path deposit?",
+          "answer": 90000,
+          "unit": "$",
+          "explain": "10 × $9,000 = $90,000. Growth, if it comes, is on top of a larger pile."
+        }
+      ]
+    },
+    {
+      "id": "fn-dana",
+      "type": "lesson",
+      "format": "story",
+      "title": "Dana’s 15-Year Plan",
+      "summary": "The target is a million. The deposits are not.",
+      "xp": 10,
+      "story": {
+        "title": "Fifteen years, written down",
+        "character": "Dana, 32, nurse",
+        "body": "Dana can live on **$40,000** a year, so her FI number is **$1,000,000**. She saves **$15,000** a year.\n\nFifteen years of deposits, before growth, are **$225,000**. She writes down the gap so the plan stays honest."
+      },
+      "steps": [
+        {
+          "id": "fn-dana-q1",
+          "type": "info",
+          "title": "Meet Dana",
+          "body": "Dana is 32 and a nurse. She can live on $40,000 a year, so her [[FI number]] under the 4% rule is $1,000,000. She saves $15,000 a year, a 25% rate on $60,000 of pay.\n\nFifteen years of those deposits, before any growth, are $225,000. The rest of the million would have to come from growth. She writes that down so the plan does not pretend the deposits alone finish the job."
+        },
+        {
+          "id": "fn-dana-q2",
+          "type": "number",
+          "prompt": "What is Dana’s FI number?",
+          "answer": 1000000,
+          "unit": "$",
+          "explain": "25 × $40,000 = $1,000,000."
+        },
+        {
+          "id": "fn-dana-q3",
+          "type": "number",
+          "prompt": "How many dollars does she deposit in 15 years, before growth?",
+          "answer": 225000,
+          "unit": "$",
+          "explain": "15 × $15,000 = $225,000."
+        },
+        {
+          "id": "fn-dana-q4",
+          "type": "number",
+          "prompt": "How many dollars of the $1,000,000 are not covered by those deposits alone?",
+          "answer": 775000,
+          "unit": "$",
+          "explain": "$1,000,000 − $225,000 = $775,000. That gap is what growth would have to cover, and growth is not a promise."
+        },
+        {
+          "id": "fn-dana-q5",
+          "type": "true_false",
+          "prompt": "Dana is guaranteed to reach $1,000,000 in 15 years because she has a plan.",
+          "answer": false,
+          "explain": "The deposits are $225,000. The rest depends on returns and on her spending staying near $40,000."
+        }
+      ]
+    },
+    {
+      "id": "fn-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "fn-trial",
+      "type": "boss",
+      "title": "Den Trial: Financial Independence",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "fn-trial-q1",
+          "type": "number",
+          "prompt": "You save $12,000 of $48,000 pay. What is the savings rate, in percent?",
+          "answer": 25,
+          "unit": "%",
+          "explain": "$12,000 ÷ $48,000 = 25%."
+        },
+        {
+          "id": "fn-trial-q2",
+          "type": "number",
+          "prompt": "Spending is $50,000 a year. What is the FI number under the 25-times sketch?",
+          "answer": 1250000,
+          "unit": "$",
+          "explain": "25 × $50,000 = $1,250,000."
+        },
+        {
+          "id": "fn-trial-q3",
+          "type": "true_false",
+          "prompt": "The 4% rule means you spend 4% of whatever balance is left, every year.",
+          "answer": false,
+          "explain": "Year one is about 4%. Later years adjust those dollars for inflation. They do not restart the percent."
+        },
+        {
+          "id": "fn-trial-q4",
+          "type": "number",
+          "prompt": "$50,000 doubles three times at an example rate. About how many dollars is that?",
+          "answer": 400000,
+          "unit": "$",
+          "explain": "$50,000 × 2 × 2 × 2 = $400,000. The rate that produced the doubles is still an example."
+        }
+      ]
+    }
+  ]
+}

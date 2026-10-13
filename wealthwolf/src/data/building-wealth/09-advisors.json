@@ -1,0 +1,566 @@
+{
+  "id": "advisors",
+  "section": "building-wealth",
+  "order": 9,
+  "title": "Working with Advisors",
+  "description": "When a person helps, how they get paid, and the sentence that means leave.",
+  "wolfLine": "Ask who pays them. Then turn the percent into dollars.",
+  "terms": {
+    "fiduciary": {
+      "term": "Fiduciary",
+      "definition": "Someone who must put your interest first. A salesperson is paid to sell a product. The titles on a business card do not settle which one you are talking to. Ask.",
+      "example": "A fiduciary who is paid by you, versus a commission for selling one fund."
+    },
+    "fee-only": {
+      "term": "Fee-only",
+      "definition": "Paid by you, not by a commission on the products you buy. A 1% yearly fee on $200,000 is $2,000 a year. Fee-only is not the same phrase as “fee-based,” which can include commissions.",
+      "example": "A 1% fee on a balance that stayed $200,000 is $60,000 over 30 years, before any growth in the fee."
+    }
+  },
+  "lessons": [
+    {
+      "id": "ad-need",
+      "type": "lesson",
+      "format": "call",
+      "title": "Do You Need a Person?",
+      "summary": "Complexity is the reason. A simple plan may not be.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ad-need-q1",
+          "type": "info",
+          "title": "Two clients",
+          "body": "Some people want a human. The stronger case is a messy life: a business, a trust, a pile of old accounts. A single automatic [[three-fund portfolio|three-fund-portfolio]] is a weaker case. A robo-advisor or doing it yourself can be enough there. Hiring someone is allowed either way. This is not a rule that you must, or must not."
+        },
+        {
+          "id": "ad-need-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "A three-fund plan",
+              "subtitle": "One mix, already automated",
+              "lines": [
+                {
+                  "id": "auto",
+                  "label": "Automatic monthly investment",
+                  "amount": 200.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "A business, a trust, and three accounts",
+              "subtitle": "More moving parts than a single fund",
+              "lines": [
+                {
+                  "id": "biz",
+                  "label": "Business value in the sketch",
+                  "amount": 180000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Which page is the stronger case for paying a human?",
+          "choices": [
+            "A three-fund plan",
+            "A business, a trust, and three accounts"
+          ],
+          "answer": 1,
+          "explain": "The business and the trust have more parts than one automated mix. The simple page can stay automated."
+        },
+        {
+          "id": "ad-need-q3",
+          "type": "true_false",
+          "prompt": "A three-fund plan is illegal unless an advisor signs it.",
+          "answer": false,
+          "explain": "You can hold it yourself. An advisor is a hire, not a permission slip."
+        },
+        {
+          "id": "ad-need-q4",
+          "type": "multiple_choice",
+          "prompt": "What is a fair reason to hire help on the simple page anyway?",
+          "choices": [
+            "You know you will not stay the course alone",
+            "A headline told you to",
+            "So the advisor can guarantee the return"
+          ],
+          "answer": 0,
+          "explain": "Behavior is a real reason. A guarantee is not something they can honestly sell."
+        },
+        {
+          "id": "ad-need-q5",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A three-fund plan",
+            "subtitle": "One mix, already automated",
+            "lines": [
+              {
+                "id": "auto",
+                "label": "Automatic monthly investment",
+                "amount": 200.0
+              }
+            ]
+          },
+          "prompt": "The simple page invests how many dollars a month?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "The automatic line is $200. The complexity is not in that number."
+        }
+      ]
+    },
+    {
+      "id": "ad-duty",
+      "type": "lesson",
+      "title": "Fiduciary or Salesperson",
+      "summary": "Ask who pays them.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ad-duty-q1",
+          "type": "info",
+          "title": "The duty",
+          "body": "A [[fiduciary]] must put your interest first. A salesperson is paid when you buy the product they offer. Some people are both, and “fee-based” can mean a fee plus a commission. “Fee-only” means you pay them and the product does not. Ask the question in those words."
+        },
+        {
+          "id": "ad-duty-q2",
+          "type": "multiple_choice",
+          "prompt": "Who must put your interest first?",
+          "choices": [
+            "A fiduciary",
+            "Anyone with a nice office",
+            "The person who texts a stock tip"
+          ],
+          "answer": 0,
+          "explain": "Fiduciary is the duty. An office is furniture. A text is not a duty."
+        },
+        {
+          "id": "ad-duty-q3",
+          "type": "true_false",
+          "prompt": "The word “advisor” on a card proves the person is a fiduciary.",
+          "answer": false,
+          "explain": "The card is marketing. Ask whether they are a fiduciary, all of the time, for you."
+        },
+        {
+          "id": "ad-duty-q4",
+          "type": "multiple_choice",
+          "prompt": "A commission on the fund they sell is a clue that they are what?",
+          "choices": [
+            "Paid by the product",
+            "Fee-only",
+            "A government examiner"
+          ],
+          "answer": 0,
+          "explain": "The product is paying them. That is the salesperson side. Fee-only means you are the client paying the bill."
+        },
+        {
+          "id": "ad-duty-q5",
+          "type": "fill_blank",
+          "prompt": "Someone who must put your interest first is a ___.",
+          "choices": [
+            "fiduciary",
+            "ticker",
+            "coupon"
+          ],
+          "answer": 0,
+          "explain": "Fiduciary. Then ask how they get paid."
+        }
+      ]
+    },
+    {
+      "id": "ad-fee",
+      "type": "lesson",
+      "title": "What 1% Costs",
+      "summary": "A small percent, many years, balance held still.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ad-fee-q1",
+          "type": "info",
+          "title": "Hold the balance still",
+          "body": "A [[fee-only]] advisor who charges 1% a year on $200,000 costs $2,000 this year. If the balance never changed, 30 years would be $60,000. A growing balance makes a percent fee a larger dollar bill. This sketch holds it still so you can see the yearly number. The fee can be worth it. It is never invisible."
+        },
+        {
+          "id": "ad-fee-q2",
+          "type": "number",
+          "prompt": "What is 1% of $200,000, in dollars, for one year?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$200,000 × 0.01 = $2,000."
+        },
+        {
+          "id": "ad-fee-q3",
+          "type": "number",
+          "prompt": "If that $2,000 stayed the same for 30 years, how many dollars is the fee?",
+          "answer": 60000,
+          "unit": "$",
+          "explain": "30 × $2,000 = $60,000. The still-balance sketch understates a percent fee on a growing pile."
+        },
+        {
+          "id": "ad-fee-q4",
+          "type": "true_false",
+          "prompt": "Because the sketch held the balance still, a growing account would owe a smaller dollar fee at the same 1%.",
+          "answer": false,
+          "explain": "One percent of a larger balance is more dollars. The still sketch is the gentle version."
+        },
+        {
+          "id": "ad-fee-q5",
+          "type": "multiple_choice",
+          "prompt": "What is the fee, in plain words?",
+          "choices": [
+            "Money that leaves every year, whether the market was kind or not",
+            "A one-time stamp",
+            "A tax credit"
+          ],
+          "answer": 0,
+          "explain": "Yearly. A bad year does not cancel the percent."
+        }
+      ]
+    },
+    {
+      "id": "ad-robo",
+      "type": "lesson",
+      "title": "Robo-Advisors",
+      "summary": "A mix and a rebalance, for a smaller fee.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ad-robo-q1",
+          "type": "info",
+          "title": "Software with a fee",
+          "body": "A robo-advisor picks a mix from your answers, buys the funds, and rebalances. The fee is often lower than a human’s 1%, and it is still a fee. It will not draft a will or sit with you after a death in the family. It also does not promise a return."
+        },
+        {
+          "id": "ad-robo-q2",
+          "type": "multiple_choice",
+          "prompt": "What is a robo-advisor good at?",
+          "choices": [
+            "A simple mix, bought and rebalanced on a schedule",
+            "Replacing a will and a guardian",
+            "Guaranteeing a 12% year"
+          ],
+          "answer": 0,
+          "explain": "The simple investing chore. Legal documents and hard family years are a different hire."
+        },
+        {
+          "id": "ad-robo-q3",
+          "type": "true_false",
+          "prompt": "A lower fee means the robo-advisor cannot lose you money.",
+          "answer": false,
+          "explain": "The funds can fall. The fee is only the cost of the service, not a shield."
+        },
+        {
+          "id": "ad-robo-q4",
+          "type": "number",
+          "prompt": "A robo-advisor charges 0.25% a year on $200,000. How many dollars is that this year?",
+          "answer": 500,
+          "unit": "$",
+          "explain": "$200,000 × 0.0025 = $500. The human’s 1% on the same pile was $2,000."
+        },
+        {
+          "id": "ad-robo-q5",
+          "type": "number",
+          "prompt": "How many dollars a year cheaper is that $500 than the $2,000 human fee, on this still balance?",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "$2,000 − $500 = $1,500. Cheaper is not the same as sufficient, if your life is the messy page."
+        }
+      ]
+    },
+    {
+      "id": "ad-check",
+      "type": "lesson",
+      "title": "Look Them Up",
+      "summary": "BrokerCheck, before the first transfer.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ad-check-q1",
+          "type": "info",
+          "title": "The public record",
+          "body": "FINRA BrokerCheck is a public lookup for brokers. You can see employment history and disclosed events. It is not a Yelp star, and it is not a promise the person is a [[fiduciary]]. It is the minimum look before you move money. If you do not know how to spell their name, you are not ready to hire them."
+        },
+        {
+          "id": "ad-check-q2",
+          "type": "multiple_choice",
+          "prompt": "When do you use BrokerCheck?",
+          "choices": [
+            "Before you transfer money",
+            "After the first year, if you feel like it",
+            "Only if they promise a guarantee"
+          ],
+          "answer": 0,
+          "explain": "Before. A guarantee is a reason to walk, not a reason to skip the lookup."
+        },
+        {
+          "id": "ad-check-q3",
+          "type": "true_false",
+          "prompt": "A clean BrokerCheck page proves the person is a fiduciary who charges a fair fee.",
+          "answer": false,
+          "explain": "It is a record of disclosures and history. The duty and the fee are questions you still ask."
+        },
+        {
+          "id": "ad-check-q4",
+          "type": "multiple_choice",
+          "prompt": "What belongs in the lookup?",
+          "choices": [
+            "The person’s name and record",
+            "Your account password",
+            "The federal funds target"
+          ],
+          "answer": 0,
+          "explain": "Their name. Never your password. No legitimate lookup needs it."
+        },
+        {
+          "id": "ad-check-q5",
+          "type": "fill_blank",
+          "prompt": "Look the broker up on BrokerCheck ___ you send the money.",
+          "choices": [
+            "before",
+            "after",
+            "instead of"
+          ],
+          "answer": 0,
+          "explain": "Before. The transfer is the point of no casual return."
+        }
+      ]
+    },
+    {
+      "id": "ad-flags",
+      "type": "lesson",
+      "format": "spot",
+      "title": "Red Flags",
+      "summary": "The guarantee is the tell.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ad-flags-q1",
+          "type": "info",
+          "title": "Walk-away lines",
+          "body": "A real advisor can explain fees, the mix, and what they cannot promise. “Guaranteed 12%” on a $200,000 account would be $24,000 a year, and markets do not work that way. Pressure to sign today, or a request for your password, is the same family of problem."
+        },
+        {
+          "id": "ad-flags-q2",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "A pitch",
+            "subtitle": "$200,000 account, 12% “guaranteed”",
+            "lines": [
+              {
+                "id": "fee",
+                "label": "Yearly fee they mentioned",
+                "amount": 2000.0
+              },
+              {
+                "id": "promise",
+                "label": "“Guaranteed” yearly gain they advertised",
+                "amount": 24000.0
+              }
+            ],
+            "note": "A guarantee of a market return is the line to refuse."
+          },
+          "prompt": "Which line is the one you refuse?",
+          "answer": "promise",
+          "explain": "A guaranteed market gain is the line. The fee line is something you can discuss. A guarantee is a fiction."
+        },
+        {
+          "id": "ad-flags-q3",
+          "type": "number",
+          "prompt": "Twelve percent of $200,000 is how many dollars they are “guaranteeing”?",
+          "answer": 24000,
+          "unit": "$",
+          "explain": "$200,000 × 0.12 = $24,000. That promise is the problem, not a goal you can hold them to."
+        },
+        {
+          "id": "ad-flags-q4",
+          "type": "true_false",
+          "prompt": "Signing today is fine if the guarantee is large.",
+          "answer": false,
+          "explain": "A larger fiction is not a better contract. You leave."
+        },
+        {
+          "id": "ad-flags-q5",
+          "type": "multiple_choice",
+          "prompt": "Someone offering advice asks for your brokerage password. What do you do?",
+          "choices": [
+            "Give it, so they can help faster",
+            "Refuse. They can work with limited access you control",
+            "Email it and then check BrokerCheck"
+          ],
+          "answer": 1,
+          "explain": "Your password stays yours. Limited access that you can revoke is a different, safer arrangement."
+        }
+      ]
+    },
+    {
+      "id": "ad-ask",
+      "type": "lesson",
+      "title": "Questions to Ask",
+      "summary": "Duty, pay, and what they will not promise.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ad-ask-q1",
+          "type": "info",
+          "title": "The short list",
+          "body": "Ask if they are a [[fiduciary]] for you, how they are paid, what the yearly dollars are on your balance, and what they cannot promise. Then look them up. The order matters less than asking all of it before a transfer. This list is the calm version."
+        },
+        {
+          "id": "ad-ask-q2",
+          "type": "order",
+          "prompt": "Put the interview in a sensible order.",
+          "items": [
+            "Ask whether they are a fiduciary for you",
+            "Ask how they are paid, fee-only or commission",
+            "Turn the percent fee into dollars on your balance",
+            "Look them up before you transfer anything"
+          ],
+          "explain": "Duty, then pay, then the dollars, then the public record. The transfer is not on this list because it comes after."
+        },
+        {
+          "id": "ad-ask-q3",
+          "type": "true_false",
+          "prompt": "You only need to ask one of those questions.",
+          "answer": false,
+          "explain": "Duty without the fee, or a fee without the lookup, leaves a hole."
+        },
+        {
+          "id": "ad-ask-q4",
+          "type": "multiple_choice",
+          "prompt": "What should they be willing to say they cannot do?",
+          "choices": [
+            "Guarantee a yearly market return",
+            "Explain their fee",
+            "Tell you whether they are a fiduciary"
+          ],
+          "answer": 0,
+          "explain": "No honest person guarantees the market. The fee and the duty are things they should answer plainly."
+        },
+        {
+          "id": "ad-ask-q5",
+          "type": "fill_blank",
+          "prompt": "Turn a percent fee into ___ on your actual balance.",
+          "choices": [
+            "dollars",
+            "hope",
+            "tickets"
+          ],
+          "answer": 0,
+          "explain": "Dollars. One percent is not a feeling. It is $2,000 on $200,000."
+        }
+      ]
+    },
+    {
+      "id": "ad-omar",
+      "type": "lesson",
+      "format": "story",
+      "title": "Omar’s Two Interviews",
+      "summary": "He prices the help, and he walks from the promise.",
+      "xp": 10,
+      "story": {
+        "title": "Two interviews",
+        "character": "Omar, 34, bike shop owner",
+        "body": "Omar has **$200,000** in the cheap funds he started years ago. A fee-only fiduciary wants **1%**, which is **$2,000** a year.\n\nAnother person guarantees **12%**. Omar will not hire the guarantee."
+      },
+      "steps": [
+        {
+          "id": "ad-omar-q1",
+          "type": "info",
+          "title": "Meet Omar, later",
+          "body": "Omar is 34 and owns the bike shop. He has $200,000 invested in the cheap funds he started years ago. One advisor is a fiduciary, fee-only, at 1% : $2,000 a year, $60,000 over 30 years if the balance never grew.\n\nThe other says the account will “make 12% guaranteed.” Omar looks both up, asks the questions, and does not hire the guarantee. He has not decided the 1% is worth it. He has decided the promise is not."
+        },
+        {
+          "id": "ad-omar-q2",
+          "type": "number",
+          "prompt": "How many dollars a year is the 1% fee on Omar’s $200,000?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$200,000 × 0.01 = $2,000."
+        },
+        {
+          "id": "ad-omar-q3",
+          "type": "number",
+          "prompt": "How many dollars is that fee over 30 years if the balance stays still?",
+          "answer": 60000,
+          "unit": "$",
+          "explain": "30 × $2,000 = $60,000, if the balance never changed."
+        },
+        {
+          "id": "ad-omar-q4",
+          "type": "true_false",
+          "prompt": "Omar should hire the person who guaranteed 12%.",
+          "answer": false,
+          "explain": "That sentence is the red flag. A guarantee of a market return is a reason to leave."
+        },
+        {
+          "id": "ad-omar-q5",
+          "type": "multiple_choice",
+          "prompt": "What has Omar actually decided?",
+          "choices": [
+            "The guarantee is a no, and the 1% fee is a question he can take home",
+            "He must pay 1% because he owns a shop",
+            "He should move the $200,000 into one stock"
+          ],
+          "answer": 0,
+          "explain": "Refuse the fiction. Decide the fee on a calm day, after the lookup."
+        }
+      ]
+    },
+    {
+      "id": "ad-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "ad-trial",
+      "type": "boss",
+      "title": "Den Trial: Working with Advisors",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "ad-trial-q1",
+          "type": "number",
+          "prompt": "A 1% yearly fee on $80,000 is how many dollars this year?",
+          "answer": 800,
+          "unit": "$",
+          "explain": "$80,000 × 0.01 = $800."
+        },
+        {
+          "id": "ad-trial-q2",
+          "type": "true_false",
+          "prompt": "“Advisor” on a business card proves a fiduciary duty.",
+          "answer": false,
+          "explain": "Ask. The card is not the duty."
+        },
+        {
+          "id": "ad-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "Which sentence is a reason to walk away?",
+          "choices": [
+            "“I am a fiduciary and you pay me 0.8%.”",
+            "“I guarantee the market will return 12%.”",
+            "“Look me up on BrokerCheck.”"
+          ],
+          "answer": 1,
+          "explain": "A guaranteed market return is the fiction. A stated fee and a lookup are ordinary."
+        },
+        {
+          "id": "ad-trial-q4",
+          "type": "number",
+          "prompt": "0.25% of $80,000 is how many dollars?",
+          "answer": 200,
+          "unit": "$",
+          "explain": "$80,000 × 0.0025 = $200."
+        }
+      ]
+    }
+  ]
+}

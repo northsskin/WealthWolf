@@ -1,0 +1,511 @@
+{
+  "id": "retirement-planning",
+  "section": "building-wealth",
+  "order": 4,
+  "title": "Planning for Retirement",
+  "description": "A spending sketch, the account order, and the years you still have.",
+  "wolfLine": "The target is a multiple of spending. The match still comes first.",
+  "terms": {},
+  "lessons": [
+    {
+      "id": "rt-need",
+      "type": "lesson",
+      "format": "document",
+      "title": "How Much You Might Need",
+      "summary": "A sketch, then a pile.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rt-need-q1",
+          "type": "info",
+          "title": "Two rules of thumb, stacked",
+          "body": "One common sketch says a retirement might replace 70% to 80% of pay, because you stop saving and some costs fall. Another is the [[FI number|fi-number]]: about 25 times the spending you still have. On $80,000 of pay, 75% is $60,000 of spending. Twenty-five times that is $1,500,000. Both figures are rules of thumb, not a bill."
+        },
+        {
+          "id": "rt-need-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A retirement sketch",
+            "subtitle": "Rules of thumb, not a bill",
+            "lines": [
+              {
+                "id": "pay",
+                "label": "Pay today",
+                "amount": 80000.0
+              },
+              {
+                "id": "spend",
+                "label": "Spending target at 75%",
+                "amount": 60000.0
+              }
+            ],
+            "note": "The portfolio sketch is 25 times the spending target, which is $1,500,000."
+          },
+          "prompt": "What is the spending target on this page, in dollars?",
+          "answer": 60000,
+          "unit": "$",
+          "explain": "$80,000 × 0.75 = $60,000."
+        },
+        {
+          "id": "rt-need-q3",
+          "type": "number",
+          "prompt": "What is 25 times that $60,000 spending target?",
+          "answer": 1500000,
+          "unit": "$",
+          "explain": "25 × $60,000 = $1,500,000. That is the portfolio sketch, not a balance you are required to have on a date."
+        },
+        {
+          "id": "rt-need-q4",
+          "type": "true_false",
+          "prompt": "Replacing 75% of pay is a law.",
+          "answer": false,
+          "explain": "It is a rule of thumb. A paid-off house, a pension, or a more expensive city can move the percent."
+        },
+        {
+          "id": "rt-need-q5",
+          "type": "multiple_choice",
+          "prompt": "What does the $1,500,000 represent here?",
+          "choices": [
+            "A guaranteed account balance",
+            "About 25 times the $60,000 spending sketch",
+            "The federal funds rate"
+          ],
+          "answer": 1,
+          "explain": "Twenty-five times spending. Social Security, if you have it, can cover part of the spending so the portfolio does less."
+        }
+      ]
+    },
+    {
+      "id": "rt-band",
+      "type": "lesson",
+      "title": "70% to 80%",
+      "summary": "The band is the spending, not a score.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rt-band-q1",
+          "type": "info",
+          "title": "Why not 100%",
+          "body": "You may not need the whole paycheck. You stop the [[savings rate|savings-rate]], and you may drop commuting and payroll taxes. You still eat. The 70% to 80% band is the usual sketch. Run your own spending. Do not borrow a stranger’s percent."
+        },
+        {
+          "id": "rt-band-q2",
+          "type": "number",
+          "prompt": "At the low end, 70% of $80,000 is how many dollars?",
+          "answer": 56000,
+          "unit": "$",
+          "explain": "$80,000 × 0.70 = $56,000."
+        },
+        {
+          "id": "rt-band-q3",
+          "type": "number",
+          "prompt": "At the high end, 80% of $80,000 is how many dollars?",
+          "answer": 64000,
+          "unit": "$",
+          "explain": "$80,000 × 0.80 = $64,000."
+        },
+        {
+          "id": "rt-band-q4",
+          "type": "number",
+          "prompt": "How wide is that band, in dollars?",
+          "answer": 8000,
+          "unit": "$",
+          "explain": "$64,000 − $56,000 = $8,000. The band is a range, which is why a calculator asks for your spending, not a slogan."
+        },
+        {
+          "id": "rt-band-q5",
+          "type": "true_false",
+          "prompt": "You should always target 100% of your paycheck, because the band is too narrow to matter.",
+          "answer": false,
+          "explain": "The band is $8,000 wide on this pay, and the real input is your spending. One hundred percent ignores the costs that stop."
+        }
+      ]
+    },
+    {
+      "id": "rt-early",
+      "type": "lesson",
+      "title": "Starting at 25 or at 35",
+      "summary": "The extra decade is deposits, before any growth.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rt-early-q1",
+          "type": "info",
+          "title": "Ten quiet years",
+          "body": "Two people invest $200 a month. One starts at 25, the other at 35. By 35 the first person has already deposited 10 years of contributions. Growth, if it comes, is extra. This lesson grades the deposits, not a promised balance."
+        },
+        {
+          "id": "rt-early-q2",
+          "type": "number",
+          "prompt": "How many dollars is $200 a month for one year?",
+          "answer": 2400,
+          "unit": "$",
+          "explain": "12 × $200 = $2,400."
+        },
+        {
+          "id": "rt-early-q3",
+          "type": "number",
+          "prompt": "How many dollars does the 25-year-old deposit in the 10 years before the other person starts?",
+          "answer": 24000,
+          "unit": "$",
+          "explain": "10 × $2,400 = $24,000. That money also has 10 extra years to compound. The $24,000 is only the deposits."
+        },
+        {
+          "id": "rt-early-q4",
+          "type": "true_false",
+          "prompt": "Starting at 35 deposits the same dollars by age 35 as starting at 25.",
+          "answer": false,
+          "explain": "The later start has deposited $0 of this plan by 35. The earlier start has deposited $24,000."
+        },
+        {
+          "id": "rt-early-q5",
+          "type": "multiple_choice",
+          "prompt": "What is the part this lesson will not pretend to know?",
+          "choices": [
+            "The deposits",
+            "The future return",
+            "That 12 months make a year"
+          ],
+          "answer": 1,
+          "explain": "The return is a guess. The deposits are arithmetic."
+        }
+      ]
+    },
+    {
+      "id": "rt-calc",
+      "type": "lesson",
+      "title": "Retirement Calculators",
+      "summary": "A machine that multiplies your guesses.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rt-calc-q1",
+          "type": "info",
+          "title": "Inputs, then a picture",
+          "body": "A retirement calculator needs spending, how many years the money has, and a return you type in. Change the return and the picture changes. The picture is not a promise. Use it to see which input matters. Do not use it as a date the market owes you."
+        },
+        {
+          "id": "rt-calc-q2",
+          "type": "multiple_choice",
+          "prompt": "Which input is a guess, not a fact?",
+          "choices": [
+            "The return you type in",
+            "The number of months in a year",
+            "A savings deposit you already made"
+          ],
+          "answer": 0,
+          "explain": "The return is the guess. The calculator will honor whatever you type, including a fantasy."
+        },
+        {
+          "id": "rt-calc-q3",
+          "type": "true_false",
+          "prompt": "Two calculators must agree if you give them different return guesses.",
+          "answer": false,
+          "explain": "The guess is the engine. Different guesses, different pictures."
+        },
+        {
+          "id": "rt-calc-q4",
+          "type": "multiple_choice",
+          "prompt": "What is the honest use of the tool?",
+          "choices": [
+            "To see how spending and time move the sketch",
+            "To lock in a balance the market must deliver",
+            "To replace an emergency fund"
+          ],
+          "answer": 0,
+          "explain": "A sketch of your inputs. The emergency fund is still cash, outside the picture."
+        },
+        {
+          "id": "rt-calc-q5",
+          "type": "fill_blank",
+          "prompt": "The return you type into a calculator is a ___.",
+          "choices": [
+            "guess",
+            "coupon",
+            "will"
+          ],
+          "answer": 0,
+          "explain": "A guess. Treat the output with the same humility."
+        }
+      ]
+    },
+    {
+      "id": "rt-order",
+      "type": "lesson",
+      "title": "Which Account, in What Order",
+      "summary": "A common line. Not the only life.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rt-order-q1",
+          "type": "info",
+          "title": "The usual queue",
+          "body": "A common order: take the full [[employer match|employer-match]] first, because it is pay. Then a [[health savings account|health-savings-account]] if you have a qualifying health plan. Then an [[IRA|traditional-ira]] or [[Roth IRA|roth-ira]] if you are allowed one. Then fill more of the [[401(k)|401k]]. A taxable brokerage is the pile after the tax-favored ones. High-interest debt can jump the line. This is a common order, not a personal instruction."
+        },
+        {
+          "id": "rt-order-q2",
+          "type": "order",
+          "prompt": "Put this common queue in order. Leave the taxable brokerage last.",
+          "items": [
+            "Take the full employer match",
+            "Use an HSA if you qualify",
+            "Contribute to an IRA if you are allowed",
+            "Fill more of the 401(k)",
+            "Use a taxable brokerage for what is left"
+          ],
+          "explain": "The match is first because it is extra pay. The brokerage is last because the others are tax-favored."
+        },
+        {
+          "id": "rt-order-q3",
+          "type": "true_false",
+          "prompt": "Skipping the match to buy a single stock in a brokerage is the common order.",
+          "answer": false,
+          "explain": "The match comes first. A single stock is not the queue."
+        },
+        {
+          "id": "rt-order-q4",
+          "type": "multiple_choice",
+          "prompt": "Why is the match usually first?",
+          "choices": [
+            "Because it is extra pay on top of what you put in",
+            "Because a 401(k) cannot hold a fund",
+            "Because IRAs are illegal if you match"
+          ],
+          "answer": 0,
+          "explain": "The match is part of the job. Leaving it is leaving pay."
+        },
+        {
+          "id": "rt-order-q5",
+          "type": "multiple_choice",
+          "prompt": "When might high-interest debt jump ahead of extra investing?",
+          "choices": [
+            "When the debt’s interest is the more expensive leak",
+            "Never, because investing is always first",
+            "Only if a headline says so"
+          ],
+          "answer": 0,
+          "explain": "A very expensive debt can outrank extra investing. The match is still hard to beat, because it is an instant return."
+        }
+      ]
+    },
+    {
+      "id": "rt-catch",
+      "type": "lesson",
+      "title": "Catching Up Later",
+      "summary": "The age add-on is real. It is not magic.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rt-catch-q1",
+          "type": "info",
+          "title": "The 2026 add-on",
+          "body": "In 2026 the employee [[401(k)|401k]] limit is $24,500, plus an $8,000 catch-up at age 50, for $32,500. The IRA limit is $7,500, plus $1,100 at 50, for $8,600. The catch-up is an age rule. It does not replace the years you did not contribute. A 45-year-old does not get it yet."
+        },
+        {
+          "id": "rt-catch-q2",
+          "type": "number",
+          "prompt": "At age 50 in 2026, what is the total employee 401(k) deferral including the $8,000 catch-up?",
+          "answer": 32500,
+          "unit": "$",
+          "explain": "$24,500 + $8,000 = $32,500."
+        },
+        {
+          "id": "rt-catch-q3",
+          "type": "number",
+          "prompt": "At age 50 in 2026, what is the total IRA limit including the catch-up?",
+          "answer": 8600,
+          "unit": "$",
+          "explain": "$7,500 + $1,100 = $8,600."
+        },
+        {
+          "id": "rt-catch-q4",
+          "type": "true_false",
+          "prompt": "A 45-year-old can use the age-50 catch-up in 2026.",
+          "answer": false,
+          "explain": "The catch-up starts at 50. Forty-five gets the base limits only."
+        },
+        {
+          "id": "rt-catch-q5",
+          "type": "multiple_choice",
+          "prompt": "What can the catch-up not do?",
+          "choices": [
+            "Raise the limit at the ages the IRS names",
+            "Replace a decade of missing deposits",
+            "Sit on top of the base limit"
+          ],
+          "answer": 1,
+          "explain": "It adds room later. It does not rewind the years."
+        }
+      ]
+    },
+    {
+      "id": "rt-list",
+      "type": "lesson",
+      "title": "A Retirement Checklist",
+      "summary": "Write it while the date is still far.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "rt-list-q1",
+          "type": "info",
+          "title": "One page, in order",
+          "body": "A plan you can reread: the spending guess, the accounts in the common order, the mix that matches the date, and a day each year to look. The look is not a daily vote on red numbers."
+        },
+        {
+          "id": "rt-list-q2",
+          "type": "order",
+          "prompt": "Put the checklist in the order you would write it.",
+          "items": [
+            "Write the yearly spending you are actually aiming at",
+            "Take the employer match, then the rest of the account order",
+            "Pick a mix that matches when you need the money",
+            "Choose a calm date each year to look again"
+          ],
+          "explain": "Spending first, because it sets the target. The mix follows the date. The yearly look keeps you out of the daily app."
+        },
+        {
+          "id": "rt-list-q3",
+          "type": "true_false",
+          "prompt": "The checklist is finished when you pick a stock from a headline.",
+          "answer": false,
+          "explain": "A headline stock is not on the list. The list is spending, the match, the mix, and a date to look."
+        },
+        {
+          "id": "rt-list-q4",
+          "type": "multiple_choice",
+          "prompt": "Why does spending come before the funds?",
+          "choices": [
+            "Because the target is a multiple of spending",
+            "Because funds do not charge fees",
+            "Because Social Security sets your rent"
+          ],
+          "answer": 0,
+          "explain": "Twenty-five times spending, or 70% to 80% of pay, both start with a spending number."
+        },
+        {
+          "id": "rt-list-q5",
+          "type": "fill_blank",
+          "prompt": "Look at the plan on a calm date, not on a ___ day.",
+          "choices": [
+            "red",
+            "match",
+            "credit"
+          ],
+          "answer": 0,
+          "explain": "A red day is noise if the date you need the money has not changed."
+        }
+      ]
+    },
+    {
+      "id": "rt-marcus",
+      "type": "lesson",
+      "format": "story",
+      "title": "Marcus at 45",
+      "summary": "Twenty years, and the catch-up is not here yet.",
+      "xp": 10,
+      "story": {
+        "title": "Twenty years from 45",
+        "character": "Marcus, 45, electrician",
+        "body": "Marcus can invest **$500** a month. He is **45**, so the age-50 catch-up is not his yet. He takes the match first.\n\nTwenty years of deposits, before growth, are **$120,000**."
+      },
+      "steps": [
+        {
+          "id": "rt-marcus-q1",
+          "type": "info",
+          "title": "Meet Marcus",
+          "body": "Marcus is 45 and an electrician. He can invest $500 a month. He is five years short of the age-50 catch-up, so 2026’s extra room is not his yet. He takes his job’s match first.\n\nTwenty years of $500 a month, before any growth, is $120,000 of deposits. He is later than a 25-year-old. He is not at zero."
+        },
+        {
+          "id": "rt-marcus-q2",
+          "type": "number",
+          "prompt": "How many dollars a year is Marcus’s $500 a month?",
+          "answer": 6000,
+          "unit": "$",
+          "explain": "12 × $500 = $6,000."
+        },
+        {
+          "id": "rt-marcus-q3",
+          "type": "number",
+          "prompt": "Over 20 years, how many dollars does he deposit before growth?",
+          "answer": 120000,
+          "unit": "$",
+          "explain": "20 × $6,000 = $120,000."
+        },
+        {
+          "id": "rt-marcus-q4",
+          "type": "true_false",
+          "prompt": "Marcus can add the 2026 age-50 catch-up this year.",
+          "answer": false,
+          "explain": "He is 45. The catch-up is an age rule, and 50 has not arrived."
+        },
+        {
+          "id": "rt-marcus-q5",
+          "type": "multiple_choice",
+          "prompt": "What does he do before he buys anything fancy in a brokerage?",
+          "choices": [
+            "Takes the employer match",
+            "Skips the match to pick one stock",
+            "Empties the emergency fund"
+          ],
+          "answer": 0,
+          "explain": "The match is first. The $500 is the investing pile, not the cash pile."
+        }
+      ]
+    },
+    {
+      "id": "rt-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "rt-trial",
+      "type": "boss",
+      "title": "Den Trial: Planning for Retirement",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "rt-trial-q1",
+          "type": "number",
+          "prompt": "80% of $50,000 pay is how many dollars of yearly spending?",
+          "answer": 40000,
+          "unit": "$",
+          "explain": "$50,000 × 0.80 = $40,000."
+        },
+        {
+          "id": "rt-trial-q2",
+          "type": "number",
+          "prompt": "$300 a month for 10 years is how many dollars of deposits, before growth?",
+          "answer": 36000,
+          "unit": "$",
+          "explain": "12 × $300 = $3,600, and 10 × $3,600 = $36,000."
+        },
+        {
+          "id": "rt-trial-q3",
+          "type": "true_false",
+          "prompt": "The age-50 catch-up is available at 45.",
+          "answer": false,
+          "explain": "The 2026 catch-up starts at 50. Forty-five uses the base limit."
+        },
+        {
+          "id": "rt-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "In the common account order, what usually comes first?",
+          "choices": [
+            "A taxable brokerage full of one stock",
+            "The full employer match",
+            "A coin"
+          ],
+          "answer": 1,
+          "explain": "The match is extra pay. The brokerage is the pile after the tax-favored accounts."
+        }
+      ]
+    }
+  ]
+}

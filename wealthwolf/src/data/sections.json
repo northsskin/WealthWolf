@@ -89,5 +89,18 @@
       "xp": 50,
       "draw": 12
     }
+  },
+  {
+    "id": "building-wealth",
+    "order": 8,
+    "title": "Building Wealth",
+    "description": "The long game: the economy, financial independence, retirement and leaving something behind.",
+    "trial": {
+      "id": "bw-section-trial",
+      "title": "Section Trial: Building Wealth",
+      "summary": "Twelve questions from the whole section. Three strikes and you’re out.",
+      "xp": 50,
+      "draw": 12
+    }
   }
 ]

@@ -62,7 +62,7 @@ const RANK_SKILLS = {
   scout: 'Build a budget that survives an actual month.',
   hunter: 'Keep a cushion for surprises and pay yourself first.',
   wolf: 'Run a whole month on a plan: bills, savings and goals.',
-  alpha: 'Put money into index funds without guessing.',
+  alpha: 'Hold the long plan: a safety net, investments, retirement, and a will.',
 }
 
 // True once the first row the Wolf marks is fully on screen. The markup plays
