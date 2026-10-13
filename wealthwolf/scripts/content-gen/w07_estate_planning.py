@@ -1,0 +1,182 @@
+from lib import *
+
+S = 'building-wealth'
+terms = {
+    'will': term('Will',
+                 'A legal document that says who should receive what you own and who should care for minor children. Beneficiary forms on accounts can override it for those accounts.',
+                 'A will that names a guardian for a baby, and a retirement form that names the other parent.'),
+    'power-of-attorney': term('Power of attorney',
+                              'A document that lets someone handle your money and legal chores if you cannot. It is not a medical document.',
+                              'The person who can pay the mortgage if you are unconscious.'),
+    'health-care-directive': term('Health care directive',
+                                  'A document that says what medical care you want if you cannot say so, and who should speak for you. It does not give that person your bank account.',
+                                  'Whether you want a ventilator is a medical question, not a mortgage question.'),
+    'probate': term('Probate',
+                    'The court process that settles an estate: pays debts and hands out what the will covers. It takes time, and it can be public.',
+                    'An account with a named beneficiary often skips this line and pays that person directly.'),
+    'estate-tax': term('Estate tax',
+                       'A federal tax on very large estates. For deaths in 2026 the basic exclusion is $15,000,000. Most households never meet it. A will is still useful far below that number.',
+                       'A $600,000 estate is under the 2026 exclusion.'),
+}
+
+why = lesson('ep-why', 'Why a Will', 'Kids and leftovers, not only fortunes.', [
+    info('The document',
+         'A [[will]] says who gets the property that does not already have a [[beneficiary]], and who cares for minor children. You do not need to be wealthy. Dying without one means the state uses a default, and that default may not be the person you would have picked. This is education, not a will you can copy from a lesson.'),
+    mc('What does a will do that a budget does not?',
+       ['Names who should inherit, and who should care for minor children', 'Raises your savings rate', 'Sets the federal funds rate'], 0,
+       'People and property. The budget is a different page.'),
+    tf('Only millionaires need a will.', False,
+       'A guardian for a child matters at any net worth. So does “not the state’s default.”'),
+    mc('Who fills in the answers if you die without a will?',
+       ['The state’s default rules', 'Your group chat', 'The Federal Reserve'], 0,
+       'The default. It is a real system, and it may not match your family.'),
+    fill('The legal document that names heirs and a guardian is a ___.',
+         ['will', 'ticker', 'coupon'], 0,
+         'A will. The beneficiary form is a different piece of paper.'),
+])
+
+form = doc('statement', 'Retirement account form',
+           [('acct', 'Account balance', 80000)],
+           meta=[('Beneficiary on the form', 'Alex'), ('The will says', 'Sam')],
+           subtitle='The form wins for this account',
+           note='For this account, the named beneficiary is paid. The will does not override that name.')
+
+beats = lesson('ep-form', 'The Form Beats the Will', 'For that account, the name on the form is the heir.', [
+    info('Two pieces of paper',
+         'Retirement accounts and life insurance pay the [[beneficiary]] named on the form. If the form says Alex and the [[will]] says Sam, Alex gets this account. The will still matters for the house, the stuff, and a guardian. It does not silently correct an old form.'),
+    tf('On this account, the will overrides the beneficiary form.', False,
+       'The form pays Alex. The will’s Sam does not replace that name. Update the form itself.'),
+    num('How many dollars are on the account the form controls?', 80000,
+        doc=form,
+        explain='The balance is $80,000, and it follows the beneficiary, not the conflicting sentence in the will.'),
+    mc('You remarry and forget the old form. What happens to this account?',
+       ['It pays whoever the form still names', 'It automatically switches to the new spouse', 'It goes to the Fed'], 0,
+       'The form stays until you change it. A wedding does not edit it.'),
+    mc('What should you do after a marriage, a divorce, or a birth?',
+       ['Read every beneficiary form and update the stale ones', 'Assume the will covers the accounts', 'Close the accounts so the question disappears'], 0,
+       'Read the forms. The will cannot reach through them.'),
+], fmt='document')
+
+papers = lesson('ep-papers', 'Money, and Medicine', 'Two documents. Do not swap them.', [
+    info('Different jobs',
+         'A [[power of attorney]] lets someone handle money if you cannot. A [[health care directive]] says what care you want and who speaks to the doctors. One person can be both, but the papers are not substitutes. A medical document does not pay the mortgage. A financial document does not choose a ventilator.'),
+    sort('Which document is this job?',
+         ['Power of attorney', 'Health care directive'],
+         [('Paying the mortgage if you are unconscious', 0),
+          ('Saying whether you want a ventilator', 1),
+          ('Talking to the bank about your bills', 0),
+          ('Talking to the doctors about your care', 1)],
+         'Money and bills are the power of attorney. Care choices are the health care directive.'),
+    tf('A health care directive lets that person empty your brokerage.', False,
+       'Medical wishes only. The money document is the power of attorney.'),
+    mc('Why have both, even if one trusted person would do either job?',
+       ['Because banks and hospitals look for different papers', 'Because one document is illegal', 'Because the Fed requires a pair'], 0,
+       'Each institution wants the paper that matches its job.'),
+    fill('The document for medical wishes is a health care ___.',
+         ['directive', 'ticker', 'yield'], 0,
+         'Directive. The power of attorney is the money one.'),
+], fmt='sort')
+
+trusts = lesson('ep-trust', 'Trusts, Lightly', 'A container. Not a personality.', [
+    info('The container',
+         'A trust is a legal container that can hold assets. Property in the trust can skip [[probate]]. A trust does not replace a [[will]] for the things left outside it, and it does not name a guardian unless the papers say so. People use trusts for control and for privacy. This lesson will not build one or promise a tax result.'),
+    mc('What is a trust, at this level?',
+       ['A legal container for assets', 'A kind of stock', 'A required replacement for a will'], 0,
+       'A container. The will still has work, especially for anything the trust does not hold.'),
+    tf('Putting nothing into the trust still keeps those assets out of probate.', False,
+       'Only what the trust actually holds can skip probate that way. An empty trust holds nothing.'),
+    mc('What is a fair reason people look at a trust?',
+       ['To control how assets pass, and sometimes to skip probate', 'To raise the 4% rule to 10%', 'To avoid naming a beneficiary'], 0,
+       'Control and probate. It is not a higher withdrawal rate, and the beneficiary forms still matter.'),
+    fill('A legal container that can hold assets is a ___.',
+         ['trust', 'recession', 'ticker'], 0,
+         'A trust. It holds only what you actually put in it.'),
+])
+
+court = lesson('ep-probate', 'Probate', 'The court, the debts, the leftovers.', [
+    info('The process',
+         '[[Probate]] is the court process that pays the estate’s debts and hands out what the [[will]] covers. It takes months, it costs money, and it can be public. Accounts with a beneficiary, and assets actually held in a trust, often skip that line. The house in your own name often does not.'),
+    mc('What is probate?',
+       ['The court process that settles the estate', 'A tax bracket', 'A kind of index fund'], 0,
+       'Court, debts, and distribution. Not a fund and not a bracket.'),
+    tf('Every asset you own must go through probate, including life insurance with a living beneficiary.', False,
+       'A living beneficiary on the policy is paid directly. Probate is for what does not already have a path.'),
+    mc('Which asset is the classic probate candidate?',
+       ['A house titled only in your name, with no transfer set up', 'A retirement account with a living beneficiary', 'Life insurance payable to a named person'], 0,
+       'The house in your name alone. The named-beneficiary accounts have their own path.'),
+    num('A probate example costs $3,000 in court and legal fees on a $60,000 estate that had to go through it. What percent of that estate is the $3,000?', 5, unit='%',
+        explain='$3,000 ÷ $60,000 = 0.05, which is 5%. Small estates feel the fee. This is an example cost, not a quote.'),
+])
+
+where = lesson('ep-where', 'Where Everything Is', 'A list the living person can actually find.', [
+    info('The unglamorous page',
+         'The best papers fail if nobody can find them. Write where the accounts are, who the [[beneficiary]] is, where the [[will]] is, and tell the person who would have to use the list. A password in your head is not a plan.'),
+    order('Put the “where everything is” list in order.',
+          ['List each account and the institution that holds it',
+           'Write the beneficiary named on each account',
+           'Note where the will and the directives are kept',
+           'Tell the person who would have to open the list'],
+          'The accounts, then the names on them, then the location of the papers, then a living person who knows.'),
+    tf('A list that only you can find is enough.', False,
+       'Someone else has to use it. If it is a secret, it is not a plan.'),
+    mc('What belongs next to each account on the list?',
+       ['The beneficiary currently named', 'Your hope about who should inherit', 'The federal funds rate'], 0,
+       'The name on the form, not the name you meant to write later.'),
+    fill('The list fails if the person who needs it cannot ___ it.',
+         ['find', 'spend', 'short'], 0,
+         'Find it. Tell them, and keep the page somewhere they can open.'),
+])
+
+tax = lesson('ep-tax', 'The Estate Tax', 'A 2026 exclusion most families never touch.', [
+    info('The large-number tax',
+         'The federal [[estate tax]] applies to very large estates. For deaths in 2026 the basic exclusion is $15,000,000. A $600,000 estate is under it, so this lesson’s ordinary household does not owe federal estate tax. A state can have its own tax. This course will not grade a state amount. The will, the guardian, and the beneficiary forms matter long before $15,000,000.'),
+    num('What is the 2026 federal basic exclusion, in dollars?', 15000000,
+        'The 2026 basic exclusion is $15,000,000. It is a federal figure for that year.'),
+    tf('A $600,000 estate owes federal estate tax in 2026 under this exclusion.', False,
+       '$600,000 is far under $15,000,000. The federal estate tax is not why this household needs a will.'),
+    mc('Why does a family under the exclusion still need a will?',
+       ['Guardians, and property the beneficiary forms do not cover', 'To create a federal estate-tax bill', 'Because the exclusion is optional'], 0,
+       'Children and the leftovers. The tax is a different problem, for a different size of estate.'),
+    mc('What will this course not do?',
+       ['State the 2026 federal exclusion', 'Grade a state’s estate or inheritance tax', 'Tell you a beneficiary form can beat a will'], 1,
+       'State rules differ. The federal exclusion is the number this lesson will stand behind.'),
+])
+
+lees = lesson('ep-lees', 'The Lees, After the Baby', 'A new person, so the papers change.', [
+    info('Meet the Lees',
+         'The Lees just had a baby. Their net worth is about $400,000, mostly home equity and savings. That is under the 2026 federal estate-tax exclusion of $15,000,000, so the tax is not their project.\n\nThe project is the baby. The [[will]] needs a guardian. The retirement [[beneficiary]] forms need a look. The life insurance form needs the same look. They tell one trusted person where the papers are.',
+         ),
+    tf('The Lees can skip a will because $400,000 is under the 2026 exclusion.', False,
+       'The exclusion answers the federal estate tax. It does not name a guardian for the baby.'),
+    num('How far under $15,000,000 is a $400,000 estate, in dollars?', 14600000,
+        '$15,000,000 − $400,000 = $14,600,000 under the exclusion. The gap is the point: the tax is not their problem.'),
+    mc('What is the first paper the baby changes?',
+       ['The will, so a guardian is named', 'A target-date fund’s ticker', 'The federal funds rate'], 0,
+       'A guardian. The funds can wait. The baby cannot.'),
+    order('Put the Lees’ afternoon in order.',
+          ['Name a guardian in the will',
+           'Read the beneficiary forms on retirement and life insurance',
+           'Update any form that is stale',
+           'Tell one trusted person where the papers are'],
+          'The guardian, then the forms, then a living person who can find the stack.'),
+], fmt='story', story={
+    'title': 'After the baby',
+    'character': 'The Lees, new parents',
+    'body': 'The Lees’ net worth is about **$400,000**. The 2026 federal estate-tax exclusion is **$15,000,000**, so the tax is not their project.\n\nThe baby is. The will needs a guardian, and the beneficiary forms need a look.',
+})
+
+write_unit('07-estate-planning.json', 'estate-planning', 7, 'Estate Planning',
+           'A will, the forms that beat it, and a tax most families will never owe.',
+           'Name a guardian. Then read the beneficiary form.',
+           terms, [why, beats, papers, trusts, court, where, tax, lees, review('ep'), trial('ep', 'Estate Planning', [
+               tf('A life insurance beneficiary form loses to a conflicting sentence in the will.', False,
+                  'The form pays the named beneficiary. Change the form if the name is wrong.'),
+               num('What is the 2026 federal estate-tax basic exclusion, in dollars?', 15000000,
+                   'The 2026 basic exclusion is $15,000,000.'),
+               mc('Paying bills if you are unconscious belongs on which document?',
+                  ['Health care directive', 'Power of attorney', 'A stock quote'], 1,
+                  'Money is the power of attorney. Medical wishes are the health care directive.'),
+               tf('An empty trust keeps your house out of probate.', False,
+                  'The trust only helps assets it actually holds. A house still in your name is a probate candidate.'),
+           ])],
+           section=S)

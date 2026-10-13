@@ -1,0 +1,571 @@
+{
+  "id": "money-plan",
+  "section": "building-wealth",
+  "order": 10,
+  "title": "Your Money Plan",
+  "description": "The whole course on one page, and a date to read it.",
+  "wolfLine": "You have the pieces. The page is how you keep them.",
+  "terms": {},
+  "lessons": [
+    {
+      "id": "mp-map",
+      "type": "lesson",
+      "title": "The Whole Path",
+      "summary": "One page that already has names.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mp-map-q1",
+          "type": "info",
+          "title": "You have the pieces",
+          "body": "Income comes in. A budget gives it jobs. An [[emergency fund]] sits in cash. High-interest debt gets a plan. Insurance covers the catastrophe. A [[three-fund portfolio|three-fund-portfolio]] takes the long money, usually starting with the [[employer match|employer-match]]. A [[will]] and the [[beneficiary]] forms cover the ending. This unit does not add a new trick. It puts the pieces in one place."
+        },
+        {
+          "id": "mp-map-q2",
+          "type": "multiple_choice",
+          "prompt": "Which pile is cash on purpose?",
+          "choices": [
+            "The emergency fund",
+            "The stock index fund for age 65",
+            "A coin you cannot afford to lose"
+          ],
+          "answer": 0,
+          "explain": "Cash. The long fund is allowed to fall. The coin is not the plan."
+        },
+        {
+          "id": "mp-map-q3",
+          "type": "true_false",
+          "prompt": "The match is optional if you prefer to pick a single stock.",
+          "answer": false,
+          "explain": "The match is pay. A single stock is a bet you already learned to keep small."
+        },
+        {
+          "id": "mp-map-q4",
+          "type": "multiple_choice",
+          "prompt": "What does the will not replace?",
+          "choices": [
+            "A beneficiary form that still names the wrong person",
+            "A guardian for a child",
+            "A list of what you own"
+          ],
+          "answer": 0,
+          "explain": "The form wins for that account. The will does not edit it."
+        },
+        {
+          "id": "mp-map-q5",
+          "type": "fill_blank",
+          "prompt": "The long investment in this course is a cheap, broad ___ portfolio.",
+          "choices": [
+            "three-fund",
+            "meme",
+            "gift-card"
+          ],
+          "answer": 0,
+          "explain": "Three-fund. Home stocks, the rest of the world, and bonds."
+        }
+      ]
+    },
+    {
+      "id": "mp-month",
+      "type": "lesson",
+      "title": "Assign the Month",
+      "summary": "Needs, goals, then wants.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mp-month-q1",
+          "type": "info",
+          "title": "Four thousand dollars",
+          "body": "This drill is a $4,000 month. Needs are at least $2,200. Goals, the emergency fund top-up and the investing transfer together, are at least $800. Wants get whatever is left, and at least $200. Assign every dollar."
+        },
+        {
+          "id": "mp-month-q2",
+          "type": "allocate",
+          "prompt": "Assign all $4,000. Meet each floor.",
+          "total": 4000,
+          "step": 100,
+          "categories": [
+            {
+              "label": "Needs",
+              "min": 2200
+            },
+            {
+              "label": "Goals",
+              "min": 800
+            },
+            {
+              "label": "Wants",
+              "min": 200
+            }
+          ],
+          "explain": "The floors are $2,200, $800, and $200, which add to $3,200. The other $800 can sit in wants, so a simple fill ends at $1,000 of wants."
+        },
+        {
+          "id": "mp-month-q3",
+          "type": "number",
+          "prompt": "Needs, goals, and wants: how many dollars are those three floors before the extra?",
+          "answer": 3200,
+          "unit": "$",
+          "explain": "$2,200 + $800 + $200 = $3,200."
+        },
+        {
+          "id": "mp-month-q4",
+          "type": "true_false",
+          "prompt": "Wants are allowed to take the rent money if the month looks dull.",
+          "answer": false,
+          "explain": "Needs have a floor. Wants get what is left after the floors, not before them."
+        },
+        {
+          "id": "mp-month-q5",
+          "type": "multiple_choice",
+          "prompt": "What is inside the goals floor in this drill?",
+          "choices": [
+            "The cash top-up and the investing transfer",
+            "A guaranteed 12% product",
+            "A gift-card text"
+          ],
+          "answer": 0,
+          "explain": "Safety and the long transfer. Not a promise, and not a stranger’s text."
+        }
+      ]
+    },
+    {
+      "id": "mp-year",
+      "type": "lesson",
+      "title": "The Yearly Look",
+      "summary": "A date you picked, not a red afternoon.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mp-year-q1",
+          "type": "info",
+          "title": "Once, on purpose",
+          "body": "Pick a date. Read the balances, confirm the [[emergency fund]], rebalance if the mix drifted, and update [[beneficiary]] forms if the family changed. Then close the app. A [[recession]] headline is not an extra meeting."
+        },
+        {
+          "id": "mp-year-q2",
+          "type": "order",
+          "prompt": "Put the yearly look in order.",
+          "items": [
+            "Read the balances",
+            "Confirm the emergency fund is still funded",
+            "Rebalance only if the mix drifted from its target",
+            "Update beneficiary forms if the family changed"
+          ],
+          "explain": "See the money, protect the cash pile, fix the mix if it drifted, then the names on the forms."
+        },
+        {
+          "id": "mp-year-q3",
+          "type": "true_false",
+          "prompt": "The yearly look means selling because the screen is red.",
+          "answer": false,
+          "explain": "Red is not a new date. Rebalance if the mix drifted. Do not invent a new plan from one afternoon."
+        },
+        {
+          "id": "mp-year-q4",
+          "type": "multiple_choice",
+          "prompt": "When do the beneficiary forms get a look even if the mix is fine?",
+          "choices": [
+            "After a birth, a death, a marriage, or a divorce",
+            "After a good week in the market",
+            "Never, because the will covers them"
+          ],
+          "answer": 0,
+          "explain": "Family changes. The will does not rewrite the forms."
+        },
+        {
+          "id": "mp-year-q5",
+          "type": "fill_blank",
+          "prompt": "Do this on a date you ___, then close it.",
+          "choices": [
+            "chose",
+            "fear",
+            "guess"
+          ],
+          "answer": 0,
+          "explain": "Chose. The date is the discipline."
+        }
+      ]
+    },
+    {
+      "id": "mp-life",
+      "type": "lesson",
+      "format": "call",
+      "title": "When Life Changes",
+      "summary": "A person changes the papers. A red month does not.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mp-life-q1",
+          "type": "info",
+          "title": "Two kinds of news",
+          "body": "A child, a marriage, a divorce, a death, or a job loss can change the plan. A red month in a fund you need at 65 does not. Job loss spends the [[emergency fund]]. It does not, by itself, rewrite a 30-year mix."
+        },
+        {
+          "id": "mp-life-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "A new child",
+              "subtitle": "The will is out of date",
+              "lines": [
+                {
+                  "id": "note",
+                  "label": "Guardian not yet named",
+                  "amount": 0.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "A red month",
+              "subtitle": "The goal is still decades away",
+              "lines": [
+                {
+                  "id": "drop",
+                  "label": "Long fund, down this month",
+                  "amount": -1500.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Which page means you update the will?",
+          "choices": [
+            "A new child",
+            "A red month"
+          ],
+          "answer": 0,
+          "explain": "A child needs a guardian. A $1,500 drop in a long fund is the reason you wrote the “do not sell on a red month” rule."
+        },
+        {
+          "id": "mp-life-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A red month",
+            "subtitle": "The goal is still decades away",
+            "lines": [
+              {
+                "id": "drop",
+                "label": "Long fund, down this month",
+                "amount": -1500.0
+              }
+            ]
+          },
+          "prompt": "How many dollars did the long fund fall on the red-month page? Enter the drop as a positive number.",
+          "answer": 1500,
+          "unit": "$",
+          "explain": "The line is −$1,500, a drop of $1,500. The date you need the money did not move."
+        },
+        {
+          "id": "mp-life-q4",
+          "type": "true_false",
+          "prompt": "A 15-style red month is a reason to throw out the three-fund mix.",
+          "answer": false,
+          "explain": "The mix changes when the date changes. A down month is what the mix was built to survive."
+        },
+        {
+          "id": "mp-life-q5",
+          "type": "multiple_choice",
+          "prompt": "You lose the job. What do you spend first?",
+          "choices": [
+            "The emergency fund",
+            "The retirement fund dated for age 65",
+            "A new margin loan"
+          ],
+          "answer": 0,
+          "explain": "Cash. The retirement date is still out there. Margin is still a skip."
+        }
+      ]
+    },
+    {
+      "id": "mp-page",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Page Itself",
+      "summary": "Three lines you can actually read.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mp-page-q1",
+          "type": "info",
+          "title": "Small enough to reread",
+          "body": "This page is a finished sketch: $1,000 in the emergency fund, $100 a month invested, and $36,000 a year of spending. Twenty-five times that spending is a $900,000 [[FI number|fi-number]]. You may not have the $900,000. The page is how you remember what the $100 is for."
+        },
+        {
+          "id": "mp-page-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "One page",
+            "subtitle": "The whole course, in three lines",
+            "lines": [
+              {
+                "id": "cash",
+                "label": "Emergency fund",
+                "amount": 1000.0
+              },
+              {
+                "id": "month",
+                "label": "Invested each month",
+                "amount": 100.0
+              },
+              {
+                "id": "spend",
+                "label": "Yearly spending sketch",
+                "amount": 36000.0
+              }
+            ],
+            "note": "The FI sketch on the spending line is 25 times $36,000, which is $900,000. It is a target, not a balance."
+          },
+          "prompt": "How many dollars are in the emergency fund on this page?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "The cash line is $1,000. It stays cash."
+        },
+        {
+          "id": "mp-page-q3",
+          "type": "number",
+          "prompt": "How many dollars a year is the $100 monthly investment?",
+          "answer": 1200,
+          "unit": "$",
+          "explain": "12 × $100 = $1,200."
+        },
+        {
+          "id": "mp-page-q4",
+          "type": "number",
+          "prompt": "What is 25 times the $36,000 spending sketch?",
+          "answer": 900000,
+          "unit": "$",
+          "explain": "25 × $36,000 = $900,000. A target. Not a balance the market owes you."
+        },
+        {
+          "id": "mp-page-q5",
+          "type": "true_false",
+          "prompt": "The $900,000 is money this page says you already have.",
+          "answer": false,
+          "explain": "It is 25 times spending. The page’s actual investing line is $100 a month."
+        }
+      ]
+    },
+    {
+      "id": "mp-mix",
+      "type": "lesson",
+      "title": "A Last Pass",
+      "summary": "The ideas, side by side.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mp-mix-q1",
+          "type": "info",
+          "title": "Nothing new",
+          "body": "These questions use the course you already have. [[Inflation]] shrinks a basket. The [[4% rule|four-percent-rule]] is a first-year sketch. [[Medicare]] is at 65. A [[fiduciary]] must put you first. None of these is a product to buy today."
+        },
+        {
+          "id": "mp-mix-q2",
+          "type": "number",
+          "prompt": "A $100 basket rises 3%. How many dollars does it cost now?",
+          "answer": 103,
+          "unit": "$",
+          "explain": "$100 × 1.03 = $103."
+        },
+        {
+          "id": "mp-mix-q3",
+          "type": "number",
+          "prompt": "What is 4% of $500,000, the year-one sketch?",
+          "answer": 20000,
+          "unit": "$",
+          "explain": "$500,000 × 0.04 = $20,000."
+        },
+        {
+          "id": "mp-mix-q4",
+          "type": "true_false",
+          "prompt": "Medicare waits until full retirement age of 67.",
+          "answer": false,
+          "explain": "Medicare’s window is around 65. Full retirement age for people born in 1960 or later is 67."
+        },
+        {
+          "id": "mp-mix-q5",
+          "type": "multiple_choice",
+          "prompt": "Which promise do you refuse?",
+          "choices": [
+            "A stated fee you can turn into dollars",
+            "A guaranteed market return",
+            "An offer to look the person up before you hire them"
+          ],
+          "answer": 1,
+          "explain": "The guarantee. A fee and a lookup are ordinary questions."
+        }
+      ]
+    },
+    {
+      "id": "mp-keep",
+      "type": "lesson",
+      "title": "Stay Editable",
+      "summary": "The page changes when your life does.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "mp-keep-q1",
+          "type": "info",
+          "title": "Not a tattoo",
+          "body": "The page is right until it is not. A new city, a child, a paid-off debt, or a parent you are caring for can change the spending number, and the spending number changes the target. A noisy week does not. Edit on the yearly date, and edit when the family changes. Then leave it."
+        },
+        {
+          "id": "mp-keep-q2",
+          "type": "multiple_choice",
+          "prompt": "Which event edits the spending number?",
+          "choices": [
+            "You take in a parent and the grocery bill jumps",
+            "The fund is down 2% today",
+            "A friend bought a coin"
+          ],
+          "answer": 0,
+          "explain": "A real new bill. Two percent today is noise."
+        },
+        {
+          "id": "mp-keep-q3",
+          "type": "true_false",
+          "prompt": "Once the page is written, editing it means you failed.",
+          "answer": false,
+          "explain": "Editing for a real life change is the plan. Editing for a headline is the failure."
+        },
+        {
+          "id": "mp-keep-q4",
+          "type": "number",
+          "prompt": "Spending rises from $36,000 to $42,000. How many dollars did the yearly sketch increase?",
+          "answer": 6000,
+          "unit": "$",
+          "explain": "$42,000 − $36,000 = $6,000. The FI sketch moves with it: 25 times the new number, not the old one."
+        },
+        {
+          "id": "mp-keep-q5",
+          "type": "number",
+          "prompt": "What is 25 times the new $42,000 spending?",
+          "answer": 1050000,
+          "unit": "$",
+          "explain": "25 × $42,000 = $1,050,000. The target moved because the life moved."
+        }
+      ]
+    },
+    {
+      "id": "mp-alpha",
+      "type": "lesson",
+      "format": "story",
+      "title": "You’re the Alpha Now",
+      "summary": "The rank at the end of the path.",
+      "xp": 10,
+      "story": {
+        "title": "You’re the Alpha now",
+        "character": "You, at the end of the path",
+        "body": "The rank near the end of this course is **Alpha**.\n\nCash for a surprise. A cheap broad mix for the long money. Papers someone can find. A date to look again. That is the plan."
+      },
+      "steps": [
+        {
+          "id": "mp-alpha-q1",
+          "type": "info",
+          "title": "The last lesson",
+          "body": "You started with what income is. You can now read a paycheck, a bill, a fund fee, a beneficiary form, and a retirement sketch. The rank near the end of this course is Alpha. It is not a stock tip and it is not permission to bet the emergency fund.\n\nThe plan on the page is enough to continue: cash for a surprise, a cheap broad mix for the long money, papers a person you love can find, and a date to look again."
+        },
+        {
+          "id": "mp-alpha-q2",
+          "type": "multiple_choice",
+          "prompt": "Which rank is the one near the end of this course?",
+          "choices": [
+            "Pup",
+            "Alpha",
+            "A guaranteed 12%"
+          ],
+          "answer": 1,
+          "explain": "Alpha. Pup was the start. A guaranteed return was never a rank."
+        },
+        {
+          "id": "mp-alpha-q3",
+          "type": "true_false",
+          "prompt": "Alpha means you should empty the emergency fund into one exciting stock.",
+          "answer": false,
+          "explain": "The cash pile stays. Alpha is the person who can leave it there."
+        },
+        {
+          "id": "mp-alpha-q4",
+          "type": "multiple_choice",
+          "prompt": "What do you do on the date you chose?",
+          "choices": [
+            "Read the page, fix what life changed, and close it",
+            "Rebuild the plan from a headline",
+            "Send gift cards to a text"
+          ],
+          "answer": 0,
+          "explain": "Read, edit for a real change, close it. That is the whole habit."
+        },
+        {
+          "id": "mp-alpha-q5",
+          "type": "order",
+          "prompt": "Put the ongoing plan in order.",
+          "items": [
+            "Keep the emergency fund in cash",
+            "Keep the automatic investment in the broad mix",
+            "Keep the will and the beneficiary forms findable",
+            "Look again on the date you chose"
+          ],
+          "explain": "Cash, the mix, the papers, the date. Then go live your life."
+        }
+      ]
+    },
+    {
+      "id": "mp-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "mp-trial",
+      "type": "boss",
+      "title": "Den Trial: Your Money Plan",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "mp-trial-q1",
+          "type": "number",
+          "prompt": "25 times $24,000 of yearly spending is what FI sketch, in dollars?",
+          "answer": 600000,
+          "unit": "$",
+          "explain": "25 × $24,000 = $600,000."
+        },
+        {
+          "id": "mp-trial-q2",
+          "type": "true_false",
+          "prompt": "A red month in a long-term fund means you rewrite the will.",
+          "answer": false,
+          "explain": "A new person in the family changes the will. A red month is not that event."
+        },
+        {
+          "id": "mp-trial-q3",
+          "type": "multiple_choice",
+          "prompt": "On the yearly look, selling because the screen is red is what?",
+          "choices": [
+            "The point of the meeting",
+            "Not the point. You rebalance only if the mix drifted",
+            "Required by the Fed"
+          ],
+          "answer": 1,
+          "explain": "Read, confirm the cash, rebalance if the target drifted, update forms if the family changed."
+        },
+        {
+          "id": "mp-trial-q4",
+          "type": "number",
+          "prompt": "$150 a month is how many dollars a year?",
+          "answer": 1800,
+          "unit": "$",
+          "explain": "12 × $150 = $1,800."
+        }
+      ]
+    }
+  ]
+}

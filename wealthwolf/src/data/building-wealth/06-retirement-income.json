@@ -1,0 +1,569 @@
+{
+  "id": "retirement-income",
+  "section": "building-wealth",
+  "order": 6,
+  "title": "Turning Savings into Income",
+  "description": "A first-year withdrawal, the order of accounts, and the age-73 rule.",
+  "wolfLine": "The 4% sketch is a choice. Age 73 is the requirement.",
+  "terms": {
+    "required-minimum-distribution": {
+      "term": "Required minimum distribution",
+      "definition": "The minimum you must withdraw from a traditional IRA and most workplace retirement plans. For an owner, it currently starts at age 73. A Roth IRA owner does not have this requirement during their lifetime.",
+      "example": "Turn 73 this year and the traditional IRA starts a required withdrawal. The Roth IRA does not."
+    },
+    "sequence-of-returns-risk": {
+      "term": "Sequence-of-returns risk",
+      "definition": "The danger that bad returns arrive early in retirement, while you are withdrawing. The same average return is harsher if the bad years come first.",
+      "example": "A 20% drop and then a $20,000 withdrawal leaves less than withdrawing from a pile that had not fallen."
+    },
+    "annuity": {
+      "term": "Annuity",
+      "definition": "A contract with an insurance company. You pay a lump sum, and it pays you an income. The pile is often no longer yours to leave to someone else. This is a description, not a recommendation.",
+      "example": "Handing over $100,000 for a lifetime income, and giving up that $100,000 as a pile."
+    }
+  },
+  "lessons": [
+    {
+      "id": "ri-rate",
+      "type": "lesson",
+      "format": "document",
+      "title": "The Withdrawal",
+      "summary": "Four percent, once, then inflate the dollars.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ri-rate-q1",
+          "type": "info",
+          "title": "Year one",
+          "body": "The [[4% rule|four-percent-rule]] in year one is 4% of the portfolio. On $1,000,000 that is $40,000. Next year you adjust those dollars for inflation. You do not have to spend it all. Taking less is allowed. This is a sketch, and it is not the same thing as a required minimum distribution."
+        },
+        {
+          "id": "ri-rate-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Year one of a $1,000,000 pile",
+            "subtitle": "A rule of thumb, not a required minimum",
+            "lines": [
+              {
+                "id": "pile",
+                "label": "Portfolio",
+                "amount": 1000000.0
+              },
+              {
+                "id": "out",
+                "label": "Year-one withdrawal at 4%",
+                "amount": 40000.0
+              }
+            ],
+            "note": "Later years adjust the $40,000 for inflation. They do not restart 4% on a new balance."
+          },
+          "prompt": "How many dollars is the year-one withdrawal on this page?",
+          "answer": 40000,
+          "unit": "$",
+          "explain": "$1,000,000 × 0.04 = $40,000."
+        },
+        {
+          "id": "ri-rate-q3",
+          "type": "number",
+          "prompt": "Example inflation is 2%. What is the year-two withdrawal if you adjust the $40,000?",
+          "answer": 40800,
+          "unit": "$",
+          "explain": "$40,000 × 1.02 = $40,800."
+        },
+        {
+          "id": "ri-rate-q4",
+          "type": "true_false",
+          "prompt": "You must spend the whole $40,000.",
+          "answer": false,
+          "explain": "It is a ceiling people use for planning. Spending less leaves more in the pile."
+        },
+        {
+          "id": "ri-rate-q5",
+          "type": "multiple_choice",
+          "prompt": "What does year two adjust?",
+          "choices": [
+            "The $40,000 dollar amount, for inflation",
+            "The percent, restarted on whatever is left",
+            "The federal funds rate"
+          ],
+          "answer": 0,
+          "explain": "Inflate the dollars. Do not recompute 4% of a shrunken balance and call it the same rule."
+        }
+      ]
+    },
+    {
+      "id": "ri-order",
+      "type": "lesson",
+      "title": "Which Account First",
+      "summary": "A common order, not the only one.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ri-order-q1",
+          "type": "info",
+          "title": "Taxable, then traditional, Roth last",
+          "body": "A common draw order: spend taxable brokerage money first, then [[traditional IRA|traditional-ira]] money, and leave the [[Roth IRA|roth-ira]] last. Roth withdrawals that are qualified are tax-free, and the owner has no required distribution. Traditional withdrawals are taxed. This is a common order. A tax pro can have a reason to swap it. It is not a command."
+        },
+        {
+          "id": "ri-order-q2",
+          "type": "order",
+          "prompt": "Put the common draw order in order, Roth last.",
+          "items": [
+            "Spend taxable brokerage money",
+            "Withdraw from the traditional IRA",
+            "Leave the Roth IRA for last"
+          ],
+          "explain": "Taxable first, traditional in the middle, Roth last so the tax-free pile can keep growing."
+        },
+        {
+          "id": "ri-order-q3",
+          "type": "true_false",
+          "prompt": "The common order empties the Roth IRA first.",
+          "answer": false,
+          "explain": "Roth is last in this common order, not first."
+        },
+        {
+          "id": "ri-order-q4",
+          "type": "multiple_choice",
+          "prompt": "Why do people often save the Roth for last?",
+          "choices": [
+            "Qualified withdrawals are tax-free, and the owner is not forced to take them",
+            "Because a Roth cannot hold a fund",
+            "Because traditional withdrawals are tax-free"
+          ],
+          "answer": 0,
+          "explain": "Tax-free and no owner RMD. Traditional withdrawals are the taxable ones."
+        },
+        {
+          "id": "ri-order-q5",
+          "type": "fill_blank",
+          "prompt": "In this common order, the account you spend first is the ___ brokerage.",
+          "choices": [
+            "taxable",
+            "Roth",
+            "mystery"
+          ],
+          "answer": 0,
+          "explain": "Taxable. Roth waits."
+        }
+      ]
+    },
+    {
+      "id": "ri-rmd",
+      "type": "lesson",
+      "title": "Required Minimums",
+      "summary": "Age 73 for the traditional pile.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ri-rmd-q1",
+          "type": "info",
+          "title": "The age, for now",
+          "body": "A [[required minimum distribution]] is the least you must take from a traditional IRA and from most workplace plans. The starting age is 73. The first one can wait until April 1 of the next year, which can put two withdrawals in that next tax year. A Roth IRA owner does not have this requirement during their lifetime. The dollar amount uses an IRS table. This lesson grades the age, not a homemade table."
+        },
+        {
+          "id": "ri-rmd-q2",
+          "type": "number",
+          "prompt": "At what age do traditional IRA required minimums currently start?",
+          "answer": 73,
+          "explain": "Age 73. The first withdrawal can be delayed until April 1 of the following year."
+        },
+        {
+          "id": "ri-rmd-q3",
+          "type": "true_false",
+          "prompt": "A Roth IRA owner must start required minimums at 73.",
+          "answer": false,
+          "explain": "Not during the owner’s lifetime. The traditional IRA is the one with the age-73 rule."
+        },
+        {
+          "id": "ri-rmd-q4",
+          "type": "multiple_choice",
+          "prompt": "Why might you take the first required withdrawal in the year you turn 73, instead of waiting until April 1?",
+          "choices": [
+            "So you do not have two taxable withdrawals in the next year",
+            "Because April 1 is illegal",
+            "Because Roth IRAs require it"
+          ],
+          "answer": 0,
+          "explain": "Waiting until April 1 can stack two withdrawals into one tax year. Taking the first one in the year you turn 73 spreads them."
+        },
+        {
+          "id": "ri-rmd-q5",
+          "type": "true_false",
+          "prompt": "You are allowed to withdraw more than the minimum.",
+          "answer": true,
+          "explain": "The minimum is a floor. More is allowed, and it is taxable if it comes from a traditional account."
+        }
+      ]
+    },
+    {
+      "id": "ri-seq",
+      "type": "lesson",
+      "title": "Bad Years First",
+      "summary": "The order of returns matters once you are spending.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ri-seq-q1",
+          "type": "info",
+          "title": "Same average, harsher path",
+          "body": "[[Sequence-of-returns risk]] is what happens when the bad year comes while you are withdrawing. A $500,000 pile falls 20%, to $400,000, and you still take out $20,000. You have $380,000. If the pile had not fallen, the same withdrawal would leave $480,000. The early drop and the withdrawal stack."
+        },
+        {
+          "id": "ri-seq-q2",
+          "type": "number",
+          "prompt": "A $500,000 portfolio falls 20%. How many dollars is it worth before the withdrawal?",
+          "answer": 400000,
+          "unit": "$",
+          "explain": "$500,000 × 0.80 = $400,000."
+        },
+        {
+          "id": "ri-seq-q3",
+          "type": "number",
+          "prompt": "You then withdraw $20,000. How many dollars are left?",
+          "answer": 380000,
+          "unit": "$",
+          "explain": "$400,000 − $20,000 = $380,000."
+        },
+        {
+          "id": "ri-seq-q4",
+          "type": "number",
+          "prompt": "Without the drop, the same $20,000 withdrawal from $500,000 leaves how many dollars?",
+          "answer": 480000,
+          "unit": "$",
+          "explain": "$500,000 − $20,000 = $480,000. The gap versus $380,000 is $100,000."
+        },
+        {
+          "id": "ri-seq-q5",
+          "type": "true_false",
+          "prompt": "The order of returns stops mattering after you retire, because you are no longer contributing.",
+          "answer": false,
+          "explain": "It matters more. Withdrawals turn an early drop into a smaller pile that then has to recover."
+        }
+      ]
+    },
+    {
+      "id": "ri-annuity",
+      "type": "lesson",
+      "format": "call",
+      "title": "Annuities, Lightly",
+      "summary": "Income in exchange for the pile.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ri-annuity-q1",
+          "type": "info",
+          "title": "What you give up",
+          "body": "An [[annuity]] here means you pay an insurer a lump sum and it pays you an income, sometimes for life. The $100,000 is often no longer a pile you can leave to a child. Fees and the insurer’s promise are the whole product. This is a definition, not a suggestion to buy one."
+        },
+        {
+          "id": "ri-annuity-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Keep the portfolio",
+              "subtitle": "You withdraw from it over time",
+              "lines": [
+                {
+                  "id": "pile",
+                  "label": "Still yours",
+                  "amount": 100000.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Hand it to an insurer",
+              "subtitle": "The pile is no longer yours to leave",
+              "lines": [
+                {
+                  "id": "paid",
+                  "label": "Paid for an annuity",
+                  "amount": 100000.0
+                }
+              ],
+              "note": "Income in exchange for the lump sum. Not a recommendation."
+            }
+          ],
+          "prompt": "Which page still leaves the $100,000 in your name?",
+          "choices": [
+            "Keep the portfolio",
+            "Hand it to an insurer"
+          ],
+          "answer": 0,
+          "explain": "The portfolio page is still yours. The annuity page traded the pile for an income stream."
+        },
+        {
+          "id": "ri-annuity-q3",
+          "type": "true_false",
+          "prompt": "Buying an annuity is required once you retire.",
+          "answer": false,
+          "explain": "It is one product. The withdrawal sketch does not require it."
+        },
+        {
+          "id": "ri-annuity-q4",
+          "type": "multiple_choice",
+          "prompt": "What is the usual trade?",
+          "choices": [
+            "You give up the pile and receive an income",
+            "You keep the pile and the insurer also sends a gift",
+            "The Fed sets the payment"
+          ],
+          "answer": 0,
+          "explain": "Income, in exchange for the lump sum. Read the fees before you ever think about it."
+        },
+        {
+          "id": "ri-annuity-q5",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Hand it to an insurer",
+            "subtitle": "The pile is no longer yours to leave",
+            "lines": [
+              {
+                "id": "paid",
+                "label": "Paid for an annuity",
+                "amount": 100000.0
+              }
+            ],
+            "note": "Income in exchange for the lump sum. Not a recommendation."
+          },
+          "prompt": "How many dollars leave your name on the annuity page?",
+          "answer": 100000,
+          "unit": "$",
+          "explain": "The $100,000 is what you paid. It is not still a pile you control."
+        }
+      ]
+    },
+    {
+      "id": "ri-pay",
+      "type": "lesson",
+      "title": "A Retirement Paycheck",
+      "summary": "Assign the $40,000.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ri-pay-q1",
+          "type": "info",
+          "title": "Floors, then the rest",
+          "body": "The year-one sketch is $40,000. Housing needs at least $15,000, food at least $8,000, health at least $6,000, and everything else at least $1,000. Assign every dollar. The floors are the lesson. A real budget uses your bills."
+        },
+        {
+          "id": "ri-pay-q2",
+          "type": "allocate",
+          "prompt": "Assign all $40,000. Meet each floor.",
+          "total": 40000,
+          "step": 1000,
+          "categories": [
+            {
+              "label": "Housing",
+              "min": 15000
+            },
+            {
+              "label": "Food",
+              "min": 8000
+            },
+            {
+              "label": "Health",
+              "min": 6000
+            },
+            {
+              "label": "Everything else",
+              "min": 1000
+            }
+          ],
+          "explain": "The floors are $15,000, $8,000, $6,000, and $1,000, which add to $30,000. The other $10,000 can sit in everything else. That fill ends with $11,000 there."
+        },
+        {
+          "id": "ri-pay-q3",
+          "type": "number",
+          "prompt": "How many dollars do the four floors add up to, before the extra $10,000?",
+          "answer": 30000,
+          "unit": "$",
+          "explain": "$15,000 + $8,000 + $6,000 + $1,000 = $30,000."
+        },
+        {
+          "id": "ri-pay-q4",
+          "type": "true_false",
+          "prompt": "The $40,000 assignment is a bill from the IRS.",
+          "answer": false,
+          "explain": "It is a spending sketch. The required minimum, if you are 73, is a different rule and a different math."
+        },
+        {
+          "id": "ri-pay-q5",
+          "type": "multiple_choice",
+          "prompt": "What should a real version of this page use?",
+          "choices": [
+            "Your actual bills",
+            "A friend’s floors",
+            "The federal funds rate"
+          ],
+          "answer": 0,
+          "explain": "Your rent, your food, your premiums. The round numbers are only a drill."
+        }
+      ]
+    },
+    {
+      "id": "ri-stack",
+      "type": "lesson",
+      "title": "The Check and the Pile",
+      "summary": "Do not withdraw spending that Social Security already covers.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ri-stack-q1",
+          "type": "info",
+          "title": "Add them",
+          "body": "If Social Security pays $18,000 and spending is $50,000, the portfolio’s job is the $32,000 gap, not the whole $50,000. Withdrawing $50,000 anyway spends the pile faster than the plan. This is the same idea as a base and a gap, with a new set of numbers."
+        },
+        {
+          "id": "ri-stack-q2",
+          "type": "number",
+          "prompt": "Spending is $50,000 and Social Security is $18,000. How many dollars does the portfolio need to cover?",
+          "answer": 32000,
+          "unit": "$",
+          "explain": "$50,000 − $18,000 = $32,000."
+        },
+        {
+          "id": "ri-stack-q3",
+          "type": "number",
+          "prompt": "You withdraw the whole $50,000 anyway. How many extra dollars did you take beyond the gap?",
+          "answer": 18000,
+          "unit": "$",
+          "explain": "$50,000 − $32,000 = $18,000. That extra is the Social Security you could have spent instead."
+        },
+        {
+          "id": "ri-stack-q4",
+          "type": "true_false",
+          "prompt": "Social Security and the portfolio withdrawal should both be large enough to cover all the spending, on purpose.",
+          "answer": false,
+          "explain": "They stack. Covering the spending twice drains the portfolio."
+        },
+        {
+          "id": "ri-stack-q5",
+          "type": "multiple_choice",
+          "prompt": "What is the portfolio’s job in this sketch?",
+          "choices": [
+            "The gap after Social Security",
+            "A second copy of all the spending",
+            "The Medicare premium table"
+          ],
+          "answer": 0,
+          "explain": "The gap. $32,000 here, not $50,000."
+        }
+      ]
+    },
+    {
+      "id": "ri-joe",
+      "type": "lesson",
+      "format": "story",
+      "title": "Joe and Ann’s First Year",
+      "summary": "They are 66. The required minimum is not here yet.",
+      "xp": 10,
+      "story": {
+        "title": "The first retired year",
+        "character": "Joe and Ann, both 66, newly retired",
+        "body": "Joe and Ann have a **$1,000,000** portfolio. A 4% year-one sketch is **$40,000**. They are **66**, so a required minimum has not started.\n\nThey spend taxable money first and leave the Roth IRA alone."
+      },
+      "steps": [
+        {
+          "id": "ri-joe-q1",
+          "type": "info",
+          "title": "Meet Joe and Ann",
+          "body": "Joe and Ann are both 66 and newly retired. Their portfolio is $1,000,000. A 4% year-one sketch is $40,000. They are not 73, so a required minimum does not apply yet. The $40,000 is a choice.\n\nThey will spend taxable money first and leave the Roth IRA alone. They also write down what a 20% drop in year one would do, so the first bad year does not surprise them into selling everything."
+        },
+        {
+          "id": "ri-joe-q2",
+          "type": "number",
+          "prompt": "What is their year-one 4% withdrawal, in dollars?",
+          "answer": 40000,
+          "unit": "$",
+          "explain": "$1,000,000 × 0.04 = $40,000."
+        },
+        {
+          "id": "ri-joe-q3",
+          "type": "true_false",
+          "prompt": "Because they retired, they must take a required minimum at 66.",
+          "answer": false,
+          "explain": "The traditional required minimum starts at 73. Sixty-six is a choice, not that rule."
+        },
+        {
+          "id": "ri-joe-q4",
+          "type": "multiple_choice",
+          "prompt": "Which account do they spend first in the common order?",
+          "choices": [
+            "The Roth IRA",
+            "Taxable brokerage money",
+            "A new annuity, required by law"
+          ],
+          "answer": 1,
+          "explain": "Taxable first. The Roth waits. An annuity is not required."
+        },
+        {
+          "id": "ri-joe-q5",
+          "type": "number",
+          "prompt": "If the $1,000,000 fell 20% before any withdrawal, how many dollars would it be worth?",
+          "answer": 800000,
+          "unit": "$",
+          "explain": "$1,000,000 × 0.80 = $800,000. That is the sequence risk they wrote down, not a prediction."
+        }
+      ]
+    },
+    {
+      "id": "ri-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "ri-trial",
+      "type": "boss",
+      "title": "Den Trial: Turning Savings into Income",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "ri-trial-q1",
+          "type": "number",
+          "prompt": "4% of $750,000 is how many dollars in year one?",
+          "answer": 30000,
+          "unit": "$",
+          "explain": "$750,000 × 0.04 = $30,000."
+        },
+        {
+          "id": "ri-trial-q2",
+          "type": "true_false",
+          "prompt": "Roth IRA owners must take required minimums at 73.",
+          "answer": false,
+          "explain": "Not during the owner’s lifetime. Traditional IRAs are the age-73 account."
+        },
+        {
+          "id": "ri-trial-q3",
+          "type": "number",
+          "prompt": "A $200,000 pile falls 20% and you then withdraw $10,000. How many dollars are left?",
+          "answer": 150000,
+          "unit": "$",
+          "explain": "$200,000 × 0.80 = $160,000, then $160,000 − $10,000 = $150,000."
+        },
+        {
+          "id": "ri-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "In the common draw order, which account waits until last?",
+          "choices": [
+            "Taxable brokerage",
+            "Traditional IRA",
+            "Roth IRA"
+          ],
+          "answer": 2,
+          "explain": "Roth last. Taxable first, traditional in the middle."
+        }
+      ]
+    }
+  ]
+}

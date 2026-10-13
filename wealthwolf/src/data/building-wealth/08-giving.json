@@ -1,0 +1,553 @@
+{
+  "id": "giving",
+  "section": "building-wealth",
+  "order": 8,
+  "title": "Giving & Philanthropy",
+  "description": "A budget line, a real charity, and the 2026 cash cap.",
+  "wolfLine": "Look the organization up. Then give from the line you planned.",
+  "terms": {
+    "donor-advised-fund": {
+      "term": "Donor-advised fund",
+      "definition": "An account at a sponsoring charity. You contribute, and you may later recommend grants. The money is no longer yours. This is a description, not a tax worksheet.",
+      "example": "Contributing $2,000 and recommending a grant to a food bank the next year."
+    }
+  },
+  "lessons": [
+    {
+      "id": "gv-budget",
+      "type": "lesson",
+      "title": "Giving Inside the Budget",
+      "summary": "Assign a $3,000 month that includes a gift.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gv-budget-q1",
+          "type": "info",
+          "title": "A line, not a leftover",
+          "body": "Giving belongs in the plan as its own line. This drill is a $3,000 month. Needs are at least $1,800, saving is at least $400, and giving is at least $50. Assign every dollar. The gift comes from the plan, not from the rent."
+        },
+        {
+          "id": "gv-budget-q2",
+          "type": "allocate",
+          "prompt": "Assign all $3,000. Meet each floor.",
+          "total": 3000,
+          "step": 50,
+          "categories": [
+            {
+              "label": "Needs",
+              "min": 1800
+            },
+            {
+              "label": "Saving",
+              "min": 400
+            },
+            {
+              "label": "Giving",
+              "min": 50
+            }
+          ],
+          "explain": "The floors are $1,800, $400, and $50, which add to $2,250. The other $750 can land on giving in a simple fill, for $800. A real month can put that extra into saving instead. The drill only requires the floors and a full assignment."
+        },
+        {
+          "id": "gv-budget-q3",
+          "type": "number",
+          "prompt": "How many dollars do the three floors add to?",
+          "answer": 2250,
+          "unit": "$",
+          "explain": "$1,800 + $400 + $50 = $2,250."
+        },
+        {
+          "id": "gv-budget-q4",
+          "type": "true_false",
+          "prompt": "A gift should come out of rent if the month is tight.",
+          "answer": false,
+          "explain": "The gift is a line you choose. Rent is a need. Skipping rent to donate is not the plan."
+        },
+        {
+          "id": "gv-budget-q5",
+          "type": "multiple_choice",
+          "prompt": "Where does a planned gift sit?",
+          "choices": [
+            "On its own line, after needs are covered",
+            "Instead of the emergency fund",
+            "As a secret that the budget does not show"
+          ],
+          "answer": 0,
+          "explain": "Its own line. The emergency fund keeps its job."
+        }
+      ]
+    },
+    {
+      "id": "gv-check",
+      "type": "lesson",
+      "title": "Choosing a Charity",
+      "summary": "A story is not a receipt.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gv-check-q1",
+          "type": "info",
+          "title": "Look it up",
+          "body": "A qualified charity is an organization the IRS recognizes for deductible gifts. Look it up on the IRS Tax Exempt Organization Search before you give. A photo, a sad story, or a request for gift cards is not that lookup. Churches can qualify even when the search is quirky. If you cannot tell, do not send money that night."
+        },
+        {
+          "id": "gv-check-q2",
+          "type": "multiple_choice",
+          "prompt": "What is the check before you give?",
+          "choices": [
+            "Whether the organization is a qualified charity",
+            "Whether the story made you cry",
+            "Whether a stranger texted you a wallet address"
+          ],
+          "answer": 0,
+          "explain": "Qualified organization. Emotion is not a receipt, and a texted wallet is a scam shape you already know."
+        },
+        {
+          "id": "gv-check-q3",
+          "type": "true_false",
+          "prompt": "Gift cards sent to a stranger are a normal way to donate.",
+          "answer": false,
+          "explain": "They are a common scam shape. A real charity can take a traceable gift without a gift-card relay."
+        },
+        {
+          "id": "gv-check-q4",
+          "type": "multiple_choice",
+          "prompt": "A group will not appear clearly as a qualified charity and wants the money tonight. What do you do?",
+          "choices": [
+            "Wait and verify",
+            "Send a small amount so you feel kind",
+            "Empty the emergency fund"
+          ],
+          "answer": 0,
+          "explain": "Wait. Kindness survives until morning. A scam does not want you to look the group up."
+        },
+        {
+          "id": "gv-check-q5",
+          "type": "fill_blank",
+          "prompt": "Look the organization up before you send the ___.",
+          "choices": [
+            "money",
+            "will",
+            "ticker"
+          ],
+          "answer": 0,
+          "explain": "The money. The lookup is the point of the pause."
+        }
+      ]
+    },
+    {
+      "id": "gv-deduct",
+      "type": "lesson",
+      "title": "The 2026 Deduction",
+      "summary": "Cash, a cap, and not a gift to a person.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gv-deduct-q1",
+          "type": "info",
+          "title": "What the IRS actually said",
+          "body": "For 2026, if you do not itemize, you may deduct up to $1,000 of cash gifts to qualified organizations, or $2,000 if you file jointly. Gifts to individuals are not deductible. This lesson grades those two rules. It does not compute the itemized floor or a partial gift of property."
+        },
+        {
+          "id": "gv-deduct-q2",
+          "type": "number",
+          "prompt": "You do not itemize, you file single, and you gave $600 cash to a qualified charity in 2026. How many dollars of that gift fit under the $1,000 cap?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "The cap is $1,000. The gift is $600, so all $600 fits. This is the non-itemizer cash rule for 2026."
+        },
+        {
+          "id": "gv-deduct-q3",
+          "type": "number",
+          "prompt": "What is the 2026 cash cap, in dollars, for a joint return if you do not itemize?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "The joint cap is $2,000. The single cap is $1,000."
+        },
+        {
+          "id": "gv-deduct-q4",
+          "type": "true_false",
+          "prompt": "A $500 birthday gift to your brother is a charitable deduction.",
+          "answer": false,
+          "explain": "Gifts to individuals are not deductible. A brother is not a qualified organization."
+        },
+        {
+          "id": "gv-deduct-q5",
+          "type": "multiple_choice",
+          "prompt": "You do not itemize and you gave $1,400 cash to qualified charities in 2026, filing single. How much of the deduction does this lesson’s cap allow?",
+          "choices": [
+            "$1,400",
+            "$1,000",
+            "$0, because you did not itemize"
+          ],
+          "answer": 1,
+          "explain": "The non-itemizer cap is $1,000. The other $400 does not fit under that cap. Itemizing is a different set of rules this course is not grading."
+        }
+      ]
+    },
+    {
+      "id": "gv-daf",
+      "type": "lesson",
+      "title": "Donor-Advised Funds",
+      "summary": "You give it away, then you recommend.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gv-daf-q1",
+          "type": "info",
+          "title": "No longer yours",
+          "body": "A [[donor-advised fund]] is an account at a sponsoring charity. You contribute, and later you recommend grants. The money is no longer yours. Any deduction follows the rules for that kind of gift and that tax year. This is the shape of the tool, not a reason to open one."
+        },
+        {
+          "id": "gv-daf-q2",
+          "type": "multiple_choice",
+          "prompt": "After you contribute to a donor-advised fund, whose money is it?",
+          "choices": [
+            "Still yours, like a savings account",
+            "The sponsoring charity’s",
+            "The Federal Reserve’s"
+          ],
+          "answer": 1,
+          "explain": "You recommended later gifts. You do not own the balance the way you own a brokerage."
+        },
+        {
+          "id": "gv-daf-q3",
+          "type": "true_false",
+          "prompt": "A donor-advised fund is a trick that lets a gift to a friend become deductible.",
+          "answer": false,
+          "explain": "Grants go to charities. A gift to a person is still not a charitable deduction."
+        },
+        {
+          "id": "gv-daf-q4",
+          "type": "multiple_choice",
+          "prompt": "What is the honest one-line description?",
+          "choices": [
+            "Contribute now, recommend grants later, and the money has left you",
+            "A second emergency fund",
+            "A kind of margin loan"
+          ],
+          "answer": 0,
+          "explain": "Contribute, then recommend. It is not cash you can spend on rent."
+        },
+        {
+          "id": "gv-daf-q5",
+          "type": "fill_blank",
+          "prompt": "The account at a sponsoring charity is a donor-advised ___.",
+          "choices": [
+            "fund",
+            "will",
+            "rate"
+          ],
+          "answer": 0,
+          "explain": "Fund. The sponsor holds it."
+        }
+      ]
+    },
+    {
+      "id": "gv-time",
+      "type": "lesson",
+      "title": "Time or Money",
+      "summary": "Hours count as giving. They do not count as a deduction.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gv-time-q1",
+          "type": "info",
+          "title": "The hours are real",
+          "body": "Four hours at a food bank is giving. The IRS does not let you deduct the value of your time. Out-of-pocket costs are a different, fussier rule this lesson will not grade. If the month cannot spare cash, time is the honest gift. Pretending the hours are a $200 deduction is not."
+        },
+        {
+          "id": "gv-time-q2",
+          "type": "number",
+          "prompt": "You volunteer 4 hours. How many of those hours are a cash deduction in this lesson?",
+          "answer": 0,
+          "explain": "Zero. Time is not a charitable deduction for the value of the hours."
+        },
+        {
+          "id": "gv-time-q3",
+          "type": "true_false",
+          "prompt": "Volunteer hours are worthless because they are not deductible.",
+          "answer": false,
+          "explain": "They are real help. They are just not a deduction for the value of your time."
+        },
+        {
+          "id": "gv-time-q4",
+          "type": "multiple_choice",
+          "prompt": "The month cannot spare cash. What is the clean gift?",
+          "choices": [
+            "Time you actually have",
+            "Rent money",
+            "A deduction you invent for the hours"
+          ],
+          "answer": 0,
+          "explain": "Time. The rent stays. The invented deduction is not a rule."
+        },
+        {
+          "id": "gv-time-q5",
+          "type": "number",
+          "prompt": "A friend says your 4 hours are “worth” $25 each, so you should deduct $100. How many dollars of that hour-value does this lesson allow as a deduction?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "The value of your time is not the deduction. $0 of that $100 story is allowed here."
+        }
+      ]
+    },
+    {
+      "id": "gv-family",
+      "type": "lesson",
+      "format": "call",
+      "title": "Family or a Charity",
+      "summary": "Kindness is not the same as a deduction.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gv-family-q1",
+          "type": "info",
+          "title": "Both can be right",
+          "body": "Giving $200 to your sister can be the right family choice. It is not a charitable deduction. Giving $200 to a qualified food bank can be. The 2026 non-itemizer rule is about qualified organizations, not relatives. Do the kind thing. Do not call the sister a charity."
+        },
+        {
+          "id": "gv-family-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Gift to your sister",
+              "subtitle": "A person, not an organization",
+              "lines": [
+                {
+                  "id": "gift",
+                  "label": "Cash you handed her",
+                  "amount": 200.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Gift to a qualified food bank",
+              "subtitle": "A qualified organization",
+              "lines": [
+                {
+                  "id": "gift",
+                  "label": "Cash to the charity",
+                  "amount": 200.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Which page can be a charitable deduction, if the other rules are met?",
+          "choices": [
+            "Gift to your sister",
+            "Gift to a qualified food bank"
+          ],
+          "answer": 1,
+          "explain": "The food bank is the qualified organization. The sister is a person. Gifts to individuals are not deductible."
+        },
+        {
+          "id": "gv-family-q3",
+          "type": "number",
+          "prompt": "How many dollars on the sister’s page are a charitable deduction?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "Zero. Kindness to a person is not a charitable deduction."
+        },
+        {
+          "id": "gv-family-q4",
+          "type": "true_false",
+          "prompt": "Calling the gift a donation on a note to your sister makes it deductible.",
+          "answer": false,
+          "explain": "The recipient has to be a qualified organization. A note does not change who she is."
+        },
+        {
+          "id": "gv-family-q5",
+          "type": "multiple_choice",
+          "prompt": "When is the gift to your sister still a good idea?",
+          "choices": [
+            "When you want to help her and you are not pretending it is a tax move",
+            "When you need a deduction and nothing else",
+            "When the Fed cuts rates"
+          ],
+          "answer": 0,
+          "explain": "Help is allowed. The tax story is the part that is not true."
+        }
+      ]
+    },
+    {
+      "id": "gv-spot",
+      "type": "lesson",
+      "format": "spot",
+      "title": "A Plea That Is Not a Charity",
+      "summary": "The gift-card line is the problem.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "gv-spot-q1",
+          "type": "info",
+          "title": "You have seen this shape",
+          "body": "A real charity can wait while you look it up. This message has a story and a demand for $150 in gift cards tonight, and no organization you can check. The story line can be true or invented. The gift-card line is the scam shape."
+        },
+        {
+          "id": "gv-spot-q2",
+          "type": "spot",
+          "doc": {
+            "kind": "statement",
+            "title": "A plea in your texts",
+            "subtitle": "No organization you can look up",
+            "lines": [
+              {
+                "id": "story",
+                "label": "Story about a sick child",
+                "amount": 0.0
+              },
+              {
+                "id": "cards",
+                "label": "Gift cards they want sent tonight",
+                "amount": 150.0
+              }
+            ]
+          },
+          "prompt": "Which line is the problem?",
+          "answer": "cards",
+          "explain": "Gift cards, tonight, to a sender you cannot look up. That is the line to refuse. The story is the bait."
+        },
+        {
+          "id": "gv-spot-q3",
+          "type": "number",
+          "prompt": "How many dollars do they want in gift cards?",
+          "answer": 150,
+          "unit": "$",
+          "explain": "The ask is $150. You do not send it."
+        },
+        {
+          "id": "gv-spot-q4",
+          "type": "true_false",
+          "prompt": "Sending half, $75, is a safe compromise.",
+          "answer": false,
+          "explain": "Half of a scam is still the scam. The pause is to look the group up, or to walk away."
+        },
+        {
+          "id": "gv-spot-q5",
+          "type": "multiple_choice",
+          "prompt": "What would a careful gift look like instead?",
+          "choices": [
+            "A traceable gift to an organization you looked up",
+            "Gift cards to a number in a text",
+            "Your emergency fund, wired tonight"
+          ],
+          "answer": 0,
+          "explain": "Look it up. Then give in a way you can trace. Not gift cards to a stranger."
+        }
+      ]
+    },
+    {
+      "id": "gv-priya",
+      "type": "lesson",
+      "format": "story",
+      "title": "Priya’s Giving Plan",
+      "summary": "Fifty dollars, after the lookup.",
+      "xp": 10,
+      "story": {
+        "title": "Fifty dollars, looked up",
+        "character": "Priya, 26, graphic designer",
+        "body": "Priya gives **$50** a month, **$600** a year, to a food bank she looked up. She does not itemize. The 2026 single cash cap is **$1,000**.\n\nThe $50 is a budget line. It is not the rent."
+      },
+      "steps": [
+        {
+          "id": "gv-priya-q1",
+          "type": "info",
+          "title": "Meet Priya",
+          "body": "Priya is 26 and a graphic designer. She gives $50 a month, which is $600 a year, to a food bank she looked up. She does not itemize. The 2026 single cash cap is $1,000, so the $600 fits under it.\n\nShe does not give the rent, and she does not give from the emergency fund. The $50 is a line in the month."
+        },
+        {
+          "id": "gv-priya-q2",
+          "type": "number",
+          "prompt": "How many dollars a year is Priya’s $50 a month?",
+          "answer": 600,
+          "unit": "$",
+          "explain": "12 × $50 = $600."
+        },
+        {
+          "id": "gv-priya-q3",
+          "type": "number",
+          "prompt": "How many dollars of room are left under the $1,000 single cap after that $600?",
+          "answer": 400,
+          "unit": "$",
+          "explain": "$1,000 − $600 = $400. She does not have to use it."
+        },
+        {
+          "id": "gv-priya-q4",
+          "type": "true_false",
+          "prompt": "Priya should skip the lookup because $50 is too small to be a scam.",
+          "answer": false,
+          "explain": "Small gifts are how gift-card scams start. The lookup takes a minute at any size."
+        },
+        {
+          "id": "gv-priya-q5",
+          "type": "multiple_choice",
+          "prompt": "Which pile does the $50 not come from?",
+          "choices": [
+            "The giving line in her budget",
+            "The rent",
+            "Money left after needs and saving"
+          ],
+          "answer": 1,
+          "explain": "Not the rent. The giving line is the one she planned."
+        }
+      ]
+    },
+    {
+      "id": "gv-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "gv-trial",
+      "type": "boss",
+      "title": "Den Trial: Giving & Philanthropy",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "gv-trial-q1",
+          "type": "number",
+          "prompt": "You do not itemize and you file jointly in 2026. What is the cash charitable cap, in dollars?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "The joint cap is $2,000. The single cap is $1,000."
+        },
+        {
+          "id": "gv-trial-q2",
+          "type": "true_false",
+          "prompt": "A cash gift to your cousin is a charitable deduction.",
+          "answer": false,
+          "explain": "Gifts to individuals are not deductible. A cousin is not a qualified organization."
+        },
+        {
+          "id": "gv-trial-q3",
+          "type": "number",
+          "prompt": "You volunteer 6 hours and someone values them at $20 each. How many dollars of that hour-value are a deduction here?",
+          "answer": 0,
+          "unit": "$",
+          "explain": "The value of your time is not a charitable deduction. The answer is $0."
+        },
+        {
+          "id": "gv-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "A text wants gift cards tonight and will not name an organization you can look up. What do you do?",
+          "choices": [
+            "Send the cards",
+            "Do not send them",
+            "Wire the emergency fund"
+          ],
+          "answer": 1,
+          "explain": "Gift cards to an unnamed sender are the scam shape. Look a real charity up, or give nothing tonight."
+        }
+      ]
+    }
+  ]
+}

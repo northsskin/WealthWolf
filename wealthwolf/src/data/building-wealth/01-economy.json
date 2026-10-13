@@ -1,0 +1,578 @@
+{
+  "id": "economy",
+  "section": "building-wealth",
+  "order": 1,
+  "title": "Inflation & the Economy",
+  "description": "Prices, jobs, and which pile you spend when the slowdown arrives.",
+  "wolfLine": "The headline is loud. The emergency fund is the plan.",
+  "terms": {
+    "consumer-price-index": {
+      "term": "Consumer price index",
+      "definition": "A measure of inflation. It prices a basket of ordinary things, then sees how that basket’s cost changes.",
+      "example": "A basket that cost $100 last year and $103 this year rose 3%."
+    },
+    "unemployment-rate": {
+      "term": "Unemployment rate",
+      "definition": "The share of people in the labor force who want a job, are looking, and do not have one. It is not a grade of the whole country.",
+      "example": "An example rate of 5% means 5 of every 100 people in the labor force are looking for work."
+    },
+    "recession": {
+      "term": "Recession",
+      "definition": "A serious slowdown in the economy. Jobs get harder to find and spending pulls back. A common description is a long stretch of falling output.",
+      "example": "Hours get cut at work, and the emergency fund is what covers groceries."
+    }
+  },
+  "lessons": [
+    {
+      "id": "ec-cpi",
+      "type": "lesson",
+      "title": "How Inflation Is Measured",
+      "summary": "A basket, priced twice.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ec-cpi-q1",
+          "type": "info",
+          "title": "The basket",
+          "body": "[[Inflation]] is prices rising, so the same money buys less. The [[consumer price index]] prices a basket of ordinary things and compares it with last year. This course will not grade this month’s reading. The method is the lesson."
+        },
+        {
+          "id": "ec-cpi-q2",
+          "type": "number",
+          "prompt": "The basket cost $100 last year and $103 this year. By how many dollars did it rise?",
+          "answer": 3,
+          "unit": "$",
+          "explain": "$103 − $100 = $3."
+        },
+        {
+          "id": "ec-cpi-q3",
+          "type": "number",
+          "prompt": "That $3 rise on a $100 basket is what percent?",
+          "answer": 3,
+          "unit": "%",
+          "explain": "$3 ÷ $100 = 0.03, which is 3% inflation in this example."
+        },
+        {
+          "id": "ec-cpi-q4",
+          "type": "true_false",
+          "prompt": "The consumer price index is a promise of what prices will do next year.",
+          "answer": false,
+          "explain": "It describes the basket that already happened. Next year is not in the number."
+        },
+        {
+          "id": "ec-cpi-q5",
+          "type": "multiple_choice",
+          "prompt": "What is inside the idea of the index?",
+          "choices": [
+            "One company’s stock",
+            "A basket of ordinary prices",
+            "Your savings account balance"
+          ],
+          "answer": 1,
+          "explain": "Ordinary prices, gathered into one basket. Not a stock and not your bank balance."
+        }
+      ]
+    },
+    {
+      "id": "ec-buys",
+      "type": "lesson",
+      "title": "What $100 Buys",
+      "summary": "A higher price is a smaller bag.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ec-buys-q1",
+          "type": "info",
+          "title": "The same bill",
+          "body": "If prices rise 25% in this example, the old $100 basket costs $125. The $100 bill now covers $100 ÷ $125 of that basket. That is $80 of the old stuff. [[Inflation]] did not take the bill. It took what the bill can carry."
+        },
+        {
+          "id": "ec-buys-q2",
+          "type": "number",
+          "prompt": "Prices rise 25%. What does the old $100 basket cost now?",
+          "answer": 125,
+          "unit": "$",
+          "explain": "$100 × 1.25 = $125."
+        },
+        {
+          "id": "ec-buys-q3",
+          "type": "number",
+          "prompt": "How many dollars of the old basket does $100 buy after that 25% rise?",
+          "answer": 80,
+          "unit": "$",
+          "explain": "$100 ÷ 1.25 = $80. You still hold $100. It buys less."
+        },
+        {
+          "id": "ec-buys-q4",
+          "type": "true_false",
+          "prompt": "A 25% rise in prices means your $100 bill became a $75 bill.",
+          "answer": false,
+          "explain": "The bill is still $100. What changed is the basket. It now buys $80 of the old basket, not $75."
+        },
+        {
+          "id": "ec-buys-q5",
+          "type": "multiple_choice",
+          "prompt": "Which sentence matches the math?",
+          "choices": [
+            "The cash shrank",
+            "The cash buys a smaller basket",
+            "Prices fell"
+          ],
+          "answer": 1,
+          "explain": "$100 still says $100. The basket got more expensive, so the bag is smaller."
+        }
+      ]
+    },
+    {
+      "id": "ec-wages",
+      "type": "lesson",
+      "title": "Wages and Prices",
+      "summary": "A raise can still lose the race.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ec-wages-q1",
+          "type": "info",
+          "title": "Two percent signs",
+          "body": "A raise only moves you forward if it beats [[inflation]]. In this example pay rises 2% and prices rise 4%. The paycheck is bigger. The basket got bigger faster."
+        },
+        {
+          "id": "ec-wages-q2",
+          "type": "number",
+          "prompt": "Pay is $50,000 and it rises 2%. How many dollars is the raise?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "$50,000 × 0.02 = $1,000. The new pay is $51,000."
+        },
+        {
+          "id": "ec-wages-q3",
+          "type": "number",
+          "prompt": "A $50,000 lifestyle costs 4% more. How many extra dollars does that lifestyle take?",
+          "answer": 2000,
+          "unit": "$",
+          "explain": "$50,000 × 0.04 = $2,000."
+        },
+        {
+          "id": "ec-wages-q4",
+          "type": "number",
+          "prompt": "How many dollars short of the price rise is that $1,000 raise?",
+          "answer": 1000,
+          "unit": "$",
+          "explain": "$2,000 − $1,000 = $1,000. The raise was real, and prices still won."
+        },
+        {
+          "id": "ec-wages-q5",
+          "type": "true_false",
+          "prompt": "Any raise means you can buy more than last year.",
+          "answer": false,
+          "explain": "Only a raise that beats inflation buys more. A smaller raise can still leave you behind."
+        }
+      ]
+    },
+    {
+      "id": "ec-slow",
+      "type": "lesson",
+      "title": "Recessions",
+      "summary": "The slowdown shows up as missing hours.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ec-slow-q1",
+          "type": "info",
+          "title": "What the word is for",
+          "body": "A [[recession]] is a serious slowdown. People spend less, and employers cut hours or jobs. Your long-term [[index fund]] can fall in the same season. The [[emergency fund]] is the pile for the grocery bill, not the fund you hoped to leave until retirement."
+        },
+        {
+          "id": "ec-slow-q2",
+          "type": "multiple_choice",
+          "prompt": "What does a recession usually mean for jobs?",
+          "choices": [
+            "Everyone gets a bonus",
+            "Hours and jobs get harder to hold",
+            "Prices are required to fall to zero"
+          ],
+          "answer": 1,
+          "explain": "A slowdown is when work gets scarce. That is why the cash pile exists."
+        },
+        {
+          "id": "ec-slow-q3",
+          "type": "true_false",
+          "prompt": "A recession is the signal to sell a retirement fund you will not need for 30 years.",
+          "answer": false,
+          "explain": "The long fund can wait. Selling turns a downturn into a finished loss. The emergency fund is what you spend."
+        },
+        {
+          "id": "ec-slow-q4",
+          "type": "multiple_choice",
+          "prompt": "Which pile is for a cut in hours?",
+          "choices": [
+            "The emergency fund",
+            "A retirement fund dated for age 65",
+            "A coin you cannot afford to lose"
+          ],
+          "answer": 0,
+          "explain": "Cash for a surprise. The retirement date did not move just because the economy slowed."
+        },
+        {
+          "id": "ec-slow-q5",
+          "type": "fill_blank",
+          "prompt": "A serious economic slowdown is called a ___.",
+          "choices": [
+            "recession",
+            "coupon",
+            "ticker"
+          ],
+          "answer": 0,
+          "explain": "Recession. It is a slowdown, not a new plan."
+        }
+      ]
+    },
+    {
+      "id": "ec-rate",
+      "type": "lesson",
+      "title": "The Unemployment Rate",
+      "summary": "Looking, and not working.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ec-rate-q1",
+          "type": "info",
+          "title": "Who is counted",
+          "body": "The [[unemployment rate]] is the share of the labor force that wants a job, is looking, and does not have one. People who are not looking are not in that share. An example rate of 5% is 5 out of 100 in the labor force. It is an example, not this month’s reading."
+        },
+        {
+          "id": "ec-rate-q2",
+          "type": "number",
+          "prompt": "In an example labor force of 200 people, a 5% unemployment rate is how many people?",
+          "answer": 10,
+          "explain": "200 × 0.05 = 10 people looking for work."
+        },
+        {
+          "id": "ec-rate-q3",
+          "type": "true_false",
+          "prompt": "The unemployment rate counts every adult, including people who are not looking for a job.",
+          "answer": false,
+          "explain": "It counts the labor force: people working or looking. Someone who is not looking is outside that rate."
+        },
+        {
+          "id": "ec-rate-q4",
+          "type": "multiple_choice",
+          "prompt": "A rising unemployment rate in a recession usually means what nearby?",
+          "choices": [
+            "Jobs are easier",
+            "More people who want work cannot find it",
+            "Inflation is cancelled"
+          ],
+          "answer": 1,
+          "explain": "The rate is the looking-and-not-working share. Up means the search got harder."
+        },
+        {
+          "id": "ec-rate-q5",
+          "type": "number",
+          "prompt": "An example rate of 4% on a labor force of 1,000 is how many people?",
+          "answer": 40,
+          "explain": "1,000 × 0.04 = 40."
+        }
+      ]
+    },
+    {
+      "id": "ec-protect",
+      "type": "lesson",
+      "format": "call",
+      "title": "Your Plan in a Downturn",
+      "summary": "Spend the pile that was built for this.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ec-protect-q1",
+          "type": "info",
+          "title": "Two piles, one slowdown",
+          "body": "A [[recession]] can cut your hours and drop a stock fund in the same month. The plan you already wrote still applies. Cash pays the bills. The long fund stays put unless the date you need it has changed."
+        },
+        {
+          "id": "ec-protect-q2",
+          "type": "multiple_choice",
+          "docs": [
+            {
+              "kind": "statement",
+              "title": "Emergency fund",
+              "subtitle": "For a cut in hours",
+              "lines": [
+                {
+                  "id": "cash",
+                  "label": "Cash set aside",
+                  "amount": 5000.0
+                }
+              ]
+            },
+            {
+              "kind": "statement",
+              "title": "Retirement fund",
+              "subtitle": "Not needed until about age 65",
+              "lines": [
+                {
+                  "id": "fund",
+                  "label": "Stock index fund",
+                  "amount": 20000.0
+                }
+              ]
+            }
+          ],
+          "prompt": "Your hours get cut. Which page pays the grocery bill?",
+          "choices": [
+            "Emergency fund",
+            "Retirement fund"
+          ],
+          "answer": 0,
+          "explain": "The emergency fund is the grocery pile. The $20,000 fund is for a date decades away. Selling it would lock in the downturn."
+        },
+        {
+          "id": "ec-protect-q3",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "Emergency fund",
+            "subtitle": "For a cut in hours",
+            "lines": [
+              {
+                "id": "cash",
+                "label": "Cash set aside",
+                "amount": 5000.0
+              }
+            ]
+          },
+          "prompt": "How many dollars are on the page you spend first?",
+          "answer": 5000,
+          "unit": "$",
+          "explain": "The cash page is $5,000. That is the pile for a lost month of work."
+        },
+        {
+          "id": "ec-protect-q4",
+          "type": "true_false",
+          "prompt": "A falling retirement fund means the emergency fund failed.",
+          "answer": false,
+          "explain": "They have different jobs. The fund can fall. The cash is what you spend."
+        },
+        {
+          "id": "ec-protect-q5",
+          "type": "multiple_choice",
+          "prompt": "When would the retirement page become the one you change?",
+          "choices": [
+            "Because the headline is scary",
+            "Because you now need that money in two years, not at 65",
+            "Because a friend sold"
+          ],
+          "answer": 1,
+          "explain": "A new date is a real change. A headline is not."
+        }
+      ]
+    },
+    {
+      "id": "ec-headline",
+      "type": "lesson",
+      "format": "document",
+      "title": "Reading a Headline",
+      "summary": "The number, then the claim.",
+      "xp": 10,
+      "steps": [
+        {
+          "id": "ec-headline-q1",
+          "type": "info",
+          "title": "Separate the figure from the fear",
+          "body": "A headline can be true and still be a bad order. This page says the basket went from $100 to $103, and it mentions an example [[unemployment rate]] of 5%. Neither figure tells you to sell a 30-year fund."
+        },
+        {
+          "id": "ec-headline-q2",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A headline, in numbers",
+            "subtitle": "An example, not this morning’s news",
+            "meta": [
+              [
+                "Example unemployment rate",
+                "5%"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "then",
+                "label": "Price basket a year ago",
+                "amount": 100.0
+              },
+              {
+                "id": "now",
+                "label": "Same basket now",
+                "amount": 103.0
+              }
+            ],
+            "note": "Inflation here is the basket’s percent rise. The 5% is an example rate, not a live one."
+          },
+          "prompt": "What percent did the basket rise?",
+          "answer": 3,
+          "unit": "%",
+          "explain": "$103 − $100 = $3, and $3 ÷ $100 = 3%."
+        },
+        {
+          "id": "ec-headline-q3",
+          "type": "true_false",
+          "prompt": "The 5% on this page is this morning’s official unemployment rate.",
+          "answer": false,
+          "explain": "The page labels it as an example. A real rate changes, and this lesson does not grade the live one."
+        },
+        {
+          "id": "ec-headline-q4",
+          "type": "multiple_choice",
+          "prompt": "What is a fair reading of the 3% basket rise?",
+          "choices": [
+            "Prices in the example rose 3%",
+            "Your personal raise was 3%",
+            "Stocks must fall 3%"
+          ],
+          "answer": 0,
+          "explain": "The basket rose 3%. Your raise, and the stock market, are different measurements."
+        },
+        {
+          "id": "ec-headline-q5",
+          "type": "number",
+          "doc": {
+            "kind": "statement",
+            "title": "A headline, in numbers",
+            "subtitle": "An example, not this morning’s news",
+            "meta": [
+              [
+                "Example unemployment rate",
+                "5%"
+              ]
+            ],
+            "lines": [
+              {
+                "id": "then",
+                "label": "Price basket a year ago",
+                "amount": 100.0
+              },
+              {
+                "id": "now",
+                "label": "Same basket now",
+                "amount": 103.0
+              }
+            ],
+            "note": "Inflation here is the basket’s percent rise. The 5% is an example rate, not a live one."
+          },
+          "prompt": "How many dollars more is the basket than last year?",
+          "answer": 3,
+          "unit": "$",
+          "explain": "$103 − $100 = $3."
+        }
+      ]
+    },
+    {
+      "id": "ec-earl",
+      "type": "lesson",
+      "format": "story",
+      "title": "Earl’s Dollar Ticket",
+      "summary": "The ticket changed. The dollar bill did not.",
+      "xp": 10,
+      "story": {
+        "title": "A dollar at the window",
+        "character": "Earl, 78, retired bus driver",
+        "body": "When Earl was young, a movie ticket in this story cost **$1**. The same kind of ticket is **$12** in this example.\n\nA dollar bill from back then does not buy the ticket now. Inflation is that gap."
+      },
+      "steps": [
+        {
+          "id": "ec-earl-q1",
+          "type": "info",
+          "title": "Meet Earl",
+          "body": "Earl is 78 and a retired bus driver. When he was young, a movie ticket in this story cost $1. The same kind of ticket is $12 in the lesson’s example.\n\nHis $1 bill from back then would not buy the ticket now. [[Inflation]] is that gap. The numbers are a teaching example, not a claim about one exact year."
+        },
+        {
+          "id": "ec-earl-q2",
+          "type": "number",
+          "prompt": "How many times higher is the $12 ticket than the $1 ticket?",
+          "answer": 12,
+          "explain": "$12 ÷ $1 = 12. The ticket costs 12 times what it did in the story."
+        },
+        {
+          "id": "ec-earl-q3",
+          "type": "number",
+          "prompt": "How many of today’s $12 tickets does $100 buy? Ignore the leftover dollars.",
+          "answer": 8,
+          "explain": "$100 ÷ $12 = 8 tickets, with $4 left over. The question asks for the 8."
+        },
+        {
+          "id": "ec-earl-q4",
+          "type": "true_false",
+          "prompt": "Earl’s story means a movie will cost $12 forever.",
+          "answer": false,
+          "explain": "It is an example of prices drifting. The next ticket can be higher or, less often, lower."
+        },
+        {
+          "id": "ec-earl-q5",
+          "type": "multiple_choice",
+          "prompt": "What should Earl’s grandchildren take from the $1 ticket?",
+          "choices": [
+            "Cash loses buying power when prices rise",
+            "Old prices come back if you wait",
+            "A dollar is required to buy a ticket"
+          ],
+          "answer": 0,
+          "explain": "The bill still says $1. The ticket moved. That is inflation, in one story."
+        }
+      ]
+    },
+    {
+      "id": "ec-review",
+      "type": "review",
+      "title": "Sharpen Up",
+      "summary": "Smart repetition on what you’re closest to forgetting.",
+      "xp": 10,
+      "draw": 8,
+      "steps": []
+    },
+    {
+      "id": "ec-trial",
+      "type": "boss",
+      "title": "Den Trial: Inflation & the Economy",
+      "summary": "8 questions. Three strikes and you’re out.",
+      "xp": 25,
+      "draw": 4,
+      "steps": [
+        {
+          "id": "ec-trial-q1",
+          "type": "number",
+          "prompt": "A basket goes from $200 to $210. What percent is that rise?",
+          "answer": 5,
+          "unit": "%",
+          "explain": "$10 ÷ $200 = 0.05, which is 5%."
+        },
+        {
+          "id": "ec-trial-q2",
+          "type": "number",
+          "prompt": "Prices rise 25% and you still hold $200. How many dollars of the old basket does it buy?",
+          "answer": 160,
+          "unit": "$",
+          "explain": "$200 ÷ 1.25 = $160."
+        },
+        {
+          "id": "ec-trial-q3",
+          "type": "true_false",
+          "prompt": "A recession is a reason to empty a 30-year stock fund for groceries.",
+          "answer": false,
+          "explain": "Groceries come from the emergency fund. The long fund stays unless the date you need it changed."
+        },
+        {
+          "id": "ec-trial-q4",
+          "type": "multiple_choice",
+          "prompt": "The unemployment rate describes which group?",
+          "choices": [
+            "Every retired person",
+            "People in the labor force who are looking and do not have a job",
+            "Everyone who owns a fund"
+          ],
+          "answer": 1,
+          "explain": "Looking, and not working. People who are not looking are not in that share."
+        }
+      ]
+    }
+  ]
+}
